@@ -1,0 +1,40 @@
+import QtQuick 2.0
+import Ubuntu.Components 0.1
+
+
+Grid {
+    id: sudokuGrid;
+    //anchors.centerIn: parent;
+    columns: 3;
+    spacing:units.gu(1);
+    width: units.gu(45);
+
+    SudokuGridBlock {
+        id: block1;
+    }
+    SudokuGridBlock {
+        id: block2;
+    }
+    SudokuGridBlock {
+        id: block3;
+    }
+    SudokuGridBlock {
+        id: block4;
+    }
+    SudokuGridBlock {
+        id: block5;
+    }
+    SudokuGridBlock {
+        id: block6;
+    }
+    SudokuGridBlock {
+        id: block7;
+    }
+    SudokuGridBlock {
+        id: block8;
+    }
+    SudokuGridBlock {
+        id: block9;
+    }
+
+}
