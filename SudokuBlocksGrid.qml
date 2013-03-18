@@ -10,52 +10,153 @@ Rectangle {
     y:3
     //anchors.fill: parent;
     color: "transparent"
-    property string defaultColor: "gray";
-    property string defaultStartingColor : "#77216F"
-    property string defaultNotAllowedColor : "#FF0000"
-    property string defaultHintColor: "#DD4814"
+    property alias defaultColor: colorScheme.defaultColor;
+    property alias defaultStartingColor : colorScheme.defaultStartingColor
+    property alias defaultNotAllowedColor : colorScheme.defaultNotAllowedColor;
+    property alias defaultHintColor: colorScheme.defaultHintColor;
+    property alias defaultBorderColor: colorScheme.defaultBorderColor;
+    property alias boldText: colorScheme.boldText;
+    property alias defaultTextColor: colorScheme.textColor;
+    property int blockDistance: 10;
     property int currentX;
     property string selectedNumberFromDialog: "0";
     property var grid;
     property var solution;
     property bool alreadyCreated: false;
+    property bool checkIfCheating: false;
+
+    ColorSchemeDefault {
+        id: colorScheme;
+    }
+
+    function revealHint() {
+        var emptyFields = new Array();
+        var counter = 0;
+        for (var i = 0; i < 81; i++) {
+            var row = Math.floor(i/9);
+            var column = i%9;
+            if (grid.getValue(column,row)== 0) {
+                emptyFields[counter] = new Array(2);
+                emptyFields[counter][0] = row;
+                emptyFields[counter][1] = column;
+                counter += 1;
+            }
+        }
+        var randomnumber=Math.floor(Math.random()*counter);
+        var hintPair = emptyFields[randomnumber];
+        print(emptyFields);
+        if (emptyFields.length != 0) {
+            var hintRow = hintPair[0];
+            var hintColumn = hintPair[1];
+            //print(solution);
+            //print(hintPair);
+            //print(solution.getValue(hintColumn, hintRow));
+            grid.setValue(hintColumn, hintRow, solution.getValue(hintColumn, hintRow));
+            buttonsGrid.itemAt(hintRow*9 + hintColumn).buttonText = solution.getValue(hintColumn, hintRow);
+            buttonsGrid.itemAt(hintRow*9 + hintColumn).buttonColor = defaultHintColor;
+        }
+
+    }
+
+    function changeColorScheme(newColorScheme) {
+        var component = Qt.createComponent(String(newColorScheme));
+        var temp = component.createObject(mainRectangle);
+
+        colorScheme.defaultColor = temp.defaultColor;
+        colorScheme.defaultStartingColor = temp.defaultStartingColor;
+        colorScheme.defaultNotAllowedColor = temp.defaultNotAllowedColor;
+        colorScheme.defaultHintColor = temp.defaultHintColor;
+        colorScheme.defaultBorderColor = temp.defaultBorderColor;
+        colorScheme.boldText = temp.boldText;
+        colorScheme.textColor = temp.textColor;
+
+        for (var i = 0; i < 9; i++) {
+            for (var j = 0; j < 9; j++) {
+                if (i % 3 == 0 && i != 0 && !alreadyCreated)
+                    buttonsGrid.itemAt(i*9 + j).y += units.dp(blockDistance);
+                if (i > 3 && !alreadyCreated)
+                    buttonsGrid.itemAt(i*9 + j).y += units.dp(blockDistance);
+                if (i > 6 && !alreadyCreated)
+                    buttonsGrid.itemAt(i*9 + j).y += units.dp(blockDistance);
+
+                if (j % 3 == 0 && j != 0 && !alreadyCreated)
+                    buttonsGrid.itemAt(i*9 + j).x += units.dp(blockDistance);
+
+                if (j > 3 && !alreadyCreated)
+                    buttonsGrid.itemAt(i*9 + j).x += units.dp(blockDistance);
+
+                if (j > 6 && !alreadyCreated)
+                    buttonsGrid.itemAt(i*9 + j).x += units.dp(blockDistance);
+
+                buttonsGrid.itemAt(i*9 + j).buttonText = "";
+                buttonsGrid.itemAt(i*9 + j).buttonColor = temp.defaultColor;
+                buttonsGrid.itemAt(i*9 + j).border.color = temp.defaultBorderColor;
+                buttonsGrid.itemAt(i*9 + j).enabled = true;
+            }
+        }
+        for (var i = 0; i < 9; i++) {
+            for (var j = 0; j < 9; j++) {
+                if (grid.getValue(j,i) != 0) {
+                    buttonsGrid.itemAt(i*9 + j).buttonText = grid.getValue(j,i);
+                    buttonsGrid.itemAt(i*9 + j).boldText = temp.boldText;
+                    buttonsGrid.itemAt(i*9 + j).buttonColor = temp.defaultStartingColor;
+                    buttonsGrid.itemAt(i*9 + j).border.color = temp.defaultBorderColor;
+                    buttonsGrid.itemAt(i*9 + j).enabled = false;
+                }
+                else
+                {
+                    buttonsGrid.itemAt(i*9 + j).buttonText = "";
+                    buttonsGrid.itemAt(i*9 + j).buttonColor = temp.defaultColor;
+                    buttonsGrid.itemAt(i*9 + j).border.color = temp.defaultBorderColor;
+                    buttonsGrid.itemAt(i*9 + j).enabled = true;
+                }
+            }
+        }
+        alreadyCreated = true;
+
+        print("Theme updated " + String(newColorScheme));
+    }
 
     function createNewGame(difficulty) {
         for (var i = 0; i < 9; i++) {
             for (var j = 0; j < 9; j++) {
                 if (i % 3 == 0 && i != 0 && !alreadyCreated)
-                    buttonsGrid.itemAt(i*9 + j).y += units.dp(2);
+                    buttonsGrid.itemAt(i*9 + j).y += units.dp(blockDistance);
                 if (i > 3 && !alreadyCreated)
-                    buttonsGrid.itemAt(i*9 + j).y += units.dp(2);
+                    buttonsGrid.itemAt(i*9 + j).y += units.dp(blockDistance);
                 if (i > 6 && !alreadyCreated)
-                    buttonsGrid.itemAt(i*9 + j).y += units.dp(2);
+                    buttonsGrid.itemAt(i*9 + j).y += units.dp(blockDistance);
 
                 if (j % 3 == 0 && j != 0 && !alreadyCreated)
-                    buttonsGrid.itemAt(i*9 + j).x += units.dp(2);
+                    buttonsGrid.itemAt(i*9 + j).x += units.dp(blockDistance);
 
                 if (j > 3 && !alreadyCreated)
-                    buttonsGrid.itemAt(i*9 + j).x += units.dp(2);
+                    buttonsGrid.itemAt(i*9 + j).x += units.dp(blockDistance);
 
                 if (j > 6 && !alreadyCreated)
-                    buttonsGrid.itemAt(i*9 + j).x += units.dp(2);
+                    buttonsGrid.itemAt(i*9 + j).x += units.dp(blockDistance);
 
-                buttonsGrid.itemAt(i*9 + j).buttonText = 0;
-                buttonsGrid.itemAt(i*9 + j).color = defaultColor;
-                buttonsGrid.itemAt(i*9 + j).border.color = defaultStartingColor;
+                buttonsGrid.itemAt(i*9 + j).buttonText = "";
+                buttonsGrid.itemAt(i*9 + j).buttonColor = defaultColor;
+                buttonsGrid.itemAt(i*9 + j).boldText = boldText;
+                buttonsGrid.itemAt(i*9 + j).border.color = defaultBorderColor;
                 buttonsGrid.itemAt(i*9 + j).enabled = true;
             }
         }
 
         grid = SudokuCU.CU.Sudoku.generate();
-        solution = grid;
+        solution = SudokuCU.deepCopy(grid);
         SudokuCU.CU.Sudoku.cull(grid, difficulty);
-        print(grid);
+        //print("solution:");
+        //print(solution);
+        //print("start:");
+        //print(grid);
         for (var i = 0; i < 9; i++) {
             for (var j = 0; j < 9; j++) {
                 if (grid.getValue(j,i) != 0) {
                     buttonsGrid.itemAt(i*9 + j).buttonText = grid.getValue(j,i);
-                    buttonsGrid.itemAt(i*9 + j).color = defaultStartingColor;
-                    buttonsGrid.itemAt(i*9 + j).border.color = "#DD4814";
+                    buttonsGrid.itemAt(i*9 + j).buttonColor = defaultStartingColor;
+                    buttonsGrid.itemAt(i*9 + j).border.color = defaultBorderColor;
                     buttonsGrid.itemAt(i*9 + j).enabled = false;
                 }
                 else
@@ -66,12 +167,16 @@ Rectangle {
     }
 
     function checkIfGameFinished() {
+        print (checkIfAllFieldsFilled());
+        print (checkIfAllFieldsCorrect());
         return checkIfAllFieldsFilled() && checkIfAllFieldsCorrect();
     }
 
     function checkIfAllFieldsFilled() {
         for (var i = 0; i < 81; i++) {
-            if (buttonsGrid.itemAt(currentX).buttonText == "")
+            var row = Math.floor(i/9);
+            var column = i%9;
+            if (grid.getValue(column,row) == 0)
                 return false;
         }
         return true;
@@ -132,7 +237,7 @@ Rectangle {
             //anchors.horizontalCenter: parent.parent.horizontalCenter;
             rows: 9;
             columns: 9;
-            spacing: units.dp(3);
+            spacing: units.dp(1);
 
             Component {
                 id: dialog
@@ -150,16 +255,24 @@ Rectangle {
                             width: units.gu(30)
                             buttonText: "Clear"
                             anchors.horizontalCenter: parent.verticalCenter
-                            border.color: defaultHintColor
+                            border.color: defaultBorderColor
                             border.width: 3
+                            textColor: defaultTextColor;
                             MouseArea {
                                 id: buttonMouseArea
                                 anchors.fill: parent
                                 onClicked: {
-                                    buttonsGrid.itemAt(currentX).buttonText = ""
+                                    buttonsGrid.itemAt(currentX).buttonText = "";
+                                    var row = Math.floor(currentX/9);
+                                    var column = currentX%9;
+                                    print (row, column);
+                                    grid.setValue(column,row, 0);
+                                    buttonsGrid.itemAt(currentX).buttonColor = defaultColor;
+                                    buttonsGrid.itemAt(currentX).boldText = false;
                                     PopupUtils.close(dialogue)
                                 }
                             }
+                            buttonColor: buttonMouseArea.pressed ? String(Qt.darker(defaultColor,1.2)):defaultColor
                         }
 
                         Grid {
@@ -175,9 +288,9 @@ Rectangle {
                                 SudokuButton {
                                     id: buttonPick
                                     buttonText: index+1;
-                                    border.color: defaultHintColor
-                                    border.width: 3
-
+                                    border.color: defaultBorderColor;
+                                    border.width: 2
+                                    textColor: defaultTextColor;
                                     MouseArea {
                                         id: buttonMouseArea1
                                         anchors.fill: parent
@@ -187,15 +300,17 @@ Rectangle {
                                             var row = Math.floor(currentX/9);
                                             var column = currentX%9;
 
-                                            print (row, column)
+                                            //print (row, column)
                                             grid.setValue(column, row, index+1);
-                                            print(grid)
+                                            //print(grid)
                                             var testField = grid.cellConflicts(column,row)
-                                            print (testField)
+                                            //print (testField)
                                             if (testField == true)
-                                                buttonsGrid.itemAt(currentX).color = defaultNotAllowedColor;
-                                            else
-                                                buttonsGrid.itemAt(currentX).color = defaultColor;
+                                                buttonsGrid.itemAt(currentX).buttonColor = defaultNotAllowedColor;
+                                            else {
+                                                buttonsGrid.itemAt(currentX).buttonColor = defaultColor;
+                                                buttonsGrid.itemAt(currentX).boldText = false;
+                                            }
 
                                             PopupUtils.close(dialogue)
 
@@ -206,6 +321,7 @@ Rectangle {
 
                                         }
                                     }
+                                    buttonColor: buttonMouseArea1.pressed ? String(Qt.darker(defaultColor,1.2)):defaultColor
                                 }
                             }
                         }
@@ -228,16 +344,21 @@ Rectangle {
                     size: units.gu(5)
                     //color: defaultColor;
                     border.width: 3
-                    border.color: defaultStartingColor
+                    border.color: defaultBorderColor
+                    textColor: defaultTextColor;
                     MouseArea {
-                        id: buttonMouseArea
+                        id: buttonMouseArea2
                         anchors.fill: parent
                         onClicked: {
                             mainRectangle.currentX = index;
+                            gridButton.buttonColor = defaultColor;
                             PopupUtils.open(dialog, gridButton);
                         }
+                        onPressed: {
+                            gridButton.buttonColor = String(Qt.darker(defaultColor,1.5));
+                        }
                     }
-                    color: buttonMouseArea.pressed ? Qt.darker(defaultColor,1.5) : defaultColor
+                    buttonColor: defaultColor;
 
 
                 }
@@ -272,40 +393,9 @@ Rectangle {
 
     }
 
-    /*Button {
-        y: units.gu(50)
-        width: units.gu(49)
-        id: newGameButton
-        text: i18n.tr("New Game")
-        onClicked: {
-            for (var i = 0; i < 9; i++) {
-                for (var j = 0; j < 9; j++) {
-                    buttonsGrid.itemAt(i*9 + j).buttonText = 0;
-                    buttonsGrid.itemAt(i*9 + j).color = defaultColor;
-                    buttonsGrid.itemAt(i*9 + j).enabled = true;
-                }
-            }
-
-            grid = SudokuCU.CU.Sudoku.generate();
-            solution = grid;
-            SudokuCU.CU.Sudoku.cull(grid, 60);
-            //print(grid);
-            for (var i = 0; i < 9; i++) {
-                for (var j = 0; j < 9; j++) {
-                    if (grid.getValue(j,i) != 0) {
-                        buttonsGrid.itemAt(i*9 + j).buttonText = grid.getValue(j,i);
-                        buttonsGrid.itemAt(i*9 + j).color = defaultStartingColor;
-                        buttonsGrid.itemAt(i*9 + j).enabled = false;
-                    }
-                    else
-                        buttonsGrid.itemAt(i*9 + j).buttonText = "";
-                }
-            }
-
-        }
-    }*/
     Row {
         y: units.gu(55)
+        x: units.dp(3)
         spacing: 5
         Rectangle {
             id: redFlagRect
@@ -326,17 +416,18 @@ Rectangle {
         }
         Rectangle {
             id: blueFlagRect
-            x: redFlag.width + redFlagText.width + units.gu(2);
+            x: redFlag.width + redFlagText.width + units.dp(30);
             Rectangle {
                 id: blueFlag
                 color: defaultStartingColor
+                border.color: defaultBorderColor
                 width: units.gu(4)
                 height: units.gu(4)
                 radius: 5
             }
             Text {
                 id: blueFlagText
-                text: i18n.tr("Starting blocks")
+                text: i18n.tr("Start blocks")
                 anchors.left: blueFlag.right;
                 anchors.leftMargin: units.gu(1)
                 anchors.verticalCenter: blueFlag.verticalCenter
@@ -344,10 +435,11 @@ Rectangle {
         }
         Rectangle {
             id: orangeFlagRect
-            x: redFlag.width + redFlagText.width + blueFlagRect.width + blueFlagText.width + units.gu(8)
+            x: redFlag.width + redFlagText.width + blueFlagRect.width + blueFlagText.width + units.dp(95)
             Rectangle {
                 id: orangeFlag
                 color: defaultHintColor
+                border.color: defaultBorderColor
                 width: units.gu(4)
                 height: units.gu(4)
                 radius: 5

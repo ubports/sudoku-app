@@ -19,8 +19,21 @@ MainView {
     Component.onCompleted: {
         Settings.initialize();
         settingsTab.difficultyIndex = parseInt(Settings.getSetting("Difficulty"));
-        print(Settings.getSetting("DisableHints"));
+        //print(Settings.getSetting("DisableHints"));
         settingsTab.disableHintsChecked = Settings.getSetting("DisableHints") == "true" ? true: false;
+        settingsTab.themeIndex = parseInt(Settings.getSetting("ColorTheme"));
+        print(Settings.getSetting("ColorTheme"));
+        var newColorScheme = null;
+        if (settingsTab.themeIndex == 0)
+        {
+            print("Ubuntu")
+            sudokuBlocksGrid.changeColorScheme("ColorSchemeUbuntu.qml");
+        }
+        if (settingsTab.themeIndex == 1)
+        {
+            print("Simple")
+            sudokuBlocksGrid.changeColorScheme("ColorSchemeSimple.qml");
+        }
     }
 
     Tabs {
@@ -33,6 +46,39 @@ MainView {
             objectName: "MainTab"
 
             title: i18n.tr("SudokuTouch Game")
+
+            Timer {
+                id: winTimer;
+                interval: 2000;
+                running: false;
+                repeat: false;
+                onTriggered: {
+                    gameFinishedRectangle.visible = false;
+                    switch(difficultySelector.selectedIndex) {
+                    case 0:
+                        var randomnumber = Math.floor(Math.random()*9);
+                        randomnumber += 31;
+                        sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                        break;
+                    case 1:
+                        var randomnumber = Math.floor(Math.random()*4);
+                        randomnumber += 26;
+                        sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                        break;
+                    case 2:
+                        var randomnumber = Math.floor(Math.random()*4);
+                        randomnumber += 21;
+                        sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                        break;
+                    case 3:
+                        var randomnumber = Math.floor(Math.random()*3);
+                        randomnumber += 17;
+                        sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                        break;
+                    }
+                }
+
+            }
 
             Rectangle {
                 id: gameFinishedRectangle;
@@ -49,7 +95,7 @@ MainView {
                 y: units.gu(5);
                 Text {
                     id: gameFinishedText;
-                    text: "Congratulations!"
+                    text: sudokuBlocksGrid.checkIfCheating ? i18n.tr("You are a cheat...") : i18n.tr("Congratulations!")
                     color: sudokuBlocksGrid.defaultHintColor;
                     anchors.centerIn: parent;
                     font.pointSize: 14;
@@ -90,9 +136,15 @@ MainView {
                     Action {
                         iconSource: Qt.resolvedUrl("icons/hint.png")
                         text: i18n.tr("Show hint");
-                        enabled: !disableHints.checked;
+                        enabled: disableHints.checked;
                         onTriggered: {
-                            print("Fuck you for now!")
+                            sudokuBlocksGrid.revealHint();
+                            sudokuBlocksGrid.checkIfCheating = true;
+                            if (sudokuBlocksGrid.checkIfGameFinished()) {
+                                gameFinishedRectangle.visible = true;
+                                gameFinishedText.text = i18n.tr("You are a cheat...");
+                                winTimer.restart();
+                            }
                         }
                     }
                     Action {
@@ -112,10 +164,6 @@ MainView {
                     SudokuBlocksGrid {
                         id: sudokuBlocksGrid;
 
-                        NumberPickGrid {
-                            id: numberPickGrid;
-                            visible: false;
-                        }
                     }
                 }
             }
@@ -128,6 +176,7 @@ MainView {
 
             property alias disableHintsChecked: disableHints.checked;
             property alias difficultyIndex: difficultySelector.selectedIndex;
+            property alias themeIndex: themeSelector.selectedIndex;
 
             title: i18n.tr("Settings")
             page: Page {
@@ -138,6 +187,10 @@ MainView {
                     anchors.fill: parent
                     //anchors.horizontalCenter: parent.horizontalCenter;
                     spacing: units.gu(5)
+
+                    ListItem.Header {
+                        text: "SudokuTouch settings"
+                    }
 
                     ListItem.ValueSelector {
                         id: difficultySelector
@@ -176,9 +229,33 @@ MainView {
                         }
 
                     }
+                    ListItem.ValueSelector {
+                        id: themeSelector
+                        anchors.top: difficultySelector.bottom
+                        //anchors.topMargin: units.gu(1)
+                        text: "Theme"
+                        values: ["UbuntuColor", "Simple"]
+                        onSelectedIndexChanged: {
+                            var newColorScheme = null;
+                            if (selectedIndex == 0)
+                            {
+                                print("Ubuntu")
+                                var result = Settings.setSetting("ColorTheme", selectedIndex);
+                                print(result);
+                                sudokuBlocksGrid.changeColorScheme("ColorSchemeUbuntu.qml");
+                            }
+                            if (selectedIndex == 1)
+                            {
+                                print("Simple")
+                                var result = Settings.setSetting("ColorTheme", selectedIndex);
+                                print(result);
+                                sudokuBlocksGrid.changeColorScheme("ColorSchemeSimple.qml");
+                            }
+                        }
+                    }
                     Row {
                         id: disableHintsRow
-                        anchors.top: difficultySelector.bottom
+                        anchors.top: themeSelector.bottom
                         anchors.topMargin: units.gu(2)
                         anchors.leftMargin: units.gu(2)
                         width: parent.width
@@ -186,7 +263,7 @@ MainView {
                             id: disableHintsText
                             anchors.left: parent.left
                             anchors.leftMargin: units.dp(20)
-                            text: "Disable hints"
+                            text: "Enable hints"
                             font.pointSize: 11
                             font.family: "Ubuntu"
                             color: "#333333"

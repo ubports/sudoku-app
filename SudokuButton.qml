@@ -2,23 +2,26 @@ import QtQuick 2.0
 
 Rectangle {
     id: button
-    property string buttonColor: "gray"
+    property alias buttonColor: button.color;
+    property string textColor: "white"
     property real size: units.gu(5)
     property string buttonText: ""
+    property bool boldText: false;
 
     signal buttonClick()
     height: size;
     width: size;
     radius: 5
     color: buttonColor
-    border.color: Qt.darker(buttonColor,1.5)
+    //border.color: Qt.darker(buttonColor,1.5)
 
     Text {
         id: buttonText
         text: button.buttonText;
-        color: "white"
+        color: textColor;
         anchors.centerIn: parent
         font.pixelSize: 18
+        font.bold: boldText;
     }
 
     //determines the color of the button by using the conditional operator
