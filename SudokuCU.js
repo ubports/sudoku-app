@@ -1,7 +1,7 @@
 /**
  * Sudoku generator + Sudoku grid classes
  *
- * @author Jani Hartikainen <firstname at codeutopia net>
+ * Based on work by @author Jani Hartikainen <firstname at codeutopia net>
  */
 
 function deepCopy(obj) {
