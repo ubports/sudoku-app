@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=SudokuTouch
-Comment=My project description
-Exec=/usr/bin/qmlscene
-Icon=qmlscene
-Terminal=false
-Type=Application
