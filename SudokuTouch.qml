@@ -82,17 +82,19 @@ MainView {
 
             Rectangle {
                 id: gameFinishedRectangle;
-                color: "#AEA79F";
+                color: sudokuBlocksGrid.defaultColor;
+                border.color: sudokuBlocksGrid.defaultBorderColor;
                 width: units.gu(25);
                 radius: 5
                 height: units.gu(15);
                 z: 100;
                 visible: false;
-                //x: units.gu(mainView.pageWidth / 2)
-                //y: units.gu(mainView.pageHeight / 2)
-                anchors.verticalCenter: sudokuBlocksGrid.verticalCenter;
-                anchors.horizontalCenter: parent.horizontalCenter;
-                y: units.gu(5);
+                x: units.gu(mainView.pageWidth / 2) - height
+                y: units.gu(mainView.pageHeight / 2) - width
+                //anchors.verticalCenter: sudokuBlocksGrid.verticalCenter;
+                //anchors.horizontalCenter: sudokuBlocksGrid.horizontalCenter;
+                //anchors.centerIn: mainView;
+                //y: units.gu(5);
                 Text {
                     id: gameFinishedText;
                     text: sudokuBlocksGrid.checkIfCheating ? i18n.tr("You are a cheat...") : i18n.tr("Congratulations!")
@@ -104,7 +106,7 @@ MainView {
 
             page: Page {
 
-                tools: ToolbarActions {
+                tools: ToolbarActions {                    
                     Action {
                         text: i18n.tr("New game");
                         iconSource: Qt.resolvedUrl("icons/new_game.png")
@@ -258,22 +260,23 @@ MainView {
                         anchors.top: themeSelector.bottom
                         anchors.topMargin: units.gu(2)
                         anchors.leftMargin: units.gu(2)
+                        spacing: units.gu(2)
                         width: parent.width
                         Text {
                             id: disableHintsText
                             anchors.left: parent.left
-                            anchors.leftMargin: units.dp(20)
+                            anchors.leftMargin: units.gu(3)
                             text: "Enable hints"
-                            font.pointSize: 11
+                            font.pointSize: 12
                             font.family: "Ubuntu"
                             color: "#333333"
                         }
                         Switch {
                             id: disableHints
                             checked: disableHintsChecked
-                            anchors.right: disableHintsRow.right
-                            anchors.rightMargin: units.dp(25)
-                            anchors.verticalCenter: disableHintsText.verticalCenter
+                            anchors.left: disableHintsText.right
+                            anchors.leftMargin: units.gu(25)
+                            //anchors.verticalCenter: disableHintsText.verticalCenter
                             onCheckedChanged: {
                                 var result = Settings.setSetting("DisableHints", checked ? "true":"false");
                                 print(result);

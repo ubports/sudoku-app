@@ -10,6 +10,7 @@ Rectangle {
     y:3
     //anchors.fill: parent;
     color: "transparent"
+
     property alias defaultColor: colorScheme.defaultColor;
     property alias defaultStartingColor : colorScheme.defaultStartingColor
     property alias defaultNotAllowedColor : colorScheme.defaultNotAllowedColor;
@@ -17,6 +18,7 @@ Rectangle {
     property alias defaultBorderColor: colorScheme.defaultBorderColor;
     property alias boldText: colorScheme.boldText;
     property alias defaultTextColor: colorScheme.textColor;
+
     property int blockDistance: 10;
     property int currentX;
     property string selectedNumberFromDialog: "0";
@@ -228,7 +230,7 @@ Rectangle {
     }
 
     Column {
-        anchors.fill: mainRectangle.parent;
+        //anchors.fill: mainRectangle.parent;
         y: 3
 
         Grid {
@@ -395,8 +397,7 @@ Rectangle {
 
     Row {
         y: units.gu(55)
-        x: units.dp(3)
-        spacing: 5
+        x: units.dp(8)
         Rectangle {
             id: redFlagRect
             Rectangle {
@@ -409,6 +410,7 @@ Rectangle {
             Text {
                 id: redFlagText
                 text: i18n.tr("Not allowed")
+                font.pointSize: 9
                 anchors.left: redFlag.right;
                 anchors.leftMargin: units.gu(1)
                 anchors.verticalCenter: redFlag.verticalCenter
@@ -428,6 +430,7 @@ Rectangle {
             Text {
                 id: blueFlagText
                 text: i18n.tr("Start blocks")
+                font.pointSize: 9
                 anchors.left: blueFlag.right;
                 anchors.leftMargin: units.gu(1)
                 anchors.verticalCenter: blueFlag.verticalCenter
@@ -446,6 +449,7 @@ Rectangle {
             }
             Text {
                 text: i18n.tr("Hinted blocks")
+                font.pointSize: 9
                 anchors.left: orangeFlag.right;
                 anchors.leftMargin: units.gu(1)
                 anchors.verticalCenter: orangeFlag.verticalCenter
