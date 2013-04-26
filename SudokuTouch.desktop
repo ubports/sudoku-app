@@ -7,3 +7,5 @@ Exec=/usr/bin/qmlscene /usr/share/sudokutouchgame/SudokuTouch.qml
 Icon=/usr/share/sudokutouchgame/SudokuGameIcon.png
 Terminal=false
 Type=Application
+X-Ubuntu-Touch=true
+X-Ubuntu-StageHint=SideStage

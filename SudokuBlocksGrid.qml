@@ -37,14 +37,18 @@ Rectangle {
         for (var i = 0; i < 81; i++) {
             var row = Math.floor(i/9);
             var column = i%9;
-            if (grid.getValue(column,row)== 0) {
+            /*if (grid.getValue(column,row)== 0) {
                 emptyFields[counter] = new Array(2);
                 emptyFields[counter][0] = row;
                 emptyFields[counter][1] = column;
                 counter += 1;
+            }*/
+            if ( grid.getValue(column,row) === 0 ) {
+                emptyFields.push([row, column]);
+                counter += 1;
             }
         }
-        var randomnumber=Math.floor(Math.random()*counter);
+        var randomnumber = Math.floor(Math.random()*counter);
         var hintPair = emptyFields[randomnumber];
         print(emptyFields);
         if (emptyFields.length != 0) {
