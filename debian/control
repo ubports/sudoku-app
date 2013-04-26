@@ -1,5 +1,5 @@
 Source: sudokutouchgame
-Section: games
+Section: unknown
 Priority: extra
 Maintainer: Dinko Osmankovic <dinko@unknown>
 Build-Depends: debhelper (>= 8.0.0)
