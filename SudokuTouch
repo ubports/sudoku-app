@@ -1,2 +1,2 @@
 #!/bin/bash
-qmlscene /usr/share/SudokuTouch/SudokuTouch.qml
+qmlscene /usr/share/sudokutouchgame/SudokuTouch.qml

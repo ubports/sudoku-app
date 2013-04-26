@@ -4,6 +4,6 @@ Encoding=UTF-8
 Version=1.0
 Comment=SudokuTouch Game for Ubuntu Touch
 Exec=/usr/bin/qmlscene
-Icon=/usr/share/SudokuTouch/SudokuGameIcon.png
+Icon=/usr/share/sudokutouchgame/SudokuGameIcon.png
 Terminal=false
 Type=Application
