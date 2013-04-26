@@ -3,8 +3,7 @@ Upstream-Name: sudokutouchgame
 Source: <url://example.com>
 
 Files: *
-Copyright: <years> <put author's name and email here>
-           <years> <likewise for another author>
+Copyright: <2013> <Dinko Osmankovic dinko.metalac@gmail.com>
 License: GPL-3.0+
 
 Files: debian/*

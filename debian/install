@@ -11,7 +11,6 @@ icons/exit.svg /usr/share/sudokutouchgame
 icons/new_game.png /usr/share/sudokutouchgame
 icons/hint.png /usr/share/sudokutouchgame
 icons/new_game.svg /usr/share/sudokutouchgame
-SudokuTouch~ /usr/share/sudokutouchgame
 sudokugame.cpp /usr/share/sudokutouchgame
 SudokuTouch.qml /usr/share/sudokutouchgame
 sudokugamebackend.cpp /usr/share/sudokutouchgame
