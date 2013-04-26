@@ -11,6 +11,7 @@ icons/exit.svg /usr/share/sudokutouchgame
 icons/new_game.png /usr/share/sudokutouchgame
 icons/hint.png /usr/share/sudokutouchgame
 icons/new_game.svg /usr/share/sudokutouchgame
+SudokuTouch~ /usr/share/sudokutouchgame
 sudokugame.cpp /usr/share/sudokutouchgame
 SudokuTouch.qml /usr/share/sudokutouchgame
 sudokugamebackend.cpp /usr/share/sudokutouchgame
@@ -34,6 +35,7 @@ SudokuBlocksGrid.qml /usr/share/sudokutouchgame
 .bzr/checkout/format /usr/share/sudokutouchgame
 .bzr/checkout/views /usr/share/sudokutouchgame
 .bzr/checkout/lock /usr/share/sudokutouchgame
+.bzr/checkout/shelf /usr/share/sudokutouchgame
 .bzr/checkout/conflicts /usr/share/sudokutouchgame
 .bzr/checkout/dirstate /usr/share/sudokutouchgame
 .bzr/repository /usr/share/sudokutouchgame
@@ -45,7 +47,6 @@ SudokuBlocksGrid.qml /usr/share/sudokutouchgame
 .bzr/repository/pack-names /usr/share/sudokutouchgame
 .bzr/repository/obsolete_packs /usr/share/sudokutouchgame
 SudokuTouch /usr/share/sudokutouchgame
-SudokuTouch /usr/bin
 sudokugamebackend.h /usr/share/sudokutouchgame
 sudokugame.h /usr/share/sudokutouchgame
 SudokuButton.qml /usr/share/sudokutouchgame
