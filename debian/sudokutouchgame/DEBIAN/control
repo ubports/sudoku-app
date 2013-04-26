@@ -1,11 +1,15 @@
+Source: sudokutouchgame
+Section: misc
+Priority: games
+Maintainer: Dinko Osmankovic <dinko.metalac@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Homepage: https://launchpad.net/sudokutouchgame
+#Vcs-Git: git://git.debian.org/collab-maint/sudokutouchgame.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/sudokutouchgame.git;a=summary
+
 Package: sudokutouchgame
-Version: 0.1
 Architecture: all
-Maintainer: Dinko Osmankovic <dinko@unknown>
-Installed-Size: 351
-Depends: qtdeclarative5-localstorage-plugin, qtdeclarative5-particles-plugin, qtdeclarative5-qtquick2-plugin, qtdeclarative5-ubuntu-ui-toolkit-plugin | qt-components-ubuntu, qtdeclarative5-window-plugin, qtdeclarative5-xmllistmodel-plugin, qmlscene
-Section: unknown
-Priority: extra
-Homepage: <insert the upstream URL, if relevant>
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Depends: ${misc:Depends},qtdeclarative5-localstorage-plugin,qtdeclarative5-particles-plugin,qtdeclarative5-qtquick2-plugin,qtdeclarative5-ubuntu-ui-toolkit-plugin|qt-components-ubuntu,qtdeclarative5-window-plugin,qtdeclarative5-xmllistmodel-plugin,${shlibs:Depends},qmlscene
+Description: Sudoku game for Ubuntu devices
+ This is a simple Sudoku game written in QML/JS for Ubuntu Touch devices.
