@@ -1,6 +1,6 @@
 Source: sudokutouchgame
 Section: misc
-Priority: extra
+Priority: games
 Maintainer: Dinko Osmankovic <dinko.metalac@gmail.com>
 Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.3
