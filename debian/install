@@ -45,6 +45,7 @@ SudokuBlocksGrid.qml /usr/share/sudokutouchgame
 .bzr/repository/pack-names /usr/share/sudokutouchgame
 .bzr/repository/obsolete_packs /usr/share/sudokutouchgame
 SudokuTouch /usr/share/sudokutouchgame
+SudokuTouch /usr/bin/
 sudokugamebackend.h /usr/share/sudokutouchgame
 sudokugame.h /usr/share/sudokutouchgame
 SudokuButton.qml /usr/share/sudokutouchgame
