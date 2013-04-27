@@ -19,7 +19,7 @@ Rectangle {
     property alias boldText: colorScheme.boldText;
     property alias defaultTextColor: colorScheme.textColor;
 
-    property int blockDistance: 10;
+    property int blockDistance: mainView.pageWidth/5;
     property int currentX;
     property string selectedNumberFromDialog: "0";
     property var grid;
@@ -153,7 +153,8 @@ Rectangle {
         grid = SudokuCU.CU.Sudoku.generate();
         solution = SudokuCU.deepCopy(grid);
         SudokuCU.CU.Sudoku.cull(grid, difficulty);
-        //print("solution:");
+        //print("width:"); print(mainView.width);
+        //print("height:"); print(mainView.height);
         //print(solution);
         //print("start:");
         //print(grid);

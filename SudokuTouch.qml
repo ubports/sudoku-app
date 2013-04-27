@@ -182,6 +182,14 @@ MainView {
 
             title: i18n.tr("Settings")
             page: Page {
+                tools: ToolbarActions {
+
+                    Action {
+                        iconSource: Qt.resolvedUrl("icons/exit.png")
+                        text: i18n.tr("Close");
+                        onTriggered: Qt.quit()
+                    }
+                }
                 Column {
                     id: mainColumnSettings;
                     //width: settingsTab.width;
