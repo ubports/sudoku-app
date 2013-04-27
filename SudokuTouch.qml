@@ -199,15 +199,15 @@ MainView {
                     spacing: units.gu(5)
 
                     ListItem.Header {
-                        text: "SudokuTouch settings"
+                        text: i18n.tr("SudokuTouch settings")
                     }
 
                     ListItem.ValueSelector {
                         id: difficultySelector
                         anchors.top: parent.top
                         anchors.topMargin: units.gu(5)
-                        text: "Difficulty"
-                        values: ["Easy", "Moderate", "Hard", "Ultra Hard"]
+                        text: i18n.tr("Difficulty")
+                        values: [i18n.tr("Easy"), i18n.tr("Moderate"), i18n.tr("Hard"), i18n.tr("Ultra Hard")]
                         onSelectedIndexChanged: {
                             print(difficultySelector.selectedIndex)
                             switch(difficultySelector.selectedIndex) {
@@ -243,8 +243,8 @@ MainView {
                         id: themeSelector
                         anchors.top: difficultySelector.bottom
                         //anchors.topMargin: units.gu(1)
-                        text: "Theme"
-                        values: ["UbuntuColor", "Simple"]
+                        text: i18n.tr("Theme")
+                        values: ["UbuntuColours", "Simple"]
                         onSelectedIndexChanged: {
                             var newColorScheme = null;
                             if (selectedIndex == 0)
