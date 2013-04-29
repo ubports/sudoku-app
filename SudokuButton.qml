@@ -3,9 +3,9 @@ import QtQuick 2.0
 Rectangle {
     id: button
     property alias buttonColor: button.color;
-    property string textColor: "white"
-    property real size: units.gu(5)
-    property string buttonText: ""
+    property string textColor: "white";
+    property real size: mainView.blockSize;
+    property string buttonText: "";
     property bool boldText: false;
 
     signal buttonClick()

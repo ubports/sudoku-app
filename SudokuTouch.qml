@@ -10,11 +10,58 @@ MainView {
     objectName: "Sudoku Touch"
     applicationName: "SudokuTouch"
 
-    property int pageWidth: 50;
-    property int pageHeight: 75;
-    
-    width: units.gu(pageWidth)
-    height: units.gu(pageHeight)
+    property real pageWidth: units.gu(40);
+    property real pageHeight: units.gu(71);
+
+    property real blockDistance: pageWidth/56;
+    property bool alreadyCreated: false;
+    property bool gridLoaded: false;
+
+    width: pageWidth;
+    height: pageHeight;
+
+    function newSize(width, height) {
+        pageWidth = width;
+        pageHeight = height;
+        print(height," x ", width);
+    }
+
+    function updateGrid() {
+        print("Updating grid");
+        //print("width:"); print(mainView.width);
+        //print("height:"); print(mainView.height);
+        for (var i = 0; i < 9; i++) {
+            for (var j = 0; j < 9; j++) {
+                if (i % 3 == 0 && i != 0)
+                    sudokuBlocksGrid.buttonsGridPublic.itemAt(i*9 + j).y += blockDistance;
+                if (i > 3)
+                    sudokuBlocksGrid.buttonsGridPublic.itemAt(i*9 + j).y += blockDistance;
+                if (i > 6)
+                    sudokuBlocksGrid.buttonsGridPublic.itemAt(i*9 + j).y += blockDistance;
+
+                if (j % 3 == 0 && j != 0)
+                    sudokuBlocksGrid.buttonsGridPublic.itemAt(i*9 + j).x += blockDistance;
+
+                if (j > 3)
+                    sudokuBlocksGrid.buttonsGridPublic.itemAt(i*9 + j).x += blockDistance;
+
+                if (j > 6)
+                    sudokuBlocksGrid.buttonsGridPublic.itemAt(i*9 + j).x += blockDistance;
+            }
+        }
+
+        mainView.alreadyCreated = true;
+        //mainRectangle.update();
+        //buttonsGridPublic.update();
+    }
+
+    onHeightChanged: {
+        if (!gridLoaded)
+            return;
+        newSize(mainView.width, mainView.height);
+
+        //sudokuBlocksGrid = Qt.createComponent(Qt.resolvedUrl("SudokuBlocksGrid.qml"))
+    }
 
     Component.onCompleted: {
         Settings.initialize();
@@ -34,6 +81,7 @@ MainView {
             print("Simple")
             sudokuBlocksGrid.changeColorScheme("ColorSchemeSimple.qml");
         }
+        gridLoaded = true;
     }
 
     Tabs {
@@ -89,28 +137,29 @@ MainView {
                 height: units.gu(15);
                 z: 100;
                 visible: false;
-                x: units.gu(mainView.pageWidth / 2) - height
-                y: units.gu(mainView.pageHeight / 2) - width
-                //anchors.verticalCenter: sudokuBlocksGrid.verticalCenter;
-                //anchors.horizontalCenter: sudokuBlocksGrid.horizontalCenter;
+                x: mainView.pageWidth / 2 - height
+                y: mainView.pageHeight / 2 - width
+                //anchors.verticalCenter: mainView.verticalCenter;
+                //anchors.horizontalCenter: mainView.verticalCenter;
                 //anchors.centerIn: mainView;
                 //y: units.gu(5);
-                Text {
+                Label {
                     id: gameFinishedText;
                     text: sudokuBlocksGrid.checkIfCheating ? i18n.tr("You are a cheat...") : i18n.tr("Congratulations!")
                     color: sudokuBlocksGrid.defaultHintColor;
                     anchors.centerIn: parent;
-                    font.pointSize: 14;
+                    fontSize: "large";
                 }
             }
 
             page: Page {
 
-                tools: ToolbarActions {                    
+                tools: ToolbarActions {
                     Action {
                         text: i18n.tr("New game");
                         iconSource: Qt.resolvedUrl("icons/new_game.png")
                         onTriggered: {
+                            print("new block distance:", blockDistance);
                             switch(difficultySelector.selectedIndex) {
                             case 0:
                                 var randomnumber = Math.floor(Math.random()*9);
@@ -165,7 +214,6 @@ MainView {
 
                     SudokuBlocksGrid {
                         id: sudokuBlocksGrid;
-
                     }
                 }
             }
@@ -267,23 +315,24 @@ MainView {
                         id: disableHintsRow
                         anchors.top: themeSelector.bottom
                         anchors.topMargin: units.gu(2)
-                        anchors.leftMargin: units.gu(2)
+                        anchors.leftMargin: units.dp(20)
+                        anchors.left: themeSelector.left;
                         spacing: units.gu(2)
                         width: parent.width
-                        Text {
+                        Label {
                             id: disableHintsText
                             anchors.left: parent.left
-                            anchors.leftMargin: units.gu(3)
+                            //anchors.leftMargin: units.dp()
                             text: "Enable hints"
-                            font.pointSize: 12
-                            font.family: "Ubuntu"
-                            color: "#333333"
+                            //fontSize: "medium";
                         }
                         Switch {
                             id: disableHints
                             checked: disableHintsChecked
-                            anchors.left: disableHintsText.right
-                            anchors.leftMargin: units.gu(25)
+                            //anchors.right: mainColumnSettings.right;
+                            //anchors.rightMargin: units.gu(2)
+                            x: parent.width - disableHints.width - units.gu(1) - units.dp(20);
+                            anchors.verticalCenter: disableHintsText.verticalCenter;
                             //anchors.verticalCenter: disableHintsText.verticalCenter
                             onCheckedChanged: {
                                 var result = Settings.setSetting("DisableHints", checked ? "true":"false");
@@ -294,6 +343,86 @@ MainView {
                 }
             }
 
+        }
+
+        Tab {
+            id: aboutTab;
+            objectName: "aboutTab"
+            title: i18n.tr("About")
+            page: Page {
+                tools: ToolbarActions {
+
+                    Action {
+                        iconSource: Qt.resolvedUrl("icons/exit.png");
+                        text: i18n.tr("Close");
+                        onTriggered: Qt.quit()
+                    }
+                }
+                Column {
+                    id: aboutColumn;
+                    spacing: 2;
+                    //anchors.fill: parent
+                    anchors.horizontalCenter: parent.horizontalCenter;
+                    y: units.gu(8);
+                    UbuntuShape {
+                        image: Image {
+                            source: "icons/SudokuGameIcon.png"
+                            sourceSize.width: 128
+                            sourceSize.height: 128
+                        }
+                        anchors.horizontalCenter: parent.horizontalCenter;
+                    }
+                    Row {
+                        anchors.horizontalCenter: parent.horizontalCenter;
+                        Label {
+                            text: "Author: "
+                        }
+                        Label {
+                            font.bold: true;
+                            text: "Dinko Osmankovic"
+                        }
+                    }
+                    Row {
+                        anchors.horizontalCenter: parent.horizontalCenter;
+                        Label {
+                            text: "Contact: "
+                        }
+                        Label {
+                            font.bold: true;
+                            text: "dinko.metalac@gmail.com"
+                        }
+                    }
+                    Row {
+                        id: homepage;
+                        anchors.horizontalCenter: parent.horizontalCenter;
+                        Label {
+                            font.bold: true;
+                            text: "https://launchpad.net/sudokutouchgame"
+                        }
+                    }
+                }
+                Row {
+                    anchors.horizontalCenter: parent.horizontalCenter;
+                    anchors.top: aboutColumn.bottom;
+                    anchors.topMargin: units.gu(5);
+                    Label {
+                        text: "Version: "
+                    }
+                    Label {
+                        font.bold: true;
+                        text: "1.0"
+                    }
+                }
+                Row {
+                    anchors.horizontalCenter: parent.horizontalCenter;
+                    anchors.top: aboutColumn.bottom;
+                    anchors.topMargin: units.gu(8);
+                    Label {
+                        font.bold: true;
+                        text: "2013"
+                    }
+                }
+            }
         }
     }
 }

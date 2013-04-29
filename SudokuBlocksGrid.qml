@@ -8,7 +8,7 @@ Rectangle {
     id: mainRectangle;
     x:3
     y:3
-    //anchors.fill: parent;
+    anchors.fill: parent;
     color: "transparent"
 
     property alias defaultColor: colorScheme.defaultColor;
@@ -19,12 +19,14 @@ Rectangle {
     property alias boldText: colorScheme.boldText;
     property alias defaultTextColor: colorScheme.textColor;
 
-    property int blockDistance: mainView.pageWidth/5;
+    property alias buttonsGridPublic: buttonsGrid;
+
+    property real blockDistance: mainView.blockDistance;
     property int currentX;
     property string selectedNumberFromDialog: "0";
     property var grid;
     property var solution;
-    property bool alreadyCreated: false;
+    property bool alreadyCreated: mainView.alreadyCreated;
     property bool checkIfCheating: false;
 
     ColorSchemeDefault {
@@ -79,20 +81,20 @@ Rectangle {
         for (var i = 0; i < 9; i++) {
             for (var j = 0; j < 9; j++) {
                 if (i % 3 == 0 && i != 0 && !alreadyCreated)
-                    buttonsGrid.itemAt(i*9 + j).y += units.dp(blockDistance);
+                    buttonsGrid.itemAt(i*9 + j).y += blockDistance;
                 if (i > 3 && !alreadyCreated)
-                    buttonsGrid.itemAt(i*9 + j).y += units.dp(blockDistance);
+                    buttonsGrid.itemAt(i*9 + j).y += blockDistance;
                 if (i > 6 && !alreadyCreated)
-                    buttonsGrid.itemAt(i*9 + j).y += units.dp(blockDistance);
+                    buttonsGrid.itemAt(i*9 + j).y += blockDistance;
 
                 if (j % 3 == 0 && j != 0 && !alreadyCreated)
-                    buttonsGrid.itemAt(i*9 + j).x += units.dp(blockDistance);
+                    buttonsGrid.itemAt(i*9 + j).x += blockDistance;
 
                 if (j > 3 && !alreadyCreated)
-                    buttonsGrid.itemAt(i*9 + j).x += units.dp(blockDistance);
+                    buttonsGrid.itemAt(i*9 + j).x += blockDistance;
 
                 if (j > 6 && !alreadyCreated)
-                    buttonsGrid.itemAt(i*9 + j).x += units.dp(blockDistance);
+                    buttonsGrid.itemAt(i*9 + j).x += blockDistance;
 
                 buttonsGrid.itemAt(i*9 + j).buttonText = "";
                 buttonsGrid.itemAt(i*9 + j).buttonColor = temp.defaultColor;
@@ -127,20 +129,20 @@ Rectangle {
         for (var i = 0; i < 9; i++) {
             for (var j = 0; j < 9; j++) {
                 if (i % 3 == 0 && i != 0 && !alreadyCreated)
-                    buttonsGrid.itemAt(i*9 + j).y += units.dp(blockDistance);
+                    buttonsGrid.itemAt(i*9 + j).y += blockDistance;
                 if (i > 3 && !alreadyCreated)
-                    buttonsGrid.itemAt(i*9 + j).y += units.dp(blockDistance);
+                    buttonsGrid.itemAt(i*9 + j).y += blockDistance;
                 if (i > 6 && !alreadyCreated)
-                    buttonsGrid.itemAt(i*9 + j).y += units.dp(blockDistance);
+                    buttonsGrid.itemAt(i*9 + j).y += blockDistance;
 
                 if (j % 3 == 0 && j != 0 && !alreadyCreated)
-                    buttonsGrid.itemAt(i*9 + j).x += units.dp(blockDistance);
+                    buttonsGrid.itemAt(i*9 + j).x += blockDistance;
 
                 if (j > 3 && !alreadyCreated)
-                    buttonsGrid.itemAt(i*9 + j).x += units.dp(blockDistance);
+                    buttonsGrid.itemAt(i*9 + j).x += blockDistance;
 
                 if (j > 6 && !alreadyCreated)
-                    buttonsGrid.itemAt(i*9 + j).x += units.dp(blockDistance);
+                    buttonsGrid.itemAt(i*9 + j).x += blockDistance;
 
                 buttonsGrid.itemAt(i*9 + j).buttonText = "";
                 buttonsGrid.itemAt(i*9 + j).buttonColor = defaultColor;
@@ -170,7 +172,7 @@ Rectangle {
                     buttonsGrid.itemAt(i*9 + j).buttonText = "";
             }
         }
-        alreadyCreated = true;
+        mainView.alreadyCreated = true;
     }
 
     function checkIfGameFinished() {
@@ -259,9 +261,12 @@ Rectangle {
 
                         SudokuButton {
                             id: clearButton
-                            width: units.gu(30)
+                            width: mainView.pageWidth*2/3;
                             buttonText: "Clear"
-                            anchors.horizontalCenter: parent.verticalCenter
+                            size: units.gu(5)
+                            //anchors.horizontalCenter: dialogue.verticalCenter
+                            anchors.left: parent.left;
+                            x: mainView.pageWidth/2 - units.gu(5)/2;
                             border.color: defaultBorderColor
                             border.width: 3
                             textColor: defaultTextColor;
@@ -295,6 +300,7 @@ Rectangle {
                                 SudokuButton {
                                     id: buttonPick
                                     buttonText: index+1;
+                                    size: units.gu(5);
                                     border.color: defaultBorderColor;
                                     border.width: 2
                                     textColor: defaultTextColor;
@@ -338,127 +344,85 @@ Rectangle {
                 }
             }
 
-            Repeater {
-                id: buttonsGrid;
-                model: 81
-                objectName: "buttonsGrid";
-
-                SudokuButton {
-                    id: gridButton;
-                    buttonText: "0";
-                    //width: units.gu(5);
-                    //height: units.gu(5);
-                    size: units.gu(5)
-                    //color: defaultColor;
-                    border.width: 3
-                    border.color: defaultBorderColor
-                    textColor: defaultTextColor;
-                    MouseArea {
-                        id: buttonMouseArea2
-                        anchors.fill: parent
-                        onClicked: {
-                            mainRectangle.currentX = index;
-                            gridButton.buttonColor = defaultColor;
-                            PopupUtils.open(dialog, gridButton);
-                        }
-                        onPressed: {
-                            gridButton.buttonColor = String(Qt.darker(defaultColor,1.5));
-                        }
-                    }
-                    buttonColor: defaultColor;
-
-
-                }
-                Component.onCompleted: {
-                    switch(difficultySelector.selectedIndex) {
-                    case 0:
-                        var randomnumber = Math.floor(Math.random()*9);
-                        randomnumber += 31;
-                        sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                        break;
-                    case 1:
-                        var randomnumber = Math.floor(Math.random()*4);
-                        randomnumber += 26;
-                        sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                        break;
-                    case 2:
-                        var randomnumber = Math.floor(Math.random()*4);
-                        randomnumber += 21;
-                        sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                        break;
-                    case 3:
-                        var randomnumber = Math.floor(Math.random()*3);
-                        randomnumber += 17;
-                        sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                        break;
-                    }
-                    //sudokuBlocksGrid.createNewGame(1);
-                }
-
-            }
+           SudokuButtonsGrid {
+               id:buttonsGrid;
+           }
         }
-
     }
 
     Row {
-        y: units.gu(55)
-        x: units.dp(8)
+        id: informationRow;
+        y: 7*mainView.pageHeight/10;
+        x: units.dp(8);
+        width: mainView.pageWidth - units.dp(8);
         Rectangle {
             id: redFlagRect
+            x: 0
             Rectangle {
                 id: redFlag
                 color: defaultNotAllowedColor
-                width: units.gu(4)
-                height: units.gu(4)
+                width: mainView.pageWidth/10;
+                height: mainView.pageWidth/10;
                 radius: 5
+                Label {
+                    id: redFlagText
+                    text: i18n.tr("Not allowed")
+                    fontSize: "x-small"
+                    width:units.gu(5);
+                    wrapMode: TextEdit.WordWrap;
+                    anchors.left: redFlag.right;
+                    anchors.leftMargin: units.dp(2);
+                    anchors.verticalCenter: redFlag.verticalCenter;
+                }
             }
-            Text {
-                id: redFlagText
-                text: i18n.tr("Not allowed")
-                font.pointSize: 9
-                anchors.left: redFlag.right;
-                anchors.leftMargin: units.gu(1)
-                anchors.verticalCenter: redFlag.verticalCenter
-            }
+
         }
         Rectangle {
             id: blueFlagRect
-            x: redFlag.width + redFlagText.width + units.dp(30);
+            x: 3*mainView.pageWidth/10 + 2*blockDistance;
+            //anchors.left: redFlagRect.right;
+            //anchors.leftMargin: redFlag.width + redFlagText.width;
             Rectangle {
                 id: blueFlag
                 color: defaultStartingColor
                 border.color: defaultBorderColor
-                width: units.gu(4)
-                height: units.gu(4)
-                radius: 5
+                width: mainView.pageWidth/10
+                height: mainView.pageWidth/10
+                radius: 5;
+                Label {
+                    id: blueFlagText
+                    text: i18n.tr("Start blocks")
+                    fontSize: "x-small"
+                    width:units.gu(5);
+                    wrapMode: TextEdit.WordWrap;
+                    anchors.left: blueFlag.right;
+                    anchors.leftMargin: units.dp(2);
+                    anchors.verticalCenter: blueFlag.verticalCenter;
+                }
             }
-            Text {
-                id: blueFlagText
-                text: i18n.tr("Start blocks")
-                font.pointSize: 9
-                anchors.left: blueFlag.right;
-                anchors.leftMargin: units.gu(1)
-                anchors.verticalCenter: blueFlag.verticalCenter
-            }
+
         }
         Rectangle {
             id: orangeFlagRect
-            x: redFlag.width + redFlagText.width + blueFlagRect.width + blueFlagText.width + units.dp(95)
+            x:  7*mainView.pageWidth/10+2*blockDistance;
             Rectangle {
                 id: orangeFlag
                 color: defaultHintColor
                 border.color: defaultBorderColor
-                width: units.gu(4)
-                height: units.gu(4)
-                radius: 5
+                width: mainView.pageWidth/10
+                height: mainView.pageWidth/10
+                radius: 5;
+                Label {
+                    text: i18n.tr("Hinted blocks")
+                    fontSize: "x-small"
+                    width:units.gu(5);
+                    wrapMode: TextEdit.WordWrap;
+                    anchors.left: orangeFlag.right;
+                    anchors.leftMargin: units.dp(2);
+                    anchors.verticalCenter: orangeFlag.verticalCenter;
+                }
             }
-            Text {
-                text: i18n.tr("Hinted blocks")
-                font.pointSize: 9
-                anchors.left: orangeFlag.right;
-                anchors.leftMargin: units.gu(1)
-                anchors.verticalCenter: orangeFlag.verticalCenter
-            }
+
         }
     }
 }
