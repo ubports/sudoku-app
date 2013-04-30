@@ -10,8 +10,8 @@ MainView {
     objectName: "Sudoku Touch"
     applicationName: "SudokuTouch"
 
-    property real pageWidth: units.gu(50);
-    property real pageHeight: units.gu(75);
+    property real pageWidth: units.gu(40);
+    property real pageHeight: units.gu(71);
 
     property real blockDistance: pageWidth/56;
     property bool alreadyCreated: false;
