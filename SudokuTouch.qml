@@ -137,8 +137,8 @@ MainView {
                 height: units.gu(15);
                 z: 100;
                 visible: false;
-                x: mainView.pageWidth / 2 - height
-                y: mainView.pageHeight / 2 - width
+                x: mainView.pageWidth / 2 - width/2;
+                y: mainView.pageHeight / 2 - height/2;
                 //anchors.verticalCenter: mainView.verticalCenter;
                 //anchors.horizontalCenter: mainView.verticalCenter;
                 //anchors.centerIn: mainView;

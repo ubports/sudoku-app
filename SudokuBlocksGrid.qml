@@ -52,7 +52,6 @@ Rectangle {
         }
         var randomnumber = Math.floor(Math.random()*counter);
         var hintPair = emptyFields[randomnumber];
-        print(emptyFields);
         if (emptyFields.length != 0) {
             var hintRow = hintPair[0];
             var hintColumn = hintPair[1];
@@ -176,8 +175,8 @@ Rectangle {
     }
 
     function checkIfGameFinished() {
-        print (checkIfAllFieldsFilled());
-        print (checkIfAllFieldsCorrect());
+        //print (checkIfAllFieldsFilled());
+        //print (checkIfAllFieldsCorrect());
         return checkIfAllFieldsFilled() && checkIfAllFieldsCorrect();
     }
 
