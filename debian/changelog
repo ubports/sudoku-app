@@ -1,3 +1,9 @@
+sudokutouchgame (0.1ubuntu1) raring; urgency=low
+
+  * Bug fixed
+
+ -- Dinko Osmankovic <dinko.metalac@gmail.com>  Tue, 07 May 2013 07:57:14 +0200
+
 sudokutouchgame (0.1) raring; urgency=low
 
   * Initial Release.
