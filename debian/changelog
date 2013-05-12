@@ -1,3 +1,9 @@
+sudokutouchgame (0.2ubuntu1) raring; urgency=low
+
+  * All images now svg
+
+ -- Dinko Osmankovic <dinko.metalac@dinko.metalac>  Sun, 12 May 2013 17:00:48 +0200
+
 sudokutouchgame (0.1ubuntu1) raring; urgency=low
 
   * Bug fixed

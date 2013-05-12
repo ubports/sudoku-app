@@ -364,13 +364,18 @@ MainView {
                     //anchors.fill: parent
                     anchors.horizontalCenter: parent.horizontalCenter;
                     y: units.gu(8);
-                    UbuntuShape {
-                        image: Image {
-                            source: "icons/SudokuGameIcon.png"
-                            sourceSize.width: 128
-                            sourceSize.height: 128
-                        }
+                    Rectangle {
+                        radius: 10
+                        height: units.gu(10)
+                        width: units.gu(10)
                         anchors.horizontalCenter: parent.horizontalCenter;
+
+                        Image {
+                            source: "icons/SudokuGameIcon.svg"
+                            smooth: true
+                            fillMode: Image.PreserveAspectCrop
+                            anchors.fill: parent
+                        }
                     }
                     Row {
                         anchors.horizontalCenter: parent.horizontalCenter;
@@ -410,7 +415,7 @@ MainView {
                     }
                     Label {
                         font.bold: true;
-                        text: "1.0"
+                        text: "0.2"
                     }
                 }
                 Row {
