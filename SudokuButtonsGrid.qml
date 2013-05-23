@@ -20,6 +20,11 @@ Repeater {
         border.width: 3
         border.color: defaultBorderColor
         textColor: defaultTextColor;
+        anchors.left: ((index - (Math.floor(index / 9) * 9)) > 0) ? buttonsGrid.itemAt(index-1).right : mainView.left
+        anchors.leftMargin: ((index - (Math.floor(index / 9) * 9))%3 == 0) ? 4*mainView.blockDistance : mainView.blockDistance
+
+        anchors.top: (Math.floor(index / 9) > 0) ? buttonsGrid.itemAt(index-9).bottom : mainView.top
+        anchors.topMargin: (Math.floor(index / 9)%3 == 0) ? 4*mainView.blockDistance : mainView.blockDistance
         MouseArea {
             id: buttonMouseArea2
             anchors.fill: parent

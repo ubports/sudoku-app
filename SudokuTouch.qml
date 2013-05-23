@@ -13,7 +13,7 @@ MainView {
     property real pageWidth: units.gu(40);
     property real pageHeight: units.gu(71);
 
-    property real blockDistance: pageWidth/56;
+    property real blockDistance: pageWidth/200;
     property bool alreadyCreated: false;
     property bool gridLoaded: false;
 

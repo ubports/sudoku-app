@@ -22,7 +22,7 @@ Rectangle {
         anchors.centerIn: parent
         font.pixelSize: 18
         font.bold: boldText;
-    }
+    }    
 
     //determines the color of the button by using the conditional operator
     //color: buttonMouseArea.pressed ? Qt.darker(color, 1.5) : color

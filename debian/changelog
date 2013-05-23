@@ -1,3 +1,9 @@
+sudokutouchgame (0.2ubuntu2) raring; urgency=low
+
+  * Code refactoring. Repeater item anchors bug fixed.
+
+ -- Dinko Osmankovic <dinko.metalac@gmail.com>  Thu, 23 May 2013 14:59:25 +0200
+
 sudokutouchgame (0.2ubuntu1) raring; urgency=low
 
   * All images now svg

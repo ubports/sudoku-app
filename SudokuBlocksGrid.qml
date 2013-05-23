@@ -19,8 +19,6 @@ Rectangle {
     property alias boldText: colorScheme.boldText;
     property alias defaultTextColor: colorScheme.textColor;
 
-    property alias buttonsGridPublic: buttonsGrid;
-
     property real blockDistance: mainView.blockDistance;
     property int currentX;
     property string selectedNumberFromDialog: "0";
@@ -125,7 +123,7 @@ Rectangle {
     }
 
     function createNewGame(difficulty) {
-        for (var i = 0; i < 9; i++) {
+        /*for (var i = 0; i < 9; i++) {
             for (var j = 0; j < 9; j++) {
                 if (i % 3 == 0 && i != 0 && !alreadyCreated)
                     buttonsGrid.itemAt(i*9 + j).y += blockDistance;
@@ -149,7 +147,7 @@ Rectangle {
                 buttonsGrid.itemAt(i*9 + j).border.color = defaultBorderColor;
                 buttonsGrid.itemAt(i*9 + j).enabled = true;
             }
-        }
+        }*/
 
         grid = SudokuCU.CU.Sudoku.generate();
         solution = SudokuCU.deepCopy(grid);
@@ -378,8 +376,7 @@ Rectangle {
         }
         Rectangle {
             id: blueFlagRect
-            x: 3*mainView.pageWidth/10 + 2*blockDistance;
-            //anchors.left: redFlagRect.right;
+            x: 3*mainView.pageWidth/10 + 10*blockDistance;
             //anchors.leftMargin: redFlag.width + redFlagText.width;
             Rectangle {
                 id: blueFlag
