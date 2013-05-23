@@ -360,14 +360,14 @@ MainView {
                 }
                 Column {
                     id: aboutColumn;
-                    spacing: 2;
+                    spacing: 5;
                     //anchors.fill: parent
                     anchors.horizontalCenter: parent.horizontalCenter;
                     y: units.gu(8);
                     Rectangle {
                         radius: 10
-                        height: units.gu(10)
-                        width: units.gu(10)
+                        height: units.gu(20)
+                        width: units.gu(20)
                         anchors.horizontalCenter: parent.horizontalCenter;
 
                         Image {
