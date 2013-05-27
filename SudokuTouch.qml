@@ -157,7 +157,7 @@ MainView {
                 tools: ToolbarActions {
                     Action {
                         text: i18n.tr("New game");
-                        iconSource: Qt.resolvedUrl("icons/new_game.png")
+                        iconSource: Qt.resolvedUrl("icons/new_game_ubuntu.svg")
                         onTriggered: {
                             print("new block distance:", blockDistance);
                             switch(difficultySelector.selectedIndex) {
@@ -185,7 +185,7 @@ MainView {
                         }
                     }
                     Action {
-                        iconSource: Qt.resolvedUrl("icons/hint.png")
+                        iconSource: Qt.resolvedUrl("icons/hint.svg")
                         text: i18n.tr("Show hint");
                         enabled: disableHints.checked;
                         onTriggered: {
@@ -199,7 +199,7 @@ MainView {
                         }
                     }
                     Action {
-                        iconSource: Qt.resolvedUrl("icons/exit.png")
+                        iconSource: Qt.resolvedUrl("icons/close.svg")
                         text: i18n.tr("Close");
                         onTriggered: Qt.quit()
                     }
@@ -233,7 +233,7 @@ MainView {
                 tools: ToolbarActions {
 
                     Action {
-                        iconSource: Qt.resolvedUrl("icons/exit.png")
+                        iconSource: Qt.resolvedUrl("icons/close.svg")
                         text: i18n.tr("Close");
                         onTriggered: Qt.quit()
                     }
@@ -353,7 +353,7 @@ MainView {
                 tools: ToolbarActions {
 
                     Action {
-                        iconSource: Qt.resolvedUrl("icons/exit.png");
+                        iconSource: Qt.resolvedUrl("icons/close.svg");
                         text: i18n.tr("Close");
                         onTriggered: Qt.quit()
                     }
