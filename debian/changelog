@@ -1,3 +1,9 @@
+sudokutouchgame (0.3ubuntu1) raring; urgency=low
+
+  * Bug fix. Button animation added.
+
+ -- Dinko Osmankovic <dinko.metalac@gmail.com>  Mon, 27 May 2013 21:06:34 +0200
+
 sudokutouchgame (0.2ubuntu3) raring; urgency=low
 
   * Small change in grid.

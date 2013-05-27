@@ -28,18 +28,48 @@ Repeater {
         MouseArea {
             id: buttonMouseArea2
             anchors.fill: parent
+            SequentialAnimation {
+                id: animateButton
+                NumberAnimation {
+                    id: animateButton1
+                    target: gridButton
+                    properties: "scale"
+                    to: 1.2
+                    from: 1
+                    duration: 100
+                    easing {type: Easing.InOutQuad;}
+                }
+                NumberAnimation {
+                    id: animateButton2
+                    target: gridButton
+                    properties: "scale"
+                    to: 1
+                    from: 1.2
+                    duration: 100
+                    easing {type: Easing.InOutQuad;}
+                }
+                onRunningChanged: {
+                    if (animateButton.running == false ) {
+                        mainRectangle.currentX = index;
+                        gridButton.buttonColor = defaultColor;
+                        PopupUtils.open(dialog, gridButton);
+
+                    }
+
+                }
+            }
+
             onClicked: {
-                mainRectangle.currentX = index;
+                animateButton.start();
+                /*mainRectangle.currentX = index;
                 gridButton.buttonColor = defaultColor;
-                PopupUtils.open(dialog, gridButton);
+                PopupUtils.open(dialog, gridButton);*/
             }
             onPressed: {
                 gridButton.buttonColor = String(Qt.darker(defaultColor,1.5));
             }
         }
         buttonColor: defaultColor;
-
-
     }
     Component.onCompleted: {
         switch(difficultySelector.selectedIndex) {

@@ -123,9 +123,9 @@ Rectangle {
     }
 
     function createNewGame(difficulty) {
-        /*for (var i = 0; i < 9; i++) {
+        for (var i = 0; i < 9; i++) {
             for (var j = 0; j < 9; j++) {
-                if (i % 3 == 0 && i != 0 && !alreadyCreated)
+                /*if (i % 3 == 0 && i != 0 && !alreadyCreated)
                     buttonsGrid.itemAt(i*9 + j).y += blockDistance;
                 if (i > 3 && !alreadyCreated)
                     buttonsGrid.itemAt(i*9 + j).y += blockDistance;
@@ -139,7 +139,7 @@ Rectangle {
                     buttonsGrid.itemAt(i*9 + j).x += blockDistance;
 
                 if (j > 6 && !alreadyCreated)
-                    buttonsGrid.itemAt(i*9 + j).x += blockDistance;
+                    buttonsGrid.itemAt(i*9 + j).x += blockDistance;*/
 
                 buttonsGrid.itemAt(i*9 + j).buttonText = "";
                 buttonsGrid.itemAt(i*9 + j).buttonColor = defaultColor;
@@ -147,7 +147,7 @@ Rectangle {
                 buttonsGrid.itemAt(i*9 + j).border.color = defaultBorderColor;
                 buttonsGrid.itemAt(i*9 + j).enabled = true;
             }
-        }*/
+        }
 
         grid = SudokuCU.CU.Sudoku.generate();
         solution = SudokuCU.deepCopy(grid);
