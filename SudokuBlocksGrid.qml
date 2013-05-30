@@ -267,18 +267,57 @@ Rectangle {
                             border.color: defaultBorderColor
                             border.width: 3
                             textColor: defaultTextColor;
+                            SequentialAnimation {
+                                id: animateClearButton
+                                NumberAnimation {
+                                    id: animateClearButton1
+                                    target: clearButton
+                                    properties: "scale"
+                                    to: 1.2
+                                    from: 1
+                                    duration: 100
+                                    easing {type: Easing.InOutQuad;}
+                                }
+                                NumberAnimation {
+                                    id: animateClearButton2
+                                    target: clearButton
+                                    properties: "scale"
+                                    to: 1
+                                    from: 1.2
+                                    duration: 100
+                                    easing {type: Easing.InOutQuad;}
+                                }
+                                onRunningChanged: {
+                                    if (animateClearButton.running == false ) {
+                                        /*mainRectangle.currentX = index;
+                                        gridButton.buttonColor = defaultColor;
+                                        PopupUtils.open(dialog, gridButton);*/
+                                        buttonsGrid.itemAt(currentX).buttonText = "";
+                                        var row = Math.floor(currentX/9);
+                                        var column = currentX%9;
+                                        print (row, column);
+                                        grid.setValue(column,row, 0);
+                                        buttonsGrid.itemAt(currentX).buttonColor = defaultColor;
+                                        buttonsGrid.itemAt(currentX).boldText = false;
+                                        PopupUtils.close(dialogue)
+
+                                    }
+
+                                }
+                            }
                             MouseArea {
                                 id: buttonMouseArea
                                 anchors.fill: parent
                                 onClicked: {
-                                    buttonsGrid.itemAt(currentX).buttonText = "";
+                                    animateClearButton.start();
+                                    /*buttonsGrid.itemAt(currentX).buttonText = "";
                                     var row = Math.floor(currentX/9);
                                     var column = currentX%9;
                                     print (row, column);
                                     grid.setValue(column,row, 0);
                                     buttonsGrid.itemAt(currentX).buttonColor = defaultColor;
                                     buttonsGrid.itemAt(currentX).boldText = false;
-                                    PopupUtils.close(dialogue)
+                                    PopupUtils.close(dialogue)*/
                                 }
                             }
                             buttonColor: buttonMouseArea.pressed ? String(Qt.darker(defaultColor,1.2)):defaultColor
@@ -301,10 +340,61 @@ Rectangle {
                                     border.color: defaultBorderColor;
                                     border.width: 2
                                     textColor: defaultTextColor;
+                                    SequentialAnimation {
+                                        id: animatePickButton
+                                        NumberAnimation {
+                                            id: animatePickButton1
+                                            target: buttonPick
+                                            properties: "scale"
+                                            to: 1.2
+                                            from: 1
+                                            duration: 100
+                                            easing {type: Easing.InOutQuad;}
+                                        }
+                                        NumberAnimation {
+                                            id: animatePickButton2
+                                            target: buttonPick
+                                            properties: "scale"
+                                            to: 1
+                                            from: 1.2
+                                            duration: 100
+                                            easing {type: Easing.InOutQuad;}
+                                        }
+                                        onRunningChanged: {
+                                            if (animatePickButton.running == false ) {
+                                                buttonsGrid.itemAt(currentX).buttonText = index+1
+
+                                                var row = Math.floor(currentX/9);
+                                                var column = currentX%9;
+
+                                                //print (row, column)
+                                                grid.setValue(column, row, index+1);
+                                                //print(grid)
+                                                var testField = grid.cellConflicts(column,row)
+                                                //print (testField)
+                                                if (testField == true)
+                                                    buttonsGrid.itemAt(currentX).buttonColor = defaultNotAllowedColor;
+                                                else {
+                                                    buttonsGrid.itemAt(currentX).buttonColor = defaultColor;
+                                                    buttonsGrid.itemAt(currentX).boldText = false;
+                                                }
+
+                                                PopupUtils.close(dialogue)
+
+                                                if (checkIfGameFinished()) {
+                                                    gameFinishedRectangle.visible = true;
+                                                    winTimer.restart();
+                                                }
+
+                                            }
+
+                                        }
+                                    }
                                     MouseArea {
                                         id: buttonMouseArea1
                                         anchors.fill: parent
                                         onClicked: {
+                                            /*
                                             buttonsGrid.itemAt(currentX).buttonText = index+1
 
                                             var row = Math.floor(currentX/9);
@@ -328,7 +418,8 @@ Rectangle {
                                                 gameFinishedRectangle.visible = true;
                                                 winTimer.restart();
                                             }
-
+                                            */
+                                            animatePickButton.start();
                                         }
                                     }
                                     buttonColor: buttonMouseArea1.pressed ? String(Qt.darker(defaultColor,1.2)):defaultColor
@@ -341,9 +432,9 @@ Rectangle {
                 }
             }
 
-           SudokuButtonsGrid {
-               id:buttonsGrid;
-           }
+            SudokuButtonsGrid {
+                id:buttonsGrid;
+            }
         }
     }
 

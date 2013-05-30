@@ -1,3 +1,9 @@
+sudokutouchgame (0.3ubuntu2) raring; urgency=low
+
+  * Finished adding button animations. All game buttons are now animated.
+
+ -- Dinko Osmankovic <dinko.metalac@gmail.com>  Thu, 30 May 2013 12:16:36 +0200
+
 sudokutouchgame (0.3ubuntu1) raring; urgency=low
 
   * Bug fix. Button animation added.
