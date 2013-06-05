@@ -30,23 +30,23 @@ Repeater {
             anchors.fill: parent
             SequentialAnimation {
                 id: animateButton
-                NumberAnimation {
+                UbuntuNumberAnimation {
                     id: animateButton1
                     target: gridButton
                     properties: "scale"
                     to: 1.2
                     from: 1
-                    duration: 100
-                    easing {type: Easing.InOutQuad;}
+                    duration: UbuntuAnimation.SnapDuration
+                    easing: UbuntuAnimation.StandardEasing
                 }
-                NumberAnimation {
+                UbuntuNumberAnimation {
                     id: animateButton2
                     target: gridButton
                     properties: "scale"
                     to: 1
                     from: 1.2
-                    duration: 100
-                    easing {type: Easing.InOutQuad;}
+                    duration: UbuntuAnimation.SnapDuration
+                    easing: UbuntuAnimation.StandardEasing
                 }
                 onRunningChanged: {
                     if (animateButton.running == false ) {

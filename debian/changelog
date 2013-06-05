@@ -1,3 +1,9 @@
+sudokutouchgame (0.3ubuntu3) raring; urgency=low
+
+  * Animation changed to UbuntuAnimation
+
+ -- Dinko Osmankovic <dinko.metalac@gmail.com>  Wed, 05 Jun 2013 16:45:54 +0200
+
 sudokutouchgame (0.3ubuntu2) raring; urgency=low
 
   * Finished adding button animations. All game buttons are now animated.

@@ -269,23 +269,23 @@ Rectangle {
                             textColor: defaultTextColor;
                             SequentialAnimation {
                                 id: animateClearButton
-                                NumberAnimation {
+                                UbuntuNumberAnimation {
                                     id: animateClearButton1
                                     target: clearButton
                                     properties: "scale"
-                                    to: 1.2
+                                    to: 1.1
                                     from: 1
-                                    duration: 100
-                                    easing {type: Easing.InOutQuad;}
+                                    duration: UbuntuAnimation.SnapDuration
+                                    easing: UbuntuAnimation.StandardEasing
                                 }
-                                NumberAnimation {
+                                UbuntuNumberAnimation {
                                     id: animateClearButton2
                                     target: clearButton
                                     properties: "scale"
                                     to: 1
-                                    from: 1.2
-                                    duration: 100
-                                    easing {type: Easing.InOutQuad;}
+                                    from: 1.1
+                                    duration: UbuntuAnimation.SnapDuration
+                                    easing: UbuntuAnimation.StandardEasing
                                 }
                                 onRunningChanged: {
                                     if (animateClearButton.running == false ) {
