@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Sudoku
+Encoding=UTF-8
+Version=1.0
+Comment=Sudoku Game for Ubuntu Touch
+Exec=qmlscene /usr/share/sudoku-app/sudoku-app.qml
+Icon=/usr/share/sudoku-app/SudokuGameIcon.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+X-Ubuntu-StageHint=SideStage

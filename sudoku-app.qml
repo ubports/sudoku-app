@@ -7,8 +7,8 @@ import "localStorage.js" as Settings
 MainView {
     id: mainView
     // objectName for functional testing purposes (autopilot-qt5)
-    objectName: "Sudoku Touch"
-    applicationName: "SudokuTouch"
+    objectName: "sudoku"
+    applicationName: "sudoku-app"
 
     property real pageWidth: units.gu(40);
     property real pageHeight: units.gu(71);
@@ -93,7 +93,7 @@ MainView {
             id: mainTab;
             objectName: "MainTab"
 
-            title: i18n.tr("SudokuTouch Game")
+            title: i18n.tr("Sudoku")
 
             Timer {
                 id: winTimer;
@@ -402,7 +402,7 @@ MainView {
                         anchors.horizontalCenter: parent.horizontalCenter;
                         Label {
                             font.bold: true;
-                            text: "https://launchpad.net/sudokutouchgame"
+                            text: "https://launchpad.net/sudoku-app"
                         }
                     }
                 }
