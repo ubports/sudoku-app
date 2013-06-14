@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Copyright (C) YEAR Canonical Ltd. 
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-30 08:39+0200\n"
+"POT-Creation-Date: 2013-06-14 13:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,88 +17,74 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/SudokuBlocksGrid.qml:369
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/debian/sudokutouchgame/usr/share/sudokutouchgame/SudokuBlocksGrid.qml:412
+#: ../SudokuBlocksGrid.qml:457
 msgid "Not allowed"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/SudokuBlocksGrid.qml:394
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/debian/sudokutouchgame/usr/share/sudokutouchgame/SudokuBlocksGrid.qml:432
+#: ../SudokuBlocksGrid.qml:481
 msgid "Start blocks"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/SudokuBlocksGrid.qml:416
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/debian/sudokutouchgame/usr/share/sudokutouchgame/SudokuBlocksGrid.qml:451
+#: ../SudokuBlocksGrid.qml:503
 msgid "Hinted blocks"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/SudokuTouch.qml:96
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/debian/sudokutouchgame/usr/share/sudokutouchgame/SudokuTouch.qml:48
-msgid "SudokuTouch Game"
+#: ../sudoku-app.qml:96 ../.build/sudoku-app.desktop.js:1
+msgid "Sudoku"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/SudokuTouch.qml:148
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/SudokuTouch.qml:196
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/debian/sudokutouchgame/usr/share/sudokutouchgame/SudokuTouch.qml:100
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/debian/sudokutouchgame/usr/share/sudokutouchgame/SudokuTouch.qml:147
+#: ../sudoku-app.qml:148 ../sudoku-app.qml:196
 msgid "You are a cheat..."
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/SudokuTouch.qml:148
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/debian/sudokutouchgame/usr/share/sudokutouchgame/SudokuTouch.qml:100
+#: ../sudoku-app.qml:148
 msgid "Congratulations!"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/SudokuTouch.qml:159
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/debian/sudokutouchgame/usr/share/sudokutouchgame/SudokuTouch.qml:111
+#: ../sudoku-app.qml:159
 msgid "New game"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/SudokuTouch.qml:189
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/debian/sudokutouchgame/usr/share/sudokutouchgame/SudokuTouch.qml:140
+#: ../sudoku-app.qml:189
 msgid "Show hint"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/SudokuTouch.qml:203
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/SudokuTouch.qml:237
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/SudokuTouch.qml:357
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/debian/sudokutouchgame/usr/share/sudokutouchgame/SudokuTouch.qml:154
+#: ../sudoku-app.qml:203 ../sudoku-app.qml:237 ../sudoku-app.qml:357
 msgid "Close"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/SudokuTouch.qml:231
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/debian/sudokutouchgame/usr/share/sudokutouchgame/SudokuTouch.qml:183
+#: ../sudoku-app.qml:231
 msgid "Settings"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/SudokuTouch.qml:250
+#: ../sudoku-app.qml:250
 msgid "SudokuTouch settings"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/SudokuTouch.qml:257
+#: ../sudoku-app.qml:257
 msgid "Difficulty"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/SudokuTouch.qml:258
+#: ../sudoku-app.qml:258
 msgid "Easy"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/SudokuTouch.qml:258
+#: ../sudoku-app.qml:258
 msgid "Moderate"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/SudokuTouch.qml:258
+#: ../sudoku-app.qml:258
 msgid "Hard"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/SudokuTouch.qml:258
+#: ../sudoku-app.qml:258
 msgid "Ultra Hard"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/SudokuTouch.qml:294
+#: ../sudoku-app.qml:294
 msgid "Theme"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/SudokuTouch/sudokutouchgame/SudokuTouch.qml:351
+#: ../sudoku-app.qml:351
 msgid "About"
 msgstr ""
