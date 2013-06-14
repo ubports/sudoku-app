@@ -1,4 +1,4 @@
-sudoku-app (0.3ubuntu4) raring; urgency=low
+sudoku-app (0.4) raring; urgency=low
 
   * Renamed files and package to sudoku-app
 
