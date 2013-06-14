@@ -1,3 +1,9 @@
+sudoku-app (0.4) raring; urgency=low
+
+  * Renamed files and package to sudoku-app
+
+ -- David Planella <david.planella@ubuntu.com>  Fri, 14 Jun 2013 09:45:53 +0200
+
 sudokutouchgame (0.3ubuntu3) raring; urgency=low
 
   * Animation changed to UbuntuAnimation
