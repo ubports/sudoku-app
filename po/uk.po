@@ -1,0 +1,90 @@
+# Ukrainian translation for sudokutouchgame
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the sudokutouchgame package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sudokutouchgame\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-06-14 13:12+0200\n"
+"PO-Revision-Date: 2013-06-13 09:28+0000\n"
+"Last-Translator: Yuri Chornoivan <yurchor@gmail.com>\n"
+"Language-Team: Ukrainian <uk@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2013-06-15 06:21+0000\n"
+"X-Generator: Launchpad (build 16667)\n"
+
+#: ../SudokuBlocksGrid.qml:457
+msgid "Not allowed"
+msgstr "Не дозволено"
+
+#: ../SudokuBlocksGrid.qml:481
+msgid "Start blocks"
+msgstr "Початкові блоки"
+
+#: ../SudokuBlocksGrid.qml:503
+msgid "Hinted blocks"
+msgstr "Блоки з підказками"
+
+#: ../sudoku-app.qml:96 ../.build/sudoku-app.desktop.js:1
+msgid "Sudoku"
+msgstr ""
+
+#: ../sudoku-app.qml:148 ../sudoku-app.qml:196
+msgid "You are a cheat..."
+msgstr "Ви підглядали…"
+
+#: ../sudoku-app.qml:148
+msgid "Congratulations!"
+msgstr "Вітаємо!"
+
+#: ../sudoku-app.qml:159
+msgid "New game"
+msgstr "Нова гра"
+
+#: ../sudoku-app.qml:189
+msgid "Show hint"
+msgstr "Показати підказку"
+
+#: ../sudoku-app.qml:203 ../sudoku-app.qml:237 ../sudoku-app.qml:357
+msgid "Close"
+msgstr "Закрити"
+
+#: ../sudoku-app.qml:231
+msgid "Settings"
+msgstr "Параметри"
+
+#: ../sudoku-app.qml:250
+msgid "SudokuTouch settings"
+msgstr "Параметри SudokuTouch"
+
+#: ../sudoku-app.qml:257
+msgid "Difficulty"
+msgstr "Складність"
+
+#: ../sudoku-app.qml:258
+msgid "Easy"
+msgstr "Проста"
+
+#: ../sudoku-app.qml:258
+msgid "Moderate"
+msgstr "Середня"
+
+#: ../sudoku-app.qml:258
+msgid "Hard"
+msgstr "Важка"
+
+#: ../sudoku-app.qml:258
+msgid "Ultra Hard"
+msgstr "Дуже важка"
+
+#: ../sudoku-app.qml:294
+msgid "Theme"
+msgstr "Тема"
+
+#: ../sudoku-app.qml:351
+msgid "About"
+msgstr "Про програму"
