@@ -380,7 +380,7 @@ MainView {
                     Row {
                         anchors.horizontalCenter: parent.horizontalCenter;
                         Label {
-                            text: "Author: "
+                            text: i18n.tr("Author: ")
                         }
                         Label {
                             font.bold: true;
@@ -390,7 +390,7 @@ MainView {
                     Row {
                         anchors.horizontalCenter: parent.horizontalCenter;
                         Label {
-                            text: "Contact: "
+                            text: i18n.tr("Contact: ")
                         }
                         Label {
                             font.bold: true;
@@ -411,11 +411,11 @@ MainView {
                     anchors.top: aboutColumn.bottom;
                     anchors.topMargin: units.gu(5);
                     Label {
-                        text: "Version: "
+                        text: i18n.tr("Version: ")
                     }
                     Label {
                         font.bold: true;
-                        text: "0.2"
+                        text: "0.4"
                     }
                 }
                 Row {

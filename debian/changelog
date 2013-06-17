@@ -1,3 +1,9 @@
+sudoku-app (0.4.1) raring; urgency=low
+
+  * Bugfix for Bug #1191239 
+
+ -- Dinko Osmankovic <dinko.metalac@gmail.com>  Mon, 17 Jun 2013 11:16:46 +0200
+
 sudoku-app (0.4) raring; urgency=low
 
   * Renamed files and package to sudoku-app

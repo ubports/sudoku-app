@@ -251,7 +251,7 @@ Rectangle {
                 Dialog {
                     id: dialogue
                     //title: "Number Picker"
-                    text: "Please pick a number"
+                    text: i18n.tr("Please pick a number")
 
                     Column {
                         spacing: units.gu(5)
@@ -259,7 +259,7 @@ Rectangle {
                         SudokuButton {
                             id: clearButton
                             width: mainView.pageWidth*2/3;
-                            buttonText: "Clear"
+                            buttonText: i18n.tr("Clear")
                             size: units.gu(5)
                             //anchors.horizontalCenter: dialogue.verticalCenter
                             anchors.left: parent.left;
