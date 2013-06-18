@@ -7,84 +7,107 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudokutouchgame\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-06-14 13:12+0200\n"
+"POT-Creation-Date: 2013-06-17 11:14+0200\n"
 "PO-Revision-Date: 2013-06-14 21:10+0000\n"
 "Last-Translator: Ibrahim Saed <ibraheem5000@gmail.com>\n"
 "Language-Team: Arabic <ar@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-06-15 06:21+0000\n"
-"X-Generator: Launchpad (build 16667)\n"
+"X-Launchpad-Export-Date: 2013-06-18 06:52+0000\n"
+"X-Generator: Launchpad (build 16673)\n"
 
-#: ../SudokuBlocksGrid.qml:457
+#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:254
+msgid "Please pick a number"
+msgstr ""
+
+#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:262
+msgid "Clear"
+msgstr ""
+
+#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:457
 msgid "Not allowed"
 msgstr "غير مسموح"
 
-#: ../SudokuBlocksGrid.qml:481
+#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:481
 msgid "Start blocks"
 msgstr ""
 
-#: ../SudokuBlocksGrid.qml:503
+#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:503
 msgid "Hinted blocks"
 msgstr ""
 
-#: ../sudoku-app.qml:96 ../.build/sudoku-app.desktop.js:1
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:96
 msgid "Sudoku"
 msgstr "سودوكو"
 
-#: ../sudoku-app.qml:148 ../sudoku-app.qml:196
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:148
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:196
 msgid "You are a cheat..."
 msgstr "أنت تغش..."
 
-#: ../sudoku-app.qml:148
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:148
 msgid "Congratulations!"
 msgstr "تهانينا!"
 
-#: ../sudoku-app.qml:159
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:159
 msgid "New game"
 msgstr "لعبة جديدة"
 
-#: ../sudoku-app.qml:189
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:189
 msgid "Show hint"
 msgstr "اعرض تلميحا"
 
-#: ../sudoku-app.qml:203 ../sudoku-app.qml:237 ../sudoku-app.qml:357
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:203
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:237
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:357
 msgid "Close"
 msgstr "أغلق"
 
-#: ../sudoku-app.qml:231
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:231
 msgid "Settings"
 msgstr "الإعدادات"
 
-#: ../sudoku-app.qml:250
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:250
 msgid "SudokuTouch settings"
 msgstr "إعدادات سودوكو"
 
-#: ../sudoku-app.qml:257
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:257
 msgid "Difficulty"
 msgstr "الصعوبة"
 
-#: ../sudoku-app.qml:258
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Easy"
 msgstr "سهل"
 
-#: ../sudoku-app.qml:258
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Moderate"
 msgstr "معتدل"
 
-#: ../sudoku-app.qml:258
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Hard"
 msgstr "صعب"
 
-#: ../sudoku-app.qml:258
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Ultra Hard"
 msgstr "صعب للغاية"
 
-#: ../sudoku-app.qml:294
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:294
 msgid "Theme"
 msgstr "السمة"
 
-#: ../sudoku-app.qml:351
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:351
 msgid "About"
 msgstr "عن اللعبة"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:383
+msgid "Author: "
+msgstr ""
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:393
+msgid "Contact: "
+msgstr ""
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:414
+msgid "Version: "
+msgstr ""
