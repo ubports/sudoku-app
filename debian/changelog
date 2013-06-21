@@ -1,3 +1,9 @@
+sudoku-app (0.4.2) raring; urgency=low
+
+  * Translation fix
+
+ -- Dinko Osmankovic <dinko.metalac@gmail.com>  Fri, 21 Jun 2013 10:23:24 +0200
+
 sudoku-app (0.4.1) raring; urgency=low
 
   * Bugfix for Bug #1191239 

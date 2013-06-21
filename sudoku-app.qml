@@ -247,7 +247,7 @@ MainView {
                     spacing: units.gu(5)
 
                     ListItem.Header {
-                        text: i18n.tr("SudokuTouch settings")
+                        text: i18n.tr("Sudoku settings")
                     }
 
                     ListItem.ValueSelector {
