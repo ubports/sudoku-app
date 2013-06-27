@@ -20,7 +20,7 @@ Rectangle {
         text: button.buttonText;
         color: textColor;
         anchors.centerIn: parent
-        font.pixelSize: 18
+        font.pixelSize: 32
         font.bold: boldText;
     }
 
