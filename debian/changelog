@@ -1,3 +1,9 @@
+sudoku-app (0.4.2ubuntu1) raring; urgency=low
+
+  * Font size fix
+
+ -- Dinko Osmankovic <dinko.metalac@gmail.com>  Thu, 27 Jun 2013 12:34:58 +0200
+
 sudoku-app (0.4.2) raring; urgency=low
 
   * Translation fix
