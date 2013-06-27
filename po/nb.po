@@ -1,16 +1,16 @@
-# Arabic translation for sudokutouchgame
+# Norwegian Bokmal translation for sudoku-app
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
-# This file is distributed under the same license as the sudokutouchgame package.
+# This file is distributed under the same license as the sudoku-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sudokutouchgame\n"
+"Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-17 11:14+0200\n"
-"PO-Revision-Date: 2013-06-20 10:13+0000\n"
-"Last-Translator: Ibrahim Saed <ibraheem5000@gmail.com>\n"
-"Language-Team: Arabic <ar@li.org>\n"
+"PO-Revision-Date: 2013-06-21 16:23+0000\n"
+"Last-Translator: Mathias Bynke <Unknown>\n"
+"Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,95 +19,95 @@ msgstr ""
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:254
 msgid "Please pick a number"
-msgstr "من فضلك اختر رقما"
+msgstr "Velg et tall"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:262
 msgid "Clear"
-msgstr "امسح"
+msgstr "Tøm"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:457
 msgid "Not allowed"
-msgstr "غير مسموح"
+msgstr "Ikke tillatt"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:481
 msgid "Start blocks"
-msgstr ""
+msgstr "Startruter"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:503
 msgid "Hinted blocks"
-msgstr ""
+msgstr "Hintede ruter"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:96
 msgid "Sudoku"
-msgstr "سودوكو"
+msgstr "Sudoku"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:148
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:196
 msgid "You are a cheat..."
-msgstr "أنت تغش..."
+msgstr "Du er en juksemaker …"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:148
 msgid "Congratulations!"
-msgstr "تهانينا!"
+msgstr "Gratulerer!"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:159
 msgid "New game"
-msgstr "لعبة جديدة"
+msgstr "Nytt spill"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:189
 msgid "Show hint"
-msgstr "اعرض تلميحا"
+msgstr "Vis hint"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:203
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:237
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:357
 msgid "Close"
-msgstr "أغلق"
+msgstr "Lukk"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:231
 msgid "Settings"
-msgstr "الإعدادات"
+msgstr "Innstillinger"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:250
 msgid "SudokuTouch settings"
-msgstr "إعدادات سودوكو"
+msgstr ""
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:257
 msgid "Difficulty"
-msgstr "الصعوبة"
+msgstr "Vanskelighetsgrad"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Easy"
-msgstr "سهل"
+msgstr "Lett"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Moderate"
-msgstr "معتدل"
+msgstr "Moderat"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Hard"
-msgstr "صعب"
+msgstr "Vanskelig"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Ultra Hard"
-msgstr "صعب للغاية"
+msgstr "Veldig vanskelig"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:294
 msgid "Theme"
-msgstr "السمة"
+msgstr "Utseende"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:351
 msgid "About"
-msgstr "عن اللعبة"
+msgstr "Om"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:383
 msgid "Author: "
-msgstr "المؤلف: ‎ "
+msgstr "Utvikler: "
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:393
 msgid "Contact: "
-msgstr "التواصل: "
+msgstr "Kontakt: "
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:414
 msgid "Version: "
-msgstr "الإصدارة: "
+msgstr "Versjon: "
