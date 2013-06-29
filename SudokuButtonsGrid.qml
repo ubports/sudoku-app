@@ -68,6 +68,14 @@ Repeater {
             onPressed: {
                 gridButton.buttonColor = String(Qt.darker(defaultColor,1.5));
             }
+
+            onCanceled: {
+                gridButton.buttonColor = defaultColor
+            }
+
+            onExited: {
+                gridButton.buttonColor = defaultColor
+            }
         }
         buttonColor: defaultColor;
     }
