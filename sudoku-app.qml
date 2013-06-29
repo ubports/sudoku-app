@@ -247,16 +247,14 @@ MainView {
                     //height: settingsTab.height;
                     anchors.fill: parent
                     //anchors.horizontalCenter: parent.horizontalCenter;
-                    spacing: units.gu(5)
+                    spacing: units.gu(1)
 
                     ListItem.Header {
-                        text: i18n.tr("Sudoku settings")
+                        text: i18n.tr("Sudoku settings")                    
                     }
 
                     ListItem.ValueSelector {
                         id: difficultySelector
-                        anchors.top: parent.top
-                        anchors.topMargin: units.gu(5)
                         text: i18n.tr("Difficulty")
                         values: [i18n.tr("Easy"), i18n.tr("Moderate"), i18n.tr("Hard"), i18n.tr("Ultra Hard")]
                         onSelectedIndexChanged: {
@@ -292,8 +290,6 @@ MainView {
                     }
                     ListItem.ValueSelector {
                         id: themeSelector
-                        anchors.top: difficultySelector.bottom
-                        //anchors.topMargin: units.gu(1)
                         text: i18n.tr("Theme")
                         values: ["UbuntuColours", "Simple"]
                         onSelectedIndexChanged: {
@@ -314,35 +310,22 @@ MainView {
                             }
                         }
                     }
-                    Row {
-                        id: disableHintsRow
-                        anchors.top: themeSelector.bottom
-                        anchors.topMargin: units.gu(2)
-                        anchors.leftMargin: units.dp(20)
-                        anchors.left: themeSelector.left;
-                        spacing: units.gu(2)
-                        width: parent.width
-                        Label {
-                            id: disableHintsText
-                            anchors.left: parent.left
-                            //anchors.leftMargin: units.dp()
-                            text: "Enable hints"
-                            //fontSize: "medium";
-                        }
-                        Switch {
-                            id: disableHints
-                            checked: disableHintsChecked
-                            //anchors.right: mainColumnSettings.right;
-                            //anchors.rightMargin: units.gu(2)
-                            x: parent.width - disableHints.width - units.gu(1) - units.dp(20);
-                            anchors.verticalCenter: disableHintsText.verticalCenter;
-                            //anchors.verticalCenter: disableHintsText.verticalCenter
-                            onCheckedChanged: {
-                                var result = Settings.setSetting("DisableHints", checked ? "true":"false");
-                                print(result);
-                            }
-                        }
-                    }
+
+                    ListItem.Standard {
+                              //TRANSLATORS: context here
+                              text: i18n.tr("Enable hints")
+                              width: parent.width
+                              control: Switch {
+                                  id: disableHints
+                                  anchors.horizontalCenter: parent.horizontalCenter
+                                  anchors.verticalCenter: parent.verticalCenter
+                                  checked: disableHintsChecked
+                                  onCheckedChanged: {
+                                      var result = Settings.setSetting("DisableHints", checked ? "true":"false");
+                                      print(result);
+                                  }
+                              }
+                          }
                 }
             }
 
