@@ -189,12 +189,15 @@ MainView {
                         text: i18n.tr("Show hint");
                         enabled: disableHints.checked;
                         onTriggered: {
-                            sudokuBlocksGrid.revealHint();
-                            sudokuBlocksGrid.checkIfCheating = true;
-                            if (sudokuBlocksGrid.checkIfGameFinished()) {
-                                gameFinishedRectangle.visible = true;
-                                gameFinishedText.text = i18n.tr("You are a cheat...");
-                                winTimer.restart();
+                            if(enabled)
+                            {
+                                sudokuBlocksGrid.revealHint();
+                                sudokuBlocksGrid.checkIfCheating = true;
+                                if (sudokuBlocksGrid.checkIfGameFinished()) {
+                                    gameFinishedRectangle.visible = true;
+                                    gameFinishedText.text = i18n.tr("You are a cheat...");
+                                    winTimer.restart();
+                                }
                             }
                         }
                     }
