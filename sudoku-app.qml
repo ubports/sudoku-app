@@ -312,7 +312,6 @@ MainView {
                     }
 
                     ListItem.Standard {
-                              //TRANSLATORS: context here
                               text: i18n.tr("Enable hints")
                               width: parent.width
                               control: Switch {
