@@ -236,6 +236,7 @@ MainView {
 
             title: i18n.tr("Settings")
             page: Page {
+                /*
                 tools: ToolbarActions {
 
                     Action {
@@ -244,6 +245,7 @@ MainView {
                         onTriggered: Qt.quit()
                     }
                 }
+                */
                 Column {
                     id: mainColumnSettings;
                     //width: settingsTab.width;
@@ -338,14 +340,18 @@ MainView {
             objectName: "aboutTab"
             title: i18n.tr("About")
             page: Page {
+                /*
                 tools: ToolbarActions {
+
 
                     Action {
                         iconSource: Qt.resolvedUrl("icons/close.svg");
                         text: i18n.tr("Close");
                         onTriggered: Qt.quit()
                     }
+
                 }
+                */
                 Column {
                     id: aboutColumn;
                     spacing: 5;
