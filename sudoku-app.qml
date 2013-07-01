@@ -2,7 +2,8 @@ import QtQuick 2.0
 import Ubuntu.Components 0.1
 import Ubuntu.Components.ListItems 0.1 as ListItem
 import QtQuick.LocalStorage 2.0
-import "localStorage.js" as Settings
+import "js/localStorage.js" as Settings
+import "components"
 
 MainView {
     id: mainView
