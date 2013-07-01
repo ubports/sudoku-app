@@ -202,11 +202,13 @@ MainView {
                             }
                         }
                     }
+                    /*
                     Action {
                         iconSource: Qt.resolvedUrl("icons/close.svg")
                         text: i18n.tr("Close");
                         onTriggered: Qt.quit()
                     }
+                    */
                 }
 
                 Column {
