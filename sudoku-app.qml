@@ -375,7 +375,10 @@ MainView {
                             source: "icons/SudokuGameIcon.svg"
                             smooth: true
                             fillMode: Image.PreserveAspectCrop
-                            anchors.fill: parent
+                            height: units.gu(20)
+                            width: units.gu(20)
+                            anchors.centerIn: parent
+
                         }
                     }
                     Row {
