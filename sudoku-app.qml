@@ -406,7 +406,8 @@ MainView {
                         anchors.horizontalCenter: parent.horizontalCenter;
                         Label {
                             font.bold: true;
-                            text: "https://launchpad.net/sudoku-app"
+                            text: "<a href=\"https://launchpad.net/sudoku-app\">https://launchpad.net/sudoku-app</a>"
+                            onLinkActivated: Qt.openUrlExternally(link)
                         }
                     }
                 }
