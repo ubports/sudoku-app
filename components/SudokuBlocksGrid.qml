@@ -27,11 +27,34 @@ Rectangle {
     property bool alreadyCreated: mainView.alreadyCreated;
     property bool checkIfCheating: false;
 
+    // ********* SCORES ENGINE VARIABLES ***************
+
+    property int gameSeconds: 0;
+    property int numberOfActions: 0;
+    property int numberOfHints: 0;
+    property int gameDifficulty: settingsTab.difficultyIndex;
+
+    // *************************************************
+
+
     ColorSchemeDefault {
         id: colorScheme;
     }
 
+    function calculateScore() {
+        var finalScore = Math.round((numberOfActions + 100*numberOfHints+gameSeconds)*(4-gameDifficulty) / 100);
+        return finalScore
+    }
+
+    function resetScore() {
+        gameSeconds = 0;
+        numberOfActions = 0;
+        numberOfHints = 0;
+    }
+
+
     function revealHint() {
+        numberOfHints++;
         var emptyFields = new Array();
         var counter = 0;
         for (var i = 0; i < 81; i++) {
@@ -122,7 +145,7 @@ Rectangle {
         print("Theme updated " + String(newColorScheme));
     }
 
-    function createNewGame(difficulty) {
+    function createNewGame(difficulty) {        
         for (var i = 0; i < 9; i++) {
             for (var j = 0; j < 9; j++) {
                 /*if (i % 3 == 0 && i != 0 && !alreadyCreated)
@@ -170,6 +193,8 @@ Rectangle {
             }
         }
         mainView.alreadyCreated = true;
+        gameTimer.restart();
+        resetScore();
     }
 
     function checkIfGameFinished() {
@@ -201,8 +226,18 @@ Rectangle {
     }
 
     Timer {
+        id: gameTimer;
+        running:false;
+        repeat: true;
+        interval: 1000;
+        onTriggered: {
+            gameSeconds++;
+        }
+    }
+
+    Timer {
         id: winTimer;
-        interval: 2000;
+        interval: 3000;
         running: false;
         repeat: false;
         onTriggered: {
@@ -264,6 +299,7 @@ Rectangle {
                             size: units.gu(5)
                             anchors.left: parent.left;
                             onTriggered: {
+                                numberOfActions++;
                                 buttonsGrid.itemAt(currentX).buttonText = "";
                                 var row = Math.floor(currentX/9);
                                 var column = currentX%9;
@@ -295,6 +331,7 @@ Rectangle {
 
                                     onTriggered: {
                                         buttonsGrid.itemAt(currentX).buttonText = index+1
+                                        numberOfActions++;
 
                                         var row = Math.floor(currentX/9);
                                         var column = currentX%9;

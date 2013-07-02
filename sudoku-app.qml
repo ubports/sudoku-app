@@ -196,7 +196,14 @@ MainView {
                                 sudokuBlocksGrid.checkIfCheating = true;
                                 if (sudokuBlocksGrid.checkIfGameFinished()) {
                                     gameFinishedRectangle.visible = true;
-                                    gameFinishedText.text = i18n.tr("You are a cheat...");
+                                    gameFinishedText.text = i18n.tr("You are a cheat... \nBut we give you\n")
+                                            + sudokuBlocksGrid.calculateScore()
+                                            + " " + i18n.tr("points.")
+
+                                    print (sudokuBlocksGrid.numberOfActions)
+                                    print (sudokuBlocksGrid.numberOfHints)
+                                    print (sudokuBlocksGrid.gameSeconds)
+                                    print (sudokuBlocksGrid.gameDifficulty)
                                     winTimer.restart();
                                 }
                             }
@@ -374,11 +381,11 @@ MainView {
                     Row {
                         anchors.horizontalCenter: parent.horizontalCenter;
                         Label {
-                            text: i18n.tr("Author: ")
+                            text: i18n.tr("Author(s): ")
                         }
                         Label {
                             font.bold: true;
-                            text: "Dinko Osmankovic"
+                            text: "Dinko Osmankovic\nFrédéric Delgado"
                         }
                     }
                     Row {
@@ -388,7 +395,7 @@ MainView {
                         }
                         Label {
                             font.bold: true;
-                            text: "dinko.metalac@gmail.com"
+                            text: "dinko.metalac@gmail.com\nfredoust@gmail.com"
                         }
                     }
                     Row {
