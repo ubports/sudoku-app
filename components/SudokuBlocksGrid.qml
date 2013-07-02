@@ -2,7 +2,7 @@ import QtQuick 2.0
 import Ubuntu.Components 0.1
 import Ubuntu.Components.Popups 0.1
 
-import "SudokuCU.js" as SudokuCU
+import "../js/SudokuCU.js" as SudokuCU
 
 Rectangle {
     id: mainRectangle;
@@ -256,71 +256,23 @@ Rectangle {
                     Column {
                         spacing: units.gu(5)
 
-                        SudokuButton {
+
+                        SudokuDialogButton{
                             id: clearButton
-                            width: mainView.pageWidth*2/3;
                             buttonText: i18n.tr("Clear")
+                            width: mainView.pageWidth*2/3;
                             size: units.gu(5)
-                            //anchors.horizontalCenter: dialogue.verticalCenter
                             anchors.left: parent.left;
-                            x: mainView.pageWidth/2 - units.gu(5)/2;
-                            border.color: defaultBorderColor
-                            border.width: 3
-                            textColor: defaultTextColor;
-                            SequentialAnimation {
-                                id: animateClearButton
-                                UbuntuNumberAnimation {
-                                    id: animateClearButton1
-                                    target: clearButton
-                                    properties: "scale"
-                                    to: 1.1
-                                    from: 1
-                                    duration: UbuntuAnimation.SnapDuration
-                                    easing: UbuntuAnimation.StandardEasing
-                                }
-                                UbuntuNumberAnimation {
-                                    id: animateClearButton2
-                                    target: clearButton
-                                    properties: "scale"
-                                    to: 1
-                                    from: 1.1
-                                    duration: UbuntuAnimation.SnapDuration
-                                    easing: UbuntuAnimation.StandardEasing
-                                }
-                                onRunningChanged: {
-                                    if (animateClearButton.running == false ) {
-                                        /*mainRectangle.currentX = index;
-                                        gridButton.buttonColor = defaultColor;
-                                        PopupUtils.open(dialog, gridButton);*/
-                                        buttonsGrid.itemAt(currentX).buttonText = "";
-                                        var row = Math.floor(currentX/9);
-                                        var column = currentX%9;
-                                        print (row, column);
-                                        grid.setValue(column,row, 0);
-                                        buttonsGrid.itemAt(currentX).buttonColor = defaultColor;
-                                        buttonsGrid.itemAt(currentX).boldText = false;
-                                        PopupUtils.close(dialogue)
-
-                                    }
-
-                                }
+                            onTriggered: {
+                                buttonsGrid.itemAt(currentX).buttonText = "";
+                                var row = Math.floor(currentX/9);
+                                var column = currentX%9;
+                                print (row, column);
+                                grid.setValue(column,row, 0);
+                                buttonsGrid.itemAt(currentX).buttonColor = defaultColor;
+                                buttonsGrid.itemAt(currentX).boldText = false;
+                                PopupUtils.close(dialogue)
                             }
-                            MouseArea {
-                                id: buttonMouseArea
-                                anchors.fill: parent
-                                onClicked: {
-                                    animateClearButton.start();
-                                    /*buttonsGrid.itemAt(currentX).buttonText = "";
-                                    var row = Math.floor(currentX/9);
-                                    var column = currentX%9;
-                                    print (row, column);
-                                    grid.setValue(column,row, 0);
-                                    buttonsGrid.itemAt(currentX).buttonColor = defaultColor;
-                                    buttonsGrid.itemAt(currentX).boldText = false;
-                                    PopupUtils.close(dialogue)*/
-                                }
-                            }
-                            buttonColor: buttonMouseArea.pressed ? String(Qt.darker(defaultColor,1.2)):defaultColor
                         }
 
                         Grid {
@@ -333,97 +285,50 @@ Rectangle {
                             Repeater {
                                 id: numberPickerButtons
                                 model:9
-                                SudokuButton {
+
+
+                                SudokuDialogButton{
                                     id: buttonPick
                                     buttonText: index+1;
+
                                     size: units.gu(5);
-                                    border.color: defaultBorderColor;
-                                    border.width: 2
-                                    textColor: defaultTextColor;
-                                    SequentialAnimation {
-                                        id: animatePickButton
-                                        NumberAnimation {
-                                            id: animatePickButton1
-                                            target: buttonPick
-                                            properties: "scale"
-                                            to: 1.2
-                                            from: 1
-                                            duration: 100
-                                            easing {type: Easing.InOutQuad;}
+
+                                    onTriggered: {
+                                        buttonsGrid.itemAt(currentX).buttonText = index+1
+
+                                        var row = Math.floor(currentX/9);
+                                        var column = currentX%9;
+
+                                        //print (row, column)
+                                        grid.setValue(column, row, index+1);
+                                        //print(grid)
+                                        var testField = grid.cellConflicts(column,row)
+                                        //print (testField)
+                                        if (testField == true)
+                                            buttonsGrid.itemAt(currentX).buttonColor = defaultNotAllowedColor;
+                                        else {
+                                            buttonsGrid.itemAt(currentX).buttonColor = defaultColor;
+                                            buttonsGrid.itemAt(currentX).boldText = false;
                                         }
-                                        NumberAnimation {
-                                            id: animatePickButton2
-                                            target: buttonPick
-                                            properties: "scale"
-                                            to: 1
-                                            from: 1.2
-                                            duration: 100
-                                            easing {type: Easing.InOutQuad;}
-                                        }
-                                        onRunningChanged: {
-                                            if (animatePickButton.running == false ) {
-                                                buttonsGrid.itemAt(currentX).buttonText = index+1
 
-                                                var row = Math.floor(currentX/9);
-                                                var column = currentX%9;
+                                        PopupUtils.close(dialogue)
 
-                                                //print (row, column)
-                                                grid.setValue(column, row, index+1);
-                                                //print(grid)
-                                                var testField = grid.cellConflicts(column,row)
-                                                //print (testField)
-                                                if (testField == true)
-                                                    buttonsGrid.itemAt(currentX).buttonColor = defaultNotAllowedColor;
-                                                else {
-                                                    buttonsGrid.itemAt(currentX).buttonColor = defaultColor;
-                                                    buttonsGrid.itemAt(currentX).boldText = false;
-                                                }
-
-                                                PopupUtils.close(dialogue)
-
-                                                if (checkIfGameFinished()) {
-                                                    gameFinishedRectangle.visible = true;
-                                                    winTimer.restart();
-                                                }
-
-                                            }
-
+                                        if (checkIfGameFinished()) {
+                                            gameFinishedRectangle.visible = true;
+                                            winTimer.restart();
                                         }
                                     }
-                                    MouseArea {
-                                        id: buttonMouseArea1
-                                        anchors.fill: parent
-                                        onClicked: {
-                                            /*
-                                            buttonsGrid.itemAt(currentX).buttonText = index+1
-
-                                            var row = Math.floor(currentX/9);
-                                            var column = currentX%9;
-
-                                            //print (row, column)
-                                            grid.setValue(column, row, index+1);
-                                            //print(grid)
-                                            var testField = grid.cellConflicts(column,row)
-                                            //print (testField)
-                                            if (testField == true)
-                                                buttonsGrid.itemAt(currentX).buttonColor = defaultNotAllowedColor;
-                                            else {
-                                                buttonsGrid.itemAt(currentX).buttonColor = defaultColor;
-                                                buttonsGrid.itemAt(currentX).boldText = false;
-                                            }
-
-                                            PopupUtils.close(dialogue)
-
-                                            if (checkIfGameFinished()) {
-                                                gameFinishedRectangle.visible = true;
-                                                winTimer.restart();
-                                            }
-                                            */
-                                            animatePickButton.start();
-                                        }
-                                    }
-                                    buttonColor: buttonMouseArea1.pressed ? String(Qt.darker(defaultColor,1.2)):defaultColor
                                 }
+                            }
+                        }
+
+                        SudokuDialogButton{
+                            buttonText: i18n.tr("Cancel")
+                            width: mainView.pageWidth*2/3;
+                            size: units.gu(5)
+                            anchors.left: parent.left;
+                            onTriggered: {
+                                  PopupUtils.close(dialogue)
                             }
                         }
 

@@ -2,7 +2,8 @@ import QtQuick 2.0
 import Ubuntu.Components 0.1
 import Ubuntu.Components.ListItems 0.1 as ListItem
 import QtQuick.LocalStorage 2.0
-import "localStorage.js" as Settings
+import "js/localStorage.js" as Settings
+import "components"
 
 MainView {
     id: mainView
@@ -189,20 +190,25 @@ MainView {
                         text: i18n.tr("Show hint");
                         enabled: disableHints.checked;
                         onTriggered: {
-                            sudokuBlocksGrid.revealHint();
-                            sudokuBlocksGrid.checkIfCheating = true;
-                            if (sudokuBlocksGrid.checkIfGameFinished()) {
-                                gameFinishedRectangle.visible = true;
-                                gameFinishedText.text = i18n.tr("You are a cheat...");
-                                winTimer.restart();
+                            if(enabled)
+                            {
+                                sudokuBlocksGrid.revealHint();
+                                sudokuBlocksGrid.checkIfCheating = true;
+                                if (sudokuBlocksGrid.checkIfGameFinished()) {
+                                    gameFinishedRectangle.visible = true;
+                                    gameFinishedText.text = i18n.tr("You are a cheat...");
+                                    winTimer.restart();
+                                }
                             }
                         }
                     }
+                    /*
                     Action {
                         iconSource: Qt.resolvedUrl("icons/close.svg")
                         text: i18n.tr("Close");
                         onTriggered: Qt.quit()
                     }
+                    */
                 }
 
                 Column {
@@ -230,6 +236,7 @@ MainView {
 
             title: i18n.tr("Settings")
             page: Page {
+                /*
                 tools: ToolbarActions {
 
                     Action {
@@ -238,22 +245,21 @@ MainView {
                         onTriggered: Qt.quit()
                     }
                 }
+                */
                 Column {
                     id: mainColumnSettings;
                     //width: settingsTab.width;
                     //height: settingsTab.height;
                     anchors.fill: parent
                     //anchors.horizontalCenter: parent.horizontalCenter;
-                    spacing: units.gu(5)
+                    spacing: units.gu(1)
 
                     ListItem.Header {
-                        text: i18n.tr("Sudoku settings")
+                        text: i18n.tr("Sudoku settings")                    
                     }
 
                     ListItem.ValueSelector {
                         id: difficultySelector
-                        anchors.top: parent.top
-                        anchors.topMargin: units.gu(5)
                         text: i18n.tr("Difficulty")
                         values: [i18n.tr("Easy"), i18n.tr("Moderate"), i18n.tr("Hard"), i18n.tr("Ultra Hard")]
                         onSelectedIndexChanged: {
@@ -289,8 +295,6 @@ MainView {
                     }
                     ListItem.ValueSelector {
                         id: themeSelector
-                        anchors.top: difficultySelector.bottom
-                        //anchors.topMargin: units.gu(1)
                         text: i18n.tr("Theme")
                         values: ["UbuntuColours", "Simple"]
                         onSelectedIndexChanged: {
@@ -311,35 +315,21 @@ MainView {
                             }
                         }
                     }
-                    Row {
-                        id: disableHintsRow
-                        anchors.top: themeSelector.bottom
-                        anchors.topMargin: units.gu(2)
-                        anchors.leftMargin: units.dp(20)
-                        anchors.left: themeSelector.left;
-                        spacing: units.gu(2)
-                        width: parent.width
-                        Label {
-                            id: disableHintsText
-                            anchors.left: parent.left
-                            //anchors.leftMargin: units.dp()
-                            text: "Enable hints"
-                            //fontSize: "medium";
-                        }
-                        Switch {
-                            id: disableHints
-                            checked: disableHintsChecked
-                            //anchors.right: mainColumnSettings.right;
-                            //anchors.rightMargin: units.gu(2)
-                            x: parent.width - disableHints.width - units.gu(1) - units.dp(20);
-                            anchors.verticalCenter: disableHintsText.verticalCenter;
-                            //anchors.verticalCenter: disableHintsText.verticalCenter
-                            onCheckedChanged: {
-                                var result = Settings.setSetting("DisableHints", checked ? "true":"false");
-                                print(result);
-                            }
-                        }
-                    }
+
+                    ListItem.Standard {
+                              text: i18n.tr("Enable hints")
+                              width: parent.width
+                              control: Switch {
+                                  id: disableHints
+                                  anchors.horizontalCenter: parent.horizontalCenter
+                                  anchors.verticalCenter: parent.verticalCenter
+                                  checked: disableHintsChecked
+                                  onCheckedChanged: {
+                                      var result = Settings.setSetting("DisableHints", checked ? "true":"false");
+                                      print(result);
+                                  }
+                              }
+                          }
                 }
             }
 
@@ -350,14 +340,18 @@ MainView {
             objectName: "aboutTab"
             title: i18n.tr("About")
             page: Page {
+                /*
                 tools: ToolbarActions {
+
 
                     Action {
                         iconSource: Qt.resolvedUrl("icons/close.svg");
                         text: i18n.tr("Close");
                         onTriggered: Qt.quit()
                     }
+
                 }
+                */
                 Column {
                     id: aboutColumn;
                     spacing: 5;

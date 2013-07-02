@@ -1,6 +1,8 @@
 sudoku-app.desktop /usr/share/applications
 sudoku-app /usr/bin
 *.qml /usr/share/sudoku-app
-*.js /usr/share/sudoku-app
+components /usr/share/sudoku-app
+js /usr/share/sudoku-app
 *.png /usr/share/sudoku-app
 icons /usr/share/sudoku-app
+po /usr/share/sudoku-app
