@@ -376,6 +376,7 @@ Rectangle {
 
             SudokuButtonsGrid {
                 id:buttonsGrid;
+                anchors.horizontalCenter: parent.horizontalCenter
             }
         }
     }

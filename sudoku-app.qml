@@ -324,7 +324,7 @@ MainView {
                     }
 
                     ListItem.Standard {
-                              text: i18n.tr("Enable hints")
+                              text: i18n.tr("Hints")
                               width: parent.width
                               control: Switch {
                                   id: disableHints
