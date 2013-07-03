@@ -159,21 +159,26 @@ CU.sudoku.Grid.prototype = {
         if(value == 0)
             return false;
 
+         console.log("test for "+value)
         for(var i = 0; i < 9; i++)
         {
+            console.log("test with col"+this.rows[i][column])
             if(i != row && this.rows[i][column] == value)
             {
+                console.log("find row")
                 return true;
             }
 
+           // console.log("test with row"+this.rows[row][i])
             if(i != column && this.rows[row][i] == value)
             {
+                console.log("find col")
                 return true;
             }
         }
-
+        console.log("ok cellconflicts")
         //At this point, everything else is checked as valid except the 3x3 grid
-        return !this._miniGridValid(column, row);
+        return !this._miniGridValidFor(column, row, value);
     },
 
     /**
@@ -204,9 +209,54 @@ CU.sudoku.Grid.prototype = {
                 if(value == 0)
                     continue;
 
+                console.log("test minigrid "+value)
+
                 //if(App.Utils.arrayContains(numbers, value))
                 //    return false;
-                if (numbers.indexOf(value) != -1)
+                if (numbers.indexOf(value) != -1 )
+                    return false;
+
+                numbers.push(value);
+            }
+        }
+
+        return true;
+    },
+
+    /**
+     * Checks if the inner 3x3 grid a cell resides in is valid for a specific value
+     * @method
+     * @private
+     * @param {Number} column
+     * @param {Number} row
+     * @param {Number} value to test
+     * @return {Boolean}
+     */
+    _miniGridValidFor: function(column, row, val) {
+        //Determine 3x3 grid position
+        var mgX = Math.floor(column / 3);
+        var mgY = Math.floor(row / 3);
+
+        var startCol = mgX * 3;
+        var startRow = mgY * 3;
+
+        var endCol = (mgX + 1) * 3;
+        var endRow = (mgY + 1) * 3;
+
+        var numbers = [];
+        for(var r = startRow; r < endRow; r++)
+        {
+            for(var c = startCol; c < endCol; c++)
+            {
+                var value = this.rows[r][c];
+                if(value == 0)
+                    continue;
+
+                console.log("test minigrid "+value)
+
+                //if(App.Utils.arrayContains(numbers, value))
+                //    return false;
+                if (numbers.indexOf(value) != -1 && value == val)
                     return false;
 
                 numbers.push(value);

@@ -145,7 +145,7 @@ Rectangle {
         print("Theme updated " + String(newColorScheme));
     }
 
-    function createNewGame(difficulty) {        
+    function createNewGame(difficulty) {
         for (var i = 0; i < 9; i++) {
             for (var j = 0; j < 9; j++) {
                 /*if (i % 3 == 0 && i != 0 && !alreadyCreated)
@@ -307,6 +307,7 @@ Rectangle {
                                 grid.setValue(column,row, 0);
                                 buttonsGrid.itemAt(currentX).buttonColor = defaultColor;
                                 buttonsGrid.itemAt(currentX).boldText = false;
+                                buttonsGrid.redrawGrid()
                                 PopupUtils.close(dialogue)
                             }
                         }
@@ -338,6 +339,7 @@ Rectangle {
 
                                         //print (row, column)
                                         grid.setValue(column, row, index+1);
+                                        /*
                                         //print(grid)
                                         var testField = grid.cellConflicts(column,row)
                                         //print (testField)
@@ -347,6 +349,8 @@ Rectangle {
                                             buttonsGrid.itemAt(currentX).buttonColor = defaultColor;
                                             buttonsGrid.itemAt(currentX).boldText = false;
                                         }
+                                        */
+                                        buttonsGrid.redrawGrid()
 
                                         PopupUtils.close(dialogue)
 
@@ -365,7 +369,8 @@ Rectangle {
                             size: units.gu(5)
                             anchors.left: parent.left;
                             onTriggered: {
-                                  PopupUtils.close(dialogue)
+                                 buttonsGrid.redrawGrid()
+                                PopupUtils.close(dialogue)
                             }
                         }
 
