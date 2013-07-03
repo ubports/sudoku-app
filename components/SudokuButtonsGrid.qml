@@ -10,6 +10,33 @@ Repeater {
     model: 81
     objectName: "buttonsGrid";
 
+    function redrawGrid()
+    {
+        console.log("on redraw grid")
+        for(var i=0; i < model; i++)
+        {
+            var row = Math.floor(i/9);
+            var column = i%9;
+
+
+            if(buttonsGrid.itemAt(i).enabled)
+            {
+                var testField = grid.cellConflicts(column,row)
+                //print (testField)
+
+                if (testField == true)
+                {
+                    console.log("index "+i+" row/col "+row+"/"+column)
+                    buttonsGrid.itemAt(i).buttonColor = defaultNotAllowedColor;
+                }
+                else {
+                    buttonsGrid.itemAt(i).buttonColor = defaultColor;
+                    buttonsGrid.itemAt(currentX).boldText = false;
+                }
+            }
+        }
+    }
+
     SudokuButton {
         id: gridButton;
         buttonText: "0";
