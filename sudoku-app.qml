@@ -18,6 +18,9 @@ MainView {
     property bool alreadyCreated: false;
     property bool gridLoaded: false;
 
+    property string playerFirstName: "Dinko"
+    property string playerLastName: "Osmanković"
+
     width: pageWidth;
     height: pageHeight;
 
@@ -83,6 +86,15 @@ MainView {
             sudokuBlocksGrid.changeColorScheme("ColorSchemeSimple.qml");
         }
         gridLoaded = true;
+        //Settings.insertNewScore("Hamo","Hamić", "100")
+        var allScores = Settings.getAllScores()
+        for(var i = 0; i < allScores.length; i++) {
+            var rowItem = allScores[i];
+            //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
+            highscoresModel.append({'firstname': rowItem[0],
+                                       'lastname':  rowItem[1],
+                                       'score': rowItem[2] });
+        }
     }
 
     Tabs {
@@ -232,6 +244,89 @@ MainView {
             }
 
         }
+
+        // Highscores Tab
+
+        Tab {
+            id: highscoresTab
+            objectName: "highscoresTab"
+            title: i18n.tr("High Scores")
+            page: Page {
+                tools: ToolbarItems {
+                    ToolbarButton {
+                        action: Action {
+                            text: "Show\nall"
+                            iconSource: Qt.resolvedUrl("icons/all-users.svg")
+                            onTriggered: {
+                                var allScores = Settings.getAllScores()
+                                highscoresModel.clear();
+                                for(var i = 0; i < allScores.length; i++) {
+                                    var rowItem = allScores[i];
+                                    //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
+                                    highscoresModel.append({'firstname': rowItem[0],
+                                                               'lastname':  rowItem[1],
+                                                               'score': rowItem[2] });
+                                }
+                            }
+                        }
+                    }
+                    ToolbarButton {
+                        action: Action {
+                            text: "Show for\ncurrent user"
+                            iconSource: Qt.resolvedUrl("icons/single-user.svg")
+                            onTriggered: {
+                                var allScores = Settings.getAllScoresForUser(playerFirstName, playerLastName)
+                                highscoresModel.clear();
+                                for(var i = 0; i < allScores.length; i++) {
+                                    var rowItem = allScores[i];
+                                    //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
+                                    highscoresModel.append({'firstname': rowItem[0],
+                                                               'lastname':  rowItem[1],
+                                                               'score': rowItem[2] });
+                                }
+                            }
+                        }
+                    }
+                    //locked: true
+                    //opened: true
+                }
+
+
+                ListModel {
+                    id: highscoresModel
+
+                    /*ListElement {
+                        firstname: "Bill"
+                        lastname: "Smith"
+                        score: "120"
+                    }
+                    ListElement {
+                        firstname: "John"
+                        lastname: "Brown"
+                        score: "130"
+                    }*/
+                }
+                Column {
+                    anchors.fill: parent
+                    ListView {
+                        model: highscoresModel
+                        anchors.fill: parent
+                        header: ListItem.Header {
+                            text: "High scores for all players"
+                        }
+                        delegate: ListItem.SingleValue {
+                            text: firstname + " " + lastname
+                            value: score
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+
+
         // settingsTab
         Tab {
             id: settingsTab;
@@ -262,7 +357,7 @@ MainView {
                     spacing: units.gu(1)
 
                     ListItem.Header {
-                        text: i18n.tr("Sudoku settings")                    
+                        text: i18n.tr("Sudoku settings")
                     }
 
                     ListItem.ValueSelector {
@@ -324,19 +419,19 @@ MainView {
                     }
 
                     ListItem.Standard {
-                              text: i18n.tr("Hints")
-                              width: parent.width
-                              control: Switch {
-                                  id: disableHints
-                                  anchors.horizontalCenter: parent.horizontalCenter
-                                  anchors.verticalCenter: parent.verticalCenter
-                                  checked: disableHintsChecked
-                                  onCheckedChanged: {
-                                      var result = Settings.setSetting("DisableHints", checked ? "true":"false");
-                                      print(result);
-                                  }
-                              }
-                          }
+                        text: i18n.tr("Hints")
+                        width: parent.width
+                        control: Switch {
+                            id: disableHints
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            anchors.verticalCenter: parent.verticalCenter
+                            checked: disableHintsChecked
+                            onCheckedChanged: {
+                                var result = Settings.setSetting("DisableHints", checked ? "true":"false");
+                                print(result);
+                            }
+                        }
+                    }
                 }
             }
 
