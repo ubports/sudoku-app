@@ -18,7 +18,7 @@ MainView {
     property bool alreadyCreated: false;
     property bool gridLoaded: false;
     property int currentUserId: 1;
-    property string highscoresHeaderText: i18n.tr("Best scores for all players")
+    property string highscoresHeaderText: i18n.tr("<b>Best scores for all players</b>")
 
     width: pageWidth;
     height: pageHeight;
@@ -263,7 +263,7 @@ MainView {
                             onTriggered: {
                                 var allScores = Settings.getAllScores()
                                 highscoresModel.clear();
-                                highscoresHeaderText = i18n.tr("Best scores for all players");
+                                highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
                                 for(var i = 0; i < allScores.length; i++) {
                                     var rowItem = allScores[i];
                                     print("ROW ",rowItem)
@@ -285,7 +285,7 @@ MainView {
                                 var firstName = Settings.getUserFirstName(currentUserId);
                                 var lastName = Settings.getUserLastName(currentUserId);
                                 print(firstName, lastName)
-                                highscoresHeaderText = i18n.tr("Best scores for ")+firstName + " " + lastName
+                                highscoresHeaderText = i18n.tr("<b>Best scores for ")+firstName + " " + lastName+"</b>"
                                 var allScores = Settings.getAllScoresForUser(currentUserId)
                                 highscoresModel.clear();
                                 for(var i = 0; i < allScores.length; i++) {
@@ -369,7 +369,7 @@ MainView {
                     spacing: units.gu(1)
 
                     ListItem.Header {
-                        text: i18n.tr("Sudoku settings")
+                        text: i18n.tr("<b>Sudoku settings</b>")
                     }
 
                     ListItem.ValueSelector {
@@ -472,19 +472,20 @@ MainView {
                     //anchors.fill: parent
                     anchors.horizontalCenter: parent.horizontalCenter;
                     y: units.gu(8);
-                    Rectangle {
-                        radius: 10
-                        height: units.gu(20)
-                        width: units.gu(20)
+                    UbuntuShape {
+                        radius: "small"
+                        height: Math.min(mainView.width, mainView.height)/2
+                        width: height
                         anchors.horizontalCenter: parent.horizontalCenter;
 
                         Image {
+                            property real maxWidth: units.gu(40)
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            width: Math.min(parent.width, maxWidth)
+                            //height: width
                             source: "icons/SudokuGameIcon.svg"
                             smooth: true
-                            fillMode: Image.PreserveAspectCrop
-                            height: units.gu(20)
-                            width: units.gu(20)
-                            anchors.centerIn: parent
+                            fillMode: Image.PreserveAspectFit
 
                         }
                     }
