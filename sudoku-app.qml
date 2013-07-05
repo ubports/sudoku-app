@@ -17,6 +17,8 @@ MainView {
     property real blockDistance: pageWidth/200;
     property bool alreadyCreated: false;
     property bool gridLoaded: false;
+    property int currentUserId: 1;
+    property string highscoresHeaderText: i18n.tr("Best scores for all players")
 
     width: pageWidth;
     height: pageHeight;
@@ -87,10 +89,14 @@ MainView {
         var allScores = Settings.getAllScores()
         for(var i = 0; i < allScores.length; i++) {
             var rowItem = allScores[i];
-            //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
-            highscoresModel.append({'firstname': rowItem[0],
-                                       'lastname':  rowItem[1],
-                                       'score': rowItem[2] });
+            //res.push[dbItem.first_name, dbItem.last_name, dbItem.score])
+            print("ROW ",rowItem[0])
+            var firstName = Settings.getUserFirstName(rowItem[0])
+            var lastName = Settings.getUserLastName(rowItem[0])
+            print(firstName, lastName)
+            highscoresModel.append({'firstname': firstName,
+                                       'lastname':  lastName,
+                                       'score': rowItem[1] });
         }
     }
 
@@ -257,12 +263,16 @@ MainView {
                             onTriggered: {
                                 var allScores = Settings.getAllScores()
                                 highscoresModel.clear();
+                                highscoresHeaderText = i18n.tr("Best scores for all players");
                                 for(var i = 0; i < allScores.length; i++) {
                                     var rowItem = allScores[i];
+                                    print("ROW ",rowItem)
+                                    var firstName = Settings.getUserFirstName(rowItem[0]);
+                                    var lastName = Settings.getUserLastName(rowItem[0]);
                                     //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
-                                    highscoresModel.append({'firstname': rowItem[0],
-                                                               'lastname':  rowItem[1],
-                                                               'score': rowItem[2] });
+                                    highscoresModel.append({'firstname': firstName,
+                                                               'lastname':  lastName,
+                                                               'score': rowItem[1] });
                                 }
                             }
                         }
@@ -272,17 +282,18 @@ MainView {
                             text: "Current\nuser"
                             iconSource: Qt.resolvedUrl("icons/single-user.svg")
                             onTriggered: {
-                                var firstName = Settings.getUserFirstName(1);
-                                var lastName = Settings.getUserLastName(1);
+                                var firstName = Settings.getUserFirstName(currentUserId);
+                                var lastName = Settings.getUserLastName(currentUserId);
                                 print(firstName, lastName)
-                                var allScores = Settings.getAllScoresForUser(firstName, lastName)
+                                highscoresHeaderText = i18n.tr("Best scores for ")+firstName + " " + lastName
+                                var allScores = Settings.getAllScoresForUser(currentUserId)
                                 highscoresModel.clear();
                                 for(var i = 0; i < allScores.length; i++) {
                                     var rowItem = allScores[i];
                                     //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
-                                    highscoresModel.append({'firstname': rowItem[0],
-                                                               'lastname':  rowItem[1],
-                                                               'score': rowItem[2] });
+                                    highscoresModel.append({'firstname': firstName,
+                                                               'lastname':  lastName,
+                                                               'score': rowItem[1] });
                                 }
                             }
                         }
@@ -312,7 +323,8 @@ MainView {
                         model: highscoresModel
                         anchors.fill: parent
                         header: ListItem.Header {
-                            text: "Best scores for all players"
+                            id: highscoresHeader
+                            text: highscoresHeaderText
                         }
                         delegate: ListItem.SingleValue {
                             text: firstname + " " + lastname
