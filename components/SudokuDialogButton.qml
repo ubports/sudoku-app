@@ -4,7 +4,7 @@ import Ubuntu.Components 0.1
 SudokuButton {
     id: dialogButton
     border.color: defaultBorderColor
-    border.width: 3
+    //border.width: 3
     textColor: defaultTextColor;
 
     signal triggered;
