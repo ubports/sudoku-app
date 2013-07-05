@@ -18,9 +18,6 @@ MainView {
     property bool alreadyCreated: false;
     property bool gridLoaded: false;
 
-    property string playerFirstName: "Dinko"
-    property string playerLastName: "Osmanković"
-
     width: pageWidth;
     height: pageHeight;
 
@@ -250,12 +247,12 @@ MainView {
         Tab {
             id: highscoresTab
             objectName: "highscoresTab"
-            title: i18n.tr("High Scores")
+            title: i18n.tr("Best Scores")
             page: Page {
                 tools: ToolbarItems {
                     ToolbarButton {
                         action: Action {
-                            text: "Show\nall"
+                            text: "All\nusers"
                             iconSource: Qt.resolvedUrl("icons/all-users.svg")
                             onTriggered: {
                                 var allScores = Settings.getAllScores()
@@ -272,10 +269,13 @@ MainView {
                     }
                     ToolbarButton {
                         action: Action {
-                            text: "Show for\ncurrent user"
+                            text: "Current\nuser"
                             iconSource: Qt.resolvedUrl("icons/single-user.svg")
                             onTriggered: {
-                                var allScores = Settings.getAllScoresForUser(playerFirstName, playerLastName)
+                                var firstName = Settings.getUserFirstName(1);
+                                var lastName = Settings.getUserLastName(1);
+                                print(firstName, lastName)
+                                var allScores = Settings.getAllScoresForUser(firstName, lastName)
                                 highscoresModel.clear();
                                 for(var i = 0; i < allScores.length; i++) {
                                     var rowItem = allScores[i];
@@ -312,7 +312,7 @@ MainView {
                         model: highscoresModel
                         anchors.fill: parent
                         header: ListItem.Header {
-                            text: "High scores for all players"
+                            text: "Best scores for all players"
                         }
                         delegate: ListItem.SingleValue {
                             text: firstname + " " + lastname

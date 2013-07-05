@@ -106,3 +106,12 @@ function getAllScoresForUser(first_name, last_name)
     return res;
 }
 
+function getUserFirstName(user_id)
+{
+    return "Dinko"
+}
+
+function getUserLastName(user_id)
+{
+    return "Osmanković"
+}
