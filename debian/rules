@@ -13,7 +13,7 @@
 	dh $@ 
 
 override_dh_install:
-	tests/autopilot/install_autopilot.sh $(CURDIR)
+#	tests/autopilot/install_autopilot.sh $(CURDIR)
 	dh_install --fail-missing
 	appname=sudoku-app; \
 	for pofile in $(shell find ./po -name "*.po"); do \
