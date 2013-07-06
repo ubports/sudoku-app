@@ -60,12 +60,12 @@ function getSetting(setting) {
     return res
 }
 
-function insertNewScore(first_name, last_name, score)
+function insertNewScore(profile_id, score)
 {
     var db = getDatabase();
     var res="";
     db.transaction(function(tx) {
-        var rs = tx.executeSql('INSERT OR REPLACE INTO scores VALUES (null,?,?,?,datetime());', [first_name,last_name, score]);
+        var rs = tx.executeSql('INSERT OR REPLACE INTO scores VALUES (null,?,?,datetime());', [profile_id, score]);
         //console.log(rs.rowsAffected)
         if (rs.rowsAffected > 0) {
             res = "OK";

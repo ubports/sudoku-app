@@ -211,6 +211,7 @@ MainView {
                                 sudokuBlocksGrid.checkIfCheating = true;
                                 if (sudokuBlocksGrid.checkIfGameFinished()) {
                                     gameFinishedRectangle.visible = true;
+                                    Settings.insertNewScore(currentUserId, sudokuBlocksGrid.calculateScore())
                                     gameFinishedText.text = i18n.tr("You are a cheat... \nBut we give you\n")
                                             + sudokuBlocksGrid.calculateScore()
                                             + " " + i18n.tr("points.")
@@ -219,6 +220,20 @@ MainView {
                                     print (sudokuBlocksGrid.numberOfHints)
                                     print (sudokuBlocksGrid.gameSeconds)
                                     print (sudokuBlocksGrid.gameDifficulty)
+                                    var allScores = Settings.getAllScores()
+                                    highscoresModel.clear();
+                                    highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
+                                    for(var i = 0; i < allScores.length; i++) {
+                                        var rowItem = allScores[i];
+                                        print("ROW ",rowItem)
+                                        var firstName = Settings.getUserFirstName(rowItem[0]);
+                                        var lastName = Settings.getUserLastName(rowItem[0]);
+                                        //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
+                                        highscoresModel.append({'firstname': firstName,
+                                                                   'lastname':  lastName,
+                                                                   'score': rowItem[1] });
+                                    }
+
                                     winTimer.restart();
                                 }
                             }
@@ -472,23 +487,16 @@ MainView {
                     //anchors.fill: parent
                     anchors.horizontalCenter: parent.horizontalCenter;
                     y: units.gu(8);
-                    UbuntuShape {
-                        radius: "small"
-                        height: Math.min(mainView.width, mainView.height)/2
-                        width: height
-                        anchors.horizontalCenter: parent.horizontalCenter;
-
-                        Image {
-                            property real maxWidth: units.gu(40)
+                    Image {
+                            property real maxWidth: units.gu(100)
                             anchors.horizontalCenter: parent.horizontalCenter
-                            width: Math.min(parent.width, maxWidth)
+                            width: Math.min(mainView.width, maxWidth)/1.75
                             //height: width
-                            source: "icons/SudokuGameIcon.svg"
+                            source: "icons/sudoko-vector-about.svg"
                             smooth: true
                             fillMode: Image.PreserveAspectFit
 
                         }
-                    }
                     Row {
                         anchors.horizontalCenter: parent.horizontalCenter;
                         Label {
