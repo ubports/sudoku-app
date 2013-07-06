@@ -44,7 +44,7 @@ Repeater {
         //height: units.gu(5);
         size: mainView.pageWidth/10;
         //color: defaultColor;
-        border.width: 3
+        //border.width: 0
         border.color: defaultBorderColor
         textColor: defaultTextColor;
         anchors.left: ((index - (Math.floor(index / 9) * 9)) > 0) ? buttonsGrid.itemAt(index-1).right : mainView.left

@@ -42,7 +42,7 @@ Rectangle {
     }
 
     function calculateScore() {
-        var finalScore = Math.round((numberOfActions + 100*numberOfHints+gameSeconds)*(4-gameDifficulty) / 100);
+        var finalScore = Math.round((numberOfActions + 1000*numberOfHints+gameSeconds)*(4-gameDifficulty) / 100);
         return finalScore
     }
 
@@ -356,6 +356,28 @@ Rectangle {
 
                                         if (checkIfGameFinished()) {
                                             gameFinishedRectangle.visible = true;
+                                            Settings.insertNewScore(currentUserId, sudokuBlocksGrid.calculateScore())
+                                            gameFinishedText.text = i18n.tr("You are a cheat... \nBut we give you\n")
+                                                    + sudokuBlocksGrid.calculateScore()
+                                                    + " " + i18n.tr("points.")
+
+                                            print (sudokuBlocksGrid.numberOfActions)
+                                            print (sudokuBlocksGrid.numberOfHints)
+                                            print (sudokuBlocksGrid.gameSeconds)
+                                            print (sudokuBlocksGrid.gameDifficulty)
+                                            var allScores = Settings.getAllScores()
+                                            highscoresModel.clear();
+                                            highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
+                                            for(var i = 0; i < allScores.length; i++) {
+                                                var rowItem = allScores[i];
+                                                print("ROW ",rowItem)
+                                                var firstName = Settings.getUserFirstName(rowItem[0]);
+                                                var lastName = Settings.getUserLastName(rowItem[0]);
+                                                //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
+                                                highscoresModel.append({'firstname': firstName,
+                                                                           'lastname':  lastName,
+                                                                           'score': rowItem[1] });
+                                            }
                                             winTimer.restart();
                                         }
                                     }

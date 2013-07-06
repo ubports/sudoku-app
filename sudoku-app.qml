@@ -17,6 +17,8 @@ MainView {
     property real blockDistance: pageWidth/200;
     property bool alreadyCreated: false;
     property bool gridLoaded: false;
+    property int currentUserId: 1;
+    property string highscoresHeaderText: i18n.tr("<b>Best scores for all players</b>")
 
     width: pageWidth;
     height: pageHeight;
@@ -83,6 +85,19 @@ MainView {
             sudokuBlocksGrid.changeColorScheme("ColorSchemeSimple.qml");
         }
         gridLoaded = true;
+        //Settings.insertNewScore("Hamo","Hamić", "100")
+        var allScores = Settings.getAllScores()
+        for(var i = 0; i < allScores.length; i++) {
+            var rowItem = allScores[i];
+            //res.push[dbItem.first_name, dbItem.last_name, dbItem.score])
+            print("ROW ",rowItem[0])
+            var firstName = Settings.getUserFirstName(rowItem[0])
+            var lastName = Settings.getUserLastName(rowItem[0])
+            print(firstName, lastName)
+            highscoresModel.append({'firstname': firstName,
+                                       'lastname':  lastName,
+                                       'score': rowItem[1] });
+        }
     }
 
     Tabs {
@@ -196,6 +211,7 @@ MainView {
                                 sudokuBlocksGrid.checkIfCheating = true;
                                 if (sudokuBlocksGrid.checkIfGameFinished()) {
                                     gameFinishedRectangle.visible = true;
+                                    Settings.insertNewScore(currentUserId, sudokuBlocksGrid.calculateScore())
                                     gameFinishedText.text = i18n.tr("You are a cheat... \nBut we give you\n")
                                             + sudokuBlocksGrid.calculateScore()
                                             + " " + i18n.tr("points.")
@@ -204,6 +220,20 @@ MainView {
                                     print (sudokuBlocksGrid.numberOfHints)
                                     print (sudokuBlocksGrid.gameSeconds)
                                     print (sudokuBlocksGrid.gameDifficulty)
+                                    var allScores = Settings.getAllScores()
+                                    highscoresModel.clear();
+                                    highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
+                                    for(var i = 0; i < allScores.length; i++) {
+                                        var rowItem = allScores[i];
+                                        print("ROW ",rowItem)
+                                        var firstName = Settings.getUserFirstName(rowItem[0]);
+                                        var lastName = Settings.getUserLastName(rowItem[0]);
+                                        //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
+                                        highscoresModel.append({'firstname': firstName,
+                                                                   'lastname':  lastName,
+                                                                   'score': rowItem[1] });
+                                    }
+
                                     winTimer.restart();
                                 }
                             }
@@ -232,6 +262,98 @@ MainView {
             }
 
         }
+
+        // Highscores Tab
+
+        Tab {
+            id: highscoresTab
+            objectName: "highscoresTab"
+            title: i18n.tr("Best Scores")
+            page: Page {
+                tools: ToolbarItems {
+                    ToolbarButton {
+                        action: Action {
+                            text: "All\nusers"
+                            iconSource: Qt.resolvedUrl("icons/all-users.svg")
+                            onTriggered: {
+                                var allScores = Settings.getAllScores()
+                                highscoresModel.clear();
+                                highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
+                                for(var i = 0; i < allScores.length; i++) {
+                                    var rowItem = allScores[i];
+                                    print("ROW ",rowItem)
+                                    var firstName = Settings.getUserFirstName(rowItem[0]);
+                                    var lastName = Settings.getUserLastName(rowItem[0]);
+                                    //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
+                                    highscoresModel.append({'firstname': firstName,
+                                                               'lastname':  lastName,
+                                                               'score': rowItem[1] });
+                                }
+                            }
+                        }
+                    }
+                    ToolbarButton {
+                        action: Action {
+                            text: "Current\nuser"
+                            iconSource: Qt.resolvedUrl("icons/single-user.svg")
+                            onTriggered: {
+                                var firstName = Settings.getUserFirstName(currentUserId);
+                                var lastName = Settings.getUserLastName(currentUserId);
+                                print(firstName, lastName)
+                                highscoresHeaderText = i18n.tr("<b>Best scores for ")+firstName + " " + lastName+"</b>"
+                                var allScores = Settings.getAllScoresForUser(currentUserId)
+                                highscoresModel.clear();
+                                for(var i = 0; i < allScores.length; i++) {
+                                    var rowItem = allScores[i];
+                                    //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
+                                    highscoresModel.append({'firstname': firstName,
+                                                               'lastname':  lastName,
+                                                               'score': rowItem[1] });
+                                }
+                            }
+                        }
+                    }
+                    //locked: true
+                    //opened: true
+                }
+
+
+                ListModel {
+                    id: highscoresModel
+
+                    /*ListElement {
+                        firstname: "Bill"
+                        lastname: "Smith"
+                        score: "120"
+                    }
+                    ListElement {
+                        firstname: "John"
+                        lastname: "Brown"
+                        score: "130"
+                    }*/
+                }
+                Column {
+                    anchors.fill: parent
+                    ListView {
+                        model: highscoresModel
+                        anchors.fill: parent
+                        header: ListItem.Header {
+                            id: highscoresHeader
+                            text: highscoresHeaderText
+                        }
+                        delegate: ListItem.SingleValue {
+                            text: firstname + " " + lastname
+                            value: score
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+
+
         // settingsTab
         Tab {
             id: settingsTab;
@@ -262,7 +384,7 @@ MainView {
                     spacing: units.gu(1)
 
                     ListItem.Header {
-                        text: i18n.tr("Sudoku settings")                    
+                        text: i18n.tr("<b>Sudoku settings</b>")
                     }
 
                     ListItem.ValueSelector {
@@ -324,19 +446,19 @@ MainView {
                     }
 
                     ListItem.Standard {
-                              text: i18n.tr("Hints")
-                              width: parent.width
-                              control: Switch {
-                                  id: disableHints
-                                  anchors.horizontalCenter: parent.horizontalCenter
-                                  anchors.verticalCenter: parent.verticalCenter
-                                  checked: disableHintsChecked
-                                  onCheckedChanged: {
-                                      var result = Settings.setSetting("DisableHints", checked ? "true":"false");
-                                      print(result);
-                                  }
-                              }
-                          }
+                        text: i18n.tr("Hints")
+                        width: parent.width
+                        control: Switch {
+                            id: disableHints
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            anchors.verticalCenter: parent.verticalCenter
+                            checked: disableHintsChecked
+                            onCheckedChanged: {
+                                var result = Settings.setSetting("DisableHints", checked ? "true":"false");
+                                print(result);
+                            }
+                        }
+                    }
                 }
             }
 
@@ -365,22 +487,16 @@ MainView {
                     //anchors.fill: parent
                     anchors.horizontalCenter: parent.horizontalCenter;
                     y: units.gu(8);
-                    Rectangle {
-                        radius: 10
-                        height: units.gu(20)
-                        width: units.gu(20)
-                        anchors.horizontalCenter: parent.horizontalCenter;
-
-                        Image {
-                            source: "icons/SudokuGameIcon.svg"
+                    Image {
+                            property real maxWidth: units.gu(100)
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            width: Math.min(mainView.width, maxWidth)/1.75
+                            //height: width
+                            source: "icons/sudoko-vector-about.svg"
                             smooth: true
-                            fillMode: Image.PreserveAspectCrop
-                            height: units.gu(20)
-                            width: units.gu(20)
-                            anchors.centerIn: parent
+                            fillMode: Image.PreserveAspectFit
 
                         }
-                    }
                     Row {
                         anchors.horizontalCenter: parent.horizontalCenter;
                         Label {
