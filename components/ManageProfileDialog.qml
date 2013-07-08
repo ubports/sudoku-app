@@ -67,7 +67,7 @@ Component {
 
                                 PopupUtils.close(editProfileDialogue)
                             }else{
-                                mainView.showAlert(i18n.tr("Warning"), i18n.tr("User already exist."), okButton)
+                                PopupUtils.close(editProfileDialogue)
                             }
 
 

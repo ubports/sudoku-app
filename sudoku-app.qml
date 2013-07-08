@@ -68,9 +68,6 @@ MainView {
         //buttonsGridPublic.update();
     }
 
-    ColorSchemeDefault {
-        id: colorScheme;
-    }
 
     Component {
         id: alertDialog
@@ -99,13 +96,7 @@ MainView {
 
     }
 
-    property alias defaultColor: colorScheme.defaultColor;
-    property alias defaultStartingColor : colorScheme.defaultStartingColor
-    property alias defaultNotAllowedColor : colorScheme.defaultNotAllowedColor;
-    property alias defaultHintColor: colorScheme.defaultHintColor;
-    property alias defaultBorderColor: colorScheme.defaultBorderColor;
-    property alias boldText: colorScheme.boldText;
-    property alias defaultTextColor: colorScheme.textColor;
+
 
     onHeightChanged: {
         if (!gridLoaded)
@@ -444,6 +435,9 @@ MainView {
                                     id: header
                                     text: i18n.tr("Select profile")
                                 }
+
+
+
                                 ListView {
                                     id: profileListView
                                     clip: true
@@ -455,7 +449,7 @@ MainView {
 
                                         ListItem.Standard {
                                         text: firstname + " " + lastname
-
+ progression: true
                                         onTriggered: {
                                             console.log("clicked "+index)
                                             currentUserId = profileId;
@@ -493,7 +487,7 @@ MainView {
 
                                         ListItem.Standard {
                                         text: firstname + " " + lastname
-
+ progression: true
                                         onTriggered: {
                                             hide()
                                             editUserId = profileId

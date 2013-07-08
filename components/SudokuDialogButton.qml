@@ -3,9 +3,9 @@ import Ubuntu.Components 0.1
 
 SudokuButton {
     id: dialogButton
-    border.color: defaultBorderColor
+    border.color: sudokuBlocksGrid.defaultBorderColor
     //border.width: 3
-    textColor: defaultTextColor;
+    textColor: sudokuBlocksGrid.defaultTextColor;
 
     signal triggered;
 
@@ -43,5 +43,5 @@ SudokuButton {
             animateDialogButton.start();
         }
     }
-    buttonColor: buttonMouseArea.pressed ? String(Qt.darker(defaultColor,1.2)):defaultColor
+    buttonColor: buttonMouseArea.pressed ? String(Qt.darker(sudokuBlocksGrid.defaultColor,1.2)):sudokuBlocksGrid.defaultColor
 }

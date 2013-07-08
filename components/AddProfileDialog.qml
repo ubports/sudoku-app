@@ -18,8 +18,8 @@ Component {
             spacing: units.gu(2)
 
             Rectangle{
-                width: 200
-                height: 32
+                width: units.gu(25)
+                height: units.gu(4)
                 radius: 9
                 anchors.horizontalCenter: parent.horizontalCenter
                 TextField {
@@ -30,8 +30,8 @@ Component {
                 }
             }
             Rectangle{
-                width: 200
-                height: 32
+                width: units.gu(25)
+                height: units.gu(4)
                 radius: 9
                 anchors.horizontalCenter: parent.horizontalCenter
                 TextField {
