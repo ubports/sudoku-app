@@ -423,7 +423,10 @@ MainView {
 
                     Component {
                         id: profileSelector
-                        Popover {
+                        DefaultSheet {
+                            title: i18n.tr("Select profile")
+
+                            /*
                             Column {
                                 anchors {
                                     top: parent.top
@@ -431,71 +434,70 @@ MainView {
                                     right: parent.right
                                 }
                                 height: mainColumnSettings.height
+
                                 ListItem.Header {
                                     id: header
                                     text: i18n.tr("Select profile")
                                 }
+                                */
 
 
 
-                                ListView {
-                                    id: profileListView
-                                    clip: true
-                                    width: parent.width
-                                    height: parent.height - header.height
-                                    model: profilesModel
+                            ListView {
+                                height: mainColumnSettings.height
+                                id: profileListView
+                                clip: true
+                                width: parent.width
+                                // height: parent.height - header.height
+                                model: profilesModel
 
-                                    delegate:
+                                delegate:
+                                    ListItem.Standard {
 
-                                        ListItem.Standard {
-                                        text: firstname + " " + lastname
- progression: true
-                                        onTriggered: {
-                                            console.log("clicked "+index)
-                                            currentUserId = profileId;
-                                            hide()
-                                        }
+                                    text: firstname + " " + lastname
+                                    progression: true
+                                    onTriggered: {
+                                        console.log("clicked "+index)
+                                        currentUserId = profileId;
+                                        hide()
                                     }
-
                                 }
+
                             }
                         }
+                        // }
                     }
 
                     Component {
                         id: manageProfileSelector
-                        Popover {
-                            Column {
-                                anchors {
-                                    top: parent.top
-                                    left: parent.left
-                                    right: parent.right
-                                }
-                                height: mainColumnSettings.height
-                                ListItem.Header {
-                                    id: header
-                                    text: i18n.tr("Manage profile")
-                                }
+                        DefaultSheet {
+                            title: i18n.tr("Select profile")
+
+
+
                                 ListView {
                                     id: manageProfileListView
                                     clip: true
                                     width: parent.width
-                                    height: parent.height - header.height
+                                  height: mainColumnSettings.height
                                     model: profilesModel
 
                                     delegate:
 
                                         ListItem.Standard {
-                                        text: firstname + " " + lastname
- progression: true
-                                        onTriggered: {
-                                            hide()
-                                            editUserId = profileId
-                                            PopupUtils.open(manageProfileDialog, selectorProfile)
-                                        }
-                                    }
 
-                                }
+                                            text: firstname + " " + lastname
+
+                                            progression: true
+                                            onTriggered: {
+                                                hide()
+                                                editUserId = profileId
+                                                PopupUtils.open(manageProfileDialog, selectorProfile)
+                                            }
+                                        }
+
+
+
                             }
                         }
                     }
