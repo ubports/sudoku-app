@@ -5,12 +5,12 @@
 # under the terms of the GNU General Public License version 3, as published
 # by the Free Software Foundation.
 
-"""RSS Reader app autopilot emulators."""
+"""Sudoku app autopilot emulators."""
 
 
 class MainWindow(object):
     """An emulator class that makes it easy to interact with the
-    rssreader-app.
+    sudoku-app.
 
     """
     def __init__(self, app):
@@ -21,7 +21,4 @@ class MainWindow(object):
         return self.app.select_single("QQuickView")
 
     def get_toolbar(self):
-        return self.app.select_single("Toolbar")
-    
-    def get_item(self):
-        return self.app.select_single("ToolbarActions", text="Add feed") 
+        return self.app.select_single("Toolbar") 
