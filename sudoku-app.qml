@@ -253,6 +253,7 @@ MainView {
                     //width: mainView.width;
                     //height: mainView.height;
                     anchors.left: parent.left;
+                    anchors.leftMargin: units.dp(3)
                     spacing: units.gu(5)
 
                     SudokuBlocksGrid {
@@ -498,9 +499,11 @@ MainView {
 
                         }
                     Row {
-                        anchors.horizontalCenter: parent.horizontalCenter;
+                        //anchors.horizontalCenter: parent.horizontalCenter;
+                        anchors.left: aboutColumn.left
                         Label {
                             text: i18n.tr("Author(s): ")
+                            anchors.left: aboutColumn.left
                         }
                         Label {
                             font.bold: true;
