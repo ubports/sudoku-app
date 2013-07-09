@@ -36,11 +36,11 @@ MainView {
     function newSize(width, height) {
         pageWidth = width;
         pageHeight = height;
-        print(height," x ", width);
+        //print(height," x ", width);
     }
 
     function updateGrid() {
-        print("Updating grid");
+        //print("Updating grid");
         //print("width:"); print(mainView.width);
         //print("height:"); print(mainView.height);
         for (var i = 0; i < 9; i++) {
@@ -112,16 +112,16 @@ MainView {
         //print(Settings.getSetting("DisableHints"));
         settingsTab.disableHintsChecked = Settings.getSetting("DisableHints") == "true" ? true: false;
         settingsTab.themeIndex = parseInt(Settings.getSetting("ColorTheme"));
-        print(Settings.getSetting("ColorTheme"));
+        //print(Settings.getSetting("ColorTheme"));
         var newColorScheme = null;
         if (settingsTab.themeIndex == 0)
         {
-            print("Ubuntu")
+            //print("Ubuntu")
             sudokuBlocksGrid.changeColorScheme("ColorSchemeUbuntu.qml");
         }
         if (settingsTab.themeIndex == 1)
         {
-            print("Simple")
+            //print("Simple")
             sudokuBlocksGrid.changeColorScheme("ColorSchemeSimple.qml");
         }
         gridLoaded = true;
@@ -130,10 +130,10 @@ MainView {
         for(var i = 0; i < allScores.length; i++) {
             var rowItem = allScores[i];
             //res.push[dbItem.first_name, dbItem.last_name, dbItem.score])
-            print("ROW ",rowItem[0])
+            //print("ROW ",rowItem[0])
             var firstName = Settings.getUserFirstName(rowItem[0])
             var lastName = Settings.getUserLastName(rowItem[0])
-            print(firstName, lastName)
+            //print(firstName, lastName)
             highscoresModel.append({'firstname': firstName,
                                        'lastname':  lastName,
                                        'score': rowItem[1] });
@@ -223,7 +223,7 @@ MainView {
                         text: i18n.tr("New game");
                         iconSource: Qt.resolvedUrl("icons/new_game_ubuntu.svg")
                         onTriggered: {
-                            print("new block distance:", blockDistance);
+                            //print("new block distance:", blockDistance);
                             switch(difficultySelector.selectedIndex) {
                             case 0:
                                 var randomnumber = Math.floor(Math.random()*9);
@@ -273,7 +273,7 @@ MainView {
                                     highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
                                     for(var i = 0; i < allScores.length; i++) {
                                         var rowItem = allScores[i];
-                                        print("ROW ",rowItem)
+                                        //(print("ROW ",rowItem)
                                         var firstName = Settings.getUserFirstName(rowItem[0]);
                                         var lastName = Settings.getUserLastName(rowItem[0]);
                                         //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
@@ -331,7 +331,7 @@ MainView {
                                 highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
                                 for(var i = 0; i < allScores.length; i++) {
                                     var rowItem = allScores[i];
-                                    print("ROW ",rowItem)
+                                    //print("ROW ",rowItem)
                                     var firstName = Settings.getUserFirstName(rowItem[0]);
                                     var lastName = Settings.getUserLastName(rowItem[0]);
                                     //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
@@ -349,7 +349,7 @@ MainView {
                             onTriggered: {
                                 var firstName = Settings.getUserFirstName(currentUserId);
                                 var lastName = Settings.getUserLastName(currentUserId);
-                                print(firstName, lastName)
+                                //print(firstName, lastName)
                                 highscoresHeaderText = i18n.tr("<b>Best scores for ")+firstName + " " + lastName+"</b>"
                                 var allScores = Settings.getAllScoresForUser(currentUserId)
                                 highscoresModel.clear();
@@ -525,7 +525,7 @@ MainView {
                         text: i18n.tr("Difficulty")
                         values: [i18n.tr("Easy"), i18n.tr("Moderate"), i18n.tr("Hard"), i18n.tr("Ultra Hard")]
                         onSelectedIndexChanged: {
-                            print(difficultySelector.selectedIndex)
+                            //print(difficultySelector.selectedIndex)
                             switch(difficultySelector.selectedIndex) {
                             case 0:
                                 var randomnumber = Math.floor(Math.random()*9);
@@ -563,16 +563,16 @@ MainView {
                             var newColorScheme = null;
                             if (selectedIndex == 0)
                             {
-                                print("Ubuntu")
+                                //print("Ubuntu")
                                 var result = Settings.setSetting("ColorTheme", selectedIndex);
-                                print(result);
+                                //print(result);
                                 sudokuBlocksGrid.changeColorScheme("ColorSchemeUbuntu.qml");
                             }
                             if (selectedIndex == 1)
                             {
-                                print("Simple")
+                                //print("Simple")
                                 var result = Settings.setSetting("ColorTheme", selectedIndex);
-                                print(result);
+                                //print(result);
                                 sudokuBlocksGrid.changeColorScheme("ColorSchemeSimple.qml");
                             }
                         }
@@ -588,7 +588,7 @@ MainView {
                             checked: disableHintsChecked
                             onCheckedChanged: {
                                 var result = Settings.setSetting("DisableHints", checked ? "true":"false");
-                                print(result);
+                                //print(result);
                             }
                         }
                     }

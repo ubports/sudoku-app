@@ -161,7 +161,7 @@ CU.sudoku.Grid.prototype = {
 
         for(var i = 0; i < 9; i++)
         {
-            console.log("test with col"+this.rows[i][column])
+            //console.log("test with col"+this.rows[i][column])
             if(i != row && this.rows[i][column] == value)
             {
                 return true;
@@ -173,7 +173,7 @@ CU.sudoku.Grid.prototype = {
                 return true;
             }
         }
-        console.log("ok cellconflicts")
+        //console.log("ok cellconflicts")
         //At this point, everything else is checked as valid except the 3x3 grid
         return !this._miniGridValidFor(column, row, value);
     },

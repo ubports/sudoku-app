@@ -15,13 +15,13 @@ function initialize() {
 
 
                     tx.executeSql('CREATE TABLE IF NOT EXISTS settings(setting TEXT UNIQUE, value TEXT)');
-                    print("setting table created.")
+                    //print("setting table created.")
                     tx.executeSql('CREATE TABLE IF NOT EXISTS profiles(id INTEGER PRIMARY KEY AUTOINCREMENT, first_name TEXT, last_name TEXT, UNIQUE(first_name, last_name) ON CONFLICT ROLLBACK)');
-                    print("profile table created.")
+                    //print("profile table created.")
 
                     tx.executeSql('INSERT OR IGNORE INTO profiles VALUES (null,?,?);', ["Sudoku","User"]);
                     tx.executeSql('CREATE TABLE IF NOT EXISTS scores(id INTEGER PRIMARY KEY AUTOINCREMENT, profile_id INTEGER, score INTEGER NOT NULL, game_date DATE, FOREIGN KEY(profile_id) REFERENCES profiles(id))');
-                    print("scores table created.")
+                    //print("scores table created.")
 
 
 
@@ -88,7 +88,7 @@ function getAllScores()
     var db = getDatabase();
     var res=new Array();
 
-    print("GETTING ALL SCORES")
+    //print("GETTING ALL SCORES")
     db.transaction( function(tx) {
         var rs = tx.executeSql("SELECT profile_id, score FROM scores order by score limit 10;");
         for(var i = 0; i < rs.rows.length; i++) {
@@ -96,7 +96,7 @@ function getAllScores()
             res.push([dbItem.profile_id, dbItem.score])
         }
     });
-    print(res);
+    //print(res);
     return res;
 }
 
@@ -105,16 +105,16 @@ function getAllScoresForUser(profile_id)
     var db = getDatabase();
     var res=new Array();
 
-    print("GETTING ALL SCORES")
+    //print("GETTING ALL SCORES")
     db.transaction( function(tx) {
         var rs = tx.executeSql("SELECT score FROM scores WHERE profile_id=? order by score limit 10;",[profile_id]);
         for(var i = 0; i < rs.rows.length; i++) {
             var dbItem = rs.rows.item(i);
-            print(dbItem.profile_id, dbItem.score)
+            //print(dbItem.profile_id, dbItem.score)
             res.push([dbItem.profile_id, dbItem.score])
         }
     });
-    print (res);
+    //print (res);
     return res;
 }
 
@@ -124,7 +124,7 @@ function printObject(o)
     for(var p in o){
         out+=p+': '+o[p]+'\n';
     }
-    console.log(out)
+    //console.log(out)
 }
 
 function getAllProfiles()
@@ -132,7 +132,7 @@ function getAllProfiles()
     var db = getDatabase();
     var res=new Array();
 
-    print("GETTING ALL PROFILES")
+    //print("GETTING ALL PROFILES")
     db.transaction( function(tx) {
         var rs = tx.executeSql("SELECT * FROM profiles limit 10;");
         for(var i = 0; i < rs.rows.length; i++) {
@@ -144,7 +144,7 @@ function getAllProfiles()
             res.push(o)
         }
     });
-    print(res);
+    //print(res);
     return res;
 }
 

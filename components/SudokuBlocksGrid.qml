@@ -142,7 +142,7 @@ Rectangle {
         }
         alreadyCreated = true;
 
-        print("Theme updated " + String(newColorScheme));
+        //print("Theme updated " + String(newColorScheme));
     }
 
     function createNewGame(difficulty) {
