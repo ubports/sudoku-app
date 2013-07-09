@@ -23,7 +23,7 @@ function initialize() {
                     tx.executeSql('CREATE TABLE IF NOT EXISTS scores(id INTEGER PRIMARY KEY AUTOINCREMENT, profile_id INTEGER, score INTEGER NOT NULL, game_date DATE, FOREIGN KEY(profile_id) REFERENCES profiles(id))');
                     print("scores table created.")
 
-                    test()
+
 
                 });
 }
@@ -126,27 +126,6 @@ function printObject(o)
     }
     console.log(out)
 }
-
-function test()
-{
-    var db = getDatabase();
-    var res="";
-
-    db.transaction(function(tx) {
-        var rs = tx.executeSql('SELECT * FROM profiles ');
-        if (rs.rows.length > 0) {
-            console.log(">0")
-
-            printObject(rs.rows.item(0));
-
-
-        } else {
-            res = false
-        }
-    })
-}
-
-
 
 function getAllProfiles()
 {
