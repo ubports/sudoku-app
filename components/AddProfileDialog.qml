@@ -9,7 +9,7 @@ Component {
 
     Dialog {
         id: addProfileDialogue
-        title: i18n.tr("Add a new profile")
+        title: i18n.tr("Add new profile")
         width: parent.width
 
 

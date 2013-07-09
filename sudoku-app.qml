@@ -425,6 +425,7 @@ MainView {
                         id: profileSelector
                         DefaultSheet {
                             title: i18n.tr("Select profile")
+                            contentsHeight: mainView.height
 
                             /*
                             Column {
@@ -472,6 +473,7 @@ MainView {
                         id: manageProfileSelector
                         DefaultSheet {
                             title: i18n.tr("Select profile")
+                            contentsHeight: mainView.height
 
 
 

@@ -9,7 +9,7 @@ Component {
 
     Dialog {
         id: editProfileDialogue
-        title: i18n.tr("Edit a profile")
+        title: i18n.tr("Edit profile")
         width: parent.width
 
 
