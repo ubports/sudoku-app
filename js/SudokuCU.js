@@ -159,20 +159,17 @@ CU.sudoku.Grid.prototype = {
         if(value == 0)
             return false;
 
-         console.log("test for "+value)
         for(var i = 0; i < 9; i++)
         {
             console.log("test with col"+this.rows[i][column])
             if(i != row && this.rows[i][column] == value)
             {
-                console.log("find row")
                 return true;
             }
 
            // console.log("test with row"+this.rows[row][i])
             if(i != column && this.rows[row][i] == value)
             {
-                console.log("find col")
                 return true;
             }
         }
@@ -208,8 +205,6 @@ CU.sudoku.Grid.prototype = {
                 var value = this.rows[r][c];
                 if(value == 0)
                     continue;
-
-                console.log("test minigrid "+value)
 
                 //if(App.Utils.arrayContains(numbers, value))
                 //    return false;
@@ -251,8 +246,6 @@ CU.sudoku.Grid.prototype = {
                 var value = this.rows[r][c];
                 if(value == 0)
                     continue;
-
-                console.log("test minigrid "+value)
 
                 //if(App.Utils.arrayContains(numbers, value))
                 //    return false;
