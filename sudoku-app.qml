@@ -2,6 +2,7 @@ import QtQuick 2.0
 import Ubuntu.Components 0.1
 import Ubuntu.Components.ListItems 0.1 as ListItem
 import QtQuick.LocalStorage 2.0
+import Ubuntu.Components.Popups 0.1
 import "js/localStorage.js" as Settings
 import "components"
 
@@ -17,11 +18,20 @@ MainView {
     property real blockDistance: pageWidth/200;
     property bool alreadyCreated: false;
     property bool gridLoaded: false;
-    property int currentUserId: 1;
+    property int currentUserId: -1;
     property string highscoresHeaderText: i18n.tr("<b>Best scores for all players</b>")
+
+    property string alertTitle: ""
+    property string alertText : ""
+
+    property int editUserId : -1;
 
     width: pageWidth;
     height: pageHeight;
+
+    onCurrentUserIdChanged: {
+        Settings.setSetting("currentUserId", currentUserId)
+    }
 
     function newSize(width, height) {
         pageWidth = width;
@@ -57,6 +67,36 @@ MainView {
         //mainRectangle.update();
         //buttonsGridPublic.update();
     }
+
+
+    Component {
+        id: alertDialog
+        Dialog {
+            id: alertDialogue
+            title: alertTitle
+            text: alertText
+
+            SudokuDialogButton{
+                buttonText: i18n.tr("OK")
+                width: parent.width/2;
+                size: units.gu(5)
+                onTriggered: {
+                    PopupUtils.close(alertDialogue)
+                }
+            }
+
+        }
+    }
+
+    function showAlert(title, text, caller)
+    {
+        alertTitle = title
+        alertText = text
+        PopupUtils.open(alertDialog, caller)
+
+    }
+
+
 
     onHeightChanged: {
         if (!gridLoaded)
@@ -98,6 +138,14 @@ MainView {
                                        'lastname':  lastName,
                                        'score': rowItem[1] });
         }
+
+        if(Settings.getSetting("currentUserId")=="Unknown")
+            currentUserId = -1;
+        else
+        {
+            currentUserId = Settings.getSetting("currentUserId")
+        }
+
     }
 
     Tabs {
@@ -259,6 +307,7 @@ MainView {
                     SudokuBlocksGrid {
                         id: sudokuBlocksGrid;
                     }
+
                 }
             }
 
@@ -364,19 +413,102 @@ MainView {
             property alias difficultyIndex: difficultySelector.selectedIndex;
             property alias themeIndex: themeSelector.selectedIndex;
 
-            title: i18n.tr("Settings")
-            page: Page {
-                /*
-                tools: ToolbarActions {
 
-                    Action {
-                        iconSource: Qt.resolvedUrl("icons/close.svg")
-                        text: i18n.tr("Close");
-                        onTriggered: Qt.quit()
-                    }
-                }
-                */
+
+            title: i18n.tr("Settings")
+            page:
+
+                Page {
+
                 Column {
+
+                    Component {
+                        id: profileSelector
+                        DefaultSheet {
+                            title: i18n.tr("Select profile")
+                            contentsHeight: mainView.height
+
+                            /*
+                            Column {
+                                anchors {
+                                    top: parent.top
+                                    left: parent.left
+                                    right: parent.right
+                                }
+                                height: mainColumnSettings.height
+
+                                ListItem.Header {
+                                    id: header
+                                    text: i18n.tr("Select profile")
+                                }
+                                */
+
+
+
+                            ListView {
+                                height: mainColumnSettings.height
+                                id: profileListView
+                                clip: true
+                                width: parent.width
+                                // height: parent.height - header.height
+                                model: profilesModel
+
+                                delegate:
+                                    ListItem.Standard {
+
+                                    text: firstname + " " + lastname
+                                    progression: true
+                                    onTriggered: {
+                                        console.log("clicked "+index)
+                                        currentUserId = profileId;
+                                        hide()
+                                    }
+                                }
+
+                            }
+                        }
+                        // }
+                    }
+
+                    Component {
+                        id: manageProfileSelector
+                        DefaultSheet {
+                            title: i18n.tr("Select profile")
+                            contentsHeight: mainView.height
+
+
+
+                                ListView {
+                                    id: manageProfileListView
+                                    clip: true
+                                    width: parent.width
+                                  height: mainColumnSettings.height
+                                    model: profilesModel
+
+                                    delegate:
+
+                                        ListItem.Standard {
+
+                                            text: firstname + " " + lastname
+
+                                            progression: true
+                                            onTriggered: {
+                                                hide()
+                                                editUserId = profileId
+                                                PopupUtils.open(manageProfileDialog, selectorProfile)
+                                            }
+                                        }
+
+
+
+                            }
+                        }
+                    }
+
+                    ListModel{
+                        id: profilesModel
+                    }
+
                     id: mainColumnSettings;
                     //width: settingsTab.width;
                     //height: settingsTab.height;
@@ -460,8 +592,75 @@ MainView {
                             }
                         }
                     }
+                    ListItem.Header {
+                        text: i18n.tr("<b>Profiles settings</b>")
+                    }
+                    ListItem.SingleValue {
+                        text: "Current profile"
+                        id: selectorProfile
+                        value: {
+                            if(currentUserId==-1)
+                                return i18n.tr("None")
+                            else
+                                return Settings.getUserFirstName(currentUserId)+" "+Settings.getUserLastName(currentUserId);
+
+                        }
+
+                        onClicked: {
+
+                            var allProfiles = new Array();
+                            allProfiles = Settings.getAllProfiles()
+
+                            profilesModel.clear()
+
+                            for(var i = 0; i < allProfiles.length; i++)
+                            {
+                                profilesModel.append({"profileId":allProfiles[i].id,"lastname":allProfiles[i].lastname, "firstname":allProfiles[i].firstname})
+                            }
+                            PopupUtils.open(profileSelector, selectorProfile)
+                        }
+                    }
+
+                    AddProfileDialog{
+                        id:addProfileDialog
+                    }
+
+                    ManageProfileDialog{
+                        id:manageProfileDialog
+                    }
+
+
+                    ListItem.SingleValue {
+                        id:addSingleValue
+                        text: i18n.tr("Add profile")
+                        onClicked: {
+                            PopupUtils.open(addProfileDialog, addSingleValue);
+                        }
+                    }
+
+                    ListItem.SingleValue {
+                        id:manageProfileSingleValue
+                        text: i18n.tr("Manage profiles")
+                        onClicked: {
+
+                            var allProfiles = new Array();
+                            allProfiles = Settings.getAllProfiles()
+
+                            profilesModel.clear()
+
+                            for(var i = 0; i < allProfiles.length; i++)
+                            {
+                                profilesModel.append({"profileId":allProfiles[i].id,"lastname":allProfiles[i].lastname, "firstname":allProfiles[i].firstname})
+                            }
+
+                            PopupUtils.open(manageProfileSelector, manageProfileSingleValue)
+                        }
+                    }
+
+
                 }
             }
+
 
         }
 
@@ -470,18 +669,7 @@ MainView {
             objectName: "aboutTab"
             title: i18n.tr("About")
             page: Page {
-                /*
-                tools: ToolbarActions {
 
-
-                    Action {
-                        iconSource: Qt.resolvedUrl("icons/close.svg");
-                        text: i18n.tr("Close");
-                        onTriggered: Qt.quit()
-                    }
-
-                }
-                */
                 Column {
                     id: aboutColumn;
                     spacing: 5;
@@ -489,15 +677,15 @@ MainView {
                     anchors.horizontalCenter: parent.horizontalCenter;
                     y: units.gu(8);
                     Image {
-                            property real maxWidth: units.gu(100)
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            width: Math.min(mainView.width, maxWidth)/1.75
-                            //height: width
-                            source: "icons/sudoko-vector-about.svg"
-                            smooth: true
-                            fillMode: Image.PreserveAspectFit
+                        property real maxWidth: units.gu(100)
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        width: Math.min(mainView.width, maxWidth)/1.75
+                        //height: width
+                        source: "icons/sudoko-vector-about.svg"
+                        smooth: true
+                        fillMode: Image.PreserveAspectFit
 
-                        }
+                    }
                     Row {
                         //anchors.horizontalCenter: parent.horizontalCenter;
                         anchors.left: aboutColumn.left

@@ -12,13 +12,18 @@ function initialize() {
                     // Create the settings table if it doesn't already exist
                     // If the table exists, this is skipped
                     tx.executeSql('PRAGMA foreign_keys = ON;');
+
+
                     tx.executeSql('CREATE TABLE IF NOT EXISTS settings(setting TEXT UNIQUE, value TEXT)');
                     print("setting table created.")
                     tx.executeSql('CREATE TABLE IF NOT EXISTS profiles(id INTEGER PRIMARY KEY AUTOINCREMENT, first_name TEXT, last_name TEXT, UNIQUE(first_name, last_name) ON CONFLICT ROLLBACK)');
                     print("profile table created.")
+
                     tx.executeSql('INSERT OR IGNORE INTO profiles VALUES (null,?,?);', ["Sudoku","User"]);
                     tx.executeSql('CREATE TABLE IF NOT EXISTS scores(id INTEGER PRIMARY KEY AUTOINCREMENT, profile_id INTEGER, score INTEGER NOT NULL, game_date DATE, FOREIGN KEY(profile_id) REFERENCES profiles(id))');
                     print("scores table created.")
+
+                    test()
 
                 });
 }
@@ -111,6 +116,134 @@ function getAllScoresForUser(profile_id)
     });
     print (res);
     return res;
+}
+
+function printObject(o)
+{
+    var out = '';
+    for(var p in o){
+        out+=p+': '+o[p]+'\n';
+    }
+    console.log(out)
+}
+
+function test()
+{
+    var db = getDatabase();
+    var res="";
+
+    db.transaction(function(tx) {
+        var rs = tx.executeSql('SELECT * FROM profiles ');
+        if (rs.rows.length > 0) {
+            console.log(">0")
+
+            printObject(rs.rows.item(0));
+
+
+        } else {
+            res = false
+        }
+    })
+}
+
+
+
+function getAllProfiles()
+{
+    var db = getDatabase();
+    var res=new Array();
+
+    print("GETTING ALL PROFILES")
+    db.transaction( function(tx) {
+        var rs = tx.executeSql("SELECT * FROM profiles limit 10;");
+        for(var i = 0; i < rs.rows.length; i++) {
+            var dbItem = rs.rows.item(i);
+            var o = new Object();
+            o["id"] = dbItem.id;
+             o["lastname"] = dbItem.last_name;
+             o["firstname"] = dbItem.first_name;
+            res.push(o)
+        }
+    });
+    print(res);
+    return res;
+}
+
+
+function deleteProfile(id)
+{
+
+    var db = getDatabase();
+    var res="";
+    db.transaction(function(tx) {
+        var rs = tx.executeSql('DELETE FROM profiles WHERE id=? ;', [id]);
+
+        if (rs.rowsAffected > 0) {
+            res = "OK";
+        } else {
+            res = "Error";
+        }
+    }
+    );
+    // The function returns “OK” if it was successful, or “Error” if it wasn't
+    return res;
+}
+
+
+function updateProfile(id, lastname, firstname)
+{
+
+    var db = getDatabase();
+    var res="";
+    db.transaction(function(tx) {
+        var rs = tx.executeSql('UPDATE profiles SET first_name=?, last_name=? WHERE id=? ;', [firstname, lastname, id]);
+
+        if (rs.rowsAffected > 0) {
+            res = "OK";
+        } else {
+            res = "Error";
+        }
+    }
+    );
+    // The function returns “OK” if it was successful, or “Error” if it wasn't
+    return res;
+}
+
+function insertProfile(lastname, firstname)
+{
+
+    var db = getDatabase();
+    var res="";
+    db.transaction(function(tx) {
+        var rs = tx.executeSql('INSERT OR IGNORE INTO profiles VALUES (null,?,?);', [firstname, lastname]);
+
+        if (rs.rowsAffected > 0) {
+            res = "OK";
+        } else {
+            res = "Error";
+        }
+    }
+    );
+    // The function returns “OK” if it was successful, or “Error” if it wasn't
+    return res;
+}
+
+function existProfile(lastname, firstname)
+{
+    var db = getDatabase();
+    var res="";
+
+    db.transaction(function(tx) {
+        var rs = tx.executeSql('SELECT id FROM profiles WHERE last_name=? AND first_name=?;', [lastname, firstname]);
+        if (rs.rows.length > 0) {
+            res = true
+        } else {
+            res = false
+        }
+    })
+
+
+    return res
 }
 
 function getUserFirstName(profile_id)
