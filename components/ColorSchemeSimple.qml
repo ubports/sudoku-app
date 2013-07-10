@@ -10,5 +10,8 @@ Item {
     property string defaultTextColor: "#DD4814";
     property bool boldText: true;
     property string textColor: "#DD4814";
+    property color dialogButtonColor1: "white"
+    property color dialogButtonColor2: "white"
+    property color dialogButtonTextColor: UbuntuColors.orange
 
 }

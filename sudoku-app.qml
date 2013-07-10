@@ -96,8 +96,6 @@ MainView {
 
     }
 
-
-
     onHeightChanged: {
         if (!gridLoaded)
             return;

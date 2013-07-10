@@ -19,6 +19,10 @@ Rectangle {
     property alias boldText: colorScheme.boldText;
     property alias defaultTextColor: colorScheme.textColor;
 
+    property alias dialogButtonColor1: colorScheme.dialogButtonColor1
+    property alias dialogButtonColor2: colorScheme.dialogButtonColor2
+    property alias dialogButtonTextColor: colorScheme.dialogButtonTextColor
+
     property real blockDistance: mainView.blockDistance;
     property int currentX;
     property string selectedNumberFromDialog: "0";
@@ -97,6 +101,9 @@ Rectangle {
         colorScheme.defaultBorderColor = temp.defaultBorderColor;
         colorScheme.boldText = temp.boldText;
         colorScheme.textColor = temp.textColor;
+        colorScheme.dialogButtonColor1 = temp.dialogButtonColor1;
+        colorScheme.dialogButtonColor2 = temp.dialogButtonColor2;
+        colorScheme.dialogButtonTextColor = temp.dialogButtonTextColor;
 
         for (var i = 0; i < 9; i++) {
             for (var j = 0; j < 9; j++) {
@@ -298,6 +305,9 @@ Rectangle {
                             width: mainView.pageWidth*2/3;
                             size: units.gu(5)
                             anchors.left: parent.left;
+                            buttonColor: dialogButtonColor1
+                            textColor: dialogButtonTextColor
+                            border.color: "transparent"
                             onTriggered: {
                                 numberOfActions++;
                                 buttonsGrid.itemAt(currentX).buttonText = "";
@@ -390,6 +400,9 @@ Rectangle {
                             width: mainView.pageWidth*2/3;
                             size: units.gu(5)
                             anchors.left: parent.left;
+                            buttonColor: dialogButtonColor2
+                            textColor: dialogButtonTextColor
+                            border.color: "transparent"
                             onTriggered: {
                                  buttonsGrid.redrawGrid()
                                 PopupUtils.close(dialogue)
