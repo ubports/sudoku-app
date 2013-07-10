@@ -52,6 +52,9 @@ Component {
                     buttonText: i18n.tr("OK")
                     width: parent.width/2;
                     size: units.gu(5)
+                    buttonColor: sudokuBlocksGrid.dialogButtonColor2
+                    textColor: sudokuBlocksGrid.dialogButtonTextColor
+                    border.color: "transparent"
                     onTriggered: {
 
                         if(lastnameField.text!="" && firstnameField.text!="")
@@ -84,6 +87,9 @@ Component {
 
                 SudokuDialogButton{
                     buttonText: i18n.tr("Delete")
+                    buttonColor: sudokuBlocksGrid.dialogButtonColor1
+                    textColor: sudokuBlocksGrid.dialogButtonTextColor
+                    border.color: "transparent"
                     width: parent.width/2;
                     size: units.gu(5)
                     onTriggered: {
@@ -99,6 +105,7 @@ Component {
             SudokuDialogButton{
                 anchors.horizontalCenter: parent.horizontalCenter
                 buttonText: i18n.tr("Cancel")
+                border.color: "transparent"
                 width: parent.width/2;
                 size: units.gu(5)
                 onTriggered: {

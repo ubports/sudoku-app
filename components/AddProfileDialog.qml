@@ -51,6 +51,8 @@ Component {
                     buttonText: i18n.tr("OK")
                     width: parent.width/2;
                     size: units.gu(5)
+                    buttonColor: sudokuBlocksGrid.dialogButtonColor2
+                    textColor: sudokuBlocksGrid.dialogButtonTextColor
                     onTriggered: {
 
                         if(lastnameField.text!="" && firstnameField.text!="")
@@ -81,6 +83,9 @@ mainView.showAlert(i18n.tr("Warning"), i18n.tr("Lastname and firstname must not 
                     buttonText: i18n.tr("Cancel")
                     width: parent.width/2;
                     size: units.gu(5)
+                    buttonColor: sudokuBlocksGrid.dialogButtonColor1
+                    textColor: sudokuBlocksGrid.dialogButtonTextColor
+                    border.color: "transparent"
                     onTriggered: {
                       PopupUtils.close(addProfileDialogue)
                     }
