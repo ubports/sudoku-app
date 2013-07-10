@@ -693,7 +693,7 @@ MainView {
                         }
                         Label {
                             font.bold: true;
-                            text: "Dinko Osmankovic\nFrédéric Delgado"
+                            text: "Dinko Osmankovic\nFrédéric Delgado\nGeorgi Karavasilev"
                         }
                     }
                     Row {
@@ -703,7 +703,7 @@ MainView {
                         }
                         Label {
                             font.bold: true;
-                            text: "dinko.metalac@gmail.com\nfredoust@gmail.com"
+                            text: "dinko.metalac@gmail.com\nfredoust@gmail.com\nmotoroslav@gmail.com"
                         }
                     }
                     Row {
