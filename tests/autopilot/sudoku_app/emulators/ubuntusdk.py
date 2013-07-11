@@ -101,7 +101,7 @@ class ubuntusdk(object):
         buttonList = toolbar.select_many("ActionItem")
         #old version is ToolbarButton
         if not buttonList:
-            buttonList = toolbar.select_many("ActionItem")
+            buttonList = toolbar.select_many("ToolbarButton")
         for button in buttonList:
             if button.objectName == buttonObject:
                 return button
