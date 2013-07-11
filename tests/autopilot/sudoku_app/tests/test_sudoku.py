@@ -12,7 +12,7 @@ from __future__ import absolute_import
 from autopilot.matchers import Eventually
 from testtools.matchers import Equals
 
-from sudoku_app import SudokuTestCase
+from sudoku_app.tests import SudokuTestCase
 
 
 class TestMainWindow(SudokuTestCase):
