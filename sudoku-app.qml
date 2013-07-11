@@ -306,6 +306,7 @@ MainView {
 
                     SudokuBlocksGrid {
                         id: sudokuBlocksGrid;
+                        objectName: "blockgrid"
                     }
 
                 }
@@ -322,6 +323,7 @@ MainView {
             page: Page {
                 tools: ToolbarItems {
                     ToolbarButton {
+                        objectName: "allusersbutton"
                         action: Action {
                             text: "All\nusers"
                             iconSource: Qt.resolvedUrl("icons/all-users.svg")
@@ -343,6 +345,7 @@ MainView {
                         }
                     }
                     ToolbarButton {
+                        objectName: "currentuserbutton"
                         action: Action {
                             text: "Current\nuser"
                             iconSource: Qt.resolvedUrl("icons/single-user.svg")
@@ -389,6 +392,7 @@ MainView {
                         anchors.fill: parent
                         header: ListItem.Header {
                             id: highscoresHeader
+                            objectName: "highscoreslabel"
                             text: highscoresHeaderText
                         }
                         delegate: ListItem.SingleValue {
