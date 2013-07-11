@@ -20,7 +20,7 @@ class TestMainWindow(SudokuTestCase):
     def setUp(self):
         super(TestMainWindow, self).setUp()
         self.assertThat(
-            self.main_window.get_qml_view().visible, Eventually(Equals(True)))
+            self.ubuntusdk.get_qml_view().visible, Eventually(Equals(True)))
 
     def tearDown(self):
         super(TestMainWindow, self).tearDown()
