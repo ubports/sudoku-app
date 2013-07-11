@@ -63,9 +63,6 @@ class TestMainWindow(SudokuTestCase):
         self.assertThat(dialogButton, NotEquals(None))
         self.pointing_device.click_object(dialogButton)
 
-        #clear the value by pressing clear button
-        self.pointing_device.click_object(dialogButton)
-
         #check the value to ensure it worked
         self.assertThat(buttonValue, Eventually(Equals("")))
 
