@@ -30,8 +30,13 @@ Repeater {
                     buttonsGrid.itemAt(i).buttonColor = defaultNotAllowedColor;
                 }
                 else {
-                    buttonsGrid.itemAt(i).buttonColor = defaultColor;
-                    buttonsGrid.itemAt(currentX).boldText = false;
+                    if(buttonsGrid.itemAt(i).hinted)
+                    {
+                        buttonsGrid.itemAt(i).buttonColor = defaultHintColor;
+                    }else{
+                        buttonsGrid.itemAt(i).buttonColor = defaultColor;
+                        buttonsGrid.itemAt(currentX).boldText = false;
+                    }
                 }
             }
         }
@@ -39,6 +44,9 @@ Repeater {
 
     SudokuButton {
         id: gridButton;
+
+        property bool hinted : false
+
         buttonText: "0";
         //width: units.gu(5);
         //height: units.gu(5);

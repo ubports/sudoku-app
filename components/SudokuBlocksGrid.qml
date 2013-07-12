@@ -85,6 +85,7 @@ Rectangle {
             grid.setValue(hintColumn, hintRow, solution.getValue(hintColumn, hintRow));
             buttonsGrid.itemAt(hintRow*9 + hintColumn).buttonText = solution.getValue(hintColumn, hintRow);
             buttonsGrid.itemAt(hintRow*9 + hintColumn).buttonColor = defaultHintColor;
+            buttonsGrid.itemAt(hintRow*9 + hintColumn).hinted = true;
         }
 
     }
@@ -317,6 +318,7 @@ Rectangle {
                                 grid.setValue(column,row, 0);
                                 buttonsGrid.itemAt(currentX).buttonColor = defaultColor;
                                 buttonsGrid.itemAt(currentX).boldText = false;
+                                 buttonsGrid.itemAt(currentX).hinted = false
                                 buttonsGrid.redrawGrid()
                                 PopupUtils.close(dialogue)
                             }
@@ -342,6 +344,7 @@ Rectangle {
 
                                     onTriggered: {
                                         buttonsGrid.itemAt(currentX).buttonText = index+1
+                                        buttonsGrid.itemAt(currentX).hinted = false
                                         numberOfActions++;
 
                                         var row = Math.floor(currentX/9);
