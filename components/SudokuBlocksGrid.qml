@@ -176,6 +176,7 @@ Rectangle {
                 buttonsGrid.itemAt(i*9 + j).boldText = boldText;
                 buttonsGrid.itemAt(i*9 + j).border.color = defaultBorderColor;
                 buttonsGrid.itemAt(i*9 + j).enabled = true;
+                buttonsGrid.itemAt(i*9 + j).hinted = false;
             }
         }
 
