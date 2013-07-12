@@ -86,3 +86,67 @@ class TestMainWindow(SudokuTestCase):
 
         #check label again
         self.assertThat(label, Eventually(Equals("<b>Best scores for all players</b>")))
+        
+	def test_enter_and_cancel(self):
+        #find the first button that has a blank value
+        gridButtons = self.main_window.get_blank_inputs()
+        gridButton = gridButtons[0]
+
+        #create a value function to check later using id
+        buttonValue = lambda: self.app.select_single("QQuickText",id=gridButton.id).text
+
+        #double check that it's blank
+        self.assertThat(buttonValue, Eventually(Equals("")))
+
+        #click the button
+        self.pointing_device.click_object(gridButton)
+
+        #assert that we can see the input screen
+        inputScreen = lambda: self.main_window.get_number_dialog()
+        self.assertThat(inputScreen, Eventually(NotEquals(None)))
+
+        #set a value, choose 4
+        dialogButton = self.main_window.get_dialog_button("4")
+        self.assertThat(dialogButton, NotEquals(None))
+        self.pointing_device.click_object(dialogButton)
+
+        #check the value to ensure it worked
+        self.assertThat(buttonValue, Eventually(Equals("4")))
+
+        #click the button
+        self.pointing_device.click_object(gridButton)
+
+        #assert that we can see the input screen
+        inputScreen = lambda: self.main_window.get_number_dialog()
+        self.assertThat(inputScreen, Eventually(NotEquals(None)))
+
+        #set a value, choose clear
+        dialogButton = self.main_window.get_dialog_button("Cancel")
+        self.assertThat(dialogButton, NotEquals(None))
+        self.pointing_device.click_object(dialogButton)
+
+        #check the value to ensure it worked
+        self.assertThat(buttonValue, Eventually(Equals("4")))
+        
+	def test_new_game_button(self):
+		self.ubuntusdk.click_toolbar_button("newgamebutton")
+		
+		number_of_hints = lambda: self.app.select_single(objectName="blockgrid").numberOfHints
+		number_of_actions = lambda: self.app.select_single(objectName="blockgrid").numberOfActions
+		game_seconds = lambda: self.app.select_single(objectName="blockgrid").gameSeconds
+				
+		self.assertThat(number_of_hints, Eventually(Equals(0)))
+		self.assertThat(number_of_actions, Eventually(Equals(0)))
+		self.assertThat(game_seconds, Eventually(Equals(0)))
+        
+	def test_hint_button(self):
+		self.ubuntusdk.click_toolbar_button("hintbutton")
+		gridButtons = self.main_window.get_blank_inputs()
+		
+		number_of_hints = lambda: self.app.select_single(objectName="blockgrid").numberOfHints
+		self.assertThat(number_of_hints, Eventually(Equals(1)))
+		
+		
+
+		
+		
