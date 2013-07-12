@@ -38,6 +38,10 @@ class ubuntusdk(object):
         """Get more than one object"""
         return self.app.select_many(typeName, objectName=name)
 
+    def get_tabs(self):
+        """Return all tabs"""
+        return self.app.select_single("Tabs")
+
     def switch_to_tab(self, tab):
         """Switch to the specified tab number"""
         tabs = self.get_tabs()
@@ -46,10 +50,36 @@ class ubuntusdk(object):
         #perform operations until tab == currentTab
         while tab != currentTab:
             if tab > currentTab:
-                self._previous_tab()
-            if tab < currentTab:
                 self._next_tab()
+            if tab < currentTab:
+                self._previous_tab()
             currentTab = tabs.selectedTabIndex
+
+    def _previous_tab(self):
+        """Switch to the previous tab"""
+        qmlView = self.get_qml_view()
+
+        startX = int(qmlView.x + qmlView.width * 0.10)
+        stopX = int(qmlView.x + qmlView.width * 0.35)
+        lineY = int(qmlView.y + qmlView.height * 0.05)
+
+        self.autopilot.pointing_device.drag(startX, lineY, stopX, lineY)
+        self.autopilot.pointing_device.move(startX, lineY)
+        self.autopilot.pointing_device.click()
+        self.autopilot.pointing_device.click()
+
+    def _next_tab(self):
+        """Switch to the next tab"""
+        qmlView = self.get_qml_view()
+
+        startX = int(qmlView.x + qmlView.width * 0.35)
+        stopX = int(qmlView.x + qmlView.width * 0.10)
+        lineY = int(qmlView.y + qmlView.height * 0.05)
+
+        self.autopilot.pointing_device.drag(startX, lineY, stopX, lineY)
+        self.autopilot.pointing_device.move(startX, lineY)
+        self.autopilot.pointing_device.click()
+        self.autopilot.pointing_device.click()
 
     def toggle_toolbar(self):
         """Toggle the toolbar between revealed and hidden"""
@@ -69,6 +99,9 @@ class ubuntusdk(object):
         if not toolbar.opened:
             self.open_toolbar()
         buttonList = toolbar.select_many("ActionItem")
+        #old version is ToolbarButton
+        if not buttonList:
+            buttonList = toolbar.select_many("ToolbarButton")
         for button in buttonList:
             if button.objectName == buttonObject:
                 return button
@@ -122,30 +155,3 @@ class ubuntusdk(object):
             if item.text == value:
                 self.autopilot.pointing_device.click_object(item)
                 return item
-
-    def get_tabs(self):
-        """Return all tabs"""
-        return self.get_object("Tabs", "rootTabs")
-
-    def _previous_tab(self):
-        """Switch to the previous tab"""
-        qmlView = self.get_qml_view()
-
-        startX = int(qmlView.x + qmlView.width * 0.35)
-        stopX = int(qmlView.x + qmlView.width * 0.50)
-        lineY = int(qmlView.y + qmlView.height * 0.05)
-
-        self.autopilot.pointing_device.drag(startX, lineY, stopX, lineY)
-        self.autopilot.pointing_device.click()
-        self.autopilot.pointing_device.click()
-
-    def _next_tab(self):
-        """Switch to the next tab"""
-        qmlView = self.get_qml_view()
-
-        startX = int(qmlView.x + qmlView.width * 0.50)
-        stopX = int(qmlView.x + qmlView.width * 0.35)
-        lineY = int(qmlView.y + qmlView.height * 0.05)
-
-        self.autopilot.pointing_device.drag(startX, lineY, stopX, lineY)
-        self.autopilot.pointing_device.click()

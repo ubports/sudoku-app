@@ -292,6 +292,7 @@ Rectangle {
 
                 Dialog {
                     id: dialogue
+                    objectName: "picknumberscreen"
                     //title: "Number Picker"
                     text: i18n.tr("Please pick a number")
 

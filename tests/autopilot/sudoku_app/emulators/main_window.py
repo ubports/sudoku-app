@@ -15,3 +15,20 @@ class MainWindow(object):
     """
     def __init__(self, app):
         self.app = app
+
+    def get_blank_inputs(self):
+        #generate a list of blank input fields from the game board
+        #SudokuBlocksGrid->..->SudokuButton->QQuickTest->enabled == true
+        inputs = self.app.select_single("SudokuBlocksGrid")
+        blankInputsList = inputs.select_many("QQuickText", enabled=True)
+        return blankInputsList
+
+    def get_dialog_button(self, name):
+        numberdialog = self.get_number_dialog()
+
+        #SudokuDialogButton->QQuickText text =
+        button = numberdialog.select_single("QQuickText",text=name)
+        return button
+
+    def get_number_dialog(self):
+        return self.app.select_single("Dialog", objectName="picknumberscreen")
