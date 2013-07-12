@@ -40,7 +40,6 @@ Rectangle {
 
     // *************************************************
 
-
     ColorSchemeDefault {
         id: colorScheme;
     }
