@@ -18,25 +18,26 @@ Component {
             spacing: units.gu(2)
 
             Rectangle{
-                width: 200
-                height: 32
+                width: mainView.width/3*2
+                height: mainView.height/18
                 radius: 9
                 anchors.horizontalCenter: parent.horizontalCenter
                 TextField {
                     id:lastnameField
                     text: Settings.getUserLastName(editUserId)
+                    anchors.fill: parent
                     placeholderText: i18n.tr("Lastname")
 
                 }
             }
             Rectangle{
-                width: 200
-                height: 32
+                width: mainView.width/3*2
+                height: mainView.height/18
                 radius: 9
                 anchors.horizontalCenter: parent.horizontalCenter
                 TextField {
                     id:firstnameField
-                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.fill: parent
                     placeholderText: i18n.tr("Firstname")
                     text: Settings.getUserFirstName(editUserId)
                 }
@@ -98,7 +99,7 @@ Component {
                             currentUserId = -1
 
 
-                       PopupUtils.close(editProfileDialogue)
+                        PopupUtils.close(editProfileDialogue)
                     }
                 }
             }
