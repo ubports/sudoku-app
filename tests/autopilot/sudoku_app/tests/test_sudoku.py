@@ -129,29 +129,8 @@ class TestMainWindow(SudokuTestCase):
         self.assertThat(buttonValue, Eventually(Equals("4")))
         
 	def test_new_game_button(self):
-		gridButtons = self.main_window.get_blank_inputs()
-        
-        buttonValues = []
-        
-        for gridButton in gridButtons:
-			buttonValue = lambda: self.app.select_single("QQuickText",id=gridButton.id).text
-			buttonValues.append(buttonValue)
-
-        #create a value function to check later using id
-        
 		self.ubuntusdk.click_toolbar_button("newgamebutton")
-		gridButtons = self.main_window.get_blank_inputs()
 		
-		# get new value of the grid button
-        
-        new_gridButtons = self.main_window.get_blank_inputs()
-        
-        new_buttonValues = []
-        
-        for new_gridButton in new_gridButtons:
-			new_buttonValue = lambda: self.app.select_single("QQuickText",id=new_gridButton.id).text
-			new_buttonValues.append(new_buttonValue)
-        
 		number_of_hints = lambda: self.app.select_single(objectName="blockgrid").numberOfHints
 		number_of_actions = lambda: self.app.select_single(objectName="blockgrid").numberOfActions
 		game_seconds = lambda: self.app.select_single(objectName="blockgrid").gameSeconds
@@ -161,33 +140,10 @@ class TestMainWindow(SudokuTestCase):
 		self.assertThat(game_seconds, Eventually(Equals(0)))
         
 	def test_hint_button(self):
-		gridButtons = self.main_window.get_blank_inputs()
-        
-        buttonValues = []
-        
-        for gridButton in gridButtons:
-			buttonValue = lambda: self.app.select_single("QQuickText",id=gridButton.id).text
-			buttonValues.append(buttonValue)
-
-        #create a value function to check later using id
-        
 		self.ubuntusdk.click_toolbar_button("hintbutton")
 		gridButtons = self.main_window.get_blank_inputs()
 		
-		# get new value of the grid button
-        
-        new_gridButtons = self.main_window.get_blank_inputs()
-        
-        new_buttonValues = []
-        
-        count = 0
-        
-        for new_gridButton in new_gridButtons:
-			new_buttonValue = lambda: self.app.select_single("QQuickText",id=new_gridButton.id).text
-			new_buttonValues.append(new_buttonValue)
-			
 		number_of_hints = lambda: self.app.select_single(objectName="blockgrid").numberOfHints
-				
 		self.assertThat(number_of_hints, Eventually(Equals(1)))
 		
 		
