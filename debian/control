@@ -21,3 +21,11 @@ Depends: ${misc:Depends},
          qtdeclarative5-xmllistmodel-plugin,
 Description: Sudoku game for Ubuntu devices
  Simple Sudoku Touch game written in QML2/JS using Ubuntu SDK
+
+Package: sudoku-app-autopilot
+Architecture: all
+Depends: libautopilot-qt,
+         libqt5test5,
+         sudoku-app (= ${source:Version})
+Description: Autopilot UI tests for sudoku game for Ubuntu devices
+ This package contains the autopilot tests for the Sudoku App
