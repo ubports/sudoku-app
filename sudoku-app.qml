@@ -685,6 +685,7 @@ MainView {
                     anchors.horizontalCenter: parent.horizontalCenter;
                     y: units.gu(8);
                     Image {
+                        objectName: "aboutImage"
                         property real maxWidth: units.gu(100)
                         anchors.horizontalCenter: parent.horizontalCenter
                         width: Math.min(mainView.width, maxWidth)/1.75
@@ -698,20 +699,24 @@ MainView {
                         //anchors.horizontalCenter: parent.horizontalCenter;
                         anchors.left: aboutColumn.left
                         Label {
+                            objectName: "authorLabel"
                             text: i18n.tr("Author(s): ")
                             anchors.left: aboutColumn.left
                         }
                         Label {
+                            objectName: "authors"
                             font.bold: true;
-                            text: "Dinko Osmankovic\nFrédéric Delgado\nGeorgi Karavasilev"
+                            text: "Dinko Osmankovic\nFr\u00e9d\u00e9ric Delgado\nGeorgi Karavasilev"
                         }
                     }
                     Row {
                         anchors.horizontalCenter: parent.horizontalCenter;
                         Label {
+                            objectName: "contactLabel"
                             text: i18n.tr("Contact: ")
                         }
                         Label {
+                            objectName: "contacts"
                             font.bold: true;
                             text: "dinko.metalac@gmail.com\nfredoust@gmail.com\nmotoroslav@gmail.com"
                         }
@@ -720,6 +725,7 @@ MainView {
                         id: homepage;
                         anchors.horizontalCenter: parent.horizontalCenter;
                         Label {
+                            objectName: "urlLabel"
                             font.bold: true;
                             text: "<a href=\"https://launchpad.net/sudoku-app\">https://launchpad.net/sudoku-app</a>"
                             onLinkActivated: Qt.openUrlExternally(link)
@@ -731,9 +737,11 @@ MainView {
                     anchors.top: aboutColumn.bottom;
                     anchors.topMargin: units.gu(5);
                     Label {
+                        objectName: "versionLabel"
                         text: i18n.tr("Version: ")
                     }
                     Label {
+                        objectName: "version"
                         font.bold: true;
                         text: "0.4"
                     }
@@ -743,6 +751,7 @@ MainView {
                     anchors.top: aboutColumn.bottom;
                     anchors.topMargin: units.gu(8);
                     Label {
+                        objectName: "yearLabel"
                         font.bold: true;
                         text: "2013"
                     }

@@ -145,8 +145,51 @@ class TestMainWindow(SudokuTestCase):
 		
 		number_of_hints = lambda: self.app.select_single(objectName="blockgrid").numberOfHints
 		self.assertThat(number_of_hints, Eventually(Equals(1)))
-		
-		
 
-		
+    def test_about_tab(self):
+        #Switch to the 'About' tab
+        self.ubuntusdk.switch_to_tab(3)
+
+        #Check for'About' tab selection
+        tabName = lambda: self.ubuntusdk.get_object("Tab", "aboutTab")
+        self.assertThat(tabName, Eventually(NotEquals(None)))
+
+        #Check image loads
+        aboutImage = lambda: self.ubuntusdk.get_object("QQuickImage", "aboutImage").progress
+        self.assertThat(aboutImage, Eventually(Equals(1.0)))
+
+        #Check the 'Author(s):' label is displayed
+        aboutLabel = lambda: self.ubuntusdk.get_object("Label", "authorLabel").text
+        self.assertThat(aboutLabel, Eventually(Equals("Author(s): ")))
+
+        #Check correct authors are displayed
+        authors = lambda: self.ubuntusdk.get_object("Label", "authors").text
+        self.assertThat(authors, Eventually(Equals("Dinko Osmankovic\nFr\u00e9d\u00e9ric Delgado\nGeorgi Karavasilev")))
+
+        #Check the 'Contact:' label is displayed
+        contactLabel = lambda: self.ubuntusdk.get_object("Label", "contactLabel").text
+        self.assertThat(contactLabel, Eventually(Equals("Contact: ")))
+
+        #Check correct contact details are displayed
+        contacts = lambda: self.ubuntusdk.get_object("Label", "contacts").text
+        self.assertThat(contacts, Eventually(Equals("dinko.metalac@gmail.com\nfredoust@gmail.com\nmotoroslav@gmail.com")))
+
+        #Check correct Launchpad URL: is displayed
+        urlLabel = lambda: self.ubuntusdk.get_object("Label", "urlLabel").text
+        self.assertThat(urlLabel, Eventually(Equals("<a href=\"https://launchpad.net/sudoku-app\">https://launchpad.net/sudoku-app</a>")))
+
+        #Check the 'Version:' label is displayed
+        versionLabel = lambda: self.ubuntusdk.get_object("Label", "versionLabel").text
+        self.assertThat(versionLabel, Eventually(Equals("Version: ")))
+
+        #Check correct version is displayed
+        version = lambda: self.ubuntusdk.get_object("Label", "version").text
+        self.assertThat(version, Eventually(Equals("0.4")))
+
+        #Check correct year is displayed
+        yearLabel = lambda: self.ubuntusdk.get_object("Label", "yearLabel").text
+        self.assertThat(yearLabel, Eventually(Equals("2013")))
+        
+
+        
 		
