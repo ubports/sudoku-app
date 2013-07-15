@@ -20,7 +20,7 @@ Component {
             Rectangle{
                 width: mainView.width/3*2
                 height: mainView.height/18
-                radius: 9
+                radius: units.gu(1)
                 anchors.horizontalCenter: parent.horizontalCenter
                 TextField {
                     id:lastnameField
@@ -33,7 +33,7 @@ Component {
             Rectangle{
                 width: mainView.width/3*2
                 height: mainView.height/18
-                radius: 9
+                radius: units.gu(1)
                 anchors.horizontalCenter: parent.horizontalCenter
                 TextField {
                     id:firstnameField
