@@ -311,6 +311,7 @@ MainView {
                     SudokuBlocksGrid {
                         id: sudokuBlocksGrid;
                         objectName: "blockgrid"
+
                     }
 
                 }
@@ -391,9 +392,12 @@ MainView {
                 }
                 Column {
                     anchors.fill: parent
+                    clip: true
                     ListView {
                         model: highscoresModel
-                        anchors.fill: parent
+                        width: parent.width
+                        height:parent.height
+
                         header: ListItem.Header {
                             id: highscoresHeader
                             objectName: "highscoreslabel"
@@ -699,7 +703,7 @@ MainView {
                         anchors.left: aboutColumn.left
                         Label {
                             text: i18n.tr("Author(s): ")
-                            anchors.left: aboutColumn.left
+
                         }
                         Label {
                             font.bold: true;

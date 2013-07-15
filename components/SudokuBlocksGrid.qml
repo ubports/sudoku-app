@@ -276,17 +276,19 @@ Rectangle {
 
     }
 
-    Column {
+    Item {
         //anchors.fill: mainRectangle.parent;
         y: 3
 
-        Grid {
-            x: 3
-            y: 0
+        Item {
+
+           // x: 3
+           // y: 0
             //anchors.horizontalCenter: parent.parent.horizontalCenter;
-            rows: 9;
-            columns: 9;
-            spacing: units.dp(1);
+          //  rows: 9;
+          //  columns: 9;
+          //  spacing: units.dp(1);
+
 
             Component {
                 id: dialog
@@ -353,17 +355,7 @@ Rectangle {
 
                                         //print (row, column)
                                         grid.setValue(column, row, index+1);
-                                        /*
-                                        //print(grid)
-                                        var testField = grid.cellConflicts(column,row)
-                                        //print (testField)
-                                        if (testField == true)
-                                            buttonsGrid.itemAt(currentX).buttonColor = defaultNotAllowedColor;
-                                        else {
-                                            buttonsGrid.itemAt(currentX).buttonColor = defaultColor;
-                                            buttonsGrid.itemAt(currentX).boldText = false;
-                                        }
-                                        */
+
                                         buttonsGrid.redrawGrid()
 
                                         PopupUtils.close(dialogue)
@@ -399,6 +391,7 @@ Rectangle {
                             }
                         }
 
+
                         SudokuDialogButton{
                             buttonText: i18n.tr("Cancel")
                             width: mainView.pageWidth*2/3;
@@ -418,14 +411,20 @@ Rectangle {
                 }
             }
 
+
+
+
             SudokuButtonsGrid {
                 id:buttonsGrid;
-                anchors.horizontalCenter: parent.horizontalCenter
             }
+
+
+
         }
     }
 
     Row {
+
         id: informationRow;
         y: 7*mainView.pageHeight/10;
         x: units.dp(8);

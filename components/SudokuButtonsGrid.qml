@@ -6,9 +6,11 @@ import Ubuntu.Components.Popups 0.1
 
 
 Repeater {
+
     id: buttonsGrid;
     model: 81
     objectName: "buttonsGrid";
+    x :3* -mainView.blockDistance
 
     function redrawGrid()
     {
@@ -42,6 +44,8 @@ Repeater {
         }
     }
 
+
+
     SudokuButton {
         id: gridButton;
 
@@ -55,10 +59,13 @@ Repeater {
         //border.width: 0
         border.color: defaultBorderColor
         textColor: defaultTextColor;
-        anchors.left: ((index - (Math.floor(index / 9) * 9)) > 0) ? buttonsGrid.itemAt(index-1).right : mainView.left
-        anchors.leftMargin: ((index - (Math.floor(index / 9) * 9))%3 == 0) ? 4*mainView.blockDistance : mainView.blockDistance
 
-        anchors.top: (Math.floor(index / 9) > 0) ? buttonsGrid.itemAt(index-9).bottom : mainView.top
+
+
+        anchors.left:  ((index - (Math.floor(index / 9) * 9)) > 0) ? buttonsGrid.itemAt(index-1).right : buttonsGrid.left//((index - (Math.floor(index / 9) * 9)) > 0) ? buttonsGrid.itemAt(index-1).right : mainView.left
+        anchors.leftMargin:   ((index - (Math.floor(index / 9) * 9))%3 == 0) ? 4*mainView.blockDistance : mainView.blockDistance
+
+        anchors.top: (Math.floor(index / 9) > 0) ? buttonsGrid.itemAt(index-9).bottom : buttonsGrid.top //(Math.floor(index / 9) > 0) ? buttonsGrid.itemAt(index-9).bottom : mainView.top
         anchors.topMargin: (Math.floor(index / 9)%3 == 0) ? 4*mainView.blockDistance : mainView.blockDistance
         MouseArea {
             id: buttonMouseArea2
