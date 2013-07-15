@@ -1,113 +1,113 @@
-# French translation for sudokutouchgame
+# Telugu translation for sudoku-app
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
-# This file is distributed under the same license as the sudokutouchgame package.
+# This file is distributed under the same license as the sudoku-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sudokutouchgame\n"
+"Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-17 11:14+0200\n"
-"PO-Revision-Date: 2013-07-12 17:19+0000\n"
-"Last-Translator: Pa2squale <pmaugendre@gmail.com>\n"
-"Language-Team: French <fr@li.org>\n"
+"PO-Revision-Date: 2013-07-13 18:16+0000\n"
+"Last-Translator: tuxnani(రహ్మానుద్దీన్ షేక్) <Unknown>\n"
+"Language-Team: Telugu <te@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-13 06:36+0000\n"
+"X-Launchpad-Export-Date: 2013-07-14 06:00+0000\n"
 "X-Generator: Launchpad (build 16696)\n"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:254
 msgid "Please pick a number"
-msgstr "Veuillez choisir un chiffre"
+msgstr "దయచేసి ఒక అంకెను ఎంచుకోండి"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:262
 msgid "Clear"
-msgstr "Effacer"
+msgstr "చెరుపు"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:457
 msgid "Not allowed"
-msgstr "Interdit"
+msgstr "అనుమతి లేదు"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:481
 msgid "Start blocks"
-msgstr "Cases de départ"
+msgstr "బ్లాక్స్ ను మొదలుపెట్టండి"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:503
 msgid "Hinted blocks"
-msgstr "Cases à indice"
+msgstr "జాడలున్న బ్లాకులు"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:96
 msgid "Sudoku"
-msgstr "Sudoku"
+msgstr "సుడోకు"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:148
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:196
 msgid "You are a cheat..."
-msgstr "Vous êtes un tricheur..."
+msgstr "మీరు మోసగాడు..."
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:148
 msgid "Congratulations!"
-msgstr "Félicitations !"
+msgstr "అభినందనలు!"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:159
 msgid "New game"
-msgstr "Nouvelle partie"
+msgstr "కొత్త ఆట"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:189
 msgid "Show hint"
-msgstr "Conseil"
+msgstr "జాడను చూపించు"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:203
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:237
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:357
 msgid "Close"
-msgstr "Fermer"
+msgstr "మూసివేయి"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:231
 msgid "Settings"
-msgstr "Paramètres"
+msgstr "అమరికలు"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:250
 msgid "SudokuTouch settings"
-msgstr "Paramètres de SudokuTouch"
+msgstr "సుడోకుటచ్ అమరికలు"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:257
 msgid "Difficulty"
-msgstr "Difficulté"
+msgstr "కష్ట స్థాయి"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Easy"
-msgstr "Facile"
+msgstr "తేలిక"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Moderate"
-msgstr "Moyen"
+msgstr "మధ్యస్థం"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Hard"
-msgstr "Difficile"
+msgstr "కష్టమైన"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Ultra Hard"
-msgstr "Très difficile"
+msgstr "పూర్తి కష్టం"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:294
 msgid "Theme"
-msgstr "Thème"
+msgstr "అలంకారం"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:351
 msgid "About"
-msgstr "À propos"
+msgstr "గురించి"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:383
 msgid "Author: "
-msgstr "Auteur : "
+msgstr "రచయిత "
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:393
 msgid "Contact: "
-msgstr "Contact : "
+msgstr "పరిచయం: "
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:414
 msgid "Version: "
-msgstr "Version : "
+msgstr "వివరణము: "

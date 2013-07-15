@@ -18,25 +18,25 @@ Component {
             spacing: units.gu(2)
 
             Rectangle{
-                width: units.gu(25)
-                height: units.gu(4)
+                width: mainView.width/3*2
+                height: mainView.height/18
                 radius: 9
                 anchors.horizontalCenter: parent.horizontalCenter
                 TextField {
                     id:lastnameField
-
+                    anchors.fill: parent
                     placeholderText: i18n.tr("Lastname")
 
                 }
             }
             Rectangle{
-                width: units.gu(25)
-                height: units.gu(4)
+                width: mainView.width/3*2
+                height: mainView.height/18
                 radius: 9
                 anchors.horizontalCenter: parent.horizontalCenter
                 TextField {
                     id:firstnameField
-                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.fill: parent
                     placeholderText: i18n.tr("Firstname")
                 }
             }
@@ -62,14 +62,14 @@ Component {
                             {
 
                                 Settings.insertProfile(lastnameField.text, firstnameField.text);
-                               PopupUtils.close(addProfileDialogue)
+                                PopupUtils.close(addProfileDialogue)
                             }else{
                                 mainView.showAlert(i18n.tr("Warning"), i18n.tr("User already exist."), okButton)
                             }
 
 
                         } else{
-mainView.showAlert(i18n.tr("Warning"), i18n.tr("Lastname and firstname must not be empty."), okButton)
+                            mainView.showAlert(i18n.tr("Warning"), i18n.tr("Lastname and firstname must not be empty."), okButton)
                         }
 
 
@@ -87,7 +87,7 @@ mainView.showAlert(i18n.tr("Warning"), i18n.tr("Lastname and firstname must not 
                     textColor: sudokuBlocksGrid.dialogButtonTextColor
                     border.color: "transparent"
                     onTriggered: {
-                      PopupUtils.close(addProfileDialogue)
+                        PopupUtils.close(addProfileDialogue)
                     }
                 }
             }

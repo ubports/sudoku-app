@@ -216,71 +216,77 @@ MainView {
 
             page: Page {
 
-                tools: ToolbarActions {
-                    Action {
-                        text: i18n.tr("New game");
-                        iconSource: Qt.resolvedUrl("icons/new_game_ubuntu.svg")
-                        onTriggered: {
-                            //print("new block distance:", blockDistance);
-                            switch(difficultySelector.selectedIndex) {
-                            case 0:
-                                var randomnumber = Math.floor(Math.random()*9);
-                                randomnumber += 31;
-                                sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                                break;
-                            case 1:
-                                var randomnumber = Math.floor(Math.random()*4);
-                                randomnumber += 26;
-                                sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                                break;
-                            case 2:
-                                var randomnumber = Math.floor(Math.random()*4);
-                                randomnumber += 21;
-                                sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                                break;
-                            case 3:
-                                var randomnumber = Math.floor(Math.random()*3);
-                                randomnumber += 17;
-                                sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                                break;
+                tools: ToolbarItems {
+                    ToolbarButton {
+                        objectName: "newgamebutton"
+                        action: Action {
+                            text: i18n.tr("New game");
+                            iconSource: Qt.resolvedUrl("icons/new_game_ubuntu.svg")
+                            onTriggered: {
+                                //print("new block distance:", blockDistance);
+                                switch(difficultySelector.selectedIndex) {
+                                case 0:
+                                    var randomnumber = Math.floor(Math.random()*9);
+                                    randomnumber += 31;
+                                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                                    break;
+                                case 1:
+                                    var randomnumber = Math.floor(Math.random()*4);
+                                    randomnumber += 26;
+                                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                                    break;
+                                case 2:
+                                    var randomnumber = Math.floor(Math.random()*4);
+                                    randomnumber += 21;
+                                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                                    break;
+                                case 3:
+                                    var randomnumber = Math.floor(Math.random()*3);
+                                    randomnumber += 17;
+                                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                                    break;
+                                }
                             }
                         }
                     }
-                    Action {
-                        iconSource: Qt.resolvedUrl("icons/hint.svg")
-                        text: i18n.tr("Show hint");
-                        enabled: disableHints.checked;
-                        onTriggered: {
-                            if(enabled)
-                            {
-                                sudokuBlocksGrid.revealHint();
-                                sudokuBlocksGrid.checkIfCheating = true;
-                                if (sudokuBlocksGrid.checkIfGameFinished()) {
-                                    gameFinishedRectangle.visible = true;
-                                    Settings.insertNewScore(currentUserId, sudokuBlocksGrid.calculateScore())
-                                    gameFinishedText.text = i18n.tr("You are a cheat... \nBut we give you\n")
-                                            + sudokuBlocksGrid.calculateScore()
-                                            + " " + i18n.tr("points.")
+                    ToolbarButton {
+                        objectName: "hintbutton"
+                        action: Action {
+                            iconSource: Qt.resolvedUrl("icons/hint.svg")
+                            text: i18n.tr("Show hint");
+                            enabled: disableHints.checked;
+                            onTriggered: {
+                                if(enabled)
+                                {
+                                    sudokuBlocksGrid.revealHint();
+                                    sudokuBlocksGrid.checkIfCheating = true;
+                                    if (sudokuBlocksGrid.checkIfGameFinished()) {
+                                        gameFinishedRectangle.visible = true;
+                                        Settings.insertNewScore(currentUserId, sudokuBlocksGrid.calculateScore())
+                                        gameFinishedText.text = i18n.tr("You are a cheat... \nBut we give you\n")
+                                                + sudokuBlocksGrid.calculateScore()
+                                                + " " + i18n.tr("points.")
 
-                                    print (sudokuBlocksGrid.numberOfActions)
-                                    print (sudokuBlocksGrid.numberOfHints)
-                                    print (sudokuBlocksGrid.gameSeconds)
-                                    print (sudokuBlocksGrid.gameDifficulty)
-                                    var allScores = Settings.getAllScores()
-                                    highscoresModel.clear();
-                                    highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
-                                    for(var i = 0; i < allScores.length; i++) {
-                                        var rowItem = allScores[i];
-                                        //(print("ROW ",rowItem)
-                                        var firstName = Settings.getUserFirstName(rowItem[0]);
-                                        var lastName = Settings.getUserLastName(rowItem[0]);
-                                        //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
-                                        highscoresModel.append({'firstname': firstName,
-                                                                   'lastname':  lastName,
-                                                                   'score': rowItem[1] });
+                                        print (sudokuBlocksGrid.numberOfActions)
+                                        print (sudokuBlocksGrid.numberOfHints)
+                                        print (sudokuBlocksGrid.gameSeconds)
+                                        print (sudokuBlocksGrid.gameDifficulty)
+                                        var allScores = Settings.getAllScores()
+                                        highscoresModel.clear();
+                                        highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
+                                        for(var i = 0; i < allScores.length; i++) {
+                                            var rowItem = allScores[i];
+                                            //(print("ROW ",rowItem)
+                                            var firstName = Settings.getUserFirstName(rowItem[0]);
+                                            var lastName = Settings.getUserLastName(rowItem[0]);
+                                            //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
+                                            highscoresModel.append({'firstname': firstName,
+                                                                       'lastname':  lastName,
+                                                                       'score': rowItem[1] });
+                                        }
+
+                                        winTimer.restart();
                                     }
-
-                                    winTimer.restart();
                                 }
                             }
                         }
@@ -304,6 +310,7 @@ MainView {
 
                     SudokuBlocksGrid {
                         id: sudokuBlocksGrid;
+                        objectName: "blockgrid"
                     }
 
                 }
@@ -320,6 +327,7 @@ MainView {
             page: Page {
                 tools: ToolbarItems {
                     ToolbarButton {
+                        objectName: "allusersbutton"
                         action: Action {
                             text: "All\nusers"
                             iconSource: Qt.resolvedUrl("icons/all-users.svg")
@@ -341,6 +349,7 @@ MainView {
                         }
                     }
                     ToolbarButton {
+                        objectName: "currentuserbutton"
                         action: Action {
                             text: "Current\nuser"
                             iconSource: Qt.resolvedUrl("icons/single-user.svg")
@@ -387,6 +396,7 @@ MainView {
                         anchors.fill: parent
                         header: ListItem.Header {
                             id: highscoresHeader
+                            objectName: "highscoreslabel"
                             text: highscoresHeaderText
                         }
                         delegate: ListItem.SingleValue {
@@ -476,26 +486,26 @@ MainView {
 
 
 
-                                ListView {
-                                    id: manageProfileListView
-                                    clip: true
-                                    width: parent.width
-                                  height: mainColumnSettings.height
-                                    model: profilesModel
+                            ListView {
+                                id: manageProfileListView
+                                clip: true
+                                width: parent.width
+                                height: mainColumnSettings.height
+                                model: profilesModel
 
-                                    delegate:
+                                delegate:
 
-                                        ListItem.Standard {
+                                    ListItem.Standard {
 
-                                            text: firstname + " " + lastname
+                                    text: firstname + " " + lastname
 
-                                            progression: true
-                                            onTriggered: {
-                                                hide()
-                                                editUserId = profileId
-                                                PopupUtils.open(manageProfileDialog, selectorProfile)
-                                            }
-                                        }
+                                    progression: true
+                                    onTriggered: {
+                                        hide()
+                                        editUserId = profileId
+                                        PopupUtils.open(manageProfileDialog, selectorProfile)
+                                    }
+                                }
 
 
 
@@ -693,7 +703,7 @@ MainView {
                         }
                         Label {
                             font.bold: true;
-                            text: "Dinko Osmankovic\nFrédéric Delgado"
+                            text: "Dinko Osmankovic\nFrédéric Delgado\nGeorgi Karavasilev"
                         }
                     }
                     Row {
@@ -703,7 +713,7 @@ MainView {
                         }
                         Label {
                             font.bold: true;
-                            text: "dinko.metalac@gmail.com\nfredoust@gmail.com"
+                            text: "dinko.metalac@gmail.com\nfredoust@gmail.com\nmotoroslav@gmail.com"
                         }
                     }
                     Row {
