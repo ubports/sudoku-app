@@ -31,4 +31,13 @@ class MainWindow(object):
         return button
 
     def get_number_dialog(self):
-        return self.app.select_single("Dialog", objectName="picknumberscreen")
+        return self.app.select_single("Dialog", objectNme="picknumberscreen")
+
+    def get_hints_switch(self):
+        return self.app.select_single("CheckBox", objectName="hintsSwitch")
+
+    #for clicking on this works on the previous one (get_hints_switch) doesn't(but the previous
+    #has the clicked property so I am using both
+    def get_hints_switchClickable(self):
+        return self.app.select_single("Standard", objectName="hintsSwitchClickable")
+

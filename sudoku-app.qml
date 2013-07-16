@@ -587,9 +587,11 @@ MainView {
                     }
 
                     ListItem.Standard {
+                        objectName: "hintsSwitchClickable"
                         text: i18n.tr("Hints")
                         width: parent.width
                         control: Switch {
+                            objectName: "hintsSwitch"
                             id: disableHints
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: parent.verticalCenter
