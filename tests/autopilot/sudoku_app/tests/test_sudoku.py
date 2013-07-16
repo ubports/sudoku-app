@@ -140,12 +140,8 @@ class TestMainWindow(SudokuTestCase):
         self.assertThat(game_seconds, Eventually(Equals(0)))
 
     def test_hint_button(self):
-        #click on settings tab so to enable the hints button
-        self.ubuntusdk.switch_to_tab(2)
-
-        #verify settings tab is open
-        tabName = lambda: self.ubuntusdk.get_object("Tab","settingsTab")
-        self.assertThat(tabName, Eventually(NotEquals(None)))
+        #open settings tab
+        self.open_and_check_settings_tab()
 
         #click on hints switch to enalbe hints toolbar button
         hintsSwitchClickable = self.main_window.get_hints_switchClickable()
@@ -174,7 +170,11 @@ class TestMainWindow(SudokuTestCase):
         number_of_hints = lambda: self.app.select_single(objectName="blockgrid").numberOfHints
         self.assertThat(number_of_hints, Eventually(Equals(1)))
 
+    def open_and_check_settings_tab(self):
+        #click on settings tab so to enable the hints button
+        self.ubuntusdk.switch_to_tab(2)
 
-
-
+        #verify settings tab is open
+        tabName = lambda: self.ubuntusdk.get_object("Tab","settingsTab")
+        self.assertThat(tabName, Eventually(NotEquals(None)))
 

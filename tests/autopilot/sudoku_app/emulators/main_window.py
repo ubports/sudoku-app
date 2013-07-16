@@ -41,3 +41,6 @@ class MainWindow(object):
     def get_hints_switchClickable(self):
         return self.app.select_single("Standard", objectName="hintsSwitchClickable")
 
+
+
+
