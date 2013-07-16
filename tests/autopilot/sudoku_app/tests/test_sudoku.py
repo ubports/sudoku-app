@@ -162,21 +162,14 @@ class TestMainWindow(SudokuTestCase):
         aboutLabel = lambda: self.ubuntusdk.get_object("Label", "authorLabel").text
         self.assertThat(aboutLabel, Eventually(Equals("Author(s): ")))
 
-        #Check correct authors are displayed
-        authors = lambda: self.ubuntusdk.get_object("Label", "authors").text
-        self.assertThat(authors, Eventually(Equals("Dinko Osmankovic\nFr\u00e9d\u00e9ric Delgado\nGeorgi Karavasilev")))
-
         #Check the 'Contact:' label is displayed
         contactLabel = lambda: self.ubuntusdk.get_object("Label", "contactLabel").text
         self.assertThat(contactLabel, Eventually(Equals("Contact: ")))
 
-        #Check correct contact details are displayed
-        contacts = lambda: self.ubuntusdk.get_object("Label", "contacts").text
-        self.assertThat(contacts, Eventually(Equals("dinko.metalac@gmail.com\nfredoust@gmail.com\nmotoroslav@gmail.com")))
-
         #Check correct Launchpad URL: is displayed
         urlLabel = lambda: self.ubuntusdk.get_object("Label", "urlLabel").text
-        self.assertThat(urlLabel, Eventually(Equals("<a href=\"https://launchpad.net/sudoku-app\">https://launchpad.net/sudoku-app</a>")))
+        self.assertThat(urlLabel, Eventually(Equals(
+            "<a href=\"https://launchpad.net/sudoku-app\">https://launchpad.net/sudoku-app</a>")))
 
         #Check the 'Version:' label is displayed
         versionLabel = lambda: self.ubuntusdk.get_object("Label", "versionLabel").text

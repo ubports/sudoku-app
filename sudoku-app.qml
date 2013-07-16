@@ -718,7 +718,7 @@ MainView {
                         Label {
                             objectName: "contacts"
                             font.bold: true;
-                            text: "dinko.metalac@gmail.com\nfredoust@gmail.com\nmotoroslav@gmail.com"
+                            text: "Dinko Osmankovic\nFrédéric Delgado\nGeorgi Karavasilev"
                         }
                     }
                     Row {
