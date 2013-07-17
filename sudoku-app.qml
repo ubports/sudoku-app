@@ -223,6 +223,7 @@ MainView {
                             text: i18n.tr("New game");
                             iconSource: Qt.resolvedUrl("icons/new_game_ubuntu.svg")
                             onTriggered: {
+                                if(gameFinishedRectangle.visible) gameFinishedRectangle.visible = false;
                                 //print("new block distance:", blockDistance);
                                 switch(difficultySelector.selectedIndex) {
                                 case 0:
