@@ -529,6 +529,7 @@ MainView {
                     }
 
                     ListItem.ValueSelector {
+                        objectName: "difficultySelector"
                         id: difficultySelector
                         text: i18n.tr("Difficulty")
                         values: [i18n.tr("Easy"), i18n.tr("Moderate"), i18n.tr("Hard"), i18n.tr("Ultra Hard")]

@@ -36,11 +36,18 @@ class MainWindow(object):
     def get_hints_switch(self):
         return self.app.select_single("CheckBox", objectName="hintsSwitch")
 
-    #for clicking on this works on the previous one (get_hints_switch) doesn't(but the previous
+    #clicking on this works instead on  the previous one (get_hints_switch) it doesn't(but the previous
     #has the clicked property so I am using both
     def get_hints_switchClickable(self):
         return self.app.select_single("Standard", objectName="hintsSwitchClickable")
 
+    def get_difficulty_selector(self):
+        return self.app.select_single("ValueSelector", objectName="difficultySelector")
+
+    def get_difficulty_selector_labelvisual(self):
+        labelvisual = self.get_difficulty_selector()
+        labelvisualList = labelvisual.select_many("LabelVisual", text="Easy")
+        return labelvisualList
 
 
 
