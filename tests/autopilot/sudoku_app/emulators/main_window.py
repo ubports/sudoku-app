@@ -31,7 +31,7 @@ class MainWindow(object):
         return button
 
     def get_number_dialog(self):
-        return self.app.select_single("Dialog", objectNme="picknumberscreen")
+        return self.app.select_single("Dialog", objectName="picknumberscreen")
 
     def get_hints_switch(self):
         return self.app.select_single("CheckBox", objectName="hintsSwitch")
