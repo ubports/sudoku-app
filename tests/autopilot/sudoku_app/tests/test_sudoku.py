@@ -14,7 +14,6 @@ from testtools.matchers import Equals, Contains, NotEquals
 
 from sudoku_app.tests import SudokuTestCase
 
-
 class TestMainWindow(SudokuTestCase):
 
     def setUp(self):
@@ -169,6 +168,79 @@ class TestMainWindow(SudokuTestCase):
 
         number_of_hints = lambda: self.app.select_single(objectName="blockgrid").numberOfHints
         self.assertThat(number_of_hints, Eventually(Equals(1)))
+
+    def test_settings_tab(self):
+        #open settings tab
+        self.open_and_check_settings_tab()
+
+        #********check difficulty selector ********
+        #click on difficulty selector
+        difficultySelector = self.main_window.get_difficulty_selector()
+        lambda: self.assertThat(difficultySelector.text, Eventually(Equals("Difficulty")))
+        self.pointing_device.click_object(difficultySelector)
+
+        #select "Moderate" choice of difficulty selector
+        difficultyChoices = self.main_window.get_difficulty_selector_labelvisual()
+        difficultyChoice = difficultyChoices[3]
+        self.assertThat(difficultyChoice.text, Eventually(Equals("Moderate")))
+
+        self.pointing_device.click_object(difficultyChoice)
+
+        #********check theme selector ********
+        #click on theme selector
+        themeSelector = self.main_window.get_theme_selector()
+        lambda: self.assertThat(themeSelector.text, Eventually(Equals("Theme")))
+        self.pointing_device.click_object(themeSelector)
+
+       #select "Simple" choice of theme selector
+        themeChoices = self.main_window.get_theme_selector_labelvisual()
+        themeChoice = themeChoices[3]
+        self.assertThat(themeChoice.text, Eventually(Equals("Simple")))
+
+        self.pointing_device.click_object(themeChoice)
+
+        #******** check hint switch  ********
+        #select hints switch
+        hintsSwitchClickable = self.main_window.get_hints_switchClickable()
+        lambda: self.assertThat(hintsSwitchClickable.text, Eventually(Equals("Hints")))
+        hintsSwitch = self.main_window.get_hints_switch()
+        lambda: self.assertThat(hintsSwitch.id, Eventually(Equals("disableHints")))
+
+        #switch it on or off depending on it's state
+        if hintsSwitch.checked == False:
+           self.pointing_device.click_object(hintsSwitchClickable)
+           self.assertThat(hintsSwitch.checked, Eventually(Equals(True)))
+        else:
+           self.pointing_device.click_object(hintsSwitchClickable)
+           self.assertThat(hintsSwitch.checked, Eventually(Equals(False)))
+
+        #******** check profile settings ********
+        #select current profile
+        currentProfile = self.main_window.get_current_profile()
+        lambda: self.assertThat(currentProfile.text, Eventually(Equals("Current profile")))
+        self.pointing_device.click_object(currentProfile)
+
+        #let's change profile
+        #verify select profile page opens
+        profilePage = self.main_window.get_select_profile_sheet()
+        lambda: self.assertThat(profilePage.title, Eventually(Equals("Select profile")))
+
+        #select "sudoku user" profile
+        sudokuUserProfile = self.main_window.get_sudoku_user_profile()
+        lambda: self.assertThat(sudokuUserProfile, Eventually(Equals("Sudoku User")))
+
+        #click on close button
+        profileCloseButton = self.main_window.get_user_profile_close_button()
+        lambda: self.assertThat(profileCloseButton.text, Eventually(Equals("close")))
+        self.pointing_device.click_object(profileCloseButton)
+
+        #verify changed profile
+        currentProfile = self.main_window.get_current_profile()
+        lambda: self.assertThat(currentProfile.value, Eventually(Equals("Sudoku User")))
+
+        #let's add a user profile
+
+
 
     def open_and_check_settings_tab(self):
         #click on settings tab so to enable the hints button
