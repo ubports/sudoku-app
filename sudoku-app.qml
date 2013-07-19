@@ -533,6 +533,7 @@ MainView {
                     }
 
                     ListItem.ValueSelector {
+                        objectName: "difficultySelector"
                         id: difficultySelector
                         text: i18n.tr("Difficulty")
                         values: [i18n.tr("Easy"), i18n.tr("Moderate"), i18n.tr("Hard"), i18n.tr("Ultra Hard")]
@@ -591,9 +592,11 @@ MainView {
                     }
 
                     ListItem.Standard {
+                        objectName: "hintsSwitchClickable"
                         text: i18n.tr("Hints")
                         width: parent.width
                         control: Switch {
+                            objectName: "hintsSwitch"
                             id: disableHints
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: parent.verticalCenter

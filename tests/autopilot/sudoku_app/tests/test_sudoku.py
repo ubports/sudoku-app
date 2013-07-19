@@ -86,8 +86,8 @@ class TestMainWindow(SudokuTestCase):
 
         #check label again
         self.assertThat(label, Eventually(Equals("<b>Best scores for all players</b>")))
-        
-	def test_enter_and_cancel(self):
+
+    def test_enter_and_cancel(self):
         #find the first button that has a blank value
         gridButtons = self.main_window.get_blank_inputs()
         gridButton = gridButtons[0]
@@ -127,6 +127,7 @@ class TestMainWindow(SudokuTestCase):
 
         #check the value to ensure it worked
         self.assertThat(buttonValue, Eventually(Equals("4")))
+
         
 	def test_new_game_button(self):
 		self.ubuntusdk.click_toolbar_button("newgamebutton")
@@ -152,6 +153,57 @@ class TestMainWindow(SudokuTestCase):
 
         #Check for'About' tab selection
         tabName = lambda: self.ubuntusdk.get_object("Tab", "aboutTab")
+
+
+    def test_new_game_button(self):
+        self.ubuntusdk.click_toolbar_button("newgamebutton")
+
+        number_of_hints = lambda: self.app.select_single(objectName="blockgrid").numberOfHints
+        number_of_actions = lambda: self.app.select_single(objectName="blockgrid").numberOfActions
+        game_seconds = lambda: self.app.select_single(objectName="blockgrid").gameSeconds
+
+        self.assertThat(number_of_hints, Eventually(Equals(0)))
+        self.assertThat(number_of_actions, Eventually(Equals(0)))
+        self.assertThat(game_seconds, Eventually(Equals(0)))
+
+    def test_hint_button(self):
+        #open settings tab
+        self.open_and_check_settings_tab()
+
+        #click on hints switch to enalbe hints toolbar button
+        hintsSwitchClickable = self.main_window.get_hints_switchClickable()
+        lambda: self.assertThat(hintsSwitchClickable.text, Eventually(Equals("Hints")))
+
+        #turn on (by clicking on it) hints switch if not already
+        hintsSwitch = self.main_window.get_hints_switch()
+        lambda: self.assertThat(hintsSwitch.id, Eventually(Equals("disableHints")))
+        if hintsSwitch.checked == False:
+           self.pointing_device.click_object(hintsSwitchClickable)
+
+        #verify hints switch is clicked
+        self.assertThat(hintsSwitch.checked, Eventually(Equals(True)))
+
+        # exit settings tab by clicking on sudoku tab
+        self.ubuntusdk.switch_to_tab(0)
+
+        #verify settings sudoku tab is open
+        tabName = lambda: self.ubuntusdk.get_object("Tab","Sudoku")
+        #self.assertThat(tabName, Eventually(NotEquals(None)))
+
+        #click on hint button on tuolbar
+        self.ubuntusdk.click_toolbar_button("hintbutton")
+        gridButtons = self.main_window.get_blank_inputs()
+
+        number_of_hints = lambda: self.app.select_single(objectName="blockgrid").numberOfHints
+        self.assertThat(number_of_hints, Eventually(Equals(1)))
+
+    def open_and_check_settings_tab(self):
+        #click on settings tab so to enable the hints button
+        self.ubuntusdk.switch_to_tab(2)
+
+        #verify settings tab is open
+        tabName = lambda: self.ubuntusdk.get_object("Tab","settingsTab")
+
         self.assertThat(tabName, Eventually(NotEquals(None)))
 
         #Check image loads
@@ -182,7 +234,4 @@ class TestMainWindow(SudokuTestCase):
         #Check correct year is displayed
         yearLabel = lambda: self.ubuntusdk.get_object("Label", "yearLabel").text
         self.assertThat(yearLabel, Eventually(Equals("2013")))
-        
 
-        
-		
