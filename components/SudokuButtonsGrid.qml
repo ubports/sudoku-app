@@ -10,7 +10,7 @@ Repeater {
     id: buttonsGrid;
     model: 81
     objectName: "buttonsGrid";
-    x :3* -mainView.blockDistance
+    x : 3* -mainView.blockDistance
 
     function redrawGrid()
     {
@@ -57,7 +57,7 @@ Repeater {
         size: mainView.pageWidth/10;
         //color: defaultColor;
         //border.width: 0
-        border.color: defaultBorderColor
+        //border.color: defaultBorderColor
         textColor: defaultTextColor;
 
 

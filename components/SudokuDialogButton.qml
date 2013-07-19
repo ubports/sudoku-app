@@ -3,7 +3,7 @@ import Ubuntu.Components 0.1
 
 SudokuButton {
     id: dialogButton
-    border.color: sudokuBlocksGrid.defaultBorderColor
+    //border.color: sudokuBlocksGrid.defaultBorderColor
     //border.width: 3
     textColor: sudokuBlocksGrid.defaultTextColor;
 

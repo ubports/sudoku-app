@@ -23,6 +23,10 @@ Rectangle {
     property alias dialogButtonColor2: colorScheme.dialogButtonColor2
     property alias dialogButtonTextColor: colorScheme.dialogButtonTextColor
 
+    //property color headerColor: colorScheme.headerColor
+    //property color backgroundColor: colorScheme.backgroundColor
+    //property color footerColor: colorScheme.backgroundColor
+
     property real blockDistance: mainView.blockDistance;
     property int currentX;
     property string selectedNumberFromDialog: "0";
@@ -105,6 +109,14 @@ Rectangle {
         colorScheme.dialogButtonColor2 = temp.dialogButtonColor2;
         colorScheme.dialogButtonTextColor = temp.dialogButtonTextColor;
 
+        colorScheme.headerColor = temp.headerColor;
+        colorScheme.backgroundColor = temp.backgroundColor;
+        colorScheme.footerColor = temp.footerColor;
+
+        mainView.headerColor = colorScheme.headerColor;
+        mainView.backgroundColor = colorScheme.backgroundColor;
+        mainView.footerColor = colorScheme.footerColor;
+
         for (var i = 0; i < 9; i++) {
             for (var j = 0; j < 9; j++) {
                 if (i % 3 == 0 && i != 0 && !alreadyCreated)
@@ -125,7 +137,7 @@ Rectangle {
 
                 buttonsGrid.itemAt(i*9 + j).buttonText = "";
                 buttonsGrid.itemAt(i*9 + j).buttonColor = temp.defaultColor;
-                buttonsGrid.itemAt(i*9 + j).border.color = temp.defaultBorderColor;
+                //buttonsGrid.itemAt(i*9 + j).border.color = temp.defaultBorderColor;
                 buttonsGrid.itemAt(i*9 + j).enabled = true;
             }
         }
@@ -135,14 +147,14 @@ Rectangle {
                     buttonsGrid.itemAt(i*9 + j).buttonText = grid.getValue(j,i);
                     buttonsGrid.itemAt(i*9 + j).boldText = temp.boldText;
                     buttonsGrid.itemAt(i*9 + j).buttonColor = temp.defaultStartingColor;
-                    buttonsGrid.itemAt(i*9 + j).border.color = temp.defaultBorderColor;
+                    //buttonsGrid.itemAt(i*9 + j).border.color = temp.defaultBorderColor;
                     buttonsGrid.itemAt(i*9 + j).enabled = false;
                 }
                 else
                 {
                     buttonsGrid.itemAt(i*9 + j).buttonText = "";
                     buttonsGrid.itemAt(i*9 + j).buttonColor = temp.defaultColor;
-                    buttonsGrid.itemAt(i*9 + j).border.color = temp.defaultBorderColor;
+                    //buttonsGrid.itemAt(i*9 + j).border.color = temp.defaultBorderColor;
                     buttonsGrid.itemAt(i*9 + j).enabled = true;
                 }
             }
@@ -174,7 +186,7 @@ Rectangle {
                 buttonsGrid.itemAt(i*9 + j).buttonText = "";
                 buttonsGrid.itemAt(i*9 + j).buttonColor = defaultColor;
                 buttonsGrid.itemAt(i*9 + j).boldText = boldText;
-                buttonsGrid.itemAt(i*9 + j).border.color = defaultBorderColor;
+                //buttonsGrid.itemAt(i*9 + j).border.color = defaultBorderColor;
                 buttonsGrid.itemAt(i*9 + j).enabled = true;
                 buttonsGrid.itemAt(i*9 + j).hinted = false;
             }
@@ -193,7 +205,7 @@ Rectangle {
                 if (grid.getValue(j,i) != 0) {
                     buttonsGrid.itemAt(i*9 + j).buttonText = grid.getValue(j,i);
                     buttonsGrid.itemAt(i*9 + j).buttonColor = defaultStartingColor;
-                    buttonsGrid.itemAt(i*9 + j).border.color = defaultBorderColor;
+                    //buttonsGrid.itemAt(i*9 + j).border.color = defaultBorderColor;
                     buttonsGrid.itemAt(i*9 + j).enabled = false;
                 }
                 else
@@ -311,7 +323,7 @@ Rectangle {
                             anchors.left: parent.left;
                             buttonColor: dialogButtonColor1
                             textColor: dialogButtonTextColor
-                            border.color: "transparent"
+                            //border.color: "transparent"
                             onTriggered: {
                                 numberOfActions++;
                                 buttonsGrid.itemAt(currentX).buttonText = "";
@@ -321,7 +333,7 @@ Rectangle {
                                 grid.setValue(column,row, 0);
                                 buttonsGrid.itemAt(currentX).buttonColor = defaultColor;
                                 buttonsGrid.itemAt(currentX).boldText = false;
-                                 buttonsGrid.itemAt(currentX).hinted = false
+                                buttonsGrid.itemAt(currentX).hinted = false
                                 buttonsGrid.redrawGrid()
                                 PopupUtils.close(dialogue)
                             }
@@ -399,7 +411,7 @@ Rectangle {
                             anchors.left: parent.left;
                             buttonColor: dialogButtonColor2
                             textColor: dialogButtonTextColor
-                            border.color: "transparent"
+                            //border.color: "transparent"
                             onTriggered: {
                                  buttonsGrid.redrawGrid()
                                 PopupUtils.close(dialogue)
@@ -432,12 +444,13 @@ Rectangle {
         Rectangle {
             id: redFlagRect
             x: 0
-            Rectangle {
+            UbuntuShape {
                 id: redFlag
                 color: defaultNotAllowedColor
                 width: mainView.pageWidth/10;
                 height: mainView.pageWidth/10;
-                radius: 5
+                //border.color: defaultBorderColor
+                radius: "medium"
                 Label {
                     id: redFlagText
                     text: i18n.tr("Not allowed")
@@ -455,13 +468,13 @@ Rectangle {
             id: blueFlagRect
             x: 3*mainView.pageWidth/10 + 10*blockDistance;
             //anchors.leftMargin: redFlag.width + redFlagText.width;
-            Rectangle {
+            UbuntuShape {
                 id: blueFlag
                 color: defaultStartingColor
-                border.color: defaultBorderColor
+                //border.color: defaultBorderColor
                 width: mainView.pageWidth/10
                 height: mainView.pageWidth/10
-                radius: 5;
+                radius: "medium";
                 Label {
                     id: blueFlagText
                     text: i18n.tr("Start blocks")
@@ -478,13 +491,13 @@ Rectangle {
         Rectangle {
             id: orangeFlagRect
             x:  7*mainView.pageWidth/10+2*blockDistance;
-            Rectangle {
+            UbuntuShape {
                 id: orangeFlag
                 color: defaultHintColor
-                border.color: defaultBorderColor
+                //border.color: defaultBorderColor
                 width: mainView.pageWidth/10
                 height: mainView.pageWidth/10
-                radius: 5;
+                radius: "medium";
                 Label {
                     text: i18n.tr("Hinted blocks")
                     fontSize: "x-small"
