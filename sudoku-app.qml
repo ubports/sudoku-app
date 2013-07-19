@@ -194,12 +194,12 @@ MainView {
 
             }
 
-            Rectangle {
+            UbuntuShape {
                 id: gameFinishedRectangle;
                 color: sudokuBlocksGrid.defaultColor;
-                border.color: sudokuBlocksGrid.defaultBorderColor;
+                //border.color: sudokuBlocksGrid.defaultBorderColor;
                 width: units.gu(25);
-                radius: 5
+                radius: "medium"
                 height: units.gu(15);
                 z: 100;
                 visible: false;

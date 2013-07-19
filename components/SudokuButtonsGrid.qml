@@ -10,7 +10,7 @@ Repeater {
     id: buttonsGrid;
     model: 81
     objectName: "buttonsGrid";
-    x :3* -mainView.blockDistance
+    x : 3* -mainView.blockDistance
 
     function redrawGrid()
     {
