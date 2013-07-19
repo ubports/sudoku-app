@@ -17,29 +17,42 @@ Component {
             width: parent.width
             spacing: units.gu(2)
 
-            Rectangle{
+            UbuntuShape {
                 width: mainView.width/3*2
                 height: mainView.height/18
-                radius: units.gu(1)
+                radius: "medium"
+                color: "#AEA79F"
                 anchors.horizontalCenter: parent.horizontalCenter
                 TextField {
                     id:lastnameField
                     text: Settings.getUserLastName(editUserId)
                     anchors.fill: parent
-                    placeholderText: i18n.tr("Lastname")
-
+                    //placeholderText: i18n.tr("Lastname")
+                    color: "white"
+                    onFocusChanged: {
+                        if (lastnameField.focus)
+                            lastnameField.color = "#333333"
+                        else lastnameField.color = "white"
+                    }
                 }
             }
-            Rectangle{
+            UbuntuShape {
                 width: mainView.width/3*2
                 height: mainView.height/18
-                radius: units.gu(1)
+                radius: "medium"
+                color: "#AEA79F"
                 anchors.horizontalCenter: parent.horizontalCenter
                 TextField {
                     id:firstnameField
                     anchors.fill: parent
-                    placeholderText: i18n.tr("Firstname")
+                    //placeholderText: i18n.tr("Firstname")
                     text: Settings.getUserFirstName(editUserId)
+                    color: "white"
+                    onFocusChanged: {
+                        if (firstnameField.focus)
+                            firstnameField.color = "#333333"
+                        else firstnameField.color = "white"
+                    }
                 }
             }
 
@@ -55,7 +68,7 @@ Component {
                     size: units.gu(5)
                     buttonColor: sudokuBlocksGrid.dialogButtonColor2
                     textColor: sudokuBlocksGrid.dialogButtonTextColor
-                    border.color: "transparent"
+                    //border.color: "transparent"
                     onTriggered: {
 
                         if(lastnameField.text!="" && firstnameField.text!="")
@@ -90,7 +103,7 @@ Component {
                     buttonText: i18n.tr("Delete")
                     buttonColor: sudokuBlocksGrid.dialogButtonColor1
                     textColor: sudokuBlocksGrid.dialogButtonTextColor
-                    border.color: "transparent"
+                    //border.color: "transparent"
                     width: parent.width/2;
                     size: units.gu(5)
                     onTriggered: {
@@ -106,7 +119,7 @@ Component {
             SudokuDialogButton{
                 anchors.horizontalCenter: parent.horizontalCenter
                 buttonText: i18n.tr("Cancel")
-                border.color: "transparent"
+                //border.color: "transparent"
                 width: parent.width/2;
                 size: units.gu(5)
                 onTriggered: {

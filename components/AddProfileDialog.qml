@@ -17,27 +17,30 @@ Component {
             width: parent.width
             spacing: units.gu(2)
 
-            Rectangle{
+            UbuntuShape{
                 width: mainView.width/3*2
                 height: mainView.height/18
-                radius: units.gu(1)
+                radius: "medium"
+                color: "#AEA79F"
                 anchors.horizontalCenter: parent.horizontalCenter
                 TextField {
                     id:lastnameField
                     anchors.fill: parent
                     placeholderText: i18n.tr("Lastname")
-
+                    color: "white"
                 }
             }
-            Rectangle{
+            UbuntuShape{
                 width: mainView.width/3*2
                 height: mainView.height/18
-                radius: units.gu(1)
+                radius: "medium"
+                color: "#AEA79F"
                 anchors.horizontalCenter: parent.horizontalCenter
                 TextField {
                     id:firstnameField
                     anchors.fill: parent
                     placeholderText: i18n.tr("Firstname")
+                    color: "white"
                 }
             }
 
@@ -85,7 +88,7 @@ Component {
                     size: units.gu(5)
                     buttonColor: sudokuBlocksGrid.dialogButtonColor1
                     textColor: sudokuBlocksGrid.dialogButtonTextColor
-                    border.color: "transparent"
+                    //border.color: "transparent"
                     onTriggered: {
                         PopupUtils.close(addProfileDialogue)
                     }

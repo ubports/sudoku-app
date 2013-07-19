@@ -57,7 +57,7 @@ Repeater {
         size: mainView.pageWidth/10;
         //color: defaultColor;
         //border.width: 0
-        border.color: defaultBorderColor
+        //border.color: defaultBorderColor
         textColor: defaultTextColor;
 
 
