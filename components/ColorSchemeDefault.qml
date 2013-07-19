@@ -14,5 +14,8 @@ Item {
     property color dialogButtonColor1: UbuntuColors.lightAubergine
     property color dialogButtonColor2: UbuntuColors.orange
     property color dialogButtonTextColor: "white"
+    property color headerColor: "#2C001E"
+    property color backgroundColor: "#2C001E"
+    property color footerColor: "#5E2750"
 
 }

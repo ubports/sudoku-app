@@ -29,6 +29,10 @@ MainView {
     width: pageWidth;
     height: pageHeight;
 
+    //headerColor: sudokuBlocksGrid.headerColor
+    //backgroundColor: sudokuBlocksGrid.backgroundColor
+    //footerColor: sudokuBlocksGrid.footerColor
+
     onCurrentUserIdChanged: {
         Settings.setSetting("currentUserId", currentUserId)
     }
