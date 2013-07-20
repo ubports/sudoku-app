@@ -281,6 +281,7 @@ class TestMainWindow(SudokuTestCase):
 
         #click on the new profile just added
         myProfile = self.main_window.get_Myfirstname_Mylastname_profile()
+        self.main_window.try_my_profile()
         self.assertThat(myProfile.text, Eventually(Equals("Myfirstname Mylastname")))
         self.pointing_device.click_object(myProfile)
 
@@ -290,10 +291,9 @@ class TestMainWindow(SudokuTestCase):
 
         #click on delete
         deleteButton = self.main_window.get_edit_profile_delete_button()
-        lambda: self.assertThat(deleteButton.buttonText, Eventually(Equals("buttonText")))
+        self.main_window.try_delete_Button()
+        self.assertThat(deleteButton.buttonText, Eventually(Equals("Delete")))
         self.pointing_device.click_object(deleteButton)
-        #---> TODO fix this
-        sleep(2)
         self.verify_settings_tab_open()
 
         #verify settings tab is open

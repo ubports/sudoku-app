@@ -108,3 +108,15 @@ class MainWindow(object):
             return self.get_manage_profiles().text
         except StateNotFoundError:
             return None
+
+    def try_delete_Button(self):
+        try:
+            return self.get_edit_profile_delete_button().buttonText
+        except StateNotFoundError:
+            return None
+
+    def try_my_profile(self):
+        try:
+            return self.get_Myfirstname_Mylastname_profile().text
+        except StateNotFoundError:
+            return None
