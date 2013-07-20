@@ -13,6 +13,7 @@ from autopilot.matchers import Eventually
 from testtools.matchers import Equals, Contains, NotEquals
 
 from sudoku_app.tests import SudokuTestCase
+from time import sleep
 
 class TestMainWindow(SudokuTestCase):
 
@@ -159,8 +160,7 @@ class TestMainWindow(SudokuTestCase):
         self.ubuntusdk.switch_to_tab(0)
 
         #verify settings sudoku tab is open
-        tabName = lambda: self.ubuntusdk.get_object("Tab","Sudoku")
-        #self.assertThat(tabName, Eventually(NotEquals(None)))
+        self.verify_settings_tab_open()
 
         #click on hint button on tuolbar
         self.ubuntusdk.click_toolbar_button("hintbutton")
@@ -185,6 +185,7 @@ class TestMainWindow(SudokuTestCase):
         self.assertThat(difficultyChoice.text, Eventually(Equals("Moderate")))
 
         self.pointing_device.click_object(difficultyChoice)
+        self.verify_settings_tab_open()
 
         #********check theme selector ********
         #click on theme selector
@@ -192,7 +193,7 @@ class TestMainWindow(SudokuTestCase):
         lambda: self.assertThat(themeSelector.text, Eventually(Equals("Theme")))
         self.pointing_device.click_object(themeSelector)
 
-       #select "Simple" choice of theme selector
+        #select "Simple" choice of theme selector
         themeChoices = self.main_window.get_theme_selector_labelvisual()
         themeChoice = themeChoices[3]
         self.assertThat(themeChoice.text, Eventually(Equals("Simple")))
@@ -222,8 +223,7 @@ class TestMainWindow(SudokuTestCase):
 
         #let's change profile
         #verify select profile page opens
-        profilePage = self.main_window.get_select_profile_sheet()
-        lambda: self.assertThat(profilePage.title, Eventually(Equals("Select profile")))
+        self.get_and_verify_profile_page()
 
         #select "sudoku user" profile
         sudokuUserProfile = self.main_window.get_sudoku_user_profile()
@@ -239,14 +239,77 @@ class TestMainWindow(SudokuTestCase):
         lambda: self.assertThat(currentProfile.value, Eventually(Equals("Sudoku User")))
 
         #let's add a user profile
+        #verify add profile page opens
+        sudokuAddProfile = self.main_window.get_add_profile()
+        lambda: self.assertThat(sudokuAddProfile, Eventually(Equals("Sudoku User")))
+        self.pointing_device.click_object(sudokuAddProfile)
 
+        #verify add profile dialog opens
+        addDialog = self.main_window.get_add_profile_dialog()
+        lambda: self.assertThat(addDialog.title, Eventually(Equals("Add new profile")))
 
+        #insert Lastname
+        lastName = self.main_window.get_add_profile_Lastname_field()
+        self.pointing_device.click_object(lastName)
+        lambda: self.assertThat(lastName.placeholderText, Eventually(Equals("Lastname")))
+        self.keyboard.type("Mylastname")
+        lambda: self.assertThat(lastName.text, Eventually(Equals("Mylastname")))
+
+        #insert Firstname
+        firstName = self.main_window.get_add_profile_Firstname_field()
+        self.pointing_device.click_object(firstName)
+        lambda: self.assertThat(firstName.placeholderText, Eventually(Equals("Firstname")))
+        self.keyboard.type("Myfirstname")
+        lambda: self.assertThat(firstName.text, Eventually(Equals("Myfirstname")))
+
+        #click OK button
+        OKButton = self.main_window.get_add_profile_OKbutton()
+        self.main_window.try_OK_Button()
+        self.assertThat(OKButton.buttonText, Eventually(Equals("OK")))
+        self.pointing_device.click_object(OKButton)
+        self.verify_settings_tab_open()
+
+        #******** check manage profiles ********
+        #select manage profile
+        manageProfile = self.main_window.get_manage_profiles()
+        self.main_window.try_manage_profile()
+        self.assertThat(manageProfile.text, Eventually(Equals("Manage profiles")))
+        self.pointing_device.click_object(manageProfile)
+
+        #verify select profile page opens
+        self.get_and_verify_profile_page()
+
+        #click on the new profile just added
+        myProfile = self.main_window.get_Myfirstname_Mylastname_profile()
+        self.assertThat(myProfile.text, Eventually(Equals("Myfirstname Mylastname")))
+        self.pointing_device.click_object(myProfile)
+
+        #verify the edit profile dialog opens
+        editProfileDialog = self.main_window.get_edit_profile_dialog()
+        lambda: self.assertThat(editProfileDialog.text, Eventually(Equals("editProfileDialog")))
+
+        #click on delete
+        deleteButton = self.main_window.get_edit_profile_delete_button()
+        lambda: self.assertThat(deleteButton.buttonText, Eventually(Equals("buttonText")))
+        self.pointing_device.click_object(deleteButton)
+        #---> TODO fix this
+        sleep(2)
+        self.verify_settings_tab_open()
+
+        #verify settings tab is open
+        self.verify_settings_tab_open()
 
     def open_and_check_settings_tab(self):
         #click on settings tab so to enable the hints button
         self.ubuntusdk.switch_to_tab(2)
+        self.verify_settings_tab_open()
 
+    def verify_settings_tab_open(self):
         #verify settings tab is open
         tabName = lambda: self.ubuntusdk.get_object("Tab","settingsTab")
         self.assertThat(tabName, Eventually(NotEquals(None)))
+
+    def get_and_verify_profile_page(self):
+        profilePage = self.main_window.get_select_profile_sheet()
+        lambda: self.assertThat(profilePage.title, Eventually(Equals("Select profile")))
 

@@ -8,6 +8,7 @@ Component {
     id: editProfileDialog
 
     Dialog {
+        objectName: "Edit profile"
         id: editProfileDialogue
         title: i18n.tr("Edit profile")
         width: parent.width
@@ -87,6 +88,8 @@ Component {
                 }
 
                 SudokuDialogButton{
+                    objectName: "deleteButton"
+                    id: deleteButton
                     buttonText: i18n.tr("Delete")
                     buttonColor: sudokuBlocksGrid.dialogButtonColor1
                     textColor: sudokuBlocksGrid.dialogButtonTextColor

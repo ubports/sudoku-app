@@ -644,6 +644,7 @@ MainView {
 
 
                     ListItem.SingleValue {
+                        objectName: "Add profile"
                         id:addSingleValue
                         text: i18n.tr("Add profile")
                         onClicked: {
@@ -652,6 +653,7 @@ MainView {
                     }
 
                     ListItem.SingleValue {
+                        objectName: "Manage profiles"
                         id:manageProfileSingleValue
                         text: i18n.tr("Manage profiles")
                         onClicked: {

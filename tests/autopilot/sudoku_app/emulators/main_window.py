@@ -7,6 +7,7 @@
 
 """Sudoku app autopilot emulators."""
 
+from autopilot.introspection.dbus import StateNotFoundError
 
 class MainWindow(object):
     """An emulator class that makes it easy to interact with the
@@ -72,3 +73,38 @@ class MainWindow(object):
     def get_add_profile(self):
         return self.app.select_single("SingleValue", objectName="Add profile")
 
+    def get_add_profile_dialog(self):
+        return  self.app.select_single("Dialog", objectName="Add new profile")
+
+    def get_add_profile_Lastname_field(self):
+        return self.app.select_single("TextField", objectName = "Lastname")
+
+    def get_add_profile_Firstname_field(self):
+        return self.app.select_single("TextField", objectName = "Firstname")
+
+    def get_add_profile_OKbutton(self):
+        return self.app.select_single("SudokuDialogButton", objectName = "OKbutton")
+
+    def get_manage_profiles(self):
+        return self.app.select_single("SingleValue", objectName = "Manage profiles")
+
+    def get_Myfirstname_Mylastname_profile(self):
+        return self.app.select_single("Standard", text="Myfirstname Mylastname")
+
+    def get_edit_profile_dialog(self):
+        return  self.app.select_single("Dialog", objectName="Edit profile")
+
+    def get_edit_profile_delete_button(self):
+        return self.app.select_single("SudokuDialogButton", objectName ="deleteButton")
+
+    def try_OK_Button(self):
+        try:
+            return self.get_add_profile_OKbutton().buttonText
+        except StateNotFoundError:
+            return None
+
+    def try_manage_profile(self):
+        try:
+            return self.get_manage_profiles().text
+        except StateNotFoundError:
+            return None
