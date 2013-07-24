@@ -4,6 +4,9 @@ Source: https://launchpad.net/sudoku-app
 
 Files: *
 Copyright: 2013 Dinko Osmankovic <dinko.metalac@gmail.com>
+           2013 adriangoodyer <adriangoodyer@gmail.com>
+           2013 Andrea Pivetta <vanpivix@gmail.com>
+           2013 fredoust <fredoust@gmail.com>
 License: GPL-3.0+
 
 Files: debian/*
