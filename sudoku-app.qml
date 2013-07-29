@@ -591,6 +591,7 @@ MainView {
                         }
                         ListItem.ValueSelector {
                             id: themeSelector
+                            objectName: "themeSelector"
                             text: i18n.tr("Theme")
                             values: ["UbuntuColours", "Simple"]
                             onSelectedIndexChanged: {
@@ -633,6 +634,7 @@ MainView {
                         }
                         ListItem.SingleValue {
                             text: "Current profile"
+                            objectName: "Current profile"
                             id: selectorProfile
                             value: {
                                 if(currentUserId==-1)
@@ -667,6 +669,7 @@ MainView {
 
 
                         ListItem.SingleValue {
+                            objectName: "Add profile"
                             id:addSingleValue
                             text: i18n.tr("Add profile")
                             onClicked: {
@@ -676,6 +679,7 @@ MainView {
 
                         ListItem.SingleValue {
                             id:manageProfileSingleValue
+                            objectName: "Manage profiles"
                             text: i18n.tr("Manage profiles")
                             onClicked: {
 
