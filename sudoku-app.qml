@@ -41,36 +41,206 @@ MainView {
                 label: i18n.tr("New game")
                 keywords: i18n.tr("New game")
                 onTriggered: {
-                    switch(difficultySelector.selectedIndex) {
-                    case 0:
-                        var randomnumber = Math.floor(Math.random()*9);
-                        randomnumber += 31;
-                        sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                        break;
-                    case 1:
-                        var randomnumber = Math.floor(Math.random()*4);
-                        randomnumber += 26;
-                        sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                        break;
-                    case 2:
-                        var randomnumber = Math.floor(Math.random()*4);
-                        randomnumber += 21;
-                        sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                        break;
-                    case 3:
-                        var randomnumber = Math.floor(Math.random()*3);
-                        randomnumber += 17;
-                        sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                        break;
+                    tabs.selectedTabIndex = 0
+                    createNewGame()
+                }
+            }
+            HUD.Action {
+                label: i18n.tr("Reveal hint")
+                keywords: i18n.tr("Reveal hint")
+                enabled: disableHints.checked
+                onTriggered: {
+                    tabs.selectedTabIndex = 0
+                    revealHint()
+                }
+            }
+            HUD.Action {
+                label: i18n.tr("Show settings")
+                keywords: i18n.tr("Show settings")
+                onTriggered: {
+                    tabs.selectedTabIndex = 2
+                    revealHint()
+                }
+            }
+            HUD.Action {
+                label: i18n.tr("Change difficulty to Easy")
+                keywords: i18n.tr("Change difficulty to Easy")
+                onTriggered: {
+                    tabs.selectedTabIndex = 0
+                    difficultySelector.selectedIndex = 0
+                    var randomnumber = Math.floor(Math.random()*9);
+                    randomnumber += 31;
+                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                    Settings.setSetting("Difficulty", 0)
+                    createNewGame()
+                }
+            }
+            HUD.Action {
+                label: i18n.tr("Change difficulty to Moderate")
+                keywords: i18n.tr("Change difficulty to Moderate")
+                onTriggered: {
+                    tabs.selectedTabIndex = 0
+                    difficultySelector.selectedIndex = 1
+                    var randomnumber = Math.floor(Math.random()*4);
+                    randomnumber += 26;
+                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                    Settings.setSetting("Difficulty", 1)
+                    createNewGame()
+                }
+            }
+            HUD.Action {
+                label: i18n.tr("Change difficulty to Hard")
+                keywords: i18n.tr("Change difficulty to Hard")
+                onTriggered: {
+                    tabs.selectedTabIndex = 0
+                    difficultySelector.selectedIndex = 2
+                    var randomnumber = Math.floor(Math.random()*4);
+                    randomnumber += 21;
+                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                    Settings.setSetting("Difficulty", 2)
+                    createNewGame()
+                }
+            }
+            HUD.Action {
+                label: i18n.tr("Change difficulty to Ultra Hard")
+                keywords: i18n.tr("Change difficulty to Ultra Hard")
+                onTriggered: {
+                    tabs.selectedTabIndex = 0
+                    difficultySelector.selectedIndex = 3
+                    var randomnumber = Math.floor(Math.random()*3);
+                    randomnumber += 17;
+                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                    Settings.setSetting("Difficulty", 3)
+                    createNewGame()
+                }
+            }
+
+            HUD.Action {
+                label: i18n.tr("Change theme to Simple")
+                keywords: i18n.tr("Change theme to Simple")
+                onTriggered: {
+                    print("Simple")
+                    var result = Settings.setSetting("ColorTheme", 1);
+                    //print(result);
+                    sudokuBlocksGrid.changeColorScheme("ColorSchemeSimple.qml");
+                }
+            }
+            HUD.Action {
+                label: i18n.tr("Change theme to UbuntuColors")
+                keywords: i18n.tr("Change theme to UbuntuColors")
+                onTriggered: {
+                    print("UbuntuColors")
+                    var result = Settings.setSetting("ColorTheme", 0);
+                    //print(result);
+                    sudokuBlocksGrid.changeColorScheme("ColorSchemeUbuntu.qml");
+                }
+            }
+            HUD.Action {
+                label: i18n.tr("Show scores for all users")
+                keywords: i18n.tr("Show scores for all users")
+                onTriggered: {
+                    tabs.selectedTabIndex = 1
+                    var allScores = Settings.getAllScores()
+                    highscoresModel.clear();
+                    highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
+                    for(var i = 0; i < allScores.length; i++) {
+                        var rowItem = allScores[i];
+                        //print("ROW ",rowItem)
+                        var firstName = Settings.getUserFirstName(rowItem[0]);
+                        var lastName = Settings.getUserLastName(rowItem[0]);
+                        //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
+                        highscoresModel.append({'firstname': firstName,
+                                                   'lastname':  lastName,
+                                                   'score': rowItem[1] });
                     }
                 }
             }
 
+            HUD.Action {
+                label: i18n.tr("Show scores for current user")
+                keywords: i18n.tr("Show scores for current user")
+                onTriggered: {
+                    tabs.selectedTabIndex = 1
+                    var firstName = Settings.getUserFirstName(currentUserId);
+                    var lastName = Settings.getUserLastName(currentUserId);
+                    //print(firstName, lastName)
+                    highscoresHeaderText = i18n.tr("<b>Best scores for ")+firstName + " " + lastName+"</b>"
+                    var allScores = Settings.getAllScoresForUser(currentUserId)
+                    highscoresModel.clear();
+                    for(var i = 0; i < allScores.length; i++) {
+                        var rowItem = allScores[i];
+                        //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
+                        highscoresModel.append({'firstname': firstName,
+                                                   'lastname':  lastName,
+                                                   'score': rowItem[1] });
+                    }
+                }
+            }
         }
     }
 
     onCurrentUserIdChanged: {
         Settings.setSetting("currentUserId", currentUserId)
+    }
+
+    function revealHint() {
+        if(disableHints.checked)
+        {
+            sudokuBlocksGrid.revealHint();
+            sudokuBlocksGrid.checkIfCheating = true;
+            if (sudokuBlocksGrid.checkIfGameFinished()) {
+                gameFinishedRectangle.visible = true;
+                Settings.insertNewScore(currentUserId, sudokuBlocksGrid.calculateScore())
+                gameFinishedText.text = i18n.tr("You are a cheat... \nBut we give you\n")
+                        + sudokuBlocksGrid.calculateScore()
+                        + " " + i18n.tr("points.")
+
+                print (sudokuBlocksGrid.numberOfActions)
+                print (sudokuBlocksGrid.numberOfHints)
+                print (sudokuBlocksGrid.gameSeconds)
+                print (sudokuBlocksGrid.gameDifficulty)
+                var allScores = Settings.getAllScores()
+                highscoresModel.clear();
+                highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
+                for(var i = 0; i < allScores.length; i++) {
+                    var rowItem = allScores[i];
+                    //(print("ROW ",rowItem)
+                    var firstName = Settings.getUserFirstName(rowItem[0]);
+                    var lastName = Settings.getUserLastName(rowItem[0]);
+                    //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
+                    highscoresModel.append({'firstname': firstName,
+                                               'lastname':  lastName,
+                                               'score': rowItem[1] });
+                }
+
+                winTimer.restart();
+            }
+        }
+    }
+
+    function createNewGame() {
+        switch(difficultySelector.selectedIndex) {
+        case 0:
+            var randomnumber = Math.floor(Math.random()*9);
+            randomnumber += 31;
+            sudokuBlocksGrid.createNewGame(81 - randomnumber);
+            break;
+        case 1:
+            var randomnumber = Math.floor(Math.random()*4);
+            randomnumber += 26;
+            sudokuBlocksGrid.createNewGame(81 - randomnumber);
+            break;
+        case 2:
+            var randomnumber = Math.floor(Math.random()*4);
+            randomnumber += 21;
+            sudokuBlocksGrid.createNewGame(81 - randomnumber);
+            break;
+        case 3:
+            var randomnumber = Math.floor(Math.random()*3);
+            randomnumber += 17;
+            sudokuBlocksGrid.createNewGame(81 - randomnumber);
+            break;
+        }
     }
 
     function newSize(width, height) {
@@ -265,70 +435,19 @@ MainView {
                             onTriggered: {
                                 if(gameFinishedRectangle.visible) gameFinishedRectangle.visible = false;
                                 //print("new block distance:", blockDistance);
-                                switch(difficultySelector.selectedIndex) {
-                                case 0:
-                                    var randomnumber = Math.floor(Math.random()*9);
-                                    randomnumber += 31;
-                                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                                    break;
-                                case 1:
-                                    var randomnumber = Math.floor(Math.random()*4);
-                                    randomnumber += 26;
-                                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                                    break;
-                                case 2:
-                                    var randomnumber = Math.floor(Math.random()*4);
-                                    randomnumber += 21;
-                                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                                    break;
-                                case 3:
-                                    var randomnumber = Math.floor(Math.random()*3);
-                                    randomnumber += 17;
-                                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                                    break;
-                                }
+                                createNewGame()
                             }
                         }
                     }
                     ToolbarButton {
                         objectName: "hintbutton"
                         action: Action {
+                            id: revealHintAction
                             iconSource: Qt.resolvedUrl("icons/hint.svg")
                             text: i18n.tr("Show hint");
                             enabled: disableHints.checked;
                             onTriggered: {
-                                if(enabled)
-                                {
-                                    sudokuBlocksGrid.revealHint();
-                                    sudokuBlocksGrid.checkIfCheating = true;
-                                    if (sudokuBlocksGrid.checkIfGameFinished()) {
-                                        gameFinishedRectangle.visible = true;
-                                        Settings.insertNewScore(currentUserId, sudokuBlocksGrid.calculateScore())
-                                        gameFinishedText.text = i18n.tr("You are a cheat... \nBut we give you\n")
-                                                + sudokuBlocksGrid.calculateScore()
-                                                + " " + i18n.tr("points.")
-
-                                        print (sudokuBlocksGrid.numberOfActions)
-                                        print (sudokuBlocksGrid.numberOfHints)
-                                        print (sudokuBlocksGrid.gameSeconds)
-                                        print (sudokuBlocksGrid.gameDifficulty)
-                                        var allScores = Settings.getAllScores()
-                                        highscoresModel.clear();
-                                        highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
-                                        for(var i = 0; i < allScores.length; i++) {
-                                            var rowItem = allScores[i];
-                                            //(print("ROW ",rowItem)
-                                            var firstName = Settings.getUserFirstName(rowItem[0]);
-                                            var lastName = Settings.getUserLastName(rowItem[0]);
-                                            //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
-                                            highscoresModel.append({'firstname': firstName,
-                                                                       'lastname':  lastName,
-                                                                       'score': rowItem[1] });
-                                        }
-
-                                        winTimer.restart();
-                                    }
-                                }
+                                revealHint()
                             }
                         }
                     }
