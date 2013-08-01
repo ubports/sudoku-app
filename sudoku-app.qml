@@ -5,7 +5,8 @@ import QtQuick.LocalStorage 2.0
 import Ubuntu.Components.Popups 0.1
 import "js/localStorage.js" as Settings
 import "components"
-import Ubuntu.HUD 1.0 as HUD
+//import Ubuntu.HUD 1.0 as HUD
+import Ubuntu.Unity.Action 1.0 as UnityActions
 
 MainView {
     id: mainView
@@ -34,150 +35,150 @@ MainView {
     //backgroundColor: sudokuBlocksGrid.backgroundColor
     //footerColor: sudokuBlocksGrid.footerColor
 
-    HUD.HUD {
+    /*HUD.HUD {
         applicationIdentifier: "sudoku-app" // this has to match the .desktop file!
-        HUD.Context {
-            HUD.Action {
-                label: i18n.tr("New game")
-                keywords: i18n.tr("New game")
-                onTriggered: {
-                    tabs.selectedTabIndex = 0
-                    createNewGame()
+        HUD.Context {*/
+    actions: [
+        UnityActions.Action {
+            text: i18n.tr("New game")
+            keywords: i18n.tr("New game")
+            onTriggered: {
+                tabs.selectedTabIndex = 0
+                createNewGame()
+            }
+        },
+        UnityActions.Action {
+            text: i18n.tr("Reveal hint")
+            keywords: i18n.tr("Reveal hint")
+            enabled: false
+            onTriggered: {
+                tabs.selectedTabIndex = 0
+                revealHint()
+            }
+        },
+        UnityActions.Action {
+            text: i18n.tr("Show settings")
+            keywords: i18n.tr("Show settings")
+            onTriggered: {
+                tabs.selectedTabIndex = 2
+                revealHint()
+            }
+        },
+        UnityActions.Action {
+            text: i18n.tr("Change difficulty to Easy")
+            keywords: i18n.tr("Change difficulty to Easy")
+            onTriggered: {
+                tabs.selectedTabIndex = 0
+                difficultySelector.selectedIndex = 0
+                var randomnumber = Math.floor(Math.random()*9);
+                randomnumber += 31;
+                sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                Settings.setSetting("Difficulty", 0)
+                createNewGame()
+            }
+        },
+        UnityActions.Action {
+            text: i18n.tr("Change difficulty to Moderate")
+            keywords: i18n.tr("Change difficulty to Moderate")
+            onTriggered: {
+                tabs.selectedTabIndex = 0
+                difficultySelector.selectedIndex = 1
+                var randomnumber = Math.floor(Math.random()*4);
+                randomnumber += 26;
+                sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                Settings.setSetting("Difficulty", 1)
+                createNewGame()
+            }
+        },
+        UnityActions.Action {
+            text: i18n.tr("Change difficulty to Hard")
+            keywords: i18n.tr("Change difficulty to Hard")
+            onTriggered: {
+                tabs.selectedTabIndex = 0
+                difficultySelector.selectedIndex = 2
+                var randomnumber = Math.floor(Math.random()*4);
+                randomnumber += 21;
+                sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                Settings.setSetting("Difficulty", 2)
+                createNewGame()
+            }
+        },
+        UnityActions.Action {
+            text: i18n.tr("Change difficulty to Ultra Hard")
+            keywords: i18n.tr("Change difficulty to Ultra Hard")
+            onTriggered: {
+                tabs.selectedTabIndex = 0
+                difficultySelector.selectedIndex = 3
+                var randomnumber = Math.floor(Math.random()*3);
+                randomnumber += 17;
+                sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                Settings.setSetting("Difficulty", 3)
+                createNewGame()
+            }
+        },
+        UnityActions.Action {
+            text: i18n.tr("Change theme to Simple")
+            keywords: i18n.tr("Change theme to Simple")
+            onTriggered: {
+                print("Simple")
+                var result = Settings.setSetting("ColorTheme", 1);
+                //print(result);
+                sudokuBlocksGrid.changeColorScheme("ColorSchemeSimple.qml");
+            }
+        },
+        UnityActions.Action {
+            text: i18n.tr("Change theme to UbuntuColors")
+            keywords: i18n.tr("Change theme to UbuntuColors")
+            onTriggered: {
+                print("UbuntuColors")
+                var result = Settings.setSetting("ColorTheme", 0);
+                //print(result);
+                sudokuBlocksGrid.changeColorScheme("ColorSchemeUbuntu.qml");
+            }
+        },
+        UnityActions.Action {
+            text: i18n.tr("Show scores for all users")
+            keywords: i18n.tr("Show scores for all users")
+            onTriggered: {
+                tabs.selectedTabIndex = 1
+                var allScores = Settings.getAllScores()
+                highscoresModel.clear();
+                highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
+                for(var i = 0; i < allScores.length; i++) {
+                    var rowItem = allScores[i];
+                    //print("ROW ",rowItem)
+                    var firstName = Settings.getUserFirstName(rowItem[0]);
+                    var lastName = Settings.getUserLastName(rowItem[0]);
+                    //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
+                    highscoresModel.append({'firstname': firstName,
+                                               'lastname':  lastName,
+                                               'score': rowItem[1] });
                 }
             }
-            HUD.Action {
-                label: i18n.tr("Reveal hint")
-                keywords: i18n.tr("Reveal hint")
-                enabled: disableHints.checked
-                onTriggered: {
-                    tabs.selectedTabIndex = 0
-                    revealHint()
-                }
-            }
-            HUD.Action {
-                label: i18n.tr("Show settings")
-                keywords: i18n.tr("Show settings")
-                onTriggered: {
-                    tabs.selectedTabIndex = 2
-                    revealHint()
-                }
-            }
-            HUD.Action {
-                label: i18n.tr("Change difficulty to Easy")
-                keywords: i18n.tr("Change difficulty to Easy")
-                onTriggered: {
-                    tabs.selectedTabIndex = 0
-                    difficultySelector.selectedIndex = 0
-                    var randomnumber = Math.floor(Math.random()*9);
-                    randomnumber += 31;
-                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                    Settings.setSetting("Difficulty", 0)
-                    createNewGame()
-                }
-            }
-            HUD.Action {
-                label: i18n.tr("Change difficulty to Moderate")
-                keywords: i18n.tr("Change difficulty to Moderate")
-                onTriggered: {
-                    tabs.selectedTabIndex = 0
-                    difficultySelector.selectedIndex = 1
-                    var randomnumber = Math.floor(Math.random()*4);
-                    randomnumber += 26;
-                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                    Settings.setSetting("Difficulty", 1)
-                    createNewGame()
-                }
-            }
-            HUD.Action {
-                label: i18n.tr("Change difficulty to Hard")
-                keywords: i18n.tr("Change difficulty to Hard")
-                onTriggered: {
-                    tabs.selectedTabIndex = 0
-                    difficultySelector.selectedIndex = 2
-                    var randomnumber = Math.floor(Math.random()*4);
-                    randomnumber += 21;
-                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                    Settings.setSetting("Difficulty", 2)
-                    createNewGame()
-                }
-            }
-            HUD.Action {
-                label: i18n.tr("Change difficulty to Ultra Hard")
-                keywords: i18n.tr("Change difficulty to Ultra Hard")
-                onTriggered: {
-                    tabs.selectedTabIndex = 0
-                    difficultySelector.selectedIndex = 3
-                    var randomnumber = Math.floor(Math.random()*3);
-                    randomnumber += 17;
-                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                    Settings.setSetting("Difficulty", 3)
-                    createNewGame()
-                }
-            }
-
-            HUD.Action {
-                label: i18n.tr("Change theme to Simple")
-                keywords: i18n.tr("Change theme to Simple")
-                onTriggered: {
-                    print("Simple")
-                    var result = Settings.setSetting("ColorTheme", 1);
-                    //print(result);
-                    sudokuBlocksGrid.changeColorScheme("ColorSchemeSimple.qml");
-                }
-            }
-            HUD.Action {
-                label: i18n.tr("Change theme to UbuntuColors")
-                keywords: i18n.tr("Change theme to UbuntuColors")
-                onTriggered: {
-                    print("UbuntuColors")
-                    var result = Settings.setSetting("ColorTheme", 0);
-                    //print(result);
-                    sudokuBlocksGrid.changeColorScheme("ColorSchemeUbuntu.qml");
-                }
-            }
-            HUD.Action {
-                label: i18n.tr("Show scores for all users")
-                keywords: i18n.tr("Show scores for all users")
-                onTriggered: {
-                    tabs.selectedTabIndex = 1
-                    var allScores = Settings.getAllScores()
-                    highscoresModel.clear();
-                    highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
-                    for(var i = 0; i < allScores.length; i++) {
-                        var rowItem = allScores[i];
-                        //print("ROW ",rowItem)
-                        var firstName = Settings.getUserFirstName(rowItem[0]);
-                        var lastName = Settings.getUserLastName(rowItem[0]);
-                        //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
-                        highscoresModel.append({'firstname': firstName,
-                                                   'lastname':  lastName,
-                                                   'score': rowItem[1] });
-                    }
-                }
-            }
-
-            HUD.Action {
-                label: i18n.tr("Show scores for current user")
-                keywords: i18n.tr("Show scores for current user")
-                onTriggered: {
-                    tabs.selectedTabIndex = 1
-                    var firstName = Settings.getUserFirstName(currentUserId);
-                    var lastName = Settings.getUserLastName(currentUserId);
-                    //print(firstName, lastName)
-                    highscoresHeaderText = i18n.tr("<b>Best scores for ")+firstName + " " + lastName+"</b>"
-                    var allScores = Settings.getAllScoresForUser(currentUserId)
-                    highscoresModel.clear();
-                    for(var i = 0; i < allScores.length; i++) {
-                        var rowItem = allScores[i];
-                        //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
-                        highscoresModel.append({'firstname': firstName,
-                                                   'lastname':  lastName,
-                                                   'score': rowItem[1] });
-                    }
+        },
+        UnityActions.Action {
+            text: i18n.tr("Show scores for current user")
+            keywords: i18n.tr("Show scores for current user")
+            onTriggered: {
+                tabs.selectedTabIndex = 1
+                var firstName = Settings.getUserFirstName(currentUserId);
+                var lastName = Settings.getUserLastName(currentUserId);
+                //print(firstName, lastName)
+                highscoresHeaderText = i18n.tr("<b>Best scores for ")+firstName + " " + lastName+"</b>"
+                var allScores = Settings.getAllScoresForUser(currentUserId)
+                highscoresModel.clear();
+                for(var i = 0; i < allScores.length; i++) {
+                    var rowItem = allScores[i];
+                    //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
+                    highscoresModel.append({'firstname': firstName,
+                                               'lastname':  lastName,
+                                               'score': rowItem[1] });
                 }
             }
         }
-    }
+    ]
+    //}
+    //}
 
     onCurrentUserIdChanged: {
         Settings.setSetting("currentUserId", currentUserId)
