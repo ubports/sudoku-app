@@ -140,31 +140,12 @@ class TestMainWindow(SudokuTestCase):
         self.assertThat(number_of_actions, Eventually(Equals(0)))
         self.assertThat(game_seconds, Eventually(Equals(0)))
 
-    def test_hint_button(self):
-        self.ubuntusdk.click_toolbar_button("hintbutton")
-        gridButtons = self.main_window.get_blank_inputs()
-
-        number_of_hints = lambda: self.app.select_single(objectName="blockgrid").numberOfHints
-        self.assertThat(number_of_hints, Eventually(Equals(1)))
-
     def test_about_tab(self):
         #Switch to the 'About' tab
         self.ubuntusdk.switch_to_tab(3)
 
         #Check for'About' tab selection
         tabName = lambda: self.ubuntusdk.get_object("Tab", "aboutTab")
-
-
-    def test_new_game_button(self):
-        self.ubuntusdk.click_toolbar_button("newgamebutton")
-
-        number_of_hints = lambda: self.app.select_single(objectName="blockgrid").numberOfHints
-        number_of_actions = lambda: self.app.select_single(objectName="blockgrid").numberOfActions
-        game_seconds = lambda: self.app.select_single(objectName="blockgrid").gameSeconds
-
-        self.assertThat(number_of_hints, Eventually(Equals(0)))
-        self.assertThat(number_of_actions, Eventually(Equals(0)))
-        self.assertThat(game_seconds, Eventually(Equals(0)))
 
     def test_hint_button(self):
         #open settings tab
