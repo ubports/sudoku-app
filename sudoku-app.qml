@@ -39,7 +39,7 @@ MainView {
         applicationIdentifier: "sudoku-app" // this has to match the .desktop file!
         HUD.Context {*/
     actions: [
-        UnityActions.Action {
+        Action {
             text: i18n.tr("New game")
             keywords: i18n.tr("New game")
             onTriggered: {
@@ -47,7 +47,7 @@ MainView {
                 createNewGame()
             }
         },
-        UnityActions.Action {
+        Action {
             text: i18n.tr("Reveal hint")
             keywords: i18n.tr("Reveal hint")
             enabled: false
@@ -56,7 +56,7 @@ MainView {
                 revealHint()
             }
         },
-        UnityActions.Action {
+        Action {
             text: i18n.tr("Show settings")
             keywords: i18n.tr("Show settings")
             onTriggered: {
@@ -64,7 +64,7 @@ MainView {
                 revealHint()
             }
         },
-        UnityActions.Action {
+        Action {
             text: i18n.tr("Change difficulty to Easy")
             keywords: i18n.tr("Change difficulty to Easy")
             onTriggered: {
@@ -77,7 +77,7 @@ MainView {
                 createNewGame()
             }
         },
-        UnityActions.Action {
+        Action {
             text: i18n.tr("Change difficulty to Moderate")
             keywords: i18n.tr("Change difficulty to Moderate")
             onTriggered: {
@@ -90,7 +90,7 @@ MainView {
                 createNewGame()
             }
         },
-        UnityActions.Action {
+        Action {
             text: i18n.tr("Change difficulty to Hard")
             keywords: i18n.tr("Change difficulty to Hard")
             onTriggered: {
@@ -103,7 +103,7 @@ MainView {
                 createNewGame()
             }
         },
-        UnityActions.Action {
+        Action {
             text: i18n.tr("Change difficulty to Ultra Hard")
             keywords: i18n.tr("Change difficulty to Ultra Hard")
             onTriggered: {
@@ -116,7 +116,7 @@ MainView {
                 createNewGame()
             }
         },
-        UnityActions.Action {
+        Action {
             text: i18n.tr("Change theme to Simple")
             keywords: i18n.tr("Change theme to Simple")
             onTriggered: {
@@ -126,7 +126,7 @@ MainView {
                 sudokuBlocksGrid.changeColorScheme("ColorSchemeSimple.qml");
             }
         },
-        UnityActions.Action {
+        Action {
             text: i18n.tr("Change theme to UbuntuColors")
             keywords: i18n.tr("Change theme to UbuntuColors")
             onTriggered: {
@@ -136,7 +136,7 @@ MainView {
                 sudokuBlocksGrid.changeColorScheme("ColorSchemeUbuntu.qml");
             }
         },
-        UnityActions.Action {
+        Action {
             text: i18n.tr("Show scores for all users")
             keywords: i18n.tr("Show scores for all users")
             onTriggered: {
@@ -156,7 +156,7 @@ MainView {
                 }
             }
         },
-        UnityActions.Action {
+        Action {
             text: i18n.tr("Show scores for current user")
             keywords: i18n.tr("Show scores for current user")
             onTriggered: {
