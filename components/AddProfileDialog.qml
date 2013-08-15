@@ -30,6 +30,10 @@ Component {
                     anchors.fill: parent
                     placeholderText: i18n.tr("Lastname")
                     color: "white"
+                    onFocusChanged: {
+                        if (lastnameField.focus)
+                            color = UbuntuColors.warmGrey
+                    }
                 }
             }
             UbuntuShape{
@@ -44,6 +48,10 @@ Component {
                     anchors.fill: parent
                     placeholderText: i18n.tr("Firstname")
                     color: "white"
+                    onFocusChanged: {
+                        if (firstnameField.focus)
+                            color = UbuntuColors.warmGrey
+                    }
                 }
             }
 
