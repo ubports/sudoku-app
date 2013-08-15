@@ -938,6 +938,8 @@ MainView {
                         objectName: "yearLabel"
                         font.bold: true;
                         text: "2013"
+
+
                     }
                 }
             }

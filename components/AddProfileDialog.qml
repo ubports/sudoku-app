@@ -8,6 +8,7 @@ Component {
     id: addProfileDialog
 
     Dialog {
+        objectName: "Add new profile"
         id: addProfileDialogue
         title: i18n.tr("Add new profile")
         width: parent.width
@@ -24,6 +25,7 @@ Component {
                 color: "#AEA79F"
                 anchors.horizontalCenter: parent.horizontalCenter
                 TextField {
+                    objectName: "Lastname"
                     id:lastnameField
                     anchors.fill: parent
                     placeholderText: i18n.tr("Lastname")
@@ -37,6 +39,7 @@ Component {
                 color: "#AEA79F"
                 anchors.horizontalCenter: parent.horizontalCenter
                 TextField {
+                    objectName: "Firstname"
                     id:firstnameField
                     anchors.fill: parent
                     placeholderText: i18n.tr("Firstname")
@@ -50,6 +53,7 @@ Component {
                 spacing: units.gu(1)
 
                 SudokuDialogButton{
+                    objectName: "OKbutton"
                     id:okButton
                     buttonText: i18n.tr("OK")
                     width: parent.width/2;
