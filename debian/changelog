@@ -1,3 +1,9 @@
+sudoku-app (0.4.2ubuntu2) raring; urgency=low
+
+  * Fixed some autopilot issues
+
+ -- Dinko Osmankovic <dinko.metalac@gmail.com>  Fri, 16 Aug 2013 10:40:26 +0200
+
 sudoku-app (0.4.2ubuntu1) raring; urgency=low
 
   * Font size fix
