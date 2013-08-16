@@ -865,27 +865,29 @@ MainView {
             objectName: "aboutTab"
             title: i18n.tr("About")
             page: Page {
-
                 Column {
                     id: aboutColumn;
-                    spacing: 5;
+                    spacing: units.gu(4)
                     //anchors.fill: parent
-                    anchors.horizontalCenter: parent.horizontalCenter;
+                    //anchors.horizontalCenter: parent.horizontalCenter;
+                    width: parent.width
                     y: units.gu(8);
                     Image {
                         objectName: "aboutImage"
                         property real maxWidth: units.gu(100)
                         anchors.horizontalCenter: parent.horizontalCenter
-                        width: Math.min(mainView.width, maxWidth)/1.75
+                        width: Math.min(mainView.width, maxWidth)/2
                         //height: width
                         source: "icons/sudoko-vector-about.svg"
                         smooth: true
                         fillMode: Image.PreserveAspectFit
 
                     }
-                    Row {
-                        //anchors.horizontalCenter: parent.horizontalCenter;
-                        anchors.left: aboutColumn.left
+                    Grid {
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        columns: 2
+                        rowSpacing: units.gu(2)
+                        columnSpacing: mainView.width/10
                         Label {
                             objectName: "authorLabel"
                             text: i18n.tr("Author(s): ")
@@ -896,9 +898,6 @@ MainView {
                             font.bold: true;
                             text: "Dinko Osmankovic\nFr\u00e9d\u00e9ric Delgado\nGeorgi Karavasilev"
                         }
-                    }
-                    Row {
-                        anchors.horizontalCenter: parent.horizontalCenter;
                         Label {
                             objectName: "contactLabel"
                             text: i18n.tr("Contact: ")
@@ -906,9 +905,11 @@ MainView {
                         Label {
                             objectName: "contacts"
                             font.bold: true;
-                            text: "Dinko Osmankovic\nFrédéric Delgado\nGeorgi Karavasilev"
+                            text: "dinko.metalac@gmail.com"
                         }
+
                     }
+
                     Row {
                         id: homepage;
                         anchors.horizontalCenter: parent.horizontalCenter;
@@ -919,31 +920,27 @@ MainView {
                             onLinkActivated: Qt.openUrlExternally(link)
                         }
                     }
-                }
-                Row {
-                    anchors.horizontalCenter: parent.horizontalCenter;
-                    anchors.top: aboutColumn.bottom;
-                    anchors.topMargin: units.gu(5);
-                    Label {
-                        objectName: "versionLabel"
-                        text: i18n.tr("Version: ")
+                    Row {
+                        anchors.horizontalCenter: parent.horizontalCenter;
+                        Label {
+                            objectName: "versionLabel"
+                            text: i18n.tr("Version: ")
+                        }
+                        Label {
+                            objectName: "version"
+                            font.bold: true;
+                            text: "0.4"
+                        }
                     }
-                    Label {
-                        objectName: "version"
-                        font.bold: true;
-                        text: "0.4"
-                    }
-                }
-                Row {
-                    anchors.horizontalCenter: parent.horizontalCenter;
-                    anchors.top: aboutColumn.bottom;
-                    anchors.topMargin: units.gu(8);
-                    Label {
-                        objectName: "yearLabel"
-                        font.bold: true;
-                        text: "2013"
+                    Row {
+                        anchors.horizontalCenter: parent.horizontalCenter;
+                        Label {
+                            objectName: "yearLabel"
+                            font.bold: true;
+                            text: "2013"
 
 
+                        }
                     }
                 }
             }
