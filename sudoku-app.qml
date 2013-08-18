@@ -299,6 +299,101 @@ MainView {
         }
     }
 
+    Component {
+        id: newGameComponent
+        Dialog {
+            id: newGameDialogue
+            title: i18n.tr("New Game")
+            text: i18n.tr("Select difficulty level")
+
+            Column {
+                spacing: units.gu(5)
+                Grid {
+                    rowSpacing: units.gu(3)
+                    columnSpacing: units.gu(3)
+                    columns: 2
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    NewGameSelectionButton {
+                        id: easyGameButton
+                        objectName: "easyGameButton"
+                        buttonText: i18n.tr("Easy")
+                        opacity: 0.8
+                        width: mainView.width/4
+                        height: width
+                        onTriggered: {
+                            //print("EASY")
+                            var randomnumber = Math.floor(Math.random()*9);
+                            randomnumber += 31;
+                            sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                            PopupUtils.close(newGameDialogue)
+                        }
+                    }
+                    NewGameSelectionButton {
+                        id: moderateGameButton
+                        objectName: "moderateGameButton"
+                        buttonText: i18n.tr("Moderate")
+                        opacity: 0.8
+                        width: mainView.width/4
+                        height: width
+                        onTriggered: {
+                            //print("EASY")
+                            var randomnumber = Math.floor(Math.random()*4);
+                            randomnumber += 26;
+                            sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                            PopupUtils.close(newGameDialogue)
+                        }
+                    }
+                    NewGameSelectionButton {
+                        id: hardGameButton
+                        objectName: "hardGameButton"
+                        buttonText: i18n.tr("Hard")
+                        opacity: 0.8
+                        width: mainView.width/4
+                        height: width
+                        onTriggered: {
+                            //print("EASY")
+                            var randomnumber = Math.floor(Math.random()*4);
+                            randomnumber += 21;
+                            sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                            PopupUtils.close(newGameDialogue)
+                        }
+                    }
+                    NewGameSelectionButton {
+                        id: ultrahardGameButton
+                        objectName: "ultrahardGameButton"
+                        buttonText: i18n.tr("Ultra\nHard")
+                        opacity: 0.8
+                        width: mainView.width/4
+                        height: width
+                        onTriggered: {
+                            //print("EASY")
+                            var randomnumber = Math.floor(Math.random()*3);
+                            randomnumber += 17;
+                            sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                            PopupUtils.close(newGameDialogue)
+                        }
+                    }
+
+                }
+
+                SudokuDialogButton{
+                    buttonText: i18n.tr("Cancel")
+                    width: parent.width/2;
+                    size: units.gu(5)
+                    buttonColor: sudokuBlocksGrid.dialogButtonColor1
+                    textColor: sudokuBlocksGrid.dialogButtonTextColor
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    //border.color: "transparent"
+                    onTriggered: {
+                        PopupUtils.close(newGameDialogue)
+                    }
+                }
+
+            }
+
+        }
+    }
+
     function showAlert(title, text, caller)
     {
         alertTitle = title
@@ -436,7 +531,11 @@ MainView {
                             onTriggered: {
                                 if(gameFinishedRectangle.visible) gameFinishedRectangle.visible = false;
                                 //print("new block distance:", blockDistance);
-                                createNewGame()
+                                //createNewGame()
+                                if (settingsTab.difficultyIndex == 4)
+                                    PopupUtils.open(newGameComponent)
+                                else
+                                    createNewGame()
                             }
                         }
                     }
@@ -712,8 +811,8 @@ MainView {
                     ListItem.ValueSelector {
                         objectName: "difficultySelector"
                         id: difficultySelector
-                        text: i18n.tr("Difficulty")
-                        values: [i18n.tr("Easy"), i18n.tr("Moderate"), i18n.tr("Hard"), i18n.tr("Ultra Hard")]
+                        text: i18n.tr("Default Difficulty")
+                        values: [i18n.tr("Easy"), i18n.tr("Moderate"), i18n.tr("Hard"), i18n.tr("Ultra Hard"), i18n.tr("Always ask")]
                         onSelectedIndexChanged: {
                             //print(difficultySelector.selectedIndex)
                             switch(difficultySelector.selectedIndex) {
@@ -739,6 +838,9 @@ MainView {
                                 var randomnumber = Math.floor(Math.random()*3);
                                 randomnumber += 17;
                                 sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                                Settings.setSetting("Difficulty", selectedIndex)
+                                break;
+                            case 4:
                                 Settings.setSetting("Difficulty", selectedIndex)
                                 break;
                             }
