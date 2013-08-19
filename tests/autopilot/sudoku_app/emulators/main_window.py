@@ -60,7 +60,7 @@ class MainWindow(object):
 
     def get_current_profile(self):
         return self.app.select_single("SingleValue", objectName="Current profile")
-
+        
     def get_select_profile_sheet(self):
         return self.app.select_single("DefaultSheet", title="Select profile")
 
@@ -96,6 +96,18 @@ class MainWindow(object):
 
     def get_edit_profile_delete_button(self):
         return self.app.select_single("SudokuDialogButton", objectName ="deleteButton")
+        
+	def get_new_game_easy_button(self):
+        return self.app.select_single("NewGameSelectionButton", objectName ="easyGameButton")
+        
+    def get_new_game_moderate_button(self):
+        return self.app.select_single("NewGameSelectionButton", objectName ="moderateGameButton")
+        
+    def get_new_game_hard_button(self):
+        return self.app.select_single("NewGameSelectionButton", objectName ="hardGameButton")
+        
+    def get_new_game_ultrahard_button(self):
+        return self.app.select_single("NewGameSelectionButton", objectName ="ultrahardGameButton")
 
     def try_OK_Button(self):
         try:
@@ -112,6 +124,30 @@ class MainWindow(object):
     def try_delete_Button(self):
         try:
             return self.get_edit_profile_delete_button().buttonText
+        except StateNotFoundError:
+            return None
+            
+    def try_new_game_easy_button(self):
+		try:
+            return self.get_new_game_easy_button().buttonText
+        except StateNotFoundError:
+            return None		
+            
+    def try_new_game_moderate_button(self):
+		try:
+            return self.get_new_game_moderate_button().buttonText
+        except StateNotFoundError:
+            return None
+            
+    def try_new_game_hard_button(self):
+		try:
+            return self.get_new_game_hard_button().buttonText
+        except StateNotFoundError:
+            return None
+            
+    def try_new_game_ultrahard_button(self):
+		try:
+            return self.get_new_game_ultrahard_button().buttonText
         except StateNotFoundError:
             return None
 

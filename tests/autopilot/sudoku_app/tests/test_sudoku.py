@@ -130,8 +130,23 @@ class TestMainWindow(SudokuTestCase):
 
 
     def test_new_game_button(self):
-        self.ubuntusdk.click_toolbar_button("newgamebutton")
+		self.open_and_check_settings_tab()		
+		difficultySelector = self.main_window.get_difficulty_selector()
+		self.pointing_device.click_object(difficultySelector)
+		difficultyChoices = self.main_window.get_difficulty_selector_labelvisual()
+		difficultyChoice = difficultyChoices[3]
+        self.assertThat(difficultyChoice.text, Eventually(Equals("Moderate")))
 
+        self.pointing_device.click_object(difficultyChoice)
+        self.verify_settings_tab_open()
+        self.ubuntusdk.switch_to_tab(0)
+
+        #verify settings sudoku tab is open
+        self.verify_settings_tab_open()
+        
+        #testing new game with moderate mode        
+        self.ubuntusdk.click_toolbar_button("newgamebutton")
+        
         number_of_hints = lambda: self.app.select_single(objectName="blockgrid").numberOfHints
         number_of_actions = lambda: self.app.select_single(objectName="blockgrid").numberOfActions
         game_seconds = lambda: self.app.select_single(objectName="blockgrid").gameSeconds
@@ -139,6 +154,90 @@ class TestMainWindow(SudokuTestCase):
         self.assertThat(number_of_hints, Eventually(Equals(0)))
         self.assertThat(number_of_actions, Eventually(Equals(0)))
         self.assertThat(game_seconds, Eventually(Equals(0)))
+        
+        #----------------------------------------------------------
+        
+        self.open_and_check_settings_tab()		
+		difficultySelector = self.main_window.get_difficulty_selector()
+		self.pointing_device.click_object(difficultySelector)
+		difficultyChoices = self.main_window.get_difficulty_selector_labelvisual()
+		difficultyChoice = difficultyChoices[6]
+		self.assertThat(difficultyChoice.text, Eventually(Equals("Always ask")))
+
+        self.pointing_device.click_object(difficultyChoice)
+        self.verify_settings_tab_open()
+        self.ubuntusdk.switch_to_tab(0)
+
+        #verify settings sudoku tab is open
+        self.verify_settings_tab_open()
+        
+        #testing new game with always ask mode - easy
+        self.ubuntusdk.click_toolbar_button("newgamebutton")
+        
+        newGameEasyButton = self.main_window.get_new_game_easy_button()
+        self.main_window.try_new_game_easy_button()
+        self.assertThat(newGameEasyButton.buttonText, Eventually(Equals("Easy")))
+        self.pointing_device.click_object(newGameEasyButton)
+        
+        number_of_hints = lambda: self.app.select_single(objectName="blockgrid").numberOfHints
+        number_of_actions = lambda: self.app.select_single(objectName="blockgrid").numberOfActions
+        game_seconds = lambda: self.app.select_single(objectName="blockgrid").gameSeconds
+
+        self.assertThat(number_of_hints, Eventually(Equals(0)))
+        self.assertThat(number_of_actions, Eventually(Equals(0)))
+        self.assertThat(game_seconds, Eventually(Equals(0)))
+        
+        #----------------------------------------------------------
+        #testing new game with always ask mode - moderate
+        self.ubuntusdk.click_toolbar_button("newgamebutton")
+        
+        newGameModerateButton = self.main_window.get_new_game_moderate_button()
+        self.main_window.try_new_game_moderate_button()
+        self.assertThat(newGameModerateButton.buttonText, Eventually(Equals("Moderate")))
+        self.pointing_device.click_object(newGameModerateButton)
+        
+        number_of_hints = lambda: self.app.select_single(objectName="blockgrid").numberOfHints
+        number_of_actions = lambda: self.app.select_single(objectName="blockgrid").numberOfActions
+        game_seconds = lambda: self.app.select_single(objectName="blockgrid").gameSeconds
+
+        self.assertThat(number_of_hints, Eventually(Equals(0)))
+        self.assertThat(number_of_actions, Eventually(Equals(0)))
+        self.assertThat(game_seconds, Eventually(Equals(0)))
+        
+        #----------------------------------------------------------
+        #testing new game with always ask mode - hard
+        self.ubuntusdk.click_toolbar_button("newgamebutton")
+        
+        newGameHardButton = self.main_window.get_new_game_hard_button()
+        self.main_window.try_new_game_hard_button()
+        self.assertThat(newGameHardButton.buttonText, Eventually(Equals("Hard")))
+        self.pointing_device.click_object(newGameHardButton)
+        
+        number_of_hints = lambda: self.app.select_single(objectName="blockgrid").numberOfHints
+        number_of_actions = lambda: self.app.select_single(objectName="blockgrid").numberOfActions
+        game_seconds = lambda: self.app.select_single(objectName="blockgrid").gameSeconds
+
+        self.assertThat(number_of_hints, Eventually(Equals(0)))
+        self.assertThat(number_of_actions, Eventually(Equals(0)))
+        self.assertThat(game_seconds, Eventually(Equals(0)))
+        
+        #----------------------------------------------------------
+        #testing new game with always ask mode - ultra hard
+        self.ubuntusdk.click_toolbar_button("newgamebutton")
+        
+        newGameUltraHardButton = self.main_window.get_new_game_ultrahard_button()
+        self.main_window.try_new_game_ultrahard_button()
+        self.assertThat(newGameUltraHardButton.buttonText, Eventually(Equals("Ultra\nHard")))
+        self.pointing_device.click_object(newGameUltraHardButton)
+        
+        number_of_hints = lambda: self.app.select_single(objectName="blockgrid").numberOfHints
+        number_of_actions = lambda: self.app.select_single(objectName="blockgrid").numberOfActions
+        game_seconds = lambda: self.app.select_single(objectName="blockgrid").gameSeconds
+
+        self.assertThat(number_of_hints, Eventually(Equals(0)))
+        self.assertThat(number_of_actions, Eventually(Equals(0)))
+        self.assertThat(game_seconds, Eventually(Equals(0)))
+        
 
     def test_about_tab(self):
         #Switch to the 'About' tab
