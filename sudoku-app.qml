@@ -326,6 +326,7 @@ MainView {
                             randomnumber += 31;
                             sudokuBlocksGrid.createNewGame(81 - randomnumber);
                             PopupUtils.close(newGameDialogue)
+                            toolbar.opened = false;
                         }
                     }
                     NewGameSelectionButton {
@@ -341,6 +342,7 @@ MainView {
                             randomnumber += 26;
                             sudokuBlocksGrid.createNewGame(81 - randomnumber);
                             PopupUtils.close(newGameDialogue)
+                            toolbar.opened = false;
                         }
                     }
                     NewGameSelectionButton {
@@ -356,6 +358,7 @@ MainView {
                             randomnumber += 21;
                             sudokuBlocksGrid.createNewGame(81 - randomnumber);
                             PopupUtils.close(newGameDialogue)
+                            toolbar.opened = false;
                         }
                     }
                     NewGameSelectionButton {
@@ -371,6 +374,7 @@ MainView {
                             randomnumber += 17;
                             sudokuBlocksGrid.createNewGame(81 - randomnumber);
                             PopupUtils.close(newGameDialogue)
+                            toolbar.opened = false;
                         }
                     }
 

@@ -172,6 +172,7 @@ class TestMainWindow(SudokuTestCase):
         self.verify_settings_tab_open()
         
         #testing new game with always ask mode - easy
+        self.ubuntusdk.open_toolbar()
         self.ubuntusdk.click_toolbar_button("newgamebutton")
         
         newGameEasyButton = self.main_window.get_new_game_easy_button()
@@ -189,6 +190,7 @@ class TestMainWindow(SudokuTestCase):
         
         #----------------------------------------------------------
         #testing new game with always ask mode - moderate
+        self.ubuntusdk.open_toolbar()
         self.ubuntusdk.click_toolbar_button("newgamebutton")
         
         newGameModerateButton = self.main_window.get_new_game_moderate_button()
@@ -206,6 +208,7 @@ class TestMainWindow(SudokuTestCase):
         
         #----------------------------------------------------------
         #testing new game with always ask mode - hard
+        self.ubuntusdk.open_toolbar()
         self.ubuntusdk.click_toolbar_button("newgamebutton")
         
         newGameHardButton = self.main_window.get_new_game_hard_button()
@@ -223,6 +226,7 @@ class TestMainWindow(SudokuTestCase):
         
         #----------------------------------------------------------
         #testing new game with always ask mode - ultra hard
+        self.ubuntusdk.open_toolbar()
         self.ubuntusdk.click_toolbar_button("newgamebutton")
         
         newGameUltraHardButton = self.main_window.get_new_game_ultrahard_button()
