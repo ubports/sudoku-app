@@ -4,12 +4,14 @@ import Ubuntu.Components.Popups 0.1
 
 import "../js/SudokuCU.js" as SudokuCU
 
-Rectangle {
+Column {
     id: mainRectangle;
-    x:3
-    y:3
-    anchors.fill: parent;
-    color: "transparent"
+    //x:3
+    //y:3
+    //anchors.fill: parent;
+    //anchors.horizontalCenter: parent.horizontalCenter
+    //color: "transparent"
+    spacing: units.gu(5)
 
     property alias defaultColor: colorScheme.defaultColor;
     property alias defaultStartingColor : colorScheme.defaultStartingColor
@@ -34,6 +36,7 @@ Rectangle {
     property var solution;
     property bool alreadyCreated: mainView.alreadyCreated;
     property bool checkIfCheating: false;
+    property real blockSize: mainView.width/mainView.height < 0.6 ? mainView.pageWidth/10: units.gu(50)/10;
 
     // ********* SCORES ENGINE VARIABLES ***************
 
@@ -290,7 +293,7 @@ Rectangle {
 
     Item {
         //anchors.fill: mainRectangle.parent;
-        y: 3
+        //y: 3
 
         Item {
 
@@ -311,16 +314,18 @@ Rectangle {
                     //title: "Number Picker"
                     text: i18n.tr("Please pick a number")
 
-                    Column {
-                        spacing: units.gu(5)
+                    //Column {
+                    //    spacing: units.gu(5)
+                        //x: -units.gu(1)
 
 
                         SudokuDialogButton{
                             id: clearButton
                             buttonText: i18n.tr("Clear")
-                            width: mainView.pageWidth*2/3;
+                            width: mainView.width/mainView.height < 0.6 ? mainView.pageWidth*2/3: units.gu(50)*2/3
                             size: units.gu(5)
-                            anchors.left: parent.left;
+                            //anchors.left: parent.left;
+                            //anchors.horizontalCenter: parent
                             buttonColor: dialogButtonColor1
                             textColor: dialogButtonTextColor
                             //border.color: "transparent"
@@ -329,7 +334,7 @@ Rectangle {
                                 buttonsGrid.itemAt(currentX).buttonText = "";
                                 var row = Math.floor(currentX/9);
                                 var column = currentX%9;
-                                print (row, column);
+                                //print (row, column);
                                 grid.setValue(column,row, 0);
                                 buttonsGrid.itemAt(currentX).buttonColor = defaultColor;
                                 buttonsGrid.itemAt(currentX).boldText = false;
@@ -341,14 +346,16 @@ Rectangle {
 
                         Grid {
                             columns: 3;
-                            x: clearButton.width / 6;
+                            x: clearButton.x + 0.5*(clearButton.width - 4*units.gu(5))
                             spacing: units.gu(2);
-                            width: units.gu(15);
-                            //anchors.horizontalCenter: dialog.horizontalCenter
+                            //width: mainView.width/mainView.height < 0.6 ? mainView.pageWidth*2/3: units.gu(50)*2/3;
+                            //anchors.horizontalCenter: clearButton.horizontalCenter
+                            //anchors.horizontalCenter: parent
 
                             Repeater {
                                 id: numberPickerButtons
                                 model:9
+                                anchors.centerIn: parent
 
 
                                 SudokuDialogButton{
@@ -406,9 +413,11 @@ Rectangle {
 
                         SudokuDialogButton{
                             buttonText: i18n.tr("Cancel")
-                            width: mainView.pageWidth*2/3;
+                            width: mainView.width/mainView.height < 0.6 ? mainView.pageWidth*2/3: units.gu(50)*2/3
                             size: units.gu(5)
-                            anchors.left: parent.left;
+                            //anchors.left: parent.left;
+                            //anchors.horizontalCenter: parent
+                            anchors.leftMargin: units.gu(10)
                             buttonColor: dialogButtonColor2
                             textColor: dialogButtonTextColor
                             //border.color: "transparent"
@@ -418,7 +427,7 @@ Rectangle {
                             }
                         }
 
-                    }
+                    //}
 
                 }
             }
@@ -434,81 +443,5 @@ Rectangle {
 
         }
     }
-
-    Row {
-
-        id: informationRow;
-        y: 7*mainView.pageHeight/10;
-        x: units.dp(8);
-        width: mainView.pageWidth - units.dp(8);
-        Rectangle {
-            id: redFlagRect
-            x: 0
-            UbuntuShape {
-                id: redFlag
-                color: defaultNotAllowedColor
-                width: mainView.pageWidth/10;
-                height: mainView.pageWidth/10;
-                //border.color: defaultBorderColor
-                radius: "medium"
-                Label {
-                    id: redFlagText
-                    text: i18n.tr("Not allowed")
-                    fontSize: "x-small"
-                    width:units.gu(5);
-                    wrapMode: TextEdit.WordWrap;
-                    anchors.left: redFlag.right;
-                    anchors.leftMargin: units.dp(2);
-                    anchors.verticalCenter: redFlag.verticalCenter;
-                }
-            }
-
-        }
-        Rectangle {
-            id: blueFlagRect
-            x: 3*mainView.pageWidth/10 + 10*blockDistance;
-            //anchors.leftMargin: redFlag.width + redFlagText.width;
-            UbuntuShape {
-                id: blueFlag
-                color: defaultStartingColor
-                //border.color: defaultBorderColor
-                width: mainView.pageWidth/10
-                height: mainView.pageWidth/10
-                radius: "medium";
-                Label {
-                    id: blueFlagText
-                    text: i18n.tr("Start blocks")
-                    fontSize: "x-small"
-                    width:units.gu(5);
-                    wrapMode: TextEdit.WordWrap;
-                    anchors.left: blueFlag.right;
-                    anchors.leftMargin: units.dp(2);
-                    anchors.verticalCenter: blueFlag.verticalCenter;
-                }
-            }
-
-        }
-        Rectangle {
-            id: orangeFlagRect
-            x:  7*mainView.pageWidth/10+2*blockDistance;
-            UbuntuShape {
-                id: orangeFlag
-                color: defaultHintColor
-                //border.color: defaultBorderColor
-                width: mainView.pageWidth/10
-                height: mainView.pageWidth/10
-                radius: "medium";
-                Label {
-                    text: i18n.tr("Hinted blocks")
-                    fontSize: "x-small"
-                    width:units.gu(5);
-                    wrapMode: TextEdit.WordWrap;
-                    anchors.left: orangeFlag.right;
-                    anchors.leftMargin: units.dp(2);
-                    anchors.verticalCenter: orangeFlag.verticalCenter;
-                }
-            }
-
-        }
-    }
 }
+

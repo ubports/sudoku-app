@@ -17,7 +17,7 @@ MainView {
     property real pageWidth: units.gu(40);
     property real pageHeight: units.gu(71);
 
-    property real blockDistance: pageWidth/200;
+    property real blockDistance: mainView.width/mainView.height < 0.6 ? mainView.pageWidth/200: units.gu(60)/200;
     property bool alreadyCreated: false;
     property bool gridLoaded: false;
     property int currentUserId: -1;
@@ -28,8 +28,8 @@ MainView {
 
     property int editUserId : -1;
 
-    width: pageWidth;
-    height: pageHeight;
+    width: units.gu(40);
+    height: units.gu(71);
 
     //headerColor: sudokuBlocksGrid.headerColor
     //backgroundColor: sudokuBlocksGrid.backgroundColor
@@ -244,9 +244,11 @@ MainView {
         }
     }
 
-    function newSize(width, height) {
-        pageWidth = width;
-        pageHeight = height;
+    function newSize(widthn, heightn) {
+        pageWidth = widthn;
+        pageHeight = heightn;
+        width = widthn
+        height = heightn
         //print(height," x ", width);
     }
 
@@ -318,7 +320,7 @@ MainView {
                         objectName: "easyGameButton"
                         buttonText: i18n.tr("Easy")
                         opacity: 0.8
-                        width: mainView.width/4
+                        width: mainView.width/mainView.height < 0.6 ? mainView.pageWidth/4: units.gu(50)/4;
                         height: width
                         onTriggered: {
                             //print("EASY")
@@ -334,7 +336,7 @@ MainView {
                         objectName: "moderateGameButton"
                         buttonText: i18n.tr("Moderate")
                         opacity: 0.8
-                        width: mainView.width/4
+                        width: mainView.width/mainView.height < 0.6 ? mainView.pageWidth/4: units.gu(50)/4;
                         height: width
                         onTriggered: {
                             //print("EASY")
@@ -350,7 +352,7 @@ MainView {
                         objectName: "hardGameButton"
                         buttonText: i18n.tr("Hard")
                         opacity: 0.8
-                        width: mainView.width/4
+                        width: mainView.width/mainView.height < 0.6 ? mainView.pageWidth/4: units.gu(50)/4;
                         height: width
                         onTriggered: {
                             //print("EASY")
@@ -366,7 +368,7 @@ MainView {
                         objectName: "ultrahardGameButton"
                         buttonText: i18n.tr("Ultra\nHard")
                         opacity: 0.8
-                        width: mainView.width/4
+                        width: mainView.width/mainView.height < 0.6 ? mainView.pageWidth/4: units.gu(50)/4;
                         height: width
                         onTriggered: {
                             //print("EASY")
@@ -382,7 +384,7 @@ MainView {
 
                 SudokuDialogButton{
                     buttonText: i18n.tr("Cancel")
-                    width: parent.width/2;
+                    width: mainView.width/mainView.height < 0.6 ? mainView.pageWidth*2/3: units.gu(50)*2/3
                     size: units.gu(5)
                     buttonColor: sudokuBlocksGrid.dialogButtonColor1
                     textColor: sudokuBlocksGrid.dialogButtonTextColor
@@ -407,11 +409,20 @@ MainView {
     }
 
     onHeightChanged: {
-        if (!gridLoaded)
+        print(height,width, width/height)
+        print(sudokuBlocksGrid.width)
+        if (!gridLoaded && width/height > 0.6)
             return;
         newSize(mainView.width, mainView.height);
-
-        //sudokuBlocksGrid = Qt.createComponent(Qt.resolvedUrl("SudokuBlocksGrid.qml"))
+        sudokuBlocksGrid = Qt.createComponent(Qt.resolvedUrl("SudokuBlocksGrid.qml"))
+    }
+    onWidthChanged: {
+        print(height,width, width/height)
+        print(sudokuBlocksGrid.width)
+        if (!gridLoaded && width/height > 0.6)
+            return;
+        newSize(mainView.width, mainView.height);
+        sudokuBlocksGrid = Qt.createComponent(Qt.resolvedUrl("SudokuBlocksGrid.qml"))
     }
 
     Component.onCompleted: {
@@ -564,21 +575,94 @@ MainView {
                     */
                 }
 
-                Column {
-                    id: mainColumn;
-                    //width: mainView.width;
-                    //height: mainView.height;
-                    anchors.left: parent.left;
-                    anchors.leftMargin: units.dp(3)
-                    spacing: units.gu(5)
+                //Column {
+                //    id: mainColumn;
+                //width: mainView.width;
+                //height: mainView.height;
+                //anchors.left: parent.left;
+                //anchors.leftMargin: units.dp(3)
+                //anchors.fill: parent
+                //spacing: units.gu(5)
 
-                    SudokuBlocksGrid {
-                        id: sudokuBlocksGrid;
-                        objectName: "blockgrid"
+                SudokuBlocksGrid {
+                    id: sudokuBlocksGrid;
+                    objectName: "blockgrid"
+                    //x: units.dp(3)
+                    x: 0.5*(mainView.width-9*sudokuBlocksGrid.blockSize-
+                            22*sudokuBlocksGrid.blockDistance)
+                }
 
+                Grid {
+                    id: informationRow;
+                    y: 7*mainView.pageHeight/10;
+                    //x: units.dp(8);
+                    //width: mainView.pageWidth - units.dp(8);
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    columns: 3
+                    columnSpacing: mainView.width/mainView.height < 0.6 ? mainView.width/6 : units.gu(50)/6
+                    UbuntuShape {
+                        id: redFlag
+                        color: sudokuBlocksGrid.defaultNotAllowedColor
+                        width: mainView.width/mainView.height < 0.6 ? 2*mainView.pageWidth/10: 2*units.gu(50)/10
+                        height: mainView.width/mainView.height < 0.6 ? mainView.pageWidth/10: units.gu(50)/10
+                        //border.color: defaultBorderColor
+                        //radius: "medium"
+                        Label {
+                            id: redFlagText
+                            text: i18n.tr("Not allowed")
+                            fontSize: "x-small"
+                            width:units.gu(5);
+                            wrapMode: TextEdit.WordWrap;
+                            horizontalAlignment: Text.AlignHCenter
+                            anchors.centerIn: parent
+                            //                                    anchors.left: redFlag.right;
+                            //                                    anchors.leftMargin: units.dp(2);
+                            //                                    anchors.verticalCenter: redFlag.verticalCenter;
+                        }
+                    }
+                    UbuntuShape {
+                        id: blueFlag
+                        color: sudokuBlocksGrid.defaultStartingColor
+                        //border.color: defaultBorderColor
+                        width: mainView.width/mainView.height < 0.6 ? 2*mainView.pageWidth/10: 2*units.gu(50)/10
+                        height: mainView.width/mainView.height < 0.6 ? mainView.pageWidth/10: units.gu(50)/10
+                        //radius: "medium";
+                        Label {
+                            id: blueFlagText
+                            text: i18n.tr("Start blocks")
+                            fontSize: "x-small"
+                            width:units.gu(5);
+                            wrapMode: TextEdit.WordWrap;
+                            horizontalAlignment: Text.AlignHCenter
+                            anchors.centerIn: parent
+                            //                                    anchors.left: blueFlag.right;
+                            //                                    anchors.leftMargin: units.dp(2);
+                            //                                    anchors.verticalCenter: blueFlag.verticalCenter;
+                        }
                     }
 
+                    UbuntuShape {
+                        id: orangeFlag
+                        color: sudokuBlocksGrid.defaultHintColor
+                        //border.color: defaultBorderColor
+                        width: mainView.width/mainView.height < 0.6 ? 2*mainView.pageWidth/10: 2*units.gu(50)/10
+                        height: mainView.width/mainView.height < 0.6 ? mainView.pageWidth/10: units.gu(50)/10
+                        //radius: "medium";
+                        Label {
+                            text: i18n.tr("Hinted blocks")
+                            fontSize: "x-small"
+                            width:units.gu(5);
+                            wrapMode: TextEdit.WordWrap;
+                            horizontalAlignment: Text.AlignHCenter
+                            anchors.centerIn: parent
+                            //                                    anchors.left: orangeFlag.right;
+                            //                                    anchors.leftMargin: units.dp(2);
+                            //                                    anchors.verticalCenter: orangeFlag.verticalCenter;
+                        }
+                    }
                 }
+
+                //}
             }
 
         }
@@ -706,7 +790,7 @@ MainView {
 
 
                             Column{
-                                height: mainColumnSettings.height
+                                height: mainColumnSettings.height*2/3
                                 ListView {
 
                                     id: profileListView
@@ -754,7 +838,7 @@ MainView {
                             title: i18n.tr("Select profile")
 
                             Column{
-                                height: mainColumnSettings.height
+                                height: mainColumnSettings.height*2/3
                                 ListView {
                                     id: manageProfileListView
                                     clip: true

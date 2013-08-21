@@ -19,7 +19,7 @@ Component {
             spacing: units.gu(2)
 
             UbuntuShape{
-                width: mainView.width/3*2
+                width: parent.width - units.gu(4)
                 height: mainView.height/18
                 radius: "medium"
                 color: "#AEA79F"
@@ -37,7 +37,7 @@ Component {
                 }
             }
             UbuntuShape{
-                width: mainView.width/3*2
+                width: parent.width - units.gu(4)
                 height: mainView.height/18
                 radius: "medium"
                 color: "#AEA79F"
