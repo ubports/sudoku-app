@@ -119,6 +119,7 @@ class ubuntusdk(object):
 
     def open_toolbar(self):
         """Open the toolbar"""
+        panel = self.app.select_single("Toolbar")
         qmlView = self.get_qml_view()
 
         lineX = int(qmlView.x + qmlView.width * 0.50)
@@ -126,9 +127,12 @@ class ubuntusdk(object):
         stopY = int(qmlView.y + qmlView.height * 0.95)
 
         self.autopilot.pointing_device.drag(lineX, startY, lineX, stopY)
+        panel.animating.wait_for(False)
+        panel.state.wait_for("spread")
 
     def hide_toolbar(self):
         """Hide the toolbar"""
+        panel = self.app.select_single("Toolbar")
         qmlView = self.get_qml_view()
 
         lineX = int(qmlView.x + qmlView.width * 0.50)
@@ -136,6 +140,8 @@ class ubuntusdk(object):
         stopY = int(qmlView.y + qmlView.height - 1)
 
         self.autopilot.pointing_device.drag(lineX, startY, lineX, stopY)
+        panel.animating.wait_for(False)
+        panel.state.wait_for("")
 
     def set_popup_value(self, popover, button, value):
         """Changes the given popover selector to the request value

@@ -57,6 +57,7 @@ Rectangle {
         gameSeconds = 0;
         numberOfActions = 0;
         numberOfHints = 0;
+        print(gameSeconds,numberOfActions,numberOfHints)
     }
 
 
