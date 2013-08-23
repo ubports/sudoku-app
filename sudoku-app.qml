@@ -120,7 +120,7 @@ MainView {
             text: i18n.tr("Change theme to Simple")
             keywords: i18n.tr("Change theme to Simple")
             onTriggered: {
-                print("Simple")
+                //print("Simple")
                 var result = Settings.setSetting("ColorTheme", 1);
                 //print(result);
                 sudokuBlocksGrid.changeColorScheme("ColorSchemeSimple.qml");
@@ -196,10 +196,10 @@ MainView {
                         + sudokuBlocksGrid.calculateScore()
                         + " " + i18n.tr("points.")
 
-                print (sudokuBlocksGrid.numberOfActions)
-                print (sudokuBlocksGrid.numberOfHints)
-                print (sudokuBlocksGrid.gameSeconds)
-                print (sudokuBlocksGrid.gameDifficulty)
+//                print (sudokuBlocksGrid.numberOfActions)
+//                print (sudokuBlocksGrid.numberOfHints)
+//                print (sudokuBlocksGrid.gameSeconds)
+//                print (sudokuBlocksGrid.gameDifficulty)
                 var allScores = Settings.getAllScores()
                 highscoresModel.clear();
                 highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
