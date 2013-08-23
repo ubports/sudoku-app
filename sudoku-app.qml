@@ -120,7 +120,7 @@ MainView {
             text: i18n.tr("Change theme to Simple")
             keywords: i18n.tr("Change theme to Simple")
             onTriggered: {
-                print("Simple")
+                //print("Simple")
                 var result = Settings.setSetting("ColorTheme", 1);
                 //print(result);
                 sudokuBlocksGrid.changeColorScheme("ColorSchemeSimple.qml");
@@ -196,10 +196,10 @@ MainView {
                         + sudokuBlocksGrid.calculateScore()
                         + " " + i18n.tr("points.")
 
-                print (sudokuBlocksGrid.numberOfActions)
-                print (sudokuBlocksGrid.numberOfHints)
-                print (sudokuBlocksGrid.gameSeconds)
-                print (sudokuBlocksGrid.gameDifficulty)
+//                print (sudokuBlocksGrid.numberOfActions)
+//                print (sudokuBlocksGrid.numberOfHints)
+//                print (sudokuBlocksGrid.gameSeconds)
+//                print (sudokuBlocksGrid.gameDifficulty)
                 var allScores = Settings.getAllScores()
                 highscoresModel.clear();
                 highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
@@ -326,6 +326,7 @@ MainView {
                             randomnumber += 31;
                             sudokuBlocksGrid.createNewGame(81 - randomnumber);
                             PopupUtils.close(newGameDialogue)
+                            toolbar.opened = false;
                         }
                     }
                     NewGameSelectionButton {
@@ -341,6 +342,7 @@ MainView {
                             randomnumber += 26;
                             sudokuBlocksGrid.createNewGame(81 - randomnumber);
                             PopupUtils.close(newGameDialogue)
+                            toolbar.opened = false;
                         }
                     }
                     NewGameSelectionButton {
@@ -356,6 +358,7 @@ MainView {
                             randomnumber += 21;
                             sudokuBlocksGrid.createNewGame(81 - randomnumber);
                             PopupUtils.close(newGameDialogue)
+                            toolbar.opened = false;
                         }
                     }
                     NewGameSelectionButton {
@@ -371,6 +374,7 @@ MainView {
                             randomnumber += 17;
                             sudokuBlocksGrid.createNewGame(81 - randomnumber);
                             PopupUtils.close(newGameDialogue)
+                            toolbar.opened = false;
                         }
                     }
 
