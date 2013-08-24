@@ -440,7 +440,7 @@ class TestMainWindow(SudokuTestCase):
 
         #Check correct version is displayed
         version = lambda: self.ubuntusdk.get_object("Label", "version").text
-        self.assertThat(version, Eventually(Equals("0.4")))
+        self.assertThat(version, Eventually(Equals("0.4.3")))
 
         #Check correct year is displayed
         yearLabel = lambda: self.ubuntusdk.get_object("Label", "yearLabel").text
