@@ -322,6 +322,7 @@ MainView {
                             var randomnumber = Math.floor(Math.random()*9);
                             randomnumber += 31;
                             sudokuBlocksGrid.createNewGame(81 - randomnumber);
+
                             PopupUtils.close(newGameDialogue)
                             toolbar.opened = false;
                         }
@@ -455,6 +456,9 @@ MainView {
         {
             currentUserId = Settings.getSetting("currentUserId")
         }
+        if (difficultySelector.selectedIndex == 4) {
+            PopupUtils.open(newGameComponent)
+        }
 
     }
 
@@ -511,11 +515,11 @@ MainView {
                 height: units.gu(15);
                 z: 100;
                 visible: false;
-                x: mainView.width / 2 - width/2;
-                y: mainView.weight / 2 - height/2;
+                //x: mainView.width / 2 - width/2;
+                //y: mainView.weight / 2 - height/2;
                 //anchors.verticalCenter: mainView.verticalCenter;
                 //anchors.horizontalCenter: mainView.verticalCenter;
-                //anchors.centerIn: mainView;
+                anchors.centerIn: parent;
                 //y: units.gu(5);
                 Label {
                     id: gameFinishedText;
@@ -523,6 +527,7 @@ MainView {
                     color: sudokuBlocksGrid.defaultHintColor;
                     anchors.centerIn: parent;
                     fontSize: "large";
+                    horizontalAlignment: Text.AlignHCenter
                 }
             }
 

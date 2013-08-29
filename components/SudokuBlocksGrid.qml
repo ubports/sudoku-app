@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import Ubuntu.Components 0.1
 import Ubuntu.Components.Popups 0.1
-
+import "../js/localStorage.js" as Settings
 import "../js/SudokuCU.js" as SudokuCU
 
 Column {
@@ -216,13 +216,17 @@ Column {
             }
         }
         mainView.alreadyCreated = true;
-        gameTimer.restart();
+        if (gameTimer.running == true)
+            gameTimer.restart();
+        else
+            gameTimer.start();
         resetScore();
     }
 
     function checkIfGameFinished() {
         //print (checkIfAllFieldsFilled());
         //print (checkIfAllFieldsCorrect());
+        //print("game finished")
         return checkIfAllFieldsFilled() && checkIfAllFieldsCorrect();
     }
 
@@ -255,6 +259,7 @@ Column {
         interval: 1000;
         onTriggered: {
             gameSeconds++;
+            print(gameSeconds, numberOfActions, numberOfHints)
         }
     }
 

@@ -1,5 +1,6 @@
 // Database operations file. Borrowed from
 // UbuntuPhoneRedditApp
+//.import QtQuick.LocalStorage 2.0 as LocalStorage
 
 function getDatabase() {
     return LocalStorage.openDatabaseSync("SudokuTouch", "1.0", "StorageDatabase", 1000000);
