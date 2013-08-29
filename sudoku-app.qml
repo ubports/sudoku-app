@@ -14,10 +14,7 @@ MainView {
     objectName: "sudoku"
     applicationName: "sudoku-app"
 
-    property real pageWidth: units.gu(40);
-    property real pageHeight: units.gu(71);
-
-    property real blockDistance: mainView.width/mainView.height < 0.6 ? mainView.pageWidth/200: units.gu(60)/200;
+    property real blockDistance: mainView.width/mainView.height < 0.6 ? mainView.width/200: units.gu(50)/200;
     property bool alreadyCreated: false;
     property bool gridLoaded: false;
     property int currentUserId: -1;
@@ -28,8 +25,8 @@ MainView {
 
     property int editUserId : -1;
 
-    width: units.gu(40);
-    height: units.gu(71);
+    width: units.gu(41);
+    height: units.gu(70);
 
     //headerColor: sudokuBlocksGrid.headerColor
     //backgroundColor: sudokuBlocksGrid.backgroundColor
@@ -245,8 +242,6 @@ MainView {
     }
 
     function newSize(widthn, heightn) {
-        pageWidth = widthn;
-        pageHeight = heightn;
         width = widthn
         height = heightn
         //print(height," x ", width);
@@ -320,7 +315,7 @@ MainView {
                         objectName: "easyGameButton"
                         buttonText: i18n.tr("Easy")
                         opacity: 0.8
-                        width: mainView.width/mainView.height < 0.6 ? mainView.pageWidth/4: units.gu(50)/4;
+                        width: mainView.width/mainView.height < 0.6 ? mainView.width/4: units.gu(50)/4;
                         height: width
                         onTriggered: {
                             //print("EASY")
@@ -336,7 +331,7 @@ MainView {
                         objectName: "moderateGameButton"
                         buttonText: i18n.tr("Moderate")
                         opacity: 0.8
-                        width: mainView.width/mainView.height < 0.6 ? mainView.pageWidth/4: units.gu(50)/4;
+                        width: mainView.width/mainView.height < 0.6 ? mainView.width/4: units.gu(50)/4;
                         height: width
                         onTriggered: {
                             //print("EASY")
@@ -352,7 +347,7 @@ MainView {
                         objectName: "hardGameButton"
                         buttonText: i18n.tr("Hard")
                         opacity: 0.8
-                        width: mainView.width/mainView.height < 0.6 ? mainView.pageWidth/4: units.gu(50)/4;
+                        width: mainView.width/mainView.height < 0.6 ? mainView.width/4: units.gu(50)/4;
                         height: width
                         onTriggered: {
                             //print("EASY")
@@ -368,7 +363,7 @@ MainView {
                         objectName: "ultrahardGameButton"
                         buttonText: i18n.tr("Ultra\nHard")
                         opacity: 0.8
-                        width: mainView.width/mainView.height < 0.6 ? mainView.pageWidth/4: units.gu(50)/4;
+                        width: mainView.width/mainView.height < 0.6 ? mainView.width/4: units.gu(50)/4;
                         height: width
                         onTriggered: {
                             //print("EASY")
@@ -384,7 +379,7 @@ MainView {
 
                 SudokuDialogButton{
                     buttonText: i18n.tr("Cancel")
-                    width: mainView.width/mainView.height < 0.6 ? mainView.pageWidth*2/3: units.gu(50)*2/3
+                    width: mainView.width/mainView.height < 0.6 ? mainView.width*2/3: units.gu(50)*2/3
                     size: units.gu(5)
                     buttonColor: sudokuBlocksGrid.dialogButtonColor1
                     textColor: sudokuBlocksGrid.dialogButtonTextColor
@@ -516,8 +511,8 @@ MainView {
                 height: units.gu(15);
                 z: 100;
                 visible: false;
-                x: mainView.pageWidth / 2 - width/2;
-                y: mainView.pageHeight / 2 - height/2;
+                x: mainView.width / 2 - width/2;
+                y: mainView.weight / 2 - height/2;
                 //anchors.verticalCenter: mainView.verticalCenter;
                 //anchors.horizontalCenter: mainView.verticalCenter;
                 //anchors.centerIn: mainView;
@@ -590,17 +585,19 @@ MainView {
 
                 Grid {
                     id: informationRow;
-                    y: 7*mainView.pageHeight/10;
+                    //y: 7*mainView.pageHeight/10;
                     //x: units.dp(8);
                     //width: mainView.pageWidth - units.dp(8);
                     anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.top: parent.top
+                    anchors.topMargin: 9*sudokuBlocksGrid.blockSize + 35*sudokuBlocksGrid.blockDistance
                     columns: 3
                     columnSpacing: mainView.width/mainView.height < 0.6 ? mainView.width/6 : units.gu(50)/6
                     UbuntuShape {
                         id: redFlag
                         color: sudokuBlocksGrid.defaultNotAllowedColor
-                        width: mainView.width/mainView.height < 0.6 ? 2*mainView.pageWidth/10: 2*units.gu(50)/10
-                        height: mainView.width/mainView.height < 0.6 ? mainView.pageWidth/10: units.gu(50)/10
+                        width: mainView.width/mainView.height < 0.6 ? 2*mainView.width/10: 2*units.gu(50)/10
+                        height: mainView.width/mainView.height < 0.6 ? mainView.width/10: units.gu(50)/10
                         //border.color: defaultBorderColor
                         //radius: "medium"
                         Label {
@@ -620,8 +617,8 @@ MainView {
                         id: blueFlag
                         color: sudokuBlocksGrid.defaultStartingColor
                         //border.color: defaultBorderColor
-                        width: mainView.width/mainView.height < 0.6 ? 2*mainView.pageWidth/10: 2*units.gu(50)/10
-                        height: mainView.width/mainView.height < 0.6 ? mainView.pageWidth/10: units.gu(50)/10
+                        width: mainView.width/mainView.height < 0.6 ? 2*mainView.width/10: 2*units.gu(50)/10
+                        height: mainView.width/mainView.height < 0.6 ? mainView.width/10: units.gu(50)/10
                         //radius: "medium";
                         Label {
                             id: blueFlagText
@@ -641,8 +638,8 @@ MainView {
                         id: orangeFlag
                         color: sudokuBlocksGrid.defaultHintColor
                         //border.color: defaultBorderColor
-                        width: mainView.width/mainView.height < 0.6 ? 2*mainView.pageWidth/10: 2*units.gu(50)/10
-                        height: mainView.width/mainView.height < 0.6 ? mainView.pageWidth/10: units.gu(50)/10
+                        width: mainView.width/mainView.height < 0.6 ? 2*mainView.width/10: 2*units.gu(50)/10
+                        height: mainView.width/mainView.height < 0.6 ? mainView.width/10: units.gu(50)/10
                         //radius: "medium";
                         Label {
                             text: i18n.tr("Hinted blocks")

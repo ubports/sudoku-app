@@ -36,7 +36,7 @@ Column {
     property var solution;
     property bool alreadyCreated: mainView.alreadyCreated;
     property bool checkIfCheating: false;
-    property real blockSize: mainView.width/mainView.height < 0.6 ? mainView.pageWidth/10: units.gu(50)/10;
+    property real blockSize: mainView.width/mainView.height < 0.6 ? mainView.width/10: units.gu(50)/10;
 
     // ********* SCORES ENGINE VARIABLES ***************
 
@@ -322,7 +322,7 @@ Column {
                         SudokuDialogButton{
                             id: clearButton
                             buttonText: i18n.tr("Clear")
-                            width: mainView.width/mainView.height < 0.6 ? mainView.pageWidth*2/3: units.gu(50)*2/3
+                            width: mainView.width/mainView.height < 0.6 ? mainView.width*2/3: units.gu(50)*2/3
                             size: units.gu(5)
                             //anchors.left: parent.left;
                             //anchors.horizontalCenter: parent
@@ -413,7 +413,7 @@ Column {
 
                         SudokuDialogButton{
                             buttonText: i18n.tr("Cancel")
-                            width: mainView.width/mainView.height < 0.6 ? mainView.pageWidth*2/3: units.gu(50)*2/3
+                            width: mainView.width/mainView.height < 0.6 ? mainView.width*2/3: units.gu(50)*2/3
                             size: units.gu(5)
                             //anchors.left: parent.left;
                             //anchors.horizontalCenter: parent
