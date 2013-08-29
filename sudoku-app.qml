@@ -181,6 +181,26 @@ MainView {
         Settings.setSetting("currentUserId", currentUserId)
     }
 
+    function insertNewGameScore(userId, score) {
+        Settings.insertNewScore(userId, score)
+    }
+
+    function updatehighScores() {
+        var allScores = Settings.getAllScores()
+        highscoresModel.clear();
+        highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
+        for(var i = 0; i < allScores.length; i++) {
+            var rowItem = allScores[i];
+            print("ROW ",rowItem)
+            var firstName = Settings.getUserFirstName(rowItem[0]);
+            var lastName = Settings.getUserLastName(rowItem[0]);
+            //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
+            highscoresModel.append({'firstname': firstName,
+                                       'lastname':  lastName,
+                                       'score': rowItem[1] });
+        }
+    }
+
     function revealHint() {
         if(disableHints.checked)
         {
@@ -322,8 +342,8 @@ MainView {
                             var randomnumber = Math.floor(Math.random()*9);
                             randomnumber += 31;
                             sudokuBlocksGrid.createNewGame(81 - randomnumber);
-
                             PopupUtils.close(newGameDialogue)
+                            sudokuBlocksGrid.gameDifficulty = 0
                             toolbar.opened = false;
                         }
                     }
@@ -340,6 +360,7 @@ MainView {
                             randomnumber += 26;
                             sudokuBlocksGrid.createNewGame(81 - randomnumber);
                             PopupUtils.close(newGameDialogue)
+                            sudokuBlocksGrid.gameDifficulty = 1
                             toolbar.opened = false;
                         }
                     }
@@ -356,6 +377,7 @@ MainView {
                             randomnumber += 21;
                             sudokuBlocksGrid.createNewGame(81 - randomnumber);
                             PopupUtils.close(newGameDialogue)
+                            sudokuBlocksGrid.gameDifficulty = 2
                             toolbar.opened = false;
                         }
                     }
@@ -372,6 +394,7 @@ MainView {
                             randomnumber += 17;
                             sudokuBlocksGrid.createNewGame(81 - randomnumber);
                             PopupUtils.close(newGameDialogue)
+                            sudokuBlocksGrid.gameDifficulty = 3
                             toolbar.opened = false;
                         }
                     }
@@ -500,6 +523,9 @@ MainView {
                         var randomnumber = Math.floor(Math.random()*3);
                         randomnumber += 17;
                         sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                        break;
+                    case 4:
+                        PopupUtils.open(newGameComponent);
                         break;
                     }
                 }

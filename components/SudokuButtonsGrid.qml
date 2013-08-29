@@ -143,6 +143,9 @@ Repeater {
             randomnumber += 17;
             sudokuBlocksGrid.createNewGame(81 - randomnumber);
             break;
+        case 4:
+            PopupUtils.open(newGameComponent);
+            break;
         }
     }
 
