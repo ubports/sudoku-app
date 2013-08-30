@@ -696,7 +696,7 @@ MainView {
         Tab {
             id: highscoresTab
             objectName: "highscoresTab"
-            title: i18n.tr("Best Scores")
+            title: i18n.tr("Scores")
             page: Page {
                 tools: ToolbarItems {
                     ToolbarButton {
