@@ -246,6 +246,13 @@ class TestMainWindow(SudokuTestCase):
         self.assertThat(number_of_actions, Eventually(Equals(0)))
         #self.assertThat(game_seconds, Eventually(Equals(0)))
         self.ubuntusdk.hide_toolbar()
+
+        # Reverting to standard
+        self.open_and_check_settings_tab()		
+		difficultySelector = self.main_window.get_difficulty_selector()
+		self.pointing_device.click_object(difficultySelector)
+		difficultyChoices = self.main_window.get_difficulty_selector_labelvisual()
+		difficultyChoice = difficultyChoices[1]
         
 
     def test_about_tab(self):
