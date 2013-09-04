@@ -54,7 +54,7 @@ Repeater {
         buttonText: "0";
         //width: units.gu(5);
         //height: units.gu(5);
-        size: mainView.width/mainView.height < 0.6 ? mainView.pageWidth/10: units.gu(50)/10;
+        size: mainView.width/mainView.height < 0.6 ? mainView.width/10: units.gu(50)/10;
         //color: defaultColor;
         //border.width: 0
         //border.color: defaultBorderColor
@@ -142,6 +142,9 @@ Repeater {
             var randomnumber = Math.floor(Math.random()*3);
             randomnumber += 17;
             sudokuBlocksGrid.createNewGame(81 - randomnumber);
+            break;
+        case 4:
+            PopupUtils.open(newGameComponent);
             break;
         }
     }

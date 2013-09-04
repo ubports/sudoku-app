@@ -1,7 +1,6 @@
 import QtQuick 2.0
 import Ubuntu.Components 0.1
 import Ubuntu.Components.Popups 0.1
-
 import "../js/SudokuCU.js" as SudokuCU
 
 Column {
@@ -36,7 +35,7 @@ Column {
     property var solution;
     property bool alreadyCreated: mainView.alreadyCreated;
     property bool checkIfCheating: false;
-    property real blockSize: mainView.width/mainView.height < 0.6 ? mainView.pageWidth/10: units.gu(50)/10;
+    property real blockSize: mainView.width/mainView.height < 0.6 ? mainView.width/10: units.gu(50)/10;
 
     // ********* SCORES ENGINE VARIABLES ***************
 
@@ -216,13 +215,17 @@ Column {
             }
         }
         mainView.alreadyCreated = true;
-        gameTimer.restart();
+        if (gameTimer.running == true)
+            gameTimer.restart();
+        else
+            gameTimer.start();
         resetScore();
     }
 
     function checkIfGameFinished() {
         //print (checkIfAllFieldsFilled());
         //print (checkIfAllFieldsCorrect());
+        //print("game finished")
         return checkIfAllFieldsFilled() && checkIfAllFieldsCorrect();
     }
 
@@ -255,6 +258,7 @@ Column {
         interval: 1000;
         onTriggered: {
             gameSeconds++;
+            //print(gameSeconds, numberOfActions, numberOfHints, calculateScore())
         }
     }
 
@@ -285,6 +289,9 @@ Column {
                 var randomnumber = Math.floor(Math.random()*3);
                 randomnumber += 17;
                 sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                break;
+            case 4:
+                PopupUtils.open(newGameComponent);
                 break;
             }
         }
@@ -322,7 +329,7 @@ Column {
                         SudokuDialogButton{
                             id: clearButton
                             buttonText: i18n.tr("Clear")
-                            width: mainView.width/mainView.height < 0.6 ? mainView.pageWidth*2/3: units.gu(50)*2/3
+                            width: mainView.width/mainView.height < 0.6 ? mainView.width*2/3: units.gu(50)*2/3
                             size: units.gu(5)
                             //anchors.left: parent.left;
                             //anchors.horizontalCenter: parent
@@ -381,7 +388,8 @@ Column {
 
                                         if (checkIfGameFinished()) {
                                             gameFinishedRectangle.visible = true;
-                                            Settings.insertNewScore(currentUserId, sudokuBlocksGrid.calculateScore())
+                                            //Settings.insertNewScore(currentUserId, sudokuBlocksGrid.calculateScore())
+                                            mainView.insertNewGameScore(currentUserId, sudokuBlocksGrid.calculateScore())
                                             gameFinishedText.text = i18n.tr("You are a cheat... \nBut we give you\n")
                                                     + sudokuBlocksGrid.calculateScore()
                                                     + " " + i18n.tr("points.")
@@ -390,19 +398,7 @@ Column {
                                             print (sudokuBlocksGrid.numberOfHints)
                                             print (sudokuBlocksGrid.gameSeconds)
                                             print (sudokuBlocksGrid.gameDifficulty)
-                                            var allScores = Settings.getAllScores()
-                                            highscoresModel.clear();
-                                            highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
-                                            for(var i = 0; i < allScores.length; i++) {
-                                                var rowItem = allScores[i];
-                                                print("ROW ",rowItem)
-                                                var firstName = Settings.getUserFirstName(rowItem[0]);
-                                                var lastName = Settings.getUserLastName(rowItem[0]);
-                                                //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
-                                                highscoresModel.append({'firstname': firstName,
-                                                                           'lastname':  lastName,
-                                                                           'score': rowItem[1] });
-                                            }
+
                                             winTimer.restart();
                                         }
                                     }
@@ -413,7 +409,7 @@ Column {
 
                         SudokuDialogButton{
                             buttonText: i18n.tr("Cancel")
-                            width: mainView.width/mainView.height < 0.6 ? mainView.pageWidth*2/3: units.gu(50)*2/3
+                            width: mainView.width/mainView.height < 0.6 ? mainView.width*2/3: units.gu(50)*2/3
                             size: units.gu(5)
                             //anchors.left: parent.left;
                             //anchors.horizontalCenter: parent
