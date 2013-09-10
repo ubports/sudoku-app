@@ -14,7 +14,8 @@ MainView {
     objectName: "sudoku"
     applicationName: "sudoku-app"
 
-    property real blockDistance: mainView.width/mainView.height < 0.6 ? mainView.width/200: units.gu(50)/200;
+    property real resizeFactor: units.gu(50)/units.gu(75)
+    property real blockDistance: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/200: units.gu(50)/200;
     property bool alreadyCreated: false;
     property bool gridLoaded: false;
     property int currentUserId: -1;
@@ -335,7 +336,7 @@ MainView {
                         objectName: "easyGameButton"
                         buttonText: i18n.tr("Easy")
                         opacity: 0.8
-                        width: mainView.width/mainView.height < 0.6 ? mainView.width/4: units.gu(50)/4;
+                        width: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/4: units.gu(50)/4;
                         height: width
                         onTriggered: {
                             //print("EASY")
@@ -352,7 +353,7 @@ MainView {
                         objectName: "moderateGameButton"
                         buttonText: i18n.tr("Moderate")
                         opacity: 0.8
-                        width: mainView.width/mainView.height < 0.6 ? mainView.width/4: units.gu(50)/4;
+                        width: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/4: units.gu(50)/4;
                         height: width
                         onTriggered: {
                             //print("EASY")
@@ -369,7 +370,7 @@ MainView {
                         objectName: "hardGameButton"
                         buttonText: i18n.tr("Hard")
                         opacity: 0.8
-                        width: mainView.width/mainView.height < 0.6 ? mainView.width/4: units.gu(50)/4;
+                        width: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/4: units.gu(50)/4;
                         height: width
                         onTriggered: {
                             //print("EASY")
@@ -386,7 +387,7 @@ MainView {
                         objectName: "ultrahardGameButton"
                         buttonText: i18n.tr("Ultra\nHard")
                         opacity: 0.8
-                        width: mainView.width/mainView.height < 0.6 ? mainView.width/4: units.gu(50)/4;
+                        width: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/4: units.gu(50)/4;
                         height: width
                         onTriggered: {
                             //print("EASY")
@@ -403,7 +404,7 @@ MainView {
 
                 SudokuDialogButton{
                     buttonText: i18n.tr("Cancel")
-                    width: mainView.width/mainView.height < 0.6 ? mainView.width*2/3: units.gu(50)*2/3
+                    width: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width*2/3: units.gu(50)*2/3
                     size: units.gu(5)
                     buttonColor: sudokuBlocksGrid.dialogButtonColor1
                     textColor: sudokuBlocksGrid.dialogButtonTextColor
@@ -428,13 +429,13 @@ MainView {
     }
 
     onHeightChanged: {
-        if (!gridLoaded && width/height > 0.6)
+        if (!gridLoaded && width/height > mainView.resizeFactor)
             return;
         newSize(mainView.width, mainView.height);
         sudokuBlocksGrid = Qt.createComponent(Qt.resolvedUrl("SudokuBlocksGrid.qml"))
     }
     onWidthChanged: {
-        if (!gridLoaded && width/height > 0.6)
+        if (!gridLoaded && width/height > mainView.resizeFactor)
             return;
         newSize(mainView.width, mainView.height);
         sudokuBlocksGrid = Qt.createComponent(Qt.resolvedUrl("SudokuBlocksGrid.qml"))
@@ -623,12 +624,12 @@ MainView {
                     anchors.top: parent.top
                     anchors.topMargin: 9*sudokuBlocksGrid.blockSize + 35*sudokuBlocksGrid.blockDistance
                     columns: 3
-                    columnSpacing: mainView.width/mainView.height < 0.6 ? mainView.width/6 : units.gu(50)/6
+                    columnSpacing: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/6 : units.gu(50)/6
                     UbuntuShape {
                         id: redFlag
                         color: sudokuBlocksGrid.defaultNotAllowedColor
-                        width: mainView.width/mainView.height < 0.6 ? 2*mainView.width/10: 2*units.gu(50)/10
-                        height: mainView.width/mainView.height < 0.6 ? mainView.width/10: units.gu(50)/10
+                        width: mainView.width/mainView.height < mainView.resizeFactor ? 2*mainView.width/10: 2*units.gu(50)/10
+                        height: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/10: units.gu(50)/10
                         //border.color: defaultBorderColor
                         //radius: "medium"
                         Label {
@@ -648,8 +649,8 @@ MainView {
                         id: blueFlag
                         color: sudokuBlocksGrid.defaultStartingColor
                         //border.color: defaultBorderColor
-                        width: mainView.width/mainView.height < 0.6 ? 2*mainView.width/10: 2*units.gu(50)/10
-                        height: mainView.width/mainView.height < 0.6 ? mainView.width/10: units.gu(50)/10
+                        width: mainView.width/mainView.height < mainView.resizeFactor ? 2*mainView.width/10: 2*units.gu(50)/10
+                        height: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/10: units.gu(50)/10
                         //radius: "medium";
                         Label {
                             id: blueFlagText
@@ -669,8 +670,8 @@ MainView {
                         id: orangeFlag
                         color: sudokuBlocksGrid.defaultHintColor
                         //border.color: defaultBorderColor
-                        width: mainView.width/mainView.height < 0.6 ? 2*mainView.width/10: 2*units.gu(50)/10
-                        height: mainView.width/mainView.height < 0.6 ? mainView.width/10: units.gu(50)/10
+                        width: mainView.width/mainView.height < mainView.resizeFactor ? 2*mainView.width/10: 2*units.gu(50)/10
+                        height: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/10: units.gu(50)/10
                         //radius: "medium";
                         Label {
                             text: i18n.tr("Hinted blocks")
