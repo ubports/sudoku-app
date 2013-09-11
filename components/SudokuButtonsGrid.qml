@@ -14,7 +14,7 @@ Repeater {
 
     function redrawGrid()
     {
-        console.log("on redraw grid")
+        //console.log("on redraw grid")
         for(var i=0; i < model; i++)
         {
             var row = Math.floor(i/9);
@@ -28,7 +28,7 @@ Repeater {
 
                 if (testField == true)
                 {
-                    console.log("index "+i+" row/col "+row+"/"+column)
+                    //console.log("index "+i+" row/col "+row+"/"+column)
                     buttonsGrid.itemAt(i).buttonColor = defaultNotAllowedColor;
                 }
                 else {

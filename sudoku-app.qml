@@ -48,7 +48,7 @@ MainView {
         Action {
             text: i18n.tr("Reveal hint")
             keywords: i18n.tr("Reveal hint")
-            enabled: false
+            enabled: disableHints.checked
             onTriggered: {
                 tabs.selectedTabIndex = 0
                 revealHint()
