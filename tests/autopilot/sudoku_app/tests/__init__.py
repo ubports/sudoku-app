@@ -71,6 +71,18 @@ class SudokuTestCase(AutopilotTestCase):
                                 pass
         return None
 
+    def launch_and_quit_app(self):
+        self.launch_app()
+        self.main_window.get_qml_view().visible.wait_for(True)
+        
+        # When calling launch_app an instance of the spawned process
+        # control object will be stored in self.app.process, and a cleanup
+        # handler will be registered that essentially kills the process.
+        # Therefore, by triggering the cleanup handler here we're killing the
+        # process and removing the handler, which allows a clean launch of
+        # the process during regular test setup.
+        self.doCleanups()
+
     def clean_db(self):
         path = self.find_db()
         if path is None:
