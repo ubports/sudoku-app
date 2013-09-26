@@ -56,14 +56,16 @@ class SudokuTestCase(AutopilotTestCase):
         self.app = self.launch_test_application(
             "qmlscene",
             self.local_location,
-            app_type='qt')
+            app_type='qt',
+            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
 
     def launch_test_installed(self):
         self.app = self.launch_test_application(
             "qmlscene",
             "/usr/share/sudoku-app/sudoku-app.qml",
             "--desktop_file_hint=/usr/share/applications/sudoku-app.desktop",
-            app_type='qt')
+            app_type='qt',
+            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
 
     def launch_test_click(self):
         self.app = self.launch_click_package('com.ubuntu.stock-ticker-mobile', emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
