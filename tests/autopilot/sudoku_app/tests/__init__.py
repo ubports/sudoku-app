@@ -68,7 +68,7 @@ class SudokuTestCase(AutopilotTestCase):
             emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
 
     def launch_test_click(self):
-        self.app = self.launch_click_package('com.ubuntu.stock-ticker-mobile', emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
+        self.app = self.launch_click_package('com.ubuntu.sudoku-app', emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
 
     def temp_move_sqlite_db(self):
         if os.path.exists(self.backup_dir):
