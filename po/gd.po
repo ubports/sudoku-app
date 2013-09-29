@@ -1,16 +1,16 @@
-# Spanish translation for sudokutouchgame
+# Gaelic; Scottish translation for sudoku-app
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
-# This file is distributed under the same license as the sudokutouchgame package.
+# This file is distributed under the same license as the sudoku-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sudokutouchgame\n"
+"Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-17 11:14+0200\n"
-"PO-Revision-Date: 2013-09-28 09:33+0000\n"
-"Last-Translator: Paco Molinero <paco@byasl.com>\n"
-"Language-Team: Spanish <es@li.org>\n"
+"PO-Revision-Date: 2013-09-28 21:25+0000\n"
+"Last-Translator: Akerbeltz <fios@akerbeltz.org>\n"
+"Language-Team: Gaelic; Scottish <gd@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,95 +19,95 @@ msgstr ""
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:254
 msgid "Please pick a number"
-msgstr "Elija un número"
+msgstr "Tagh àireamh"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:262
 msgid "Clear"
-msgstr "Limpiar"
+msgstr "Falamhaich"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:457
 msgid "Not allowed"
-msgstr "No permitido"
+msgstr "Chan eil seo ceadaichte"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:481
 msgid "Start blocks"
-msgstr "Bloques iniciales"
+msgstr "Blocaichean tòiseachaidh"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:503
 msgid "Hinted blocks"
-msgstr "Bloques sugeridos"
+msgstr "Blocaichean le oidheam"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:96
 msgid "Sudoku"
-msgstr "Sudoku"
+msgstr "Sūdoku"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:148
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:196
 msgid "You are a cheat..."
-msgstr "Eres un tramposo..."
+msgstr "Cealgaire mòr a th' annad!"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:148
 msgid "Congratulations!"
-msgstr "¡Enhorabuena!"
+msgstr "Meal do naidheachd!"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:159
 msgid "New game"
-msgstr "Partida nueva"
+msgstr "Geama ùr"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:189
 msgid "Show hint"
-msgstr "Mostrar pista"
+msgstr "Seall dhomh oidheam"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:203
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:237
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:357
 msgid "Close"
-msgstr "Cerrar"
+msgstr "Dùin"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:231
 msgid "Settings"
-msgstr "Configuración"
+msgstr "Roghainnean"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:250
 msgid "SudokuTouch settings"
-msgstr "Ajustes de SudokuTouch"
+msgstr "Roghainnean SūdokuTouch"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:257
 msgid "Difficulty"
-msgstr "Dificultad"
+msgstr "Duilghead"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Easy"
-msgstr "Fácil"
+msgstr "Furasta"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Moderate"
-msgstr "Moderado"
+msgstr "Meadhanach"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Hard"
-msgstr "Difícil"
+msgstr "Doirbh"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Ultra Hard"
-msgstr "Súper difícil"
+msgstr "Glè dhoirbh"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:294
 msgid "Theme"
-msgstr "Tema"
+msgstr "Ùrlar"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:351
 msgid "About"
-msgstr "Acerca de"
+msgstr "Mu dhèidhinn"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:383
 msgid "Author: "
-msgstr "Autor: "
+msgstr "Ùghdar: "
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:393
 msgid "Contact: "
-msgstr "Contacto: "
+msgstr "Neach-conaltraidh: "
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:414
 msgid "Version: "
-msgstr "Versión: "
+msgstr "Tionndadh: "
