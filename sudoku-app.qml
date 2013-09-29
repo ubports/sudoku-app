@@ -830,11 +830,11 @@ MainView {
 
                                     delegate:
                                         ListItem.Standard {
-
+                                        __foregroundColor: "white"
                                         text: firstname + " " + lastname
                                         progression: true
                                         onTriggered: {
-                                            console.log("clicked "+index)
+                                            //console.log("clicked "+index)
                                             currentUserId = profileId;
                                             hide()
                                         }
