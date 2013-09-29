@@ -258,6 +258,9 @@ MainView {
             randomnumber += 17;
             sudokuBlocksGrid.createNewGame(81 - randomnumber);
             break;
+        case 4:
+            PopupUtils.open(newGameComponent)
+            break;
         }
     }
 
@@ -344,7 +347,7 @@ MainView {
                             sudokuBlocksGrid.createNewGame(81 - randomnumber);
                             PopupUtils.close(newGameDialogue)
                             sudokuBlocksGrid.gameDifficulty = 0
-                            toolbar.opened = false;
+                            //toolbar.opened = false;
                         }
                     }
                     NewGameSelectionButton {
@@ -361,7 +364,7 @@ MainView {
                             sudokuBlocksGrid.createNewGame(81 - randomnumber);
                             PopupUtils.close(newGameDialogue)
                             sudokuBlocksGrid.gameDifficulty = 1
-                            toolbar.opened = false;
+                            //toolbar.opened = false;
                         }
                     }
                     NewGameSelectionButton {
@@ -378,7 +381,7 @@ MainView {
                             sudokuBlocksGrid.createNewGame(81 - randomnumber);
                             PopupUtils.close(newGameDialogue)
                             sudokuBlocksGrid.gameDifficulty = 2
-                            toolbar.opened = false;
+                            //toolbar.opened = false;
                         }
                     }
                     NewGameSelectionButton {
@@ -395,7 +398,7 @@ MainView {
                             sudokuBlocksGrid.createNewGame(81 - randomnumber);
                             PopupUtils.close(newGameDialogue)
                             sudokuBlocksGrid.gameDifficulty = 3
-                            toolbar.opened = false;
+                            //toolbar.opened = false;
                         }
                     }
 
@@ -560,6 +563,7 @@ MainView {
             page: Page {
 
                 tools: ToolbarItems {
+                    opened: true
                     ToolbarButton {
                         objectName: "newgamebutton"
                         action: Action {
@@ -569,9 +573,9 @@ MainView {
                                 if(gameFinishedRectangle.visible) gameFinishedRectangle.visible = false;
                                 //print("new block distance:", blockDistance);
                                 //createNewGame()
-                                if (settingsTab.difficultyIndex == 4)
-                                    PopupUtils.open(newGameComponent)
-                                else
+                                //if (settingsTab.difficultyIndex == 4)
+                                //    PopupUtils.open(newGameComponent)
+                                //else
                                     createNewGame()
                             }
                         }
