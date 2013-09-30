@@ -128,7 +128,6 @@ class TestMainWindow(SudokuTestCase):
         #check the value to ensure it worked
         self.assertThat(buttonValue, Eventually(Equals("4")))
 
-    @unittest.skip("New game starting broken, see https://bugs.launchpad.net/sudoku-app/+bug/1231700")
     def test_new_game_button(self):
         #testing new game with moderate mode
         self._set_difficulty(3, "Moderate")
