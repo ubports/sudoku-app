@@ -1,16 +1,16 @@
-# German translation for sudokutouchgame
+# Galician translation for sudoku-app
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
-# This file is distributed under the same license as the sudokutouchgame package.
+# This file is distributed under the same license as the sudoku-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sudokutouchgame\n"
+"Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-17 11:14+0200\n"
-"PO-Revision-Date: 2013-09-29 17:45+0000\n"
-"Last-Translator: Moritz Gehlhaar <moritz.gehlhaar@outlook.com>\n"
-"Language-Team: German <de@li.org>\n"
+"PO-Revision-Date: 2013-09-29 16:31+0000\n"
+"Last-Translator: Marcos Lans <Unknown>\n"
+"Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,23 +19,23 @@ msgstr ""
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:254
 msgid "Please pick a number"
-msgstr "Bitte wählen Sie eine Nummer"
+msgstr "Seleccione un número"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:262
 msgid "Clear"
-msgstr "Löschen"
+msgstr "Borrar"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:457
 msgid "Not allowed"
-msgstr "Nicht erlaubt"
+msgstr "Non permitido"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:481
 msgid "Start blocks"
-msgstr "Vorgegebene Felder"
+msgstr "Bloques iniciais"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:503
 msgid "Hinted blocks"
-msgstr "Angedeutete Felder"
+msgstr "Bloques suxeridos"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:96
 msgid "Sudoku"
@@ -44,61 +44,61 @@ msgstr "Sudoku"
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:148
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:196
 msgid "You are a cheat..."
-msgstr "Sie schummeln …"
+msgstr "Vostede é un trampón"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:148
 msgid "Congratulations!"
-msgstr "Herzlichen Glückwunsch!"
+msgstr "Parabéns!"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:159
 msgid "New game"
-msgstr "Neues Spiel"
+msgstr "Nova partida"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:189
 msgid "Show hint"
-msgstr "Zeige einen Hinweis"
+msgstr "Mostrar pista"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:203
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:237
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:357
 msgid "Close"
-msgstr "Schließen"
+msgstr "Pechar"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:231
 msgid "Settings"
-msgstr "Einstellungen"
+msgstr "Axustes"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:250
 msgid "SudokuTouch settings"
-msgstr "SudokuTouch-Einstellungen"
+msgstr "Axustes táctiles do Sudoku"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:257
 msgid "Difficulty"
-msgstr "Schwierigkeitsgrad"
+msgstr "Dificultade"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Easy"
-msgstr "Einfach"
+msgstr "Fácil"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Moderate"
-msgstr "Mittel"
+msgstr "Moderado"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Hard"
-msgstr "Schwer"
+msgstr "Difícil"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Ultra Hard"
-msgstr "Sehr Schwer"
+msgstr "Super difícil"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:294
 msgid "Theme"
-msgstr "Thema"
+msgstr "Tema"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:351
 msgid "About"
-msgstr "Info"
+msgstr "Sobre"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:383
 msgid "Author: "
@@ -106,8 +106,8 @@ msgstr "Autor: "
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:393
 msgid "Contact: "
-msgstr "Kontakt: "
+msgstr "Contacto: "
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:414
 msgid "Version: "
-msgstr "Version: "
+msgstr "Versión: "
