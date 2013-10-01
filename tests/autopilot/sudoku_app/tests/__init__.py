@@ -10,6 +10,7 @@
 import os.path
 import os
 import shutil
+import logging
 
 from autopilot.input import Mouse, Touch, Pointer
 from autopilot.platform import model
@@ -19,6 +20,8 @@ from testtools.matchers import GreaterThan, Equals
 
 from ubuntuuitoolkit import emulators as toolkit_emulators
 from sudoku_app import emulators
+
+logger = logging.getLogger(__name__)
 
 
 class SudokuTestCase(AutopilotTestCase):
@@ -68,34 +71,38 @@ class SudokuTestCase(AutopilotTestCase):
             emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
 
     def launch_test_click(self):
-        self.app = self.launch_click_package('com.ubuntu.sudoku-app', emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
+        self.app = self.launch_click_package(
+            'com.ubuntu.sudoku-app',
+            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
 
     def temp_move_sqlite_db(self):
-        if os.path.exists(self.backup_dir):
+        try:
             shutil.rmtree(self.backup_dir)
-        if os.path.exists(self.sqlite_dir):
+        except:
+            pass
+        else:
+            logger.warning("Prexisting backup database found and removed")
+
+        try:
             shutil.move(self.sqlite_dir, self.backup_dir)
-            self.assertThat(
-                lambda: os.path.exists(self.backup_dir),
-                Eventually(Equals(True)))
+        except:
+            logger.warning("No current database found")
+        else:
+            logger.debug("Backed up database")
 
     def restore_sqlite_db(self):
-        if os.path.exists(self.backup_dir) and os.path.exists(self.sqlite_dir):
-            shutil.rmtree(self.sqlite_dir)
-            self.assertThat(
-                lambda: os.path.exists(self.sqlite_dir),
-                Eventually(Equals(False)))
-            shutil.move(self.backup_dir, self.sqlite_dir)
-            self.assertTrue(
-                lambda: os.path.exists(self.sqlite_dir),
-                Eventually(Equals(True)))
-        elif os.path.exists(self.backup_dir):
-            shutil.move(self.backup_dir, self.sqlite_dir)
-            self.assertTrue(
-                lambda: os.path.exists(self.sqlite_dir),
-                Eventually(Equals(True)))
-        else:
-            pass
+        if os.path.exists(self.backup_dir):
+            if os.path.exists(self.sqlite_dir):
+                try:
+                    shutil.rmtree(self.sqlite_dir)
+                except:
+                    logger.error("Failed to remove test database and restore" /
+                                 "database")
+                    return
+            try:
+                shutil.move(self.backup_dir, self.sqlite_dir)
+            except:
+                logger.error("Failed to restore database")
 
     @property
     def main_view(self):
