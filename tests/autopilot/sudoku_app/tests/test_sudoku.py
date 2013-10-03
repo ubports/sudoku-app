@@ -66,7 +66,7 @@ class TestMainWindow(SudokuTestCase):
 
     def test_best_scores_tab(self):
         #switch to best scores tab
-        self.main_view.switch_to_tab_by_index(1)
+        self.self.main_view.switch_to_tab("highscoresTab")
 
         #make sure we are in the right place
         tabName = lambda: self.main_view.select_single("Tab", objectName="highscoresTab")
