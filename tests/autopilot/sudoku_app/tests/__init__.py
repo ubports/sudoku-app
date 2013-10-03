@@ -36,8 +36,7 @@ class SudokuTestCase(AutopilotTestCase):
         scenarios = [('with touch', dict(input_device_class=Touch))]
 
     local_location = "../../sudoku-app.qml"
-    sqlite_dir = os.path.expanduser(
-        "~/.local/share/Qt Project/QtQmlViewer/QML/OfflineStorage/Databases")
+    sqlite_dir = os.path.expanduser("~/.local/share/sudoku-app/Databases")
     backup_dir = sqlite_dir + ".backup"
 
     def setUp(self):
