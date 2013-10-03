@@ -8,13 +8,20 @@
 """Sudoku app autopilot tests."""
 
 import os.path
+import os
+import shutil
+import logging
 
 from autopilot.input import Mouse, Touch, Pointer
 from autopilot.platform import model
 from autopilot.testcase import AutopilotTestCase
+from autopilot.matchers import Eventually
+from testtools.matchers import GreaterThan, Equals
 
-from sudoku_app.emulators.main_window import MainWindow
-from sudoku_app.emulators.ubuntusdk import ubuntusdk
+from ubuntuuitoolkit import emulators as toolkit_emulators
+from sudoku_app import emulators
+
+logger = logging.getLogger(__name__)
 
 
 class SudokuTestCase(AutopilotTestCase):
@@ -29,77 +36,73 @@ class SudokuTestCase(AutopilotTestCase):
         scenarios = [('with touch', dict(input_device_class=Touch))]
 
     local_location = "../../sudoku-app.qml"
+    sqlite_dir = os.path.expanduser("~/.local/share/sudoku-app/Databases")
+    backup_dir = sqlite_dir + ".backup"
 
     def setUp(self):
-        self.clean_db()
         self.pointing_device = Pointer(self.input_device_class.create())
         super(SudokuTestCase, self).setUp()
+
+        #backup and wipe db's before testing
+        self.temp_move_sqlite_db()
+        self.addCleanup(self.restore_sqlite_db)
+
         if os.path.exists(self.local_location):
             self.launch_test_local()
-        else:
+        elif os.path.exists('/usr/share/sudoku-app/sudoku-app.qml'):
             self.launch_test_installed()
+        else:
+            self.launch_test_click()
 
     def launch_test_local(self):
         self.app = self.launch_test_application(
             "qmlscene",
             self.local_location,
-            app_type='qt')
+            app_type='qt',
+            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
 
     def launch_test_installed(self):
         self.app = self.launch_test_application(
             "qmlscene",
             "/usr/share/sudoku-app/sudoku-app.qml",
             "--desktop_file_hint=/usr/share/applications/sudoku-app.desktop",
-            app_type='qt')
+            app_type='qt',
+            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
 
-    def find_db(self):
-        dbs_path = os.path.expanduser("~/.local/share/Qt Project/QtQmlViewer/QML/OfflineStorage/Databases/")
-        if not os.path.exists(dbs_path):
-            return None
+    def launch_test_click(self):
+        self.app = self.launch_click_package(
+            'com.ubuntu.sudoku-app',
+            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
 
-        files = [ f for f in os.listdir(dbs_path) if os.path.splitext(f)[1] == ".ini" ]
-        for f in files:
-            ini_path = os.path.join(dbs_path, f)
-            with open(ini_path) as ini:
-                for line in ini:
-                    if "=" in line:
-                        key, val = line.strip().split("=")
-                        if key == "Name" and val == "SudokuTouch":
-                            try:
-                                return ini_path.replace(".ini", ".sqlite")
-                            except OSError:
-                                pass
-        return None
-
-    def launch_and_quit_app(self):
-        self.launch_app()
-        self.main_window.get_qml_view().visible.wait_for(True)
-        
-        # When calling launch_app an instance of the spawned process
-        # control object will be stored in self.app.process, and a cleanup
-        # handler will be registered that essentially kills the process.
-        # Therefore, by triggering the cleanup handler here we're killing the
-        # process and removing the handler, which allows a clean launch of
-        # the process during regular test setup.
-        self.doCleanups()
-
-    def clean_db(self):
-        path = self.find_db()
-        if path is None:
-            self.launch_and_quit_app()
-            path = self.find_db()
-            if path is None:
-                self.assertNotEquals(path, None)
+    def temp_move_sqlite_db(self):
+        try:
+            shutil.rmtree(self.backup_dir)
+        except:
+            pass
+        else:
+            logger.warning("Prexisting backup database found and removed")
 
         try:
-            os.remove(path)
-        except OSError:
-            pass
+            shutil.move(self.sqlite_dir, self.backup_dir)
+        except:
+            logger.warning("No current database found")
+        else:
+            logger.debug("Backed up database")
+
+    def restore_sqlite_db(self):
+        if os.path.exists(self.backup_dir):
+            if os.path.exists(self.sqlite_dir):
+                try:
+                    shutil.rmtree(self.sqlite_dir)
+                except:
+                    logger.error("Failed to remove test database and restore" /
+                                 "database")
+                    return
+            try:
+                shutil.move(self.backup_dir, self.sqlite_dir)
+            except:
+                logger.error("Failed to restore database")
 
     @property
-    def main_window(self):
-        return MainWindow(self.app)
-
-    @property
-    def ubuntusdk(self):
-        return ubuntusdk(self, self.app)
+    def main_view(self):
+        return self.app.select_single(emulators.MainView)
