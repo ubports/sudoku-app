@@ -7,7 +7,7 @@
             "desktop": "sudoku-app.desktop"
         }
     }, 
-    "icon": "/usr/share/sudoku-app/SudokuGameIcon.png", 
+    "icon": "SudokuGameIcon.png", 
     "maintainer": "Dinko Osmankovic <dinko.metalac@gmail.com>", 
     "name": "com.ubuntu.sudoku", 
     "title": "sudoku", 
