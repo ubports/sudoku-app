@@ -223,10 +223,9 @@ class TestMainWindow(SudokuTestCase):
 
         #select "Moderate" choice of difficulty selector
         difficultyChoices = self.main_view.get_difficulty_selector_labelvisual()
-        difficultyChoice = difficultyChoices[3]
-        self.assertThat(difficultyChoice.text, Eventually(Equals("Moderate")))
-
+        difficultyChoice = filter(lambda choice: choice.text == 'Moderate', difficultyChoices)[0]
         self.pointing_device.click_object(difficultyChoice)
+        self.assertThat(lambda: self.main_view.get_difficulty_selector_labelvisual()[1].text, Eventually(Equals("Moderate")))
 
         #********check theme selector ********
         #click on theme selector
@@ -238,10 +237,9 @@ class TestMainWindow(SudokuTestCase):
         #select "Simple" choice of theme selector
         self.assertThat(self.main_view.get_theme_selector_labelvisual, Eventually(Not(Is(None))))
         themeChoices = self.main_view.get_theme_selector_labelvisual()
-        themeChoice = themeChoices[3]
-        self.assertThat(themeChoice.text, Eventually(Equals("Simple")))
-
+        themeChoice = filter(lambda choice: choice.text == 'Simple', themeChoices)[0]
         self.pointing_device.click_object(themeChoice)
+        self.assertThat(lambda: self.main_view.get_theme_selector_labelvisual()[1].text, Eventually(Equals("Simple")))
 
         #******** check hint switch  ********
         #select hints switch
