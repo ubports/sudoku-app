@@ -15,8 +15,6 @@ import logging
 from autopilot.input import Mouse, Touch, Pointer
 from autopilot.platform import model
 from autopilot.testcase import AutopilotTestCase
-from autopilot.matchers import Eventually
-from testtools.matchers import GreaterThan, Equals
 
 from ubuntuuitoolkit import emulators as toolkit_emulators
 from sudoku_app import emulators
@@ -36,7 +34,8 @@ class SudokuTestCase(AutopilotTestCase):
         scenarios = [('with touch', dict(input_device_class=Touch))]
 
     local_location = "../../sudoku-app.qml"
-    sqlite_dir = os.path.expanduser("~/.local/share/sudoku-app/Databases")
+    sqlite_dir = os.path.expanduser(
+        "~/.local/share/com.ubuntu.sudoku/Databases")
     backup_dir = sqlite_dir + ".backup"
 
     def setUp(self):
@@ -71,7 +70,7 @@ class SudokuTestCase(AutopilotTestCase):
 
     def launch_test_click(self):
         self.app = self.launch_click_package(
-            'com.ubuntu.sudoku-app',
+            'com.ubuntu.sudoku',
             emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
 
     def temp_move_sqlite_db(self):
