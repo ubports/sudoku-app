@@ -15,7 +15,7 @@
 override_dh_install:
 #	tests/autopilot/install_autopilot.sh $(CURDIR)
 	dh_install --fail-missing
-	appname=sudoku-app; \
+	appname=com.ubuntu.sudoku; \
 	for pofile in $(shell find ./po -name "*.po"); do \
 		pofilename="$${pofile##*/}"; \
 		langcode="$${pofilename%.*}"; \
