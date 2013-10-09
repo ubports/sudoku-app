@@ -1,0 +1,15 @@
+{
+    "description": "Sudoku game for Ubuntu devices", 
+    "framework": "ubuntu-sdk-13.10", 
+    "hooks": {
+        "sudoku": {
+            "apparmor": "apparmor/sudoku.json", 
+            "desktop": "sudoku-app.desktop"
+        }
+    }, 
+    "icon": "/usr/share/sudoku-app/SudokuGameIcon.png", 
+    "maintainer": "Dinko Osmankovic <dinko.metalac@gmail.com>", 
+    "name": "com.ubuntu.sudoku", 
+    "title": "sudoku", 
+    "version": "0.4.3"
+}
