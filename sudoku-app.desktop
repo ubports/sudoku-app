@@ -8,4 +8,4 @@ Terminal=false
 Type=Application
 X-Ubuntu-Touch=true
 X-Ubuntu-StageHint=SideStage
-X-Ubuntu-Gettext-Domain=sudoku-app
+X-Ubuntu-Gettext-Domain=com.ubuntu.sudoku
