@@ -8,7 +8,7 @@
         }
     }, 
     "icon": "SudokuGameIcon.png", 
-    "maintainer": "Dinko Osmankovic <dinko.metalac@gmail.com>", 
+    "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
     "name": "com.ubuntu.sudoku", 
     "title": "sudoku", 
     "version": "0.4.3"
