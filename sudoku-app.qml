@@ -12,7 +12,7 @@ MainView {
     id: mainView
     // objectName for functional testing purposes (autopilot-qt5)
     objectName: "sudoku"
-    applicationName: "sudoku-app"
+    applicationName: "com.ubuntu.sudoku"
 
     property real resizeFactor: units.gu(50)/units.gu(75)
     property real blockDistance: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/200: units.gu(50)/200;
