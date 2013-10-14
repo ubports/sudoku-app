@@ -1,3 +1,9 @@
+sudoku-app (1.0) precise; urgency=low
+
+  * Pushed to version 1.0; Added Sam as author for the logo designs.
+
+ -- Dinko Osmankovic <dinko.metalac@gmail.com>  Mon, 14 Oct 2013 10:24:41 +0200
+
 sudoku-app (0.4.3) raring; urgency=low
 
   * Fixed autopilot issue with toolbar butttons, new game screen landed with autopilot tests

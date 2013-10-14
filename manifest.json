@@ -1,15 +1,14 @@
 {
-    "description": "Sudoku game for Ubuntu devices", 
-    "framework": "ubuntu-sdk-13.10", 
+    "description": "description of sudoku-app",
+    "framework": "ubuntu-sdk-13.10",
     "hooks": {
-        "sudoku": {
-            "apparmor": "apparmor/sudoku.json", 
+        "sudoku-app": {
+            "apparmor": "sudoku-app.json",
             "desktop": "sudoku-app.desktop"
         }
-    }, 
-    "icon": "SudokuGameIcon.png", 
-    "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
-    "name": "com.ubuntu.sudoku", 
-    "title": "sudoku", 
-    "version": "0.4.3"
+    },
+    "maintainer": "Dinko Osmankovic <dinko.metalac@gmail.com>",
+    "name": "com.ubuntu.developer.dinko-metalac.sudoku-app",
+    "title": "sudoku-app",
+    "version": "1.0"
 }

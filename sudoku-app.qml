@@ -1115,7 +1115,7 @@ MainView {
                         Label {
                             objectName: "authors"
                             font.bold: true;
-                            text: "Dinko Osmankovic\nFr\u00e9d\u00e9ric Delgado\nGeorgi Karavasilev"
+                            text: "Dinko Osmankovic\nFr\u00e9d\u00e9ric Delgado\nGeorgi Karavasilev\nSam Hewitt"
                         }
                         Label {
                             objectName: "contactLabel"
@@ -1148,7 +1148,7 @@ MainView {
                         Label {
                             objectName: "version"
                             font.bold: true;
-                            text: "0.4.3"
+                            text: "1.0"
                         }
                     }
                     Row {
