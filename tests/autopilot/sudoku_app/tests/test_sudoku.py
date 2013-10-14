@@ -175,7 +175,7 @@ class TestMainWindow(SudokuTestCase):
 
         #Check correct version is displayed
         version = lambda: self.main_view.select_single("Label", objectName="version").text
-        self.assertThat(version, Eventually(Equals("0.4.3")))
+        self.assertThat(version, Eventually(Equals("1.0")))
 
         #Check correct year is displayed
         yearLabel = lambda: self.main_view.select_single("Label", objectName="yearLabel").text
