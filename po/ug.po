@@ -1,0 +1,113 @@
+# Uyghur translation for sudoku-app
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the sudoku-app package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sudoku-app\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-06-17 11:14+0200\n"
+"PO-Revision-Date: 2013-10-14 09:44+0000\n"
+"Last-Translator: Gheyret T.Kenji <Unknown>\n"
+"Language-Team: Uyghur <ug@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2013-10-15 05:19+0000\n"
+"X-Generator: Launchpad (build 16799)\n"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:254
+msgid "Please pick a number"
+msgstr ""
+
+#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:262
+msgid "Clear"
+msgstr "تازىلا"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:457
+msgid "Not allowed"
+msgstr ""
+
+#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:481
+msgid "Start blocks"
+msgstr ""
+
+#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:503
+msgid "Hinted blocks"
+msgstr ""
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:96
+msgid "Sudoku"
+msgstr ""
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:148
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:196
+msgid "You are a cheat..."
+msgstr ""
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:148
+msgid "Congratulations!"
+msgstr "مۇبارەك بولسۇن!"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:159
+msgid "New game"
+msgstr "يېڭى ئويۇن"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:189
+msgid "Show hint"
+msgstr ""
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:203
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:237
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:357
+msgid "Close"
+msgstr "ياپ"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:231
+msgid "Settings"
+msgstr "تەڭشەكلەر"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:250
+msgid "SudokuTouch settings"
+msgstr ""
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:257
+msgid "Difficulty"
+msgstr "قىيىنلىقى"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
+msgid "Easy"
+msgstr "ئاسان"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
+msgid "Moderate"
+msgstr "ئوتتۇراھال"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
+msgid "Hard"
+msgstr "تەس"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
+msgid "Ultra Hard"
+msgstr "بەك تەس"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:294
+msgid "Theme"
+msgstr "ئۆرنەك"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:351
+msgid "About"
+msgstr "ھەققىدە"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:383
+msgid "Author: "
+msgstr "ئاپتور: "
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:393
+msgid "Contact: "
+msgstr "ئالاقە: "
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:414
+msgid "Version: "
+msgstr "نەشرى: "
