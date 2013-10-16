@@ -555,9 +555,10 @@ MainView {
                     id: gameFinishedText;
                     text: sudokuBlocksGrid.checkIfCheating ? i18n.tr("You are a cheat...") : i18n.tr("Congratulations!")
                     color: sudokuBlocksGrid.defaultHintColor;
-                    anchors.centerIn: parent;
+                    anchors.fill: parent;
                     fontSize: "large";
                     horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
                 }
             }
 
