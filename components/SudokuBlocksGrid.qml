@@ -51,7 +51,7 @@ Column {
     }
 
     function calculateScore() {
-        var finalScore = Math.round((numberOfActions + 1000*numberOfHints+gameSeconds)*(4-gameDifficulty) / 100);
+        var finalScore = Math.round((numberOfActions + 1000*numberOfHints+gameSeconds)*(4-gameDifficulty) / 10);
         return finalScore
     }
 
@@ -390,14 +390,29 @@ Column {
                                             gameFinishedRectangle.visible = true;
                                             //Settings.insertNewScore(currentUserId, sudokuBlocksGrid.calculateScore())
                                             mainView.insertNewGameScore(currentUserId, sudokuBlocksGrid.calculateScore())
-                                            gameFinishedText.text = i18n.tr("You are a cheat... \nBut we give you\n")
+                                            if (checkIfCheating)
+                                            {
+                                                var _str = "points.";
+                                                if (sudokuBlocksGrid.calculateScore() == 1)
+                                                    _str = "point."
+                                                gameFinishedText.text = i18n.tr("You are a cheat...\nBut we give you\n")
                                                     + sudokuBlocksGrid.calculateScore()
-                                                    + " " + i18n.tr("points.")
+                                                    + " " + i18n.tr(_str)
+                                            }
+                                            else
+                                            {
+                                                var _str = "points.";
+                                                if (sudokuBlocksGrid.calculateScore() == 1)
+                                                    _str = "point."
+                                                gameFinishedText.text = i18n.tr("Congratulations!\nWe give you\n")
+                                                    + sudokuBlocksGrid.calculateScore()
+                                                    + " " + i18n.tr(_str)
+                                            }
 
-                                            print (sudokuBlocksGrid.numberOfActions)
-                                            print (sudokuBlocksGrid.numberOfHints)
-                                            print (sudokuBlocksGrid.gameSeconds)
-                                            print (sudokuBlocksGrid.gameDifficulty)
+                                            //print (sudokuBlocksGrid.numberOfActions)
+                                            //print (sudokuBlocksGrid.numberOfHints)
+                                            //print (sudokuBlocksGrid.gameSeconds)
+                                            //print (sudokuBlocksGrid.gameDifficulty)
 
                                             winTimer.restart();
                                         }
