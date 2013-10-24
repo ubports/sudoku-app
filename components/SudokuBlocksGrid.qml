@@ -413,6 +413,7 @@ Column {
                                             //print (sudokuBlocksGrid.numberOfHints)
                                             //print (sudokuBlocksGrid.gameSeconds)
                                             //print (sudokuBlocksGrid.gameDifficulty)
+                                            gamesPlayedMetric.increment(1);
 
                                             winTimer.restart();
                                         }

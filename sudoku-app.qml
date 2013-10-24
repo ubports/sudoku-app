@@ -7,6 +7,7 @@ import "js/localStorage.js" as Settings
 import "components"
 //import Ubuntu.HUD 1.0 as HUD
 import Ubuntu.Unity.Action 1.0 as UnityActions
+import UserMetrics 0.1
 
 MainView {
     id: mainView
@@ -300,6 +301,13 @@ MainView {
         //buttonsGridPublic.update();
     }
 
+    Metric {
+        id: gamesPlayedMetric
+        name: "sudoku-metrics"
+        format: i18n.tr("%1 sudoku games played today")
+        emptyFormat: i18n.tr("No games played today")
+        domain: "com.ubuntu.sudoku"
+    }
 
     Component {
         id: alertDialog

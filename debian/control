@@ -19,6 +19,7 @@ Depends: ${misc:Depends},
          qtdeclarative5-particles-plugin,
          qtdeclarative5-window-plugin,
          qtdeclarative5-xmllistmodel-plugin,
+	 qtdeclarative5-usermetrics0.1,
 Description: Sudoku game for Ubuntu devices
  Simple Sudoku Touch game written in QML2/JS using Ubuntu SDK
 
