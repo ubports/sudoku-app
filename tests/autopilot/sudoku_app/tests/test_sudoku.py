@@ -222,10 +222,9 @@ class TestMainWindow(SudokuTestCase):
         self.pointing_device.click_object(difficultySelector)
 
         #select "Moderate" choice of difficulty selector
-        difficultChoices = self.main_view.get_difficulty_selector_labelvisual()
-        difficultChoice = filter(lambda choice: choice.text == 'Moderate',
-                                 difficultChoices)[0]
-        self.pointing_device.click_object(difficultChoice)
+        choices = self.main_view.get_difficulty_selector_labelvisual()
+        choice_ = filter(lambda choice: choice.text == 'Moderate', choices)[0]
+        self.pointing_device.click_object(choice_)
         self.assertThat(
             lambda:
             self.main_view.get_difficulty_selector_labelvisual()[0].text,
