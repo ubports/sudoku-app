@@ -30,17 +30,17 @@ class MainView(toolkit_emulators.MainView):
         return self.wait_select_single("Dialog", objectName="picknumberscreen")
 
     def get_hints_switch(self):
-        return self.wait_select_single("CheckBox", objectName="hintsSwitch")
+        return self.select_single("CheckBox", objectName="hintsSwitch")
 
     #clicking on this works instead on  the previous one (get_hints_switch)
     #  it doesn't(but the previous has the clicked property so I am using both
     def get_hints_switchClickable(self):
-        return self.wait_select_single("Standard",
-                                       objectName="hintsSwitchClickable")
+        return self.select_single("Standard",
+                                  objectName="hintsSwitchClickable")
 
     def get_difficulty_selector(self):
-        return self.wait_select_single("ValueSelector",
-                                       objectName="difficultySelector")
+        return self.select_single("ValueSelector",
+                                  objectName="difficultySelector")
 
     def get_difficulty_selector_labelvisual(self):
         difficultylabelvisual = self.get_difficulty_selector()
@@ -49,8 +49,7 @@ class MainView(toolkit_emulators.MainView):
         return difficutlylabelvisualList
 
     def get_theme_selector(self):
-        return self.wait_select_single("ValueSelector",
-                                       objectName="themeSelector")
+        return self.select_single("ValueSelector", objectName="themeSelector")
 
     def get_theme_selector_labelvisual(self):
         themelabelvisual = self.get_theme_selector()
@@ -59,45 +58,41 @@ class MainView(toolkit_emulators.MainView):
         return themelabelvisualList
 
     def get_current_profile(self):
-        return self.wait_select_single("SingleValue",
-                                       objectName="Current profile")
+        return self.select_single("SingleValue", objectName="Current profile")
 
     def get_sudoku_user_profile(self):
-        return self.wait_select_single("Standard", text="Sudoku User")
+        return self.select_single("Standard", text="Sudoku User")
 
     def get_user_profile_cancel_button(self):
         return self.select_single("Button", objectName="profileCancelButton")
 
     def get_add_profile(self):
-        return self.wait_select_single("SingleValue", objectName="Add profile")
+        return self.select_single("SingleValue", objectName="Add profile")
 
     def get_add_profile_dialog(self):
         return self.select_single("Dialog", objectName="Add new profile")
 
     def get_add_profile_Lastname_field(self):
-        return self.wait_select_single("TextField", objectName="Lastname")
+        return self.select_single("TextField", objectName="Lastname")
 
     def get_add_profile_Firstname_field(self):
-        return self.wait_select_single("TextField", objectName="Firstname")
+        return self.select_single("TextField", objectName="Firstname")
 
     def get_add_profile_OKbutton(self):
-        return self.wait_select_single("SudokuDialogButton",
-                                       objectName="OKbutton")
+        return self.select_single("SudokuDialogButton", objectName="OKbutton")
 
     def get_manage_profiles(self):
-        return self.wait_select_single("SingleValue",
-                                       objectName="Manage profiles")
+        return self.select_single("SingleValue", objectName="Manage profiles")
 
     def get_Myfirstname_Mylastname_profile(self):
-        return self.wait_select_single("Standard",
-                                       text="Myfirstname Mylastname")
+        return self.select_single("Standard", text="Myfirstname Mylastname")
 
     def get_edit_profile_dialog(self):
-        return self.wait_select_single("Dialog", objectName="Edit profile")
+        return self.select_single("Dialog", objectName="Edit profile")
 
     def get_edit_profile_delete_button(self):
-        return self.wait_select_single("SudokuDialogButton",
-                                       objectName="deleteButton")
+        return self.select_single("SudokuDialogButton",
+                                  objectName="deleteButton")
 
     def get_new_game_easy_button(self):
         return self.wait_select_single("NewGameSelectionButton",

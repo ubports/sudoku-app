@@ -55,7 +55,7 @@ class SudokuTestCase(AutopilotTestCase):
 
     def launch_test_local(self):
         self.app = self.launch_test_application(
-            "qmlscene",
+            "/usr/bin/qmlscene",
             self.local_location,
             app_type='qt',
             emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
