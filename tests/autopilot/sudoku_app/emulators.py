@@ -28,7 +28,7 @@ class MainView(toolkit_emulators.MainView):
         return button
 
     def get_number_dialog(self):
-        return self.select_single("Dialog", objectName="picknumberscreen")
+        return self.wait_select_single("Dialog", objectName="picknumberscreen")
 
     def get_hints_switch(self):
         return self.select_single("CheckBox", objectName="hintsSwitch")
