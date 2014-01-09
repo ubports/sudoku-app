@@ -28,7 +28,7 @@ class MainView(toolkit_emulators.MainView):
         return button
 
     def get_number_dialog(self):
-        return self.select_single("Dialog", objectName="picknumberscreen")
+        return self.wait_select_single("Dialog", objectName="picknumberscreen")
 
     def get_hints_switch(self):
         return self.select_single("CheckBox", objectName="hintsSwitch")
@@ -36,7 +36,7 @@ class MainView(toolkit_emulators.MainView):
     #clicking on this works instead on  the previous one (get_hints_switch) it doesn't(but the previous
     #has the clicked property so I am using both
     def get_hints_switchClickable(self):
-        return self.wait_select_single("Dialog", objectName="picknumberscreen")
+        return self.select_single("Standard", objectName="hintsSwitchClickable")
 
     def get_difficulty_selector(self):
         return self.select_single("ValueSelector", objectName="difficultySelector")
