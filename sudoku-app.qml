@@ -304,7 +304,7 @@ MainView {
     Metric {
         id: gamesPlayedMetric
         name: "sudoku-metrics"
-        format: <b>%1</b> " + i18n.tr("Sudoku games played today")
+        format: "<b>%1</b> " + i18n.tr("Sudoku games played today")
         emptyFormat: i18n.tr("No Sudoku games played today")
         domain: "com.ubuntu.sudoku"
     }
