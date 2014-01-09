@@ -129,8 +129,21 @@ class TestMainWindow(SudokuTestCase):
         self.assertThat(buttonValue, Eventually(Equals("4")))
 
     def test_new_game_button(self):
+        #open settings tab
+        self.main_view.switch_to_tab("settingsTab")
+
         #testing new game with moderate mode
-        self._set_difficulty(3, "Moderate")
+        #click on difficulty selector
+        self.assertThat(self.main_view.get_difficulty_selector, Eventually(Not(Is(None))))
+        difficultySelector = self.main_view.get_difficulty_selector()
+        self.assertThat(difficultySelector.text, Eventually(Equals("Default Difficulty")))
+        self.pointing_device.click_object(difficultySelector)
+
+        #select "Moderate" choice of difficulty selector
+        difficultyChoices = self.main_view.get_difficulty_selector_labelvisual()
+        difficultyChoice = filter(lambda choice: choice.text == 'Moderate', difficultyChoices)[0]
+        self.pointing_device.click_object(difficultyChoice)
+        self.assertThat(lambda: self.main_view.get_difficulty_selector_labelvisual()[0].text, Eventually(Equals("Moderate")))
         self._verify_game_start()
 
         #testing new game with always ask
@@ -225,7 +238,7 @@ class TestMainWindow(SudokuTestCase):
         difficultyChoices = self.main_view.get_difficulty_selector_labelvisual()
         difficultyChoice = filter(lambda choice: choice.text == 'Moderate', difficultyChoices)[0]
         self.pointing_device.click_object(difficultyChoice)
-        self.assertThat(lambda: self.main_view.get_difficulty_selector_labelvisual()[1].text, Eventually(Equals("Moderate")))
+        self.assertThat(lambda: self.main_view.get_difficulty_selector_labelvisual()[0].text, Eventually(Equals("Moderate")))
 
         #********check theme selector ********
         #click on theme selector
