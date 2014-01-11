@@ -51,8 +51,7 @@ Column {
     }
 
     function calculateScore() {
-        var finalScore = Math.round((numberOfActions + 1000*numberOfHints+gameSeconds)*(4-gameDifficulty) / 10);
-        return finalScore
+        return Math.round((100000 * ((gameDifficulty+1)/(numberOfActions + (1000*numberOfHints) + gameSeconds))))
     }
 
     function resetScore() {
