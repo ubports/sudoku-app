@@ -91,7 +91,7 @@ function getAllScores()
 
     //print("GETTING ALL SCORES")
     db.transaction( function(tx) {
-        var rs = tx.executeSql("SELECT profile_id, score FROM scores order by score limit 10;");
+        var rs = tx.executeSql("SELECT profile_id, score FROM scores order by score desc limit 10;");
         for(var i = 0; i < rs.rows.length; i++) {
             var dbItem = rs.rows.item(i);
             res.push([dbItem.profile_id, dbItem.score])
@@ -108,7 +108,7 @@ function getAllScoresForUser(profile_id)
 
     //print("GETTING ALL SCORES")
     db.transaction( function(tx) {
-        var rs = tx.executeSql("SELECT score FROM scores WHERE profile_id=? order by score limit 10;",[profile_id]);
+        var rs = tx.executeSql("SELECT score FROM scores WHERE profile_id=? order by score desc limit 10;",[profile_id]);
         for(var i = 0; i < rs.rows.length; i++) {
             var dbItem = rs.rows.item(i);
             //print(dbItem.profile_id, dbItem.score)
