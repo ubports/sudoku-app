@@ -1,0 +1,113 @@
+# Bulgarian translation for sudoku-app
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# This file is distributed under the same license as the sudoku-app package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sudoku-app\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-06-17 11:14+0200\n"
+"PO-Revision-Date: 2014-01-25 16:51+0000\n"
+"Last-Translator: Gangov <Unknown>\n"
+"Language-Team: Bulgarian <bg@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-01-26 05:16+0000\n"
+"X-Generator: Launchpad (build 16914)\n"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:254
+msgid "Please pick a number"
+msgstr "Моля изберете число"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:262
+msgid "Clear"
+msgstr "Изчисти"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:457
+msgid "Not allowed"
+msgstr "Не е позволено"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:481
+msgid "Start blocks"
+msgstr "Начални блокчета"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:503
+msgid "Hinted blocks"
+msgstr "Подсказани блокчета"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:96
+msgid "Sudoku"
+msgstr "Судоку"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:148
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:196
+msgid "You are a cheat..."
+msgstr "Ти си измамн..."
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:148
+msgid "Congratulations!"
+msgstr "Поздравления!"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:159
+msgid "New game"
+msgstr "Нова игра"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:189
+msgid "Show hint"
+msgstr "Покажи съвет"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:203
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:237
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:357
+msgid "Close"
+msgstr "Затвори"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:231
+msgid "Settings"
+msgstr "Настройки"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:250
+msgid "SudokuTouch settings"
+msgstr "Настройки на СудокуTouch"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:257
+msgid "Difficulty"
+msgstr "Трудност"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
+msgid "Easy"
+msgstr "Лесно"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
+msgid "Moderate"
+msgstr "Средно"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
+msgid "Hard"
+msgstr "Трудно"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
+msgid "Ultra Hard"
+msgstr "Много Трудно"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:294
+msgid "Theme"
+msgstr "Тема"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:351
+msgid "About"
+msgstr "Относно"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:383
+msgid "Author: "
+msgstr "Автор: "
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:393
+msgid "Contact: "
+msgstr "Контакт: "
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:414
+msgid "Version: "
+msgstr "Версия: "
