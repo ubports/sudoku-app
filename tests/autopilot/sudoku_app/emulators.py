@@ -43,7 +43,7 @@ class MainView(toolkit_emulators.MainView):
 
     def get_difficulty_selector_labelvisual(self):
         difficultylabelvisual = self.get_difficulty_selector()
-        difficutlylabelvisualList = difficultylabelvisual.select_many("ShapeItem", visible="True")
+        difficutlylabelvisualList = difficultylabelvisual.select_many("QQuickColumn", visible="True")
         return difficutlylabelvisualList
 
     def get_theme_selector(self):
@@ -51,7 +51,7 @@ class MainView(toolkit_emulators.MainView):
 
     def get_theme_selector_labelvisual(self):
         themelabelvisual = self.get_theme_selector()
-        themelabelvisualList = themelabelvisual.select_many("ShapeItem", visible="True")
+        themelabelvisualList = themelabelvisual.select_many("QQuickColumn", visible="True")
         return themelabelvisualList
 
     def get_current_profile(self):
