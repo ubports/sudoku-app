@@ -266,6 +266,7 @@ MainView {
             sudokuBlocksGrid.createNewGame(81 - randomnumber);
             break;
         case 4:
+            mainView.dialogLoaded = 1;
             PopupUtils.open(newGameComponent)
             break;
         }
@@ -333,9 +334,161 @@ MainView {
         }
     }
 
-    NewGameComponent {
+    Component {
         id: newGameComponent
 
+        Dialog {
+            id: newGameDialogue
+            title: i18n.tr("New Game")
+            text: i18n.tr("Select difficulty level")
+
+            function closeDialog() {
+                PopupUtils.close(newGameDialogue)
+                mainView.dialogLoaded = -1;
+                mainView.focus = true;
+            }
+
+            Component.onCompleted: {
+                mainView.dialogLoaded = 1;
+                newGameDialogue.focus = true;
+                mainView.focus = false;
+            }
+
+            Keys.onPressed: {
+                switch(event.key) {
+                case Qt.Key_E:
+                    var randomnumber = Math.floor(Math.random()*9);
+                    randomnumber += 31;
+                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                    sudokuBlocksGrid.gameDifficulty = 0
+                    break;
+                case Qt.Key_M:
+                    var randomnumber = Math.floor(Math.random()*4);
+                    randomnumber += 26;
+                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                    sudokuBlocksGrid.gameDifficulty = 1
+                    break;
+                case Qt.Key_R:
+                    var randomnumber = Math.floor(Math.random()*4);
+                    randomnumber += 21;
+                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                    sudokuBlocksGrid.gameDifficulty = 2
+                    break;
+                case Qt.Key_U:
+                    var randomnumber = Math.floor(Math.random()*3);
+                    randomnumber += 17;
+                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                    sudokuBlocksGrid.gameDifficulty = 3
+                    break;
+
+                case Qt.Key_Escape:
+                    break;
+
+                default:
+                    //console.log("No key action defined")
+                    break;
+                }
+            }
+
+
+
+            Column {
+                spacing: units.gu(5)
+
+                Grid {
+                    rowSpacing: units.gu(3)
+                    columnSpacing: units.gu(3)
+                    columns: 2
+                    anchors.horizontalCenter: parent.horizontalCenter
+
+                    NewGameSelectionButton {
+                        id: easyGameButton
+                        objectName: "easyGameButton"
+                        buttonText: i18n.tr("Easy")
+                        opacity: 0.8
+                        width: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/4: units.gu(50)/4;
+                        height: width
+
+                        onTriggered: {
+                            //print("EASY")
+                            var randomnumber = Math.floor(Math.random()*9);
+                            randomnumber += 31;
+                            sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                            sudokuBlocksGrid.gameDifficulty = 0
+                            newGameDialogue.closeDialog()
+                            //toolbar.opened = false;
+                        }
+
+                    }
+                    NewGameSelectionButton {
+                        id: moderateGameButton
+                        objectName: "moderateGameButton"
+                        buttonText: i18n.tr("Moderate")
+                        opacity: 0.8
+                        width: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/4: units.gu(50)/4;
+                        height: width
+                        onTriggered: {
+                            //print("EASY")
+                            var randomnumber = Math.floor(Math.random()*4);
+                            randomnumber += 26;
+                            sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                            sudokuBlocksGrid.gameDifficulty = 1
+                            newGameDialogue.closeDialog()
+                            //toolbar.opened = false;
+                        }
+                    }
+                    NewGameSelectionButton {
+                        id: hardGameButton
+                        objectName: "hardGameButton"
+                        buttonText: i18n.tr("Hard")
+                        opacity: 0.8
+                        width: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/4: units.gu(50)/4;
+                        height: width
+                        onTriggered: {
+                            //print("EASY")
+                            var randomnumber = Math.floor(Math.random()*4);
+                            randomnumber += 21;
+                            sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                            sudokuBlocksGrid.gameDifficulty = 2
+                            newGameDialogue.closeDialog()
+                            //toolbar.opened = false;
+                        }
+                    }
+                    NewGameSelectionButton {
+                        id: ultrahardGameButton
+                        objectName: "ultrahardGameButton"
+                        buttonText: i18n.tr("Ultra\nHard")
+                        opacity: 0.8
+                        width: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/4: units.gu(50)/4;
+                        height: width
+                        onTriggered: {
+                            //print("EASY")
+                            var randomnumber = Math.floor(Math.random()*3);
+                            randomnumber += 17;
+                            sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                            sudokuBlocksGrid.gameDifficulty = 3
+                            newGameDialogue.closeDialog()
+                            //toolbar.opened = false;
+                        }
+                    }
+
+                }
+
+                SudokuDialogButton{
+                    buttonText: i18n.tr("Cancel")
+                    width: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width*2/3: units.gu(50)*2/3
+                    size: units.gu(5)
+                    buttonColor: sudokuBlocksGrid.dialogButtonColor1
+                    textColor: sudokuBlocksGrid.dialogButtonTextColor
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    //border.color: "transparent"
+                    onTriggered: {
+                        newGameDialogue.closeDialog()
+                    }
+                }
+            }
+
+        }
     }
 
     focus: true
@@ -356,7 +509,7 @@ MainView {
                 sudokuBlocksGrid.gameDifficulty = 1
                 settingsTab.difficultyIndex = 1
                 break;
-            case Qt.Key_H:
+            case Qt.Key_R:
                 var randomnumber = Math.floor(Math.random()*4);
                 randomnumber += 21;
                 sudokuBlocksGrid.createNewGame(81 - randomnumber);
@@ -369,6 +522,11 @@ MainView {
                 sudokuBlocksGrid.createNewGame(81 - randomnumber);
                 sudokuBlocksGrid.gameDifficulty = 3
                 settingsTab.difficultyIndex = 3
+                break;
+
+            case Qt.Key_H:
+                // Show Hint if possible
+                revealHint();
                 break;
 
             case Qt.Key_Left:
@@ -915,11 +1073,11 @@ MainView {
                         text: i18n.tr("<b>Sudoku settings</b>")
                     }
 
-                    ListItem.ValueSelector {
+                    ListItem.ItemSelector {
                         objectName: "difficultySelector"
                         id: difficultySelector
                         text: i18n.tr("Default Difficulty")
-                        values: [i18n.tr("Easy"), i18n.tr("Moderate"), i18n.tr("Hard"), i18n.tr("Ultra Hard"), i18n.tr("Always ask")]
+                        model: [i18n.tr("Easy"), i18n.tr("Moderate"), i18n.tr("Hard"), i18n.tr("Ultra Hard"), i18n.tr("Always ask")]
                         onSelectedIndexChanged: {
                             //print(difficultySelector.selectedIndex)
                             switch(difficultySelector.selectedIndex) {
@@ -954,11 +1112,11 @@ MainView {
                         }
 
                     }
-                    ListItem.ValueSelector {
+                    ListItem.ItemSelector {
                         objectName: "themeSelector"
                         id: themeSelector
                         text: i18n.tr("Theme")
-                        values: ["UbuntuColours", "Simple"]
+                        model: ["UbuntuColours", "Simple"]
                         onSelectedIndexChanged: {
                             var newColorScheme = null;
                             if (selectedIndex == 0)
