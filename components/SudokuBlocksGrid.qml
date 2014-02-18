@@ -303,12 +303,12 @@ Column {
 
         Item {
 
-           // x: 3
-           // y: 0
+            // x: 3
+            // y: 0
             //anchors.horizontalCenter: parent.parent.horizontalCenter;
-          //  rows: 9;
-          //  columns: 9;
-          //  spacing: units.dp(1);
+            //  rows: 9;
+            //  columns: 9;
+            //  spacing: units.dp(1);
 
 
             Component {
@@ -322,121 +322,170 @@ Column {
 
                     //Column {
                     //    spacing: units.gu(5)
-                        //x: -units.gu(1)
-
-
-                        SudokuDialogButton{
-                            id: clearButton
-                            buttonText: i18n.tr("Clear")
-                            width: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width*2/3: units.gu(50)*2/3
-                            size: units.gu(5)
-                            //anchors.left: parent.left;
-                            //anchors.horizontalCenter: parent
-                            buttonColor: dialogButtonColor1
-                            textColor: dialogButtonTextColor
-                            //border.color: "transparent"
-                            onTriggered: {
-                                numberOfActions++;
-                                buttonsGrid.itemAt(currentX).buttonText = "";
-                                var row = Math.floor(currentX/9);
-                                var column = currentX%9;
-                                //print (row, column);
-                                grid.setValue(column,row, 0);
-                                buttonsGrid.itemAt(currentX).buttonColor = defaultColor;
-                                buttonsGrid.itemAt(currentX).boldText = false;
-                                buttonsGrid.itemAt(currentX).hinted = false
-                                buttonsGrid.redrawGrid()
-                                PopupUtils.close(dialogue)
-                            }
+                    //x: -units.gu(1)
+                    Component.onCompleted: {
+                        mainView.dialogLoaded = 2;
+                        dialogue.focus = true;
+                        //print(dialogue.focus)
+                    }
+                    Keys.onPressed: {
+                        //print("Pressed: ",event.key)
+                        if (event.key-48 >= 1 && event.key-48 <= 9) {
+                            pressButton(event.key-48)
+                        }
+                        else if (event.key === Qt.Key_Escape) {
+                            buttonsGrid.redrawGrid()
+                            PopupUtils.close(dialogue)
+                        }
+                        else if (event.key == Qt.Key_C) {
+                            numberOfActions++;
+                            buttonsGrid.itemAt(currentX).buttonText = "";
+                            var row = Math.floor(currentX/9);
+                            var column = currentX%9;
+                            //print (row, column);
+                            grid.setValue(column,row, 0);
+                            buttonsGrid.itemAt(currentX).buttonColor = defaultColor;
+                            buttonsGrid.itemAt(currentX).boldText = false;
+                            buttonsGrid.itemAt(currentX).hinted = false
+                            buttonsGrid.redrawGrid()
+                            PopupUtils.close(dialogue)
                         }
 
-                        Grid {
-                            columns: 3;
-                            x: clearButton.x + 0.5*(clearButton.width - 4*units.gu(5))
-                            spacing: units.gu(2);
-                            //width: mainView.width/mainView.height < 0.6 ? mainView.pageWidth*2/3: units.gu(50)*2/3;
-                            //anchors.horizontalCenter: clearButton.horizontalCenter
-                            //anchors.horizontalCenter: parent
 
-                            Repeater {
-                                id: numberPickerButtons
-                                model:9
-                                anchors.centerIn: parent
+                    }
+
+                    function pressButton(currentDigit){
+                        buttonsGrid.itemAt(currentX).buttonText = currentDigit
+                        buttonsGrid.itemAt(currentX).hinted = false
+                        numberOfActions++;
+
+                        var row = Math.floor(currentX/9);
+                        var column = currentX%9;
+
+                        //print (row, column)
+                        grid.setValue(column, row, currentDigit);
+
+                        buttonsGrid.redrawGrid()
+                        PopupUtils.close(dialogue)
+                        mainView.dialogLoaded = -1;
+                        mainView.focus = true;
+                    }
 
 
-                                SudokuDialogButton{
-                                    id: buttonPick
-                                    buttonText: index+1;
+                    SudokuDialogButton {
+                        id: clearButton
+                        buttonText: i18n.tr("Clear")
+                        width: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width*2/3: units.gu(50)*2/3
+                        size: units.gu(5)
+                        //anchors.left: parent.left;
+                        //anchors.horizontalCenter: parent
+                        buttonColor: dialogButtonColor1
+                        textColor: dialogButtonTextColor
+                        //border.color: "transparent"
+                        onTriggered: {
+                            numberOfActions++;
+                            buttonsGrid.itemAt(currentX).buttonText = "";
+                            var row = Math.floor(currentX/9);
+                            var column = currentX%9;
+                            //print (row, column);
+                            grid.setValue(column,row, 0);
+                            buttonsGrid.itemAt(currentX).buttonColor = defaultColor;
+                            buttonsGrid.itemAt(currentX).boldText = false;
+                            buttonsGrid.itemAt(currentX).hinted = false
+                            buttonsGrid.redrawGrid()
+                            PopupUtils.close(dialogue)
+                            //parent.pressButton(currentX);
+                        }
+                    }
 
-                                    size: units.gu(5);
+                    Grid {
+                        columns: 3;
+                        x: clearButton.x + 0.5*(clearButton.width - 4*units.gu(5))
+                        spacing: units.gu(2);
+                        //width: mainView.width/mainView.height < 0.6 ? mainView.pageWidth*2/3: units.gu(50)*2/3;
+                        //anchors.horizontalCenter: clearButton.horizontalCenter
+                        //anchors.horizontalCenter: parent
 
-                                    onTriggered: {
-                                        buttonsGrid.itemAt(currentX).buttonText = index+1
-                                        buttonsGrid.itemAt(currentX).hinted = false
-                                        numberOfActions++;
+                        Repeater {
+                            id: numberPickerButtons
+                            model:9
+                            anchors.centerIn: parent
 
-                                        var row = Math.floor(currentX/9);
-                                        var column = currentX%9;
 
-                                        //print (row, column)
-                                        grid.setValue(column, row, index+1);
+                            SudokuDialogButton{
+                                id: buttonPick
+                                buttonText: index+1;
 
-                                        buttonsGrid.redrawGrid()
+                                size: units.gu(5);
 
-                                        PopupUtils.close(dialogue)
+                                onTriggered: {
+                                    //print("curr: ", index+1)
+                                    buttonsGrid.itemAt(currentX).buttonText = index+1
+                                    buttonsGrid.itemAt(currentX).hinted = false
+                                    numberOfActions++;
 
-                                        if (checkIfGameFinished()) {
-                                            gameFinishedRectangle.visible = true;
-                                            //Settings.insertNewScore(currentUserId, sudokuBlocksGrid.calculateScore())
-                                            mainView.insertNewGameScore(currentUserId, sudokuBlocksGrid.calculateScore())
-                                            if (checkIfCheating)
-                                            {
-                                                var _str = "points.";
-                                                if (sudokuBlocksGrid.calculateScore() == 1)
-                                                    _str = "point."
-                                                gameFinishedText.text = i18n.tr("You are a cheat...\nBut we give you\n")
+                                    var row = Math.floor(currentX/9);
+                                    var column = currentX%9;
+
+                                    //print (row, column)
+                                    grid.setValue(column, row, index+1);
+
+                                    buttonsGrid.redrawGrid()
+
+                                    PopupUtils.close(dialogue)
+
+                                    if (checkIfGameFinished()) {
+                                        gameFinishedRectangle.visible = true;
+                                        //Settings.insertNewScore(currentUserId, sudokuBlocksGrid.calculateScore())
+                                        mainView.insertNewGameScore(currentUserId, sudokuBlocksGrid.calculateScore())
+                                        if (checkIfCheating)
+                                        {
+                                            var _str = "points.";
+                                            if (sudokuBlocksGrid.calculateScore() == 1)
+                                                _str = "point."
+                                            gameFinishedText.text = i18n.tr("You are a cheat...\nBut we give you\n")
                                                     + sudokuBlocksGrid.calculateScore()
                                                     + " " + i18n.tr(_str)
-                                            }
-                                            else
-                                            {
-                                                var _str = "points.";
-                                                if (sudokuBlocksGrid.calculateScore() == 1)
-                                                    _str = "point."
-                                                gameFinishedText.text = i18n.tr("Congratulations!\nWe give you\n")
-                                                    + sudokuBlocksGrid.calculateScore()
-                                                    + " " + i18n.tr(_str)
-                                            }
-
-                                            //print (sudokuBlocksGrid.numberOfActions)
-                                            //print (sudokuBlocksGrid.numberOfHints)
-                                            //print (sudokuBlocksGrid.gameSeconds)
-                                            //print (sudokuBlocksGrid.gameDifficulty)
-                                            gamesPlayedMetric.increment(1);
-
-                                            winTimer.restart();
                                         }
+                                        else
+                                        {
+                                            var _str = "points.";
+                                            if (sudokuBlocksGrid.calculateScore() == 1)
+                                                _str = "point."
+                                            gameFinishedText.text = i18n.tr("Congratulations!\nWe give you\n")
+                                                    + sudokuBlocksGrid.calculateScore()
+                                                    + " " + i18n.tr(_str)
+                                        }
+
+                                        //print (sudokuBlocksGrid.numberOfActions)
+                                        //print (sudokuBlocksGrid.numberOfHints)
+                                        //print (sudokuBlocksGrid.gameSeconds)
+                                        //print (sudokuBlocksGrid.gameDifficulty)
+                                        gamesPlayedMetric.increment(1);
+
+                                        winTimer.restart();
                                     }
                                 }
                             }
                         }
+                    }
 
 
-                        SudokuDialogButton{
-                            buttonText: i18n.tr("Cancel")
-                            width: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width*2/3: units.gu(50)*2/3
-                            size: units.gu(5)
-                            //anchors.left: parent.left;
-                            //anchors.horizontalCenter: parent
-                            anchors.leftMargin: units.gu(10)
-                            buttonColor: dialogButtonColor2
-                            textColor: dialogButtonTextColor
-                            //border.color: "transparent"
-                            onTriggered: {
-                                 buttonsGrid.redrawGrid()
-                                PopupUtils.close(dialogue)
-                            }
+                    SudokuDialogButton{
+                        buttonText: i18n.tr("Cancel")
+                        width: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width*2/3: units.gu(50)*2/3
+                        size: units.gu(5)
+                        //anchors.left: parent.left;
+                        //anchors.horizontalCenter: parent
+                        anchors.leftMargin: units.gu(10)
+                        buttonColor: dialogButtonColor2
+                        textColor: dialogButtonTextColor
+                        //border.color: "transparent"
+                        onTriggered: {
+                            buttonsGrid.redrawGrid()
+                            PopupUtils.close(dialogue)
                         }
+                    }
 
                     //}
 

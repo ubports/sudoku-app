@@ -25,6 +25,8 @@ MainView {
     property string alertTitle: ""
     property string alertText : ""
 
+    property int dialogLoaded: -1;
+
     property int editUserId : -1;
 
     width: units.gu(41);
@@ -37,6 +39,9 @@ MainView {
     /*HUD.HUD {
         applicationIdentifier: "sudoku-app" // this has to match the .desktop file!
         HUD.Context {*/
+
+    StateSaver.properties: "width, height"
+
     actions: [
         Action {
             text: i18n.tr("New game")
@@ -215,10 +220,10 @@ MainView {
                         + sudokuBlocksGrid.calculateScore()
                         + " " + i18n.tr("points.")
 
-//                print (sudokuBlocksGrid.numberOfActions)
-//                print (sudokuBlocksGrid.numberOfHints)
-//                print (sudokuBlocksGrid.gameSeconds)
-//                print (sudokuBlocksGrid.gameDifficulty)
+                //                print (sudokuBlocksGrid.numberOfActions)
+                //                print (sudokuBlocksGrid.numberOfHints)
+                //                print (sudokuBlocksGrid.gameSeconds)
+                //                print (sudokuBlocksGrid.gameDifficulty)
                 var allScores = Settings.getAllScores()
                 highscoresModel.clear();
                 highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
@@ -261,6 +266,7 @@ MainView {
             sudokuBlocksGrid.createNewGame(81 - randomnumber);
             break;
         case 4:
+            mainView.dialogLoaded = 1;
             PopupUtils.open(newGameComponent)
             break;
         }
@@ -330,18 +336,71 @@ MainView {
 
     Component {
         id: newGameComponent
+
         Dialog {
             id: newGameDialogue
             title: i18n.tr("New Game")
             text: i18n.tr("Select difficulty level")
 
+            function closeDialog() {
+                PopupUtils.close(newGameDialogue)
+                mainView.dialogLoaded = -1;
+                mainView.focus = true;
+            }
+
+            Component.onCompleted: {
+                mainView.dialogLoaded = 1;
+                newGameDialogue.focus = true;
+                mainView.focus = false;
+            }
+
+            Keys.onPressed: {
+                switch(event.key) {
+                case Qt.Key_E:
+                    var randomnumber = Math.floor(Math.random()*9);
+                    randomnumber += 31;
+                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                    sudokuBlocksGrid.gameDifficulty = 0
+                    break;
+                case Qt.Key_M:
+                    var randomnumber = Math.floor(Math.random()*4);
+                    randomnumber += 26;
+                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                    sudokuBlocksGrid.gameDifficulty = 1
+                    break;
+                case Qt.Key_R:
+                    var randomnumber = Math.floor(Math.random()*4);
+                    randomnumber += 21;
+                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                    sudokuBlocksGrid.gameDifficulty = 2
+                    break;
+                case Qt.Key_U:
+                    var randomnumber = Math.floor(Math.random()*3);
+                    randomnumber += 17;
+                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                    sudokuBlocksGrid.gameDifficulty = 3
+                    break;
+
+                case Qt.Key_Escape:
+                    break;
+
+                default:
+                    //console.log("No key action defined")
+                    break;
+                }
+            }
+
+
+
             Column {
                 spacing: units.gu(5)
+
                 Grid {
                     rowSpacing: units.gu(3)
                     columnSpacing: units.gu(3)
                     columns: 2
                     anchors.horizontalCenter: parent.horizontalCenter
+
                     NewGameSelectionButton {
                         id: easyGameButton
                         objectName: "easyGameButton"
@@ -349,15 +408,17 @@ MainView {
                         opacity: 0.8
                         width: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/4: units.gu(50)/4;
                         height: width
+
                         onTriggered: {
                             //print("EASY")
                             var randomnumber = Math.floor(Math.random()*9);
                             randomnumber += 31;
                             sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                            PopupUtils.close(newGameDialogue)
                             sudokuBlocksGrid.gameDifficulty = 0
+                            newGameDialogue.closeDialog()
                             //toolbar.opened = false;
                         }
+
                     }
                     NewGameSelectionButton {
                         id: moderateGameButton
@@ -371,8 +432,8 @@ MainView {
                             var randomnumber = Math.floor(Math.random()*4);
                             randomnumber += 26;
                             sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                            PopupUtils.close(newGameDialogue)
                             sudokuBlocksGrid.gameDifficulty = 1
+                            newGameDialogue.closeDialog()
                             //toolbar.opened = false;
                         }
                     }
@@ -388,8 +449,8 @@ MainView {
                             var randomnumber = Math.floor(Math.random()*4);
                             randomnumber += 21;
                             sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                            PopupUtils.close(newGameDialogue)
                             sudokuBlocksGrid.gameDifficulty = 2
+                            newGameDialogue.closeDialog()
                             //toolbar.opened = false;
                         }
                     }
@@ -405,8 +466,8 @@ MainView {
                             var randomnumber = Math.floor(Math.random()*3);
                             randomnumber += 17;
                             sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                            PopupUtils.close(newGameDialogue)
                             sudokuBlocksGrid.gameDifficulty = 3
+                            newGameDialogue.closeDialog()
                             //toolbar.opened = false;
                         }
                     }
@@ -422,20 +483,97 @@ MainView {
                     anchors.horizontalCenter: parent.horizontalCenter
                     //border.color: "transparent"
                     onTriggered: {
-                        PopupUtils.close(newGameDialogue)
+                        newGameDialogue.closeDialog()
                     }
                 }
-
             }
 
         }
     }
+
+    focus: true
+    Keys.onPressed: {
+        if (mainView.dialogLoaded == -1 && mainView.focus == true) {
+            switch(event.key) {
+            case Qt.Key_E:
+                var randomnumber = Math.floor(Math.random()*9);
+                randomnumber += 31;
+                sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                sudokuBlocksGrid.gameDifficulty = 0
+                settingsTab.difficultyIndex = 0;
+                break;
+            case Qt.Key_M:
+                var randomnumber = Math.floor(Math.random()*4);
+                randomnumber += 26;
+                sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                sudokuBlocksGrid.gameDifficulty = 1
+                settingsTab.difficultyIndex = 1
+                break;
+            case Qt.Key_R:
+                var randomnumber = Math.floor(Math.random()*4);
+                randomnumber += 21;
+                sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                sudokuBlocksGrid.gameDifficulty = 2
+                settingsTab.difficultyIndex = 2
+                break;
+            case Qt.Key_U:
+                var randomnumber = Math.floor(Math.random()*3);
+                randomnumber += 17;
+                sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                sudokuBlocksGrid.gameDifficulty = 3
+                settingsTab.difficultyIndex = 3
+                break;
+
+            case Qt.Key_H:
+                // Show Hint if possible
+                revealHint();
+                break;
+
+            case Qt.Key_Left:
+                if (tabs.selectedTabIndex > 0) {
+                    //print(tabs.selectedTabIndex)
+                    tabs.selectedTabIndex -= 1
+                }
+                else
+                    tabs.selectedTabIndex = 3
+                break;
+
+            case Qt.Key_Right:
+                if (tabs.selectedTabIndex < 3) {
+                    //print(tabs.selectedTabIndex)
+                    tabs.selectedTabIndex += 1
+                }
+                else
+                    tabs.selectedTabIndex = 0
+                break;
+
+            case Qt.Key_Escape:
+                break;
+
+            default:
+                //console.log("No key action defined")
+                break;
+            }
+        }
+    }
+
 
     function showAlert(title, text, caller)
     {
         alertTitle = title
         alertText = text
         PopupUtils.open(alertDialog, caller)
+
+    }
+
+    function showNewGameDialog(caller)
+    {
+        PopupUtils.open(newGameComponent, caller)
+
+    }
+    function hideNewGameDialog()
+    {
+        PopupUtils.close(newGameComponent, caller)
 
     }
 
@@ -451,6 +589,7 @@ MainView {
         newSize(mainView.width, mainView.height);
         sudokuBlocksGrid = Qt.createComponent(Qt.resolvedUrl("SudokuBlocksGrid.qml"))
     }
+
 
     Component.onCompleted: {
         Settings.initialize();
@@ -586,7 +725,7 @@ MainView {
                                 //if (settingsTab.difficultyIndex == 4)
                                 //    PopupUtils.open(newGameComponent)
                                 //else
-                                    createNewGame()
+                                createNewGame()
                             }
                         }
                     }
@@ -887,7 +1026,7 @@ MainView {
                                     delegate:
 
                                         ListItem.Standard {
-
+                                        __foregroundColor: "white"
                                         text: firstname + " " + lastname
 
                                         progression: true

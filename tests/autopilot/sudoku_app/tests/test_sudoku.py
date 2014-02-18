@@ -250,6 +250,7 @@ class TestMainWindow(SudokuTestCase):
         #select "Simple" choice of theme selector
         self.assertThat(self.main_view.get_theme_selector_labelvisual, Eventually(Not(Is(None))))
         themeChoices = self.main_view.get_theme_selector_labelvisual()
+        print(themeChoices)
         themeChoice = filter(lambda choice: choice.text == 'Simple', themeChoices)[0]
         self.pointing_device.click_object(themeChoice)
         self.assertThat(lambda: self.main_view.get_theme_selector_labelvisual()[1].text, Eventually(Equals("Simple")))
