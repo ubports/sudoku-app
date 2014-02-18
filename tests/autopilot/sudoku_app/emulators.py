@@ -39,7 +39,7 @@ class MainView(toolkit_emulators.MainView):
         return self.select_single("Standard", objectName="hintsSwitchClickable")
 
     def get_difficulty_selector(self):
-        return self.select_single("ValueSelector", objectName="difficultySelector")
+        return self.select_single("ItemSelector", objectName="difficultySelector")
 
     def get_difficulty_selector_labelvisual(self):
         difficultylabelvisual = self.get_difficulty_selector()
@@ -47,7 +47,7 @@ class MainView(toolkit_emulators.MainView):
         return difficutlylabelvisualList
 
     def get_theme_selector(self):
-        return self.select_single("ValueSelector", objectName="themeSelector")
+        return self.select_single("ItemSelector", objectName="themeSelector")
 
     def get_theme_selector_labelvisual(self):
         themelabelvisual = self.get_theme_selector()
