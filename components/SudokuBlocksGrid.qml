@@ -330,7 +330,7 @@ Column {
                     }
                     Keys.onPressed: {
                         //print("Pressed: ",event.key)
-                        if (event.key-48 >= 0 && event.key-48 <= 9) {
+                        if (event.key-48 >= 1 && event.key-48 <= 9) {
                             pressButton(event.key-48)
                         }
                         else if (event.key === Qt.Key_Escape) {
