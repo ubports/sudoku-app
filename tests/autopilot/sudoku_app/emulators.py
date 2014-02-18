@@ -51,7 +51,7 @@ class MainView(toolkit_emulators.MainView):
 
     def get_theme_selector_labelvisual(self):
         themelabelvisual = self.get_theme_selector()
-        themelabelvisualList = themelabelvisual.select_many("LabelVisual", visible="True")
+        themelabelvisualList = themelabelvisual.select_many("ShapeItem", visible="True")
         return themelabelvisualList
 
     def get_current_profile(self):
