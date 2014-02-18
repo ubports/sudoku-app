@@ -1073,11 +1073,11 @@ MainView {
                         text: i18n.tr("<b>Sudoku settings</b>")
                     }
 
-                    ListItem.ItemSelector {
+                    ListItem.ValueSelector {
                         objectName: "difficultySelector"
                         id: difficultySelector
                         text: i18n.tr("Default Difficulty")
-                        model: [i18n.tr("Easy"), i18n.tr("Moderate"), i18n.tr("Hard"), i18n.tr("Ultra Hard"), i18n.tr("Always ask")]
+                        values: [i18n.tr("Easy"), i18n.tr("Moderate"), i18n.tr("Hard"), i18n.tr("Ultra Hard"), i18n.tr("Always ask")]
                         onSelectedIndexChanged: {
                             //print(difficultySelector.selectedIndex)
                             switch(difficultySelector.selectedIndex) {
@@ -1112,11 +1112,11 @@ MainView {
                         }
 
                     }
-                    ListItem.ItemSelector {
+                    ListItem.ValueSelector {
                         objectName: "themeSelector"
                         id: themeSelector
                         text: i18n.tr("Theme")
-                        model: ["UbuntuColours", "Simple"]
+                        values: ["UbuntuColours", "Simple"]
                         onSelectedIndexChanged: {
                             var newColorScheme = null;
                             if (selectedIndex == 0)
