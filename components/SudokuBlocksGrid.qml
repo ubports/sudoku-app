@@ -2,6 +2,7 @@ import QtQuick 2.0
 import Ubuntu.Components 0.1
 import Ubuntu.Components.Popups 0.1
 import "../js/SudokuCU.js" as SudokuCU
+import QtFeedback 5.0
 
 Column {
     id: mainRectangle;
@@ -48,6 +49,11 @@ Column {
 
     ColorSchemeDefault {
         id: colorScheme;
+    }
+
+    ThemeEffect {
+        id: incorrectEntry
+        effect: "PressStrong"
     }
 
     function calculateScore() {
@@ -367,6 +373,11 @@ Column {
 
                         buttonsGrid.redrawGrid()
                         PopupUtils.close(dialogue)
+                        if (checkIfAllFieldsCorrect() == false) {
+                            //console.log("FALSE ENTRY");
+                            incorrectEntry.play();
+                        }
+
                         mainView.dialogLoaded = -1;
                         mainView.focus = true;
                     }
@@ -434,7 +445,7 @@ Column {
 
                                     PopupUtils.close(dialogue)
 
-                                    if (checkIfGameFinished()) {
+                                    if ( checkIfGameFinished()) {
                                         gameFinishedRectangle.visible = true;
                                         //Settings.insertNewScore(currentUserId, sudokuBlocksGrid.calculateScore())
                                         mainView.insertNewGameScore(currentUserId, sudokuBlocksGrid.calculateScore())

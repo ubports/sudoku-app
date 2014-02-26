@@ -8,8 +8,8 @@
             "desktop": "sudoku-app.desktop"
         }
     },
-    "maintainer": "",
-    "name": "com.ubuntu.developer.username.sudoku-app",
+    "maintainer": "Dinko Osmankovic <dinko.metalac@gmail.com",
+    "name": "com.ubuntu.developer.dinko-metalac.sudoku-app",
     "title": "sudoku-app",
     "version": "0.1"
 }
