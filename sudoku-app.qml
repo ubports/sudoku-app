@@ -595,7 +595,8 @@ MainView {
         Settings.initialize();
         settingsTab.difficultyIndex = parseInt(Settings.getSetting("Difficulty"));
         //print(Settings.getSetting("DisableHints"));
-        settingsTab.disableHintsChecked = Settings.getSetting("DisableHints") == "true" ? true: false;
+        settingsTab.disableHintsChecked = Settings.getSetting("DisableHints") == "true" ? true : false;
+        settingsTab.disableVibrationsChecked = Settings.getSetting("DisableVibrations") == "true" ? true : false;
         settingsTab.themeIndex = parseInt(Settings.getSetting("ColorTheme"));
         //print(Settings.getSetting("ColorTheme"));
         var newColorScheme = null;
@@ -947,6 +948,7 @@ MainView {
             objectName: "settingsTab"
 
             property alias disableHintsChecked: disableHints.checked;
+            property alias disableVibrationsChecked: disableVibrations.checked;
             property alias difficultyIndex: difficultySelector.selectedIndex;
             property alias themeIndex: themeSelector.selectedIndex;
 
@@ -1148,6 +1150,22 @@ MainView {
                             checked: disableHintsChecked
                             onCheckedChanged: {
                                 var result = Settings.setSetting("DisableHints", checked ? "true":"false");
+                                //print(result);
+                            }
+                        }
+                    }
+                    ListItem.Standard {
+                        objectName: "vibrationsSwitchClickable"
+                        text: i18n.tr("Vibration Alerts")
+                        width: parent.width
+                        control: Switch {
+                            objectName: "vibrationsSwitch"
+                            id: disableVibrations
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            anchors.verticalCenter: parent.verticalCenter
+                            checked: disableVibrationsChecked
+                            onCheckedChanged: {
+                                var result = Settings.setSetting("DisableVibrations", checked ? "true":"false");
                                 //print(result);
                             }
                         }
