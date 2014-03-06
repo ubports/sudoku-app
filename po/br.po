@@ -8,106 +8,106 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-17 11:14+0200\n"
-"PO-Revision-Date: 2014-03-04 12:04+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2014-03-05 22:18+0000\n"
+"Last-Translator: Fohanno Thierry <thierry.fohanno@ofis-bzh.org>\n"
 "Language-Team: Breton <br@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-03-05 05:58+0000\n"
+"X-Launchpad-Export-Date: 2014-03-06 06:16+0000\n"
 "X-Generator: Launchpad (build 16948)\n"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:254
 msgid "Please pick a number"
-msgstr ""
+msgstr "Kemerit un niver, mar plij"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:262
 msgid "Clear"
-msgstr ""
+msgstr "Goullonderiñ"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:457
 msgid "Not allowed"
-msgstr ""
+msgstr "N'eo ket aotreet"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:481
 msgid "Start blocks"
-msgstr ""
+msgstr "Karrezennoù loc'hañ"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:503
 msgid "Hinted blocks"
-msgstr ""
+msgstr "Karrezennoù gant titouroùigoù"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:96
 msgid "Sudoku"
-msgstr ""
+msgstr "Sudoku"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:148
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:196
 msgid "You are a cheat..."
-msgstr ""
+msgstr "Un trucher zo ac'hanoc'h..."
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:148
 msgid "Congratulations!"
-msgstr ""
+msgstr "Gourc'hemennoù !"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:159
 msgid "New game"
-msgstr ""
+msgstr "C'hoari nevez"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:189
 msgid "Show hint"
-msgstr ""
+msgstr "Diskouez un titourig"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:203
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:237
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:357
 msgid "Close"
-msgstr ""
+msgstr "Serriñ"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:231
 msgid "Settings"
-msgstr ""
+msgstr "Arventennoù"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:250
 msgid "SudokuTouch settings"
-msgstr ""
+msgstr "Arventennoù SudokuTouch"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:257
 msgid "Difficulty"
-msgstr ""
+msgstr "Diaester"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Easy"
-msgstr ""
+msgstr "Aes"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Moderate"
-msgstr ""
+msgstr "Aes a-walc'h"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Hard"
-msgstr ""
+msgstr "Diaes"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
 msgid "Ultra Hard"
-msgstr ""
+msgstr "Diaes-tre"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:294
 msgid "Theme"
-msgstr ""
+msgstr "Tem"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:351
 msgid "About"
-msgstr ""
+msgstr "Diwar-benn"
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:383
 msgid "Author: "
-msgstr ""
+msgstr "Aozer : "
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:393
 msgid "Contact: "
-msgstr ""
+msgstr "Darempred : "
 
 #: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:414
 msgid "Version: "
-msgstr ""
+msgstr "Doare : "
