@@ -1314,7 +1314,7 @@ MainView {
                         Label {
                             objectName: "version"
                             font.bold: true;
-                            text: "1.0"
+                            text: "1.5"
                         }
                     }
                     Row {
