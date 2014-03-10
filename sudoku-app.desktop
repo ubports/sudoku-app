@@ -2,7 +2,7 @@
 Name=Sudoku
 Version=1.0
 Comment=Sudoku Game for Ubuntu Touch
-Exec=qmlscene /usr/share/sudoku-app/sudoku-app.qml
+Exec=qmlscene -qt5 /usr/share/sudoku-app/sudoku-app.qml
 Icon=/usr/share/sudoku-app/SudokuGameIcon.png
 Terminal=false
 Type=Application

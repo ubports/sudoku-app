@@ -1,3 +1,9 @@
+sudoku-app (1.0ubuntu1) UNRELEASED; urgency=medium
+
+  * Add -qt5 command line option (LP: #1288885) 
+
+ -- Alan Pope <popey@ubuntu.com>  Mon, 10 Mar 2014 10:22:12 +0000
+
 sudoku-app (1.0) precise; urgency=low
 
   * Pushed to version 1.0; Added Sam as author for the logo designs.
