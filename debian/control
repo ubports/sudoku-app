@@ -25,7 +25,7 @@ Description: Sudoku game for Ubuntu devices
 
 Package: sudoku-app-autopilot
 Architecture: all
-Depends: libautopilot-qt,
+Depends: libautopilot-qt (>= 1.4),
          libqt5test5,
          ubuntu-ui-toolkit-autopilot,
          sudoku-app (= ${source:Version})
