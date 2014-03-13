@@ -581,13 +581,11 @@ MainView {
         if (!gridLoaded && width/height > mainView.resizeFactor)
             return;
         newSize(mainView.width, mainView.height);
-        sudokuBlocksGrid = Qt.createComponent(Qt.resolvedUrl("SudokuBlocksGrid.qml"))
     }
     onWidthChanged: {
         if (!gridLoaded && width/height > mainView.resizeFactor)
             return;
         newSize(mainView.width, mainView.height);
-        sudokuBlocksGrid = Qt.createComponent(Qt.resolvedUrl("SudokuBlocksGrid.qml"))
     }
 
 
