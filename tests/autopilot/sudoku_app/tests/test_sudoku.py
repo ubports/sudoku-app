@@ -298,13 +298,11 @@ class TestMainWindow(SudokuTestCase):
 
         #******** check manage profiles ********
         #select manage profile
+        self.main_view.switch_to_tab("settingsTab")
         manageProfile = self.main_view.get_manage_profiles()
         self.pointing_device.click_object(manageProfile)
 
         #click on the new profile just added
-        manageProfile = self.main_view.get_manage_profiles()
-        self.pointing_device.click_object(manageProfile)
-
         myProfile = self.main_view.get_Myfirstname_Mylastname_profile()
         self.assertThat(myProfile.text,
                         Eventually(Equals("Myfirstname Mylastname")))

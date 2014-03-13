@@ -70,7 +70,7 @@ class MainView(toolkit_emulators.MainView):
         return self.select_single("SingleValue", objectName="Add profile")
 
     def get_add_profile_dialog(self):
-        return self.select_single("Dialog", objectName="Add new profile")
+        return self.wait_select_single("Dialog", objectName="Add new profile")
 
     def get_add_profile_Lastname_field(self):
         return self.select_single("TextField", objectName="Lastname")
