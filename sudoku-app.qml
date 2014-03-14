@@ -593,7 +593,8 @@ MainView {
         Settings.initialize();
         settingsTab.difficultyIndex = parseInt(Settings.getSetting("Difficulty"));
         //print(Settings.getSetting("DisableHints"));
-        settingsTab.disableHintsChecked = Settings.getSetting("DisableHints") == "true" ? true: false;
+        settingsTab.disableHintsChecked = Settings.getSetting("DisableHints") == "true" ? true : false;
+        settingsTab.disableVibrationsChecked = Settings.getSetting("DisableVibrations") == "true" ? true : false;
         settingsTab.themeIndex = parseInt(Settings.getSetting("ColorTheme"));
         //print(Settings.getSetting("ColorTheme"));
         var newColorScheme = null;
@@ -945,6 +946,7 @@ MainView {
             objectName: "settingsTab"
 
             property alias disableHintsChecked: disableHints.checked;
+            property alias disableVibrationsChecked: disableVibrations.checked;
             property alias difficultyIndex: difficultySelector.selectedIndex;
             property alias themeIndex: themeSelector.selectedIndex;
 
@@ -1150,6 +1152,22 @@ MainView {
                             }
                         }
                     }
+                    ListItem.Standard {
+                        objectName: "vibrationsSwitchClickable"
+                        text: i18n.tr("Vibration Alerts")
+                        width: parent.width
+                        control: Switch {
+                            objectName: "vibrationsSwitch"
+                            id: disableVibrations
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            anchors.verticalCenter: parent.verticalCenter
+                            checked: disableVibrationsChecked
+                            onCheckedChanged: {
+                                var result = Settings.setSetting("DisableVibrations", checked ? "true":"false");
+                                //print(result);
+                            }
+                        }
+                    }
                     ListItem.Header {
                         text: i18n.tr("<b>Profiles settings</b>")
                     }
@@ -1294,7 +1312,7 @@ MainView {
                         Label {
                             objectName: "version"
                             font.bold: true;
-                            text: "1.0"
+                            text: "1.5"
                         }
                     }
                     Row {
