@@ -275,6 +275,8 @@ class TestMainWindow(SudokuTestCase):
         sudokuAddProfile = self.main_view.get_add_profile()
         self.pointing_device.click_object(sudokuAddProfile)
 
+        sudokuAddProfileDialog = self.main_view.get_add_profile_dialog()
+
         #insert Lastname
         lastName = self.main_view.get_add_profile_Lastname_field()
         self.pointing_device.click_object(lastName)
@@ -295,10 +297,10 @@ class TestMainWindow(SudokuTestCase):
         OKButton = self.main_view.get_add_profile_OKbutton()
         self.assertThat(OKButton.buttonText, Eventually(Equals("OK")))
         self.pointing_device.click_object(OKButton)
+        sudokuAddProfileDialog.wait_until_destroyed()
 
         #******** check manage profiles ********
         #select manage profile
-        self.main_view.switch_to_tab("settingsTab")
         manageProfile = self.main_view.get_manage_profiles()
         self.pointing_device.click_object(manageProfile)
 
