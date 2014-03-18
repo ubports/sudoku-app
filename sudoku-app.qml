@@ -192,6 +192,10 @@ MainView {
         Settings.insertNewScore(userId, score)
     }
 
+    function wideAspect() {
+        return width > units.gu(80)
+    }
+
     function updatehighScores() {
         var allScores = Settings.getAllScores()
         highscoresModel.clear();
