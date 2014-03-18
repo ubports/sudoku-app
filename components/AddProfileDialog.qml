@@ -12,8 +12,7 @@ Component {
         id: addProfileDialogue
         title: i18n.tr("Add new profile")
         width: parent.width
-       anchors.bottomMargin: units.gu(10)
-
+        anchors.topMargin: units.gu(-30)
 
         Column {
             width: parent.width
