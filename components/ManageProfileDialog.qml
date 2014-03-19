@@ -12,6 +12,7 @@ Component {
         id: editProfileDialogue
         title: i18n.tr("Edit profile")
         width: parent.width
+        anchors.topMargin: units.gu(-20)
 
 
         Column {

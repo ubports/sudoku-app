@@ -192,6 +192,10 @@ MainView {
         Settings.insertNewScore(userId, score)
     }
 
+    function wideAspect() {
+        return width > units.gu(80)
+    }
+
     function updatehighScores() {
         var allScores = Settings.getAllScores()
         highscoresModel.clear();
@@ -762,20 +766,31 @@ MainView {
                     id: sudokuBlocksGrid;
                     objectName: "blockgrid"
                     //x: units.dp(3)
-                    x: 0.5*(mainView.width-9*sudokuBlocksGrid.blockSize-
+                    x: !mainView.wideAspect() ? 0.5*(mainView.width-9*sudokuBlocksGrid.blockSize-
+                            22*sudokuBlocksGrid.blockDistance) :
+                                     0.25*(mainView.width-9*sudokuBlocksGrid.blockSize-
                             22*sudokuBlocksGrid.blockDistance)
+
+                    y: !mainView.wideAspect() ? units.gu(1) : mainView.height*0.05
+
                 }
 
-                Grid {
+                Flow {
                     id: informationRow;
                     //y: 7*mainView.pageHeight/10;
-                    //x: units.dp(8);
                     //width: mainView.pageWidth - units.dp(8);
-                    anchors.horizontalCenter: parent.horizontalCenter
+                    //anchors.horizontalCenter: parent.horizontalCenter
+                    x: !mainView.wideAspect() ? 0.5*(mainView.width - width) :
+                                                0.25*(mainView.width-9*sudokuBlocksGrid.blockSize-
+                                       22*sudokuBlocksGrid.blockDistance)+9*sudokuBlocksGrid.blockSize + 35*sudokuBlocksGrid.blockDistance + units.gu(2)
                     anchors.top: parent.top
-                    anchors.topMargin: 9*sudokuBlocksGrid.blockSize + 35*sudokuBlocksGrid.blockDistance
-                    columns: 3
-                    columnSpacing: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/6 : units.gu(50)/6
+                    anchors.topMargin: !mainView.wideAspect() ?
+                                           9*sudokuBlocksGrid.blockSize + 35*sudokuBlocksGrid.blockDistance :
+                                           mainView.height*0.15
+
+                    //columns: !wideAspect ? 3 : 1
+                    flow: !mainView.wideAspect() ? Flow.LeftToRight : Flow.TopToBottom
+                    spacing: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/6 : units.gu(50)/6
                     UbuntuShape {
                         id: redFlag
                         color: sudokuBlocksGrid.defaultNotAllowedColor
@@ -1243,90 +1258,8 @@ MainView {
 
         }
 
-        Tab {
-            id: aboutTab;
-            objectName: "aboutTab"
-            title: i18n.tr("About")
-            page: Page {
-                Column {
-                    id: aboutColumn;
-                    spacing: units.gu(3)
-                    //anchors.fill: parent
-                    //anchors.horizontalCenter: parent.horizontalCenter;
-                    width: parent.width
-                    y: units.gu(6);
-                    Image {
-                        objectName: "aboutImage"
-                        property real maxWidth: units.gu(100)
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        width: Math.min(mainView.width, maxWidth)/2
-                        //height: width
-                        source: "icons/sudoko-vector-about.svg"
-                        smooth: true
-                        fillMode: Image.PreserveAspectFit
-
-                    }
-                    Grid {
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        columns: 2
-                        rowSpacing: units.gu(2)
-                        columnSpacing: mainView.width/10
-                        Label {
-                            objectName: "authorLabel"
-                            text: i18n.tr("Author(s): ")
-
-                        }
-                        Label {
-                            objectName: "authors"
-                            font.bold: true;
-                            text: "Dinko Osmankovic\nFr\u00e9d\u00e9ric Delgado\nGeorgi Karavasilev\nSam Hewitt"
-                        }
-                        Label {
-                            objectName: "contactLabel"
-                            text: i18n.tr("Contact: ")
-                        }
-                        Label {
-                            objectName: "contacts"
-                            font.bold: true;
-                            text: "dinko.metalac@gmail.com"
-                        }
-
-                    }
-
-                    Row {
-                        id: homepage;
-                        anchors.horizontalCenter: parent.horizontalCenter;
-                        Label {
-                            objectName: "urlLabel"
-                            font.bold: true;
-                            text: "<a href=\"https://launchpad.net/sudoku-app\">https://launchpad.net/sudoku-app</a>"
-                            onLinkActivated: Qt.openUrlExternally(link)
-                        }
-                    }
-                    Row {
-                        anchors.horizontalCenter: parent.horizontalCenter;
-                        Label {
-                            objectName: "versionLabel"
-                            text: i18n.tr("Version: ")
-                        }
-                        Label {
-                            objectName: "version"
-                            font.bold: true;
-                            text: "1.5"
-                        }
-                    }
-                    Row {
-                        anchors.horizontalCenter: parent.horizontalCenter;
-                        Label {
-                            objectName: "yearLabel"
-                            font.bold: true;
-                            text: "2013"
-
-
-                        }
-                    }
-                }
-            }
+        AboutTab {
+            id: aboutTab
         }
     }
 }
