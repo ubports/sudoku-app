@@ -781,7 +781,8 @@ MainView {
                     //width: mainView.pageWidth - units.dp(8);
                     //anchors.horizontalCenter: parent.horizontalCenter
                     x: !mainView.wideAspect() ? 0.5*(mainView.width - width) :
-                                                mainView.width*0.6
+                                                0.25*(mainView.width-9*sudokuBlocksGrid.blockSize-
+                                       22*sudokuBlocksGrid.blockDistance)+9*sudokuBlocksGrid.blockSize + 35*sudokuBlocksGrid.blockDistance + units.gu(2)
                     anchors.top: parent.top
                     anchors.topMargin: !mainView.wideAspect() ?
                                            9*sudokuBlocksGrid.blockSize + 35*sudokuBlocksGrid.blockDistance :
