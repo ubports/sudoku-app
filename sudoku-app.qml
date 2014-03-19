@@ -766,20 +766,30 @@ MainView {
                     id: sudokuBlocksGrid;
                     objectName: "blockgrid"
                     //x: units.dp(3)
-                    x: 0.5*(mainView.width-9*sudokuBlocksGrid.blockSize-
+                    x: !mainView.wideAspect() ? 0.5*(mainView.width-9*sudokuBlocksGrid.blockSize-
+                            22*sudokuBlocksGrid.blockDistance) :
+                                     0.25*(mainView.width-9*sudokuBlocksGrid.blockSize-
                             22*sudokuBlocksGrid.blockDistance)
+
+                    y: !mainView.wideAspect() ? units.gu(1) : mainView.height*0.05
+
                 }
 
-                Grid {
+                Flow {
                     id: informationRow;
                     //y: 7*mainView.pageHeight/10;
-                    //x: units.dp(8);
                     //width: mainView.pageWidth - units.dp(8);
-                    anchors.horizontalCenter: parent.horizontalCenter
+                    //anchors.horizontalCenter: parent.horizontalCenter
+                    x: !mainView.wideAspect() ? 0.5*(mainView.width - width) :
+                                                mainView.width*0.6
                     anchors.top: parent.top
-                    anchors.topMargin: 9*sudokuBlocksGrid.blockSize + 35*sudokuBlocksGrid.blockDistance
-                    columns: 3
-                    columnSpacing: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/6 : units.gu(50)/6
+                    anchors.topMargin: !mainView.wideAspect() ?
+                                           9*sudokuBlocksGrid.blockSize + 35*sudokuBlocksGrid.blockDistance :
+                                           mainView.height*0.15
+
+                    //columns: !wideAspect ? 3 : 1
+                    flow: !mainView.wideAspect() ? Flow.LeftToRight : Flow.TopToBottom
+                    spacing: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/6 : units.gu(50)/6
                     UbuntuShape {
                         id: redFlag
                         color: sudokuBlocksGrid.defaultNotAllowedColor
