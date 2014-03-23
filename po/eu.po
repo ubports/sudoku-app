@@ -1,0 +1,113 @@
+# Basque translation for sudoku-app
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# This file is distributed under the same license as the sudoku-app package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sudoku-app\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-06-17 11:14+0200\n"
+"PO-Revision-Date: 2014-03-22 19:00+0000\n"
+"Last-Translator: Ibai Oihanguren Sala <Unknown>\n"
+"Language-Team: Basque <eu@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-03-23 06:45+0000\n"
+"X-Generator: Launchpad (build 16967)\n"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:254
+msgid "Please pick a number"
+msgstr "Aukeratu zenbaki bat"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:262
+msgid "Clear"
+msgstr "Garbitu"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:457
+msgid "Not allowed"
+msgstr "Ez onartua"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:481
+msgid "Start blocks"
+msgstr "Hasierako blokeak"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:503
+msgid "Hinted blocks"
+msgstr "Aztarnadun blokeak"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:96
+msgid "Sudoku"
+msgstr "Sudokua"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:148
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:196
+msgid "You are a cheat..."
+msgstr "Tranpati bat zara..."
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:148
+msgid "Congratulations!"
+msgstr "Zorionak!"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:159
+msgid "New game"
+msgstr "Joko berria"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:189
+msgid "Show hint"
+msgstr "Eman aztarna"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:203
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:237
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:357
+msgid "Close"
+msgstr "Itxi"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:231
+msgid "Settings"
+msgstr "Ezarpenak"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:250
+msgid "SudokuTouch settings"
+msgstr "SudokuTouch-en ezarpenak"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:257
+msgid "Difficulty"
+msgstr "Zailtasuna"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
+msgid "Easy"
+msgstr "Erraza"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
+msgid "Moderate"
+msgstr "Tartekoa"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
+msgid "Hard"
+msgstr "Zaila"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
+msgid "Ultra Hard"
+msgstr "Oso zaila"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:294
+msgid "Theme"
+msgstr "Gaia"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:351
+msgid "About"
+msgstr "Honi buruz"
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:383
+msgid "Author: "
+msgstr "Egilea: "
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:393
+msgid "Contact: "
+msgstr "Kontaktua: "
+
+#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:414
+msgid "Version: "
+msgstr "Bertsioa: "
