@@ -919,6 +919,22 @@ MainView {
                 ListModel {
                     id: highscoresModel
 
+                    onDataChanged: {
+                        var allScores = Settings.getAllScores()
+                        highscoresModel.clear();
+                        highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
+                        for(var i = 0; i < allScores.length; i++) {
+                            var rowItem = allScores[i];
+                            //print("ROW ",rowItem)
+                            var firstName = Settings.getUserFirstName(rowItem[0]);
+                            var lastName = Settings.getUserLastName(rowItem[0]);
+                            //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
+                            highscoresModel.append({'firstname': firstName,
+                                                       'lastname':  lastName,
+                                                       'score': rowItem[1] });
+                        }
+                    }
+
                     /*ListElement {
                         firstname: "Bill"
                         lastname: "Smith"
@@ -934,9 +950,10 @@ MainView {
                     anchors.fill: parent
                     clip: true
                     ListView {
+                        id: highScoresListView
                         model: highscoresModel
                         width: parent.width
-                        height:parent.height
+                        height:parent.height                        
 
                         header: ListItem.Header {
                             id: highscoresHeader
