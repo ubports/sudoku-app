@@ -603,6 +603,12 @@ MainView {
         settingsTab.themeIndex = parseInt(Settings.getSetting("ColorTheme"));
         //print(Settings.getSetting("ColorTheme"));
         var newColorScheme = null;
+        if (Settings.getSetting("ColorTheme") == "Unknown") {
+            sudokuBlocksGrid.changeColorScheme("ColorSchemeUbuntu.qml");
+            print("NE VALJA")
+            var result = Settings.setSetting("ColorTheme", 0);
+
+        }
         if (settingsTab.themeIndex == 0)
         {
             //print("Ubuntu")
@@ -726,10 +732,10 @@ MainView {
                                 if(gameFinishedRectangle.visible) gameFinishedRectangle.visible = false;
                                 //print("new block distance:", blockDistance);
                                 //createNewGame()
-                                //if (settingsTab.difficultyIndex == 4)
-                                //    PopupUtils.open(newGameComponent)
-                                //else
-                                createNewGame()
+                                if (settingsTab.difficultyIndex == 4)
+                                    PopupUtils.open(newGameComponent)
+                                else
+                                    createNewGame()
                             }
                         }
                     }
