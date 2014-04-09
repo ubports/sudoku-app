@@ -47,6 +47,24 @@ function setSetting(setting, value) {
     return res;
 }
 
+function isSettingsTableEmpty() {
+    var db = getDatabase();
+    var res="";
+
+    db.transaction(function(tx) {
+        var rs = tx.executeSql('SELECT value FROM settings;');
+        if (rs.rows.length > 0) {
+            return false;
+        } else {
+            return true;
+        }
+    })
+
+    // The function returns “Unknown” if the setting was not found in the database
+    // For more advanced projects, this should probably be handled through error codes
+    return res
+}
+
 // This function is used to retrieve a setting from the database
 function getSetting(setting) {
     var db = getDatabase();
@@ -140,8 +158,8 @@ function getAllProfiles()
             var dbItem = rs.rows.item(i);
             var o = new Object();
             o["id"] = dbItem.id;
-             o["lastname"] = dbItem.last_name;
-             o["firstname"] = dbItem.first_name;
+            o["lastname"] = dbItem.last_name;
+            o["firstname"] = dbItem.first_name;
             res.push(o)
         }
     });
