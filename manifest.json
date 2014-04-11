@@ -10,7 +10,7 @@
     "icon": "SudokuGameIcon.png", 
     "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
     "name": "com.ubuntu.sudoku",
-    "title": "sudoku",
+    "title": "Sudoku",
     "version": "1.0"
 }
 
