@@ -274,6 +274,11 @@ MainView {
             mainView.dialogLoaded = 1;
             PopupUtils.open(newGameComponent)
             break;
+        default:
+            var randomnumber = Math.floor(Math.random()*9);
+            randomnumber += 31;
+            sudokuBlocksGrid.createNewGame(81 - randomnumber);
+            break;
         }
     }
 
