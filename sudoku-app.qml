@@ -274,6 +274,11 @@ MainView {
             mainView.dialogLoaded = 1;
             PopupUtils.open(newGameComponent)
             break;
+        default:
+            var randomnumber = Math.floor(Math.random()*9);
+            randomnumber += 31;
+            sudokuBlocksGrid.createNewGame(81 - randomnumber);
+            break;
         }
     }
 
@@ -774,9 +779,9 @@ MainView {
                     objectName: "blockgrid"
                     //x: units.dp(3)
                     x: !mainView.wideAspect() ? 0.5*(mainView.width-9*sudokuBlocksGrid.blockSize-
-                            22*sudokuBlocksGrid.blockDistance) :
-                                     0.25*(mainView.width-9*sudokuBlocksGrid.blockSize-
-                            22*sudokuBlocksGrid.blockDistance)
+                                                     22*sudokuBlocksGrid.blockDistance) :
+                                                0.25*(mainView.width-9*sudokuBlocksGrid.blockSize-
+                                                      22*sudokuBlocksGrid.blockDistance)
 
                     y: !mainView.wideAspect() ? units.gu(1) : mainView.height*0.05
 
@@ -789,7 +794,7 @@ MainView {
                     //anchors.horizontalCenter: parent.horizontalCenter
                     x: !mainView.wideAspect() ? 0.5*(mainView.width - width) :
                                                 0.25*(mainView.width-9*sudokuBlocksGrid.blockSize-
-                                       22*sudokuBlocksGrid.blockDistance)+9*sudokuBlocksGrid.blockSize + 35*sudokuBlocksGrid.blockDistance + units.gu(2)
+                                                      22*sudokuBlocksGrid.blockDistance)+9*sudokuBlocksGrid.blockSize + 35*sudokuBlocksGrid.blockDistance + units.gu(2)
                     anchors.top: parent.top
                     anchors.topMargin: !mainView.wideAspect() ?
                                            9*sudokuBlocksGrid.blockSize + 35*sudokuBlocksGrid.blockDistance :
@@ -829,6 +834,7 @@ MainView {
                             id: blueFlagText
                             text: i18n.tr("Start blocks")
                             fontSize: "x-small"
+                            color: settingsTab.themeIndex == 0 ? "white" : "black"
                             width:units.gu(5);
                             wrapMode: TextEdit.WordWrap;
                             horizontalAlignment: Text.AlignHCenter
@@ -959,7 +965,7 @@ MainView {
                         id: highScoresListView
                         model: highscoresModel
                         width: parent.width
-                        height:parent.height                        
+                        height:parent.height
 
                         header: ListItem.Header {
                             id: highscoresHeader
@@ -992,290 +998,310 @@ MainView {
 
 
             title: i18n.tr("Settings")
-            page:
-
-                Page {
-
-                Column {
-
-                    Component {
-                        id: profileSelector
-                        Dialog  {
-                            title: i18n.tr("Select profile")
+            page: Page {
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                    top: parent.top
+                }
+                height: mainView.height
 
 
+                Component {
+                    id: profileSelector
+                    Dialog  {
+                        title: i18n.tr("Select profile")
 
-                            Column{
-                                height: mainColumnSettings.height*2/3
-                                ListView {
 
-                                    id: profileListView
-                                    clip: true
-                                    width: parent.width
-                                    height: parent.height - units.gu(12)
-                                    model: profilesModel
 
-                                    delegate:
-                                        ListItem.Standard {
-                                        __foregroundColor: "white"
-                                        text: firstname + " " + lastname
-                                        progression: true
-                                        onTriggered: {
-                                            //console.log("clicked "+index)
-                                            currentUserId = profileId;
-                                            hide()
-                                        }
-                                    }
+                        Column{
+                            height: mainColumnSettings.height*2/3
+                            ListView {
 
-                                }
+                                id: profileListView
+                                clip: true
+                                width: parent.width
+                                height: parent.height - units.gu(12)
+                                model: profilesModel
 
-                                SudokuDialogButton{
-
-                                    anchors.horizontalCenter: parent.horizontalCenter
-                                    id:cancelButton
-                                    buttonText: i18n.tr("Cancel")
-                                    width: parent.width/2;
-                                    size: units.gu(5)
-                                    buttonColor: sudokuBlocksGrid.dialogButtonColor1
-                                    textColor: sudokuBlocksGrid.dialogButtonTextColor
-                                    //border.color: "transparent"
+                                delegate:
+                                    ListItem.Standard {
+                                    __foregroundColor: "white"
+                                    text: firstname + " " + lastname
+                                    progression: true
                                     onTriggered: {
+                                        //console.log("clicked "+index)
+                                        currentUserId = profileId;
                                         hide()
                                     }
                                 }
 
                             }
+
+                            SudokuDialogButton{
+
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                id:cancelButton
+                                buttonText: i18n.tr("Cancel")
+                                width: parent.width/2;
+                                size: units.gu(5)
+                                buttonColor: sudokuBlocksGrid.dialogButtonColor1
+                                textColor: sudokuBlocksGrid.dialogButtonTextColor
+                                //border.color: "transparent"
+                                onTriggered: {
+                                    hide()
+                                }
+                            }
+
                         }
                     }
+                }
 
-                    Component {
-                        id: manageProfileSelector
-                        Dialog {
-                            title: i18n.tr("Select profile")
+                Component {
+                    id: manageProfileSelector
+                    Dialog {
+                        title: i18n.tr("Select profile")
 
-                            Column{
-                                height: mainColumnSettings.height*2/3
-                                ListView {
-                                    id: manageProfileListView
-                                    clip: true
-                                    width: parent.width
-                                    height: parent.height - units.gu(12)
-                                    model: profilesModel
+                        Column{
+                            height: mainColumnSettings.height*2/3
+                            ListView {
+                                id: manageProfileListView
+                                clip: true
+                                width: parent.width
+                                height: parent.height - units.gu(12)
+                                model: profilesModel
 
-                                    delegate:
+                                delegate:
 
-                                        ListItem.Standard {
-                                        __foregroundColor: "white"
-                                        text: firstname + " " + lastname
+                                    ListItem.Standard {
+                                    __foregroundColor: "white"
+                                    text: firstname + " " + lastname
 
-                                        progression: true
-                                        onTriggered: {
-                                            hide()
-                                            editUserId = profileId
-                                            PopupUtils.open(manageProfileDialog, selectorProfile)
-                                        }
-                                    }
-
-
-
-                                }
-                                SudokuDialogButton{
-
-                                    anchors.horizontalCenter: parent.horizontalCenter
-                                    id:cancelButton
-                                    buttonText: i18n.tr("Cancel")
-                                    width: parent.width/2;
-                                    size: units.gu(5)
-                                    buttonColor: sudokuBlocksGrid.dialogButtonColor1
-                                    textColor: sudokuBlocksGrid.dialogButtonTextColor
-                                    //border.color: "transparent"
+                                    progression: true
                                     onTriggered: {
                                         hide()
+                                        editUserId = profileId
+                                        PopupUtils.open(manageProfileDialog, selectorProfile)
                                     }
+                                }
+
+
+
+                            }
+                            SudokuDialogButton{
+
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                id:cancelButton
+                                buttonText: i18n.tr("Cancel")
+                                width: parent.width/2;
+                                size: units.gu(5)
+                                buttonColor: sudokuBlocksGrid.dialogButtonColor1
+                                textColor: sudokuBlocksGrid.dialogButtonTextColor
+                                //border.color: "transparent"
+                                onTriggered: {
+                                    hide()
                                 }
                             }
                         }
                     }
+                }
 
-                    ListModel{
-                        id: profilesModel
-                    }
+                ListModel{
+                    id: profilesModel
+                }
 
-                    id: mainColumnSettings;
-                    //width: settingsTab.width;
-                    //height: settingsTab.height;
+                //id: mainColumnSettings;
+                //width: settingsTab.width;
+                //height: settingsTab.height;
+                //anchors.fill: parent
+                //anchors.horizontalCenter: parent.horizontalCenter;
+                //spacing: units.gu(1)
+                Flickable {
+                    id: flickableSettings
                     anchors.fill: parent
-                    //anchors.horizontalCenter: parent.horizontalCenter;
-                    spacing: units.gu(1)
+                    //height: parent.height - units.gu(10)
+                    //width: parent.width
+                    flickableDirection: Flickable.VerticalFlick
+                    //clip: true
+                    Column {
+                        id: mainColumnSettings;
+                        //anchors.fill: parent
+                        height: parent.height
+                        width: parent.width-units.dp(10)
+                        spacing: units.gu(1)
 
-                    ListItem.Header {
-                        text: i18n.tr("<b>Sudoku settings</b>")
-                    }
+                        ListItem.Header {
+                            text: i18n.tr("<b>Sudoku settings</b>")
+                        }
 
-                    ListItem.ValueSelector {
-                        objectName: "difficultySelector"
-                        id: difficultySelector
-                        text: i18n.tr("Default Difficulty")
-                        values: [i18n.tr("Easy"), i18n.tr("Moderate"), i18n.tr("Hard"), i18n.tr("Ultra Hard"), i18n.tr("Always ask")]
-                        onSelectedIndexChanged: {
-                            //print(difficultySelector.selectedIndex)
-                            switch(difficultySelector.selectedIndex) {
-                            case 0:
-                                var randomnumber = Math.floor(Math.random()*9);
-                                randomnumber += 31;
-                                sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                                Settings.setSetting("Difficulty", selectedIndex)
-                                break;
-                            case 1:
-                                var randomnumber = Math.floor(Math.random()*4);
-                                randomnumber += 26;
-                                sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                                Settings.setSetting("Difficulty", selectedIndex)
-                                break;
-                            case 2:
-                                var randomnumber = Math.floor(Math.random()*4);
-                                randomnumber += 21;
-                                sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                                Settings.setSetting("Difficulty", selectedIndex)
-                                break;
-                            case 3:
-                                var randomnumber = Math.floor(Math.random()*3);
-                                randomnumber += 17;
-                                sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                                Settings.setSetting("Difficulty", selectedIndex)
-                                break;
-                            case 4:
-                                Settings.setSetting("Difficulty", selectedIndex)
-                                break;
+                        ListItem.ItemSelector {
+                            objectName: "difficultySelector"
+                            id: difficultySelector
+                            text: i18n.tr("Default Difficulty")
+                            model: [i18n.tr("Easy"), i18n.tr("Moderate"), i18n.tr("Hard"), i18n.tr("Ultra Hard"), i18n.tr("Always ask")]
+                            onSelectedIndexChanged: {
+                                //print(difficultySelector.selectedIndex)
+                                switch(difficultySelector.selectedIndex) {
+                                case 0:
+                                    var randomnumber = Math.floor(Math.random()*9);
+                                    randomnumber += 31;
+                                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                                    Settings.setSetting("Difficulty", selectedIndex)
+                                    break;
+                                case 1:
+                                    var randomnumber = Math.floor(Math.random()*4);
+                                    randomnumber += 26;
+                                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                                    Settings.setSetting("Difficulty", selectedIndex)
+                                    break;
+                                case 2:
+                                    var randomnumber = Math.floor(Math.random()*4);
+                                    randomnumber += 21;
+                                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                                    Settings.setSetting("Difficulty", selectedIndex)
+                                    break;
+                                case 3:
+                                    var randomnumber = Math.floor(Math.random()*3);
+                                    randomnumber += 17;
+                                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                                    Settings.setSetting("Difficulty", selectedIndex)
+                                    break;
+                                case 4:
+                                    Settings.setSetting("Difficulty", selectedIndex)
+                                    break;
+                                }
+                            }
+
+                        }
+                        ListItem.ItemSelector {
+                            objectName: "themeSelector"
+                            id: themeSelector
+                            text: i18n.tr("Theme")
+                            model: ["UbuntuColours", "Simple"]
+                            onSelectedIndexChanged: {
+                                var newColorScheme = null;
+                                if (selectedIndex == 0)
+                                {
+                                    //print("Ubuntu")
+                                    var result = Settings.setSetting("ColorTheme", selectedIndex);
+                                    //print(result);
+                                    sudokuBlocksGrid.changeColorScheme("ColorSchemeUbuntu.qml");
+                                }
+                                if (selectedIndex == 1)
+                                {
+                                    //print("Simple")
+                                    var result = Settings.setSetting("ColorTheme", selectedIndex);
+                                    //print(result);
+                                    sudokuBlocksGrid.changeColorScheme("ColorSchemeSimple.qml");
+                                }
                             }
                         }
 
-                    }
-                    ListItem.ValueSelector {
-                        objectName: "themeSelector"
-                        id: themeSelector
-                        text: i18n.tr("Theme")
-                        values: ["UbuntuColours", "Simple"]
-                        onSelectedIndexChanged: {
-                            var newColorScheme = null;
-                            if (selectedIndex == 0)
-                            {
-                                //print("Ubuntu")
-                                var result = Settings.setSetting("ColorTheme", selectedIndex);
-                                //print(result);
-                                sudokuBlocksGrid.changeColorScheme("ColorSchemeUbuntu.qml");
-                            }
-                            if (selectedIndex == 1)
-                            {
-                                //print("Simple")
-                                var result = Settings.setSetting("ColorTheme", selectedIndex);
-                                //print(result);
-                                sudokuBlocksGrid.changeColorScheme("ColorSchemeSimple.qml");
+                        ListItem.Standard {
+                            objectName: "hintsSwitchClickable"
+                            text: i18n.tr("Hints")
+                            width: parent.width
+                            control: Switch {
+                                objectName: "hintsSwitch"
+                                id: disableHints
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                anchors.verticalCenter: parent.verticalCenter
+                                checked: disableHintsChecked
+                                onCheckedChanged: {
+                                    var result = Settings.setSetting("DisableHints", checked ? "true":"false");
+                                    //print(result);
+                                }
                             }
                         }
-                    }
+                        ListItem.Standard {
+                            objectName: "vibrationsSwitchClickable"
+                            text: i18n.tr("Vibration Alerts")
+                            width: parent.width
+                            control: Switch {
+                                objectName: "vibrationsSwitch"
+                                id: disableVibrations
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                anchors.verticalCenter: parent.verticalCenter
+                                checked: disableVibrationsChecked
+                                onCheckedChanged: {
+                                    var result = Settings.setSetting("DisableVibrations", checked ? "true":"false");
+                                    //print(result);
+                                }
+                            }
+                        }
+                        ListItem.Header {
+                            text: i18n.tr("<b>Profiles settings</b>")
+                        }
+                        ListItem.SingleValue {
+                            objectName: "Current profile"
+                            text: "Current profile"
+                            id: selectorProfile
+                            value: {
+                                if(currentUserId==-1)
+                                    return i18n.tr("None")
+                                else
+                                    return Settings.getUserFirstName(currentUserId)+" "+Settings.getUserLastName(currentUserId);
 
-                    ListItem.Standard {
-                        objectName: "hintsSwitchClickable"
-                        text: i18n.tr("Hints")
-                        width: parent.width
-                        control: Switch {
-                            objectName: "hintsSwitch"
-                            id: disableHints
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            anchors.verticalCenter: parent.verticalCenter
-                            checked: disableHintsChecked
-                            onCheckedChanged: {
-                                var result = Settings.setSetting("DisableHints", checked ? "true":"false");
-                                //print(result);
+                            }
+
+                            onClicked: {
+
+                                var allProfiles = new Array();
+                                allProfiles = Settings.getAllProfiles()
+
+                                profilesModel.clear()
+
+                                for(var i = 0; i < allProfiles.length; i++)
+                                {
+                                    profilesModel.append({"profileId":allProfiles[i].id,"lastname":allProfiles[i].lastname, "firstname":allProfiles[i].firstname})
+                                }
+                                PopupUtils.open(profileSelector, selectorProfile)
+                            }
+                        }
+
+                        AddProfileDialog{
+                            id:addProfileDialog
+                        }
+
+                        ManageProfileDialog{
+                            id:manageProfileDialog
+                        }
+
+
+                        ListItem.SingleValue {
+                            objectName: "Add profile"
+                            id:addSingleValue
+                            text: i18n.tr("Add profile")
+                            onClicked: {
+                                PopupUtils.open(addProfileDialog, addSingleValue);
+                            }
+                        }
+
+                        ListItem.SingleValue {
+                            objectName: "Manage profiles"
+                            id:manageProfileSingleValue
+                            text: i18n.tr("Manage profiles")
+                            onClicked: {
+
+                                var allProfiles = new Array();
+                                allProfiles = Settings.getAllProfiles()
+
+                                profilesModel.clear()
+
+                                for(var i = 0; i < allProfiles.length; i++)
+                                {
+                                    profilesModel.append({"profileId":allProfiles[i].id,"lastname":allProfiles[i].lastname, "firstname":allProfiles[i].firstname})
+                                }
+
+                                PopupUtils.open(manageProfileSelector, manageProfileSingleValue)
                             }
                         }
                     }
-                    ListItem.Standard {
-                        objectName: "vibrationsSwitchClickable"
-                        text: i18n.tr("Vibration Alerts")
-                        width: parent.width
-                        control: Switch {
-                            objectName: "vibrationsSwitch"
-                            id: disableVibrations
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            anchors.verticalCenter: parent.verticalCenter
-                            checked: disableVibrationsChecked
-                            onCheckedChanged: {
-                                var result = Settings.setSetting("DisableVibrations", checked ? "true":"false");
-                                //print(result);
-                            }
-                        }
-                    }
-                    ListItem.Header {
-                        text: i18n.tr("<b>Profiles settings</b>")
-                    }
-                    ListItem.SingleValue {
-                        objectName: "Current profile"
-                        text: "Current profile"
-                        id: selectorProfile
-                        value: {
-                            if(currentUserId==-1)
-                                return i18n.tr("None")
-                            else
-                                return Settings.getUserFirstName(currentUserId)+" "+Settings.getUserLastName(currentUserId);
+                }
 
-                        }
-
-                        onClicked: {
-
-                            var allProfiles = new Array();
-                            allProfiles = Settings.getAllProfiles()
-
-                            profilesModel.clear()
-
-                            for(var i = 0; i < allProfiles.length; i++)
-                            {
-                                profilesModel.append({"profileId":allProfiles[i].id,"lastname":allProfiles[i].lastname, "firstname":allProfiles[i].firstname})
-                            }
-                            PopupUtils.open(profileSelector, selectorProfile)
-                        }
-                    }
-
-                    AddProfileDialog{
-                        id:addProfileDialog
-                    }
-
-                    ManageProfileDialog{
-                        id:manageProfileDialog
-                    }
-
-
-                    ListItem.SingleValue {
-                        objectName: "Add profile"
-                        id:addSingleValue
-                        text: i18n.tr("Add profile")
-                        onClicked: {
-                            PopupUtils.open(addProfileDialog, addSingleValue);
-                        }
-                    }
-
-                    ListItem.SingleValue {
-                        objectName: "Manage profiles"
-                        id:manageProfileSingleValue
-                        text: i18n.tr("Manage profiles")
-                        onClicked: {
-
-                            var allProfiles = new Array();
-                            allProfiles = Settings.getAllProfiles()
-
-                            profilesModel.clear()
-
-                            for(var i = 0; i < allProfiles.length; i++)
-                            {
-                                profilesModel.append({"profileId":allProfiles[i].id,"lastname":allProfiles[i].lastname, "firstname":allProfiles[i].firstname})
-                            }
-
-                            PopupUtils.open(manageProfileSelector, manageProfileSingleValue)
-                        }
-                    }
-
-
+                Scrollbar {
+                    flickableItem: flickableSettings
+                    align: Qt.AlignTrailing
                 }
             }
 

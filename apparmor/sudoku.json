@@ -1,4 +1,7 @@
 {
-    "policy_groups": ["networking", "usermetrics"], 
-    "policy_version": 1.0
+    "policy_groups": [
+        "networking",
+        "usermetrics"
+    ],
+    "policy_version": 1
 }
