@@ -834,6 +834,7 @@ MainView {
                             id: blueFlagText
                             text: i18n.tr("Start blocks")
                             fontSize: "x-small"
+                            color: settingsTab.themeIndex == 0 ? "white" : "black"
                             width:units.gu(5);
                             wrapMode: TextEdit.WordWrap;
                             horizontalAlignment: Text.AlignHCenter
