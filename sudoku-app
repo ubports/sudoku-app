@@ -1,2 +1,2 @@
 #!/bin/bash
-qmlscene /usr/share/sudoku-app/sudoku-app.qml
+exec qmlscene /usr/share/sudoku-app/sudoku-app.qml
