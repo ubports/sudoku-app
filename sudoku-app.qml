@@ -834,7 +834,7 @@ MainView {
                             id: blueFlagText
                             text: i18n.tr("Start blocks")
                             fontSize: "x-small"
-                            color: settingsTab.themeIndex == 0 ? "white" : "black"
+                            color: settingsTab.themeIndex != 1 ? "white" : "black"
                             width:units.gu(5);
                             wrapMode: TextEdit.WordWrap;
                             horizontalAlignment: Text.AlignHCenter
@@ -873,114 +873,10 @@ MainView {
 
         // Highscores Tab
 
-        Tab {
+        HighscoresTab {
             id: highscoresTab
             objectName: "highscoresTab"
             title: i18n.tr("Scores")
-            page: Page {
-                tools: ToolbarItems {
-                    ToolbarButton {
-                        objectName: "allusersbutton"
-                        action: Action {
-                            text: "All\nusers"
-                            iconSource: Qt.resolvedUrl("icons/all-users.svg")
-                            onTriggered: {
-                                var allScores = Settings.getAllScores()
-                                highscoresModel.clear();
-                                highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
-                                for(var i = 0; i < allScores.length; i++) {
-                                    var rowItem = allScores[i];
-                                    //print("ROW ",rowItem)
-                                    var firstName = Settings.getUserFirstName(rowItem[0]);
-                                    var lastName = Settings.getUserLastName(rowItem[0]);
-                                    //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
-                                    highscoresModel.append({'firstname': firstName,
-                                                               'lastname':  lastName,
-                                                               'score': rowItem[1] });
-                                }
-                            }
-                        }
-                    }
-                    ToolbarButton {
-                        objectName: "currentuserbutton"
-                        action: Action {
-                            text: "Current\nuser"
-                            iconSource: Qt.resolvedUrl("icons/single-user.svg")
-                            onTriggered: {
-                                var firstName = Settings.getUserFirstName(currentUserId);
-                                var lastName = Settings.getUserLastName(currentUserId);
-                                //print(firstName, lastName)
-                                highscoresHeaderText = i18n.tr("<b>Best scores for ")+firstName + " " + lastName+"</b>"
-                                var allScores = Settings.getAllScoresForUser(currentUserId)
-                                highscoresModel.clear();
-                                for(var i = 0; i < allScores.length; i++) {
-                                    var rowItem = allScores[i];
-                                    //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
-                                    highscoresModel.append({'firstname': firstName,
-                                                               'lastname':  lastName,
-                                                               'score': rowItem[1] });
-                                }
-                            }
-                        }
-                    }
-                    //locked: true
-                    //opened: true
-                }
-
-
-                ListModel {
-                    id: highscoresModel
-
-                    onDataChanged: {
-                        var allScores = Settings.getAllScores()
-                        highscoresModel.clear();
-                        highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
-                        for(var i = 0; i < allScores.length; i++) {
-                            var rowItem = allScores[i];
-                            //print("ROW ",rowItem)
-                            var firstName = Settings.getUserFirstName(rowItem[0]);
-                            var lastName = Settings.getUserLastName(rowItem[0]);
-                            //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
-                            highscoresModel.append({'firstname': firstName,
-                                                       'lastname':  lastName,
-                                                       'score': rowItem[1] });
-                        }
-                    }
-
-                    /*ListElement {
-                        firstname: "Bill"
-                        lastname: "Smith"
-                        score: "120"
-                    }
-                    ListElement {
-                        firstname: "John"
-                        lastname: "Brown"
-                        score: "130"
-                    }*/
-                }
-                Column {
-                    anchors.fill: parent
-                    clip: true
-                    ListView {
-                        id: highScoresListView
-                        model: highscoresModel
-                        width: parent.width
-                        height:parent.height
-
-                        header: ListItem.Header {
-                            id: highscoresHeader
-                            objectName: "highscoreslabel"
-                            text: highscoresHeaderText
-                        }
-                        delegate: ListItem.SingleValue {
-                            text: firstname + " " + lastname
-                            value: score
-                        }
-                    }
-                }
-            }
-
-
         }
 
 
@@ -989,15 +885,13 @@ MainView {
         Tab {
             id: settingsTab;
             objectName: "settingsTab"
+            title: i18n.tr("Settings")
 
             property alias disableHintsChecked: disableHints.checked;
             property alias disableVibrationsChecked: disableVibrations.checked;
             property alias difficultyIndex: difficultySelector.selectedIndex;
             property alias themeIndex: themeSelector.selectedIndex;
 
-
-
-            title: i18n.tr("Settings")
             page: Page {
                 anchors {
                     left: parent.left
@@ -1127,7 +1021,7 @@ MainView {
                         id: mainColumnSettings;
                         //anchors.fill: parent
                         height: parent.height
-                        width: parent.width-units.dp(10)
+                        width: parent.width
                         spacing: units.gu(1)
 
                         ListItem.Header {
@@ -1308,157 +1202,11 @@ MainView {
 
         }
 
-        Tab {
-            id: aboutTab;
+
+        AboutTab {
+            id: aboutTab
             objectName: "aboutTab"
             title: i18n.tr("About")
-
-            page: Page {
-                Layouts {
-                    id: aboutTabLayout
-                    width: parent.width
-                    height: parent.height
-                    layouts: [
-                        ConditionalLayout {
-                            name: "tablet"
-                            when: mainView.width > units.gu(80)
-                            Row {
-                                anchors {
-                                    //top: parent
-                                    left: parent.left
-                                    leftMargin: mainView.width*0.1
-                                    top: parent.top
-                                    topMargin: mainView.height*0.2
-
-                                }
-                                spacing: units.gu(5)
-                                ItemLayout {
-                                    item: "icon"
-                                    id: iconTabletItem
-                                    property real maxWidth: units.gu(80)
-                                    width: Math.min(parent.width, maxWidth)/2
-                                    height: Math.min(parent.width, maxWidth)/2
-
-                                }
-                                Column {
-                                    //height: iconTabletItem.height
-                                    spacing: 1
-                                    ItemLayout {
-                                        item: "info"
-                                        width: aboutTabLayout.width*0.25
-                                        height: iconTabletItem.height*0.75
-                                    }
-                                    ItemLayout {
-                                        item: "link"
-                                        width: aboutTabLayout.width*0.25
-                                        height: units.gu(3)
-                                    }
-                                    ItemLayout {
-                                        item: "version"
-                                        width: aboutTabLayout.width*0.25
-                                        height: units.gu(2)
-                                    }
-                                    ItemLayout {
-                                        item: "year"
-                                        width: aboutTabLayout.width*0.25
-                                        height: units.gu(2)
-                                    }
-                                }
-                            }
-                        }
-
-
-                    ]
-
-                    Column {
-                        id: aboutColumn;
-                        spacing: units.gu(3)
-                        //anchors.fill: parent
-                        //anchors.horizontalCenter: parent.horizontalCenter;
-                        width: parent.width
-                        y: units.gu(6);
-                        UbuntuShape {
-                            Layouts.item: "icon"
-                            property real maxWidth: units.gu(45)
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            width: Math.min(parent.width, maxWidth)/2
-                            height: Math.min(parent.width, maxWidth)/2
-                            image: Image {
-                                objectName: "aboutImage"
-                                //height: width
-                                source: "icons/about.png"
-                                smooth: true
-                                fillMode: Image.PreserveAspectFit
-
-                            }
-                        }
-                        Grid {
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            columns: 2
-                            rowSpacing: units.gu(2)
-                            columnSpacing: mainView.width/10
-                            Layouts.item: "info"
-                            Label {
-                                objectName: "authorLabel"
-                                text: i18n.tr("Author(s): ")
-
-                            }
-                            Label {
-                                objectName: "authors"
-                                font.bold: true;
-                                text: "Dinko Osmankovi\u0107 \nFr\u00e9d\u00e9ric Delgado \nGeorgi Karavasilev \nSam Hewitt"
-                            }
-                            Label {
-                                objectName: "contactLabel"
-                                text: i18n.tr("Contact: ")
-                            }
-                            Label {
-                                objectName: "contacts"
-                                font.bold: true;
-                                text: "dinko.metalac@gmail.com"
-                            }
-
-                        }
-
-                        Row {
-                            id: homepage;
-                            anchors.horizontalCenter: parent.horizontalCenter;
-                            Layouts.item: "link"
-                            Label {
-                                objectName: "urlLabel"
-                                font.bold: true;
-                                text: "<a href=\"https://launchpad.net/sudoku-app\">https://launchpad.net/sudoku-app</a>"
-                                onLinkActivated: Qt.openUrlExternally(link)
-                            }
-                        }
-                        Row {
-                            anchors.horizontalCenter: parent.horizontalCenter;
-                            Layouts.item: "version"
-                            Label {
-                                objectName: "versionLabel"
-                                text: i18n.tr("Version: ")
-                            }
-                            Label {
-                                objectName: "version"
-                                font.bold: true;
-                                text: "1.5"
-                            }
-                        }
-                        Row {
-                            Layouts.item: "year"
-                            anchors.horizontalCenter: parent.horizontalCenter;
-                            Label {
-                                objectName: "yearLabel"
-                                font.bold: true;
-                                text: "2013"
-
-
-                            }
-                        }
-                    }
-
-                }
-            }
         }
     }
 }
