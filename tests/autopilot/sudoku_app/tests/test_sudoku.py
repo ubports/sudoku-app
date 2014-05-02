@@ -7,8 +7,6 @@
 
 """Sudoku app autopilot tests."""
 
-from __future__ import absolute_import
-
 from autopilot.matchers import Eventually
 from testtools.matchers import Equals, NotEquals
 
@@ -222,7 +220,8 @@ class TestMainWindow(SudokuTestCase):
 
         #select "Moderate" choice of difficulty selector
         choices = self.main_view.get_difficulty_selector_labelvisual()
-        choice_ = filter(lambda choice: choice.text == 'Moderate', choices)[0]
+        choice_ = [choice for choice in choices
+                   if choice.text == 'Moderate'][0]
         self.pointing_device.click_object(choice_)
         self.assertThat(
             lambda:
@@ -237,8 +236,8 @@ class TestMainWindow(SudokuTestCase):
 
         #select "Simple" choice of theme selector
         themeChoices = self.main_view.get_theme_selector_labelvisual()
-        themeChoice = filter(lambda choice: choice.text == 'Simple',
-                             themeChoices)[0]
+        themeChoice = [choice for choice in themeChoices
+                       if choice.text == 'Simple'][0]
         self.pointing_device.click_object(themeChoice)
         self.assertThat(
             lambda:
