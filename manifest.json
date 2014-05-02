@@ -12,5 +12,7 @@
     "name": "com.ubuntu.sudoku",
     "title": "sudoku",
     "version": "1.0"
+    "x-test": {
+        "autopilot": "sudoku_app"
+    }
 }
-
