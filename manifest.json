@@ -1,6 +1,6 @@
 {
     "description": "Sudoku game for Ubuntu devices",
-    "framework": "ubuntu-sdk-13.10",
+    "framework": "ubuntu-sdk-14.04-qml-dev1",
     "hooks": {
         "sudoku": {
             "apparmor": "apparmor/sudoku.json",
@@ -11,8 +11,8 @@
     "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
     "name": "com.ubuntu.sudoku",
     "title": "Sudoku",
-    "version": "1.0"
+    "version": "1.1",
     "x-test": {
         "autopilot": "sudoku_app"
-    }
+        }
 }
