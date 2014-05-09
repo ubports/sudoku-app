@@ -207,42 +207,65 @@ class TestMainWindow(SudokuTestCase):
             objectName="blockgrid").numberOfHints
         self.assertThat(number_of_hints, Eventually(Equals(1)))
 
-    def test_settings_tab(self):
+    def test_theme_change(self):
         #open settings tab
         self.main_view.switch_to_tab("settingsTab")
 
-        #********check difficulty selector ********
-        #click on difficulty selector
-        difficultySelector = self.main_view.get_difficulty_selector()
-        self.assertThat(difficultySelector.text,
-                        Eventually(Equals("Default Difficulty")))
-        self.pointing_device.click_object(difficultySelector)
+        #******** check theme selector  ********
+        self.assertThat(lambda: self.main_view.select_single('OptionSelector', objectName='themeSelector'),
+            Eventually(NotEquals(None)))
+        #select theme option selector
+        themeSelector = self.main_view.select_single('OptionSelector', objectName='themeSelector')
+        self.assertThat(lambda: themeSelector.select_many('ShapeItem')[1], Eventually(NotEquals(None)))
+        #select UbuntuColours option
+        current_option = themeSelector.select_many('ShapeItem')[1]
+        self.pointing_device.click_object(current_option)
+        self.assertThat(themeSelector.get_current_label().text, Eventually(Equals("UbuntuColours")))
 
-        #select "Moderate" choice of difficulty selector
-        choices = self.main_view.get_difficulty_selector_labelvisual()
-        choice_ = [choice for choice in choices
-                   if choice.text == 'Moderate'][0]
-        self.pointing_device.click_object(choice_)
-        self.assertThat(
-            lambda:
-            self.main_view.get_difficulty_selector_labelvisual()[0].text,
-            Eventually(Equals("Moderate")))
+        #select Simple theme option
+        self.assertThat(lambda: themeSelector.select_many('ShapeItem')[2], Eventually(NotEquals(None)))
+        simple_theme = themeSelector.select_option('Label', text="Simple")
+        self.assertThat(themeSelector.get_current_label().text, Eventually(Equals("Simple")))
 
-        #********check theme selector ********
-        #click on theme selector
-        themeSelector = self.main_view.get_theme_selector()
-        self.assertThat(themeSelector.text, Eventually(Equals("Theme")))
-        self.pointing_device.click_object(themeSelector)
+        #select UbuntuColours theme option again
+        self.assertThat(lambda: themeSelector.select_many('ShapeItem')[1], Eventually(NotEquals(None)))
+        simple_theme = themeSelector.select_option('Label', text="UbuntuColours")
+        self.assertThat(themeSelector.get_current_label().text, Eventually(Equals("UbuntuColours")))
 
-        #select "Simple" choice of theme selector
-        themeChoices = self.main_view.get_theme_selector_labelvisual()
-        themeChoice = [choice for choice in themeChoices
-                       if choice.text == 'Simple'][0]
-        self.pointing_device.click_object(themeChoice)
-        self.assertThat(
-            lambda:
-            self.main_view.get_theme_selector_labelvisual()[1].text,
-            Eventually(Equals("Simple")))
+    def test_difficulty_selector(self):
+        #open settings tab
+        self.main_view.switch_to_tab("settingsTab")
+
+        #******** check difficulty selector  ********
+        self.assertThat(lambda: self.main_view.select_single('OptionSelector', objectName='difficultySelector'),
+            Eventually(NotEquals(None)))
+        #select difficulty option selector
+        difficultySelector = self.main_view.select_single('OptionSelector', objectName='difficultySelector')
+        self.assertThat(lambda: difficultySelector.select_many('ShapeItem')[1], Eventually(NotEquals(None)))
+
+        #select Easy
+        current_option = difficultySelector.select_option('Label', text="Easy")
+        self.assertThat(difficultySelector.get_current_label().text, Eventually(Equals("Easy")))
+
+        #select Moderate
+        current_option = difficultySelector.select_option('Label', text="Moderate")
+        self.assertThat(difficultySelector.get_current_label().text, Eventually(Equals("Moderate")))
+
+        #select Hard
+        current_option = difficultySelector.select_option('Label', text="Hard")
+        self.assertThat(difficultySelector.get_current_label().text, Eventually(Equals("Hard")))
+
+        #select Ultra Hard
+        current_option = difficultySelector.select_option('Label', text="Ultra Hard")
+        self.assertThat(difficultySelector.get_current_label().text, Eventually(Equals("Ultra Hard")))
+
+        #select Always ask
+        current_option = difficultySelector.select_option('Label', text="Always ask")
+        self.assertThat(difficultySelector.get_current_label().text, Eventually(Equals("Always ask")))
+
+    def test_hint_switch(self):
+        #open settings tab
+        self.main_view.switch_to_tab("settingsTab")
 
         #******** check hint switch  ********
         #select hints switch
@@ -253,6 +276,10 @@ class TestMainWindow(SudokuTestCase):
         #switch it on or off depending on it's state
         self.pointing_device.click_object(hintsSwitchClickable)
         self.assertThat(hintsSwitch.checked, Eventually(Equals(True)))
+
+    def test_profiles(self):
+        #open settings tab
+        self.main_view.switch_to_tab("settingsTab")
 
         #******** check profile settings ********
         #select current profile
@@ -299,11 +326,18 @@ class TestMainWindow(SudokuTestCase):
 
         #******** check manage profiles ********
         #select manage profile
+        x, y, _, _ = self.main_view.globalRect
+        line_x = x + self.main_view.width * 0.50
+        start_y = y + self.main_view.height * 0.75
+        stop_y = y + self.main_view.height * 0.6
+
+        self.pointing_device.drag(line_x, start_y, line_x, stop_y)
         manageProfile = self.main_view.get_manage_profiles()
         self.pointing_device.click_object(manageProfile)
 
         #click on the new profile just added
-        myProfile = self.main_view.get_Myfirstname_Mylastname_profile()
+        myProfile = self.main_view.wait_select_single("Standard", text="Myfirstname Mylastname")
+        print(myProfile.text)
         self.assertThat(myProfile.text,
                         Eventually(Equals("Myfirstname Mylastname")))
         self.pointing_device.click_object(myProfile)
@@ -316,14 +350,19 @@ class TestMainWindow(SudokuTestCase):
         #check and make sure the profile is gone
 
     def _set_difficulty(self, selection, label):
-        #set the difficulty of the game
+        #open settings tab
         self.main_view.switch_to_tab("settingsTab")
-        difficultySelector = self.main_view.get_difficulty_selector()
-        self.pointing_device.click_object(difficultySelector)
-        choices = self.main_view.get_difficulty_selector_labelvisual()
-        self.pointing_device.click_object(choices[selection])
-        self.assertThat(choices[selection].text,
-                        Eventually(Equals(label)))
+
+        #set the difficulty of the game
+        self.assertThat(lambda: self.main_view.select_single('OptionSelector', objectName='difficultySelector'),
+            Eventually(NotEquals(None)))
+        #select difficulty option selector
+        difficultySelector = self.main_view.select_single('OptionSelector', objectName='difficultySelector')
+        self.assertThat(lambda: difficultySelector.select_many('ShapeItem')[1], Eventually(NotEquals(None)))
+
+        #select Easy
+        current_option = difficultySelector.select_option('Label', text=label)
+        self.assertThat(difficultySelector.get_current_label().text, Eventually(Equals(label)))
 
     def _verify_game_start(self, askmode=False, button=None):
         #check the game starts properly (according to difficulty)

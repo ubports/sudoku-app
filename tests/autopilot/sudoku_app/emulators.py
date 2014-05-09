@@ -84,7 +84,7 @@ class MainView(toolkit_emulators.MainView):
     def get_manage_profiles(self):
         return self.select_single("SingleValue", objectName="Manage profiles")
 
-    def get_Myfirstname_Mylastname_profile(self):
+    def firstname_Mylastname_profile(self):
         return self.wait_select_single("Standard", text="Myfirstname Mylastname")
 
     def get_edit_profile_dialog(self):

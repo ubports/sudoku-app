@@ -1028,7 +1028,7 @@ MainView {
                             text: i18n.tr("<b>Sudoku settings</b>")
                         }
 
-                        ListItem.ItemSelector {
+                        OptionSelector {
                             objectName: "difficultySelector"
                             id: difficultySelector
                             text: i18n.tr("Default Difficulty")
@@ -1067,7 +1067,7 @@ MainView {
                             }
 
                         }
-                        ListItem.ItemSelector {
+                        OptionSelector {
                             objectName: "themeSelector"
                             id: themeSelector
                             text: i18n.tr("Theme")
@@ -1089,6 +1089,7 @@ MainView {
                                     sudokuBlocksGrid.changeColorScheme("ColorSchemeSimple.qml");
                                 }
                             }
+                            Component.onCompleted: selectedIndex = 0
                         }
 
                         ListItem.Standard {
