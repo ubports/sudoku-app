@@ -212,24 +212,18 @@ class TestMainWindow(SudokuTestCase):
         self.main_view.switch_to_tab("settingsTab")
 
         #******** check theme selector  ********
-        self.assertThat(lambda: self.main_view.select_single('OptionSelector', objectName='themeSelector'),
-            Eventually(NotEquals(None)))
-        #select theme option selector
-        themeSelector = self.main_view.select_single('OptionSelector', objectName='themeSelector')
-        self.assertThat(lambda: themeSelector.select_many('ShapeItem')[1], Eventually(NotEquals(None)))
+        themeSelector = self.main_view.get_theme_selector()
+
         #select UbuntuColours option
-        current_option = themeSelector.select_many('ShapeItem')[1]
-        self.pointing_device.click_object(current_option)
+        themeSelector.select_option('Label', text='UbuntuColours')
         self.assertThat(themeSelector.get_current_label().text, Eventually(Equals("UbuntuColours")))
 
         #select Simple theme option
-        self.assertThat(lambda: themeSelector.select_many('ShapeItem')[2], Eventually(NotEquals(None)))
-        simple_theme = themeSelector.select_option('Label', text="Simple")
+        themeSelector.select_option('Label', text='Simple')
         self.assertThat(themeSelector.get_current_label().text, Eventually(Equals("Simple")))
 
         #select UbuntuColours theme option again
-        self.assertThat(lambda: themeSelector.select_many('ShapeItem')[1], Eventually(NotEquals(None)))
-        simple_theme = themeSelector.select_option('Label', text="UbuntuColours")
+        themeSelector.select_option('Label', text='UbuntuColours')
         self.assertThat(themeSelector.get_current_label().text, Eventually(Equals("UbuntuColours")))
 
     def test_difficulty_selector(self):
@@ -237,31 +231,27 @@ class TestMainWindow(SudokuTestCase):
         self.main_view.switch_to_tab("settingsTab")
 
         #******** check difficulty selector  ********
-        self.assertThat(lambda: self.main_view.select_single('OptionSelector', objectName='difficultySelector'),
-            Eventually(NotEquals(None)))
-        #select difficulty option selector
-        difficultySelector = self.main_view.select_single('OptionSelector', objectName='difficultySelector')
-        self.assertThat(lambda: difficultySelector.select_many('ShapeItem')[1], Eventually(NotEquals(None)))
+        difficulty = self.main_view.get_difficulty_selector()
 
         #select Easy
-        current_option = difficultySelector.select_option('Label', text="Easy")
-        self.assertThat(difficultySelector.get_current_label().text, Eventually(Equals("Easy")))
+        difficulty.select_option('Label', text='Easy')
+        self.assertThat(difficulty.get_current_label().text, Eventually(Equals("Easy")))
 
         #select Moderate
-        current_option = difficultySelector.select_option('Label', text="Moderate")
-        self.assertThat(difficultySelector.get_current_label().text, Eventually(Equals("Moderate")))
+        difficulty.select_option('Label', text='Moderate')
+        self.assertThat(difficulty.get_current_label().text, Eventually(Equals("Moderate")))
 
         #select Hard
-        current_option = difficultySelector.select_option('Label', text="Hard")
-        self.assertThat(difficultySelector.get_current_label().text, Eventually(Equals("Hard")))
+        difficulty.select_option('Label', text='Hard')
+        self.assertThat(difficulty.get_current_label().text, Eventually(Equals("Hard")))
 
         #select Ultra Hard
-        current_option = difficultySelector.select_option('Label', text="Ultra Hard")
-        self.assertThat(difficultySelector.get_current_label().text, Eventually(Equals("Ultra Hard")))
+        difficulty.select_option('Label', text='Ultra Hard')
+        self.assertThat(difficulty.get_current_label().text, Eventually(Equals("Ultra Hard")))
 
         #select Always ask
-        current_option = difficultySelector.select_option('Label', text="Always ask")
-        self.assertThat(difficultySelector.get_current_label().text, Eventually(Equals("Always ask")))
+        difficulty.select_option('Label', text='Always ask')
+        self.assertThat(difficulty.get_current_label().text, Eventually(Equals("Always ask")))
 
     def test_hint_switch(self):
         #open settings tab
@@ -332,6 +322,8 @@ class TestMainWindow(SudokuTestCase):
         stop_y = y + self.main_view.height * 0.6
 
         self.pointing_device.drag(line_x, start_y, line_x, stop_y)
+        self._wait_to_stop_moving()
+
         manageProfile = self.main_view.get_manage_profiles()
         self.pointing_device.click_object(manageProfile)
 
@@ -349,20 +341,21 @@ class TestMainWindow(SudokuTestCase):
 
         #check and make sure the profile is gone
 
+    def _wait_to_stop_moving(self):
+        self.main_view.select_single(
+            'QQuickFlickable',
+            objectName='settingsContainer').moving.wait_for(False)
+
     def _set_difficulty(self, selection, label):
         #open settings tab
         self.main_view.switch_to_tab("settingsTab")
 
         #set the difficulty of the game
-        self.assertThat(lambda: self.main_view.select_single('OptionSelector', objectName='difficultySelector'),
-            Eventually(NotEquals(None)))
-        #select difficulty option selector
-        difficultySelector = self.main_view.select_single('OptionSelector', objectName='difficultySelector')
-        self.assertThat(lambda: difficultySelector.select_many('ShapeItem')[1], Eventually(NotEquals(None)))
+        difficulty = self.main_view.get_difficulty_selector()
 
         #select Easy
-        current_option = difficultySelector.select_option('Label', text=label)
-        self.assertThat(difficultySelector.get_current_label().text, Eventually(Equals(label)))
+        difficulty.select_option('Label', text=label)
+        self.assertThat(difficulty.get_current_label().text, Eventually(Equals(label)))
 
     def _verify_game_start(self, askmode=False, button=None):
         #check the game starts properly (according to difficulty)

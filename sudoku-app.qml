@@ -610,7 +610,6 @@ MainView {
         var newColorScheme = null;
         if (Settings.getSetting("ColorTheme") == "Unknown") {
             sudokuBlocksGrid.changeColorScheme("ColorSchemeUbuntu.qml");
-            print("NE VALJA")
             var result = Settings.setSetting("ColorTheme", 0);
 
         }
@@ -1017,6 +1016,7 @@ MainView {
                     //width: parent.width
                     flickableDirection: Flickable.VerticalFlick
                     //clip: true
+                    objectName: "settingsContainer"
                     Column {
                         id: mainColumnSettings;
                         //anchors.fill: parent
