@@ -610,7 +610,6 @@ MainView {
         var newColorScheme = null;
         if (Settings.getSetting("ColorTheme") == "Unknown") {
             sudokuBlocksGrid.changeColorScheme("ColorSchemeUbuntu.qml");
-            print("NE VALJA")
             var result = Settings.setSetting("ColorTheme", 0);
 
         }
@@ -779,9 +778,9 @@ MainView {
                     objectName: "blockgrid"
                     //x: units.dp(3)
                     x: !mainView.wideAspect() ? 0.5*(mainView.width-9*sudokuBlocksGrid.blockSize-
-                            22*sudokuBlocksGrid.blockDistance) :
-                                     0.25*(mainView.width-9*sudokuBlocksGrid.blockSize-
-                            22*sudokuBlocksGrid.blockDistance)
+                                                     22*sudokuBlocksGrid.blockDistance) :
+                                                0.25*(mainView.width-9*sudokuBlocksGrid.blockSize-
+                                                      22*sudokuBlocksGrid.blockDistance)
 
                     y: !mainView.wideAspect() ? units.gu(1) : mainView.height*0.05
 
@@ -794,7 +793,7 @@ MainView {
                     //anchors.horizontalCenter: parent.horizontalCenter
                     x: !mainView.wideAspect() ? 0.5*(mainView.width - width) :
                                                 0.25*(mainView.width-9*sudokuBlocksGrid.blockSize-
-                                       22*sudokuBlocksGrid.blockDistance)+9*sudokuBlocksGrid.blockSize + 35*sudokuBlocksGrid.blockDistance + units.gu(2)
+                                                      22*sudokuBlocksGrid.blockDistance)+9*sudokuBlocksGrid.blockSize + 35*sudokuBlocksGrid.blockDistance + units.gu(2)
                     anchors.top: parent.top
                     anchors.topMargin: !mainView.wideAspect() ?
                                            9*sudokuBlocksGrid.blockSize + 35*sudokuBlocksGrid.blockDistance :
@@ -834,7 +833,7 @@ MainView {
                             id: blueFlagText
                             text: i18n.tr("Start blocks")
                             fontSize: "x-small"
-                            color: settingsTab.themeIndex == 0 ? "white" : "black"
+                            color: settingsTab.themeIndex != 1 ? "white" : "black"
                             width:units.gu(5);
                             wrapMode: TextEdit.WordWrap;
                             horizontalAlignment: Text.AlignHCenter
@@ -873,114 +872,10 @@ MainView {
 
         // Highscores Tab
 
-        Tab {
+        HighscoresTab {
             id: highscoresTab
             objectName: "highscoresTab"
             title: i18n.tr("Scores")
-            page: Page {
-                tools: ToolbarItems {
-                    ToolbarButton {
-                        objectName: "allusersbutton"
-                        action: Action {
-                            text: "All\nusers"
-                            iconSource: Qt.resolvedUrl("icons/all-users.svg")
-                            onTriggered: {
-                                var allScores = Settings.getAllScores()
-                                highscoresModel.clear();
-                                highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
-                                for(var i = 0; i < allScores.length; i++) {
-                                    var rowItem = allScores[i];
-                                    //print("ROW ",rowItem)
-                                    var firstName = Settings.getUserFirstName(rowItem[0]);
-                                    var lastName = Settings.getUserLastName(rowItem[0]);
-                                    //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
-                                    highscoresModel.append({'firstname': firstName,
-                                                               'lastname':  lastName,
-                                                               'score': rowItem[1] });
-                                }
-                            }
-                        }
-                    }
-                    ToolbarButton {
-                        objectName: "currentuserbutton"
-                        action: Action {
-                            text: "Current\nuser"
-                            iconSource: Qt.resolvedUrl("icons/single-user.svg")
-                            onTriggered: {
-                                var firstName = Settings.getUserFirstName(currentUserId);
-                                var lastName = Settings.getUserLastName(currentUserId);
-                                //print(firstName, lastName)
-                                highscoresHeaderText = i18n.tr("<b>Best scores for ")+firstName + " " + lastName+"</b>"
-                                var allScores = Settings.getAllScoresForUser(currentUserId)
-                                highscoresModel.clear();
-                                for(var i = 0; i < allScores.length; i++) {
-                                    var rowItem = allScores[i];
-                                    //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
-                                    highscoresModel.append({'firstname': firstName,
-                                                               'lastname':  lastName,
-                                                               'score': rowItem[1] });
-                                }
-                            }
-                        }
-                    }
-                    //locked: true
-                    //opened: true
-                }
-
-
-                ListModel {
-                    id: highscoresModel
-
-                    onDataChanged: {
-                        var allScores = Settings.getAllScores()
-                        highscoresModel.clear();
-                        highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
-                        for(var i = 0; i < allScores.length; i++) {
-                            var rowItem = allScores[i];
-                            //print("ROW ",rowItem)
-                            var firstName = Settings.getUserFirstName(rowItem[0]);
-                            var lastName = Settings.getUserLastName(rowItem[0]);
-                            //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
-                            highscoresModel.append({'firstname': firstName,
-                                                       'lastname':  lastName,
-                                                       'score': rowItem[1] });
-                        }
-                    }
-
-                    /*ListElement {
-                        firstname: "Bill"
-                        lastname: "Smith"
-                        score: "120"
-                    }
-                    ListElement {
-                        firstname: "John"
-                        lastname: "Brown"
-                        score: "130"
-                    }*/
-                }
-                Column {
-                    anchors.fill: parent
-                    clip: true
-                    ListView {
-                        id: highScoresListView
-                        model: highscoresModel
-                        width: parent.width
-                        height:parent.height                        
-
-                        header: ListItem.Header {
-                            id: highscoresHeader
-                            objectName: "highscoreslabel"
-                            text: highscoresHeaderText
-                        }
-                        delegate: ListItem.SingleValue {
-                            text: firstname + " " + lastname
-                            value: score
-                        }
-                    }
-                }
-            }
-
-
         }
 
 
@@ -989,456 +884,330 @@ MainView {
         Tab {
             id: settingsTab;
             objectName: "settingsTab"
+            title: i18n.tr("Settings")
 
             property alias disableHintsChecked: disableHints.checked;
             property alias disableVibrationsChecked: disableVibrations.checked;
             property alias difficultyIndex: difficultySelector.selectedIndex;
             property alias themeIndex: themeSelector.selectedIndex;
 
+            page: Page {
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                    top: parent.top
+                }
+                height: mainView.height
 
 
-            title: i18n.tr("Settings")
-            page:
-
-                Page {
-
-                Column {
-
-                    Component {
-                        id: profileSelector
-                        Dialog  {
-                            title: i18n.tr("Select profile")
+                Component {
+                    id: profileSelector
+                    Dialog  {
+                        title: i18n.tr("Select profile")
 
 
 
-                            Column{
-                                height: mainColumnSettings.height*2/3
-                                ListView {
+                        Column{
+                            height: mainColumnSettings.height*2/3
+                            ListView {
 
-                                    id: profileListView
-                                    clip: true
-                                    width: parent.width
-                                    height: parent.height - units.gu(12)
-                                    model: profilesModel
+                                id: profileListView
+                                clip: true
+                                width: parent.width
+                                height: parent.height - units.gu(12)
+                                model: profilesModel
 
-                                    delegate:
-                                        ListItem.Standard {
-                                        __foregroundColor: "white"
-                                        text: firstname + " " + lastname
-                                        progression: true
-                                        onTriggered: {
-                                            //console.log("clicked "+index)
-                                            currentUserId = profileId;
-                                            hide()
-                                        }
-                                    }
-
-                                }
-
-                                SudokuDialogButton{
-
-                                    anchors.horizontalCenter: parent.horizontalCenter
-                                    id:cancelButton
-                                    buttonText: i18n.tr("Cancel")
-                                    width: parent.width/2;
-                                    size: units.gu(5)
-                                    buttonColor: sudokuBlocksGrid.dialogButtonColor1
-                                    textColor: sudokuBlocksGrid.dialogButtonTextColor
-                                    //border.color: "transparent"
+                                delegate:
+                                    ListItem.Standard {
+                                    __foregroundColor: "white"
+                                    text: firstname + " " + lastname
+                                    progression: true
                                     onTriggered: {
+                                        //console.log("clicked "+index)
+                                        currentUserId = profileId;
                                         hide()
                                     }
                                 }
 
                             }
+
+                            SudokuDialogButton{
+
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                id:cancelButton
+                                buttonText: i18n.tr("Cancel")
+                                width: parent.width/2;
+                                size: units.gu(5)
+                                buttonColor: sudokuBlocksGrid.dialogButtonColor1
+                                textColor: sudokuBlocksGrid.dialogButtonTextColor
+                                //border.color: "transparent"
+                                onTriggered: {
+                                    hide()
+                                }
+                            }
+
                         }
                     }
+                }
 
-                    Component {
-                        id: manageProfileSelector
-                        Dialog {
-                            title: i18n.tr("Select profile")
+                Component {
+                    id: manageProfileSelector
+                    Dialog {
+                        title: i18n.tr("Select profile")
 
-                            Column{
-                                height: mainColumnSettings.height*2/3
-                                ListView {
-                                    id: manageProfileListView
-                                    clip: true
-                                    width: parent.width
-                                    height: parent.height - units.gu(12)
-                                    model: profilesModel
+                        Column{
+                            height: mainColumnSettings.height*2/3
+                            ListView {
+                                id: manageProfileListView
+                                clip: true
+                                width: parent.width
+                                height: parent.height - units.gu(12)
+                                model: profilesModel
 
-                                    delegate:
+                                delegate:
 
-                                        ListItem.Standard {
-                                        __foregroundColor: "white"
-                                        text: firstname + " " + lastname
+                                    ListItem.Standard {
+                                    __foregroundColor: "white"
+                                    text: firstname + " " + lastname
 
-                                        progression: true
-                                        onTriggered: {
-                                            hide()
-                                            editUserId = profileId
-                                            PopupUtils.open(manageProfileDialog, selectorProfile)
-                                        }
-                                    }
-
-
-
-                                }
-                                SudokuDialogButton{
-
-                                    anchors.horizontalCenter: parent.horizontalCenter
-                                    id:cancelButton
-                                    buttonText: i18n.tr("Cancel")
-                                    width: parent.width/2;
-                                    size: units.gu(5)
-                                    buttonColor: sudokuBlocksGrid.dialogButtonColor1
-                                    textColor: sudokuBlocksGrid.dialogButtonTextColor
-                                    //border.color: "transparent"
+                                    progression: true
                                     onTriggered: {
                                         hide()
+                                        editUserId = profileId
+                                        PopupUtils.open(manageProfileDialog, selectorProfile)
                                     }
+                                }
+
+
+
+                            }
+                            SudokuDialogButton{
+
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                id:cancelButton
+                                buttonText: i18n.tr("Cancel")
+                                width: parent.width/2;
+                                size: units.gu(5)
+                                buttonColor: sudokuBlocksGrid.dialogButtonColor1
+                                textColor: sudokuBlocksGrid.dialogButtonTextColor
+                                //border.color: "transparent"
+                                onTriggered: {
+                                    hide()
                                 }
                             }
                         }
                     }
+                }
 
-                    ListModel{
-                        id: profilesModel
-                    }
+                ListModel{
+                    id: profilesModel
+                }
 
-                    id: mainColumnSettings;
-                    //width: settingsTab.width;
-                    //height: settingsTab.height;
+                //id: mainColumnSettings;
+                //width: settingsTab.width;
+                //height: settingsTab.height;
+                //anchors.fill: parent
+                //anchors.horizontalCenter: parent.horizontalCenter;
+                //spacing: units.gu(1)
+                Flickable {
+                    id: flickableSettings
                     anchors.fill: parent
-                    //anchors.horizontalCenter: parent.horizontalCenter;
-                    spacing: units.gu(1)
-
-                    ListItem.Header {
-                        text: i18n.tr("<b>Sudoku settings</b>")
-                    }
-
-                    ListItem.ValueSelector {
-                        objectName: "difficultySelector"
-                        id: difficultySelector
-                        text: i18n.tr("Default Difficulty")
-                        values: [i18n.tr("Easy"), i18n.tr("Moderate"), i18n.tr("Hard"), i18n.tr("Ultra Hard"), i18n.tr("Always ask")]
-                        onSelectedIndexChanged: {
-                            //print(difficultySelector.selectedIndex)
-                            switch(difficultySelector.selectedIndex) {
-                            case 0:
-                                var randomnumber = Math.floor(Math.random()*9);
-                                randomnumber += 31;
-                                sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                                Settings.setSetting("Difficulty", selectedIndex)
-                                break;
-                            case 1:
-                                var randomnumber = Math.floor(Math.random()*4);
-                                randomnumber += 26;
-                                sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                                Settings.setSetting("Difficulty", selectedIndex)
-                                break;
-                            case 2:
-                                var randomnumber = Math.floor(Math.random()*4);
-                                randomnumber += 21;
-                                sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                                Settings.setSetting("Difficulty", selectedIndex)
-                                break;
-                            case 3:
-                                var randomnumber = Math.floor(Math.random()*3);
-                                randomnumber += 17;
-                                sudokuBlocksGrid.createNewGame(81 - randomnumber);
-                                Settings.setSetting("Difficulty", selectedIndex)
-                                break;
-                            case 4:
-                                Settings.setSetting("Difficulty", selectedIndex)
-                                break;
-                            }
-                        }
-
-                    }
-                    ListItem.ValueSelector {
-                        objectName: "themeSelector"
-                        id: themeSelector
-                        text: i18n.tr("Theme")
-                        values: ["UbuntuColours", "Simple"]
-                        onSelectedIndexChanged: {
-                            var newColorScheme = null;
-                            if (selectedIndex == 0)
-                            {
-                                //print("Ubuntu")
-                                var result = Settings.setSetting("ColorTheme", selectedIndex);
-                                //print(result);
-                                sudokuBlocksGrid.changeColorScheme("ColorSchemeUbuntu.qml");
-                            }
-                            if (selectedIndex == 1)
-                            {
-                                //print("Simple")
-                                var result = Settings.setSetting("ColorTheme", selectedIndex);
-                                //print(result);
-                                sudokuBlocksGrid.changeColorScheme("ColorSchemeSimple.qml");
-                            }
-                        }
-                    }
-
-                    ListItem.Standard {
-                        objectName: "hintsSwitchClickable"
-                        text: i18n.tr("Hints")
+                    //height: parent.height - units.gu(10)
+                    //width: parent.width
+                    flickableDirection: Flickable.VerticalFlick
+                    //clip: true
+                    objectName: "settingsContainer"
+                    Column {
+                        id: mainColumnSettings;
+                        //anchors.fill: parent
+                        height: parent.height
                         width: parent.width
-                        control: Switch {
-                            objectName: "hintsSwitch"
-                            id: disableHints
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            anchors.verticalCenter: parent.verticalCenter
-                            checked: disableHintsChecked
-                            onCheckedChanged: {
-                                var result = Settings.setSetting("DisableHints", checked ? "true":"false");
-                                //print(result);
+                        spacing: units.gu(1)
+
+                        ListItem.Header {
+                            text: i18n.tr("<b>Sudoku settings</b>")
+                        }
+
+                        OptionSelector {
+                            objectName: "difficultySelector"
+                            id: difficultySelector
+                            text: i18n.tr("Default Difficulty")
+                            model: [i18n.tr("Easy"), i18n.tr("Moderate"), i18n.tr("Hard"), i18n.tr("Ultra Hard"), i18n.tr("Always ask")]
+                            onSelectedIndexChanged: {
+                                //print(difficultySelector.selectedIndex)
+                                switch(difficultySelector.selectedIndex) {
+                                case 0:
+                                    var randomnumber = Math.floor(Math.random()*9);
+                                    randomnumber += 31;
+                                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                                    Settings.setSetting("Difficulty", selectedIndex)
+                                    break;
+                                case 1:
+                                    var randomnumber = Math.floor(Math.random()*4);
+                                    randomnumber += 26;
+                                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                                    Settings.setSetting("Difficulty", selectedIndex)
+                                    break;
+                                case 2:
+                                    var randomnumber = Math.floor(Math.random()*4);
+                                    randomnumber += 21;
+                                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                                    Settings.setSetting("Difficulty", selectedIndex)
+                                    break;
+                                case 3:
+                                    var randomnumber = Math.floor(Math.random()*3);
+                                    randomnumber += 17;
+                                    sudokuBlocksGrid.createNewGame(81 - randomnumber);
+                                    Settings.setSetting("Difficulty", selectedIndex)
+                                    break;
+                                case 4:
+                                    Settings.setSetting("Difficulty", selectedIndex)
+                                    break;
+                                }
+                            }
+
+                        }
+                        OptionSelector {
+                            objectName: "themeSelector"
+                            id: themeSelector
+                            text: i18n.tr("Theme")
+                            model: ["UbuntuColours", "Simple"]
+                            onSelectedIndexChanged: {
+                                var newColorScheme = null;
+                                if (selectedIndex == 0)
+                                {
+                                    //print("Ubuntu")
+                                    var result = Settings.setSetting("ColorTheme", selectedIndex);
+                                    //print(result);
+                                    sudokuBlocksGrid.changeColorScheme("ColorSchemeUbuntu.qml");
+                                }
+                                if (selectedIndex == 1)
+                                {
+                                    //print("Simple")
+                                    var result = Settings.setSetting("ColorTheme", selectedIndex);
+                                    //print(result);
+                                    sudokuBlocksGrid.changeColorScheme("ColorSchemeSimple.qml");
+                                }
+                            }
+                            Component.onCompleted: selectedIndex = 0
+                        }
+
+                        ListItem.Standard {
+                            objectName: "hintsSwitchClickable"
+                            text: i18n.tr("Hints")
+                            width: parent.width
+                            control: Switch {
+                                objectName: "hintsSwitch"
+                                id: disableHints
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                anchors.verticalCenter: parent.verticalCenter
+                                checked: disableHintsChecked
+                                onCheckedChanged: {
+                                    var result = Settings.setSetting("DisableHints", checked ? "true":"false");
+                                    //print(result);
+                                }
+                            }
+                        }
+                        ListItem.Standard {
+                            objectName: "vibrationsSwitchClickable"
+                            text: i18n.tr("Vibration Alerts")
+                            width: parent.width
+                            control: Switch {
+                                objectName: "vibrationsSwitch"
+                                id: disableVibrations
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                anchors.verticalCenter: parent.verticalCenter
+                                checked: disableVibrationsChecked
+                                onCheckedChanged: {
+                                    var result = Settings.setSetting("DisableVibrations", checked ? "true":"false");
+                                    //print(result);
+                                }
+                            }
+                        }
+                        ListItem.Header {
+                            text: i18n.tr("<b>Profiles settings</b>")
+                        }
+                        ListItem.SingleValue {
+                            objectName: "Current profile"
+                            text: "Current profile"
+                            id: selectorProfile
+                            value: {
+                                if(currentUserId==-1)
+                                    return i18n.tr("None")
+                                else
+                                    return Settings.getUserFirstName(currentUserId)+" "+Settings.getUserLastName(currentUserId);
+
+                            }
+
+                            onClicked: {
+
+                                var allProfiles = new Array();
+                                allProfiles = Settings.getAllProfiles()
+
+                                profilesModel.clear()
+
+                                for(var i = 0; i < allProfiles.length; i++)
+                                {
+                                    profilesModel.append({"profileId":allProfiles[i].id,"lastname":allProfiles[i].lastname, "firstname":allProfiles[i].firstname})
+                                }
+                                PopupUtils.open(profileSelector, selectorProfile)
+                            }
+                        }
+
+                        AddProfileDialog{
+                            id:addProfileDialog
+                        }
+
+                        ManageProfileDialog{
+                            id:manageProfileDialog
+                        }
+
+
+                        ListItem.SingleValue {
+                            objectName: "Add profile"
+                            id:addSingleValue
+                            text: i18n.tr("Add profile")
+                            onClicked: {
+                                PopupUtils.open(addProfileDialog, addSingleValue);
+                            }
+                        }
+
+                        ListItem.SingleValue {
+                            objectName: "Manage profiles"
+                            id:manageProfileSingleValue
+                            text: i18n.tr("Manage profiles")
+                            onClicked: {
+
+                                var allProfiles = new Array();
+                                allProfiles = Settings.getAllProfiles()
+
+                                profilesModel.clear()
+
+                                for(var i = 0; i < allProfiles.length; i++)
+                                {
+                                    profilesModel.append({"profileId":allProfiles[i].id,"lastname":allProfiles[i].lastname, "firstname":allProfiles[i].firstname})
+                                }
+
+                                PopupUtils.open(manageProfileSelector, manageProfileSingleValue)
                             }
                         }
                     }
-                    ListItem.Standard {
-                        objectName: "vibrationsSwitchClickable"
-                        text: i18n.tr("Vibration Alerts")
-                        width: parent.width
-                        control: Switch {
-                            objectName: "vibrationsSwitch"
-                            id: disableVibrations
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            anchors.verticalCenter: parent.verticalCenter
-                            checked: disableVibrationsChecked
-                            onCheckedChanged: {
-                                var result = Settings.setSetting("DisableVibrations", checked ? "true":"false");
-                                //print(result);
-                            }
-                        }
-                    }
-                    ListItem.Header {
-                        text: i18n.tr("<b>Profiles settings</b>")
-                    }
-                    ListItem.SingleValue {
-                        objectName: "Current profile"
-                        text: "Current profile"
-                        id: selectorProfile
-                        value: {
-                            if(currentUserId==-1)
-                                return i18n.tr("None")
-                            else
-                                return Settings.getUserFirstName(currentUserId)+" "+Settings.getUserLastName(currentUserId);
+                }
 
-                        }
-
-                        onClicked: {
-
-                            var allProfiles = new Array();
-                            allProfiles = Settings.getAllProfiles()
-
-                            profilesModel.clear()
-
-                            for(var i = 0; i < allProfiles.length; i++)
-                            {
-                                profilesModel.append({"profileId":allProfiles[i].id,"lastname":allProfiles[i].lastname, "firstname":allProfiles[i].firstname})
-                            }
-                            PopupUtils.open(profileSelector, selectorProfile)
-                        }
-                    }
-
-                    AddProfileDialog{
-                        id:addProfileDialog
-                    }
-
-                    ManageProfileDialog{
-                        id:manageProfileDialog
-                    }
-
-
-                    ListItem.SingleValue {
-                        objectName: "Add profile"
-                        id:addSingleValue
-                        text: i18n.tr("Add profile")
-                        onClicked: {
-                            PopupUtils.open(addProfileDialog, addSingleValue);
-                        }
-                    }
-
-                    ListItem.SingleValue {
-                        objectName: "Manage profiles"
-                        id:manageProfileSingleValue
-                        text: i18n.tr("Manage profiles")
-                        onClicked: {
-
-                            var allProfiles = new Array();
-                            allProfiles = Settings.getAllProfiles()
-
-                            profilesModel.clear()
-
-                            for(var i = 0; i < allProfiles.length; i++)
-                            {
-                                profilesModel.append({"profileId":allProfiles[i].id,"lastname":allProfiles[i].lastname, "firstname":allProfiles[i].firstname})
-                            }
-
-                            PopupUtils.open(manageProfileSelector, manageProfileSingleValue)
-                        }
-                    }
-
-
+                Scrollbar {
+                    flickableItem: flickableSettings
+                    align: Qt.AlignTrailing
                 }
             }
 
 
         }
 
-        Tab {
-            id: aboutTab;
+
+        AboutTab {
+            id: aboutTab
             objectName: "aboutTab"
             title: i18n.tr("About")
-
-            page: Page {
-                Layouts {
-                    id: aboutTabLayout
-                    width: parent.width
-                    height: parent.height
-                    layouts: [
-                        ConditionalLayout {
-                            name: "tablet"
-                            when: mainView.width > units.gu(80)
-                            Row {
-                                anchors {
-                                    //top: parent
-                                    left: parent.left
-                                    leftMargin: mainView.width*0.1
-                                    top: parent.top
-                                    topMargin: mainView.height*0.2
-
-                                }
-                                spacing: units.gu(5)
-                                ItemLayout {
-                                    item: "icon"
-                                    id: iconTabletItem
-                                    property real maxWidth: units.gu(80)
-                                    width: Math.min(parent.width, maxWidth)/2
-                                    height: Math.min(parent.width, maxWidth)/2
-
-                                }
-                                Column {
-                                    //height: iconTabletItem.height
-                                    spacing: 1
-                                    ItemLayout {
-                                        item: "info"
-                                        width: aboutTabLayout.width*0.25
-                                        height: iconTabletItem.height*0.75
-                                    }
-                                    ItemLayout {
-                                        item: "link"
-                                        width: aboutTabLayout.width*0.25
-                                        height: units.gu(3)
-                                    }
-                                    ItemLayout {
-                                        item: "version"
-                                        width: aboutTabLayout.width*0.25
-                                        height: units.gu(2)
-                                    }
-                                    ItemLayout {
-                                        item: "year"
-                                        width: aboutTabLayout.width*0.25
-                                        height: units.gu(2)
-                                    }
-                                }
-                            }
-                        }
-
-
-                    ]
-
-                    Column {
-                        id: aboutColumn;
-                        spacing: units.gu(3)
-                        //anchors.fill: parent
-                        //anchors.horizontalCenter: parent.horizontalCenter;
-                        width: parent.width
-                        y: units.gu(6);
-                        UbuntuShape {
-                            Layouts.item: "icon"
-                            property real maxWidth: units.gu(45)
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            width: Math.min(parent.width, maxWidth)/2
-                            height: Math.min(parent.width, maxWidth)/2
-                            image: Image {
-                                objectName: "aboutImage"
-                                //height: width
-                                source: "icons/about.png"
-                                smooth: true
-                                fillMode: Image.PreserveAspectFit
-
-                            }
-                        }
-                        Grid {
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            columns: 2
-                            rowSpacing: units.gu(2)
-                            columnSpacing: mainView.width/10
-                            Layouts.item: "info"
-                            Label {
-                                objectName: "authorLabel"
-                                text: i18n.tr("Author(s): ")
-
-                            }
-                            Label {
-                                objectName: "authors"
-                                font.bold: true;
-                                text: "Dinko Osmankovi\u0107 \nFr\u00e9d\u00e9ric Delgado \nGeorgi Karavasilev \nSam Hewitt"
-                            }
-                            Label {
-                                objectName: "contactLabel"
-                                text: i18n.tr("Contact: ")
-                            }
-                            Label {
-                                objectName: "contacts"
-                                font.bold: true;
-                                text: "dinko.metalac@gmail.com"
-                            }
-
-                        }
-
-                        Row {
-                            id: homepage;
-                            anchors.horizontalCenter: parent.horizontalCenter;
-                            Layouts.item: "link"
-                            Label {
-                                objectName: "urlLabel"
-                                font.bold: true;
-                                text: "<a href=\"https://launchpad.net/sudoku-app\">https://launchpad.net/sudoku-app</a>"
-                                onLinkActivated: Qt.openUrlExternally(link)
-                            }
-                        }
-                        Row {
-                            anchors.horizontalCenter: parent.horizontalCenter;
-                            Layouts.item: "version"
-                            Label {
-                                objectName: "versionLabel"
-                                text: i18n.tr("Version: ")
-                            }
-                            Label {
-                                objectName: "version"
-                                font.bold: true;
-                                text: "1.5"
-                            }
-                        }
-                        Row {
-                            Layouts.item: "year"
-                            anchors.horizontalCenter: parent.horizontalCenter;
-                            Label {
-                                objectName: "yearLabel"
-                                font.bold: true;
-                                text: "2013"
-
-
-                            }
-                        }
-                    }
-
-                }
-            }
         }
     }
 }

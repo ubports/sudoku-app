@@ -8,6 +8,7 @@
 """Sudoku app autopilot emulators."""
 
 from ubuntuuitoolkit import emulators as toolkit_emulators
+import ubuntuuitoolkit._custom_proxy_objects
 
 
 class MainView(toolkit_emulators.MainView):
@@ -39,23 +40,12 @@ class MainView(toolkit_emulators.MainView):
                                   objectName="hintsSwitchClickable")
 
     def get_difficulty_selector(self):
-        return self.select_single("ValueSelector",
-                                  objectName="difficultySelector")
-
-    def get_difficulty_selector_labelvisual(self):
-        difficultylabelvisual = self.get_difficulty_selector()
-        difficutlylabelvisualList = difficultylabelvisual.select_many(
-            "LabelVisual", visible="True")
-        return difficutlylabelvisualList
+        return self.wait_select_single(ubuntuuitoolkit.OptionSelector,
+                                          objectName="difficultySelector")
 
     def get_theme_selector(self):
-        return self.select_single("ValueSelector", objectName="themeSelector")
-
-    def get_theme_selector_labelvisual(self):
-        themelabelvisual = self.get_theme_selector()
-        themelabelvisualList = themelabelvisual.select_many("LabelVisual",
-                                                            visible="True")
-        return themelabelvisualList
+        return self.wait_select_single(ubuntuuitoolkit.OptionSelector,
+                                          objectName="themeSelector")
 
     def get_current_profile(self):
         return self.select_single("SingleValue", objectName="Current profile")
@@ -82,9 +72,9 @@ class MainView(toolkit_emulators.MainView):
         return self.select_single("SudokuDialogButton", objectName="OKbutton")
 
     def get_manage_profiles(self):
-        return self.select_single("SingleValue", objectName="Manage profiles")
+        return self.wait_select_single("SingleValue", objectName="Manage profiles")
 
-    def get_Myfirstname_Mylastname_profile(self):
+    def firstname_Mylastname_profile(self):
         return self.wait_select_single("Standard", text="Myfirstname Mylastname")
 
     def get_edit_profile_dialog(self):
