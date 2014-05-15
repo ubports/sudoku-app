@@ -21,278 +21,303 @@ class TestMainWindow(SudokuTestCase):
             self.main_view.visible, Eventually(Equals(True)))
 
     def test_enter_and_clear_number(self):
-        #find the first button that has a blank value
+        # find the first button that has a blank value
         gridButtons = self.main_view.get_blank_inputs()
         gridButton = gridButtons[0]
 
-        #create a value function to check later using id
+        # create a value function to check later using id
         buttonValue = lambda: self.main_view.select_single(
             "QQuickText", id=gridButton.id).text
 
-        #double check that it's blank
+        # double check that it's blank
         self.assertThat(buttonValue, Eventually(Equals("")))
 
-        #click the button
+        # click the button
         self.pointing_device.click_object(gridButton)
 
-        #assert that we can see the input screen
+        # assert that we can see the input screen
         self.main_view.get_number_dialog()
 
-        #set a value, choose 4
+        # set a value, choose 4
         dialogButton = self.main_view.get_dialog_button("4")
         self.pointing_device.click_object(dialogButton)
 
-        #check the value to ensure it worked
+        # check the value to ensure it worked
         self.assertThat(buttonValue, Eventually(Equals("4")))
 
-        #click the button
+        # click the button
         self.pointing_device.click_object(gridButton)
 
-        #make sure we can see the input screen
+        # make sure we can see the input screen
         self.main_view.get_number_dialog()
 
-        #set a value, choose clear
+        # set a value, choose clear
         dialogButton = self.main_view.get_dialog_button("Clear")
         self.pointing_device.click_object(dialogButton)
 
-        #check the value to ensure it worked
+        # check the value to ensure it worked
         self.assertThat(buttonValue, Eventually(Equals("")))
 
     def test_best_scores_tab(self):
-        #switch to best scores tab
+        # switch to best scores tab
         self.main_view.switch_to_tab("highscoresTab")
 
-        #make sure we are in the right place
+        # make sure we are in the right place
         self.main_view.wait_select_single("Tab", objectName="highscoresTab")
 
-        #click current user button
-        toolbar = self.main_view.open_toolbar()
-        toolbar.click_button("currentuserbutton")
+        # click current user button
+        header = self.main_view.get_header()
+        header.click_action_button('currentuserbutton')
 
-        #check label
+        # check label
         label = lambda: self.main_view.wait_select_single(
             "Header", objectName="highscoreslabel").text
         self.assertThat(
             label,
             Eventually(NotEquals("<b>Best scores for all players</b>")))
 
-        #click all users button
-        toolbar = self.main_view.open_toolbar()
-        toolbar.click_button("allusersbutton")
+        # click all users button
+        header = self.main_view.get_header()
+        header.click_action_button('allusersbutton')
 
-        #check label again
+        # check label again
         self.assertThat(
             label,
             Eventually(Equals("<b>Best scores for all players</b>")))
 
     def test_enter_and_cancel(self):
-        #find the first button that has a blank value
+        # find the first button that has a blank value
         gridButtons = self.main_view.get_blank_inputs()
         gridButton = gridButtons[0]
 
-        #create a value function to check later using id
+        # create a value function to check later using id
         buttonValue = lambda: self.main_view.select_single(
             "QQuickText", id=gridButton.id).text
 
-        #double check that it's blank
+        # double check that it's blank
         self.assertThat(buttonValue, Eventually(Equals("")))
 
-        #click the button
+        # click the button
         self.pointing_device.click_object(gridButton)
 
-        #make that we can see the input screen
+        # make that we can see the input screen
         self.main_view.get_number_dialog()
 
-        #set a value, choose 4
+        # set a value, choose 4
         dialogButton = self.main_view.get_dialog_button("4")
         self.pointing_device.click_object(dialogButton)
 
-        #check the value to ensure it worked
+        # check the value to ensure it worked
         self.assertThat(buttonValue, Eventually(Equals("4")))
 
-        #click the button
+        # click the button
         self.pointing_device.click_object(gridButton)
 
-        #make sure that we can see the input screen
+        # make sure that we can see the input screen
         self.main_view.get_number_dialog()
 
-        #set a value, choose clear
+        # set a value, choose clear
         dialogButton = self.main_view.get_dialog_button("Cancel")
         self.pointing_device.click_object(dialogButton)
 
-        #check the value to ensure it worked
+        # check the value to ensure it worked
         self.assertThat(buttonValue, Eventually(Equals("4")))
 
     def test_new_game_button(self):
-        #testing new game with moderate mode
+        # testing new game with moderate mode
         self._set_difficulty(2, "Moderate")
         self._verify_game_start()
 
-        #testing new game with always ask
+        # testing new game with always ask
         self._set_difficulty(6, "Always ask")
 
-        #testing new game with always ask mode - easy
+        # testing new game with always ask mode - easy
         self._verify_game_start(True, "easyGameButton")
 
-        #testing new game with always ask mode - moderate
+        # testing new game with always ask mode - moderate
         self._verify_game_start(True, "moderateGameButton")
 
-        #testing new game with always ask mode - hard
+        # testing new game with always ask mode - hard
         self._verify_game_start(True, "hardGameButton")
 
-        #testing new game with always ask mode - ultra hard
+        # testing new game with always ask mode - ultra hard
         self._verify_game_start(True, "ultrahardGameButton")
 
     def test_about_tab(self):
-        #Switch to the 'About' tab
+        # Switch to the 'About' tab
         self.main_view.switch_to_tab("aboutTab")
 
-        #Check image loads
+        # Check image loads
         aboutImage = lambda: self.main_view.select_single(
             "QQuickImage", objectName="aboutImage").progress
         self.assertThat(aboutImage, Eventually(Equals(1.0)))
 
-        #Check the 'Author(s):' label is displayed
+        # Check the 'Author(s):' label is displayed
         aboutLabel = lambda: self.main_view.select_single(
             "Label", objectName="authorLabel").text
         self.assertThat(aboutLabel, Eventually(Equals("Author(s): ")))
 
-        #Check the 'Contact:' label is displayed
+        # Check the 'Contact:' label is displayed
         contactLabel = lambda: self.main_view.select_single(
             "Label", objectName="contactLabel").text
         self.assertThat(contactLabel, Eventually(Equals("Contact: ")))
 
-        #Check correct Launchpad URL: is displayed
+        # Check correct Launchpad URL: is displayed
         urlLabel = lambda: self.main_view.select_single(
             "Label", objectName="urlLabel").text
         self.assertThat(urlLabel, Eventually(Equals(
             '<a href="https://launchpad.net/sudoku-app">'
             'https://launchpad.net/sudoku-app</a>')))
 
-        #Check the 'Version:' label is displayed
+        # Check the 'Version:' label is displayed
         versionLabel = lambda: self.main_view.select_single(
             "Label", objectName="versionLabel").text
         self.assertThat(versionLabel, Eventually(Equals("Version: ")))
 
-        #Check correct version is displayed
-        version = lambda: self.main_view.select_single("Label", objectName="version").text
+        # Check correct version is displayed
+        version = lambda: self.main_view.select_single("Label",
+                                                       objectName="version").text
         self.assertThat(version, Eventually(Equals("1.5")))
 
-        #Check correct year is displayed
+        # Check correct year is displayed
         yearLabel = lambda: self.main_view.select_single(
             "Label", objectName="yearLabel").text
         self.assertThat(yearLabel, Eventually(Equals("2013")))
 
     def test_hint_button(self):
-        #open settings tab
+        # open settings tab
         self.main_view.switch_to_tab("settingsTab")
 
-        #click on hints switch to enable hints toolbar button
+        # click on hints switch to enable hints toolbar button
         hintsSwitchClickable = self.main_view.get_hints_switchClickable()
 
         self.pointing_device.click_object(hintsSwitchClickable)
 
-        #verify hints switch is clicked
+        # verify hints switch is clicked
         self.assertThat(self.main_view.get_hints_switch().checked,
                         Eventually(Equals(True)))
 
         # exit settings tab by clicking on sudoku tab
         self.main_view.switch_to_tab("MainTab")
 
-        #click on hint button on toolbar
-        toolbar = self.main_view.open_toolbar()
-        toolbar.click_button("hintbutton")
+        # click on hint button on toolbar
+        header = self.main_view.get_header()
+        header.click_action_button('hintbutton')
 
         number_of_hints = lambda: self.main_view.select_single(
             objectName="blockgrid").numberOfHints
         self.assertThat(number_of_hints, Eventually(Equals(1)))
 
     def test_theme_change(self):
-        #open settings tab
+        # open settings tab
         self.main_view.switch_to_tab("settingsTab")
 
         #******** check theme selector  ********
         themeSelector = self.main_view.get_theme_selector()
 
-        #select UbuntuColours option
+        # select UbuntuColours option
         themeSelector.select_option('Label', text='UbuntuColours')
-        self.assertThat(themeSelector.get_current_label().text, Eventually(Equals("UbuntuColours")))
+        self.assertThat(
+            themeSelector.get_current_label().text,
+            Eventually(
+                Equals("UbuntuColours")))
 
-        #select Simple theme option
+        # select Simple theme option
         themeSelector.select_option('Label', text='Simple')
-        self.assertThat(themeSelector.get_current_label().text, Eventually(Equals("Simple")))
+        self.assertThat(
+            themeSelector.get_current_label().text,
+            Eventually(
+                Equals("Simple")))
 
-        #select UbuntuColours theme option again
+        # select UbuntuColours theme option again
         themeSelector.select_option('Label', text='UbuntuColours')
-        self.assertThat(themeSelector.get_current_label().text, Eventually(Equals("UbuntuColours")))
+        self.assertThat(
+            themeSelector.get_current_label().text,
+            Eventually(
+                Equals("UbuntuColours")))
 
     def test_difficulty_selector(self):
-        #open settings tab
+        # open settings tab
         self.main_view.switch_to_tab("settingsTab")
 
         #******** check difficulty selector  ********
         difficulty = self.main_view.get_difficulty_selector()
 
-        #select Easy
+        # select Easy
         difficulty.select_option('Label', text='Easy')
-        self.assertThat(difficulty.get_current_label().text, Eventually(Equals("Easy")))
+        self.assertThat(
+            difficulty.get_current_label().text,
+            Eventually(
+                Equals("Easy")))
 
-        #select Moderate
+        # select Moderate
         difficulty.select_option('Label', text='Moderate')
-        self.assertThat(difficulty.get_current_label().text, Eventually(Equals("Moderate")))
+        self.assertThat(
+            difficulty.get_current_label().text,
+            Eventually(
+                Equals("Moderate")))
 
-        #select Hard
+        # select Hard
         difficulty.select_option('Label', text='Hard')
-        self.assertThat(difficulty.get_current_label().text, Eventually(Equals("Hard")))
+        self.assertThat(
+            difficulty.get_current_label().text,
+            Eventually(
+                Equals("Hard")))
 
-        #select Ultra Hard
+        # select Ultra Hard
         difficulty.select_option('Label', text='Ultra Hard')
-        self.assertThat(difficulty.get_current_label().text, Eventually(Equals("Ultra Hard")))
+        self.assertThat(
+            difficulty.get_current_label().text,
+            Eventually(
+                Equals("Ultra Hard")))
 
-        #select Always ask
+        # select Always ask
         difficulty.select_option('Label', text='Always ask')
-        self.assertThat(difficulty.get_current_label().text, Eventually(Equals("Always ask")))
+        self.assertThat(
+            difficulty.get_current_label().text,
+            Eventually(
+                Equals("Always ask")))
 
     def test_hint_switch(self):
-        #open settings tab
+        # open settings tab
         self.main_view.switch_to_tab("settingsTab")
 
         #******** check hint switch  ********
-        #select hints switch
+        # select hints switch
         hintsSwitchClickable = self.main_view.get_hints_switchClickable()
         self.assertThat(hintsSwitchClickable.text, Eventually(Equals("Hints")))
         hintsSwitch = self.main_view.get_hints_switch()
 
-        #switch it on or off depending on it's state
+        # switch it on or off depending on it's state
         self.pointing_device.click_object(hintsSwitchClickable)
         self.assertThat(hintsSwitch.checked, Eventually(Equals(True)))
 
     def test_profiles(self):
-        #open settings tab
+        # open settings tab
         self.main_view.switch_to_tab("settingsTab")
 
         #******** check profile settings ********
-        #select current profile
+        # select current profile
         currentProfile = self.main_view.get_current_profile()
         self.pointing_device.click_object(currentProfile)
 
-        #let's change profile
-        #select "sudoku user" profile
+        # let's change profile
+        # select "sudoku user" profile
         sudokuUserProfile = self.main_view.get_sudoku_user_profile()
         self.pointing_device.click_object(sudokuUserProfile)
 
-        #verify changed profile
+        # verify changed profile
         currentProfile = self.main_view.get_current_profile()
         self.assertThat(currentProfile.value, Equals("Sudoku User"))
 
-        #let's add a user profile
-        #verify add profile page opens
+        # let's add a user profile
+        # verify add profile page opens
         sudokuAddProfile = self.main_view.get_add_profile()
         self.pointing_device.click_object(sudokuAddProfile)
 
         sudokuAddProfileDialog = self.main_view.get_add_profile_dialog()
 
-        #insert Lastname
+        # insert Lastname
         lastName = self.main_view.get_add_profile_Lastname_field()
         self.pointing_device.click_object(lastName)
         self.assertThat(lastName.placeholderText,
@@ -300,7 +325,7 @@ class TestMainWindow(SudokuTestCase):
         self.keyboard.type("Mylastname")
         self.assertThat(lastName.text, Eventually(Equals("Mylastname")))
 
-        #insert Firstname
+        # insert Firstname
         firstName = self.main_view.get_add_profile_Firstname_field()
         self.pointing_device.click_object(firstName)
         self.assertThat(firstName.placeholderText,
@@ -308,14 +333,14 @@ class TestMainWindow(SudokuTestCase):
         self.keyboard.type("Myfirstname")
         self.assertThat(firstName.text, Eventually(Equals("Myfirstname")))
 
-        #click OK button
+        # click OK button
         OKButton = self.main_view.get_add_profile_OKbutton()
         self.assertThat(OKButton.buttonText, Eventually(Equals("OK")))
         self.pointing_device.click_object(OKButton)
         sudokuAddProfileDialog.wait_until_destroyed()
 
         #******** check manage profiles ********
-        #select manage profile
+        # select manage profile
         x, y, _, _ = self.main_view.globalRect
         line_x = x + self.main_view.width * 0.50
         start_y = y + self.main_view.height * 0.75
@@ -327,19 +352,20 @@ class TestMainWindow(SudokuTestCase):
         manageProfile = self.main_view.get_manage_profiles()
         self.pointing_device.click_object(manageProfile)
 
-        #click on the new profile just added
-        myProfile = self.main_view.wait_select_single("Standard", text="Myfirstname Mylastname")
-        print(myProfile.text)
+        # click on the new profile just added
+        myProfile = self.main_view.wait_select_single(
+            "Standard",
+            text="Myfirstname Mylastname")
         self.assertThat(myProfile.text,
                         Eventually(Equals("Myfirstname Mylastname")))
         self.pointing_device.click_object(myProfile)
 
-        #click on delete
+        # click on delete
         deleteButton = self.main_view.get_edit_profile_delete_button()
         self.assertThat(deleteButton.buttonText, Eventually(Equals("Delete")))
         self.pointing_device.click_object(deleteButton)
 
-        #check and make sure the profile is gone
+        # check and make sure the profile is gone
 
     def _wait_to_stop_moving(self):
         self.main_view.select_single(
@@ -347,24 +373,27 @@ class TestMainWindow(SudokuTestCase):
             objectName='settingsContainer').moving.wait_for(False)
 
     def _set_difficulty(self, selection, label):
-        #open settings tab
+        # open settings tab
         self.main_view.switch_to_tab("settingsTab")
 
-        #set the difficulty of the game
+        # set the difficulty of the game
         difficulty = self.main_view.get_difficulty_selector()
 
-        #select Easy
+        # select Easy
         difficulty.select_option('Label', text=label)
-        self.assertThat(difficulty.get_current_label().text, Eventually(Equals(label)))
+        self.assertThat(
+            difficulty.get_current_label().text,
+            Eventually(
+                Equals(label)))
 
     def _verify_game_start(self, askmode=False, button=None):
-        #check the game starts properly (according to difficulty)
+        # check the game starts properly (according to difficulty)
         self.main_view.switch_to_tab("MainTab")
-        toolbar = self.main_view.open_toolbar()
-        toolbar.click_button("newgamebutton")
+        header = self.main_view.get_header()
+        header.click_action_button('newgamebutton')
 
-        #if we're in ask mode, make sure we can grab all the buttons
-        #and click the proper button
+        # if we're in ask mode, make sure we can grab all the buttons
+        # and click the proper button
         if askmode:
             self.assertThat(
                 self.main_view.get_new_game_easy_button().buttonText,
@@ -389,10 +418,9 @@ class TestMainWindow(SudokuTestCase):
         self.assertThat(number_of_hints, Eventually(Equals(0)))
         self.assertThat(number_of_actions, Eventually(Equals(0)))
 
-        #verify clock is moving
+        # verify clock is moving
         game_seconds = self.main_view.select_single(
             objectName="blockgrid").gameSeconds
         self.assertThat(
             self.main_view.select_single(objectName="blockgrid").gameSeconds,
             Eventually(NotEquals(game_seconds)))
-        self.main_view.close_toolbar()

@@ -14,8 +14,8 @@ import ubuntuuitoolkit._custom_proxy_objects
 class MainView(toolkit_emulators.MainView):
 
     def get_blank_inputs(self):
-        #generate a list of blank input fields from the game board
-        #SudokuBlocksGrid->..->SudokuButton->QQuickTest->enabled == true
+        # generate a list of blank input fields from the game board
+        # SudokuBlocksGrid->..->SudokuButton->QQuickTest->enabled == true
         inputs = self.select_single("SudokuBlocksGrid")
         blankInputsList = inputs.select_many("QQuickText", enabled=True)
         return blankInputsList
@@ -23,7 +23,7 @@ class MainView(toolkit_emulators.MainView):
     def get_dialog_button(self, name):
         numberdialog = self.get_number_dialog()
 
-        #SudokuDialogButton->QQuickText text =
+        # SudokuDialogButton->QQuickText text =
         button = numberdialog.wait_select_single("QQuickText", text=name)
         return button
 
@@ -33,7 +33,7 @@ class MainView(toolkit_emulators.MainView):
     def get_hints_switch(self):
         return self.select_single("CheckBox", objectName="hintsSwitch")
 
-    #clicking on this works instead on  the previous one (get_hints_switch)
+    # clicking on this works instead on  the previous one (get_hints_switch)
     #  it doesn't(but the previous has the clicked property so I am using both
     def get_hints_switchClickable(self):
         return self.select_single("Standard",
@@ -41,11 +41,15 @@ class MainView(toolkit_emulators.MainView):
 
     def get_difficulty_selector(self):
         return self.wait_select_single(ubuntuuitoolkit.OptionSelector,
-                                          objectName="difficultySelector")
+                                       objectName="difficultySelector")
 
     def get_theme_selector(self):
         return self.wait_select_single(ubuntuuitoolkit.OptionSelector,
-                                          objectName="themeSelector")
+                                       objectName="themeSelector")
+
+    def get_hint_toolbar_button(self):
+        return self.wait_select_single(ubuntuuitoolkit.ToolbarButton,
+                                       objectName="hintbutton")
 
     def get_current_profile(self):
         return self.select_single("SingleValue", objectName="Current profile")
@@ -72,10 +76,12 @@ class MainView(toolkit_emulators.MainView):
         return self.select_single("SudokuDialogButton", objectName="OKbutton")
 
     def get_manage_profiles(self):
-        return self.wait_select_single("SingleValue", objectName="Manage profiles")
+        return self.wait_select_single(
+            "SingleValue", objectName="Manage profiles")
 
     def firstname_Mylastname_profile(self):
-        return self.wait_select_single("Standard", text="Myfirstname Mylastname")
+        return self.wait_select_single(
+            "Standard", text="Myfirstname Mylastname")
 
     def get_edit_profile_dialog(self):
         return self.select_single("Dialog", objectName="Edit profile")

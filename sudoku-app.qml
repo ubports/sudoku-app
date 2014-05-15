@@ -7,7 +7,7 @@ import Ubuntu.Layouts 0.1
 import "js/localStorage.js" as Settings
 import "components"
 //import Ubuntu.HUD 1.0 as HUD
-import Ubuntu.Unity.Action 1.0 as UnityActions
+import Ubuntu.Unity.Action 1.1 as UnityActions
 import UserMetrics 0.1
 
 MainView {
@@ -42,6 +42,8 @@ MainView {
         HUD.Context {*/
 
     StateSaver.properties: "width, height"
+
+    useDeprecatedToolbar: false
 
     actions: [
         Action {
@@ -728,8 +730,8 @@ MainView {
                 tools: ToolbarItems {
                     opened: true
                     ToolbarButton {
-                        objectName: "newgamebutton"
                         action: Action {
+                            objectName: "newgamebutton"
                             text: i18n.tr("New game");
                             iconSource: Qt.resolvedUrl("icons/new_game_ubuntu.svg")
                             onTriggered: {
@@ -743,9 +745,9 @@ MainView {
                             }
                         }
                     }
-                    ToolbarButton {
-                        objectName: "hintbutton"
+                    ToolbarButton {                        
                         action: Action {
+                            objectName: "hintbutton"
                             id: revealHintAction
                             iconSource: Qt.resolvedUrl("icons/hint.svg")
                             text: i18n.tr("Show hint");
