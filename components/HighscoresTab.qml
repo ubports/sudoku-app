@@ -15,8 +15,8 @@ Tab {
     page: Page {
         tools: ToolbarItems {
             ToolbarButton {
-                objectName: "allusersbutton"
                 action: Action {
+                    objectName: "allusersbutton"
                     text: "All\nusers"
                     iconSource: Qt.resolvedUrl("../icons/all-users.svg")
                     onTriggered: {
@@ -37,9 +37,9 @@ Tab {
                 }
             }
             ToolbarButton {
-                objectName: "currentuserbutton"
                 action: Action {
                     text: "Current\nuser"
+                    objectName: "currentuserbutton"
                     iconSource: Qt.resolvedUrl("../icons/single-user.svg")
                     onTriggered: {
                         var firstName = Settings.getUserFirstName(currentUserId);
