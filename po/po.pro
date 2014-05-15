@@ -6,7 +6,7 @@ PROJECTNAME = $$replace(PROJECTNAME,.qmlproject,)
 DESKTOPFILE = ../$${PROJECTNAME}.desktop
 
 SOURCECODE = ../*.qml \
-             ../*.js
+             ../js/*.js
 
 BUILDDIR = ../.build
 DESKTOPFILETEMP = $${BUILDDIR}/$${PROJECTNAME}.desktop.js
