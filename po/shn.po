@@ -7,107 +7,205 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-06-17 11:14+0200\n"
+"POT-Creation-Date: 2014-05-15 10:45+0200\n"
 "PO-Revision-Date: 2013-10-01 09:52+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Shan <shn@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-16 07:09+0000\n"
-"X-Generator: Launchpad (build 16976)\n"
+"X-Launchpad-Export-Date: 2014-05-16 06:46+0000\n"
+"X-Generator: Launchpad (build 17007)\n"
 
-#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:254
-msgid "Please pick a number"
+#: ../sudoku-app.qml:24 ../sudoku-app.qml:151 ../sudoku-app.qml:203
+#: ../sudoku-app.qml:234
+msgid "<b>Best scores for all players</b>"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:262
-msgid "Clear"
-msgstr ""
-
-#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:457
-msgid "Not allowed"
-msgstr ""
-
-#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:481
-msgid "Start blocks"
-msgstr ""
-
-#: /home/dinko/UbuntuTouch/sudoku-app/SudokuBlocksGrid.qml:503
-msgid "Hinted blocks"
-msgstr ""
-
-#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:96
-msgid "Sudoku"
-msgstr ""
-
-#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:148
-#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:196
-msgid "You are a cheat..."
-msgstr ""
-
-#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:148
-msgid "Congratulations!"
-msgstr ""
-
-#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:159
+#: ../sudoku-app.qml:48 ../sudoku-app.qml:49 ../sudoku-app.qml:733
 msgid "New game"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:189
-msgid "Show hint"
+#: ../sudoku-app.qml:56 ../sudoku-app.qml:57
+msgid "Reveal hint"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:203
-#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:237
-#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:357
-msgid "Close"
+#: ../sudoku-app.qml:65 ../sudoku-app.qml:66
+msgid "Show settings"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:231
-msgid "Settings"
+#: ../sudoku-app.qml:73 ../sudoku-app.qml:74
+msgid "Change difficulty to Easy"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:250
-msgid "SudokuTouch settings"
+#: ../sudoku-app.qml:86 ../sudoku-app.qml:87
+msgid "Change difficulty to Moderate"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:257
-msgid "Difficulty"
+#: ../sudoku-app.qml:99 ../sudoku-app.qml:100
+msgid "Change difficulty to Hard"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
+#: ../sudoku-app.qml:112 ../sudoku-app.qml:113
+msgid "Change difficulty to Ultra Hard"
+msgstr ""
+
+#: ../sudoku-app.qml:125 ../sudoku-app.qml:126
+msgid "Change theme to Simple"
+msgstr ""
+
+#: ../sudoku-app.qml:135 ../sudoku-app.qml:136
+msgid "Change theme to UbuntuColors"
+msgstr ""
+
+#: ../sudoku-app.qml:145 ../sudoku-app.qml:146
+msgid "Show scores for all users"
+msgstr ""
+
+#: ../sudoku-app.qml:165 ../sudoku-app.qml:166
+msgid "Show scores for current user"
+msgstr ""
+
+#: ../sudoku-app.qml:172
+msgid "<b>Best scores for "
+msgstr ""
+
+#: ../sudoku-app.qml:224
+msgid ""
+"You are a cheat... \n"
+"But we give you\n"
+msgstr ""
+
+#: ../sudoku-app.qml:226
+msgid "points."
+msgstr ""
+
+#: ../sudoku-app.qml:323
+msgid "Sudoku games played today"
+msgstr ""
+
+#: ../sudoku-app.qml:324
+msgid "No Sudoku games played today"
+msgstr ""
+
+#: ../sudoku-app.qml:336
+msgid "OK"
+msgstr ""
+
+#: ../sudoku-app.qml:352
+msgid "New Game"
+msgstr ""
+
+#: ../sudoku-app.qml:353
+msgid "Select difficulty level"
+msgstr ""
+
+#: ../sudoku-app.qml:417 ../sudoku-app.qml:1035
 msgid "Easy"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
+#: ../sudoku-app.qml:436 ../sudoku-app.qml:1035
 msgid "Moderate"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
+#: ../sudoku-app.qml:453 ../sudoku-app.qml:1035
 msgid "Hard"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:258
+#: ../sudoku-app.qml:470
+msgid ""
+"Ultra\n"
+"Hard"
+msgstr ""
+
+#: ../sudoku-app.qml:488 ../sudoku-app.qml:938 ../sudoku-app.qml:988
+msgid "Cancel"
+msgstr ""
+
+#: ../sudoku-app.qml:662 ../.build/sudoku-app.desktop.js:1
+msgid "Sudoku"
+msgstr ""
+
+#: ../sudoku-app.qml:717
+msgid "You are a cheat..."
+msgstr ""
+
+#: ../sudoku-app.qml:717
+msgid "Congratulations!"
+msgstr ""
+
+#: ../sudoku-app.qml:751
+msgid "Show hint"
+msgstr ""
+
+#: ../sudoku-app.qml:814
+msgid "Not allowed"
+msgstr ""
+
+#: ../sudoku-app.qml:834
+msgid "Start blocks"
+msgstr ""
+
+#: ../sudoku-app.qml:855
+msgid "Hinted blocks"
+msgstr ""
+
+#: ../sudoku-app.qml:878
+msgid "Scores"
+msgstr ""
+
+#: ../sudoku-app.qml:887
+msgid "Settings"
+msgstr ""
+
+#: ../sudoku-app.qml:906 ../sudoku-app.qml:956
+msgid "Select profile"
+msgstr ""
+
+#: ../sudoku-app.qml:1028
+msgid "<b>Sudoku settings</b>"
+msgstr ""
+
+#: ../sudoku-app.qml:1034
+msgid "Default Difficulty"
+msgstr ""
+
+#: ../sudoku-app.qml:1035
 msgid "Ultra Hard"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:294
+#: ../sudoku-app.qml:1035
+msgid "Always ask"
+msgstr ""
+
+#: ../sudoku-app.qml:1073
 msgid "Theme"
 msgstr ""
 
-#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:351
+#: ../sudoku-app.qml:1097
+msgid "Hints"
+msgstr ""
+
+#: ../sudoku-app.qml:1113
+msgid "Vibration Alerts"
+msgstr ""
+
+#: ../sudoku-app.qml:1128
+msgid "<b>Profiles settings</b>"
+msgstr ""
+
+#: ../sudoku-app.qml:1136
+msgid "None"
+msgstr ""
+
+#: ../sudoku-app.qml:1169
+msgid "Add profile"
+msgstr ""
+
+#: ../sudoku-app.qml:1178
+msgid "Manage profiles"
+msgstr ""
+
+#: ../sudoku-app.qml:1210
 msgid "About"
-msgstr ""
-
-#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:383
-msgid "Author: "
-msgstr ""
-
-#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:393
-msgid "Contact: "
-msgstr ""
-
-#: /home/dinko/UbuntuTouch/sudoku-app/sudoku-app.qml:414
-msgid "Version: "
 msgstr ""
