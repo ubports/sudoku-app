@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: sudokutouchgame\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-05-15 10:45+0200\n"
-"PO-Revision-Date: 2013-07-12 08:54+0000\n"
+"PO-Revision-Date: 2014-05-16 08:48+0000\n"
 "Last-Translator: Yaron <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-16 06:46+0000\n"
+"X-Launchpad-Export-Date: 2014-05-17 07:12+0000\n"
 "X-Generator: Launchpad (build 17007)\n"
 
 #: ../sudoku-app.qml:24 ../sudoku-app.qml:151 ../sudoku-app.qml:203
 #: ../sudoku-app.qml:234
 msgid "<b>Best scores for all players</b>"
-msgstr ""
+msgstr "<b>הניקוד המוביל לכל השחקנים</b>"
 
 #: ../sudoku-app.qml:48 ../sudoku-app.qml:49 ../sudoku-app.qml:733
 msgid "New game"
@@ -28,77 +28,79 @@ msgstr "משחק חדש"
 
 #: ../sudoku-app.qml:56 ../sudoku-app.qml:57
 msgid "Reveal hint"
-msgstr ""
+msgstr "לחשוף רמז"
 
 #: ../sudoku-app.qml:65 ../sudoku-app.qml:66
 msgid "Show settings"
-msgstr ""
+msgstr "הצגת ההגדרות"
 
 #: ../sudoku-app.qml:73 ../sudoku-app.qml:74
 msgid "Change difficulty to Easy"
-msgstr ""
+msgstr "החלפת הקושי לקל"
 
 #: ../sudoku-app.qml:86 ../sudoku-app.qml:87
 msgid "Change difficulty to Moderate"
-msgstr ""
+msgstr "החלפת הקושי לבינוני"
 
 #: ../sudoku-app.qml:99 ../sudoku-app.qml:100
 msgid "Change difficulty to Hard"
-msgstr ""
+msgstr "החלפת הקושי לקשה"
 
 #: ../sudoku-app.qml:112 ../sudoku-app.qml:113
 msgid "Change difficulty to Ultra Hard"
-msgstr ""
+msgstr "החלפת הקושי לקשה מאוד"
 
 #: ../sudoku-app.qml:125 ../sudoku-app.qml:126
 msgid "Change theme to Simple"
-msgstr ""
+msgstr "החלפת ערכת העיצוב לפשוטה"
 
 #: ../sudoku-app.qml:135 ../sudoku-app.qml:136
 msgid "Change theme to UbuntuColors"
-msgstr ""
+msgstr "החלפת ערכת העיצוב לצבעי אובונטו"
 
 #: ../sudoku-app.qml:145 ../sudoku-app.qml:146
 msgid "Show scores for all users"
-msgstr ""
+msgstr "הצגת הניקוד לכל המשתמשים"
 
 #: ../sudoku-app.qml:165 ../sudoku-app.qml:166
 msgid "Show scores for current user"
-msgstr ""
+msgstr "הצגת הניקוד למשתמש הנוכחי"
 
 #: ../sudoku-app.qml:172
 msgid "<b>Best scores for "
-msgstr ""
+msgstr "<b>הניקוד המוביל עבור "
 
 #: ../sudoku-app.qml:224
 msgid ""
 "You are a cheat... \n"
 "But we give you\n"
 msgstr ""
+"איזו רמאות… \n"
+"אבל אנחנו נותנים לך\n"
 
 #: ../sudoku-app.qml:226
 msgid "points."
-msgstr ""
+msgstr "נקודות."
 
 #: ../sudoku-app.qml:323
 msgid "Sudoku games played today"
-msgstr ""
+msgstr "משחקי סודוקו ששיחקת היום"
 
 #: ../sudoku-app.qml:324
 msgid "No Sudoku games played today"
-msgstr ""
+msgstr "לא שיחקת עדיין בסודוקו היום"
 
 #: ../sudoku-app.qml:336
 msgid "OK"
-msgstr ""
+msgstr "אישור"
 
 #: ../sudoku-app.qml:352
 msgid "New Game"
-msgstr ""
+msgstr "משחק חדש"
 
 #: ../sudoku-app.qml:353
 msgid "Select difficulty level"
-msgstr ""
+msgstr "בחירת רמת הקושי"
 
 #: ../sudoku-app.qml:417 ../sudoku-app.qml:1035
 msgid "Easy"
@@ -117,10 +119,12 @@ msgid ""
 "Ultra\n"
 "Hard"
 msgstr ""
+"קשה\n"
+"מאוד"
 
 #: ../sudoku-app.qml:488 ../sudoku-app.qml:938 ../sudoku-app.qml:988
 msgid "Cancel"
-msgstr ""
+msgstr "ביטול"
 
 #: ../sudoku-app.qml:662 ../.build/sudoku-app.desktop.js:1
 msgid "Sudoku"
@@ -152,7 +156,7 @@ msgstr "לבני רמז"
 
 #: ../sudoku-app.qml:878
 msgid "Scores"
-msgstr ""
+msgstr "ניקוד"
 
 #: ../sudoku-app.qml:887
 msgid "Settings"
@@ -160,15 +164,15 @@ msgstr "הגדרות"
 
 #: ../sudoku-app.qml:906 ../sudoku-app.qml:956
 msgid "Select profile"
-msgstr ""
+msgstr "בחירת פרופיל"
 
 #: ../sudoku-app.qml:1028
 msgid "<b>Sudoku settings</b>"
-msgstr ""
+msgstr "<b>הגדרות סודוקו</b>"
 
 #: ../sudoku-app.qml:1034
 msgid "Default Difficulty"
-msgstr ""
+msgstr "רמת קושי בררת המחדל"
 
 #: ../sudoku-app.qml:1035
 msgid "Ultra Hard"
@@ -176,7 +180,7 @@ msgstr "קשה בטירוף"
 
 #: ../sudoku-app.qml:1035
 msgid "Always ask"
-msgstr ""
+msgstr "לשאול תמיד"
 
 #: ../sudoku-app.qml:1073
 msgid "Theme"
@@ -184,19 +188,19 @@ msgstr "ערכת נושא"
 
 #: ../sudoku-app.qml:1097
 msgid "Hints"
-msgstr ""
+msgstr "רמזים"
 
 #: ../sudoku-app.qml:1113
 msgid "Vibration Alerts"
-msgstr ""
+msgstr "התראות ברטט"
 
 #: ../sudoku-app.qml:1128
 msgid "<b>Profiles settings</b>"
-msgstr ""
+msgstr "<b>הגדרות פרופיל</b>"
 
 #: ../sudoku-app.qml:1136
 msgid "None"
-msgstr ""
+msgstr "ללא"
 
 #: ../sudoku-app.qml:1169
 msgid "Add profile"

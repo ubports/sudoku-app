@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: sudokutouchgame\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-05-15 10:45+0200\n"
-"PO-Revision-Date: 2014-05-06 12:54+0000\n"
-"Last-Translator: tuxtoriel <Unknown>\n"
+"PO-Revision-Date: 2014-05-16 19:37+0000\n"
+"Last-Translator: Jean Marc <m.balthazar@orange.fr>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-16 06:46+0000\n"
+"X-Launchpad-Export-Date: 2014-05-17 07:12+0000\n"
 "X-Generator: Launchpad (build 17007)\n"
 
 #: ../sudoku-app.qml:24 ../sudoku-app.qml:151 ../sudoku-app.qml:203
 #: ../sudoku-app.qml:234
 msgid "<b>Best scores for all players</b>"
-msgstr ""
+msgstr "<b>Meilleurs scores de tous les joueurs</b>"
 
 #: ../sudoku-app.qml:48 ../sudoku-app.qml:49 ../sudoku-app.qml:733
 msgid "New game"
@@ -28,77 +28,79 @@ msgstr "Nouvelle partie"
 
 #: ../sudoku-app.qml:56 ../sudoku-app.qml:57
 msgid "Reveal hint"
-msgstr ""
+msgstr "Donner un indice"
 
 #: ../sudoku-app.qml:65 ../sudoku-app.qml:66
 msgid "Show settings"
-msgstr ""
+msgstr "Afficher les paramètres"
 
 #: ../sudoku-app.qml:73 ../sudoku-app.qml:74
 msgid "Change difficulty to Easy"
-msgstr ""
+msgstr "Changer la difficulté vers Facile"
 
 #: ../sudoku-app.qml:86 ../sudoku-app.qml:87
 msgid "Change difficulty to Moderate"
-msgstr ""
+msgstr "Changer la difficulté vers Moyen"
 
 #: ../sudoku-app.qml:99 ../sudoku-app.qml:100
 msgid "Change difficulty to Hard"
-msgstr ""
+msgstr "Changer la difficulté vers Difficile"
 
 #: ../sudoku-app.qml:112 ../sudoku-app.qml:113
 msgid "Change difficulty to Ultra Hard"
-msgstr ""
+msgstr "Changer la difficulté vers Très Difficile"
 
 #: ../sudoku-app.qml:125 ../sudoku-app.qml:126
 msgid "Change theme to Simple"
-msgstr ""
+msgstr "Utiliser le thème Simple"
 
 #: ../sudoku-app.qml:135 ../sudoku-app.qml:136
 msgid "Change theme to UbuntuColors"
-msgstr ""
+msgstr "Utiliser le thème UbuntuColors"
 
 #: ../sudoku-app.qml:145 ../sudoku-app.qml:146
 msgid "Show scores for all users"
-msgstr ""
+msgstr "Montrer les scores de tous les utilisateurs"
 
 #: ../sudoku-app.qml:165 ../sudoku-app.qml:166
 msgid "Show scores for current user"
-msgstr ""
+msgstr "Montrer les scores de l'utilisateur actuel"
 
 #: ../sudoku-app.qml:172
 msgid "<b>Best scores for "
-msgstr ""
+msgstr "<b>Meilleurs scores pour "
 
 #: ../sudoku-app.qml:224
 msgid ""
 "You are a cheat... \n"
 "But we give you\n"
 msgstr ""
+"Vous êtes un tricheur...\n"
+"Mais nous vous donnons\n"
 
 #: ../sudoku-app.qml:226
 msgid "points."
-msgstr ""
+msgstr "points."
 
 #: ../sudoku-app.qml:323
 msgid "Sudoku games played today"
-msgstr ""
+msgstr "Parties de Sudoku disputées aujourd'hui"
 
 #: ../sudoku-app.qml:324
 msgid "No Sudoku games played today"
-msgstr ""
+msgstr "Aucune partie de Sudoku disputée aujourd'hui"
 
 #: ../sudoku-app.qml:336
 msgid "OK"
-msgstr ""
+msgstr "Valider"
 
 #: ../sudoku-app.qml:352
 msgid "New Game"
-msgstr ""
+msgstr "Nouvelle partie"
 
 #: ../sudoku-app.qml:353
 msgid "Select difficulty level"
-msgstr ""
+msgstr "Sélectionnez le niveau de difficulté"
 
 #: ../sudoku-app.qml:417 ../sudoku-app.qml:1035
 msgid "Easy"
@@ -117,10 +119,12 @@ msgid ""
 "Ultra\n"
 "Hard"
 msgstr ""
+"Très\n"
+"Difficile"
 
 #: ../sudoku-app.qml:488 ../sudoku-app.qml:938 ../sudoku-app.qml:988
 msgid "Cancel"
-msgstr ""
+msgstr "Annuler"
 
 #: ../sudoku-app.qml:662 ../.build/sudoku-app.desktop.js:1
 msgid "Sudoku"
@@ -152,7 +156,7 @@ msgstr "Cases à indice"
 
 #: ../sudoku-app.qml:878
 msgid "Scores"
-msgstr ""
+msgstr "Scores"
 
 #: ../sudoku-app.qml:887
 msgid "Settings"
@@ -160,15 +164,15 @@ msgstr "Paramètres"
 
 #: ../sudoku-app.qml:906 ../sudoku-app.qml:956
 msgid "Select profile"
-msgstr ""
+msgstr "Sélectionnez un profil"
 
 #: ../sudoku-app.qml:1028
 msgid "<b>Sudoku settings</b>"
-msgstr ""
+msgstr "<b>Paramètres du Sudoku</b>"
 
 #: ../sudoku-app.qml:1034
 msgid "Default Difficulty"
-msgstr ""
+msgstr "Difficulté par défaut"
 
 #: ../sudoku-app.qml:1035
 msgid "Ultra Hard"
@@ -176,7 +180,7 @@ msgstr "Très difficile"
 
 #: ../sudoku-app.qml:1035
 msgid "Always ask"
-msgstr ""
+msgstr "Toujours demander"
 
 #: ../sudoku-app.qml:1073
 msgid "Theme"
@@ -184,27 +188,27 @@ msgstr "Thème"
 
 #: ../sudoku-app.qml:1097
 msgid "Hints"
-msgstr ""
+msgstr "Indices"
 
 #: ../sudoku-app.qml:1113
 msgid "Vibration Alerts"
-msgstr ""
+msgstr "Alertes par vibrations"
 
 #: ../sudoku-app.qml:1128
 msgid "<b>Profiles settings</b>"
-msgstr ""
+msgstr "<b>Paramètres des profils</b>"
 
 #: ../sudoku-app.qml:1136
 msgid "None"
-msgstr ""
+msgstr "Aucun"
 
 #: ../sudoku-app.qml:1169
 msgid "Add profile"
-msgstr ""
+msgstr "Ajouter un profil"
 
 #: ../sudoku-app.qml:1178
 msgid "Manage profiles"
-msgstr ""
+msgstr "Gérer les profils"
 
 #: ../sudoku-app.qml:1210
 msgid "About"
