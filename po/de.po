@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: sudokutouchgame\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-05-15 10:45+0200\n"
-"PO-Revision-Date: 2013-09-29 17:45+0000\n"
-"Last-Translator: Moritz Gehlhaar <moritz.gehlhaar@posteo.de>\n"
+"PO-Revision-Date: 2014-05-20 13:21+0000\n"
+"Last-Translator: Phillip Sz <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-16 06:46+0000\n"
-"X-Generator: Launchpad (build 17007)\n"
+"X-Launchpad-Export-Date: 2014-05-22 06:46+0000\n"
+"X-Generator: Launchpad (build 17017)\n"
 
 #: ../sudoku-app.qml:24 ../sudoku-app.qml:151 ../sudoku-app.qml:203
 #: ../sudoku-app.qml:234
@@ -32,7 +32,7 @@ msgstr ""
 
 #: ../sudoku-app.qml:65 ../sudoku-app.qml:66
 msgid "Show settings"
-msgstr ""
+msgstr "Einstellungen anzeigen"
 
 #: ../sudoku-app.qml:73 ../sudoku-app.qml:74
 msgid "Change difficulty to Easy"

@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-05-15 10:45+0200\n"
-"PO-Revision-Date: 2014-05-18 23:27+0000\n"
+"PO-Revision-Date: 2014-05-20 14:18+0000\n"
 "Last-Translator: Sambit <sambit.mishra.me@gmail.com>\n"
 "Language-Team: Hindi <hi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-19 06:22+0000\n"
-"X-Generator: Launchpad (build 17007)\n"
+"X-Launchpad-Export-Date: 2014-05-22 06:46+0000\n"
+"X-Generator: Launchpad (build 17017)\n"
 
 #: ../sudoku-app.qml:24 ../sudoku-app.qml:151 ../sudoku-app.qml:203
 #: ../sudoku-app.qml:234
@@ -48,7 +48,7 @@ msgstr ""
 
 #: ../sudoku-app.qml:112 ../sudoku-app.qml:113
 msgid "Change difficulty to Ultra Hard"
-msgstr ""
+msgstr "कठिनता को अति कठिन में बदलें"
 
 #: ../sudoku-app.qml:125 ../sudoku-app.qml:126
 msgid "Change theme to Simple"
