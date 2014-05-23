@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: sudokutouchgame\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-05-15 10:45+0200\n"
-"PO-Revision-Date: 2013-09-28 09:33+0000\n"
-"Last-Translator: Paco Molinero <paco@byasl.com>\n"
+"PO-Revision-Date: 2014-05-22 13:20+0000\n"
+"Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-16 06:46+0000\n"
-"X-Generator: Launchpad (build 17007)\n"
+"X-Launchpad-Export-Date: 2014-05-23 09:09+0000\n"
+"X-Generator: Launchpad (build 17017)\n"
 
 #: ../sudoku-app.qml:24 ../sudoku-app.qml:151 ../sudoku-app.qml:203
 #: ../sudoku-app.qml:234
@@ -68,7 +68,7 @@ msgstr ""
 
 #: ../sudoku-app.qml:172
 msgid "<b>Best scores for "
-msgstr ""
+msgstr "<b>Mejores puntuaciones para "
 
 #: ../sudoku-app.qml:224
 msgid ""
@@ -78,7 +78,7 @@ msgstr ""
 
 #: ../sudoku-app.qml:226
 msgid "points."
-msgstr ""
+msgstr "puntos."
 
 #: ../sudoku-app.qml:323
 msgid "Sudoku games played today"
@@ -90,11 +90,11 @@ msgstr ""
 
 #: ../sudoku-app.qml:336
 msgid "OK"
-msgstr ""
+msgstr "Aceptar"
 
 #: ../sudoku-app.qml:352
 msgid "New Game"
-msgstr ""
+msgstr "Partida nueva"
 
 #: ../sudoku-app.qml:353
 msgid "Select difficulty level"
@@ -117,10 +117,12 @@ msgid ""
 "Ultra\n"
 "Hard"
 msgstr ""
+"Ultra-\n"
+"difícil"
 
 #: ../sudoku-app.qml:488 ../sudoku-app.qml:938 ../sudoku-app.qml:988
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: ../sudoku-app.qml:662 ../.build/sudoku-app.desktop.js:1
 msgid "Sudoku"
@@ -152,7 +154,7 @@ msgstr "Bloques sugeridos"
 
 #: ../sudoku-app.qml:878
 msgid "Scores"
-msgstr ""
+msgstr "Puntuaciones"
 
 #: ../sudoku-app.qml:887
 msgid "Settings"
@@ -176,7 +178,7 @@ msgstr "Súper difícil"
 
 #: ../sudoku-app.qml:1035
 msgid "Always ask"
-msgstr ""
+msgstr "Preguntar siempre"
 
 #: ../sudoku-app.qml:1073
 msgid "Theme"
@@ -184,11 +186,11 @@ msgstr "Tema"
 
 #: ../sudoku-app.qml:1097
 msgid "Hints"
-msgstr ""
+msgstr "Pistas"
 
 #: ../sudoku-app.qml:1113
 msgid "Vibration Alerts"
-msgstr ""
+msgstr "Alertas vibratorias"
 
 #: ../sudoku-app.qml:1128
 msgid "<b>Profiles settings</b>"
@@ -196,15 +198,15 @@ msgstr ""
 
 #: ../sudoku-app.qml:1136
 msgid "None"
-msgstr ""
+msgstr "Ninguna"
 
 #: ../sudoku-app.qml:1169
 msgid "Add profile"
-msgstr ""
+msgstr "Añadir perfil"
 
 #: ../sudoku-app.qml:1178
 msgid "Manage profiles"
-msgstr ""
+msgstr "Gestionar perfiles"
 
 #: ../sudoku-app.qml:1210
 msgid "About"
