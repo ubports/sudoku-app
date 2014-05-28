@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-05-15 10:45+0200\n"
-"PO-Revision-Date: 2014-05-22 12:46+0000\n"
-"Last-Translator: Anthony Wong <anthony.wong@ubuntu.com>\n"
+"PO-Revision-Date: 2014-05-27 16:22+0000\n"
+"Last-Translator: Alex Chen <alex.szchen@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-23 09:09+0000\n"
+"X-Launchpad-Export-Date: 2014-05-28 05:52+0000\n"
 "X-Generator: Launchpad (build 17017)\n"
 
 #: ../sudoku-app.qml:24 ../sudoku-app.qml:151 ../sudoku-app.qml:203
@@ -86,7 +86,7 @@ msgstr ""
 
 #: ../sudoku-app.qml:324
 msgid "No Sudoku games played today"
-msgstr ""
+msgstr "今天没玩数独游戏"
 
 #: ../sudoku-app.qml:336
 msgid "OK"
@@ -168,7 +168,7 @@ msgstr "<b>数独设置</b>"
 
 #: ../sudoku-app.qml:1034
 msgid "Default Difficulty"
-msgstr ""
+msgstr "默认难度"
 
 #: ../sudoku-app.qml:1035
 msgid "Ultra Hard"
@@ -188,7 +188,7 @@ msgstr "提示"
 
 #: ../sudoku-app.qml:1113
 msgid "Vibration Alerts"
-msgstr ""
+msgstr "震动提醒"
 
 #: ../sudoku-app.qml:1128
 msgid "<b>Profiles settings</b>"
