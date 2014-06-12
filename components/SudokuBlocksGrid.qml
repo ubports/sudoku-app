@@ -449,24 +449,20 @@ Column {
                                         gameFinishedRectangle.visible = true;
                                         //Settings.insertNewScore(currentUserId, sudokuBlocksGrid.calculateScore())
                                         mainView.insertNewGameScore(currentUserId, sudokuBlocksGrid.calculateScore())
+
                                         if (checkIfCheating)
                                         {
-                                            var _str = "points.";
-                                            if (sudokuBlocksGrid.calculateScore() == 1)
-                                                _str = "point."
-                                            gameFinishedText.text = i18n.tr("You are a cheat...\nBut we give you\n")
-                                                    + sudokuBlocksGrid.calculateScore()
-                                                    + " " + i18n.tr(_str)
+                                            gameFinishedText.text = i18n.tr("You are a cheat...\nBut we give you\n%1 point.",
+                                                                            "You are a cheat...\nBut we give you\n%1 points.",
+                                                                            sudokuBlocksGrid.calculateScore()).arg(sudokuBlocksGrid.calculateScore())
+
                                         }
                                         else
                                         {
-                                            var _str = "points.";
-                                            if (sudokuBlocksGrid.calculateScore() == 1)
-                                                _str = "point."
-                                            gameFinishedText.text = i18n.tr("Congratulations!\nWe give you\n")
-                                                    + sudokuBlocksGrid.calculateScore()
-                                                    + " " + i18n.tr(_str)
-                                        }
+                                            gameFinishedText.text = i18n.tr("Congratulations!\nWe give you\n%1 point.",
+                                                                            "Congratulations!\nWe give you\n%1 points.",
+                                                                            sudokuBlocksGrid.calculateScore()).arg(sudokuBlocksGrid.calculateScore())
+                                        }                                        
 
                                         //print (sudokuBlocksGrid.numberOfActions)
                                         //print (sudokuBlocksGrid.numberOfHints)

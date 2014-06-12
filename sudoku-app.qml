@@ -171,7 +171,8 @@ MainView {
                 var firstName = Settings.getUserFirstName(currentUserId);
                 var lastName = Settings.getUserLastName(currentUserId);
                 //print(firstName, lastName)
-                highscoresHeaderText = i18n.tr("<b>Best scores for ")+firstName + " " + lastName+"</b>"
+                // TRANSLATORS: %1 is user's first name and %2 is last name
+                highscoresHeaderText = "<b>" + i18n.tr("Best scores for %1 %2").arg(firstName).arg(lastName) + "</b>"
                 var allScores = Settings.getAllScoresForUser(currentUserId)
                 highscoresModel.clear();
                 for(var i = 0; i < allScores.length; i++) {
