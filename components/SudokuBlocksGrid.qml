@@ -446,22 +446,23 @@ Column {
                                     PopupUtils.close(dialogue)
 
                                     if ( checkIfGameFinished()) {
+                                        var _score = sudokuBlocksGrid.calculateScore();
                                         gameFinishedRectangle.visible = true;
                                         //Settings.insertNewScore(currentUserId, sudokuBlocksGrid.calculateScore())
-                                        mainView.insertNewGameScore(currentUserId, sudokuBlocksGrid.calculateScore())
+                                        mainView.insertNewGameScore(currentUserId, _score)
 
                                         if (checkIfCheating)
                                         {
                                             gameFinishedText.text = i18n.tr("You are a cheat...\nBut we give you\n%1 point.",
                                                                             "You are a cheat...\nBut we give you\n%1 points.",
-                                                                            sudokuBlocksGrid.calculateScore()).arg(sudokuBlocksGrid.calculateScore())
+                                                                            _score).arg(_score)
 
                                         }
                                         else
                                         {
                                             gameFinishedText.text = i18n.tr("Congratulations!\nWe give you\n%1 point.",
                                                                             "Congratulations!\nWe give you\n%1 points.",
-                                                                            sudokuBlocksGrid.calculateScore()).arg(sudokuBlocksGrid.calculateScore())
+                                                                            _score).arg(_score)
                                         }                                        
 
                                         //print (sudokuBlocksGrid.numberOfActions)
