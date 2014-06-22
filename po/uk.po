@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sudokutouchgame\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-05-16 15:01+0000\n"
+"PO-Revision-Date: 2014-06-21 14:00+0000\n"
 "Last-Translator: Yuri Chornoivan <yurchor@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2014-06-21 06:28+0000\n"
+"X-Launchpad-Export-Date: 2014-06-22 05:57+0000\n"
 "X-Generator: Launchpad (build 17058)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
@@ -28,19 +28,19 @@ msgstr "<b>Найкращі результати серед усіх гравц�
 #: components/HighscoresTab.qml:49 sudoku-app.qml:175
 #, qt-format
 msgid "Best scores for %1 %2"
-msgstr ""
+msgstr "Найкращі результати %1 %2"
 
 #: components/AddProfileDialog.qml:13
 msgid "Add new profile"
-msgstr ""
+msgstr "Додати новий профіль"
 
 #: components/AddProfileDialog.qml:31
 msgid "Lastname"
-msgstr ""
+msgstr "Прізвище"
 
 #: components/AddProfileDialog.qml:49
 msgid "Firstname"
-msgstr ""
+msgstr "Ім’я"
 
 #: components/AddProfileDialog.qml:66 components/ManageProfileDialog.qml:68
 #: sudoku-app.qml:339
@@ -50,15 +50,15 @@ msgstr "Гаразд"
 #: components/AddProfileDialog.qml:82 components/AddProfileDialog.qml:87
 #: components/ManageProfileDialog.qml:94
 msgid "Warning"
-msgstr ""
+msgstr "Попередження"
 
 #: components/AddProfileDialog.qml:82
 msgid "User already exist."
-msgstr ""
+msgstr "Запис користувача вже існує."
 
 #: components/AddProfileDialog.qml:87 components/ManageProfileDialog.qml:94
 msgid "Lastname and firstname must not be empty."
-msgstr ""
+msgstr "Прізвище і ім’я не можуть бути порожніми."
 
 #: components/AddProfileDialog.qml:98 components/ManageProfileDialog.qml:126
 #: sudoku-app.qml:491 sudoku-app.qml:941 sudoku-app.qml:991
@@ -68,23 +68,23 @@ msgstr "Скасувати"
 
 #: components/AboutTab.qml:101
 msgid "Author(s): "
-msgstr ""
+msgstr "Автори: "
 
 #: components/AboutTab.qml:111
 msgid "Contact: "
-msgstr ""
+msgstr "Контакт: "
 
 #: components/AboutTab.qml:137
 msgid "Version: "
-msgstr ""
+msgstr "Версія: "
 
 #: components/ManageProfileDialog.qml:13
 msgid "Edit profile"
-msgstr ""
+msgstr "Редагувати профіль"
 
 #: components/ManageProfileDialog.qml:107
 msgid "Delete"
-msgstr ""
+msgstr "Вилучити"
 
 #: sudoku-app.qml:50 sudoku-app.qml:51 sudoku-app.qml:736
 msgid "New game"
@@ -268,11 +268,11 @@ msgstr "Про програму"
 
 #: components/SudokuBlocksGrid.qml:327
 msgid "Please pick a number"
-msgstr ""
+msgstr "Виберіть число"
 
 #: components/SudokuBlocksGrid.qml:388
 msgid "Clear"
-msgstr ""
+msgstr "Спорожнити"
 
 #: components/SudokuBlocksGrid.qml:455
 #, qt-format
@@ -285,7 +285,17 @@ msgid_plural ""
 "But we give you\n"
 "%1 points."
 msgstr[0] ""
+"Вам підказували…\n"
+"Але вам нараховано\n"
+"%1 очко."
 msgstr[1] ""
+"Вам підказували…\n"
+"Але вам нараховано\n"
+"%1 очка."
+msgstr[2] ""
+"Вам підказували…\n"
+"Але вам нараховано\n"
+"%1 очок."
 
 #: components/SudokuBlocksGrid.qml:462
 #, qt-format
@@ -298,4 +308,14 @@ msgid_plural ""
 "We give you\n"
 "%1 points."
 msgstr[0] ""
+"Вітаємо!\n"
+"Вам нараховано\n"
+"%1 очко."
 msgstr[1] ""
+"Вітаємо!\n"
+"Вам нараховано\n"
+"%1 очка."
+msgstr[2] ""
+"Вітаємо!\n"
+"Вам нараховано\n"
+"%1 очок."
