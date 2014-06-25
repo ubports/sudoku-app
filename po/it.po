@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: sudokutouchgame\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-06-21 13:47+0000\n"
+"PO-Revision-Date: 2014-06-24 15:34+0000\n"
 "Last-Translator: Claudio Arseni <claudio.arseni@gmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-06-22 05:57+0000\n"
-"X-Generator: Launchpad (build 17058)\n"
+"X-Launchpad-Export-Date: 2014-06-25 06:09+0000\n"
+"X-Generator: Launchpad (build 17065)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
@@ -267,11 +267,11 @@ msgstr "Informazioni"
 
 #: components/SudokuBlocksGrid.qml:327
 msgid "Please pick a number"
-msgstr ""
+msgstr "Scegli un numero"
 
 #: components/SudokuBlocksGrid.qml:388
 msgid "Clear"
-msgstr ""
+msgstr "Pulisci"
 
 #: components/SudokuBlocksGrid.qml:455
 #, qt-format
@@ -284,7 +284,13 @@ msgid_plural ""
 "But we give you\n"
 "%1 points."
 msgstr[0] ""
+"Sei un imbroglione...\n"
+"ma hai guadagnato\n"
+"%1 punto."
 msgstr[1] ""
+"Sei un imbroglione...\n"
+"ma hai guadagnato\n"
+"%1 punti."
 
 #: components/SudokuBlocksGrid.qml:462
 #, qt-format
@@ -297,4 +303,10 @@ msgid_plural ""
 "We give you\n"
 "%1 points."
 msgstr[0] ""
+"Congratulazioni!\n"
+"Hai guadagnato\n"
+"%1 punto."
 msgstr[1] ""
+"Congratulazioni!\n"
+"Hai guadagnato\n"
+"%1 punti."
