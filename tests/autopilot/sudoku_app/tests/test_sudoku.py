@@ -212,7 +212,7 @@ class TestMainWindow(SudokuTestCase):
         # open settings tab
         self.main_view.switch_to_tab("settingsTab")
 
-        #******** check theme selector  ********
+        # ******** check theme selector  ********
         themeSelector = self.main_view.get_theme_selector()
 
         # select UbuntuColours option
@@ -240,7 +240,7 @@ class TestMainWindow(SudokuTestCase):
         # open settings tab
         self.main_view.switch_to_tab("settingsTab")
 
-        #******** check difficulty selector  ********
+        # ******** check difficulty selector  ********
         difficulty = self.main_view.get_difficulty_selector()
 
         # select Easy
@@ -282,7 +282,7 @@ class TestMainWindow(SudokuTestCase):
         # open settings tab
         self.main_view.switch_to_tab("settingsTab")
 
-        #******** check hint switch  ********
+        # ******** check hint switch  ********
         # select hints switch
         hintsSwitchClickable = self.main_view.get_hints_switchClickable()
         self.assertThat(hintsSwitchClickable.text, Eventually(Equals("Hints")))
@@ -296,7 +296,7 @@ class TestMainWindow(SudokuTestCase):
         # open settings tab
         self.main_view.switch_to_tab("settingsTab")
 
-        #******** check profile settings ********
+        # ******** check profile settings ********
         # select current profile
         currentProfile = self.main_view.get_current_profile()
         self.pointing_device.click_object(currentProfile)
@@ -339,7 +339,7 @@ class TestMainWindow(SudokuTestCase):
         self.pointing_device.click_object(OKButton)
         sudokuAddProfileDialog.wait_until_destroyed()
 
-        #******** check manage profiles ********
+        # ******** check manage profiles ********
         # select manage profile
         x, y, _, _ = self.main_view.globalRect
         line_x = x + self.main_view.width * 0.50
