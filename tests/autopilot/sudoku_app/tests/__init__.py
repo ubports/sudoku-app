@@ -44,7 +44,7 @@ class SudokuTestCase(AutopilotTestCase):
         self.pointing_device = Pointer(self.input_device_class.create())
         super(SudokuTestCase, self).setUp()
 
-        #backup and wipe db's before testing
+        # backup and wipe db's before testing
         self.temp_move_sqlite_db()
         self.addCleanup(self.restore_sqlite_db)
 
