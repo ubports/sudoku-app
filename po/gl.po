@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-06-21 11:09+0000\n"
+"PO-Revision-Date: 2014-07-05 18:20+0000\n"
 "Last-Translator: Marcos Lans <Unknown>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-06-22 05:57+0000\n"
-"X-Generator: Launchpad (build 17058)\n"
+"X-Launchpad-Export-Date: 2014-07-06 06:01+0000\n"
+"X-Generator: Launchpad (build 17086)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
@@ -67,7 +67,7 @@ msgstr "Cancelar"
 
 #: components/AboutTab.qml:101
 msgid "Author(s): "
-msgstr "Autor(s): "
+msgstr "Autor(es): "
 
 #: components/AboutTab.qml:111
 msgid "Contact: "
@@ -103,15 +103,15 @@ msgstr "Cambiar a Fácil"
 
 #: sudoku-app.qml:88 sudoku-app.qml:89
 msgid "Change difficulty to Moderate"
-msgstr "Cambiar a moderado"
+msgstr "Cambiar a Moderado"
 
 #: sudoku-app.qml:101 sudoku-app.qml:102
 msgid "Change difficulty to Hard"
-msgstr "Cambiar a Duro"
+msgstr "Cambiar a Difícil"
 
 #: sudoku-app.qml:114 sudoku-app.qml:115
 msgid "Change difficulty to Ultra Hard"
-msgstr "Cambiar a Super duro"
+msgstr "Cambiar a Super difícil"
 
 #: sudoku-app.qml:127 sudoku-app.qml:128
 msgid "Change theme to Simple"
@@ -175,7 +175,7 @@ msgid ""
 "Hard"
 msgstr ""
 "Super\n"
-"duro"
+"difícil"
 
 #: sudoku-app.qml:665
 msgid "Sudoku"
@@ -191,7 +191,7 @@ msgstr "Parabéns!"
 
 #: sudoku-app.qml:754
 msgid "Show hint"
-msgstr "Mostrar pista"
+msgstr "Mostrar suxestión"
 
 #: sudoku-app.qml:817
 msgid "Not allowed"
@@ -199,7 +199,7 @@ msgstr "Non permitido"
 
 #: sudoku-app.qml:837
 msgid "Start blocks"
-msgstr "Bloques iniciais"
+msgstr "Iniciar bloques"
 
 #: sudoku-app.qml:858
 msgid "Hinted blocks"
