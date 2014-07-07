@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2013-10-03 14:08+0000\n"
+"PO-Revision-Date: 2014-07-06 10:30+0000\n"
 "Last-Translator: ivarela <ivarela@ubuntu.com>\n"
 "Language-Team: Asturian <ast@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-06-21 06:28+0000\n"
-"X-Generator: Launchpad (build 17058)\n"
+"X-Launchpad-Export-Date: 2014-07-07 06:05+0000\n"
+"X-Generator: Launchpad (build 17086)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
@@ -31,7 +31,7 @@ msgstr ""
 
 #: components/AddProfileDialog.qml:13
 msgid "Add new profile"
-msgstr ""
+msgstr "Amestar perfil nuevu"
 
 #: components/AddProfileDialog.qml:31
 msgid "Lastname"
@@ -44,12 +44,12 @@ msgstr ""
 #: components/AddProfileDialog.qml:66 components/ManageProfileDialog.qml:68
 #: sudoku-app.qml:339
 msgid "OK"
-msgstr ""
+msgstr "Aceutar"
 
 #: components/AddProfileDialog.qml:82 components/AddProfileDialog.qml:87
 #: components/ManageProfileDialog.qml:94
 msgid "Warning"
-msgstr ""
+msgstr "Avisu"
 
 #: components/AddProfileDialog.qml:82
 msgid "User already exist."
@@ -63,27 +63,27 @@ msgstr ""
 #: sudoku-app.qml:491 sudoku-app.qml:941 sudoku-app.qml:991
 #: components/SudokuBlocksGrid.qml:482
 msgid "Cancel"
-msgstr ""
+msgstr "Encaboxar"
 
 #: components/AboutTab.qml:101
 msgid "Author(s): "
-msgstr ""
+msgstr "Autor(es): "
 
 #: components/AboutTab.qml:111
 msgid "Contact: "
-msgstr ""
+msgstr "Contautu: "
 
 #: components/AboutTab.qml:137
 msgid "Version: "
-msgstr ""
+msgstr "Versión: "
 
 #: components/ManageProfileDialog.qml:13
 msgid "Edit profile"
-msgstr ""
+msgstr "Editar perfil"
 
 #: components/ManageProfileDialog.qml:107
 msgid "Delete"
-msgstr ""
+msgstr "Desaniciar"
 
 #: sudoku-app.qml:50 sudoku-app.qml:51 sudoku-app.qml:736
 msgid "New game"
@@ -95,7 +95,7 @@ msgstr ""
 
 #: sudoku-app.qml:67 sudoku-app.qml:68
 msgid "Show settings"
-msgstr ""
+msgstr "Amosar axustes"
 
 #: sudoku-app.qml:75 sudoku-app.qml:76
 msgid "Change difficulty to Easy"
@@ -149,7 +149,7 @@ msgstr ""
 
 #: sudoku-app.qml:355
 msgid "New Game"
-msgstr ""
+msgstr "Xuegu nuevu"
 
 #: sudoku-app.qml:356
 msgid "Select difficulty level"
@@ -203,7 +203,7 @@ msgstr "Bloques suxeríos"
 
 #: sudoku-app.qml:881
 msgid "Scores"
-msgstr ""
+msgstr "Puntuaciones"
 
 #: sudoku-app.qml:890
 msgid "Settings"
@@ -211,11 +211,11 @@ msgstr "Axustes"
 
 #: sudoku-app.qml:909 sudoku-app.qml:959
 msgid "Select profile"
-msgstr ""
+msgstr "Seleicionar perfil"
 
 #: sudoku-app.qml:1031
 msgid "<b>Sudoku settings</b>"
-msgstr ""
+msgstr "<b>Axustes Sudoku</b>"
 
 #: sudoku-app.qml:1037
 msgid "Default Difficulty"
@@ -243,7 +243,7 @@ msgstr ""
 
 #: sudoku-app.qml:1131
 msgid "<b>Profiles settings</b>"
-msgstr ""
+msgstr "<b>Axustes de perfil</b>"
 
 #: sudoku-app.qml:1139
 msgid "None"
@@ -251,11 +251,11 @@ msgstr ""
 
 #: sudoku-app.qml:1172
 msgid "Add profile"
-msgstr ""
+msgstr "Amestar perfil"
 
 #: sudoku-app.qml:1181
 msgid "Manage profiles"
-msgstr ""
+msgstr "Xestión de perfiles"
 
 #: sudoku-app.qml:1213
 msgid "About"
@@ -267,7 +267,7 @@ msgstr ""
 
 #: components/SudokuBlocksGrid.qml:388
 msgid "Clear"
-msgstr ""
+msgstr "Llimpiar"
 
 #: components/SudokuBlocksGrid.qml:455
 #, qt-format
