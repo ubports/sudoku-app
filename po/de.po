@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: sudokutouchgame\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-07-14 13:34+0000\n"
+"PO-Revision-Date: 2014-07-15 12:56+0000\n"
 "Last-Translator: Phillip Sz <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-07-15 05:57+0000\n"
-"X-Generator: Launchpad (build 17111)\n"
+"X-Launchpad-Export-Date: 2014-07-16 07:25+0000\n"
+"X-Generator: Launchpad (build 17112)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
@@ -115,25 +115,27 @@ msgstr "Schwierigkeitsstufe »sehr hart« setzen"
 
 #: sudoku-app.qml:127 sudoku-app.qml:128
 msgid "Change theme to Simple"
-msgstr ""
+msgstr "Ändere das Thema zu »Einfach«"
 
 #: sudoku-app.qml:137 sudoku-app.qml:138
 msgid "Change theme to UbuntuColors"
-msgstr ""
+msgstr "Ändere das Thema zu »Ubuntu-Farben«"
 
 #: sudoku-app.qml:147 sudoku-app.qml:148
 msgid "Show scores for all users"
-msgstr ""
+msgstr "Punktzahl aller Benutzer anzeigen"
 
 #: sudoku-app.qml:167 sudoku-app.qml:168
 msgid "Show scores for current user"
-msgstr ""
+msgstr "Punktzahl des aktuellen Benutzers anzeigen"
 
 #: sudoku-app.qml:227
 msgid ""
 "You are a cheat... \n"
 "But we give you\n"
 msgstr ""
+"Sie sind ein Schwindler …\n"
+"Wir geben Ihnen jedoch\n"
 
 #: sudoku-app.qml:229
 msgid "points."
@@ -141,11 +143,11 @@ msgstr "Punkte."
 
 #: sudoku-app.qml:326
 msgid "Sudoku games played today"
-msgstr ""
+msgstr "Sudoku-Spiele, die Sie heute gespielt haben"
 
 #: sudoku-app.qml:327
 msgid "No Sudoku games played today"
-msgstr ""
+msgstr "Sie haben heute kein Sudoku-Spiel gespielt"
 
 #: sudoku-app.qml:355
 msgid "New Game"
@@ -153,7 +155,7 @@ msgstr "Neues Spiel"
 
 #: sudoku-app.qml:356
 msgid "Select difficulty level"
-msgstr ""
+msgstr "Schwierigkeitsstufe auswählen"
 
 #: sudoku-app.qml:420 sudoku-app.qml:1038
 msgid "Easy"
@@ -221,7 +223,7 @@ msgstr "<b>Sudoku-Einstellungen</b>"
 
 #: sudoku-app.qml:1037
 msgid "Default Difficulty"
-msgstr ""
+msgstr "Standard-Schwierigkeit"
 
 #: sudoku-app.qml:1038
 msgid "Ultra Hard"
@@ -241,11 +243,11 @@ msgstr "Tipps"
 
 #: sudoku-app.qml:1116
 msgid "Vibration Alerts"
-msgstr ""
+msgstr "Vibrationsalarm"
 
 #: sudoku-app.qml:1131
 msgid "<b>Profiles settings</b>"
-msgstr ""
+msgstr "<b>Benutzereinstellungen</b>"
 
 #: sudoku-app.qml:1139
 msgid "None"
@@ -265,7 +267,7 @@ msgstr "Info"
 
 #: components/SudokuBlocksGrid.qml:327
 msgid "Please pick a number"
-msgstr ""
+msgstr "Wählen Sie eine Zahl aus"
 
 #: components/SudokuBlocksGrid.qml:388
 msgid "Clear"
