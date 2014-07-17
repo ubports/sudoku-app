@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2013-08-30 06:07+0000\n"
+"PO-Revision-Date: 2014-07-17 05:56+0000\n"
 "Last-Translator: Tiago Hillebrandt <tiagohillebrandt@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2014-06-21 06:28+0000\n"
-"X-Generator: Launchpad (build 17058)\n"
+"X-Launchpad-Export-Date: 2014-07-17 06:33+0000\n"
+"X-Generator: Launchpad (build 17114)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
@@ -31,11 +31,11 @@ msgstr ""
 
 #: components/AddProfileDialog.qml:13
 msgid "Add new profile"
-msgstr ""
+msgstr "Adicionar novo perfil"
 
 #: components/AddProfileDialog.qml:31
 msgid "Lastname"
-msgstr ""
+msgstr "Sobrenome"
 
 #: components/AddProfileDialog.qml:49
 msgid "Firstname"
@@ -44,7 +44,7 @@ msgstr ""
 #: components/AddProfileDialog.qml:66 components/ManageProfileDialog.qml:68
 #: sudoku-app.qml:339
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: components/AddProfileDialog.qml:82 components/AddProfileDialog.qml:87
 #: components/ManageProfileDialog.qml:94
@@ -53,7 +53,7 @@ msgstr ""
 
 #: components/AddProfileDialog.qml:82
 msgid "User already exist."
-msgstr ""
+msgstr "Usuário já existe."
 
 #: components/AddProfileDialog.qml:87 components/ManageProfileDialog.qml:94
 msgid "Lastname and firstname must not be empty."
@@ -63,7 +63,7 @@ msgstr ""
 #: sudoku-app.qml:491 sudoku-app.qml:941 sudoku-app.qml:991
 #: components/SudokuBlocksGrid.qml:482
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: components/AboutTab.qml:101
 msgid "Author(s): "
@@ -71,19 +71,19 @@ msgstr ""
 
 #: components/AboutTab.qml:111
 msgid "Contact: "
-msgstr ""
+msgstr "Contato: "
 
 #: components/AboutTab.qml:137
 msgid "Version: "
-msgstr ""
+msgstr "Versão: "
 
 #: components/ManageProfileDialog.qml:13
 msgid "Edit profile"
-msgstr ""
+msgstr "Editar perfil"
 
 #: components/ManageProfileDialog.qml:107
 msgid "Delete"
-msgstr ""
+msgstr "Excluir"
 
 #: sudoku-app.qml:50 sudoku-app.qml:51 sudoku-app.qml:736
 msgid "New game"
@@ -95,23 +95,23 @@ msgstr ""
 
 #: sudoku-app.qml:67 sudoku-app.qml:68
 msgid "Show settings"
-msgstr ""
+msgstr "Mostrar configurações"
 
 #: sudoku-app.qml:75 sudoku-app.qml:76
 msgid "Change difficulty to Easy"
-msgstr ""
+msgstr "Mudar dificuldade para fácil"
 
 #: sudoku-app.qml:88 sudoku-app.qml:89
 msgid "Change difficulty to Moderate"
-msgstr ""
+msgstr "Mudar dificuldade para moderado"
 
 #: sudoku-app.qml:101 sudoku-app.qml:102
 msgid "Change difficulty to Hard"
-msgstr ""
+msgstr "Mudar dificuldade para difícil"
 
 #: sudoku-app.qml:114 sudoku-app.qml:115
 msgid "Change difficulty to Ultra Hard"
-msgstr ""
+msgstr "Mudar dificuldade para ultra-difícil"
 
 #: sudoku-app.qml:127 sudoku-app.qml:128
 msgid "Change theme to Simple"
@@ -137,7 +137,7 @@ msgstr ""
 
 #: sudoku-app.qml:229
 msgid "points."
-msgstr ""
+msgstr "pontos."
 
 #: sudoku-app.qml:326
 msgid "Sudoku games played today"
@@ -149,11 +149,11 @@ msgstr ""
 
 #: sudoku-app.qml:355
 msgid "New Game"
-msgstr ""
+msgstr "Novo jogo"
 
 #: sudoku-app.qml:356
 msgid "Select difficulty level"
-msgstr ""
+msgstr "Selecione o nível de dificuldade"
 
 #: sudoku-app.qml:420 sudoku-app.qml:1038
 msgid "Easy"
@@ -227,7 +227,7 @@ msgstr "Muito difícil"
 
 #: sudoku-app.qml:1038
 msgid "Always ask"
-msgstr ""
+msgstr "Sempre perguntar"
 
 #: sudoku-app.qml:1076
 msgid "Theme"
@@ -251,7 +251,7 @@ msgstr ""
 
 #: sudoku-app.qml:1172
 msgid "Add profile"
-msgstr ""
+msgstr "Adicionar perfil"
 
 #: sudoku-app.qml:1181
 msgid "Manage profiles"
@@ -263,11 +263,11 @@ msgstr "Sobre"
 
 #: components/SudokuBlocksGrid.qml:327
 msgid "Please pick a number"
-msgstr ""
+msgstr "Por favor escolha um número"
 
 #: components/SudokuBlocksGrid.qml:388
 msgid "Clear"
-msgstr ""
+msgstr "Limpar"
 
 #: components/SudokuBlocksGrid.qml:455
 #, qt-format

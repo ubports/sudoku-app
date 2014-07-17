@@ -2,45 +2,46 @@
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the sudoku-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
-#
+# GunChleoc <fios@foramnagaidhlig.net>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-05-19 09:51+0000\n"
-"Last-Translator: Akerbeltz <fios@akerbeltz.org>\n"
-"Language-Team: Gaelic; Scottish <gd@li.org>\n"
+"PO-Revision-Date: 2014-07-16 14:47+0000\n"
+"Last-Translator: GunChleoc <Unknown>\n"
+"Language-Team: Fòram na Gàidhlig http://www.foramnagaidhlig.net\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
 "(n > 2 && n < 20) ? 2 : 3;\n"
-"X-Launchpad-Export-Date: 2014-06-21 06:28+0000\n"
-"X-Generator: Launchpad (build 17058)\n"
+"X-Launchpad-Export-Date: 2014-07-17 06:33+0000\n"
+"X-Generator: Launchpad (build 17114)\n"
+"Language: gd\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
 msgid "<b>Best scores for all players</b>"
-msgstr "<b>Na sgròran as fhearr aig gach cluicheadair</b>"
+msgstr "<b>Na sgòran as fhearr aig gach cluicheadair</b>"
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
 #: components/HighscoresTab.qml:49 sudoku-app.qml:175
 #, qt-format
 msgid "Best scores for %1 %2"
-msgstr ""
+msgstr "Na sgòran as fhearr aig %1 %2"
 
 #: components/AddProfileDialog.qml:13
 msgid "Add new profile"
-msgstr ""
+msgstr "Cuir pròifil ùr ris"
 
 #: components/AddProfileDialog.qml:31
 msgid "Lastname"
-msgstr ""
+msgstr "Sloinneadh"
 
 #: components/AddProfileDialog.qml:49
 msgid "Firstname"
-msgstr ""
+msgstr "Ainm"
 
 #: components/AddProfileDialog.qml:66 components/ManageProfileDialog.qml:68
 #: sudoku-app.qml:339
@@ -50,15 +51,15 @@ msgstr "Ceart ma-thà"
 #: components/AddProfileDialog.qml:82 components/AddProfileDialog.qml:87
 #: components/ManageProfileDialog.qml:94
 msgid "Warning"
-msgstr ""
+msgstr "Rabhadh"
 
 #: components/AddProfileDialog.qml:82
 msgid "User already exist."
-msgstr ""
+msgstr "Tha an cleachdaiche ann mar-thà."
 
 #: components/AddProfileDialog.qml:87 components/ManageProfileDialog.qml:94
 msgid "Lastname and firstname must not be empty."
-msgstr ""
+msgstr "Chan fhaod an t-ainm 's an sloinneadh a bhith falamh."
 
 #: components/AddProfileDialog.qml:98 components/ManageProfileDialog.qml:126
 #: sudoku-app.qml:491 sudoku-app.qml:941 sudoku-app.qml:991
@@ -68,23 +69,23 @@ msgstr "Sguir dheth"
 
 #: components/AboutTab.qml:101
 msgid "Author(s): "
-msgstr ""
+msgstr "Ùghdar(an): "
 
 #: components/AboutTab.qml:111
 msgid "Contact: "
-msgstr ""
+msgstr "Fios thugainn: "
 
 #: components/AboutTab.qml:137
 msgid "Version: "
-msgstr ""
+msgstr "Tionndadh: "
 
 #: components/ManageProfileDialog.qml:13
 msgid "Edit profile"
-msgstr ""
+msgstr "Deasaich a' phròifil"
 
 #: components/ManageProfileDialog.qml:107
 msgid "Delete"
-msgstr ""
+msgstr "Sguab às"
 
 #: sudoku-app.qml:50 sudoku-app.qml:51 sudoku-app.qml:736
 msgid "New game"
@@ -268,11 +269,11 @@ msgstr "Mu dhèidhinn"
 
 #: components/SudokuBlocksGrid.qml:327
 msgid "Please pick a number"
-msgstr ""
+msgstr "Tagh àireamh"
 
 #: components/SudokuBlocksGrid.qml:388
 msgid "Clear"
-msgstr ""
+msgstr "Falamhaich"
 
 #: components/SudokuBlocksGrid.qml:455
 #, qt-format
@@ -285,7 +286,21 @@ msgid_plural ""
 "But we give you\n"
 "%1 points."
 msgstr[0] ""
+"Nach mealltair thu...\n"
+"ach bheir sinn\n"
+"%1 phuing dhut co-dhiù."
 msgstr[1] ""
+"Nach mealltair thu...\n"
+"ach bheir sinn\n"
+"%1 phuing dhut co-dhiù."
+msgstr[2] ""
+"Nach mealltair thu...\n"
+"ach bheir sinn\n"
+"%1 puingean dhut co-dhiù."
+msgstr[3] ""
+"Nach mealltair thu...\n"
+"ach bheir sinn\n"
+"%1 puing dhut co-dhiù."
 
 #: components/SudokuBlocksGrid.qml:462
 #, qt-format
@@ -298,4 +313,18 @@ msgid_plural ""
 "We give you\n"
 "%1 points."
 msgstr[0] ""
+"Meal do naidheachd!\n"
+"Bheir sinn\n"
+"%1 phuing dhut."
 msgstr[1] ""
+"Meal do naidheachd!\n"
+"Bheir sinn\n"
+"%1 phuing dhut."
+msgstr[2] ""
+"Meal do naidheachd!\n"
+"Bheir sinn\n"
+"%1 puingean dhut."
+msgstr[3] ""
+"Meal do naidheachd!\n"
+"Bheir sinn\n"
+"%1 puing dhut."
