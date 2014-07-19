@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-02-15 11:32+0000\n"
-"Last-Translator: Joachim Johansson <Unknown>\n"
+"PO-Revision-Date: 2014-07-18 17:52+0000\n"
+"Last-Translator: Arve Eriksson <Unknown>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-06-21 06:28+0000\n"
-"X-Generator: Launchpad (build 17058)\n"
+"X-Launchpad-Export-Date: 2014-07-19 06:14+0000\n"
+"X-Generator: Launchpad (build 17114)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
@@ -27,29 +27,29 @@ msgstr ""
 #: components/HighscoresTab.qml:49 sudoku-app.qml:175
 #, qt-format
 msgid "Best scores for %1 %2"
-msgstr ""
+msgstr "Bästa poäng för %1 %2"
 
 #: components/AddProfileDialog.qml:13
 msgid "Add new profile"
-msgstr ""
+msgstr "Lägg till ny profil"
 
 #: components/AddProfileDialog.qml:31
 msgid "Lastname"
-msgstr ""
+msgstr "Efternamn"
 
 #: components/AddProfileDialog.qml:49
 msgid "Firstname"
-msgstr ""
+msgstr "Förnamn"
 
 #: components/AddProfileDialog.qml:66 components/ManageProfileDialog.qml:68
 #: sudoku-app.qml:339
 msgid "OK"
-msgstr ""
+msgstr "Ok"
 
 #: components/AddProfileDialog.qml:82 components/AddProfileDialog.qml:87
 #: components/ManageProfileDialog.qml:94
 msgid "Warning"
-msgstr ""
+msgstr "Varning"
 
 #: components/AddProfileDialog.qml:82
 msgid "User already exist."
@@ -57,13 +57,13 @@ msgstr ""
 
 #: components/AddProfileDialog.qml:87 components/ManageProfileDialog.qml:94
 msgid "Lastname and firstname must not be empty."
-msgstr ""
+msgstr "Förnamn och efternamn får inte vara tomma."
 
 #: components/AddProfileDialog.qml:98 components/ManageProfileDialog.qml:126
 #: sudoku-app.qml:491 sudoku-app.qml:941 sudoku-app.qml:991
 #: components/SudokuBlocksGrid.qml:482
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: components/AboutTab.qml:101
 msgid "Author(s): "
@@ -71,19 +71,19 @@ msgstr ""
 
 #: components/AboutTab.qml:111
 msgid "Contact: "
-msgstr ""
+msgstr "Kontakt: "
 
 #: components/AboutTab.qml:137
 msgid "Version: "
-msgstr ""
+msgstr "Version: "
 
 #: components/ManageProfileDialog.qml:13
 msgid "Edit profile"
-msgstr ""
+msgstr "Redigera profil"
 
 #: components/ManageProfileDialog.qml:107
 msgid "Delete"
-msgstr ""
+msgstr "Ta bort"
 
 #: sudoku-app.qml:50 sudoku-app.qml:51 sudoku-app.qml:736
 msgid "New game"
@@ -91,23 +91,23 @@ msgstr "Ny omgång"
 
 #: sudoku-app.qml:58 sudoku-app.qml:59
 msgid "Reveal hint"
-msgstr ""
+msgstr "Visa tips"
 
 #: sudoku-app.qml:67 sudoku-app.qml:68
 msgid "Show settings"
-msgstr ""
+msgstr "Visa inställningar"
 
 #: sudoku-app.qml:75 sudoku-app.qml:76
 msgid "Change difficulty to Easy"
-msgstr ""
+msgstr "Ändra svårighetsgrad till Lätt"
 
 #: sudoku-app.qml:88 sudoku-app.qml:89
 msgid "Change difficulty to Moderate"
-msgstr ""
+msgstr "Ändra svårighetsgrad till Mellan"
 
 #: sudoku-app.qml:101 sudoku-app.qml:102
 msgid "Change difficulty to Hard"
-msgstr ""
+msgstr "Ändra svårighetsgrad till Svår"
 
 #: sudoku-app.qml:114 sudoku-app.qml:115
 msgid "Change difficulty to Ultra Hard"
@@ -115,45 +115,47 @@ msgstr ""
 
 #: sudoku-app.qml:127 sudoku-app.qml:128
 msgid "Change theme to Simple"
-msgstr ""
+msgstr "Ändra tema till Enkelt"
 
 #: sudoku-app.qml:137 sudoku-app.qml:138
 msgid "Change theme to UbuntuColors"
-msgstr ""
+msgstr "Ändra tema till UbuntuColors"
 
 #: sudoku-app.qml:147 sudoku-app.qml:148
 msgid "Show scores for all users"
-msgstr ""
+msgstr "Visa poäng för alla användare"
 
 #: sudoku-app.qml:167 sudoku-app.qml:168
 msgid "Show scores for current user"
-msgstr ""
+msgstr "Visa poäng för aktuell användare"
 
 #: sudoku-app.qml:227
 msgid ""
 "You are a cheat... \n"
 "But we give you\n"
 msgstr ""
+"Du fuskar... \n"
+"Men vi ger dig\n"
 
 #: sudoku-app.qml:229
 msgid "points."
-msgstr ""
+msgstr "poäng."
 
 #: sudoku-app.qml:326
 msgid "Sudoku games played today"
-msgstr ""
+msgstr "Sudoku-spel spelade idag"
 
 #: sudoku-app.qml:327
 msgid "No Sudoku games played today"
-msgstr ""
+msgstr "Inga Sudoku-spel spelade idag"
 
 #: sudoku-app.qml:355
 msgid "New Game"
-msgstr ""
+msgstr "Nytt spel"
 
 #: sudoku-app.qml:356
 msgid "Select difficulty level"
-msgstr ""
+msgstr "Välj svårighetsgrad"
 
 #: sudoku-app.qml:420 sudoku-app.qml:1038
 msgid "Easy"
@@ -203,7 +205,7 @@ msgstr "Tipsrutor"
 
 #: sudoku-app.qml:881
 msgid "Scores"
-msgstr ""
+msgstr "Poäng"
 
 #: sudoku-app.qml:890
 msgid "Settings"
@@ -211,11 +213,11 @@ msgstr "Inställningar"
 
 #: sudoku-app.qml:909 sudoku-app.qml:959
 msgid "Select profile"
-msgstr ""
+msgstr "Välj profil"
 
 #: sudoku-app.qml:1031
 msgid "<b>Sudoku settings</b>"
-msgstr ""
+msgstr "<b>Sudoku-inställningar</b>"
 
 #: sudoku-app.qml:1037
 msgid "Default Difficulty"
@@ -227,7 +229,7 @@ msgstr "Supersvår"
 
 #: sudoku-app.qml:1038
 msgid "Always ask"
-msgstr ""
+msgstr "Fråga alltid"
 
 #: sudoku-app.qml:1076
 msgid "Theme"
@@ -235,7 +237,7 @@ msgstr "Tema"
 
 #: sudoku-app.qml:1100
 msgid "Hints"
-msgstr ""
+msgstr "Tips"
 
 #: sudoku-app.qml:1116
 msgid "Vibration Alerts"
@@ -243,7 +245,7 @@ msgstr ""
 
 #: sudoku-app.qml:1131
 msgid "<b>Profiles settings</b>"
-msgstr ""
+msgstr "<b>Profilinställningar</b>"
 
 #: sudoku-app.qml:1139
 msgid "None"
@@ -251,11 +253,11 @@ msgstr ""
 
 #: sudoku-app.qml:1172
 msgid "Add profile"
-msgstr ""
+msgstr "Lägg till profil"
 
 #: sudoku-app.qml:1181
 msgid "Manage profiles"
-msgstr ""
+msgstr "Hantera profiler"
 
 #: sudoku-app.qml:1213
 msgid "About"
@@ -263,11 +265,11 @@ msgstr "Om"
 
 #: components/SudokuBlocksGrid.qml:327
 msgid "Please pick a number"
-msgstr ""
+msgstr "Välj ett nummer"
 
 #: components/SudokuBlocksGrid.qml:388
 msgid "Clear"
-msgstr ""
+msgstr "Rensa"
 
 #: components/SudokuBlocksGrid.qml:455
 #, qt-format
@@ -280,7 +282,13 @@ msgid_plural ""
 "But we give you\n"
 "%1 points."
 msgstr[0] ""
+"Du fuskar...\n"
+"Men vi ger dig\n"
+"%1 poäng."
 msgstr[1] ""
+"Du fuskar...\n"
+"Men vi ger dig\n"
+"%1 poäng."
 
 #: components/SudokuBlocksGrid.qml:462
 #, qt-format
@@ -293,4 +301,10 @@ msgid_plural ""
 "We give you\n"
 "%1 points."
 msgstr[0] ""
+"Grattis!\n"
+"Vi ger dig\n"
+"%1 poäng."
 msgstr[1] ""
+"Grattis!\n"
+"Vi ger dig\n"
+"%1 poäng."
