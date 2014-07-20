@@ -8,266 +8,268 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-01-28 15:03+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2014-07-19 16:55+0000\n"
+"Last-Translator: MinSik CHO <Unknown>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2014-06-21 06:28+0000\n"
-"X-Generator: Launchpad (build 17058)\n"
+"X-Launchpad-Export-Date: 2014-07-20 06:15+0000\n"
+"X-Generator: Launchpad (build 17114)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
 msgid "<b>Best scores for all players</b>"
-msgstr ""
+msgstr "<b>모든 사용자 중 최고 점수</b>"
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
 #: components/HighscoresTab.qml:49 sudoku-app.qml:175
 #, qt-format
 msgid "Best scores for %1 %2"
-msgstr ""
+msgstr "%2%1의 최고 점수"
 
 #: components/AddProfileDialog.qml:13
 msgid "Add new profile"
-msgstr ""
+msgstr "새 사용자 추가"
 
 #: components/AddProfileDialog.qml:31
 msgid "Lastname"
-msgstr ""
+msgstr "성"
 
 #: components/AddProfileDialog.qml:49
 msgid "Firstname"
-msgstr ""
+msgstr "이름"
 
 #: components/AddProfileDialog.qml:66 components/ManageProfileDialog.qml:68
 #: sudoku-app.qml:339
 msgid "OK"
-msgstr ""
+msgstr "확인"
 
 #: components/AddProfileDialog.qml:82 components/AddProfileDialog.qml:87
 #: components/ManageProfileDialog.qml:94
 msgid "Warning"
-msgstr ""
+msgstr "경고"
 
 #: components/AddProfileDialog.qml:82
 msgid "User already exist."
-msgstr ""
+msgstr "사용자가 이미 존재합니다."
 
 #: components/AddProfileDialog.qml:87 components/ManageProfileDialog.qml:94
 msgid "Lastname and firstname must not be empty."
-msgstr ""
+msgstr "성과 이름은 빈칸으로 둘 수 없습니다."
 
 #: components/AddProfileDialog.qml:98 components/ManageProfileDialog.qml:126
 #: sudoku-app.qml:491 sudoku-app.qml:941 sudoku-app.qml:991
 #: components/SudokuBlocksGrid.qml:482
 msgid "Cancel"
-msgstr ""
+msgstr "취소"
 
 #: components/AboutTab.qml:101
 msgid "Author(s): "
-msgstr ""
+msgstr "작가: "
 
 #: components/AboutTab.qml:111
 msgid "Contact: "
-msgstr ""
+msgstr "연락처: "
 
 #: components/AboutTab.qml:137
 msgid "Version: "
-msgstr ""
+msgstr "버전: "
 
 #: components/ManageProfileDialog.qml:13
 msgid "Edit profile"
-msgstr ""
+msgstr "사용자 편집"
 
 #: components/ManageProfileDialog.qml:107
 msgid "Delete"
-msgstr ""
+msgstr "제거"
 
 #: sudoku-app.qml:50 sudoku-app.qml:51 sudoku-app.qml:736
 msgid "New game"
-msgstr ""
+msgstr "새 게임"
 
 #: sudoku-app.qml:58 sudoku-app.qml:59
 msgid "Reveal hint"
-msgstr ""
+msgstr "힌트 보여주기"
 
 #: sudoku-app.qml:67 sudoku-app.qml:68
 msgid "Show settings"
-msgstr ""
+msgstr "설정 보여주기"
 
 #: sudoku-app.qml:75 sudoku-app.qml:76
 msgid "Change difficulty to Easy"
-msgstr ""
+msgstr "난이도를 쉬움으로 변경"
 
 #: sudoku-app.qml:88 sudoku-app.qml:89
 msgid "Change difficulty to Moderate"
-msgstr ""
+msgstr "난이도를 중간으로 변경"
 
 #: sudoku-app.qml:101 sudoku-app.qml:102
 msgid "Change difficulty to Hard"
-msgstr ""
+msgstr "난이도를 어려움으로 변경"
 
 #: sudoku-app.qml:114 sudoku-app.qml:115
 msgid "Change difficulty to Ultra Hard"
-msgstr ""
+msgstr "난이도를 매우 어려움으로 변경"
 
 #: sudoku-app.qml:127 sudoku-app.qml:128
 msgid "Change theme to Simple"
-msgstr ""
+msgstr "간단한 테마로 변경"
 
 #: sudoku-app.qml:137 sudoku-app.qml:138
 msgid "Change theme to UbuntuColors"
-msgstr ""
+msgstr "우분투 칼라 테마로 변경"
 
 #: sudoku-app.qml:147 sudoku-app.qml:148
 msgid "Show scores for all users"
-msgstr ""
+msgstr "모든 사용자의 점수 보기"
 
 #: sudoku-app.qml:167 sudoku-app.qml:168
 msgid "Show scores for current user"
-msgstr ""
+msgstr "현 사용자의 점수 보기"
 
 #: sudoku-app.qml:227
 msgid ""
 "You are a cheat... \n"
 "But we give you\n"
-msgstr ""
+msgstr "당신의 점수는\n"
 
 #: sudoku-app.qml:229
 msgid "points."
-msgstr ""
+msgstr "입니다."
 
 #: sudoku-app.qml:326
 msgid "Sudoku games played today"
-msgstr ""
+msgstr "오늘 스도쿠 게임을 한 횟수"
 
 #: sudoku-app.qml:327
 msgid "No Sudoku games played today"
-msgstr ""
+msgstr "오늘 스도쿠 게임을 하지 않았습니다."
 
 #: sudoku-app.qml:355
 msgid "New Game"
-msgstr ""
+msgstr "새 게임"
 
 #: sudoku-app.qml:356
 msgid "Select difficulty level"
-msgstr ""
+msgstr "난이도 선택"
 
 #: sudoku-app.qml:420 sudoku-app.qml:1038
 msgid "Easy"
-msgstr ""
+msgstr "쉬움"
 
 #: sudoku-app.qml:439 sudoku-app.qml:1038
 msgid "Moderate"
-msgstr ""
+msgstr "보통"
 
 #: sudoku-app.qml:456 sudoku-app.qml:1038
 msgid "Hard"
-msgstr ""
+msgstr "어려움"
 
 #: sudoku-app.qml:473
 msgid ""
 "Ultra\n"
 "Hard"
 msgstr ""
+"매우\n"
+"어려움"
 
 #: sudoku-app.qml:665
 msgid "Sudoku"
-msgstr ""
+msgstr "스도쿠"
 
 #: sudoku-app.qml:720
 msgid "You are a cheat..."
-msgstr ""
+msgstr "믿을 수 없어요..."
 
 #: sudoku-app.qml:720
 msgid "Congratulations!"
-msgstr ""
+msgstr "축하합니다!"
 
 #: sudoku-app.qml:754
 msgid "Show hint"
-msgstr ""
+msgstr "힌트 보여주기"
 
 #: sudoku-app.qml:817
 msgid "Not allowed"
-msgstr ""
+msgstr "허용되지 않음"
 
 #: sudoku-app.qml:837
 msgid "Start blocks"
-msgstr ""
+msgstr "시작하는 상자"
 
 #: sudoku-app.qml:858
 msgid "Hinted blocks"
-msgstr ""
+msgstr "힌트 상자"
 
 #: sudoku-app.qml:881
 msgid "Scores"
-msgstr ""
+msgstr "점수"
 
 #: sudoku-app.qml:890
 msgid "Settings"
-msgstr ""
+msgstr "설정"
 
 #: sudoku-app.qml:909 sudoku-app.qml:959
 msgid "Select profile"
-msgstr ""
+msgstr "사용자 선택"
 
 #: sudoku-app.qml:1031
 msgid "<b>Sudoku settings</b>"
-msgstr ""
+msgstr "<b>스도쿠 설정</b>"
 
 #: sudoku-app.qml:1037
 msgid "Default Difficulty"
-msgstr ""
+msgstr "난이도 설정"
 
 #: sudoku-app.qml:1038
 msgid "Ultra Hard"
-msgstr ""
+msgstr "매우 어려움"
 
 #: sudoku-app.qml:1038
 msgid "Always ask"
-msgstr ""
+msgstr "항상 묻기"
 
 #: sudoku-app.qml:1076
 msgid "Theme"
-msgstr ""
+msgstr "테마"
 
 #: sudoku-app.qml:1100
 msgid "Hints"
-msgstr ""
+msgstr "힌트"
 
 #: sudoku-app.qml:1116
 msgid "Vibration Alerts"
-msgstr ""
+msgstr "진동으로 알려주기"
 
 #: sudoku-app.qml:1131
 msgid "<b>Profiles settings</b>"
-msgstr ""
+msgstr "<b>사용자 설정</b>"
 
 #: sudoku-app.qml:1139
 msgid "None"
-msgstr ""
+msgstr "없음"
 
 #: sudoku-app.qml:1172
 msgid "Add profile"
-msgstr ""
+msgstr "사용자 추가"
 
 #: sudoku-app.qml:1181
 msgid "Manage profiles"
-msgstr ""
+msgstr "사용자 관리"
 
 #: sudoku-app.qml:1213
 msgid "About"
-msgstr ""
+msgstr "정보"
 
 #: components/SudokuBlocksGrid.qml:327
 msgid "Please pick a number"
-msgstr ""
+msgstr "숫자를 선택하세요"
 
 #: components/SudokuBlocksGrid.qml:388
 msgid "Clear"
-msgstr ""
+msgstr "지우기"
 
 #: components/SudokuBlocksGrid.qml:455
 #, qt-format
@@ -280,7 +282,9 @@ msgid_plural ""
 "But we give you\n"
 "%1 points."
 msgstr[0] ""
-msgstr[1] ""
+"꼼수를 부리는 군요...\n"
+"그렇지만\n"
+"%1 점을 얻으셨습니다."
 
 #: components/SudokuBlocksGrid.qml:462
 #, qt-format
@@ -293,4 +297,5 @@ msgid_plural ""
 "We give you\n"
 "%1 points."
 msgstr[0] ""
-msgstr[1] ""
+"축하드립니다!\n"
+"%1점을 얻으셨습니다."

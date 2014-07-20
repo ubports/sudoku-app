@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-05-27 14:38+0000\n"
+"PO-Revision-Date: 2014-07-19 13:25+0000\n"
 "Last-Translator: GTriderXC <gtriderxc@yahoo.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2014-06-21 06:28+0000\n"
-"X-Generator: Launchpad (build 17058)\n"
+"X-Launchpad-Export-Date: 2014-07-20 06:15+0000\n"
+"X-Generator: Launchpad (build 17114)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
@@ -28,19 +28,19 @@ msgstr "<b>Najlepsze wyniki wszystkich użytkowników</b>"
 #: components/HighscoresTab.qml:49 sudoku-app.qml:175
 #, qt-format
 msgid "Best scores for %1 %2"
-msgstr ""
+msgstr "Najlepsze wyniki dla %1 %2"
 
 #: components/AddProfileDialog.qml:13
 msgid "Add new profile"
-msgstr ""
+msgstr "Dodaj nowy profil"
 
 #: components/AddProfileDialog.qml:31
 msgid "Lastname"
-msgstr ""
+msgstr "Nazwisko"
 
 #: components/AddProfileDialog.qml:49
 msgid "Firstname"
-msgstr ""
+msgstr "Imię"
 
 #: components/AddProfileDialog.qml:66 components/ManageProfileDialog.qml:68
 #: sudoku-app.qml:339
@@ -50,15 +50,15 @@ msgstr "OK"
 #: components/AddProfileDialog.qml:82 components/AddProfileDialog.qml:87
 #: components/ManageProfileDialog.qml:94
 msgid "Warning"
-msgstr ""
+msgstr "Uwaga!"
 
 #: components/AddProfileDialog.qml:82
 msgid "User already exist."
-msgstr ""
+msgstr "Użytkownik już istnieje."
 
 #: components/AddProfileDialog.qml:87 components/ManageProfileDialog.qml:94
 msgid "Lastname and firstname must not be empty."
-msgstr ""
+msgstr "Nazwisko i imię nie mogą być puste."
 
 #: components/AddProfileDialog.qml:98 components/ManageProfileDialog.qml:126
 #: sudoku-app.qml:491 sudoku-app.qml:941 sudoku-app.qml:991
@@ -68,23 +68,23 @@ msgstr "Anuluj"
 
 #: components/AboutTab.qml:101
 msgid "Author(s): "
-msgstr ""
+msgstr "Autorzy: "
 
 #: components/AboutTab.qml:111
 msgid "Contact: "
-msgstr ""
+msgstr "Kontakt: "
 
 #: components/AboutTab.qml:137
 msgid "Version: "
-msgstr ""
+msgstr "Wersja: "
 
 #: components/ManageProfileDialog.qml:13
 msgid "Edit profile"
-msgstr ""
+msgstr "Edytuj profil"
 
 #: components/ManageProfileDialog.qml:107
 msgid "Delete"
-msgstr ""
+msgstr "Usuń"
 
 #: sudoku-app.qml:50 sudoku-app.qml:51 sudoku-app.qml:736
 msgid "New game"
@@ -268,11 +268,11 @@ msgstr "O programie"
 
 #: components/SudokuBlocksGrid.qml:327
 msgid "Please pick a number"
-msgstr ""
+msgstr "Proszę wybrać liczbę"
 
 #: components/SudokuBlocksGrid.qml:388
 msgid "Clear"
-msgstr ""
+msgstr "Wyczyść"
 
 #: components/SudokuBlocksGrid.qml:455
 #, qt-format
@@ -285,7 +285,17 @@ msgid_plural ""
 "But we give you\n"
 "%1 points."
 msgstr[0] ""
+"Oszukujesz ;-)...\n"
+"ale dostaniesz\n"
+"%1 punkt."
 msgstr[1] ""
+"Oszukujesz ;-)...\n"
+"ale dostaniesz\n"
+"%1 punkty."
+msgstr[2] ""
+"Oszukujesz ;-)...\n"
+"ale dostaniesz\n"
+"%1 punktów."
 
 #: components/SudokuBlocksGrid.qml:462
 #, qt-format
@@ -298,4 +308,14 @@ msgid_plural ""
 "We give you\n"
 "%1 points."
 msgstr[0] ""
+"Gratulacje!\n"
+"Otrzymujesz\n"
+"%1 punkt."
 msgstr[1] ""
+"Gratulacje!\n"
+"Otrzymujesz\n"
+"%1 punkty."
+msgstr[2] ""
+"Gratulacje!\n"
+"Otrzymujesz\n"
+"%1 punktów."
