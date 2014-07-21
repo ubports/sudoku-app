@@ -1,4 +1,4 @@
-# Basque translation for sudoku-app
+# Danish translation for sudoku-app
 # Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
 # This file is distributed under the same license as the sudoku-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-07-20 19:51+0000\n"
-"Last-Translator: Ibai Oihanguren Sala <Unknown>\n"
-"Language-Team: Basque <eu@li.org>\n"
+"PO-Revision-Date: 2014-07-20 20:47+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,257 +21,253 @@ msgstr ""
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
 msgid "<b>Best scores for all players</b>"
-msgstr "<b>Jokalari guztien puntuazio altuenak</b>"
+msgstr ""
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
 #: components/HighscoresTab.qml:49 sudoku-app.qml:175
 #, qt-format
 msgid "Best scores for %1 %2"
-msgstr "%1 %2(r)en puntuazio altuenak"
+msgstr ""
 
 #: components/AddProfileDialog.qml:13
 msgid "Add new profile"
-msgstr "Gehitu profil berria"
+msgstr ""
 
 #: components/AddProfileDialog.qml:31
 msgid "Lastname"
-msgstr "Abizena"
+msgstr ""
 
 #: components/AddProfileDialog.qml:49
 msgid "Firstname"
-msgstr "Izena"
+msgstr ""
 
 #: components/AddProfileDialog.qml:66 components/ManageProfileDialog.qml:68
 #: sudoku-app.qml:339
 msgid "OK"
-msgstr "Ados"
+msgstr ""
 
 #: components/AddProfileDialog.qml:82 components/AddProfileDialog.qml:87
 #: components/ManageProfileDialog.qml:94
 msgid "Warning"
-msgstr "Abisua"
+msgstr ""
 
 #: components/AddProfileDialog.qml:82
 msgid "User already exist."
-msgstr "Erabiltzailea dagoeneko existitzen da."
+msgstr ""
 
 #: components/AddProfileDialog.qml:87 components/ManageProfileDialog.qml:94
 msgid "Lastname and firstname must not be empty."
-msgstr "Izena eta abizena ezin dira hutsik utzi."
+msgstr ""
 
 #: components/AddProfileDialog.qml:98 components/ManageProfileDialog.qml:126
 #: sudoku-app.qml:491 sudoku-app.qml:941 sudoku-app.qml:991
 #: components/SudokuBlocksGrid.qml:482
 msgid "Cancel"
-msgstr "Utzi"
+msgstr ""
 
 #: components/AboutTab.qml:101
 msgid "Author(s): "
-msgstr "Egilea(k): "
+msgstr ""
 
 #: components/AboutTab.qml:111
 msgid "Contact: "
-msgstr "Kontaktua: "
+msgstr ""
 
 #: components/AboutTab.qml:137
 msgid "Version: "
-msgstr "Bertsioa: "
+msgstr ""
 
 #: components/ManageProfileDialog.qml:13
 msgid "Edit profile"
-msgstr "Editatu profila"
+msgstr ""
 
 #: components/ManageProfileDialog.qml:107
 msgid "Delete"
-msgstr "Ezabatu"
+msgstr ""
 
 #: sudoku-app.qml:50 sudoku-app.qml:51 sudoku-app.qml:736
 msgid "New game"
-msgstr "Joko berria"
+msgstr ""
 
 #: sudoku-app.qml:58 sudoku-app.qml:59
 msgid "Reveal hint"
-msgstr "Erakutsi aztarna"
+msgstr ""
 
 #: sudoku-app.qml:67 sudoku-app.qml:68
 msgid "Show settings"
-msgstr "Erakutsi ezarpenak"
+msgstr ""
 
 #: sudoku-app.qml:75 sudoku-app.qml:76
 msgid "Change difficulty to Easy"
-msgstr "Aldatu zailtasun-maila: Erraza"
+msgstr ""
 
 #: sudoku-app.qml:88 sudoku-app.qml:89
 msgid "Change difficulty to Moderate"
-msgstr "Aldatu zailtasun-maila: Tartekoa"
+msgstr ""
 
 #: sudoku-app.qml:101 sudoku-app.qml:102
 msgid "Change difficulty to Hard"
-msgstr "Aldatu zailtasun-maila: Zaila"
+msgstr ""
 
 #: sudoku-app.qml:114 sudoku-app.qml:115
 msgid "Change difficulty to Ultra Hard"
-msgstr "Aldatu zailtasun-maila: Oso zaila"
+msgstr ""
 
 #: sudoku-app.qml:127 sudoku-app.qml:128
 msgid "Change theme to Simple"
-msgstr "Aldatu gaia: Soila"
+msgstr ""
 
 #: sudoku-app.qml:137 sudoku-app.qml:138
 msgid "Change theme to UbuntuColors"
-msgstr "Aldatu gaia: UbuntuColors"
+msgstr ""
 
 #: sudoku-app.qml:147 sudoku-app.qml:148
 msgid "Show scores for all users"
-msgstr "Erakutsi erabiltzaile guztien puntuazioak"
+msgstr ""
 
 #: sudoku-app.qml:167 sudoku-app.qml:168
 msgid "Show scores for current user"
-msgstr "Erakutsi uneko erabiltzailearen puntuazioak"
+msgstr ""
 
 #: sudoku-app.qml:227
 msgid ""
 "You are a cheat... \n"
 "But we give you\n"
 msgstr ""
-"Iruzur egin duzu... \n"
-"Hala ere,\n"
 
 #: sudoku-app.qml:229
 msgid "points."
-msgstr "puntu emango dizkizugu."
+msgstr ""
 
 #: sudoku-app.qml:326
 msgid "Sudoku games played today"
-msgstr "Gaur jolastutako Sudoku partidak"
+msgstr ""
 
 #: sudoku-app.qml:327
 msgid "No Sudoku games played today"
-msgstr "Gaur ez duzu Sudokuan jolastu"
+msgstr ""
 
 #: sudoku-app.qml:355
 msgid "New Game"
-msgstr "Partida berria"
+msgstr ""
 
 #: sudoku-app.qml:356
 msgid "Select difficulty level"
-msgstr "Hautatu zailtasun-maila"
+msgstr ""
 
 #: sudoku-app.qml:420 sudoku-app.qml:1038
 msgid "Easy"
-msgstr "Erraza"
+msgstr ""
 
 #: sudoku-app.qml:439 sudoku-app.qml:1038
 msgid "Moderate"
-msgstr "Tartekoa"
+msgstr ""
 
 #: sudoku-app.qml:456 sudoku-app.qml:1038
 msgid "Hard"
-msgstr "Zaila"
+msgstr ""
 
 #: sudoku-app.qml:473
 msgid ""
 "Ultra\n"
 "Hard"
 msgstr ""
-"Oso\n"
-"zaila"
 
 #: sudoku-app.qml:665
 msgid "Sudoku"
-msgstr "Sudokua"
+msgstr ""
 
 #: sudoku-app.qml:720
 msgid "You are a cheat..."
-msgstr "Tranpati bat zara..."
+msgstr ""
 
 #: sudoku-app.qml:720
 msgid "Congratulations!"
-msgstr "Zorionak!"
+msgstr ""
 
 #: sudoku-app.qml:754
 msgid "Show hint"
-msgstr "Eman aztarna"
+msgstr ""
 
 #: sudoku-app.qml:817
 msgid "Not allowed"
-msgstr "Ez onartua"
+msgstr ""
 
 #: sudoku-app.qml:837
 msgid "Start blocks"
-msgstr "Hasierako blokeak"
+msgstr ""
 
 #: sudoku-app.qml:858
 msgid "Hinted blocks"
-msgstr "Aztarnadun blokeak"
+msgstr ""
 
 #: sudoku-app.qml:881
 msgid "Scores"
-msgstr "Puntuazioak"
+msgstr ""
 
 #: sudoku-app.qml:890
 msgid "Settings"
-msgstr "Ezarpenak"
+msgstr ""
 
 #: sudoku-app.qml:909 sudoku-app.qml:959
 msgid "Select profile"
-msgstr "Hautatu profila"
+msgstr ""
 
 #: sudoku-app.qml:1031
 msgid "<b>Sudoku settings</b>"
-msgstr "<b>Sudokuren ezarpenak</b>"
+msgstr ""
 
 #: sudoku-app.qml:1037
 msgid "Default Difficulty"
-msgstr "Zailtasun-maila lehenetsia"
+msgstr ""
 
 #: sudoku-app.qml:1038
 msgid "Ultra Hard"
-msgstr "Oso zaila"
+msgstr ""
 
 #: sudoku-app.qml:1038
 msgid "Always ask"
-msgstr "Galdetu beti"
+msgstr ""
 
 #: sudoku-app.qml:1076
 msgid "Theme"
-msgstr "Gaia"
+msgstr ""
 
 #: sudoku-app.qml:1100
 msgid "Hints"
-msgstr "Aztarnak"
+msgstr ""
 
 #: sudoku-app.qml:1116
 msgid "Vibration Alerts"
-msgstr "Bibrazio bidezko alertak"
+msgstr ""
 
 #: sudoku-app.qml:1131
 msgid "<b>Profiles settings</b>"
-msgstr "<b>Profil-ezarpenak</b>"
+msgstr ""
 
 #: sudoku-app.qml:1139
 msgid "None"
-msgstr "Bat ere ez"
+msgstr ""
 
 #: sudoku-app.qml:1172
 msgid "Add profile"
-msgstr "Gehitu profila"
+msgstr ""
 
 #: sudoku-app.qml:1181
 msgid "Manage profiles"
-msgstr "Kudeatu profilak"
+msgstr ""
 
 #: sudoku-app.qml:1213
 msgid "About"
-msgstr "Honi buruz"
+msgstr ""
 
 #: components/SudokuBlocksGrid.qml:327
 msgid "Please pick a number"
-msgstr "Aukeratu zenbaki bat"
+msgstr ""
 
 #: components/SudokuBlocksGrid.qml:388
 msgid "Clear"
-msgstr "Garbitu"
+msgstr ""
 
 #: components/SudokuBlocksGrid.qml:455
 #, qt-format
@@ -284,13 +280,7 @@ msgid_plural ""
 "But we give you\n"
 "%1 points."
 msgstr[0] ""
-"Iruzur egin duzu...\n"
-"Hala ere, puntu %1\n"
-"emango dizugu."
 msgstr[1] ""
-"Iruzur egin duzu...\n"
-"Hala ere, %1 puntu\n"
-"emango dizkizugu."
 
 #: components/SudokuBlocksGrid.qml:462
 #, qt-format
@@ -303,10 +293,4 @@ msgid_plural ""
 "We give you\n"
 "%1 points."
 msgstr[0] ""
-"Zorionak!\n"
-"Puntu %1\n"
-"emango dizugu."
 msgstr[1] ""
-"Zorionak!\n"
-"%1 puntu\n"
-"emango dizkizugu."
