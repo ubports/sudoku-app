@@ -8,82 +8,82 @@ msgstr ""
 "Project-Id-Version: sudokutouchgame\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2013-07-18 08:01+0000\n"
-"Last-Translator: Bence Lukács <Unknown>\n"
+"PO-Revision-Date: 2014-07-22 08:07+0000\n"
+"Last-Translator: Kristóf Kiszel <Unknown>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-06-21 06:28+0000\n"
-"X-Generator: Launchpad (build 17058)\n"
+"X-Launchpad-Export-Date: 2014-07-23 06:58+0000\n"
+"X-Generator: Launchpad (build 17114)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
 msgid "<b>Best scores for all players</b>"
-msgstr ""
+msgstr "<b>Legjobb eredmények</b>"
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
 #: components/HighscoresTab.qml:49 sudoku-app.qml:175
 #, qt-format
 msgid "Best scores for %1 %2"
-msgstr ""
+msgstr "%2 %1 legjobb eredményei"
 
 #: components/AddProfileDialog.qml:13
 msgid "Add new profile"
-msgstr ""
+msgstr "Új profil hozzáadása"
 
 #: components/AddProfileDialog.qml:31
 msgid "Lastname"
-msgstr ""
+msgstr "Vezetéknév"
 
 #: components/AddProfileDialog.qml:49
 msgid "Firstname"
-msgstr ""
+msgstr "Keresztnév"
 
 #: components/AddProfileDialog.qml:66 components/ManageProfileDialog.qml:68
 #: sudoku-app.qml:339
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: components/AddProfileDialog.qml:82 components/AddProfileDialog.qml:87
 #: components/ManageProfileDialog.qml:94
 msgid "Warning"
-msgstr ""
+msgstr "Figyelmeztetés"
 
 #: components/AddProfileDialog.qml:82
 msgid "User already exist."
-msgstr ""
+msgstr "A felhasználó már létezik."
 
 #: components/AddProfileDialog.qml:87 components/ManageProfileDialog.qml:94
 msgid "Lastname and firstname must not be empty."
-msgstr ""
+msgstr "A vezeték- és keresztnév nem lehet üres."
 
 #: components/AddProfileDialog.qml:98 components/ManageProfileDialog.qml:126
 #: sudoku-app.qml:491 sudoku-app.qml:941 sudoku-app.qml:991
 #: components/SudokuBlocksGrid.qml:482
 msgid "Cancel"
-msgstr ""
+msgstr "Mégsem"
 
 #: components/AboutTab.qml:101
 msgid "Author(s): "
-msgstr ""
+msgstr "Szerzők: "
 
 #: components/AboutTab.qml:111
 msgid "Contact: "
-msgstr ""
+msgstr "Kapcsolat: "
 
 #: components/AboutTab.qml:137
 msgid "Version: "
-msgstr ""
+msgstr "Verzió: "
 
 #: components/ManageProfileDialog.qml:13
 msgid "Edit profile"
-msgstr ""
+msgstr "Profil szerkesztése"
 
 #: components/ManageProfileDialog.qml:107
 msgid "Delete"
-msgstr ""
+msgstr "Törlés"
 
 #: sudoku-app.qml:50 sudoku-app.qml:51 sudoku-app.qml:736
 msgid "New game"
@@ -91,27 +91,27 @@ msgstr "Új játék"
 
 #: sudoku-app.qml:58 sudoku-app.qml:59
 msgid "Reveal hint"
-msgstr ""
+msgstr "Tipp felfedése"
 
 #: sudoku-app.qml:67 sudoku-app.qml:68
 msgid "Show settings"
-msgstr ""
+msgstr "Beállítások"
 
 #: sudoku-app.qml:75 sudoku-app.qml:76
 msgid "Change difficulty to Easy"
-msgstr ""
+msgstr "Nehézség módosítása könnyűre"
 
 #: sudoku-app.qml:88 sudoku-app.qml:89
 msgid "Change difficulty to Moderate"
-msgstr ""
+msgstr "Nehézség módosítása közepesre"
 
 #: sudoku-app.qml:101 sudoku-app.qml:102
 msgid "Change difficulty to Hard"
-msgstr ""
+msgstr "Nehézség módosítása nehézre"
 
 #: sudoku-app.qml:114 sudoku-app.qml:115
 msgid "Change difficulty to Ultra Hard"
-msgstr ""
+msgstr "Nehézség módosítása nagyon nehézre"
 
 #: sudoku-app.qml:127 sudoku-app.qml:128
 msgid "Change theme to Simple"
@@ -134,10 +134,12 @@ msgid ""
 "You are a cheat... \n"
 "But we give you\n"
 msgstr ""
+"Csaltál… \n"
+"De adunk\n"
 
 #: sudoku-app.qml:229
 msgid "points."
-msgstr ""
+msgstr "pontot."
 
 #: sudoku-app.qml:326
 msgid "Sudoku games played today"
@@ -149,11 +151,11 @@ msgstr ""
 
 #: sudoku-app.qml:355
 msgid "New Game"
-msgstr ""
+msgstr "Új játék"
 
 #: sudoku-app.qml:356
 msgid "Select difficulty level"
-msgstr ""
+msgstr "Válasszon nehézségi szintet"
 
 #: sudoku-app.qml:420 sudoku-app.qml:1038
 msgid "Easy"
@@ -172,6 +174,8 @@ msgid ""
 "Ultra\n"
 "Hard"
 msgstr ""
+"Nagyon\n"
+"nehéz"
 
 #: sudoku-app.qml:665
 msgid "Sudoku"
@@ -203,7 +207,7 @@ msgstr "Tippelt mezők"
 
 #: sudoku-app.qml:881
 msgid "Scores"
-msgstr ""
+msgstr "Eredmények"
 
 #: sudoku-app.qml:890
 msgid "Settings"
@@ -211,15 +215,15 @@ msgstr "Beállítások"
 
 #: sudoku-app.qml:909 sudoku-app.qml:959
 msgid "Select profile"
-msgstr ""
+msgstr "Válasszon profilt"
 
 #: sudoku-app.qml:1031
 msgid "<b>Sudoku settings</b>"
-msgstr ""
+msgstr "<b>Sudoku beállítások</b>"
 
 #: sudoku-app.qml:1037
 msgid "Default Difficulty"
-msgstr ""
+msgstr "Alapértelmezett nehézség"
 
 #: sudoku-app.qml:1038
 msgid "Ultra Hard"
@@ -227,7 +231,7 @@ msgstr "Nagyon nehéz"
 
 #: sudoku-app.qml:1038
 msgid "Always ask"
-msgstr ""
+msgstr "Mindig kérdezzen rá"
 
 #: sudoku-app.qml:1076
 msgid "Theme"
@@ -235,27 +239,27 @@ msgstr "Téma"
 
 #: sudoku-app.qml:1100
 msgid "Hints"
-msgstr ""
+msgstr "Tippek"
 
 #: sudoku-app.qml:1116
 msgid "Vibration Alerts"
-msgstr ""
+msgstr "Rezgő értesítések"
 
 #: sudoku-app.qml:1131
 msgid "<b>Profiles settings</b>"
-msgstr ""
+msgstr "<b>Profilbeállítások</b>"
 
 #: sudoku-app.qml:1139
 msgid "None"
-msgstr ""
+msgstr "Nincs"
 
 #: sudoku-app.qml:1172
 msgid "Add profile"
-msgstr ""
+msgstr "Profil hozzáadása"
 
 #: sudoku-app.qml:1181
 msgid "Manage profiles"
-msgstr ""
+msgstr "Profilok kezelése"
 
 #: sudoku-app.qml:1213
 msgid "About"
@@ -263,11 +267,11 @@ msgstr "Névjegy"
 
 #: components/SudokuBlocksGrid.qml:327
 msgid "Please pick a number"
-msgstr ""
+msgstr "Válasszon egy számot"
 
 #: components/SudokuBlocksGrid.qml:388
 msgid "Clear"
-msgstr ""
+msgstr "Törlés"
 
 #: components/SudokuBlocksGrid.qml:455
 #, qt-format
@@ -280,7 +284,13 @@ msgid_plural ""
 "But we give you\n"
 "%1 points."
 msgstr[0] ""
+"Csaltál…\n"
+"De mégis adunk Önnek\n"
+"%1 pontot."
 msgstr[1] ""
+"Csaltál…\n"
+"De mégis adunk Önnek\n"
+"%1 pontot."
 
 #: components/SudokuBlocksGrid.qml:462
 #, qt-format
@@ -293,4 +303,10 @@ msgid_plural ""
 "We give you\n"
 "%1 points."
 msgstr[0] ""
+"Gratulálunk!\n"
+"Adunk Önnek\n"
+"%1 pontot."
 msgstr[1] ""
+"Gratulálunk!\n"
+"Adunk Önnek\n"
+"%1 pontot."

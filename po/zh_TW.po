@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-07-18 10:13+0000\n"
+"PO-Revision-Date: 2014-07-23 02:45+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2014-07-19 06:14+0000\n"
+"X-Launchpad-Export-Date: 2014-07-23 06:58+0000\n"
 "X-Generator: Launchpad (build 17114)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
@@ -99,19 +99,19 @@ msgstr "顯示設定"
 
 #: sudoku-app.qml:75 sudoku-app.qml:76
 msgid "Change difficulty to Easy"
-msgstr "調整難度為簡單"
+msgstr "將難度調至容易"
 
 #: sudoku-app.qml:88 sudoku-app.qml:89
 msgid "Change difficulty to Moderate"
-msgstr "調整難度為適中"
+msgstr "將難度調至適中"
 
 #: sudoku-app.qml:101 sudoku-app.qml:102
 msgid "Change difficulty to Hard"
-msgstr "調整難度為困難"
+msgstr "將難度調至困難"
 
 #: sudoku-app.qml:114 sudoku-app.qml:115
 msgid "Change difficulty to Ultra Hard"
-msgstr "調整難度為超難"
+msgstr "將難度調至超難"
 
 #: sudoku-app.qml:127 sudoku-app.qml:128
 msgid "Change theme to Simple"
@@ -155,11 +155,11 @@ msgstr "新遊戲"
 
 #: sudoku-app.qml:356
 msgid "Select difficulty level"
-msgstr "選取困難等級"
+msgstr "選擇難度"
 
 #: sudoku-app.qml:420 sudoku-app.qml:1038
 msgid "Easy"
-msgstr "簡單"
+msgstr "容易"
 
 #: sudoku-app.qml:439 sudoku-app.qml:1038
 msgid "Moderate"
