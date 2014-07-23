@@ -746,7 +746,7 @@ MainView {
                             }
                         }
                     }
-                    ToolbarButton {                        
+                    ToolbarButton {
                         action: Action {
                             objectName: "hintbutton"
                             id: revealHintAction
@@ -895,6 +895,8 @@ MainView {
             property alias themeIndex: themeSelector.selectedIndex;
 
             page: Page {
+                objectName: "settingsPage"
+
                 anchors {
                     left: parent.left
                     right: parent.right

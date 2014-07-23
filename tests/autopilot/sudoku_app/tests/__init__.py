@@ -1,9 +1,17 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
-# Copyright 2013 Canonical
+# Copyright 2013, 2014 Canonical
 #
-# This program is free software: you can redistribute it and/or modify it
-# under the terms of the GNU General Public License version 3, as published
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License version 3, as published
 # by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 """Sudoku app autopilot tests."""
 
@@ -12,13 +20,15 @@ import shutil
 import logging
 
 from autopilot.input import Mouse, Touch, Pointer
+from autopilot.matchers import Eventually
 from autopilot.platform import model
 from autopilot.testcase import AutopilotTestCase
-
+from testtools.matchers import Equals
 from ubuntuuitoolkit import (
     base,
     emulators as toolkit_emulators,
 )
+
 from sudoku_app import emulators
 
 logger = logging.getLogger(__name__)
@@ -54,6 +64,9 @@ class SudokuTestCase(AutopilotTestCase):
             self.launch_test_installed()
         else:
             self.launch_test_click()
+
+        self.assertThat(
+            self.main_view.visible, Eventually(Equals(True)))
 
     def launch_test_local(self):
         self.app = self.launch_test_application(

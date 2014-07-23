@@ -1,17 +1,38 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
-# Copyright 2013 Canonical
+# Copyright 2013, 2014 Canonical
 #
-# This program is free software: you can redistribute it and/or modify it
-# under the terms of the GNU General Public License version 3, as published
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License version 3, as published
 # by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 """Sudoku app autopilot emulators."""
 
-from ubuntuuitoolkit import emulators as toolkit_emulators
-import ubuntuuitoolkit._custom_proxy_objects
+import logging
+
+import autopilot.logging
+import ubuntuuitoolkit
+from autopilot import introspection
 
 
-class MainView(toolkit_emulators.MainView):
+logger = logging.getLogger(__name__)
+
+
+class MainView(ubuntuuitoolkit.MainView):
+
+    @autopilot.logging.log_action(logger.info)
+    def go_to_settings(self):
+        self.switch_to_tab('settingsTab')
+        settings_page = self.select_single(objectName='settingsPage')
+        settings_page.visible.wait_for(True)
+        return settings_page
 
     def get_blank_inputs(self):
         # generate a list of blank input fields from the game board
@@ -109,3 +130,42 @@ class MainView(toolkit_emulators.MainView):
     def get_new_game_button(self, objectName):
         return self.wait_select_single("NewGameSelectionButton",
                                        objectName=objectName)
+
+
+class SettingsPage(ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase):
+
+    """Autopilot helper for the Settings page."""
+
+    @classmethod
+    def validate_dbus_object(cls, path, state):
+        name = introspection.get_classname_from_path(path)
+        if name == b'Page10':
+            if state['objectName'][1] == 'settingsPage':
+                return True
+        return False
+
+    @autopilot.logging.log_action(logger.info)
+    def add_profile(self, last_name, first_name):
+        add_profile_item = self.select_single(
+            'SingleValue', objectName='Add profile')
+        self.pointing_device.click_object(add_profile_item)
+        dialog = self.get_root_instance().select_single(
+            Dialog, objectName='Add new profile')
+        dialog.add_new_profile(last_name, first_name)
+
+
+class Dialog(ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase):
+
+    """Autopilot helper for the Add new profile dialog."""
+
+    @autopilot.logging.log_action(logger.debug)
+    def add_new_profile(self, last_name, first_name):
+        last_name_text_field = self.select_single(
+            ubuntuuitoolkit.TextField, objectName='Lastname')
+        last_name_text_field.write(last_name)
+        first_name_text_field = self.select_single(
+            ubuntuuitoolkit.TextField, objectName='Firstname')
+        first_name_text_field.write(first_name)
+        ok_button = self.select_single(
+            'SudokuDialogButton', objectName='OKbutton')
+        self.pointing_device.click_object(ok_button)
