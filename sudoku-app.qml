@@ -642,7 +642,7 @@ MainView {
         }
 
         if(Settings.getSetting("currentUserId")=="Unknown")
-            currentUserId = -1;
+            currentUserId = 1;
         else
         {
             currentUserId = Settings.getSetting("currentUserId")
