@@ -908,15 +908,15 @@ MainView {
                 Component {
                     id: profileSelector
                     Dialog  {
+                        objectName: "selectProfileDialog"
                         title: i18n.tr("Select profile")
-
-
 
                         Column{
                             height: mainColumnSettings.height*2/3
                             ListView {
 
                                 id: profileListView
+                                objectName: "profileListView"
                                 clip: true
                                 width: parent.width
                                 height: parent.height - units.gu(12)
@@ -937,7 +937,6 @@ MainView {
                             }
 
                             SudokuDialogButton{
-
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 id:cancelButton
                                 buttonText: i18n.tr("Cancel")
@@ -958,12 +957,14 @@ MainView {
                 Component {
                     id: manageProfileSelector
                     Dialog {
+                        objectName: "manageProfileDialog"
                         title: i18n.tr("Select profile")
 
                         Column{
                             height: mainColumnSettings.height*2/3
                             ListView {
                                 id: manageProfileListView
+                                objectName: "manageProfileListView"
                                 clip: true
                                 width: parent.width
                                 height: parent.height - units.gu(12)
@@ -990,6 +991,7 @@ MainView {
 
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 id:cancelButton
+                                objectName: "cancelButton"
                                 buttonText: i18n.tr("Cancel")
                                 width: parent.width/2;
                                 size: units.gu(5)

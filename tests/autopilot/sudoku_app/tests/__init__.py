@@ -29,7 +29,7 @@ from ubuntuuitoolkit import (
     emulators as toolkit_emulators,
 )
 
-from sudoku_app import emulators
+import sudoku_app
 
 logger = logging.getLogger(__name__)
 
@@ -59,24 +59,25 @@ class SudokuTestCase(AutopilotTestCase):
         self.addCleanup(self.restore_sqlite_db)
 
         if os.path.exists(self.local_location):
-            self.launch_test_local()
+            app_proxy = self.launch_test_local()
         elif os.path.exists('/usr/share/sudoku-app/sudoku-app.qml'):
-            self.launch_test_installed()
+            app_proxy = self.launch_test_installed()
         else:
-            self.launch_test_click()
+            app_proxy = self.launch_test_click()
 
+        self.app = sudoku_app.SudokuApp(app_proxy)
         self.assertThat(
-            self.main_view.visible, Eventually(Equals(True)))
+            self.app.main_view.visible, Eventually(Equals(True)))
 
     def launch_test_local(self):
-        self.app = self.launch_test_application(
+        return self.launch_test_application(
             base.get_qmlscene_launch_command(),
             self.local_location,
             app_type='qt',
             emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
 
     def launch_test_installed(self):
-        self.app = self.launch_test_application(
+        return self.launch_test_application(
             base.get_qmlscene_launch_command(),
             "/usr/share/sudoku-app/sudoku-app.qml",
             "--desktop_file_hint=/usr/share/applications/sudoku-app.desktop",
@@ -84,7 +85,7 @@ class SudokuTestCase(AutopilotTestCase):
             emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
 
     def launch_test_click(self):
-        self.app = self.launch_click_package(
+        return self.launch_click_package(
             'com.ubuntu.sudoku',
             emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
 
@@ -116,7 +117,3 @@ class SudokuTestCase(AutopilotTestCase):
                 shutil.move(self.backup_dir, self.sqlite_dir)
             except:
                 logger.error("Failed to restore database")
-
-    @property
-    def main_view(self):
-        return self.app.select_single(emulators.MainView)
