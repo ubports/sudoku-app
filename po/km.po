@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-07-24 04:37+0000\n"
+"PO-Revision-Date: 2014-07-24 07:56+0000\n"
 "Last-Translator: Sok Sophea <sksophea@gmail.com>\n"
 "Language-Team: Khmer <km@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2014-07-24 06:28+0000\n"
+"X-Launchpad-Export-Date: 2014-07-25 07:51+0000\n"
 "X-Generator: Launchpad (build 17114)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
@@ -111,49 +111,51 @@ msgstr "ប្ដូរ​ពី​លំបាក​ទៅ​លំបាក​
 
 #: sudoku-app.qml:114 sudoku-app.qml:115
 msgid "Change difficulty to Ultra Hard"
-msgstr ""
+msgstr "ប្ដូរ​ពី​លំបាក​ទៅ​លំបាក​បំផុត"
 
 #: sudoku-app.qml:127 sudoku-app.qml:128
 msgid "Change theme to Simple"
-msgstr ""
+msgstr "ប្ដូរ​រូបរាង​ទៅ​ធម្មតា"
 
 #: sudoku-app.qml:137 sudoku-app.qml:138
 msgid "Change theme to UbuntuColors"
-msgstr ""
+msgstr "ប្ដូរ​រូបរាង​ទៅ UbuntuColors"
 
 #: sudoku-app.qml:147 sudoku-app.qml:148
 msgid "Show scores for all users"
-msgstr ""
+msgstr "បង្ហាញ​ពិន្ទុ​សម្រាប់​អ្នកប្រើ​ទាំងអស់"
 
 #: sudoku-app.qml:167 sudoku-app.qml:168
 msgid "Show scores for current user"
-msgstr ""
+msgstr "បង្ហាញ​ពិន្ទុ​សម្រាប់​អ្នកប្រើ​បច្ចុប្បន្ន"
 
 #: sudoku-app.qml:227
 msgid ""
 "You are a cheat... \n"
 "But we give you\n"
 msgstr ""
+"អ្នក​បាន​បន្លំ... \n"
+"ប៉ុន្តែ​យើង​ផ្ដល់​ឲ្យ​អ្នក\n"
 
 #: sudoku-app.qml:229
 msgid "points."
-msgstr ""
+msgstr "ពិន្ទុ។"
 
 #: sudoku-app.qml:326
 msgid "Sudoku games played today"
-msgstr ""
+msgstr "បាន​ល្បែង Sudoku លេង​ថ្ងៃនេះ"
 
 #: sudoku-app.qml:327
 msgid "No Sudoku games played today"
-msgstr ""
+msgstr "មិន​បាន​ល្បែង Sudoku ទេ​ថ្ងៃនេះ"
 
 #: sudoku-app.qml:355
 msgid "New Game"
-msgstr ""
+msgstr "ល្បែង​ថ្មី"
 
 #: sudoku-app.qml:356
 msgid "Select difficulty level"
-msgstr ""
+msgstr "ជ្រើស​កម្រិត​លំបាក"
 
 #: sudoku-app.qml:420 sudoku-app.qml:1038
 msgid "Easy"
@@ -172,6 +174,8 @@ msgid ""
 "Ultra\n"
 "Hard"
 msgstr ""
+"ខ្លាំង\n"
+"មធ្យម"
 
 #: sudoku-app.qml:665
 msgid "Sudoku"
@@ -203,7 +207,7 @@ msgstr "រំលេច​ប្លុក"
 
 #: sudoku-app.qml:881
 msgid "Scores"
-msgstr ""
+msgstr "ពិន្ទុ"
 
 #: sudoku-app.qml:890
 msgid "Settings"
@@ -211,15 +215,15 @@ msgstr "ការកំណត់"
 
 #: sudoku-app.qml:909 sudoku-app.qml:959
 msgid "Select profile"
-msgstr ""
+msgstr "ជ្រើស​ប្រវត្តិរូប"
 
 #: sudoku-app.qml:1031
 msgid "<b>Sudoku settings</b>"
-msgstr ""
+msgstr "<b>ការ​កំណត់ Sudoku</b>"
 
 #: sudoku-app.qml:1037
 msgid "Default Difficulty"
-msgstr ""
+msgstr "ភាព​លំបាក​លំនាំដើម"
 
 #: sudoku-app.qml:1038
 msgid "Ultra Hard"
@@ -227,7 +231,7 @@ msgstr "ពិបាក​ខ្លាំង"
 
 #: sudoku-app.qml:1038
 msgid "Always ask"
-msgstr ""
+msgstr "សួរ​ជា​និច្ច"
 
 #: sudoku-app.qml:1076
 msgid "Theme"
@@ -235,27 +239,27 @@ msgstr "រូបរាង"
 
 #: sudoku-app.qml:1100
 msgid "Hints"
-msgstr ""
+msgstr "ព័ត៌មាន​ជំនួយ"
 
 #: sudoku-app.qml:1116
 msgid "Vibration Alerts"
-msgstr ""
+msgstr "ជូនដំណឹង​ញ័រ"
 
 #: sudoku-app.qml:1131
 msgid "<b>Profiles settings</b>"
-msgstr ""
+msgstr "<b>ការ​កំណត់​ប្រវត្តិរូប</b>"
 
 #: sudoku-app.qml:1139
 msgid "None"
-msgstr ""
+msgstr "​គ្មាន"
 
 #: sudoku-app.qml:1172
 msgid "Add profile"
-msgstr ""
+msgstr "បន្ថែម​ប្រវត្តិរូប"
 
 #: sudoku-app.qml:1181
 msgid "Manage profiles"
-msgstr ""
+msgstr "គ្រប់គ្រង​ប្រវត្តិរូប"
 
 #: sudoku-app.qml:1213
 msgid "About"
@@ -263,11 +267,11 @@ msgstr "អំពី"
 
 #: components/SudokuBlocksGrid.qml:327
 msgid "Please pick a number"
-msgstr ""
+msgstr "សូម​ជ្រើស​លេខ"
 
 #: components/SudokuBlocksGrid.qml:388
 msgid "Clear"
-msgstr ""
+msgstr "សម្អាត"
 
 #: components/SudokuBlocksGrid.qml:455
 #, qt-format
@@ -280,7 +284,9 @@ msgid_plural ""
 "But we give you\n"
 "%1 points."
 msgstr[0] ""
-msgstr[1] ""
+"អ្នក​បាន​បន្លំ...\n"
+"ប៉ុន្តែ​យើង​ផ្ដល់ឲ្យ​អ្នក\n"
+"%1 ពិន្ទុ។"
 
 #: components/SudokuBlocksGrid.qml:462
 #, qt-format
@@ -293,4 +299,6 @@ msgid_plural ""
 "We give you\n"
 "%1 points."
 msgstr[0] ""
-msgstr[1] ""
+"អបអរសាទរ!\n"
+"យើង​ផ្ដល់ឲ្យ​អ្នក\n"
+"%1 ពិន្ទុ។"
