@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-07-27 15:50+0000\n"
-"Last-Translator: Aron Xu <Unknown>\n"
+"PO-Revision-Date: 2014-07-29 02:11+0000\n"
+"Last-Translator: Luo Lei <luolei@ubuntukylin.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2014-07-28 06:42+0000\n"
+"X-Launchpad-Export-Date: 2014-07-29 06:47+0000\n"
 "X-Generator: Launchpad (build 17131)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
@@ -27,11 +27,11 @@ msgstr "<b>所有人的最高分</b>"
 #: components/HighscoresTab.qml:49 sudoku-app.qml:175
 #, qt-format
 msgid "Best scores for %1 %2"
-msgstr ""
+msgstr "%2%1的最高分"
 
 #: components/AddProfileDialog.qml:13
 msgid "Add new profile"
-msgstr ""
+msgstr "添加新配置"
 
 #: components/AddProfileDialog.qml:31
 msgid "Lastname"
@@ -79,7 +79,7 @@ msgstr "版本： "
 
 #: components/ManageProfileDialog.qml:13
 msgid "Edit profile"
-msgstr ""
+msgstr "编辑配置"
 
 #: components/ManageProfileDialog.qml:107
 msgid "Delete"
@@ -139,7 +139,7 @@ msgstr ""
 
 #: sudoku-app.qml:229
 msgid "points."
-msgstr "点"
+msgstr "分。"
 
 #: sudoku-app.qml:326
 msgid "Sudoku games played today"
@@ -265,11 +265,11 @@ msgstr "关于"
 
 #: components/SudokuBlocksGrid.qml:327
 msgid "Please pick a number"
-msgstr ""
+msgstr "请选择一个数字"
 
 #: components/SudokuBlocksGrid.qml:388
 msgid "Clear"
-msgstr ""
+msgstr "清除"
 
 #: components/SudokuBlocksGrid.qml:455
 #, qt-format
