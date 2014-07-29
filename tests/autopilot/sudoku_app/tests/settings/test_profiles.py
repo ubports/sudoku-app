@@ -44,23 +44,27 @@ class ProfilesTestCase(tests.SudokuTestCase):
         profiles = self.settings_page.get_profiles()
         self.assertIn(
             self.format_profile_name(test_first_name, test_last_name),
-            profiles)
+            profiles
+        )
 
     def test_change_profile_must_update_selected_profile(self):
         test_first_name, test_last_name = self.add_new_test_profile()
         formated_test_profile_name = self.format_profile_name(
-            test_first_name, test_last_name)
+            test_first_name, test_last_name
+        )
 
         self.settings_page.change_profile(formated_test_profile_name)
 
         self.assertEqual(
             self.settings_page.get_current_profile(),
-            formated_test_profile_name)
+            formated_test_profile_name
+        )
 
     def test_delete_profile_must_remove_it_from_manage_profiles(self):
         test_first_name, test_last_name = self.add_new_test_profile()
         formated_test_profile_name = self.format_profile_name(
-            test_first_name, test_last_name)
+            test_first_name, test_last_name
+        )
 
         self.settings_page.delete_profile(formated_test_profile_name)
 

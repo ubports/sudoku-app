@@ -67,14 +67,17 @@ class SudokuTestCase(AutopilotTestCase):
 
         self.app = sudoku_app.SudokuApp(app_proxy)
         self.assertThat(
-            self.app.main_view.visible, Eventually(Equals(True)))
+            self.app.main_view.visible,
+            Eventually(Equals(True))
+        )
 
     def launch_test_local(self):
         return self.launch_test_application(
             base.get_qmlscene_launch_command(),
             self.local_location,
             app_type='qt',
-            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
+            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase
+        )
 
     def launch_test_installed(self):
         return self.launch_test_application(
@@ -82,12 +85,14 @@ class SudokuTestCase(AutopilotTestCase):
             "/usr/share/sudoku-app/sudoku-app.qml",
             "--desktop_file_hint=/usr/share/applications/sudoku-app.desktop",
             app_type='qt',
-            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
+            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase
+        )
 
     def launch_test_click(self):
         return self.launch_click_package(
             'com.ubuntu.sudoku',
-            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
+            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase
+        )
 
     def temp_move_sqlite_db(self):
         try:
@@ -110,8 +115,9 @@ class SudokuTestCase(AutopilotTestCase):
                 try:
                     shutil.rmtree(self.sqlite_dir)
                 except:
-                    logger.error("Failed to remove test database and restore" /
-                                 "database")
+                    logger.error(
+                        'Failed to remove test database and restore database'
+                    )
                     return
             try:
                 shutil.move(self.backup_dir, self.sqlite_dir)

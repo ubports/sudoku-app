@@ -39,14 +39,17 @@ class SettingsPage(ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase):
     def add_profile(self, last_name, first_name):
         self._click_item('Add profile')
         dialog = self.get_root_instance().select_single(
-            objectName='Add new profile')
+            objectName='Add new profile'
+        )
         dialog.add_new_profile(last_name, first_name)
 
     @autopilot.logging.log_action(logger.debug)
     def _click_item(self, object_name):
         item = self.select_single(objectName=object_name)
         flickable = self.select_single(
-            ubuntuuitoolkit.QQuickFlickable, objectName='settingsContainer')
+            ubuntuuitoolkit.QQuickFlickable,
+            objectName='settingsContainer'
+        )
         flickable.swipe_child_into_view(item)
         self.pointing_device.click_object(item)
 
@@ -61,7 +64,8 @@ class SettingsPage(ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase):
     def _go_to_manage_profiles(self):
         self._click_item('Manage profiles')
         return self.get_root_instance().select_single(
-            objectName='manageProfileDialog')
+            objectName='manageProfileDialog'
+        )
 
     @autopilot.logging.log_action(logger.debug)
     def change_profile(self, profile_name):
@@ -72,7 +76,8 @@ class SettingsPage(ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase):
     def _go_to_select_profiles(self):
         self._click_item('Current profile')
         return self.get_root_instance().select_single(
-            objectName='selectProfileDialog')
+            objectName='selectProfileDialog'
+        )
 
     def get_current_profile(self):
         """Return the name of the current profile."""
@@ -107,15 +112,21 @@ class AddNewProfileDialog(
     @autopilot.logging.log_action(logger.debug)
     def _fill_form(self, last_name, first_name):
         last_name_text_field = self.select_single(
-            ubuntuuitoolkit.TextField, objectName='Lastname')
+            ubuntuuitoolkit.TextField,
+            objectName='Lastname'
+        )
         last_name_text_field.write(last_name)
         first_name_text_field = self.select_single(
-            ubuntuuitoolkit.TextField, objectName='Firstname')
+            ubuntuuitoolkit.TextField,
+            objectName='Firstname'
+        )
         first_name_text_field.write(first_name)
 
     def _click_ok(self):
         ok_button = self.select_single(
-            'SudokuDialogButton', objectName='OKbutton')
+            'SudokuDialogButton',
+            objectName='OKbutton'
+        )
         self.pointing_device.click_object(ok_button)
 
 
@@ -127,7 +138,8 @@ class ProfileDialog(ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase):
         """Return a list with the names of the existing profiles."""
         profile_list_view = self._get_profile_list_view()
         profile_items = profile_list_view.select_many(
-            ubuntuuitoolkit.listitems.Standard)
+            ubuntuuitoolkit.listitems.Standard
+        )
         # Sort by the position on the list.
         sorted_items = sorted(
             profile_items,
@@ -138,13 +150,16 @@ class ProfileDialog(ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase):
     def _get_profile_list_view(self):
         return self.select_single(
             ubuntuuitoolkit.QQuickListView,
-            objectName=self.PROFILE_LIST_VIEW_OBJECT_NAME)
+            objectName=self.PROFILE_LIST_VIEW_OBJECT_NAME
+        )
 
     @autopilot.logging.log_action(logger.debug)
     def click_profile(self, profile_name):
         profile_list_view = self._get_profile_list_view()
         profile_item = profile_list_view.select_single(
-            ubuntuuitoolkit.listitems.Standard, text=profile_name)
+            ubuntuuitoolkit.listitems.Standard,
+            text=profile_name
+        )
         self.pointing_device.click_object(profile_item)
 
 
@@ -184,7 +199,9 @@ class ManageProfileDialog(ProfileDialog):
     @autopilot.logging.log_action(logger.debug)
     def click_cancel(self):
         cancel_button = self.select_single(
-            'SudokuDialogButton', objectName='cancelButton')
+            'SudokuDialogButton',
+            objectName='cancelButton'
+        )
         self.pointing_device.click_object(cancel_button)
         self.wait_until_destroyed()
 
