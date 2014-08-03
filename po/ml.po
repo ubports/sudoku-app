@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2013-07-18 12:02+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2014-08-02 16:18+0000\n"
+"Last-Translator: ST Alfas <Unknown>\n"
 "Language-Team: Malayalam <ml@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-06-21 06:28+0000\n"
-"X-Generator: Launchpad (build 17058)\n"
+"X-Launchpad-Export-Date: 2014-08-03 06:11+0000\n"
+"X-Generator: Launchpad (build 17147)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
@@ -87,7 +87,7 @@ msgstr ""
 
 #: sudoku-app.qml:50 sudoku-app.qml:51 sudoku-app.qml:736
 msgid "New game"
-msgstr ""
+msgstr "പുതിയ കളി"
 
 #: sudoku-app.qml:58 sudoku-app.qml:59
 msgid "Reveal hint"
@@ -157,15 +157,15 @@ msgstr ""
 
 #: sudoku-app.qml:420 sudoku-app.qml:1038
 msgid "Easy"
-msgstr ""
+msgstr "എളുപ്പം"
 
 #: sudoku-app.qml:439 sudoku-app.qml:1038
 msgid "Moderate"
-msgstr ""
+msgstr "ഇടത്തരം"
 
 #: sudoku-app.qml:456 sudoku-app.qml:1038
 msgid "Hard"
-msgstr ""
+msgstr "കഠിനം"
 
 #: sudoku-app.qml:473
 msgid ""
@@ -175,23 +175,23 @@ msgstr ""
 
 #: sudoku-app.qml:665
 msgid "Sudoku"
-msgstr ""
+msgstr "സുഡോകു"
 
 #: sudoku-app.qml:720
 msgid "You are a cheat..."
-msgstr ""
+msgstr "നിങ്ങൾ ചതിയനാണ്  ..."
 
 #: sudoku-app.qml:720
 msgid "Congratulations!"
-msgstr ""
+msgstr "അഭിനന്ദനങ്ങള്‍"
 
 #: sudoku-app.qml:754
 msgid "Show hint"
-msgstr ""
+msgstr "സൂചന കാണിക്കൂ"
 
 #: sudoku-app.qml:817
 msgid "Not allowed"
-msgstr ""
+msgstr "അനുവദനീയമല്ല"
 
 #: sudoku-app.qml:837
 msgid "Start blocks"
@@ -199,7 +199,7 @@ msgstr ""
 
 #: sudoku-app.qml:858
 msgid "Hinted blocks"
-msgstr ""
+msgstr "സൂചനയുള്ള കളങ്ങൾ"
 
 #: sudoku-app.qml:881
 msgid "Scores"
@@ -207,7 +207,7 @@ msgstr ""
 
 #: sudoku-app.qml:890
 msgid "Settings"
-msgstr ""
+msgstr "ക്രമീകരണങ്ങള്‍"
 
 #: sudoku-app.qml:909 sudoku-app.qml:959
 msgid "Select profile"
@@ -223,7 +223,7 @@ msgstr ""
 
 #: sudoku-app.qml:1038
 msgid "Ultra Hard"
-msgstr ""
+msgstr "അതികഠിനം"
 
 #: sudoku-app.qml:1038
 msgid "Always ask"
@@ -231,7 +231,7 @@ msgstr ""
 
 #: sudoku-app.qml:1076
 msgid "Theme"
-msgstr ""
+msgstr "കെട്ടും മട്ടും"
 
 #: sudoku-app.qml:1100
 msgid "Hints"
@@ -259,7 +259,7 @@ msgstr ""
 
 #: sudoku-app.qml:1213
 msgid "About"
-msgstr ""
+msgstr "വിവരം"
 
 #: components/SudokuBlocksGrid.qml:327
 msgid "Please pick a number"
