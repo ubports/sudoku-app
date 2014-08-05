@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sudokutouchgame\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-07-30 12:40+0000\n"
+"PO-Revision-Date: 2014-08-04 12:13+0000\n"
 "Last-Translator: Jay ZDLin <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2014-07-31 07:11+0000\n"
-"X-Generator: Launchpad (build 17131)\n"
+"X-Launchpad-Export-Date: 2014-08-05 06:42+0000\n"
+"X-Generator: Launchpad (build 17147)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
@@ -28,7 +28,7 @@ msgstr "<b>Рекорды всех игроков</b>"
 #: components/HighscoresTab.qml:49 sudoku-app.qml:175
 #, qt-format
 msgid "Best scores for %1 %2"
-msgstr ""
+msgstr "Наилучший результат %1 %2"
 
 #: components/AddProfileDialog.qml:13
 msgid "Add new profile"
@@ -80,11 +80,11 @@ msgstr "Версия: "
 
 #: components/ManageProfileDialog.qml:13
 msgid "Edit profile"
-msgstr ""
+msgstr "Редактировать профиль"
 
 #: components/ManageProfileDialog.qml:107
 msgid "Delete"
-msgstr ""
+msgstr "Удалить"
 
 #: sudoku-app.qml:50 sudoku-app.qml:51 sudoku-app.qml:736
 msgid "New game"
@@ -268,11 +268,11 @@ msgstr "О игре"
 
 #: components/SudokuBlocksGrid.qml:327
 msgid "Please pick a number"
-msgstr ""
+msgstr "Выберите число"
 
 #: components/SudokuBlocksGrid.qml:388
 msgid "Clear"
-msgstr ""
+msgstr "Очистить"
 
 #: components/SudokuBlocksGrid.qml:455
 #, qt-format
@@ -285,7 +285,17 @@ msgid_plural ""
 "But we give you\n"
 "%1 points."
 msgstr[0] ""
+"Вы жульничали...\n"
+"Но вы получаете\n"
+"%1 балл."
 msgstr[1] ""
+"Вы жульничали...\n"
+"Но вы получаете\n"
+"%1 балла."
+msgstr[2] ""
+"Вы жульничали...\n"
+"Но вы получаете\n"
+"%1 баллов."
 
 #: components/SudokuBlocksGrid.qml:462
 #, qt-format
@@ -298,4 +308,14 @@ msgid_plural ""
 "We give you\n"
 "%1 points."
 msgstr[0] ""
+"Поздравляем!\n"
+"Вы получаете\n"
+"%1 балл."
 msgstr[1] ""
+"Поздравляем!\n"
+"Вы получаете\n"
+"%1 балла."
+msgstr[2] ""
+"Поздравляем!\n"
+"Вы получаете\n"
+"%1 баллов."
