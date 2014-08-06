@@ -12,7 +12,7 @@ import UserMetrics 0.1
 
 Tab {
 
-    property alias highscoresModel: highscoresModel
+    //property alias highscoresModel: highscoresModel
 
     page: Page {
         tools: ToolbarItems {

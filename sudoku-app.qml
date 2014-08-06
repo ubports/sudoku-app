@@ -636,7 +636,7 @@ MainView {
             var firstName = Settings.getUserFirstName(rowItem[0])
             var lastName = Settings.getUserLastName(rowItem[0])
             //print(firstName, lastName)
-            highscoresTab.highscoresModel.append({'firstname': firstName,
+            highscoresModel.append({'firstname': firstName,
                                        'lastname':  lastName,
                                        'score': rowItem[1] });
         }
