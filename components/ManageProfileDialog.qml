@@ -26,25 +26,6 @@ Component {
                 color: "#AEA79F"
                 anchors.horizontalCenter: parent.horizontalCenter
                 TextField {
-                    id:lastnameField
-                    text: Settings.getUserLastName(editUserId)
-                    anchors.fill: parent
-                    //placeholderText: i18n.tr("Lastname")
-                    color: "white"
-                    onFocusChanged: {
-                        if (lastnameField.focus)
-                            lastnameField.color = "#333333"
-                        else lastnameField.color = "white"
-                    }
-                }
-            }
-            UbuntuShape {
-                width: parent.width - units.gu(4)
-                height: mainView.height/18
-                radius: "medium"
-                color: "#AEA79F"
-                anchors.horizontalCenter: parent.horizontalCenter
-                TextField {
                     id:firstnameField
                     anchors.fill: parent
                     //placeholderText: i18n.tr("Firstname")
@@ -57,6 +38,26 @@ Component {
                     }
                 }
             }
+            UbuntuShape {
+                width: parent.width - units.gu(4)
+                height: mainView.height/18
+                radius: "medium"
+                color: "#AEA79F"
+                anchors.horizontalCenter: parent.horizontalCenter
+                TextField {
+                    id:lastnameField
+                    text: Settings.getUserLastName(editUserId)
+                    anchors.fill: parent
+                    //placeholderText: i18n.tr("Lastname")
+                    color: "white"
+                    onFocusChanged: {
+                        if (lastnameField.focus)
+                            lastnameField.color = "#333333"
+                        else lastnameField.color = "white"
+                    }
+                }
+            }
+
 
 
             Row{
