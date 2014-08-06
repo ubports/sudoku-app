@@ -1136,7 +1136,7 @@ MainView {
                         }
                         ListItem.SingleValue {
                             objectName: "Current profile"
-                            text: "Current profile"
+                            text: i18n.tr("Current profile")
                             id: selectorProfile
                             value: {
                                 if(currentUserId==-1)
