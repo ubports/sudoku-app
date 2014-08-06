@@ -57,6 +57,7 @@ Column {
     }
 
     function calculateScore() {
+        //print("SCORE: ", gameDifficulty, numberOfActions, numberOfHints, gameSeconds)
         return Math.round((100000 * ((gameDifficulty+1)/(numberOfActions + (1000*numberOfHints) + gameSeconds))))
     }
 

@@ -193,6 +193,7 @@ MainView {
     }
 
     function insertNewGameScore(userId, score) {
+        print(userId,score)
         Settings.insertNewScore(userId, score)
     }
 
@@ -210,9 +211,13 @@ MainView {
             var firstName = Settings.getUserFirstName(rowItem[0]);
             var lastName = Settings.getUserLastName(rowItem[0]);
             //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
-            highscoresModel.append({'firstname': firstName,
+            /*highscoresModel.append({'firstname': firstName,
                                        'lastname':  lastName,
-                                       'score': rowItem[1] });
+                                       'score': rowItem[1] });*/
+            hsPage.appendModel({'firstname': firstName,
+                                   'lastname':  lastName,
+                                   'score': rowItem[1] })
+
         }
     }
 
@@ -233,7 +238,8 @@ MainView {
                 //                print (sudokuBlocksGrid.gameSeconds)
                 //                print (sudokuBlocksGrid.gameDifficulty)
                 var allScores = Settings.getAllScores()
-                highscoresModel.clear();
+                //highscoresModel.clear();
+                hsPage.clearModel()
                 highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
                 for(var i = 0; i < allScores.length; i++) {
                     var rowItem = allScores[i];
@@ -241,9 +247,12 @@ MainView {
                     var firstName = Settings.getUserFirstName(rowItem[0]);
                     var lastName = Settings.getUserLastName(rowItem[0]);
                     //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
-                    highscoresModel.append({'firstname': firstName,
+                    /*highscoresModel.append({'firstname': firstName,
                                                'lastname':  lastName,
-                                               'score': rowItem[1] });
+                                               'score': rowItem[1] });*/
+                    hsPage.appendModel({'firstname': firstName,
+                                           'lastname':  lastName,
+                                           'score': rowItem[1] })
                 }
 
                 winTimer.restart();
@@ -257,21 +266,25 @@ MainView {
             var randomnumber = Math.floor(Math.random()*9);
             randomnumber += 31;
             sudokuBlocksGrid.createNewGame(81 - randomnumber);
+            sudokuBlocksGrid.gameDifficulty = 0
             break;
         case 1:
             var randomnumber = Math.floor(Math.random()*4);
             randomnumber += 26;
             sudokuBlocksGrid.createNewGame(81 - randomnumber);
+            sudokuBlocksGrid.gameDifficulty = 1
             break;
         case 2:
             var randomnumber = Math.floor(Math.random()*4);
             randomnumber += 21;
             sudokuBlocksGrid.createNewGame(81 - randomnumber);
+            sudokuBlocksGrid.gameDifficulty = 2
             break;
         case 3:
             var randomnumber = Math.floor(Math.random()*3);
             randomnumber += 17;
             sudokuBlocksGrid.createNewGame(81 - randomnumber);
+            sudokuBlocksGrid.gameDifficulty = 3
             break;
         case 4:
             mainView.dialogLoaded = 1;
@@ -605,6 +618,9 @@ MainView {
     Component.onCompleted: {
         Settings.initialize();
         settingsTab.difficultyIndex = parseInt(Settings.getSetting("Difficulty"));
+        if (settingsTab.difficultyIndex < 0)
+            settingsTab.difficultyIndex = 0
+        print(settingsTab.difficultyIndex)
         //print(Settings.getSetting("DisableHints"));
         settingsTab.disableHintsChecked = Settings.getSetting("DisableHints") == "true" ? true : false;
         settingsTab.disableVibrationsChecked = Settings.getSetting("DisableVibrations") == "true" ? true : false;
@@ -636,9 +652,12 @@ MainView {
             var firstName = Settings.getUserFirstName(rowItem[0])
             var lastName = Settings.getUserLastName(rowItem[0])
             //print(firstName, lastName)
-            highscoresModel.append({'firstname': firstName,
+            /*highscoresModel.append({'firstname': firstName,
                                        'lastname':  lastName,
-                                       'score': rowItem[1] });
+                                       'score': rowItem[1] });*/
+            hsPage.appendModel({'firstname': firstName,
+                                   'lastname':  lastName,
+                                   'score': rowItem[1] })
         }
 
         if(Settings.getSetting("currentUserId")=="Unknown")
@@ -875,10 +894,11 @@ MainView {
 
         // Highscores Tab
 
-        HighscoresTab {
+        Tab {
             id: highscoresTab
             objectName: "highscoresTab"
             title: i18n.tr("Scores")
+            page: HighscoresTab{ id: hsPage }
         }
 
 
@@ -1048,24 +1068,28 @@ MainView {
                                     randomnumber += 31;
                                     sudokuBlocksGrid.createNewGame(81 - randomnumber);
                                     Settings.setSetting("Difficulty", selectedIndex)
+                                    sudokuBlocksGrid.gameDifficulty = 0
                                     break;
                                 case 1:
                                     var randomnumber = Math.floor(Math.random()*4);
                                     randomnumber += 26;
                                     sudokuBlocksGrid.createNewGame(81 - randomnumber);
                                     Settings.setSetting("Difficulty", selectedIndex)
+                                    sudokuBlocksGrid.gameDifficulty = 1
                                     break;
                                 case 2:
                                     var randomnumber = Math.floor(Math.random()*4);
                                     randomnumber += 21;
                                     sudokuBlocksGrid.createNewGame(81 - randomnumber);
                                     Settings.setSetting("Difficulty", selectedIndex)
+                                    sudokuBlocksGrid.gameDifficulty = 2
                                     break;
                                 case 3:
                                     var randomnumber = Math.floor(Math.random()*3);
                                     randomnumber += 17;
                                     sudokuBlocksGrid.createNewGame(81 - randomnumber);
                                     Settings.setSetting("Difficulty", selectedIndex)
+                                    sudokuBlocksGrid.gameDifficulty = 3
                                     break;
                                 case 4:
                                     Settings.setSetting("Difficulty", selectedIndex)
@@ -1145,6 +1169,9 @@ MainView {
                                     return Settings.getUserFirstName(currentUserId)+" "+Settings.getUserLastName(currentUserId);
 
                             }
+
+                            Component.onCompleted:
+                                currentUserId = Settings.getSetting("currentUserId")
 
                             onClicked: {
 
