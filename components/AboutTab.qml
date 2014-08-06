@@ -11,6 +11,7 @@ import Ubuntu.Unity.Action 1.0 as UnityActions
 import UserMetrics 0.1
 
 Tab {
+    objectName: "aboutTab"
     page: Page {
         Layouts {
             id: aboutTabLayout
@@ -27,7 +28,7 @@ Tab {
                             leftMargin: mainView.width*0.1
                             top: parent.top
                             topMargin: mainView.height*0.2
-                            
+
                         }
                         spacing: units.gu(5)
                         ItemLayout {
@@ -36,7 +37,7 @@ Tab {
                             property real maxWidth: units.gu(80)
                             width: Math.min(parent.width, maxWidth)/2
                             height: Math.min(parent.width, maxWidth)/2
-                            
+
                         }
                         Column {
                             //height: iconTabletItem.height
@@ -64,10 +65,10 @@ Tab {
                         }
                     }
                 }
-                
-                
+
+
             ]
-            
+
             Column {
                 id: aboutColumn;
                 spacing: units.gu(3)
@@ -87,7 +88,7 @@ Tab {
                         source: "../icons/about.png"
                         smooth: true
                         fillMode: Image.PreserveAspectFit
-                        
+
                     }
                 }
                 Grid {
@@ -99,7 +100,7 @@ Tab {
                     Label {
                         objectName: "authorLabel"
                         text: i18n.tr("Author(s): ")
-                        
+
                     }
                     Label {
                         objectName: "authors"
@@ -115,9 +116,9 @@ Tab {
                         font.bold: true;
                         text: "dinko.metalac@gmail.com"
                     }
-                    
+
                 }
-                
+
                 Row {
                     id: homepage;
                     anchors.horizontalCenter: parent.horizontalCenter;
@@ -149,12 +150,12 @@ Tab {
                         objectName: "yearLabel"
                         font.bold: true;
                         text: "2013"
-                        
-                        
+
+
                     }
                 }
             }
-            
+
         }
     }
 }
