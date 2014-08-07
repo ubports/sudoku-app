@@ -8,267 +8,271 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-06-14 16:50+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2014-08-06 11:15+0000\n"
+"Last-Translator: Marian Vasile <marianvasile1972@gmail.com>\n"
 "Language-Team: Romanian <ro@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1 ? 0: (((n % 100 > 19) || ((n % 100 "
 "== 0) && (n != 0))) ? 2: 1));\n"
-"X-Launchpad-Export-Date: 2014-06-21 06:28+0000\n"
-"X-Generator: Launchpad (build 17058)\n"
+"X-Launchpad-Export-Date: 2014-08-07 06:25+0000\n"
+"X-Generator: Launchpad (build 17147)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
 msgid "<b>Best scores for all players</b>"
-msgstr ""
+msgstr "<b>Cele mai bune rezultate ale tuturor jucătorilor</b>"
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
 #: components/HighscoresTab.qml:49 sudoku-app.qml:175
 #, qt-format
 msgid "Best scores for %1 %2"
-msgstr ""
+msgstr "Cele mai bune rezultate pentru %1 %2"
 
 #: components/AddProfileDialog.qml:13
 msgid "Add new profile"
-msgstr ""
+msgstr "Adaugă un profil nou"
 
 #: components/AddProfileDialog.qml:31
 msgid "Lastname"
-msgstr ""
+msgstr "Nume"
 
 #: components/AddProfileDialog.qml:49
 msgid "Firstname"
-msgstr ""
+msgstr "Prenume"
 
 #: components/AddProfileDialog.qml:66 components/ManageProfileDialog.qml:68
 #: sudoku-app.qml:339
 msgid "OK"
-msgstr ""
+msgstr "În regulă"
 
 #: components/AddProfileDialog.qml:82 components/AddProfileDialog.qml:87
 #: components/ManageProfileDialog.qml:94
 msgid "Warning"
-msgstr ""
+msgstr "Avertisment"
 
 #: components/AddProfileDialog.qml:82
 msgid "User already exist."
-msgstr ""
+msgstr "Utilizatorul există deja."
 
 #: components/AddProfileDialog.qml:87 components/ManageProfileDialog.qml:94
 msgid "Lastname and firstname must not be empty."
-msgstr ""
+msgstr "Trebuie să completați numele și prenumele."
 
 #: components/AddProfileDialog.qml:98 components/ManageProfileDialog.qml:126
 #: sudoku-app.qml:491 sudoku-app.qml:941 sudoku-app.qml:991
 #: components/SudokuBlocksGrid.qml:482
 msgid "Cancel"
-msgstr ""
+msgstr "Anulează"
 
 #: components/AboutTab.qml:101
 msgid "Author(s): "
-msgstr ""
+msgstr "Autor(i): "
 
 #: components/AboutTab.qml:111
 msgid "Contact: "
-msgstr ""
+msgstr "Contact: "
 
 #: components/AboutTab.qml:137
 msgid "Version: "
-msgstr ""
+msgstr "Versiune: "
 
 #: components/ManageProfileDialog.qml:13
 msgid "Edit profile"
-msgstr ""
+msgstr "Editare profil"
 
 #: components/ManageProfileDialog.qml:107
 msgid "Delete"
-msgstr ""
+msgstr "Șterge"
 
 #: sudoku-app.qml:50 sudoku-app.qml:51 sudoku-app.qml:736
 msgid "New game"
-msgstr ""
+msgstr "Joc nou"
 
 #: sudoku-app.qml:58 sudoku-app.qml:59
 msgid "Reveal hint"
-msgstr ""
+msgstr "Arată indiciu"
 
 #: sudoku-app.qml:67 sudoku-app.qml:68
 msgid "Show settings"
-msgstr ""
+msgstr "Arată configurările"
 
 #: sudoku-app.qml:75 sudoku-app.qml:76
 msgid "Change difficulty to Easy"
-msgstr ""
+msgstr "Modifică gradul de dificultate în Ușor"
 
 #: sudoku-app.qml:88 sudoku-app.qml:89
 msgid "Change difficulty to Moderate"
-msgstr ""
+msgstr "Modifică gradul de dificultate în Moderat"
 
 #: sudoku-app.qml:101 sudoku-app.qml:102
 msgid "Change difficulty to Hard"
-msgstr ""
+msgstr "Modifică gradul de dificultate în Dificil"
 
 #: sudoku-app.qml:114 sudoku-app.qml:115
 msgid "Change difficulty to Ultra Hard"
-msgstr ""
+msgstr "Modifică gradul de dificultate în Foarte dificil"
 
 #: sudoku-app.qml:127 sudoku-app.qml:128
 msgid "Change theme to Simple"
-msgstr ""
+msgstr "Modifică tema în Simplă"
 
 #: sudoku-app.qml:137 sudoku-app.qml:138
 msgid "Change theme to UbuntuColors"
-msgstr ""
+msgstr "Modifică tema în Culori Ubuntu"
 
 #: sudoku-app.qml:147 sudoku-app.qml:148
 msgid "Show scores for all users"
-msgstr ""
+msgstr "Afișează rezultatele pentru toți utilizatorii"
 
 #: sudoku-app.qml:167 sudoku-app.qml:168
 msgid "Show scores for current user"
-msgstr ""
+msgstr "Afișează rezultatele pentru utilizatorul curent"
 
 #: sudoku-app.qml:227
 msgid ""
 "You are a cheat... \n"
 "But we give you\n"
 msgstr ""
+"Trișați... \n"
+"Dar vă oferim\n"
 
 #: sudoku-app.qml:229
 msgid "points."
-msgstr ""
+msgstr "puncte."
 
 #: sudoku-app.qml:326
 msgid "Sudoku games played today"
-msgstr ""
+msgstr "Jocuri Sudoku jucate astăzi"
 
 #: sudoku-app.qml:327
 msgid "No Sudoku games played today"
-msgstr ""
+msgstr "Astăzi nu a fost jucat Sudoku"
 
 #: sudoku-app.qml:355
 msgid "New Game"
-msgstr ""
+msgstr "Joc nou"
 
 #: sudoku-app.qml:356
 msgid "Select difficulty level"
-msgstr ""
+msgstr "Alegeți un grad de dificultate"
 
 #: sudoku-app.qml:420 sudoku-app.qml:1038
 msgid "Easy"
-msgstr ""
+msgstr "Ușor"
 
 #: sudoku-app.qml:439 sudoku-app.qml:1038
 msgid "Moderate"
-msgstr ""
+msgstr "Moderat"
 
 #: sudoku-app.qml:456 sudoku-app.qml:1038
 msgid "Hard"
-msgstr ""
+msgstr "Dificil"
 
 #: sudoku-app.qml:473
 msgid ""
 "Ultra\n"
 "Hard"
 msgstr ""
+"Foarte\n"
+"dificil"
 
 #: sudoku-app.qml:665
 msgid "Sudoku"
-msgstr ""
+msgstr "Sudoku"
 
 #: sudoku-app.qml:720
 msgid "You are a cheat..."
-msgstr ""
+msgstr "Trișați..."
 
 #: sudoku-app.qml:720
 msgid "Congratulations!"
-msgstr ""
+msgstr "Felicitări!"
 
 #: sudoku-app.qml:754
 msgid "Show hint"
-msgstr ""
+msgstr "Arată indiciu"
 
 #: sudoku-app.qml:817
 msgid "Not allowed"
-msgstr ""
+msgstr "Nepermis"
 
 #: sudoku-app.qml:837
 msgid "Start blocks"
-msgstr ""
+msgstr "Blocuri de start"
 
 #: sudoku-app.qml:858
 msgid "Hinted blocks"
-msgstr ""
+msgstr "Blocuri cu indicii"
 
 #: sudoku-app.qml:881
 msgid "Scores"
-msgstr ""
+msgstr "Rezultate"
 
 #: sudoku-app.qml:890
 msgid "Settings"
-msgstr ""
+msgstr "Configurări"
 
 #: sudoku-app.qml:909 sudoku-app.qml:959
 msgid "Select profile"
-msgstr ""
+msgstr "Alegeți un profil"
 
 #: sudoku-app.qml:1031
 msgid "<b>Sudoku settings</b>"
-msgstr ""
+msgstr "<b>Configurări sudoku</b>"
 
 #: sudoku-app.qml:1037
 msgid "Default Difficulty"
-msgstr ""
+msgstr "Grad implicit de dificultate"
 
 #: sudoku-app.qml:1038
 msgid "Ultra Hard"
-msgstr ""
+msgstr "Foarte dificil"
 
 #: sudoku-app.qml:1038
 msgid "Always ask"
-msgstr ""
+msgstr "Se întreabă întotdeauna"
 
 #: sudoku-app.qml:1076
 msgid "Theme"
-msgstr ""
+msgstr "Temă"
 
 #: sudoku-app.qml:1100
 msgid "Hints"
-msgstr ""
+msgstr "Indicii"
 
 #: sudoku-app.qml:1116
 msgid "Vibration Alerts"
-msgstr ""
+msgstr "Alerte cu vibrații"
 
 #: sudoku-app.qml:1131
 msgid "<b>Profiles settings</b>"
-msgstr ""
+msgstr "<b>Configurări profil</b>"
 
 #: sudoku-app.qml:1139
 msgid "None"
-msgstr ""
+msgstr "Nimic"
 
 #: sudoku-app.qml:1172
 msgid "Add profile"
-msgstr ""
+msgstr "Adăugare profil"
 
 #: sudoku-app.qml:1181
 msgid "Manage profiles"
-msgstr ""
+msgstr "Administrare profile"
 
 #: sudoku-app.qml:1213
 msgid "About"
-msgstr ""
+msgstr "Despre"
 
 #: components/SudokuBlocksGrid.qml:327
 msgid "Please pick a number"
-msgstr ""
+msgstr "Alegeți un număr"
 
 #: components/SudokuBlocksGrid.qml:388
 msgid "Clear"
-msgstr ""
+msgstr "Șterge"
 
 #: components/SudokuBlocksGrid.qml:455
 #, qt-format
@@ -281,7 +285,17 @@ msgid_plural ""
 "But we give you\n"
 "%1 points."
 msgstr[0] ""
+"Trișați...\n"
+"Dar vă oferim\n"
+"%1 punct."
 msgstr[1] ""
+"Trișați...\n"
+"Dar vă oferim\n"
+"%1 puncte."
+msgstr[2] ""
+"Trișați...\n"
+"Dar vă oferim\n"
+"%1 de puncte."
 
 #: components/SudokuBlocksGrid.qml:462
 #, qt-format
@@ -294,4 +308,14 @@ msgid_plural ""
 "We give you\n"
 "%1 points."
 msgstr[0] ""
+"Felicitări!\n"
+"Vă oferim\n"
+"%1 punct."
 msgstr[1] ""
+"Felicitări!\n"
+"Vă oferim\n"
+"%1 puncte."
+msgstr[2] ""
+"Felicitări!\n"
+"Vă oferim\n"
+"%1 de puncte."
