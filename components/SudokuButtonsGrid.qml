@@ -27,13 +27,16 @@ Repeater {
                 {
                     //console.log("index "+i+" row/col "+row+"/"+column)
                     buttonsGrid.itemAt(i).buttonColor = defaultNotAllowedColor;
+                    buttonsGrid.itemAt(i).textColor = defaultTextColor;
                 }
                 else {
                     if(buttonsGrid.itemAt(i).hinted)
                     {
-                        buttonsGrid.itemAt(i).buttonColor = defaultHintColor;
+                        //buttonsGrid.itemAt(i).buttonColor = defaultHintColor;
+                        buttonsGrid.itemAt(i).textColor = defaultHintColor;
                     }else{
                         buttonsGrid.itemAt(i).buttonColor = defaultColor;
+                        buttonsGrid.itemAt(i).textColor = textColor;
                         buttonsGrid.itemAt(currentX).boldText = false;
                     }
                 }
@@ -55,9 +58,7 @@ Repeater {
         //color: defaultColor;
         //border.width: 0
         //border.color: defaultBorderColor
-        textColor: defaultTextColor;
-
-
+        //textColor: defaultTextColor;
 
         anchors.left:  ((index - (Math.floor(index / 9) * 9)) > 0) ? buttonsGrid.itemAt(index-1).right : buttonsGrid.left//((index - (Math.floor(index / 9) * 9)) > 0) ? buttonsGrid.itemAt(index-1).right : mainView.left
         anchors.leftMargin:   ((index - (Math.floor(index / 9) * 9))%3 == 0) ? 4*mainView.blockDistance : mainView.blockDistance
@@ -67,13 +68,14 @@ Repeater {
         MouseArea {
             id: buttonMouseArea2
             anchors.fill: parent
+            enabled: !gridButton.hinted
             SequentialAnimation {
                 id: animateButton
                 UbuntuNumberAnimation {
                     id: animateButton1
                     target: gridButton
                     properties: "scale"
-                    to: 1.2
+                    to: 1.05
                     from: 1
                     duration: UbuntuAnimation.SnapDuration
                     easing: UbuntuAnimation.StandardEasing
@@ -83,7 +85,7 @@ Repeater {
                     target: gridButton
                     properties: "scale"
                     to: 1
-                    from: 1.2
+                    from: 1.05
                     duration: UbuntuAnimation.SnapDuration
                     easing: UbuntuAnimation.StandardEasing
                 }
@@ -105,7 +107,7 @@ Repeater {
                 PopupUtils.open(dialog, gridButton);*/
             }
             onPressed: {
-                gridButton.buttonColor = String(Qt.darker(defaultColor,1.5));
+                gridButton.buttonColor = String(Qt.darker(defaultColor,1.05));
             }
 
             onCanceled: {
@@ -117,6 +119,7 @@ Repeater {
             }
         }
         buttonColor: defaultColor;
+        textColor: defaultTextColor
     }
     Component.onCompleted: {
         switch(difficultySelector.selectedIndex) {

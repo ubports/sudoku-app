@@ -19,7 +19,8 @@ Column {
     property alias defaultHintColor: colorScheme.defaultHintColor;
     property alias defaultBorderColor: colorScheme.defaultBorderColor;
     property alias boldText: colorScheme.boldText;
-    property alias defaultTextColor: colorScheme.textColor;
+    property alias defaultTextColor: colorScheme.defaultTextColor;
+    property alias textColor: colorScheme.textColor;
 
     property alias dialogButtonColor1: colorScheme.dialogButtonColor1
     property alias dialogButtonColor2: colorScheme.dialogButtonColor2
@@ -96,7 +97,8 @@ Column {
             //print(solution.getValue(hintColumn, hintRow));
             grid.setValue(hintColumn, hintRow, solution.getValue(hintColumn, hintRow));
             buttonsGrid.itemAt(hintRow*9 + hintColumn).buttonText = solution.getValue(hintColumn, hintRow);
-            buttonsGrid.itemAt(hintRow*9 + hintColumn).buttonColor = defaultHintColor;
+            //buttonsGrid.itemAt(hintRow*9 + hintColumn).buttonColor = defaultHintColor;
+            buttonsGrid.itemAt(hintRow*9 + hintColumn).textColor = defaultHintColor;
             buttonsGrid.itemAt(hintRow*9 + hintColumn).hinted = true;
         }
 
@@ -113,6 +115,7 @@ Column {
         colorScheme.defaultBorderColor = temp.defaultBorderColor;
         colorScheme.boldText = temp.boldText;
         colorScheme.textColor = temp.textColor;
+        colorScheme.defaultTextColor = temp.defaultTextColor;
         colorScheme.dialogButtonColor1 = temp.dialogButtonColor1;
         colorScheme.dialogButtonColor2 = temp.dialogButtonColor2;
         colorScheme.dialogButtonTextColor = temp.dialogButtonTextColor;
@@ -145,6 +148,7 @@ Column {
 
                 buttonsGrid.itemAt(i*9 + j).buttonText = "";
                 buttonsGrid.itemAt(i*9 + j).buttonColor = temp.defaultColor;
+                // buttonsGrid.itemAt(i*9 + j).textColor = temp.defaultTextColor;
                 //buttonsGrid.itemAt(i*9 + j).border.color = temp.defaultBorderColor;
                 buttonsGrid.itemAt(i*9 + j).enabled = true;
             }
@@ -154,7 +158,8 @@ Column {
                 if (grid.getValue(j,i) != 0) {
                     buttonsGrid.itemAt(i*9 + j).buttonText = grid.getValue(j,i);
                     buttonsGrid.itemAt(i*9 + j).boldText = temp.boldText;
-                    buttonsGrid.itemAt(i*9 + j).buttonColor = temp.defaultStartingColor;
+                    //buttonsGrid.itemAt(i*9 + j).buttonColor = temp.defaultStartingColor;
+                    buttonsGrid.itemAt(i*9 + j).textColor = temp.defaultStartingColor;
                     //buttonsGrid.itemAt(i*9 + j).border.color = temp.defaultBorderColor;
                     buttonsGrid.itemAt(i*9 + j).enabled = false;
                 }
@@ -212,7 +217,8 @@ Column {
             for (var j = 0; j < 9; j++) {
                 if (grid.getValue(j,i) != 0) {
                     buttonsGrid.itemAt(i*9 + j).buttonText = grid.getValue(j,i);
-                    buttonsGrid.itemAt(i*9 + j).buttonColor = defaultStartingColor;
+                    //buttonsGrid.itemAt(i*9 + j).buttonColor = defaultStartingColor;
+                    buttonsGrid.itemAt(i*9 + j).textColor = defaultStartingColor;
                     //buttonsGrid.itemAt(i*9 + j).border.color = defaultBorderColor;
                     buttonsGrid.itemAt(i*9 + j).enabled = false;
                 }
@@ -427,6 +433,8 @@ Column {
                             SudokuDialogButton{
                                 id: buttonPick
                                 buttonText: index+1;
+                                textColor: UbuntuColors.coolGrey
+                                buttonColor: backgroundColor
 
                                 size: units.gu(5);
 
@@ -464,7 +472,7 @@ Column {
                                             gameFinishedText.text = i18n.tr("Congratulations!\nWe give you\n%1 point.",
                                                                             "Congratulations!\nWe give you\n%1 points.",
                                                                             _score).arg(_score)
-                                        }                                        
+                                        }
 
                                         //print (sudokuBlocksGrid.numberOfActions)
                                         //print (sudokuBlocksGrid.numberOfHints)
@@ -506,6 +514,23 @@ Column {
 
             SudokuButtonsGrid {
                 id:buttonsGrid;
+
+            }
+
+            Grid {
+                rowSpacing: blockDistance
+                columnSpacing: blockDistance
+                columns: 3
+                z: -1
+                x: units.gu(1) - units.dp(4)
+                y: units.gu(1) - units.dp(4)
+                Repeater {
+                    model: 9
+                    id: blocks
+                    BigBlock {
+                        id: block
+                    }
+                }
             }
 
 

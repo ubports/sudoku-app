@@ -3,14 +3,14 @@ import Ubuntu.Components 0.1
 
 Item {
 
-    property color defaultColor: "#AEA79F";
+    property color defaultColor: "transparent" //  "#F5F5F5";
     property color defaultStartingColor : UbuntuColors.lightAubergine;
     property color defaultNotAllowedColor : UbuntuColors.darkAubergine;
     property color defaultHintColor: UbuntuColors.orange
     property color defaultBorderColor: "transparent";
     property color defaultTextColor: "white";
     property bool boldText: false;
-    property color textColor: "white";
+    property color textColor: UbuntuColors.coolGrey;
     property color dialogButtonColor1: UbuntuColors.lightAubergine
     property color dialogButtonColor2: UbuntuColors.orange
     property color dialogButtonTextColor: "white"
