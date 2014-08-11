@@ -105,7 +105,7 @@ Page {
     Column {
         anchors.fill: parent
         clip: true
-        UbuntuListView {
+        ListView {
             id: highScoresListView
             model: highscoresModel
             width: parent.width

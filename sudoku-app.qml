@@ -936,7 +936,7 @@ MainView {
 
                         Column{
                             height: mainColumnSettings.height*2/3
-                            UbuntuListView {
+                            ListView {
 
                                 id: profileListView
                                 objectName: "profileListView"
@@ -985,7 +985,7 @@ MainView {
 
                         Column{
                             height: mainColumnSettings.height*2/3
-                            UbuntuListView {
+                            ListView {
                                 id: manageProfileListView
                                 objectName: "manageProfileListView"
                                 clip: true
