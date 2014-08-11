@@ -721,11 +721,12 @@ MainView {
 
             UbuntuShape {
                 id: gameFinishedRectangle;
-                color: sudokuBlocksGrid.defaultColor;
+                color: "black";
+                opacity: 0.8
                 //border.color: sudokuBlocksGrid.defaultBorderColor;
-                width: units.gu(25);
+                width: mainView.width
                 radius: "medium"
-                height: units.gu(15);
+                height: mainView.height*1.3
                 z: 100;
                 visible: false;
                 //x: mainView.width / 2 - width/2;
@@ -737,9 +738,9 @@ MainView {
                 Label {
                     id: gameFinishedText;
                     text: sudokuBlocksGrid.checkIfCheating ? i18n.tr("You are a cheat...") : i18n.tr("Congratulations!")
-                    color: sudokuBlocksGrid.defaultHintColor;
+                    color: sudokuBlocksGrid.defaultTextColor;
                     anchors.fill: parent;
-                    fontSize: "large";
+                    fontSize: "x-large";
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
                 }
@@ -835,6 +836,7 @@ MainView {
                             id: redFlagText
                             text: i18n.tr("Not allowed")
                             fontSize: "x-small"
+                            color: settingsTab.themeIndex != 1 ? "white" : "black"
                             width:units.gu(5);
                             wrapMode: TextEdit.WordWrap;
                             horizontalAlignment: Text.AlignHCenter
@@ -876,6 +878,7 @@ MainView {
                         Label {
                             text: i18n.tr("Hinted blocks")
                             fontSize: "x-small"
+                            color: settingsTab.themeIndex != 1 ? "white" : "black"
                             width:units.gu(5);
                             wrapMode: TextEdit.WordWrap;
                             horizontalAlignment: Text.AlignHCenter

@@ -117,7 +117,7 @@ Page {
                 text: highscoresHeaderText
             }
             delegate: ListItem.SingleValue {
-                text: firstname + " " + lastname
+                text: (index+1) + ".   " + firstname + " " + lastname
                 value: score
             }
         }

@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import Ubuntu.Components 0.1
 
-SudokuButton {
+DialogButton {
     id: dialogButton
     //border.color: sudokuBlocksGrid.defaultBorderColor
     //border.width: 3

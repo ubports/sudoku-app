@@ -7,7 +7,7 @@ UbuntuShape {
     property string buttonText
     color: sudokuBlocksGrid.dialogButtonColor2
     Image {
-        source: "../icons/sudoku-vector-desktop.svg"
+        source: "../icons/about.png"
         anchors.fill: parent
         z:-1
     }

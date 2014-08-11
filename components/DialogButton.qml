@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import Ubuntu.Components 0.1
 
-Rectangle {
+UbuntuShape {
     id: button
     property alias buttonColor: button.color;
     property color textColor: sudokuBlocksGrid.defaultTextColor
@@ -13,7 +13,7 @@ Rectangle {
     signal buttonClick()
     height: size;
     width: size;
-    //radius: "medium"
+    radius: "medium"
     color: buttonColor
     //border.color: Qt.darker(buttonColor,1.5)
 
