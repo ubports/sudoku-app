@@ -8,20 +8,20 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-01-27 05:57+0000\n"
-"Last-Translator: Shushi Kurose <md81bird@hitaki.net>\n"
+"PO-Revision-Date: 2014-08-13 01:19+0000\n"
+"Last-Translator: Kentaro Kazuhama <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2014-06-21 06:28+0000\n"
-"X-Generator: Launchpad (build 17058)\n"
+"X-Launchpad-Export-Date: 2014-08-13 06:51+0000\n"
+"X-Generator: Launchpad (build 17156)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
 msgid "<b>Best scores for all players</b>"
-msgstr ""
+msgstr "<b>全プレーヤーのベストスコア</b>"
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
 #: components/HighscoresTab.qml:49 sudoku-app.qml:175
@@ -35,16 +35,16 @@ msgstr ""
 
 #: components/AddProfileDialog.qml:31
 msgid "Lastname"
-msgstr ""
+msgstr "姓"
 
 #: components/AddProfileDialog.qml:49
 msgid "Firstname"
-msgstr ""
+msgstr "名"
 
 #: components/AddProfileDialog.qml:66 components/ManageProfileDialog.qml:68
 #: sudoku-app.qml:339
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: components/AddProfileDialog.qml:82 components/AddProfileDialog.qml:87
 #: components/ManageProfileDialog.qml:94
@@ -63,15 +63,15 @@ msgstr ""
 #: sudoku-app.qml:491 sudoku-app.qml:941 sudoku-app.qml:991
 #: components/SudokuBlocksGrid.qml:482
 msgid "Cancel"
-msgstr ""
+msgstr "キャンセル"
 
 #: components/AboutTab.qml:101
 msgid "Author(s): "
-msgstr ""
+msgstr "作者: "
 
 #: components/AboutTab.qml:111
 msgid "Contact: "
-msgstr ""
+msgstr "連絡先: "
 
 #: components/AboutTab.qml:137
 msgid "Version: "
@@ -79,11 +79,11 @@ msgstr ""
 
 #: components/ManageProfileDialog.qml:13
 msgid "Edit profile"
-msgstr ""
+msgstr "プロフィールの編集"
 
 #: components/ManageProfileDialog.qml:107
 msgid "Delete"
-msgstr ""
+msgstr "削除"
 
 #: sudoku-app.qml:50 sudoku-app.qml:51 sudoku-app.qml:736
 msgid "New game"
@@ -95,7 +95,7 @@ msgstr ""
 
 #: sudoku-app.qml:67 sudoku-app.qml:68
 msgid "Show settings"
-msgstr ""
+msgstr "設定を表示"
 
 #: sudoku-app.qml:75 sudoku-app.qml:76
 msgid "Change difficulty to Easy"
@@ -203,7 +203,7 @@ msgstr ""
 
 #: sudoku-app.qml:881
 msgid "Scores"
-msgstr ""
+msgstr "スコア"
 
 #: sudoku-app.qml:890
 msgid "Settings"
@@ -211,7 +211,7 @@ msgstr "設定"
 
 #: sudoku-app.qml:909 sudoku-app.qml:959
 msgid "Select profile"
-msgstr ""
+msgstr "プロファイルを選択"
 
 #: sudoku-app.qml:1031
 msgid "<b>Sudoku settings</b>"
@@ -235,7 +235,7 @@ msgstr "テーマ"
 
 #: sudoku-app.qml:1100
 msgid "Hints"
-msgstr ""
+msgstr "ヒント"
 
 #: sudoku-app.qml:1116
 msgid "Vibration Alerts"
@@ -247,15 +247,15 @@ msgstr ""
 
 #: sudoku-app.qml:1139
 msgid "None"
-msgstr ""
+msgstr "なし"
 
 #: sudoku-app.qml:1172
 msgid "Add profile"
-msgstr ""
+msgstr "プロファイルの追加"
 
 #: sudoku-app.qml:1181
 msgid "Manage profiles"
-msgstr ""
+msgstr "プロファイル管理"
 
 #: sudoku-app.qml:1213
 msgid "About"
@@ -267,7 +267,7 @@ msgstr ""
 
 #: components/SudokuBlocksGrid.qml:388
 msgid "Clear"
-msgstr ""
+msgstr "クリア"
 
 #: components/SudokuBlocksGrid.qml:455
 #, qt-format
