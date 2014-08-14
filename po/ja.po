@@ -8,30 +8,30 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-08-13 01:19+0000\n"
-"Last-Translator: Kentaro Kazuhama <Unknown>\n"
+"PO-Revision-Date: 2014-08-14 05:52+0000\n"
+"Last-Translator: Mitsuya Shibata <mty.shibata@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2014-08-13 06:51+0000\n"
+"X-Launchpad-Export-Date: 2014-08-14 07:31+0000\n"
 "X-Generator: Launchpad (build 17156)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
 msgid "<b>Best scores for all players</b>"
-msgstr "<b>全プレーヤーのベストスコア</b>"
+msgstr "<b>すべてのプレイヤーのベストスコア</b>"
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
 #: components/HighscoresTab.qml:49 sudoku-app.qml:175
 #, qt-format
 msgid "Best scores for %1 %2"
-msgstr ""
+msgstr "%1 %2 のベストスコア"
 
 #: components/AddProfileDialog.qml:13
 msgid "Add new profile"
-msgstr ""
+msgstr "新しいプロファイルを追加"
 
 #: components/AddProfileDialog.qml:31
 msgid "Lastname"
@@ -49,15 +49,15 @@ msgstr "OK"
 #: components/AddProfileDialog.qml:82 components/AddProfileDialog.qml:87
 #: components/ManageProfileDialog.qml:94
 msgid "Warning"
-msgstr ""
+msgstr "警告"
 
 #: components/AddProfileDialog.qml:82
 msgid "User already exist."
-msgstr ""
+msgstr "ユーザーは既に存在しています。"
 
 #: components/AddProfileDialog.qml:87 components/ManageProfileDialog.qml:94
 msgid "Lastname and firstname must not be empty."
-msgstr ""
+msgstr "姓名は空にしてはいけません。"
 
 #: components/AddProfileDialog.qml:98 components/ManageProfileDialog.qml:126
 #: sudoku-app.qml:491 sudoku-app.qml:941 sudoku-app.qml:991
@@ -75,7 +75,7 @@ msgstr "連絡先: "
 
 #: components/AboutTab.qml:137
 msgid "Version: "
-msgstr ""
+msgstr "バージョン: "
 
 #: components/ManageProfileDialog.qml:13
 msgid "Edit profile"
@@ -91,7 +91,7 @@ msgstr "新しいゲーム"
 
 #: sudoku-app.qml:58 sudoku-app.qml:59
 msgid "Reveal hint"
-msgstr ""
+msgstr "ヒントを表示"
 
 #: sudoku-app.qml:67 sudoku-app.qml:68
 msgid "Show settings"
@@ -99,61 +99,63 @@ msgstr "設定を表示"
 
 #: sudoku-app.qml:75 sudoku-app.qml:76
 msgid "Change difficulty to Easy"
-msgstr ""
+msgstr "難易度をかんたんに変更"
 
 #: sudoku-app.qml:88 sudoku-app.qml:89
 msgid "Change difficulty to Moderate"
-msgstr ""
+msgstr "難易度をほどほどに変更"
 
 #: sudoku-app.qml:101 sudoku-app.qml:102
 msgid "Change difficulty to Hard"
-msgstr ""
+msgstr "難易度をハードに変更"
 
 #: sudoku-app.qml:114 sudoku-app.qml:115
 msgid "Change difficulty to Ultra Hard"
-msgstr ""
+msgstr "難易度を超ハードに変更"
 
 #: sudoku-app.qml:127 sudoku-app.qml:128
 msgid "Change theme to Simple"
-msgstr ""
+msgstr "テーマをシンプルに変更"
 
 #: sudoku-app.qml:137 sudoku-app.qml:138
 msgid "Change theme to UbuntuColors"
-msgstr ""
+msgstr "テーマをUbuntuColorsに変更"
 
 #: sudoku-app.qml:147 sudoku-app.qml:148
 msgid "Show scores for all users"
-msgstr ""
+msgstr "全ユーザーのスコアを表示"
 
 #: sudoku-app.qml:167 sudoku-app.qml:168
 msgid "Show scores for current user"
-msgstr ""
+msgstr "今のユーザーのスコアを表示"
 
 #: sudoku-app.qml:227
 msgid ""
 "You are a cheat... \n"
 "But we give you\n"
 msgstr ""
+"あなたはチートをしました... \n"
+"しかしながら、\n"
 
 #: sudoku-app.qml:229
 msgid "points."
-msgstr ""
+msgstr "ポイントを進呈しましょう。"
 
 #: sudoku-app.qml:326
 msgid "Sudoku games played today"
-msgstr ""
+msgstr "本日プレイしたSudokuゲーム"
 
 #: sudoku-app.qml:327
 msgid "No Sudoku games played today"
-msgstr ""
+msgstr "本日はSudokuをプレイしていません"
 
 #: sudoku-app.qml:355
 msgid "New Game"
-msgstr ""
+msgstr "新規ゲーム"
 
 #: sudoku-app.qml:356
 msgid "Select difficulty level"
-msgstr ""
+msgstr "難易度を選んでください"
 
 #: sudoku-app.qml:420 sudoku-app.qml:1038
 msgid "Easy"
@@ -172,6 +174,8 @@ msgid ""
 "Ultra\n"
 "Hard"
 msgstr ""
+"超\n"
+"ハード"
 
 #: sudoku-app.qml:665
 msgid "Sudoku"
@@ -179,7 +183,7 @@ msgstr "数独"
 
 #: sudoku-app.qml:720
 msgid "You are a cheat..."
-msgstr ""
+msgstr "あなたはチートをしています..."
 
 #: sudoku-app.qml:720
 msgid "Congratulations!"
@@ -195,11 +199,11 @@ msgstr "許可されていません"
 
 #: sudoku-app.qml:837
 msgid "Start blocks"
-msgstr ""
+msgstr "初期ブロック"
 
 #: sudoku-app.qml:858
 msgid "Hinted blocks"
-msgstr ""
+msgstr "ヒントを表示したブロック"
 
 #: sudoku-app.qml:881
 msgid "Scores"
@@ -215,11 +219,11 @@ msgstr "プロファイルを選択"
 
 #: sudoku-app.qml:1031
 msgid "<b>Sudoku settings</b>"
-msgstr ""
+msgstr "<b>Sudoku設定</b>"
 
 #: sudoku-app.qml:1037
 msgid "Default Difficulty"
-msgstr ""
+msgstr "デフォルトの難易度"
 
 #: sudoku-app.qml:1038
 msgid "Ultra Hard"
@@ -227,7 +231,7 @@ msgstr "最も難しい"
 
 #: sudoku-app.qml:1038
 msgid "Always ask"
-msgstr ""
+msgstr "常に確認する"
 
 #: sudoku-app.qml:1076
 msgid "Theme"
@@ -239,11 +243,11 @@ msgstr "ヒント"
 
 #: sudoku-app.qml:1116
 msgid "Vibration Alerts"
-msgstr ""
+msgstr "振動で警告する"
 
 #: sudoku-app.qml:1131
 msgid "<b>Profiles settings</b>"
-msgstr ""
+msgstr "<b>プロファイル設定</b>"
 
 #: sudoku-app.qml:1139
 msgid "None"
@@ -263,7 +267,7 @@ msgstr "情報"
 
 #: components/SudokuBlocksGrid.qml:327
 msgid "Please pick a number"
-msgstr ""
+msgstr "数字を選択してください"
 
 #: components/SudokuBlocksGrid.qml:388
 msgid "Clear"
@@ -280,7 +284,9 @@ msgid_plural ""
 "But we give you\n"
 "%1 points."
 msgstr[0] ""
-msgstr[1] ""
+"あなたはチートをしています...\n"
+"しかしながら、\n"
+"%1ポイントを進呈します。"
 
 #: components/SudokuBlocksGrid.qml:462
 #, qt-format
@@ -293,4 +299,5 @@ msgid_plural ""
 "We give you\n"
 "%1 points."
 msgstr[0] ""
-msgstr[1] ""
+"おめでとうございます！\n"
+"%1ポイントを進呈します。"
