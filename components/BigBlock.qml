@@ -7,7 +7,6 @@ import QtFeedback 5.0
 UbuntuShape {
     width: 3*blockSize + 5*blockDistance
     height: 3*blockSize + 5*blockDistance
-    color: UbuntuColors.warmGrey
     id: block
     Rectangle {
         height: parent.height - units.dp(6)

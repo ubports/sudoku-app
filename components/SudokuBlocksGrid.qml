@@ -529,6 +529,7 @@ Column {
                     id: blocks
                     BigBlock {
                         id: block
+                        color: index % 2 == 0 ? UbuntuColors.warmGrey : Qt.lighter(UbuntuColors.warmGrey, 1.15)
                     }
                 }
             }
