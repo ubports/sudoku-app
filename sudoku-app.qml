@@ -193,7 +193,6 @@ MainView {
     }
 
     function insertNewGameScore(userId, score) {
-        print(userId,score)
         Settings.insertNewScore(userId, score)
     }
 
@@ -207,7 +206,7 @@ MainView {
         highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
         for(var i = 0; i < allScores.length; i++) {
             var rowItem = allScores[i];
-            print("ROW ",rowItem)
+            //print("ROW ",rowItem)
             var firstName = Settings.getUserFirstName(rowItem[0]);
             var lastName = Settings.getUserLastName(rowItem[0]);
             //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
@@ -620,7 +619,7 @@ MainView {
         settingsTab.difficultyIndex = parseInt(Settings.getSetting("Difficulty"));
         if (settingsTab.difficultyIndex < 0)
             settingsTab.difficultyIndex = 0
-        print(settingsTab.difficultyIndex)
+        //print(settingsTab.difficultyIndex)
         //print(Settings.getSetting("DisableHints"));
         settingsTab.disableHintsChecked = Settings.getSetting("DisableHints") == "true" ? true : false;
         settingsTab.disableVibrationsChecked = Settings.getSetting("DisableVibrations") == "true" ? true : false;

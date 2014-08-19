@@ -8,6 +8,9 @@ function getDatabase() {
 
 function initialize() {
     var db = getDatabase();
+    var fname = i18n.tr("Sudoku")
+    var lname = i18n.tr("User")
+
     db.transaction(
                 function(tx) {
                     // Create the settings table if it doesn't already exist
@@ -20,7 +23,7 @@ function initialize() {
                     tx.executeSql('CREATE TABLE IF NOT EXISTS profiles(id INTEGER PRIMARY KEY AUTOINCREMENT, first_name TEXT, last_name TEXT, UNIQUE(first_name, last_name) ON CONFLICT ROLLBACK)');
                     //print("profile table created.")
 
-                    tx.executeSql('INSERT OR IGNORE INTO profiles VALUES (null,?,?);', ["Sudoku","User"]);
+                    tx.executeSql('INSERT OR IGNORE INTO profiles VALUES (null,?,?);', [fname, lname]);
                     tx.executeSql('CREATE TABLE IF NOT EXISTS scores(id INTEGER PRIMARY KEY AUTOINCREMENT, profile_id INTEGER, score INTEGER NOT NULL, game_date DATE, FOREIGN KEY(profile_id) REFERENCES profiles(id))');
                     //print("scores table created.")
 
