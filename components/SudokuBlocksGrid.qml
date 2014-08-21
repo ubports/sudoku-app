@@ -24,6 +24,7 @@ Column {
 
     property alias dialogButtonColor1: colorScheme.dialogButtonColor1
     property alias dialogButtonColor2: colorScheme.dialogButtonColor2
+    property alias dialogButtonColor3: colorScheme.dialogButtonColor3
     property alias dialogButtonTextColor: colorScheme.dialogButtonTextColor
 
     //property color headerColor: colorScheme.headerColor

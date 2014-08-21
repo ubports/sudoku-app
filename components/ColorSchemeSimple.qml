@@ -13,6 +13,7 @@ Item {
     property color textColor: "#DD4814";
     property color dialogButtonColor1: "white"
     property color dialogButtonColor2: "white"
+    property color dialogButtonColor3: "white"
     property color dialogButtonTextColor: UbuntuColors.orange
     property color headerColor: "#2C001E"
     property color backgroundColor: "#2C001E"
