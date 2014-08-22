@@ -946,7 +946,6 @@ MainView {
 
                                 delegate:
                                     ListItem.Standard {
-                                    __foregroundColor: "white"
                                     text: firstname + " " + lastname
                                     progression: true
                                     onTriggered: {
@@ -995,7 +994,6 @@ MainView {
                                 delegate:
 
                                     ListItem.Standard {
-                                    __foregroundColor: "white"
                                     text: firstname + " " + lastname
 
                                     progression: true
