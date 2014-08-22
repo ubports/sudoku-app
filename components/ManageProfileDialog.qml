@@ -125,6 +125,8 @@ Component {
                 anchors.horizontalCenter: parent.horizontalCenter
                 objectName: "profileCancelButton"
                 buttonText: i18n.tr("Cancel")
+                buttonColor: sudokuBlocksGrid.dialogButtonColor3
+                textColor: sudokuBlocksGrid.dialogButtonTextColor
                 //border.color: "transparent"
                 width: parent.width/2;
                 size: units.gu(5)
