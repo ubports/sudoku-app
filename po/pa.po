@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-08-22 04:36+0000\n"
+"PO-Revision-Date: 2014-08-28 04:30+0000\n"
 "Last-Translator: Gursharnjit_singh <ubuntuser13@gmail.com>\n"
 "Language-Team: Punjabi <pa@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-08-23 07:13+0000\n"
-"X-Generator: Launchpad (build 17163)\n"
+"X-Launchpad-Export-Date: 2014-08-28 06:26+0000\n"
+"X-Generator: Launchpad (build 17174)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
@@ -91,69 +91,71 @@ msgstr "ਨਵੀਂ ਖੇਡ"
 
 #: sudoku-app.qml:58 sudoku-app.qml:59
 msgid "Reveal hint"
-msgstr ""
+msgstr "ਸੰਕੇਤ ਪ੍ਰਗਟ ਕਰੋ"
 
 #: sudoku-app.qml:67 sudoku-app.qml:68
 msgid "Show settings"
-msgstr ""
+msgstr "ਸੈਟਿੰਗ ਵਿਖਾਓ"
 
 #: sudoku-app.qml:75 sudoku-app.qml:76
 msgid "Change difficulty to Easy"
-msgstr ""
+msgstr "ਮੁਸ਼ਕਲ ਨੂੰ ਸੌਖਾ ਵਿੱਚ ਬਦਲੋ"
 
 #: sudoku-app.qml:88 sudoku-app.qml:89
 msgid "Change difficulty to Moderate"
-msgstr ""
+msgstr "ਮੁਸ਼ਕਲ ਨੂੰ ਮੱਧਮ ਵਿੱਚ ਬਦਲੋ"
 
 #: sudoku-app.qml:101 sudoku-app.qml:102
 msgid "Change difficulty to Hard"
-msgstr ""
+msgstr "ਮੁਸ਼ਕਲ ਨੂੰ ਔਖੇ ਵਿੱਚ ਬਦਲੋ"
 
 #: sudoku-app.qml:114 sudoku-app.qml:115
 msgid "Change difficulty to Ultra Hard"
-msgstr ""
+msgstr "ਮੁਸ਼ਕਲ ਨੂੰ ਅਤਿ ਔਖੇ ਵਿੱਚ ਬਦਲੋ"
 
 #: sudoku-app.qml:127 sudoku-app.qml:128
 msgid "Change theme to Simple"
-msgstr ""
+msgstr "ਥੀਮ ਨੂੰ ਸਧਾਰਨ ਵਿੱਚ ਬਦਲੋ"
 
 #: sudoku-app.qml:137 sudoku-app.qml:138
 msgid "Change theme to UbuntuColors"
-msgstr ""
+msgstr "ਥੀਮ ਨੂੰ ਉਬੰਤੂ ਰੰਗਾਂ ਵਿੱਚ ਬਦਲੋ"
 
 #: sudoku-app.qml:147 sudoku-app.qml:148
 msgid "Show scores for all users"
-msgstr ""
+msgstr "ਸਾਰੇ ਉਪਭੋਗੀਆਂ ਲਈ ਅੰਕ ਵਿਖਾਓ"
 
 #: sudoku-app.qml:167 sudoku-app.qml:168
 msgid "Show scores for current user"
-msgstr ""
+msgstr "ਮੌਜੂਦਾ ਉਪਭੋਗੀ ਲਈ ਅੰਕ ਵਿਖਾਓ"
 
 #: sudoku-app.qml:227
 msgid ""
 "You are a cheat... \n"
 "But we give you\n"
 msgstr ""
+"ਤੁਸੀਂ ਇੱਕ ਠੱਗ ਹੋ... \n"
+"ਪਰ ਅਸੀਂ ਤੁਹਾਨੂੰ ਦਿੱਤੇ\n"
 
 #: sudoku-app.qml:229
 msgid "points."
-msgstr ""
+msgstr "ਅੰਕ।"
 
 #: sudoku-app.qml:326
 msgid "Sudoku games played today"
-msgstr ""
+msgstr "ਸੂਡੋਕੂ ਖੇਡਾਂ ਅੱਜ ਖੇਡੀਆਂ"
 
 #: sudoku-app.qml:327
 msgid "No Sudoku games played today"
-msgstr ""
+msgstr "ਅੱਜ ਕੋਈ ਸੂਡੋਕੂ ਖੇਡ ਨਹੀਂ ਖੇਡੀ"
 
 #: sudoku-app.qml:355
 msgid "New Game"
-msgstr ""
+msgstr "ਨਵੀਂ ਖੇਡ"
 
 #: sudoku-app.qml:356
 msgid "Select difficulty level"
-msgstr ""
+msgstr "ਮੁਸ਼ਕਲ ਦਾ ਮਿਆਰ ਚੁਣੋ"
 
 #: sudoku-app.qml:420 sudoku-app.qml:1038
 msgid "Easy"
@@ -161,7 +163,7 @@ msgstr "ਸੌਖਾ"
 
 #: sudoku-app.qml:439 sudoku-app.qml:1038
 msgid "Moderate"
-msgstr "ਠੀਕ-ਠਾਕ"
+msgstr "ਮੱਧਮ"
 
 #: sudoku-app.qml:456 sudoku-app.qml:1038
 msgid "Hard"
@@ -172,6 +174,8 @@ msgid ""
 "Ultra\n"
 "Hard"
 msgstr ""
+"ਅਤਿ\n"
+"ਔਖਾ"
 
 #: sudoku-app.qml:665
 msgid "Sudoku"
@@ -191,7 +195,7 @@ msgstr "ਸੰਕੇਤ ਵਿਖਾਓ"
 
 #: sudoku-app.qml:817
 msgid "Not allowed"
-msgstr "ਆਗਿਆ ਨਹੀ"
+msgstr "ਇਜਾਜ਼ਤ ਨਹੀਂ"
 
 #: sudoku-app.qml:837
 msgid "Start blocks"
@@ -203,31 +207,31 @@ msgstr "ਸੰਕੇਤਕ ਖ਼ਾਨੇ"
 
 #: sudoku-app.qml:881
 msgid "Scores"
-msgstr ""
+msgstr "ਅੰਕ"
 
 #: sudoku-app.qml:890
 msgid "Settings"
-msgstr "ਸੈਟਿੰਗ'ਸ"
+msgstr "ਸੈਟਿੰਗ"
 
 #: sudoku-app.qml:909 sudoku-app.qml:959
 msgid "Select profile"
-msgstr ""
+msgstr "ਪ੍ਰੋਫ਼ਾਈਲ ਚੁਣੋ"
 
 #: sudoku-app.qml:1031
 msgid "<b>Sudoku settings</b>"
-msgstr ""
+msgstr "<b>ਸੂਡੋਕੂ ਸੈਟਿੰਗ</b>"
 
 #: sudoku-app.qml:1037
 msgid "Default Difficulty"
-msgstr ""
+msgstr "ਮੂਲ ਮੁਸ਼ਕਲ"
 
 #: sudoku-app.qml:1038
 msgid "Ultra Hard"
-msgstr "ਬਹੁਤ ਅੌਖਾ"
+msgstr "ਅਤਿ ਔਖਾ"
 
 #: sudoku-app.qml:1038
 msgid "Always ask"
-msgstr ""
+msgstr "ਹਮੇਸ਼ਾ ਪੁੱਛੋ"
 
 #: sudoku-app.qml:1076
 msgid "Theme"
@@ -235,27 +239,27 @@ msgstr "ਥੀਮ"
 
 #: sudoku-app.qml:1100
 msgid "Hints"
-msgstr ""
+msgstr "ਸੰਕੇਤ"
 
 #: sudoku-app.qml:1116
 msgid "Vibration Alerts"
-msgstr ""
+msgstr "ਕੰਬਣ ਚੇਤਾਵਨੀਆਂ"
 
 #: sudoku-app.qml:1131
 msgid "<b>Profiles settings</b>"
-msgstr ""
+msgstr "<b>ਪ੍ਰੋਫ਼ਾਈਲ ਸੈਟਿੰਗ</b>"
 
 #: sudoku-app.qml:1139
 msgid "None"
-msgstr ""
+msgstr "ਕੋਈ ਨਹੀਂ"
 
 #: sudoku-app.qml:1172
 msgid "Add profile"
-msgstr ""
+msgstr "ਪ੍ਰੋਫ਼ਾਈਲ ਜੋੜੋ"
 
 #: sudoku-app.qml:1181
 msgid "Manage profiles"
-msgstr ""
+msgstr "ਪ੍ਰੋਫ਼ਾਈਲਾਂ ਦੀ ਸਾਂਭ ਸੰਭਾਲ੍ਹ"
 
 #: sudoku-app.qml:1213
 msgid "About"
@@ -263,11 +267,11 @@ msgstr "ਇਸ ਬਾਰੇ"
 
 #: components/SudokuBlocksGrid.qml:327
 msgid "Please pick a number"
-msgstr ""
+msgstr "ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਅੰਕ ਚੁਣੋ"
 
 #: components/SudokuBlocksGrid.qml:388
 msgid "Clear"
-msgstr ""
+msgstr "ਮਿਟਾਓ"
 
 #: components/SudokuBlocksGrid.qml:455
 #, qt-format
@@ -280,7 +284,13 @@ msgid_plural ""
 "But we give you\n"
 "%1 points."
 msgstr[0] ""
+"ਤੁਸੀਂ ਇੱਕ ਠੱਗ ਹੋ...\n"
+"ਪਰ ਅਸੀਂ ਤੁਹਾਨੂੰ ਦਿੱਤਾ\n"
+"%1 ਅੰਕ।"
 msgstr[1] ""
+"ਤੁਸੀਂ ਇੱਕ ਠੱਗ ਹੋ...\n"
+"ਪਰ ਅਸੀਂ ਤੁਹਾਨੂੰ ਦਿੱਤੇ\n"
+"%1 ਅੰਕ।"
 
 #: components/SudokuBlocksGrid.qml:462
 #, qt-format
@@ -293,4 +303,10 @@ msgid_plural ""
 "We give you\n"
 "%1 points."
 msgstr[0] ""
+"ਮੁਬਾਰਕਾਂ!\n"
+"ਅਸੀੰ ਤੁਹਾਨੂੰ ਦਿੱਤਾ\n"
+"%1 ਅੰਕ।"
 msgstr[1] ""
+"ਮੁਬਾਰਕਾਂ!\n"
+"ਅਸੀੰ ਤੁਹਾਨੂੰ ਦਿੱਤੇ\n"
+"%1 ਅੰਕ।"
