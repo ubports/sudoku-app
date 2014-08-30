@@ -1,0 +1,22 @@
+{
+    "description": "Sudoku game for Ubuntu devices.",
+    "framework": "ubuntu-sdk-14.10-qml-dev3",
+    "hooks": {
+        "@APP_NAME@": {
+            "apparmor": "apparmor.json",
+            "desktop": "@DESKTOP_FILE@"
+        }
+    },
+    "icon": "@ICON@",
+    "maintainer": "Ubuntu Core Apps Developers <ubuntu-touch-coreapps@lists.launchpad.net>",
+    "name": "@PROJECT_NAME@",
+    "title": "Sudoku",
+    "version": "1.0.@BZR_REVNO@",
+    "x-source": {
+        "vcs-bzr": "@BZR_SOURCE@",
+        "vcs-bzr-revno": "@BZR_REVNO@"
+    },
+    "x-test": {
+        "autopilot": "@AUTOPILOT_DIR@"
+    }
+}

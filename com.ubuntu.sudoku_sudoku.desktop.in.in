@@ -1,0 +1,10 @@
+[Desktop Entry]
+_Name=Sudoku
+_Comment=Sudoku Game for Ubuntu Touch.
+_Keywords=sudoku;game;touch;
+Type=Application
+Terminal=false
+Exec=@EXEC@
+Icon=@ICON@
+X-Ubuntu-Touch=true
+X-Ubuntu-Default-Department-ID=games
