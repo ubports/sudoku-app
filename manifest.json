@@ -1,4 +1,5 @@
 {
+    "architecture": "all",
     "description": "Sudoku game for Ubuntu devices",
     "framework": "ubuntu-sdk-14.10-qml-dev3",
     "hooks": {
