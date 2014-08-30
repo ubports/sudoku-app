@@ -5,9 +5,12 @@ Maintainer: Ubuntu Core Apps Developers <ubuntu-touch-coreapps@lists.launchpad.n
 Build-Depends: cmake,
 	       debhelper (>= 9),
                gettext,
-	       python3,
-	       gettext,
+	       python,
 	       intltool,
+	       qtdeclarative5-dev-tools,
+               qt5-default,
+               qtdeclarative5-qtquick2-plugin,
+               qtdeclarative5-test-plugin,  	       
 Standards-Version: 3.9.5
 Homepage: http://launchpad.net/sudoku-app
 Vcs-Bzr: https://code.launchpad.net/~sudoku-touch-dev/sudoku-app/trunk
