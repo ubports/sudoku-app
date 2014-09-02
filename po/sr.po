@@ -1,0 +1,321 @@
+# Serbian translation for sudoku-app
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# This file is distributed under the same license as the sudoku-app package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sudoku-app\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-06-12 19:27+0800\n"
+"PO-Revision-Date: 2014-09-01 13:40+0000\n"
+"Last-Translator: Данило Шеган <Unknown>\n"
+"Language-Team: Serbian <sr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2014-09-02 07:13+0000\n"
+"X-Generator: Launchpad (build 17192)\n"
+
+#: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
+#: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
+msgid "<b>Best scores for all players</b>"
+msgstr "<b>Најбољи резултати свих играча</b>"
+
+#. TRANSLATORS: %1 is user's first name and %2 is last name
+#: components/HighscoresTab.qml:49 sudoku-app.qml:175
+#, qt-format
+msgid "Best scores for %1 %2"
+msgstr "Најбољи резултати које постиже %1 %2"
+
+#: components/AddProfileDialog.qml:13
+msgid "Add new profile"
+msgstr "Додај нови профил"
+
+#: components/AddProfileDialog.qml:31
+msgid "Lastname"
+msgstr "Презиме"
+
+#: components/AddProfileDialog.qml:49
+msgid "Firstname"
+msgstr "Име"
+
+#: components/AddProfileDialog.qml:66 components/ManageProfileDialog.qml:68
+#: sudoku-app.qml:339
+msgid "OK"
+msgstr "У реду"
+
+#: components/AddProfileDialog.qml:82 components/AddProfileDialog.qml:87
+#: components/ManageProfileDialog.qml:94
+msgid "Warning"
+msgstr "Упозорење"
+
+#: components/AddProfileDialog.qml:82
+msgid "User already exist."
+msgstr "Корисник већ постоји."
+
+#: components/AddProfileDialog.qml:87 components/ManageProfileDialog.qml:94
+msgid "Lastname and firstname must not be empty."
+msgstr "Име и презиме не смеју бити празни."
+
+#: components/AddProfileDialog.qml:98 components/ManageProfileDialog.qml:126
+#: sudoku-app.qml:491 sudoku-app.qml:941 sudoku-app.qml:991
+#: components/SudokuBlocksGrid.qml:482
+msgid "Cancel"
+msgstr "Откажи"
+
+#: components/AboutTab.qml:101
+msgid "Author(s): "
+msgstr "Аутори: "
+
+#: components/AboutTab.qml:111
+msgid "Contact: "
+msgstr "Контакт: "
+
+#: components/AboutTab.qml:137
+msgid "Version: "
+msgstr "Издање: "
+
+#: components/ManageProfileDialog.qml:13
+msgid "Edit profile"
+msgstr "Уређивање профила"
+
+#: components/ManageProfileDialog.qml:107
+msgid "Delete"
+msgstr "Обриши"
+
+#: sudoku-app.qml:50 sudoku-app.qml:51 sudoku-app.qml:736
+msgid "New game"
+msgstr "Нова партија"
+
+#: sudoku-app.qml:58 sudoku-app.qml:59
+msgid "Reveal hint"
+msgstr "Покажи савет"
+
+#: sudoku-app.qml:67 sudoku-app.qml:68
+msgid "Show settings"
+msgstr "Прикажи подешавања"
+
+#: sudoku-app.qml:75 sudoku-app.qml:76
+msgid "Change difficulty to Easy"
+msgstr "Промени тежину на „лако“"
+
+#: sudoku-app.qml:88 sudoku-app.qml:89
+msgid "Change difficulty to Moderate"
+msgstr "Промени тежину на „умерено“"
+
+#: sudoku-app.qml:101 sudoku-app.qml:102
+msgid "Change difficulty to Hard"
+msgstr "Промени тежину на „тешко“"
+
+#: sudoku-app.qml:114 sudoku-app.qml:115
+msgid "Change difficulty to Ultra Hard"
+msgstr "Промени тежину на „веома тешко“"
+
+#: sudoku-app.qml:127 sudoku-app.qml:128
+msgid "Change theme to Simple"
+msgstr "Промени тему на „једноставну“"
+
+#: sudoku-app.qml:137 sudoku-app.qml:138
+msgid "Change theme to UbuntuColors"
+msgstr "Промени тему на „Убунту боје“"
+
+#: sudoku-app.qml:147 sudoku-app.qml:148
+msgid "Show scores for all users"
+msgstr "Прикажи резултате свих корисника"
+
+#: sudoku-app.qml:167 sudoku-app.qml:168
+msgid "Show scores for current user"
+msgstr "Прикажи резултате текућег корисника"
+
+#: sudoku-app.qml:227
+msgid ""
+"You are a cheat... \n"
+"But we give you\n"
+msgstr ""
+"Преварант си... \n"
+"Али дајемо ти\n"
+
+#: sudoku-app.qml:229
+msgid "points."
+msgstr "бодова."
+
+#: sudoku-app.qml:326
+msgid "Sudoku games played today"
+msgstr "Данас одигране Судоку партије"
+
+#: sudoku-app.qml:327
+msgid "No Sudoku games played today"
+msgstr "Данас није одиграна ниједна Судоку партија"
+
+#: sudoku-app.qml:355
+msgid "New Game"
+msgstr "Нова партија"
+
+#: sudoku-app.qml:356
+msgid "Select difficulty level"
+msgstr "Изаберите тежину"
+
+#: sudoku-app.qml:420 sudoku-app.qml:1038
+msgid "Easy"
+msgstr "Лако"
+
+#: sudoku-app.qml:439 sudoku-app.qml:1038
+msgid "Moderate"
+msgstr "Умерено"
+
+#: sudoku-app.qml:456 sudoku-app.qml:1038
+msgid "Hard"
+msgstr "Тешко"
+
+#: sudoku-app.qml:473
+msgid ""
+"Ultra\n"
+"Hard"
+msgstr ""
+"Веома\n"
+"тешко"
+
+#: sudoku-app.qml:665
+msgid "Sudoku"
+msgstr "Судоку"
+
+#: sudoku-app.qml:720
+msgid "You are a cheat..."
+msgstr "Преваранту..."
+
+#: sudoku-app.qml:720
+msgid "Congratulations!"
+msgstr "Свака част!"
+
+#: sudoku-app.qml:754
+msgid "Show hint"
+msgstr "Прикажи савет"
+
+#: sudoku-app.qml:817
+msgid "Not allowed"
+msgstr "Није дозвољено"
+
+#: sudoku-app.qml:837
+msgid "Start blocks"
+msgstr "Почетни блокови"
+
+#: sudoku-app.qml:858
+msgid "Hinted blocks"
+msgstr "Блокови са саветима"
+
+#: sudoku-app.qml:881
+msgid "Scores"
+msgstr "Резултати"
+
+#: sudoku-app.qml:890
+msgid "Settings"
+msgstr "Подешавања"
+
+#: sudoku-app.qml:909 sudoku-app.qml:959
+msgid "Select profile"
+msgstr "Избор профила"
+
+#: sudoku-app.qml:1031
+msgid "<b>Sudoku settings</b>"
+msgstr "<b>Подешавања Судокуа</b>"
+
+#: sudoku-app.qml:1037
+msgid "Default Difficulty"
+msgstr "Уобичајена тежина"
+
+#: sudoku-app.qml:1038
+msgid "Ultra Hard"
+msgstr "Веома тешко"
+
+#: sudoku-app.qml:1038
+msgid "Always ask"
+msgstr "Увек питај"
+
+#: sudoku-app.qml:1076
+msgid "Theme"
+msgstr "Тема"
+
+#: sudoku-app.qml:1100
+msgid "Hints"
+msgstr "Савети"
+
+#: sudoku-app.qml:1116
+msgid "Vibration Alerts"
+msgstr "Упозорења вибрирањем"
+
+#: sudoku-app.qml:1131
+msgid "<b>Profiles settings</b>"
+msgstr "<b>Подешавања профила</b>"
+
+#: sudoku-app.qml:1139
+msgid "None"
+msgstr "Ниједан"
+
+#: sudoku-app.qml:1172
+msgid "Add profile"
+msgstr "Додај профил"
+
+#: sudoku-app.qml:1181
+msgid "Manage profiles"
+msgstr "Уреди профиле"
+
+#: sudoku-app.qml:1213
+msgid "About"
+msgstr "О програму"
+
+#: components/SudokuBlocksGrid.qml:327
+msgid "Please pick a number"
+msgstr "Изаберите број"
+
+#: components/SudokuBlocksGrid.qml:388
+msgid "Clear"
+msgstr "Очисти"
+
+#: components/SudokuBlocksGrid.qml:455
+#, qt-format
+msgid ""
+"You are a cheat...\n"
+"But we give you\n"
+"%1 point."
+msgid_plural ""
+"You are a cheat...\n"
+"But we give you\n"
+"%1 points."
+msgstr[0] ""
+"Прави си преварант...\n"
+"Али дајемо ти\n"
+"%1 бод."
+msgstr[1] ""
+"Прави си преварант...\n"
+"Али дајемо ти\n"
+"%1 бода."
+msgstr[2] ""
+"Прави си преварант...\n"
+"Али дајемо ти\n"
+"%1 бодова."
+
+#: components/SudokuBlocksGrid.qml:462
+#, qt-format
+msgid ""
+"Congratulations!\n"
+"We give you\n"
+"%1 point."
+msgid_plural ""
+"Congratulations!\n"
+"We give you\n"
+"%1 points."
+msgstr[0] ""
+"Свака част!\n"
+"Дајемо ти\n"
+"%1 бод."
+msgstr[1] ""
+"Свака част!\n"
+"Дајемо ти\n"
+"%1 бода."
+msgstr[2] ""
+"Свака част!\n"
+"Дајемо ти\n"
+"%1 бодова."
