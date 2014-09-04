@@ -12,15 +12,3 @@
 %:
 	dh $@ 
 
-override_dh_install:
-#	tests/autopilot/install_autopilot.sh $(CURDIR)
-	dh_install --fail-missing
-	appname=com.ubuntu.sudoku; \
-	for pofile in $(shell find ./po -name "*.po"); do \
-		pofilename="$${pofile##*/}"; \
-		langcode="$${pofilename%.*}"; \
-		localedir="debian/sudoku-app/usr/share/locale/$$langcode/LC_MESSAGES"; \
-		mkdir -p $$localedir; \
-		mofile="$$localedir/$$appname.mo"; \
-		msgfmt -o $$mofile $$pofile; \
-	done
