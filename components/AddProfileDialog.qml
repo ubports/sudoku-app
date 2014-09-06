@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import QtQuick.Controls.Styles 1.2
 import Ubuntu.Components 0.1
 import Ubuntu.Components.Popups 0.1
 import "../js/localStorage.js" as Settings
@@ -22,7 +23,6 @@ Component {
                 width: parent.width - units.gu(4)
                 height: mainView.height/18
                 radius: "medium"
-                color: "#AEA79F"
                 anchors.horizontalCenter: parent.horizontalCenter
                 TextField {
                     objectName: "Firstname"
@@ -40,14 +40,12 @@ Component {
                 width: parent.width - units.gu(4)
                 height: mainView.height/18
                 radius: "medium"
-                color: "#AEA79F"
                 anchors.horizontalCenter: parent.horizontalCenter
                 TextField {
                     objectName: "Lastname"
                     id:lastnameField
                     anchors.fill: parent
                     placeholderText: i18n.tr("Lastname")
-                    color: "white"
                     onFocusChanged: {
                         if (lastnameField.focus)
                             color = UbuntuColors.warmGrey
