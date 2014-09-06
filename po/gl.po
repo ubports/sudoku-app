@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-08-30 13:31+0200\n"
-"PO-Revision-Date: 2014-09-04 20:11+0000\n"
+"PO-Revision-Date: 2014-09-05 21:10+0000\n"
 "Last-Translator: Marcos Lans <Unknown>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-09-05 07:46+0000\n"
+"X-Launchpad-Export-Date: 2014-09-06 07:29+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
 #: ../components/AboutTab.qml:102
@@ -205,7 +205,7 @@ msgstr "Sudokus xogados hoxe"
 
 #: ../sudoku-app.qml:339
 msgid "No Sudoku games played today"
-msgstr ""
+msgstr "Non hai Sudokus xogados hoxe"
 
 #: ../sudoku-app.qml:367
 msgid "New Game"
