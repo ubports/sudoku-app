@@ -8,7 +8,7 @@ find_program(INTLTOOL_EXTRACT intltool-extract)
 include(GNUInstallDirs)
 
 option(INSTALL_TESTS "Install the tests on make install" on)
-option(CLICK_MODE "Installs to a contained location" off)
+option(CLICK_MODE "Installs to a contained location" on)
 
 set(APP_NAME sudoku)
 set(DESKTOP_FILE "${PROJECT_NAME}_${APP_NAME}.desktop")
@@ -16,6 +16,7 @@ set(APP_HARDCODE sudoku-app)
 set(MAIN_QML ${APP_HARDCODE}.qml)
 set(ICON_FILE SudokuGameIcon.png)
 set(AUTOPILOT_DIR sudoku_app)
+set(UBUNTU_MANIFEST_PATH "click/manifest.json.in" CACHE INTERNAL "Relative path to the manifest file")
 
 if(CLICK_MODE)
     if(NOT DEFINED BZR_SOURCE)
