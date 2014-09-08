@@ -349,6 +349,7 @@ MainView {
 
             SudokuDialogButton{
                 buttonText: i18n.tr("OK")
+                buttonColor: sudokuBlocksGrid.dialogButtonColor2
                 width: parent.width/2;
                 size: units.gu(5)
                 onTriggered: {
