@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-08-28 04:30+0000\n"
-"Last-Translator: Gursharnjit_singh <ubuntuser13@gmail.com>\n"
+"PO-Revision-Date: 2014-09-06 16:39+0000\n"
+"Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi <pa@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-08-30 07:34+0000\n"
-"X-Generator: Launchpad (build 17176)\n"
+"X-Launchpad-Export-Date: 2014-09-07 06:54+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
@@ -271,7 +271,7 @@ msgstr "ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਅੰਕ ਚੁਣੋ"
 
 #: components/SudokuBlocksGrid.qml:388
 msgid "Clear"
-msgstr "ਮਿਟਾਓ"
+msgstr "ਸਾਫ਼ ਕਰੋ"
 
 #: components/SudokuBlocksGrid.qml:455
 #, qt-format
