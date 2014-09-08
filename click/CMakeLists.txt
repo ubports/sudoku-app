@@ -12,4 +12,4 @@ file(GLOB CLICK_FILES
      RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
      *.json *.json.in *.apparmor)
 
-add_custom_target(com_ubuntu_music_CLICKFiles ALL SOURCES ${CLICK_FILES})
+add_custom_target(com_ubuntu_sudoku_CLICKFiles ALL SOURCES ${CLICK_FILES})
