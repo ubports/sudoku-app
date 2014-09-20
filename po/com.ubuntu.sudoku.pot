@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-30 13:31+0200\n"
+"POT-Creation-Date: 2014-09-20 02:38-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,37 +34,37 @@ msgstr ""
 msgid "Add new profile"
 msgstr ""
 
-#: ../components/AddProfileDialog.qml:31
+#: ../components/AddProfileDialog.qml:30
 msgid "Firstname"
 msgstr ""
 
-#: ../components/AddProfileDialog.qml:49
+#: ../components/AddProfileDialog.qml:42
 msgid "Lastname"
 msgstr ""
 
-#: ../components/AddProfileDialog.qml:65
+#: ../components/AddProfileDialog.qml:53
 #: ../components/ManageProfileDialog.qml:69 ../sudoku-app.qml:351
 msgid "OK"
 msgstr ""
 
-#: ../components/AddProfileDialog.qml:81 ../components/AddProfileDialog.qml:86
+#: ../components/AddProfileDialog.qml:69 ../components/AddProfileDialog.qml:74
 #: ../components/ManageProfileDialog.qml:95
 msgid "Warning"
 msgstr ""
 
-#: ../components/AddProfileDialog.qml:81
+#: ../components/AddProfileDialog.qml:69
 msgid "User already exist."
 msgstr ""
 
-#: ../components/AddProfileDialog.qml:86
+#: ../components/AddProfileDialog.qml:74
 #: ../components/ManageProfileDialog.qml:95
 msgid "Lastname and firstname must not be empty."
 msgstr ""
 
-#: ../components/AddProfileDialog.qml:97
+#: ../components/AddProfileDialog.qml:85
 #: ../components/ManageProfileDialog.qml:127
-#: ../components/SudokuBlocksGrid.qml:493 ../sudoku-app.qml:503
-#: ../sudoku-app.qml:963 ../sudoku-app.qml:1015
+#: ../components/SudokuBlocksGrid.qml:493 ../sudoku-app.qml:504
+#: ../sudoku-app.qml:964 ../sudoku-app.qml:1016
 msgid "Cancel"
 msgstr ""
 
@@ -122,7 +122,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../js/localStorage.js:11 ../sudoku-app.qml:683
+#: ../js/localStorage.js:11 ../sudoku-app.qml:684
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:1
 msgid "Sudoku"
 msgstr ""
@@ -131,7 +131,7 @@ msgstr ""
 msgid "User"
 msgstr ""
 
-#: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:755
+#: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:756
 msgid "New game"
 msgstr ""
 
@@ -193,117 +193,117 @@ msgstr ""
 msgid "No Sudoku games played today"
 msgstr ""
 
-#: ../sudoku-app.qml:367
+#: ../sudoku-app.qml:368
 msgid "New Game"
 msgstr ""
 
-#: ../sudoku-app.qml:368
+#: ../sudoku-app.qml:369
 msgid "Select difficulty level"
 msgstr ""
 
-#: ../sudoku-app.qml:432 ../sudoku-app.qml:1062
+#: ../sudoku-app.qml:433 ../sudoku-app.qml:1063
 msgid "Easy"
 msgstr ""
 
-#: ../sudoku-app.qml:451 ../sudoku-app.qml:1062
+#: ../sudoku-app.qml:452 ../sudoku-app.qml:1063
 msgid "Moderate"
 msgstr ""
 
-#: ../sudoku-app.qml:468 ../sudoku-app.qml:1062
+#: ../sudoku-app.qml:469 ../sudoku-app.qml:1063
 msgid "Hard"
 msgstr ""
 
-#: ../sudoku-app.qml:485
+#: ../sudoku-app.qml:486
 msgid ""
 "Ultra\n"
 "Hard"
 msgstr ""
 
-#: ../sudoku-app.qml:739
+#: ../sudoku-app.qml:740
 msgid "You are a cheat..."
 msgstr ""
 
-#: ../sudoku-app.qml:739
+#: ../sudoku-app.qml:740
 msgid "Congratulations!"
 msgstr ""
 
-#: ../sudoku-app.qml:773
+#: ../sudoku-app.qml:774
 msgid "Show hint"
 msgstr ""
 
-#: ../sudoku-app.qml:836
+#: ../sudoku-app.qml:837
 msgid "Not allowed"
 msgstr ""
 
-#: ../sudoku-app.qml:857
+#: ../sudoku-app.qml:858
 msgid "Start blocks"
 msgstr ""
 
-#: ../sudoku-app.qml:878
+#: ../sudoku-app.qml:879
 msgid "Hinted blocks"
 msgstr ""
 
-#: ../sudoku-app.qml:902
+#: ../sudoku-app.qml:903
 msgid "Scores"
 msgstr ""
 
-#: ../sudoku-app.qml:912
+#: ../sudoku-app.qml:913
 msgid "Settings"
 msgstr ""
 
-#: ../sudoku-app.qml:934 ../sudoku-app.qml:982
+#: ../sudoku-app.qml:935 ../sudoku-app.qml:983
 msgid "Select profile"
 msgstr ""
 
-#: ../sudoku-app.qml:1055
+#: ../sudoku-app.qml:1056
 msgid "<b>Sudoku settings</b>"
 msgstr ""
 
-#: ../sudoku-app.qml:1061
+#: ../sudoku-app.qml:1062
 msgid "Default Difficulty"
 msgstr ""
 
-#: ../sudoku-app.qml:1062
+#: ../sudoku-app.qml:1063
 msgid "Ultra Hard"
 msgstr ""
 
-#: ../sudoku-app.qml:1062
+#: ../sudoku-app.qml:1063
 msgid "Always ask"
 msgstr ""
 
-#: ../sudoku-app.qml:1104
+#: ../sudoku-app.qml:1105
 msgid "Theme"
 msgstr ""
 
-#: ../sudoku-app.qml:1128
+#: ../sudoku-app.qml:1129
 msgid "Hints"
 msgstr ""
 
-#: ../sudoku-app.qml:1144
+#: ../sudoku-app.qml:1145
 msgid "Vibration Alerts"
 msgstr ""
 
-#: ../sudoku-app.qml:1159
+#: ../sudoku-app.qml:1160
 msgid "<b>Profiles settings</b>"
 msgstr ""
 
-#: ../sudoku-app.qml:1163
+#: ../sudoku-app.qml:1164
 msgid "Current profile"
 msgstr ""
 
-#: ../sudoku-app.qml:1167
+#: ../sudoku-app.qml:1168
 msgid "None"
 msgstr ""
 
-#: ../sudoku-app.qml:1203
+#: ../sudoku-app.qml:1204
 msgid "Add profile"
 msgstr ""
 
-#: ../sudoku-app.qml:1212
+#: ../sudoku-app.qml:1213
 msgid "Manage profiles"
 msgstr ""
 
-#: ../sudoku-app.qml:1244
+#: ../sudoku-app.qml:1245
 msgid "About"
 msgstr ""
 
