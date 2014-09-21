@@ -8,44 +8,44 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-08-30 13:31+0200\n"
-"PO-Revision-Date: 2014-09-18 11:24+0000\n"
+"PO-Revision-Date: 2014-09-20 17:07+0000\n"
 "Last-Translator: Andi Chandler <Unknown>\n"
 "Language-Team: English (United Kingdom) <en_GB@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-09-19 08:07+0000\n"
+"X-Launchpad-Export-Date: 2014-09-21 06:22+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
 #: ../components/AboutTab.qml:102
 msgid "Author(s): "
-msgstr ""
+msgstr "Author(s): "
 
 #: ../components/AboutTab.qml:112
 msgid "Contact: "
-msgstr ""
+msgstr "Contact: "
 
 #: ../components/AboutTab.qml:138
 msgid "Version: "
-msgstr ""
+msgstr "Version: "
 
 #: ../components/AddProfileDialog.qml:13
 msgid "Add new profile"
-msgstr ""
+msgstr "Add new profile"
 
 #: ../components/AddProfileDialog.qml:31
 msgid "Firstname"
-msgstr ""
+msgstr "Firstname"
 
 #: ../components/AddProfileDialog.qml:49
 msgid "Lastname"
-msgstr ""
+msgstr "Lastname"
 
 #: ../components/AddProfileDialog.qml:65
 #: ../components/ManageProfileDialog.qml:69 ../sudoku-app.qml:351
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: ../components/AddProfileDialog.qml:81 ../components/AddProfileDialog.qml:86
 #: ../components/ManageProfileDialog.qml:95
@@ -94,7 +94,7 @@ msgstr "Please pick a number"
 
 #: ../components/SudokuBlocksGrid.qml:396
 msgid "Clear"
-msgstr ""
+msgstr "Clear"
 
 #: ../components/SudokuBlocksGrid.qml:466
 #, qt-format
@@ -107,7 +107,13 @@ msgid_plural ""
 "But we give you\n"
 "%1 points."
 msgstr[0] ""
+"You are a cheat...\n"
+"But we give you\n"
+"%1 point."
 msgstr[1] ""
+"You are a cheat...\n"
+"But we give you\n"
+"%1 points."
 
 #: ../components/SudokuBlocksGrid.qml:473
 #, qt-format
@@ -125,31 +131,31 @@ msgstr[1] ""
 #: ../js/localStorage.js:11 ../sudoku-app.qml:683
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:1
 msgid "Sudoku"
-msgstr ""
+msgstr "Sudoku"
 
 #: ../js/localStorage.js:12
 msgid "User"
-msgstr ""
+msgstr "User"
 
 #: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:755
 msgid "New game"
-msgstr ""
+msgstr "New game"
 
 #: ../sudoku-app.qml:58 ../sudoku-app.qml:59
 msgid "Reveal hint"
-msgstr ""
+msgstr "Reveal hint"
 
 #: ../sudoku-app.qml:67 ../sudoku-app.qml:68
 msgid "Show settings"
-msgstr ""
+msgstr "Show settings"
 
 #: ../sudoku-app.qml:75 ../sudoku-app.qml:76
 msgid "Change difficulty to Easy"
-msgstr ""
+msgstr "Change difficulty to Easy"
 
 #: ../sudoku-app.qml:88 ../sudoku-app.qml:89
 msgid "Change difficulty to Moderate"
-msgstr ""
+msgstr "Change difficulty to Moderate"
 
 #: ../sudoku-app.qml:101 ../sudoku-app.qml:102
 msgid "Change difficulty to Hard"
@@ -157,11 +163,11 @@ msgstr ""
 
 #: ../sudoku-app.qml:114 ../sudoku-app.qml:115
 msgid "Change difficulty to Ultra Hard"
-msgstr ""
+msgstr "Change difficulty to Ultra Hard"
 
 #: ../sudoku-app.qml:127 ../sudoku-app.qml:128
 msgid "Change theme to Simple"
-msgstr ""
+msgstr "Change theme to Simple"
 
 #: ../sudoku-app.qml:137 ../sudoku-app.qml:138
 msgid "Change theme to UbuntuColors"
