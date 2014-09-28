@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-09-23 04:19+0000\n"
+"PO-Revision-Date: 2014-09-27 23:51+0000\n"
 "Last-Translator: Gheyret T.Kenji <Unknown>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2014-09-24 07:36+0000\n"
+"X-Launchpad-Export-Date: 2014-09-28 06:34+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
@@ -134,6 +134,8 @@ msgid ""
 "You are a cheat... \n"
 "But we give you\n"
 msgstr ""
+"سىز ھىيلە ئىشلەتتىڭىز... \n"
+"شۇنداقتىمۇ بىز بېرىمىز\n"
 
 #: sudoku-app.qml:229
 msgid "points."
@@ -181,7 +183,7 @@ msgstr "سۇدوكۇ"
 
 #: sudoku-app.qml:720
 msgid "You are a cheat..."
-msgstr ""
+msgstr "سىز ھىيلە ئىشلەتتىڭىز..."
 
 #: sudoku-app.qml:720
 msgid "Congratulations!"
@@ -201,7 +203,7 @@ msgstr "دەسلەپكى بۆلەك"
 
 #: sudoku-app.qml:858
 msgid "Hinted blocks"
-msgstr ""
+msgstr "كۆرسىتىپ قويۇلغان بۆلەكلەر"
 
 #: sudoku-app.qml:881
 msgid "Scores"
@@ -282,7 +284,9 @@ msgid_plural ""
 "But we give you\n"
 "%1 points."
 msgstr[0] ""
-msgstr[1] ""
+"سىز ھىيلە ئىشلەتتىڭىز... \n"
+"شۇنداقتىمۇ %1 نومۇر\n"
+"بېرىمىز."
 
 #: components/SudokuBlocksGrid.qml:462
 #, qt-format
