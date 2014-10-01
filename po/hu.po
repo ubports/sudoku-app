@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-08-30 13:31+0200\n"
+"POT-Creation-Date: 2014-09-20 02:38-0700\n"
 "PO-Revision-Date: 2014-09-04 10:32+0000\n"
 "Last-Translator: Richard Somlói <ricsipontaz@gmail.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-09-05 07:46+0000\n"
+"X-Launchpad-Export-Date: 2014-10-01 06:23+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
 #: ../components/AboutTab.qml:102
@@ -34,37 +34,37 @@ msgstr "Verzió: "
 msgid "Add new profile"
 msgstr "Új profil hozzáadása"
 
-#: ../components/AddProfileDialog.qml:31
+#: ../components/AddProfileDialog.qml:30
 msgid "Firstname"
 msgstr "Keresztnév"
 
-#: ../components/AddProfileDialog.qml:49
+#: ../components/AddProfileDialog.qml:42
 msgid "Lastname"
 msgstr "Vezetéknév"
 
-#: ../components/AddProfileDialog.qml:65
+#: ../components/AddProfileDialog.qml:53
 #: ../components/ManageProfileDialog.qml:69 ../sudoku-app.qml:351
 msgid "OK"
 msgstr "Ok"
 
-#: ../components/AddProfileDialog.qml:81 ../components/AddProfileDialog.qml:86
+#: ../components/AddProfileDialog.qml:69 ../components/AddProfileDialog.qml:74
 #: ../components/ManageProfileDialog.qml:95
 msgid "Warning"
 msgstr "Figyelmeztetés"
 
-#: ../components/AddProfileDialog.qml:81
+#: ../components/AddProfileDialog.qml:69
 msgid "User already exist."
 msgstr "A felhasználó már létezik."
 
-#: ../components/AddProfileDialog.qml:86
+#: ../components/AddProfileDialog.qml:74
 #: ../components/ManageProfileDialog.qml:95
 msgid "Lastname and firstname must not be empty."
 msgstr "A vezeték- és keresztnév nem lehet üres."
 
-#: ../components/AddProfileDialog.qml:97
+#: ../components/AddProfileDialog.qml:85
 #: ../components/ManageProfileDialog.qml:127
-#: ../components/SudokuBlocksGrid.qml:493 ../sudoku-app.qml:503
-#: ../sudoku-app.qml:963 ../sudoku-app.qml:1015
+#: ../components/SudokuBlocksGrid.qml:493 ../sudoku-app.qml:504
+#: ../sudoku-app.qml:964 ../sudoku-app.qml:1016
 msgid "Cancel"
 msgstr "Mégse"
 
@@ -134,7 +134,7 @@ msgstr[1] ""
 "Adunk Önnek\n"
 "%1 pontot."
 
-#: ../js/localStorage.js:11 ../sudoku-app.qml:683
+#: ../js/localStorage.js:11 ../sudoku-app.qml:684
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:1
 msgid "Sudoku"
 msgstr "Sudoku"
@@ -143,7 +143,7 @@ msgstr "Sudoku"
 msgid "User"
 msgstr "Felhasználó"
 
-#: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:755
+#: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:756
 msgid "New game"
 msgstr "Új játék"
 
@@ -207,27 +207,27 @@ msgstr "Sudoku játszma volt ma"
 msgid "No Sudoku games played today"
 msgstr "Ma még nem volt játék"
 
-#: ../sudoku-app.qml:367
+#: ../sudoku-app.qml:368
 msgid "New Game"
 msgstr "Új játék"
 
-#: ../sudoku-app.qml:368
+#: ../sudoku-app.qml:369
 msgid "Select difficulty level"
 msgstr "Válasszon nehézségi szintet"
 
-#: ../sudoku-app.qml:432 ../sudoku-app.qml:1062
+#: ../sudoku-app.qml:433 ../sudoku-app.qml:1063
 msgid "Easy"
 msgstr "Könnyű"
 
-#: ../sudoku-app.qml:451 ../sudoku-app.qml:1062
+#: ../sudoku-app.qml:452 ../sudoku-app.qml:1063
 msgid "Moderate"
 msgstr "Mérsékelt"
 
-#: ../sudoku-app.qml:468 ../sudoku-app.qml:1062
+#: ../sudoku-app.qml:469 ../sudoku-app.qml:1063
 msgid "Hard"
 msgstr "Nehéz"
 
-#: ../sudoku-app.qml:485
+#: ../sudoku-app.qml:486
 msgid ""
 "Ultra\n"
 "Hard"
@@ -235,91 +235,91 @@ msgstr ""
 "Nagyon\n"
 "nehéz"
 
-#: ../sudoku-app.qml:739
+#: ../sudoku-app.qml:740
 msgid "You are a cheat..."
 msgstr "Csalás…"
 
-#: ../sudoku-app.qml:739
+#: ../sudoku-app.qml:740
 msgid "Congratulations!"
 msgstr "Gratulálok!"
 
-#: ../sudoku-app.qml:773
+#: ../sudoku-app.qml:774
 msgid "Show hint"
 msgstr "Tipp mutatása"
 
-#: ../sudoku-app.qml:836
+#: ../sudoku-app.qml:837
 msgid "Not allowed"
 msgstr "Nem engedélyezett"
 
-#: ../sudoku-app.qml:857
+#: ../sudoku-app.qml:858
 msgid "Start blocks"
 msgstr "Kezdő mezők"
 
-#: ../sudoku-app.qml:878
+#: ../sudoku-app.qml:879
 msgid "Hinted blocks"
 msgstr "Tippelt mezők"
 
-#: ../sudoku-app.qml:902
+#: ../sudoku-app.qml:903
 msgid "Scores"
 msgstr "Eredmények"
 
-#: ../sudoku-app.qml:912
+#: ../sudoku-app.qml:913
 msgid "Settings"
 msgstr "Beállítások"
 
-#: ../sudoku-app.qml:934 ../sudoku-app.qml:982
+#: ../sudoku-app.qml:935 ../sudoku-app.qml:983
 msgid "Select profile"
 msgstr "Válasszon profilt"
 
-#: ../sudoku-app.qml:1055
+#: ../sudoku-app.qml:1056
 msgid "<b>Sudoku settings</b>"
 msgstr "<b>Sudoku beállítások</b>"
 
-#: ../sudoku-app.qml:1061
+#: ../sudoku-app.qml:1062
 msgid "Default Difficulty"
 msgstr "Alapértelmezett nehézség"
 
-#: ../sudoku-app.qml:1062
+#: ../sudoku-app.qml:1063
 msgid "Ultra Hard"
 msgstr "Nagyon nehéz"
 
-#: ../sudoku-app.qml:1062
+#: ../sudoku-app.qml:1063
 msgid "Always ask"
 msgstr "Mindig kérdezzen rá"
 
-#: ../sudoku-app.qml:1104
+#: ../sudoku-app.qml:1105
 msgid "Theme"
 msgstr "Téma"
 
-#: ../sudoku-app.qml:1128
+#: ../sudoku-app.qml:1129
 msgid "Hints"
 msgstr "Tippek"
 
-#: ../sudoku-app.qml:1144
+#: ../sudoku-app.qml:1145
 msgid "Vibration Alerts"
 msgstr "Rezgő értesítések"
 
-#: ../sudoku-app.qml:1159
+#: ../sudoku-app.qml:1160
 msgid "<b>Profiles settings</b>"
 msgstr "<b>Profilbeállítások</b>"
 
-#: ../sudoku-app.qml:1163
+#: ../sudoku-app.qml:1164
 msgid "Current profile"
 msgstr "Jelenlegi profil"
 
-#: ../sudoku-app.qml:1167
+#: ../sudoku-app.qml:1168
 msgid "None"
 msgstr "Nincs"
 
-#: ../sudoku-app.qml:1203
+#: ../sudoku-app.qml:1204
 msgid "Add profile"
 msgstr "Profil hozzáadása"
 
-#: ../sudoku-app.qml:1212
+#: ../sudoku-app.qml:1213
 msgid "Manage profiles"
 msgstr "Profilok kezelése"
 
-#: ../sudoku-app.qml:1244
+#: ../sudoku-app.qml:1245
 msgid "About"
 msgstr "Névjegy"
 
