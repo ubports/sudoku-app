@@ -50,10 +50,11 @@ list(SORT I18N_SRC_FILES)
 file(GLOB SRC_FILES
      RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
      *.qml *.js *.png *.js)
+add_custom_target(sudoku-app_QMlFiles ALL SOURCES ${SRC_FILES})
+
 install(DIRECTORY components icons js
     DESTINATION ${DATA_DIR})
 install(FILES ${MAIN_QML} ${ICON_FILE} DESTINATION ${DATA_DIR})
-
 
 configure_file(${DESKTOP_FILE}.in.in ${DESKTOP_FILE}.in)
 
@@ -69,5 +70,7 @@ install(FILES ${URLS_FILE} DESTINATION ${URLS_DIR})
 enable_testing()
 
 add_subdirectory(click)
+add_subdirectory(components)
+add_subdirectory(js)
 add_subdirectory(po)
 add_subdirectory(tests)
