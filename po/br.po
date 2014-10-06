@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-08-30 13:31+0200\n"
+"POT-Creation-Date: 2014-09-20 02:38-0700\n"
 "PO-Revision-Date: 2014-09-05 06:44+0000\n"
 "Last-Translator: Fohanno Thierry <thierry.fohanno@ofis-bzh.org>\n"
 "Language-Team: Breton <br@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2014-09-06 07:29+0000\n"
+"X-Launchpad-Export-Date: 2014-10-01 06:23+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
 #: ../components/AboutTab.qml:102
@@ -34,37 +34,37 @@ msgstr "Doare : "
 msgid "Add new profile"
 msgstr "Ouzhpennañ ur profil nevez"
 
-#: ../components/AddProfileDialog.qml:31
+#: ../components/AddProfileDialog.qml:30
 msgid "Firstname"
 msgstr "Anv-bihan"
 
-#: ../components/AddProfileDialog.qml:49
+#: ../components/AddProfileDialog.qml:42
 msgid "Lastname"
 msgstr "Anv"
 
-#: ../components/AddProfileDialog.qml:65
+#: ../components/AddProfileDialog.qml:53
 #: ../components/ManageProfileDialog.qml:69 ../sudoku-app.qml:351
 msgid "OK"
 msgstr "Mat eo"
 
-#: ../components/AddProfileDialog.qml:81 ../components/AddProfileDialog.qml:86
+#: ../components/AddProfileDialog.qml:69 ../components/AddProfileDialog.qml:74
 #: ../components/ManageProfileDialog.qml:95
 msgid "Warning"
 msgstr "Diwallit"
 
-#: ../components/AddProfileDialog.qml:81
+#: ../components/AddProfileDialog.qml:69
 msgid "User already exist."
 msgstr "An implijer zo anezhañ dija."
 
-#: ../components/AddProfileDialog.qml:86
+#: ../components/AddProfileDialog.qml:74
 #: ../components/ManageProfileDialog.qml:95
 msgid "Lastname and firstname must not be empty."
 msgstr "Ret eo skrivañ an anv hag an anv-bihan."
 
-#: ../components/AddProfileDialog.qml:97
+#: ../components/AddProfileDialog.qml:85
 #: ../components/ManageProfileDialog.qml:127
-#: ../components/SudokuBlocksGrid.qml:493 ../sudoku-app.qml:503
-#: ../sudoku-app.qml:963 ../sudoku-app.qml:1015
+#: ../components/SudokuBlocksGrid.qml:493 ../sudoku-app.qml:504
+#: ../sudoku-app.qml:964 ../sudoku-app.qml:1016
 msgid "Cancel"
 msgstr "Nullañ"
 
@@ -134,7 +134,7 @@ msgstr[1] ""
 "Reiñ a reomp\n"
 "%1 poent deoc'h."
 
-#: ../js/localStorage.js:11 ../sudoku-app.qml:683
+#: ../js/localStorage.js:11 ../sudoku-app.qml:684
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:1
 msgid "Sudoku"
 msgstr "Sudoku"
@@ -143,7 +143,7 @@ msgstr "Sudoku"
 msgid "User"
 msgstr "Implijer"
 
-#: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:755
+#: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:756
 msgid "New game"
 msgstr "Partiad nevez"
 
@@ -207,27 +207,27 @@ msgstr "Partiadoù Sudoku graet hiziv"
 msgid "No Sudoku games played today"
 msgstr "N'eus bet graet partiad Sudoku ebet hiziv"
 
-#: ../sudoku-app.qml:367
+#: ../sudoku-app.qml:368
 msgid "New Game"
 msgstr "Partiad nevez"
 
-#: ../sudoku-app.qml:368
+#: ../sudoku-app.qml:369
 msgid "Select difficulty level"
 msgstr "Diuzañ an diaester"
 
-#: ../sudoku-app.qml:432 ../sudoku-app.qml:1062
+#: ../sudoku-app.qml:433 ../sudoku-app.qml:1063
 msgid "Easy"
 msgstr "Aes"
 
-#: ../sudoku-app.qml:451 ../sudoku-app.qml:1062
+#: ../sudoku-app.qml:452 ../sudoku-app.qml:1063
 msgid "Moderate"
 msgstr "Aes a-walc'h"
 
-#: ../sudoku-app.qml:468 ../sudoku-app.qml:1062
+#: ../sudoku-app.qml:469 ../sudoku-app.qml:1063
 msgid "Hard"
 msgstr "Diaes"
 
-#: ../sudoku-app.qml:485
+#: ../sudoku-app.qml:486
 msgid ""
 "Ultra\n"
 "Hard"
@@ -235,91 +235,91 @@ msgstr ""
 "Diaes\n"
 "Meurbet"
 
-#: ../sudoku-app.qml:739
+#: ../sudoku-app.qml:740
 msgid "You are a cheat..."
 msgstr "Un trucher zo ac'hanoc'h..."
 
-#: ../sudoku-app.qml:739
+#: ../sudoku-app.qml:740
 msgid "Congratulations!"
 msgstr "Gourc'hemennoù !"
 
-#: ../sudoku-app.qml:773
+#: ../sudoku-app.qml:774
 msgid "Show hint"
 msgstr "Diskouez un titourig"
 
-#: ../sudoku-app.qml:836
+#: ../sudoku-app.qml:837
 msgid "Not allowed"
 msgstr "N'eo ket aotreet"
 
-#: ../sudoku-app.qml:857
+#: ../sudoku-app.qml:858
 msgid "Start blocks"
 msgstr "Karrezennoù loc'hañ"
 
-#: ../sudoku-app.qml:878
+#: ../sudoku-app.qml:879
 msgid "Hinted blocks"
 msgstr "Karrezennoù gant titouroùigoù"
 
-#: ../sudoku-app.qml:902
+#: ../sudoku-app.qml:903
 msgid "Scores"
 msgstr "Kontoù"
 
-#: ../sudoku-app.qml:912
+#: ../sudoku-app.qml:913
 msgid "Settings"
 msgstr "Arventennoù"
 
-#: ../sudoku-app.qml:934 ../sudoku-app.qml:982
+#: ../sudoku-app.qml:935 ../sudoku-app.qml:983
 msgid "Select profile"
 msgstr "Diuzañ ur profil"
 
-#: ../sudoku-app.qml:1055
+#: ../sudoku-app.qml:1056
 msgid "<b>Sudoku settings</b>"
 msgstr "<b>Arventennoù Sudoku</b>"
 
-#: ../sudoku-app.qml:1061
+#: ../sudoku-app.qml:1062
 msgid "Default Difficulty"
 msgstr "Diaester dre ziouer"
 
-#: ../sudoku-app.qml:1062
+#: ../sudoku-app.qml:1063
 msgid "Ultra Hard"
 msgstr "Diaes-meurbet"
 
-#: ../sudoku-app.qml:1062
+#: ../sudoku-app.qml:1063
 msgid "Always ask"
 msgstr "Goulenn bepred"
 
-#: ../sudoku-app.qml:1104
+#: ../sudoku-app.qml:1105
 msgid "Theme"
 msgstr "Tem"
 
-#: ../sudoku-app.qml:1128
+#: ../sudoku-app.qml:1129
 msgid "Hints"
 msgstr "Titouroùigoù"
 
-#: ../sudoku-app.qml:1144
+#: ../sudoku-app.qml:1145
 msgid "Vibration Alerts"
 msgstr "Kemennoù krenañ"
 
-#: ../sudoku-app.qml:1159
+#: ../sudoku-app.qml:1160
 msgid "<b>Profiles settings</b>"
 msgstr "<b>Arventennoù ar profiloù</b>"
 
-#: ../sudoku-app.qml:1163
+#: ../sudoku-app.qml:1164
 msgid "Current profile"
 msgstr "Profil a vremañ"
 
-#: ../sudoku-app.qml:1167
+#: ../sudoku-app.qml:1168
 msgid "None"
 msgstr "Hini ebet"
 
-#: ../sudoku-app.qml:1203
+#: ../sudoku-app.qml:1204
 msgid "Add profile"
 msgstr "Ouzhpennañ ur profil"
 
-#: ../sudoku-app.qml:1212
+#: ../sudoku-app.qml:1213
 msgid "Manage profiles"
 msgstr "Merañ ar profiloù"
 
-#: ../sudoku-app.qml:1244
+#: ../sudoku-app.qml:1245
 msgid "About"
 msgstr "Diwar-benn"
 

@@ -8,7 +8,7 @@ find_program(INTLTOOL_EXTRACT intltool-extract)
 include(GNUInstallDirs)
 
 option(INSTALL_TESTS "Install the tests on make install" on)
-option(CLICK_MODE "Installs to a contained location" off)
+option(CLICK_MODE "Installs to a contained location" on)
 
 set(APP_NAME sudoku)
 set(DESKTOP_FILE "${PROJECT_NAME}_${APP_NAME}.desktop")
@@ -16,6 +16,7 @@ set(APP_HARDCODE sudoku-app)
 set(MAIN_QML ${APP_HARDCODE}.qml)
 set(ICON_FILE SudokuGameIcon.png)
 set(AUTOPILOT_DIR sudoku_app)
+set(UBUNTU_MANIFEST_PATH "click/manifest.json.in" CACHE INTERNAL "Relative path to the manifest file")
 
 if(CLICK_MODE)
     if(NOT DEFINED BZR_SOURCE)
@@ -49,10 +50,11 @@ list(SORT I18N_SRC_FILES)
 file(GLOB SRC_FILES
      RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
      *.qml *.js *.png *.js)
+add_custom_target(sudoku-app_QMlFiles ALL SOURCES ${SRC_FILES})
+
 install(DIRECTORY components icons js
     DESTINATION ${DATA_DIR})
 install(FILES ${MAIN_QML} ${ICON_FILE} DESTINATION ${DATA_DIR})
-
 
 configure_file(${DESKTOP_FILE}.in.in ${DESKTOP_FILE}.in)
 
@@ -68,5 +70,7 @@ install(FILES ${URLS_FILE} DESTINATION ${URLS_DIR})
 enable_testing()
 
 add_subdirectory(click)
+add_subdirectory(components)
+add_subdirectory(js)
 add_subdirectory(po)
 add_subdirectory(tests)

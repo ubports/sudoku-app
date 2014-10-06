@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.3
 import Ubuntu.Components 1.1
 import Ubuntu.Components.ListItems 1.0 as ListItem
 import QtQuick.LocalStorage 2.0
@@ -349,6 +349,7 @@ MainView {
 
             SudokuDialogButton{
                 buttonText: i18n.tr("OK")
+                buttonColor: sudokuBlocksGrid.dialogButtonColor2
                 width: parent.width/2;
                 size: units.gu(5)
                 onTriggered: {
