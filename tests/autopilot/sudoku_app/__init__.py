@@ -20,6 +20,7 @@ import logging
 import autopilot.logging
 import ubuntuuitoolkit
 from autopilot import introspection
+from sudoku_app import settings
 
 
 logger = logging.getLogger(__name__)
