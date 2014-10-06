@@ -21,10 +21,6 @@ import autopilot.logging
 import ubuntuuitoolkit
 from autopilot import introspection
 
-# Not directly used because of the way autopilot loads custom proxy objects.
-from sudoku_app import pages
-pages
-
 
 logger = logging.getLogger(__name__)
 

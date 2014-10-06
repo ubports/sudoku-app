@@ -23,7 +23,7 @@ from autopilot import introspection
 logger = logging.getLogger(__name__)
 
 
-class SettingsPage(ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase):
+class Page11(ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase):
 
     """Autopilot helper for the Settings page."""
 

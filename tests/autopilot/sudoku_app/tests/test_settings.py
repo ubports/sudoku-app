@@ -15,10 +15,10 @@
 
 import uuid
 
-from sudoku_app import tests
+from sudoku_app.tests import SudokuTestCase
 
 
-class ProfilesTestCase(tests.SudokuTestCase):
+class ProfilesTestCase(SudokuTestCase):
 
     def setUp(self):
         super().setUp()
