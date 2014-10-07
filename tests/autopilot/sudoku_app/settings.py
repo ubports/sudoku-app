@@ -22,15 +22,16 @@ from autopilot import introspection
 
 logger = logging.getLogger(__name__)
 
-
-class SettingsPage(ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase):
+class Page11(ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase):
+# Due to https://bugs.launchpad.net/autopilot-qt/+bug/1341671
+# it must be called Page11
 
     """Autopilot helper for the Settings page."""
 
     @classmethod
     def validate_dbus_object(cls, path, state):
         name = introspection.get_classname_from_path(path)
-        if name == b'Page10':
+        if name == b'Page11':
             if state['objectName'][1] == 'settingsPage':
                 return True
         return False
