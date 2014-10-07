@@ -22,6 +22,7 @@ from autopilot import introspection
 
 logger = logging.getLogger(__name__)
 
+
 class Page11(ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase):
 # Due to https://bugs.launchpad.net/autopilot-qt/+bug/1341671
 # it must be called Page11
