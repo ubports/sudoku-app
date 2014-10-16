@@ -5,7 +5,7 @@ Maintainer: Ubuntu Core Apps Developers <ubuntu-touch-coreapps@lists.launchpad.n
 Build-Depends: cmake,
 	       debhelper (>= 9),
                gettext,
-	       python,
+	       python3,
 	       intltool,
 	       qtdeclarative5-dev-tools,
                qt5-default,
