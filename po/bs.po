@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-09-20 02:38-0700\n"
-"PO-Revision-Date: 2014-10-15 14:04+0000\n"
+"PO-Revision-Date: 2014-10-18 11:12+0000\n"
 "Last-Translator: Dinko Osmankovic <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2014-10-16 05:40+0000\n"
+"X-Launchpad-Export-Date: 2014-10-19 07:02+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
 #: ../components/AboutTab.qml:102
@@ -55,47 +55,47 @@ msgstr "Upozorenje"
 
 #: ../components/AddProfileDialog.qml:69
 msgid "User already exist."
-msgstr ""
+msgstr "Igrač već postoji."
 
 #: ../components/AddProfileDialog.qml:74
 #: ../components/ManageProfileDialog.qml:95
 msgid "Lastname and firstname must not be empty."
-msgstr "Ime i prezzime ne smiju biti prazna polja."
+msgstr "Ime i prezime ne smiju biti prazna polja."
 
 #: ../components/AddProfileDialog.qml:85
 #: ../components/ManageProfileDialog.qml:127
 #: ../components/SudokuBlocksGrid.qml:493 ../sudoku-app.qml:504
 #: ../sudoku-app.qml:964 ../sudoku-app.qml:1016
 msgid "Cancel"
-msgstr ""
+msgstr "Odustani"
 
 #: ../components/HighscoresTab.qml:33 ../components/HighscoresTab.qml:81
 #: ../sudoku-app.qml:24 ../sudoku-app.qml:153 ../sudoku-app.qml:206
 #: ../sudoku-app.qml:242
 msgid "<b>Best scores for all players</b>"
-msgstr ""
+msgstr "<b>Najbolji rezultati svih igrača</b>"
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
 #: ../components/HighscoresTab.qml:57 ../sudoku-app.qml:175
 #, qt-format
 msgid "Best scores for %1 %2"
-msgstr ""
+msgstr "Najbolji rezultati za %1 %2"
 
 #: ../components/ManageProfileDialog.qml:13
 msgid "Edit profile"
-msgstr ""
+msgstr "Izmijeni profil"
 
 #: ../components/ManageProfileDialog.qml:108
 msgid "Delete"
-msgstr ""
+msgstr "Obriši"
 
 #: ../components/SudokuBlocksGrid.qml:335
 msgid "Please pick a number"
-msgstr ""
+msgstr "Molimo da odaberete broj"
 
 #: ../components/SudokuBlocksGrid.qml:396
 msgid "Clear"
-msgstr ""
+msgstr "Očistiti"
 
 #: ../components/SudokuBlocksGrid.qml:466
 #, qt-format
@@ -108,7 +108,17 @@ msgid_plural ""
 "But we give you\n"
 "%1 points."
 msgstr[0] ""
+"Vi ste varalica...\n"
+"Ali vam dajemo\n"
+"%1 poena."
 msgstr[1] ""
+"Vi ste varalica...\n"
+"Ali vam dajemo\n"
+"%1 poen."
+msgstr[2] ""
+"Vi ste varalica...\n"
+"Ali vam dajemo\n"
+"%1 poena."
 
 #: ../components/SudokuBlocksGrid.qml:473
 #, qt-format
@@ -121,197 +131,211 @@ msgid_plural ""
 "We give you\n"
 "%1 points."
 msgstr[0] ""
+"Čestitamo!\n"
+"Dobili ste\n"
+"%1 poena."
 msgstr[1] ""
+"Čestitamo!\n"
+"Dobili ste\n"
+"%1 poen."
+msgstr[2] ""
+"Čestitamo!\n"
+"Dobili ste\n"
+"%1 poena."
 
 #: ../js/localStorage.js:11 ../sudoku-app.qml:684
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:1
 msgid "Sudoku"
-msgstr ""
+msgstr "Sudoku"
 
 #: ../js/localStorage.js:12
 msgid "User"
-msgstr ""
+msgstr "Igrač"
 
 #: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:756
 msgid "New game"
-msgstr ""
+msgstr "Nova igra"
 
 #: ../sudoku-app.qml:58 ../sudoku-app.qml:59
 msgid "Reveal hint"
-msgstr ""
+msgstr "Iskoristi savjet"
 
 #: ../sudoku-app.qml:67 ../sudoku-app.qml:68
 msgid "Show settings"
-msgstr ""
+msgstr "Prikaži podešavanja"
 
 #: ../sudoku-app.qml:75 ../sudoku-app.qml:76
 msgid "Change difficulty to Easy"
-msgstr ""
+msgstr "Promijeni težinu na Laganu"
 
 #: ../sudoku-app.qml:88 ../sudoku-app.qml:89
 msgid "Change difficulty to Moderate"
-msgstr ""
+msgstr "Promijeni težinu na Srednju"
 
 #: ../sudoku-app.qml:101 ../sudoku-app.qml:102
 msgid "Change difficulty to Hard"
-msgstr ""
+msgstr "Promijeni težinu na Tešku"
 
 #: ../sudoku-app.qml:114 ../sudoku-app.qml:115
 msgid "Change difficulty to Ultra Hard"
-msgstr ""
+msgstr "Promijeni težinu na Ultra tešku"
 
 #: ../sudoku-app.qml:127 ../sudoku-app.qml:128
 msgid "Change theme to Simple"
-msgstr ""
+msgstr "Promijeni temu na Jednostavnu"
 
 #: ../sudoku-app.qml:137 ../sudoku-app.qml:138
 msgid "Change theme to UbuntuColors"
-msgstr ""
+msgstr "Promijeni temu na UbuntuColors"
 
 #: ../sudoku-app.qml:147 ../sudoku-app.qml:148
 msgid "Show scores for all users"
-msgstr ""
+msgstr "Prikaži rezultate svih igrača"
 
 #: ../sudoku-app.qml:167 ../sudoku-app.qml:168
 msgid "Show scores for current user"
-msgstr ""
+msgstr "Prikaži rezultate trenutnog igrača"
 
 #: ../sudoku-app.qml:231
 msgid ""
 "You are a cheat... \n"
 "But we give you\n"
 msgstr ""
+"Vi ste varalica... \n"
+"Ali vam dajemo\n"
 
 #: ../sudoku-app.qml:233
 msgid "points."
-msgstr ""
+msgstr "poena."
 
 #: ../sudoku-app.qml:338
 msgid "Sudoku games played today"
-msgstr ""
+msgstr "Sudoku igara odigranih danas"
 
 #: ../sudoku-app.qml:339
 msgid "No Sudoku games played today"
-msgstr ""
+msgstr "Nije igrana Sudoku igra danas"
 
 #: ../sudoku-app.qml:368
 msgid "New Game"
-msgstr ""
+msgstr "Nova igra"
 
 #: ../sudoku-app.qml:369
 msgid "Select difficulty level"
-msgstr ""
+msgstr "Odaberite nivo težine"
 
 #: ../sudoku-app.qml:433 ../sudoku-app.qml:1063
 msgid "Easy"
-msgstr ""
+msgstr "Lagano"
 
 #: ../sudoku-app.qml:452 ../sudoku-app.qml:1063
 msgid "Moderate"
-msgstr ""
+msgstr "Umjereno"
 
 #: ../sudoku-app.qml:469 ../sudoku-app.qml:1063
 msgid "Hard"
-msgstr ""
+msgstr "Teško"
 
 #: ../sudoku-app.qml:486
 msgid ""
 "Ultra\n"
 "Hard"
 msgstr ""
+"Ultra\n"
+"Teško"
 
 #: ../sudoku-app.qml:740
 msgid "You are a cheat..."
-msgstr ""
+msgstr "Vi ste varalica..."
 
 #: ../sudoku-app.qml:740
 msgid "Congratulations!"
-msgstr ""
+msgstr "Čestitamo!"
 
 #: ../sudoku-app.qml:774
 msgid "Show hint"
-msgstr ""
+msgstr "Prikaži savjet"
 
 #: ../sudoku-app.qml:837
 msgid "Not allowed"
-msgstr ""
+msgstr "Nije dozvoljeno"
 
 #: ../sudoku-app.qml:858
 msgid "Start blocks"
-msgstr ""
+msgstr "Početna polja"
 
 #: ../sudoku-app.qml:879
 msgid "Hinted blocks"
-msgstr ""
+msgstr "Polja sa savjetom"
 
 #: ../sudoku-app.qml:903
 msgid "Scores"
-msgstr ""
+msgstr "Rezultati"
 
 #: ../sudoku-app.qml:913
 msgid "Settings"
-msgstr ""
+msgstr "Podešavanja"
 
 #: ../sudoku-app.qml:935 ../sudoku-app.qml:983
 msgid "Select profile"
-msgstr ""
+msgstr "Odaberite profil"
 
 #: ../sudoku-app.qml:1056
 msgid "<b>Sudoku settings</b>"
-msgstr ""
+msgstr "<b>Sudoku podešavanja</b>"
 
 #: ../sudoku-app.qml:1062
 msgid "Default Difficulty"
-msgstr ""
+msgstr "Osnovna težina"
 
 #: ../sudoku-app.qml:1063
 msgid "Ultra Hard"
-msgstr ""
+msgstr "Ultra teško"
 
 #: ../sudoku-app.qml:1063
 msgid "Always ask"
-msgstr ""
+msgstr "Uvijek pitati"
 
 #: ../sudoku-app.qml:1105
 msgid "Theme"
-msgstr ""
+msgstr "Tema"
 
 #: ../sudoku-app.qml:1129
 msgid "Hints"
-msgstr ""
+msgstr "Savjeti"
 
 #: ../sudoku-app.qml:1145
 msgid "Vibration Alerts"
-msgstr ""
+msgstr "Upozorenja vibracijama"
 
 #: ../sudoku-app.qml:1160
 msgid "<b>Profiles settings</b>"
-msgstr ""
+msgstr "<b>Podešavanja profila</b>"
 
 #: ../sudoku-app.qml:1164
 msgid "Current profile"
-msgstr ""
+msgstr "Trenutni profil"
 
 #: ../sudoku-app.qml:1168
 msgid "None"
-msgstr ""
+msgstr "Nijedan"
 
 #: ../sudoku-app.qml:1204
 msgid "Add profile"
-msgstr ""
+msgstr "Dodavanje profil"
 
 #: ../sudoku-app.qml:1213
 msgid "Manage profiles"
-msgstr ""
+msgstr "Upravljanje profilima"
 
 #: ../sudoku-app.qml:1245
 msgid "About"
-msgstr ""
+msgstr "O programu"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
 msgid "Sudoku Game for Ubuntu Touch."
-msgstr ""
+msgstr "Sudoku igra za Ubuntu Touch"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
-msgstr ""
+msgstr "sudoku;igra;touch"
