@@ -848,7 +848,7 @@ MainView {
                     }
                     UbuntuShape {
                         id: blueFlag
-                        color: sudokuBlocksGrid.defaultStartingColor
+                        color: settingsTab.themeIndex === 1 ? "white" : sudokuBlocksGrid.defaultStartingColor
                         //border.color: defaultBorderColor
                         width: mainView.width/mainView.height < mainView.resizeFactor ? 2*mainView.width/10: 2*units.gu(50)/10
                         height: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/10: units.gu(50)/10
