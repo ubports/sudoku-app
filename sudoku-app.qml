@@ -230,7 +230,7 @@ MainView {
                 Settings.insertNewScore(currentUserId, sudokuBlocksGrid.calculateScore())
                 gameFinishedText.text = i18n.tr("You are a cheat... \nBut we give you\n")
                         + sudokuBlocksGrid.calculateScore()
-                        + " " + i18n.tr("points.")
+                        + " " + i18n.tr("point.","points.",1)
 
                 //                print (sudokuBlocksGrid.numberOfActions)
                 //                print (sudokuBlocksGrid.numberOfHints)
