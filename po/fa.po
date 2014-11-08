@@ -1,304 +1,316 @@
 # Persian translation for sudoku-app
-# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
 # This file is distributed under the same license as the sudoku-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-08-03 16:17+0000\n"
-"Last-Translator: Danial Behzadi <dani.behzi@gmail.com>\n"
+"POT-Creation-Date: 2014-10-26 13:51+0100\n"
+"PO-Revision-Date: 2014-10-16 12:32+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Persian <fa@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2014-08-04 06:30+0000\n"
-"X-Generator: Launchpad (build 17147)\n"
+"X-Launchpad-Export-Date: 2014-10-27 06:29+0000\n"
+"X-Generator: Launchpad (build 17203)\n"
 
-#: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
-#: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
+#: ../components/AboutTab.qml:102
+msgid "Author(s): "
+msgstr ""
+
+#: ../components/AboutTab.qml:112
+msgid "Contact: "
+msgstr ""
+
+#: ../components/AboutTab.qml:138
+msgid "Version: "
+msgstr ""
+
+#: ../components/AddProfileDialog.qml:13
+msgid "Add new profile"
+msgstr ""
+
+#: ../components/AddProfileDialog.qml:30
+msgid "Firstname"
+msgstr ""
+
+#: ../components/AddProfileDialog.qml:42
+msgid "Lastname"
+msgstr ""
+
+#: ../components/AddProfileDialog.qml:53
+#: ../components/ManageProfileDialog.qml:69 ../sudoku-app.qml:351
+msgid "OK"
+msgstr ""
+
+#: ../components/AddProfileDialog.qml:69 ../components/AddProfileDialog.qml:74
+#: ../components/ManageProfileDialog.qml:95
+msgid "Warning"
+msgstr ""
+
+#: ../components/AddProfileDialog.qml:69
+msgid "User already exist."
+msgstr ""
+
+#: ../components/AddProfileDialog.qml:74
+#: ../components/ManageProfileDialog.qml:95
+msgid "Lastname and firstname must not be empty."
+msgstr ""
+
+#: ../components/AddProfileDialog.qml:85
+#: ../components/ManageProfileDialog.qml:127
+#: ../components/SudokuBlocksGrid.qml:493 ../sudoku-app.qml:504
+#: ../sudoku-app.qml:964 ../sudoku-app.qml:1016
+msgid "Cancel"
+msgstr ""
+
+#: ../components/HighscoresTab.qml:33 ../components/HighscoresTab.qml:81
+#: ../sudoku-app.qml:24 ../sudoku-app.qml:153 ../sudoku-app.qml:206
+#: ../sudoku-app.qml:242
 msgid "<b>Best scores for all players</b>"
-msgstr "بهترین امتیازها برای تمام بازکنین"
+msgstr ""
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
-#: components/HighscoresTab.qml:49 sudoku-app.qml:175
+#: ../components/HighscoresTab.qml:57 ../sudoku-app.qml:175
 #, qt-format
 msgid "Best scores for %1 %2"
-msgstr "بهترین امتیازها برای %1 %2"
+msgstr ""
 
-#: components/AddProfileDialog.qml:13
-msgid "Add new profile"
-msgstr "افزودن نمایه‌ی حدید"
-
-#: components/AddProfileDialog.qml:31
-msgid "Lastname"
-msgstr "نام خانوادگی"
-
-#: components/AddProfileDialog.qml:49
-msgid "Firstname"
-msgstr "نام"
-
-#: components/AddProfileDialog.qml:66 components/ManageProfileDialog.qml:68
-#: sudoku-app.qml:339
-msgid "OK"
-msgstr "قبول"
-
-#: components/AddProfileDialog.qml:82 components/AddProfileDialog.qml:87
-#: components/ManageProfileDialog.qml:94
-msgid "Warning"
-msgstr "هشدار"
-
-#: components/AddProfileDialog.qml:82
-msgid "User already exist."
-msgstr "کاربر همین‌الآن هم وجود دارد."
-
-#: components/AddProfileDialog.qml:87 components/ManageProfileDialog.qml:94
-msgid "Lastname and firstname must not be empty."
-msgstr "نام و نام خانوادگی نباید خالی باشد."
-
-#: components/AddProfileDialog.qml:98 components/ManageProfileDialog.qml:126
-#: sudoku-app.qml:491 sudoku-app.qml:941 sudoku-app.qml:991
-#: components/SudokuBlocksGrid.qml:482
-msgid "Cancel"
-msgstr "لغو"
-
-#: components/AboutTab.qml:101
-msgid "Author(s): "
-msgstr "نگارنده‌(ها): "
-
-#: components/AboutTab.qml:111
-msgid "Contact: "
-msgstr "تماس: "
-
-#: components/AboutTab.qml:137
-msgid "Version: "
-msgstr "نگارش: "
-
-#: components/ManageProfileDialog.qml:13
+#: ../components/ManageProfileDialog.qml:13
 msgid "Edit profile"
-msgstr "ویرایش نمایه"
+msgstr ""
 
-#: components/ManageProfileDialog.qml:107
+#: ../components/ManageProfileDialog.qml:108
 msgid "Delete"
-msgstr "حذف"
+msgstr ""
 
-#: sudoku-app.qml:50 sudoku-app.qml:51 sudoku-app.qml:736
+#: ../components/SudokuBlocksGrid.qml:335
+msgid "Please pick a number"
+msgstr ""
+
+#: ../components/SudokuBlocksGrid.qml:396
+msgid "Clear"
+msgstr ""
+
+#: ../components/SudokuBlocksGrid.qml:466
+#, qt-format
+msgid ""
+"You are a cheat...\n"
+"But we give you\n"
+"%1 point."
+msgid_plural ""
+"You are a cheat...\n"
+"But we give you\n"
+"%1 points."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../components/SudokuBlocksGrid.qml:473
+#, qt-format
+msgid ""
+"Congratulations!\n"
+"We give you\n"
+"%1 point."
+msgid_plural ""
+"Congratulations!\n"
+"We give you\n"
+"%1 points."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../js/localStorage.js:11 ../sudoku-app.qml:684
+#: com.ubuntu.sudoku_sudoku.desktop.in.in.h:1
+msgid "Sudoku"
+msgstr ""
+
+#: ../js/localStorage.js:12
+msgid "User"
+msgstr ""
+
+#: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:756
 msgid "New game"
-msgstr "بازی تازه"
+msgstr ""
 
-#: sudoku-app.qml:58 sudoku-app.qml:59
+#: ../sudoku-app.qml:58 ../sudoku-app.qml:59
 msgid "Reveal hint"
-msgstr "آشکار کردن کمک"
+msgstr ""
 
-#: sudoku-app.qml:67 sudoku-app.qml:68
+#: ../sudoku-app.qml:67 ../sudoku-app.qml:68
 msgid "Show settings"
-msgstr "نمایش تنظیمات"
+msgstr ""
 
-#: sudoku-app.qml:75 sudoku-app.qml:76
+#: ../sudoku-app.qml:75 ../sudoku-app.qml:76
 msgid "Change difficulty to Easy"
-msgstr "تغییر دشواری به آسان"
+msgstr ""
 
-#: sudoku-app.qml:88 sudoku-app.qml:89
+#: ../sudoku-app.qml:88 ../sudoku-app.qml:89
 msgid "Change difficulty to Moderate"
-msgstr "تغییر دشواری به معمولی"
+msgstr ""
 
-#: sudoku-app.qml:101 sudoku-app.qml:102
+#: ../sudoku-app.qml:101 ../sudoku-app.qml:102
 msgid "Change difficulty to Hard"
-msgstr "تغییر دشواری به سخت"
+msgstr ""
 
-#: sudoku-app.qml:114 sudoku-app.qml:115
+#: ../sudoku-app.qml:114 ../sudoku-app.qml:115
 msgid "Change difficulty to Ultra Hard"
-msgstr "تغییر دشواری به فوق سخت"
+msgstr ""
 
-#: sudoku-app.qml:127 sudoku-app.qml:128
+#: ../sudoku-app.qml:127 ../sudoku-app.qml:128
 msgid "Change theme to Simple"
-msgstr "تغییر قالب به ساده"
+msgstr ""
 
-#: sudoku-app.qml:137 sudoku-app.qml:138
+#: ../sudoku-app.qml:137 ../sudoku-app.qml:138
 msgid "Change theme to UbuntuColors"
-msgstr "تغییر قالب به رنگ‌های اوبونتو"
+msgstr ""
 
-#: sudoku-app.qml:147 sudoku-app.qml:148
+#: ../sudoku-app.qml:147 ../sudoku-app.qml:148
 msgid "Show scores for all users"
-msgstr "نمایش امتیازها برای تمام کاربران"
+msgstr ""
 
-#: sudoku-app.qml:167 sudoku-app.qml:168
+#: ../sudoku-app.qml:167 ../sudoku-app.qml:168
 msgid "Show scores for current user"
-msgstr "نمایش امتیازها برای کاربر جاری"
+msgstr ""
 
-#: sudoku-app.qml:227
+#: ../sudoku-app.qml:231
 msgid ""
 "You are a cheat... \n"
 "But we give you\n"
 msgstr ""
-"شما کلک زدید…\n"
-"ولی به شما\n"
 
-#: sudoku-app.qml:229
+#: ../sudoku-app.qml:233
 msgid "points."
-msgstr "امتیاز."
+msgstr ""
 
-#: sudoku-app.qml:326
+#: ../sudoku-app.qml:338
 msgid "Sudoku games played today"
-msgstr "بازی‌های سودوکویی که امروز انجام شده"
+msgstr ""
 
-#: sudoku-app.qml:327
+#: ../sudoku-app.qml:339
 msgid "No Sudoku games played today"
-msgstr "امروز هیج بازی سودوکویی انجام نشده"
+msgstr ""
 
-#: sudoku-app.qml:355
+#: ../sudoku-app.qml:368
 msgid "New Game"
-msgstr "بازی جدید"
+msgstr ""
 
-#: sudoku-app.qml:356
+#: ../sudoku-app.qml:369
 msgid "Select difficulty level"
-msgstr "انتخاب سطح دشواری"
+msgstr ""
 
-#: sudoku-app.qml:420 sudoku-app.qml:1038
+#: ../sudoku-app.qml:433 ../sudoku-app.qml:1063
 msgid "Easy"
-msgstr "آسان"
+msgstr ""
 
-#: sudoku-app.qml:439 sudoku-app.qml:1038
+#: ../sudoku-app.qml:452 ../sudoku-app.qml:1063
 msgid "Moderate"
-msgstr "معمولی"
+msgstr ""
 
-#: sudoku-app.qml:456 sudoku-app.qml:1038
+#: ../sudoku-app.qml:469 ../sudoku-app.qml:1063
 msgid "Hard"
-msgstr "سخت"
+msgstr ""
 
-#: sudoku-app.qml:473
+#: ../sudoku-app.qml:486
 msgid ""
 "Ultra\n"
 "Hard"
 msgstr ""
-"فوق\n"
-"سخت"
 
-#: sudoku-app.qml:665
-msgid "Sudoku"
-msgstr "سودوکو"
-
-#: sudoku-app.qml:720
+#: ../sudoku-app.qml:740
 msgid "You are a cheat..."
-msgstr "شما یک متقلبید..."
+msgstr ""
 
-#: sudoku-app.qml:720
+#: ../sudoku-app.qml:740
 msgid "Congratulations!"
-msgstr "آفرین!"
+msgstr ""
 
-#: sudoku-app.qml:754
+#: ../sudoku-app.qml:774
 msgid "Show hint"
-msgstr "راهنمایی را نشان بده"
+msgstr ""
 
-#: sudoku-app.qml:817
+#: ../sudoku-app.qml:837
 msgid "Not allowed"
-msgstr "غیر مجاز"
+msgstr ""
 
-#: sudoku-app.qml:837
+#: ../sudoku-app.qml:858
 msgid "Start blocks"
-msgstr "خانه‌های آغازین"
+msgstr ""
 
-#: sudoku-app.qml:858
+#: ../sudoku-app.qml:879
 msgid "Hinted blocks"
-msgstr "خانه‌های راهنما دار"
+msgstr ""
 
-#: sudoku-app.qml:881
+#: ../sudoku-app.qml:903
 msgid "Scores"
-msgstr "امتیازها"
+msgstr ""
 
-#: sudoku-app.qml:890
+#: ../sudoku-app.qml:913
 msgid "Settings"
-msgstr "تنظیمات"
+msgstr ""
 
-#: sudoku-app.qml:909 sudoku-app.qml:959
+#: ../sudoku-app.qml:935 ../sudoku-app.qml:983
 msgid "Select profile"
-msgstr "گرینش نمایه"
+msgstr ""
 
-#: sudoku-app.qml:1031
+#: ../sudoku-app.qml:1056
 msgid "<b>Sudoku settings</b>"
-msgstr "<b>تنظیمات سودوکو</b>"
+msgstr ""
 
-#: sudoku-app.qml:1037
+#: ../sudoku-app.qml:1062
 msgid "Default Difficulty"
-msgstr "دشواری پیش‌فرض"
+msgstr ""
 
-#: sudoku-app.qml:1038
+#: ../sudoku-app.qml:1063
 msgid "Ultra Hard"
-msgstr "بسیار سخت"
+msgstr ""
 
-#: sudoku-app.qml:1038
+#: ../sudoku-app.qml:1063
 msgid "Always ask"
-msgstr "همیشه بپرس"
+msgstr ""
 
-#: sudoku-app.qml:1076
+#: ../sudoku-app.qml:1105
 msgid "Theme"
-msgstr "سبک"
+msgstr ""
 
-#: sudoku-app.qml:1100
+#: ../sudoku-app.qml:1129
 msgid "Hints"
-msgstr "راهنمایی‌ها"
+msgstr ""
 
-#: sudoku-app.qml:1116
+#: ../sudoku-app.qml:1145
 msgid "Vibration Alerts"
-msgstr "هشدارهای لرزشی"
+msgstr ""
 
-#: sudoku-app.qml:1131
+#: ../sudoku-app.qml:1160
 msgid "<b>Profiles settings</b>"
-msgstr "<b>تنظیمات نمایه‌ها</b>"
+msgstr ""
 
-#: sudoku-app.qml:1139
+#: ../sudoku-app.qml:1164
+msgid "Current profile"
+msgstr ""
+
+#: ../sudoku-app.qml:1168
 msgid "None"
-msgstr "هيچ‌کدام"
+msgstr ""
 
-#: sudoku-app.qml:1172
+#: ../sudoku-app.qml:1204
 msgid "Add profile"
-msgstr "افزودن نمایه"
+msgstr ""
 
-#: sudoku-app.qml:1181
+#: ../sudoku-app.qml:1213
 msgid "Manage profiles"
-msgstr "مدیریت نمایه‌ها"
+msgstr ""
 
-#: sudoku-app.qml:1213
+#: ../sudoku-app.qml:1245
 msgid "About"
-msgstr "درباره"
+msgstr ""
 
-#: components/SudokuBlocksGrid.qml:327
-msgid "Please pick a number"
-msgstr "لطفا عددی را بردارید"
+#: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
+msgid "Sudoku Game for Ubuntu Touch."
+msgstr ""
 
-#: components/SudokuBlocksGrid.qml:388
-msgid "Clear"
-msgstr "پاک‌کردن"
-
-#: components/SudokuBlocksGrid.qml:455
-#, qt-format
-msgid ""
-"You are a cheat...\n"
-"But we give you\n"
-"%1 point."
-msgid_plural ""
-"You are a cheat...\n"
-"But we give you\n"
-"%1 points."
-msgstr[0] ""
-"شما کلک زدید…\n"
-"ولی به شما\n"
-"%1 امتیاز دادیم."
-
-#: components/SudokuBlocksGrid.qml:462
-#, qt-format
-msgid ""
-"Congratulations!\n"
-"We give you\n"
-"%1 point."
-msgid_plural ""
-"Congratulations!\n"
-"We give you\n"
-"%1 points."
-msgstr[0] ""
-"تبریک!\n"
-"ما به شما\n"
-"%1 امتیار دادیم."
+#: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
+msgid "sudoku;game;touch;"
+msgstr ""

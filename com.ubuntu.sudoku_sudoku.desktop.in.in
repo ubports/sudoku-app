@@ -8,3 +8,5 @@ Exec=@EXEC@
 Icon=@ICON@
 X-Ubuntu-Touch=true
 X-Ubuntu-Default-Department-ID=games
+_X-Ubuntu-Splash-Title=Sudoku
+

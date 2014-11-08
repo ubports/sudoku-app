@@ -230,7 +230,7 @@ MainView {
                 Settings.insertNewScore(currentUserId, sudokuBlocksGrid.calculateScore())
                 gameFinishedText.text = i18n.tr("You are a cheat... \nBut we give you\n")
                         + sudokuBlocksGrid.calculateScore()
-                        + " " + i18n.tr("points.")
+                        + " " + i18n.tr("point.","points.",1)
 
                 //                print (sudokuBlocksGrid.numberOfActions)
                 //                print (sudokuBlocksGrid.numberOfHints)
@@ -848,7 +848,7 @@ MainView {
                     }
                     UbuntuShape {
                         id: blueFlag
-                        color: sudokuBlocksGrid.defaultStartingColor
+                        color: settingsTab.themeIndex === 1 ? "white" : sudokuBlocksGrid.defaultStartingColor
                         //border.color: defaultBorderColor
                         width: mainView.width/mainView.height < mainView.resizeFactor ? 2*mainView.width/10: 2*units.gu(50)/10
                         height: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/10: units.gu(50)/10

@@ -435,7 +435,7 @@ Column {
                                 id: buttonPick
                                 buttonText: index+1;
                                 textColor: UbuntuColors.coolGrey
-                                buttonColor: backgroundColor
+                                buttonColor: settingsTab.themeIndex === 1 ? "white" : backgroundColor
 
                                 size: units.gu(5);
 
