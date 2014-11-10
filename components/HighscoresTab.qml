@@ -1,13 +1,13 @@
 import QtQuick 2.3
-import Ubuntu.Components 0.1
-import Ubuntu.Components.ListItems 0.1 as ListItem
+import Ubuntu.Components 1.1
+import Ubuntu.Components.ListItems 1.0 as ListItem
 import QtQuick.LocalStorage 2.0
-import Ubuntu.Components.Popups 0.1
-import Ubuntu.Layouts 0.1
+import Ubuntu.Components.Popups 1.0
+import Ubuntu.Layouts 1.0
 import "../js/localStorage.js" as Settings
 import "../components"
 //import Ubuntu.HUD 1.0 as HUD
-import Ubuntu.Unity.Action 1.0 as UnityActions
+import Ubuntu.Unity.Action 1.1 as UnityActions
 import UserMetrics 0.1
 
 Page {
