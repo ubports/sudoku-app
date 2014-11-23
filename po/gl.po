@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-08-21 15:13+0000\n"
+"PO-Revision-Date: 2014-11-22 14:52+0000\n"
 "Last-Translator: Marcos Lans <Unknown>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-11-09 06:51+0000\n"
-"X-Generator: Launchpad (build 17231)\n"
+"X-Launchpad-Export-Date: 2014-11-23 05:22+0000\n"
+"X-Generator: Launchpad (build 17252)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
@@ -199,7 +199,7 @@ msgstr "Non permitido"
 
 #: sudoku-app.qml:837
 msgid "Start blocks"
-msgstr "Iniciar bloques"
+msgstr "Bloques de inicio"
 
 #: sudoku-app.qml:858
 msgid "Hinted blocks"
