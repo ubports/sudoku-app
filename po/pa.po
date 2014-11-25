@@ -7,273 +7,96 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-09-06 16:39+0000\n"
-"Last-Translator: A S Alam <aalam@users.sf.net>\n"
+"POT-Creation-Date: 2014-10-26 13:51+0100\n"
+"PO-Revision-Date: 2014-11-25 07:04+0000\n"
+"Last-Translator: Gursharnjit_singh <ubuntuser13@gmail.com>\n"
 "Language-Team: Punjabi <pa@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-11-09 06:51+0000\n"
-"X-Generator: Launchpad (build 17231)\n"
+"X-Launchpad-Export-Date: 2014-11-25 07:07+0000\n"
+"X-Generator: Launchpad (build 17252)\n"
 
-#: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
-#: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
+#: ../components/AboutTab.qml:102
+msgid "Author(s): "
+msgstr "ਲੇਖਕ(s): "
+
+#: ../components/AboutTab.qml:112
+msgid "Contact: "
+msgstr "ਸੰਪਰਕ: "
+
+#: ../components/AboutTab.qml:138
+msgid "Version: "
+msgstr "ਵਰਜਨ: "
+
+#: ../components/AddProfileDialog.qml:13
+msgid "Add new profile"
+msgstr "ਨਵੀਂ ਪ੍ਰੋਫ਼ਾਈਲ ਜੋੜੋ"
+
+#: ../components/AddProfileDialog.qml:30
+msgid "Firstname"
+msgstr "ਪਹਿਲਾਂ ਨਾਂ"
+
+#: ../components/AddProfileDialog.qml:42
+msgid "Lastname"
+msgstr "ਆਖਰੀ ਨਾਂ"
+
+#: ../components/AddProfileDialog.qml:53
+#: ../components/ManageProfileDialog.qml:69 ../sudoku-app.qml:351
+msgid "OK"
+msgstr "ਠੀਕ"
+
+#: ../components/AddProfileDialog.qml:69 ../components/AddProfileDialog.qml:74
+#: ../components/ManageProfileDialog.qml:95
+msgid "Warning"
+msgstr "ਚੇਤਾਵਨੀ"
+
+#: ../components/AddProfileDialog.qml:69
+msgid "User already exist."
+msgstr "ਉਪਭੋਗੀ ਪਹਿਲਾਂ ਤੋਂ ਮੌਜੂਦ"
+
+#: ../components/AddProfileDialog.qml:74
+#: ../components/ManageProfileDialog.qml:95
+msgid "Lastname and firstname must not be empty."
+msgstr "ਪਹਿਲਾਂ ਨਾਂ ਅਤੇ ਆਖਰੀ ਨਾਂ ਖਾਲੀ ਨਹੀਂ ਹੋਣੇ ਚਾਹੀਦੇ।"
+
+#: ../components/AddProfileDialog.qml:85
+#: ../components/ManageProfileDialog.qml:127
+#: ../components/SudokuBlocksGrid.qml:493 ../sudoku-app.qml:504
+#: ../sudoku-app.qml:964 ../sudoku-app.qml:1016
+msgid "Cancel"
+msgstr "ਰੱਦ"
+
+#: ../components/HighscoresTab.qml:33 ../components/HighscoresTab.qml:81
+#: ../sudoku-app.qml:24 ../sudoku-app.qml:153 ../sudoku-app.qml:206
+#: ../sudoku-app.qml:242
 msgid "<b>Best scores for all players</b>"
 msgstr "<b>ਸਾਰੇ ਖਿਡਾਰੀਆਂ ਲਈ ਵਧੀਆ ਅੰਕ</b>"
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
-#: components/HighscoresTab.qml:49 sudoku-app.qml:175
+#: ../components/HighscoresTab.qml:57 ../sudoku-app.qml:175
 #, qt-format
 msgid "Best scores for %1 %2"
 msgstr "%1 %2 ਲਈ ਵਧੀਆ ਅੰਕ"
 
-#: components/AddProfileDialog.qml:13
-msgid "Add new profile"
-msgstr "ਨਵੀਂ ਪ੍ਰੋਫ਼ਾਈਲ ਜੋੜੋ"
-
-#: components/AddProfileDialog.qml:31
-msgid "Lastname"
-msgstr "ਆਖਰੀ ਨਾਂ"
-
-#: components/AddProfileDialog.qml:49
-msgid "Firstname"
-msgstr "ਪਹਿਲਾਂ ਨਾਂ"
-
-#: components/AddProfileDialog.qml:66 components/ManageProfileDialog.qml:68
-#: sudoku-app.qml:339
-msgid "OK"
-msgstr "ਠੀਕ"
-
-#: components/AddProfileDialog.qml:82 components/AddProfileDialog.qml:87
-#: components/ManageProfileDialog.qml:94
-msgid "Warning"
-msgstr "ਚੇਤਾਵਨੀ"
-
-#: components/AddProfileDialog.qml:82
-msgid "User already exist."
-msgstr "ਉਪਭੋਗੀ ਪਹਿਲਾਂ ਤੋਂ ਮੌਜੂਦ"
-
-#: components/AddProfileDialog.qml:87 components/ManageProfileDialog.qml:94
-msgid "Lastname and firstname must not be empty."
-msgstr "ਪਹਿਲਾਂ ਨਾਂ ਅਤੇ ਆਖਰੀ ਨਾਂ ਖਾਲੀ ਨਹੀਂ ਹੋਣੇ ਚਾਹੀਦੇ।"
-
-#: components/AddProfileDialog.qml:98 components/ManageProfileDialog.qml:126
-#: sudoku-app.qml:491 sudoku-app.qml:941 sudoku-app.qml:991
-#: components/SudokuBlocksGrid.qml:482
-msgid "Cancel"
-msgstr "ਰੱਦ"
-
-#: components/AboutTab.qml:101
-msgid "Author(s): "
-msgstr "ਲੇਖਕ(s): "
-
-#: components/AboutTab.qml:111
-msgid "Contact: "
-msgstr "ਸੰਪਰਕ: "
-
-#: components/AboutTab.qml:137
-msgid "Version: "
-msgstr "ਵਰਜਨ: "
-
-#: components/ManageProfileDialog.qml:13
+#: ../components/ManageProfileDialog.qml:13
 msgid "Edit profile"
 msgstr "ਪ੍ਰੋਫ਼ਾਈਲ ਸੋਧ"
 
-#: components/ManageProfileDialog.qml:107
+#: ../components/ManageProfileDialog.qml:108
 msgid "Delete"
 msgstr "ਹਟਾਓ"
 
-#: sudoku-app.qml:50 sudoku-app.qml:51 sudoku-app.qml:736
-msgid "New game"
-msgstr "ਨਵੀਂ ਖੇਡ"
-
-#: sudoku-app.qml:58 sudoku-app.qml:59
-msgid "Reveal hint"
-msgstr "ਸੰਕੇਤ ਪ੍ਰਗਟ ਕਰੋ"
-
-#: sudoku-app.qml:67 sudoku-app.qml:68
-msgid "Show settings"
-msgstr "ਸੈਟਿੰਗ ਵਿਖਾਓ"
-
-#: sudoku-app.qml:75 sudoku-app.qml:76
-msgid "Change difficulty to Easy"
-msgstr "ਮੁਸ਼ਕਲ ਨੂੰ ਸੌਖਾ ਵਿੱਚ ਬਦਲੋ"
-
-#: sudoku-app.qml:88 sudoku-app.qml:89
-msgid "Change difficulty to Moderate"
-msgstr "ਮੁਸ਼ਕਲ ਨੂੰ ਮੱਧਮ ਵਿੱਚ ਬਦਲੋ"
-
-#: sudoku-app.qml:101 sudoku-app.qml:102
-msgid "Change difficulty to Hard"
-msgstr "ਮੁਸ਼ਕਲ ਨੂੰ ਔਖੇ ਵਿੱਚ ਬਦਲੋ"
-
-#: sudoku-app.qml:114 sudoku-app.qml:115
-msgid "Change difficulty to Ultra Hard"
-msgstr "ਮੁਸ਼ਕਲ ਨੂੰ ਅਤਿ ਔਖੇ ਵਿੱਚ ਬਦਲੋ"
-
-#: sudoku-app.qml:127 sudoku-app.qml:128
-msgid "Change theme to Simple"
-msgstr "ਥੀਮ ਨੂੰ ਸਧਾਰਨ ਵਿੱਚ ਬਦਲੋ"
-
-#: sudoku-app.qml:137 sudoku-app.qml:138
-msgid "Change theme to UbuntuColors"
-msgstr "ਥੀਮ ਨੂੰ ਉਬੰਤੂ ਰੰਗਾਂ ਵਿੱਚ ਬਦਲੋ"
-
-#: sudoku-app.qml:147 sudoku-app.qml:148
-msgid "Show scores for all users"
-msgstr "ਸਾਰੇ ਉਪਭੋਗੀਆਂ ਲਈ ਅੰਕ ਵਿਖਾਓ"
-
-#: sudoku-app.qml:167 sudoku-app.qml:168
-msgid "Show scores for current user"
-msgstr "ਮੌਜੂਦਾ ਉਪਭੋਗੀ ਲਈ ਅੰਕ ਵਿਖਾਓ"
-
-#: sudoku-app.qml:227
-msgid ""
-"You are a cheat... \n"
-"But we give you\n"
-msgstr ""
-"ਤੁਸੀਂ ਇੱਕ ਠੱਗ ਹੋ... \n"
-"ਪਰ ਅਸੀਂ ਤੁਹਾਨੂੰ ਦਿੱਤੇ\n"
-
-#: sudoku-app.qml:229
-msgid "points."
-msgstr "ਅੰਕ।"
-
-#: sudoku-app.qml:326
-msgid "Sudoku games played today"
-msgstr "ਸੂਡੋਕੂ ਖੇਡਾਂ ਅੱਜ ਖੇਡੀਆਂ"
-
-#: sudoku-app.qml:327
-msgid "No Sudoku games played today"
-msgstr "ਅੱਜ ਕੋਈ ਸੂਡੋਕੂ ਖੇਡ ਨਹੀਂ ਖੇਡੀ"
-
-#: sudoku-app.qml:355
-msgid "New Game"
-msgstr "ਨਵੀਂ ਖੇਡ"
-
-#: sudoku-app.qml:356
-msgid "Select difficulty level"
-msgstr "ਮੁਸ਼ਕਲ ਦਾ ਮਿਆਰ ਚੁਣੋ"
-
-#: sudoku-app.qml:420 sudoku-app.qml:1038
-msgid "Easy"
-msgstr "ਸੌਖਾ"
-
-#: sudoku-app.qml:439 sudoku-app.qml:1038
-msgid "Moderate"
-msgstr "ਮੱਧਮ"
-
-#: sudoku-app.qml:456 sudoku-app.qml:1038
-msgid "Hard"
-msgstr "ਅੌਖਾ"
-
-#: sudoku-app.qml:473
-msgid ""
-"Ultra\n"
-"Hard"
-msgstr ""
-"ਅਤਿ\n"
-"ਔਖਾ"
-
-#: sudoku-app.qml:665
-msgid "Sudoku"
-msgstr "ਸੂਡੋਕੂ"
-
-#: sudoku-app.qml:720
-msgid "You are a cheat..."
-msgstr "ਤੁਸੀ ਇੱਕ ਠੱਗ ਹੋ..."
-
-#: sudoku-app.qml:720
-msgid "Congratulations!"
-msgstr "ਮੁਬਾਰਕਾਂ !"
-
-#: sudoku-app.qml:754
-msgid "Show hint"
-msgstr "ਸੰਕੇਤ ਵਿਖਾਓ"
-
-#: sudoku-app.qml:817
-msgid "Not allowed"
-msgstr "ਇਜਾਜ਼ਤ ਨਹੀਂ"
-
-#: sudoku-app.qml:837
-msgid "Start blocks"
-msgstr "ਖ਼ਾਨੇ ਸ਼ੁਰੂ ਕਰੋ"
-
-#: sudoku-app.qml:858
-msgid "Hinted blocks"
-msgstr "ਸੰਕੇਤਕ ਖ਼ਾਨੇ"
-
-#: sudoku-app.qml:881
-msgid "Scores"
-msgstr "ਅੰਕ"
-
-#: sudoku-app.qml:890
-msgid "Settings"
-msgstr "ਸੈਟਿੰਗ"
-
-#: sudoku-app.qml:909 sudoku-app.qml:959
-msgid "Select profile"
-msgstr "ਪ੍ਰੋਫ਼ਾਈਲ ਚੁਣੋ"
-
-#: sudoku-app.qml:1031
-msgid "<b>Sudoku settings</b>"
-msgstr "<b>ਸੂਡੋਕੂ ਸੈਟਿੰਗ</b>"
-
-#: sudoku-app.qml:1037
-msgid "Default Difficulty"
-msgstr "ਮੂਲ ਮੁਸ਼ਕਲ"
-
-#: sudoku-app.qml:1038
-msgid "Ultra Hard"
-msgstr "ਅਤਿ ਔਖਾ"
-
-#: sudoku-app.qml:1038
-msgid "Always ask"
-msgstr "ਹਮੇਸ਼ਾ ਪੁੱਛੋ"
-
-#: sudoku-app.qml:1076
-msgid "Theme"
-msgstr "ਥੀਮ"
-
-#: sudoku-app.qml:1100
-msgid "Hints"
-msgstr "ਸੰਕੇਤ"
-
-#: sudoku-app.qml:1116
-msgid "Vibration Alerts"
-msgstr "ਕੰਬਣ ਚੇਤਾਵਨੀਆਂ"
-
-#: sudoku-app.qml:1131
-msgid "<b>Profiles settings</b>"
-msgstr "<b>ਪ੍ਰੋਫ਼ਾਈਲ ਸੈਟਿੰਗ</b>"
-
-#: sudoku-app.qml:1139
-msgid "None"
-msgstr "ਕੋਈ ਨਹੀਂ"
-
-#: sudoku-app.qml:1172
-msgid "Add profile"
-msgstr "ਪ੍ਰੋਫ਼ਾਈਲ ਜੋੜੋ"
-
-#: sudoku-app.qml:1181
-msgid "Manage profiles"
-msgstr "ਪ੍ਰੋਫ਼ਾਈਲਾਂ ਦੀ ਸਾਂਭ ਸੰਭਾਲ੍ਹ"
-
-#: sudoku-app.qml:1213
-msgid "About"
-msgstr "ਇਸ ਬਾਰੇ"
-
-#: components/SudokuBlocksGrid.qml:327
+#: ../components/SudokuBlocksGrid.qml:335
 msgid "Please pick a number"
 msgstr "ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਅੰਕ ਚੁਣੋ"
 
-#: components/SudokuBlocksGrid.qml:388
+#: ../components/SudokuBlocksGrid.qml:396
 msgid "Clear"
 msgstr "ਸਾਫ਼ ਕਰੋ"
 
-#: components/SudokuBlocksGrid.qml:455
+#: ../components/SudokuBlocksGrid.qml:466
 #, qt-format
 msgid ""
 "You are a cheat...\n"
@@ -292,7 +115,7 @@ msgstr[1] ""
 "ਪਰ ਅਸੀਂ ਤੁਹਾਨੂੰ ਦਿੱਤੇ\n"
 "%1 ਅੰਕ।"
 
-#: components/SudokuBlocksGrid.qml:462
+#: ../components/SudokuBlocksGrid.qml:473
 #, qt-format
 msgid ""
 "Congratulations!\n"
@@ -303,10 +126,207 @@ msgid_plural ""
 "We give you\n"
 "%1 points."
 msgstr[0] ""
-"ਮੁਬਾਰਕਾਂ!\n"
+"ਵਧਾਈਆਂ!\n"
 "ਅਸੀੰ ਤੁਹਾਨੂੰ ਦਿੱਤਾ\n"
 "%1 ਅੰਕ।"
 msgstr[1] ""
-"ਮੁਬਾਰਕਾਂ!\n"
+"ਵਧਾਈਆਂ!\n"
 "ਅਸੀੰ ਤੁਹਾਨੂੰ ਦਿੱਤੇ\n"
 "%1 ਅੰਕ।"
+
+#: ../js/localStorage.js:11 ../sudoku-app.qml:684
+#: com.ubuntu.sudoku_sudoku.desktop.in.in.h:1
+msgid "Sudoku"
+msgstr "ਸੂਡੋਕੂ"
+
+#: ../js/localStorage.js:12
+msgid "User"
+msgstr "ਉਪਭੋਗੀ"
+
+#: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:756
+msgid "New game"
+msgstr "ਨਵੀਂ ਖੇਡ"
+
+#: ../sudoku-app.qml:58 ../sudoku-app.qml:59
+msgid "Reveal hint"
+msgstr "ਸੰਕੇਤ ਪ੍ਰਗਟ ਕਰੋ"
+
+#: ../sudoku-app.qml:67 ../sudoku-app.qml:68
+msgid "Show settings"
+msgstr "ਸੈਟਿੰਗ ਵਿਖਾਓ"
+
+#: ../sudoku-app.qml:75 ../sudoku-app.qml:76
+msgid "Change difficulty to Easy"
+msgstr "ਮੁਸ਼ਕਲ ਨੂੰ ਸੌਖੇ ਵਿੱਚ ਬਦਲੋ"
+
+#: ../sudoku-app.qml:88 ../sudoku-app.qml:89
+msgid "Change difficulty to Moderate"
+msgstr "ਮੁਸ਼ਕਲ ਨੂੰ ਮੱਧਮ ਵਿੱਚ ਬਦਲੋ"
+
+#: ../sudoku-app.qml:101 ../sudoku-app.qml:102
+msgid "Change difficulty to Hard"
+msgstr "ਮੁਸ਼ਕਲ ਨੂੰ ਔਖੇ ਵਿੱਚ ਬਦਲੋ"
+
+#: ../sudoku-app.qml:114 ../sudoku-app.qml:115
+msgid "Change difficulty to Ultra Hard"
+msgstr "ਮੁਸ਼ਕਲ ਨੂੰ ਅਤਿ ਔਖੇ ਵਿੱਚ ਬਦਲੋ"
+
+#: ../sudoku-app.qml:127 ../sudoku-app.qml:128
+msgid "Change theme to Simple"
+msgstr "ਥੀਮ ਨੂੰ ਸਧਾਰਨ ਵਿੱਚ ਬਦਲੋ"
+
+#: ../sudoku-app.qml:137 ../sudoku-app.qml:138
+msgid "Change theme to UbuntuColors"
+msgstr "ਥੀਮ ਨੂੰ ਉਬੰਤੂ ਰੰਗਾਂ ਵਿੱਚ ਬਦਲੋ"
+
+#: ../sudoku-app.qml:147 ../sudoku-app.qml:148
+msgid "Show scores for all users"
+msgstr "ਸਾਰੇ ਉਪਭੋਗੀਆਂ ਲਈ ਅੰਕ ਵਿਖਾਓ"
+
+#: ../sudoku-app.qml:167 ../sudoku-app.qml:168
+msgid "Show scores for current user"
+msgstr "ਮੌਜੂਦਾ ਉਪਭੋਗੀ ਲਈ ਅੰਕ ਵਿਖਾਓ"
+
+#: ../sudoku-app.qml:231
+msgid ""
+"You are a cheat... \n"
+"But we give you\n"
+msgstr ""
+"ਤੁਸੀਂ ਇੱਕ ਠੱਗ ਹੋ... \n"
+"ਪਰ ਅਸੀਂ ਤੁਹਾਨੂੰ ਦਿੱਤੇ\n"
+
+#: ../sudoku-app.qml:233
+msgid "points."
+msgstr "ਅੰਕ।"
+
+#: ../sudoku-app.qml:338
+msgid "Sudoku games played today"
+msgstr "ਸੂਡੋਕੂ ਖੇਡਾਂ ਅੱਜ ਖੇਡੀਆਂ"
+
+#: ../sudoku-app.qml:339
+msgid "No Sudoku games played today"
+msgstr "ਅੱਜ ਕੋਈ ਸੂਡੋਕੂ ਖੇਡ ਨਹੀਂ ਖੇਡੀ"
+
+#: ../sudoku-app.qml:368
+msgid "New Game"
+msgstr "ਨਵੀਂ ਖੇਡ"
+
+#: ../sudoku-app.qml:369
+msgid "Select difficulty level"
+msgstr "ਮੁਸ਼ਕਲ ਦਾ ਮਿਆਰ ਚੁਣੋ"
+
+#: ../sudoku-app.qml:433 ../sudoku-app.qml:1063
+msgid "Easy"
+msgstr "ਸੌਖਾ"
+
+#: ../sudoku-app.qml:452 ../sudoku-app.qml:1063
+msgid "Moderate"
+msgstr "ਮੱਧਮ"
+
+#: ../sudoku-app.qml:469 ../sudoku-app.qml:1063
+msgid "Hard"
+msgstr "ਅੌਖਾ"
+
+#: ../sudoku-app.qml:486
+msgid ""
+"Ultra\n"
+"Hard"
+msgstr ""
+"ਅਤਿ\n"
+"ਔਖਾ"
+
+#: ../sudoku-app.qml:740
+msgid "You are a cheat..."
+msgstr "ਤੁਸੀ ਇੱਕ ਠੱਗ ਹੋ..."
+
+#: ../sudoku-app.qml:740
+msgid "Congratulations!"
+msgstr "ਵਧਾਈਆਂ!"
+
+#: ../sudoku-app.qml:774
+msgid "Show hint"
+msgstr "ਸੰਕੇਤ ਵਿਖਾਓ"
+
+#: ../sudoku-app.qml:837
+msgid "Not allowed"
+msgstr "ਆਗਿਆ ਨਹੀਂ"
+
+#: ../sudoku-app.qml:858
+msgid "Start blocks"
+msgstr "ਖ਼ਾਨੇ ਸ਼ੁਰੂ ਕਰੋ"
+
+#: ../sudoku-app.qml:879
+msgid "Hinted blocks"
+msgstr "ਸੰਕੇਤਕ ਖ਼ਾਨੇ"
+
+#: ../sudoku-app.qml:903
+msgid "Scores"
+msgstr "ਅੰਕ"
+
+#: ../sudoku-app.qml:913
+msgid "Settings"
+msgstr "ਸੈਟਿੰਗ"
+
+#: ../sudoku-app.qml:935 ../sudoku-app.qml:983
+msgid "Select profile"
+msgstr "ਪ੍ਰੋਫ਼ਾਈਲ ਚੁਣੋ"
+
+#: ../sudoku-app.qml:1056
+msgid "<b>Sudoku settings</b>"
+msgstr "<b>ਸੂਡੋਕੂ ਸੈਟਿੰਗ</b>"
+
+#: ../sudoku-app.qml:1062
+msgid "Default Difficulty"
+msgstr "ਮੂਲ ਮੁਸ਼ਕਲ"
+
+#: ../sudoku-app.qml:1063
+msgid "Ultra Hard"
+msgstr "ਅਤਿ ਔਖਾ"
+
+#: ../sudoku-app.qml:1063
+msgid "Always ask"
+msgstr "ਹਮੇਸ਼ਾ ਪੁੱਛੋ"
+
+#: ../sudoku-app.qml:1105
+msgid "Theme"
+msgstr "ਥੀਮ"
+
+#: ../sudoku-app.qml:1129
+msgid "Hints"
+msgstr "ਸੰਕੇਤ"
+
+#: ../sudoku-app.qml:1145
+msgid "Vibration Alerts"
+msgstr "ਕੰਬਣ ਚੇਤਾਵਨੀਆਂ"
+
+#: ../sudoku-app.qml:1160
+msgid "<b>Profiles settings</b>"
+msgstr "<b>ਪ੍ਰੋਫ਼ਾਈਲ ਸੈਟਿੰਗ</b>"
+
+#: ../sudoku-app.qml:1164
+msgid "Current profile"
+msgstr "ਮੌਜੂਦਾ ਪ੍ਰੋਫ਼ਾਈਲ"
+
+#: ../sudoku-app.qml:1168
+msgid "None"
+msgstr "ਕੋਈ ਨਹੀਂ"
+
+#: ../sudoku-app.qml:1204
+msgid "Add profile"
+msgstr "ਪ੍ਰੋਫ਼ਾਈਲ ਜੋੜੋ"
+
+#: ../sudoku-app.qml:1213
+msgid "Manage profiles"
+msgstr "ਪ੍ਰੋਫ਼ਾਈਲਾਂ ਦੀ ਸਾਂਭ ਸੰਭਾਲ੍ਹ"
+
+#: ../sudoku-app.qml:1245
+msgid "About"
+msgstr "ਇਸ ਬਾਰੇ"
+
+#: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
+msgid "Sudoku Game for Ubuntu Touch."
+msgstr "ਉਬੰਤੂ ਟੱਚ ਲਈ ਸੂਡੋਕੂ ਖੇਡ।"
+
+#: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
+msgid "sudoku;game;touch;"
+msgstr "ਸੂਡੋਕੂ;ਖੇਡ;ਟੱਚ;"
