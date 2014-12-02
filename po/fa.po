@@ -8,20 +8,20 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-08-03 16:17+0000\n"
+"PO-Revision-Date: 2014-12-01 08:02+0000\n"
 "Last-Translator: Danial Behzadi <dani.behzi@gmail.com>\n"
 "Language-Team: Persian <fa@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2014-11-09 06:51+0000\n"
-"X-Generator: Launchpad (build 17231)\n"
+"X-Launchpad-Export-Date: 2014-12-02 06:10+0000\n"
+"X-Generator: Launchpad (build 17274)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
 msgid "<b>Best scores for all players</b>"
-msgstr "بهترین امتیازها برای تمام بازکنین"
+msgstr "بهترین امتیازها برای تمام بازکنان"
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
 #: components/HighscoresTab.qml:49 sudoku-app.qml:175
