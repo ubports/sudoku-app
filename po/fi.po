@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: sudokutouchgame\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-06-26 14:26+0000\n"
+"PO-Revision-Date: 2014-12-14 20:08+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-11-09 06:51+0000\n"
-"X-Generator: Launchpad (build 17231)\n"
+"X-Launchpad-Export-Date: 2014-12-15 06:31+0000\n"
+"X-Generator: Launchpad (build 17286)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
@@ -223,7 +223,7 @@ msgstr "<b>Sudoku-asetukset</b>"
 
 #: sudoku-app.qml:1037
 msgid "Default Difficulty"
-msgstr "Valitse vaikeustaso"
+msgstr "Oletusvaikeustaso"
 
 #: sudoku-app.qml:1038
 msgid "Ultra Hard"
