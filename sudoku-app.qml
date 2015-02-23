@@ -761,8 +761,9 @@ MainView {
                                 //createNewGame()
                                 if (settingsTab.difficultyIndex == 4)
                                     PopupUtils.open(newGameComponent)
-                                else
+                                else {
                                     createNewGame()
+                                }
                             }
                         }
                     }
