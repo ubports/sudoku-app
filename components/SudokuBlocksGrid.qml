@@ -69,7 +69,6 @@ Column {
         numberOfHints = 0;
     }
 
-
     function revealHint() {
         numberOfHints++;
         var emptyFields = new Array();
@@ -528,9 +527,18 @@ Column {
                 Repeater {
                     model: 9
                     id: blocks
-                    BigBlock {
+                    delegate: BigBlock {
                         id: block
                         color: index % 2 == 0 ? UbuntuColors.warmGrey : Qt.lighter(UbuntuColors.warmGrey, 1.15)
+                        PropertyAnimation {
+                            target: block;
+                            property: "scale";
+                            from: 0.0;
+                            to: 1.0;
+                            duration: UbuntuAnimation.SlowDuration;
+                            running: true;
+                            loops: 1;
+                        }
                     }
                 }
             }

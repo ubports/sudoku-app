@@ -59,6 +59,14 @@ Repeater {
         //border.width: 0
         //border.color: defaultBorderColor
         //textColor: defaultTextColor;
+        UbuntuNumberAnimation {
+            id: numbersAnimation
+            target: gridButton; property: "opacity";
+            duration: 2000; easing.type: Easing.InOutQuad
+            from: 0; to: 1
+            running: true;
+            loops: 1
+        }
 
         anchors.left:  ((index - (Math.floor(index / 9) * 9)) > 0) ? buttonsGrid.itemAt(index-1).right : buttonsGrid.left//((index - (Math.floor(index / 9) * 9)) > 0) ? buttonsGrid.itemAt(index-1).right : mainView.left
         anchors.leftMargin:   ((index - (Math.floor(index / 9) * 9))%3 == 0) ? 4*mainView.blockDistance : mainView.blockDistance
