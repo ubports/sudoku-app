@@ -1,277 +1,102 @@
 # Chinese (Traditional) translation for sudoku-app
-# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
 # This file is distributed under the same license as the sudoku-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-11-19 14:24+0000\n"
+"POT-Creation-Date: 2015-02-23 08:42+0100\n"
+"PO-Revision-Date: 2014-11-19 14:23+0000\n"
 "Last-Translator: Walter Cheuk <wwycheuk@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2014-11-20 06:25+0000\n"
-"X-Generator: Launchpad (build 17252)\n"
+"X-Launchpad-Export-Date: 2015-02-24 05:46+0000\n"
+"X-Generator: Launchpad (build 17355)\n"
 
-#: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
-#: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
+#: ../components/AboutTab.qml:102
+msgid "Author(s): "
+msgstr "作者： "
+
+#: ../components/AboutTab.qml:112
+msgid "Contact: "
+msgstr "聯絡人： "
+
+#: ../components/AboutTab.qml:138
+msgid "Version: "
+msgstr "版本： "
+
+#: ../components/AddProfileDialog.qml:13
+msgid "Add new profile"
+msgstr "加入新的個人檔案"
+
+#: ../components/AddProfileDialog.qml:30
+msgid "Firstname"
+msgstr "名字"
+
+#: ../components/AddProfileDialog.qml:42
+msgid "Lastname"
+msgstr "姓氏"
+
+#: ../components/AddProfileDialog.qml:53
+#: ../components/ManageProfileDialog.qml:69 ../sudoku-app.qml:351
+msgid "OK"
+msgstr "確定"
+
+#: ../components/AddProfileDialog.qml:69 ../components/AddProfileDialog.qml:74
+#: ../components/ManageProfileDialog.qml:95
+msgid "Warning"
+msgstr "警告"
+
+#: ../components/AddProfileDialog.qml:69
+msgid "User already exist."
+msgstr "已有該使用者。"
+
+#: ../components/AddProfileDialog.qml:74
+#: ../components/ManageProfileDialog.qml:95
+msgid "Lastname and firstname must not be empty."
+msgstr "姓氏與名字不能留空。"
+
+#: ../components/AddProfileDialog.qml:85
+#: ../components/ManageProfileDialog.qml:127
+#: ../components/SudokuBlocksGrid.qml:492 ../sudoku-app.qml:504
+#: ../sudoku-app.qml:965 ../sudoku-app.qml:1017
+msgid "Cancel"
+msgstr "取消"
+
+#: ../components/HighscoresTab.qml:33 ../components/HighscoresTab.qml:81
+#: ../sudoku-app.qml:24 ../sudoku-app.qml:153 ../sudoku-app.qml:206
+#: ../sudoku-app.qml:242
 msgid "<b>Best scores for all players</b>"
 msgstr "<b>所有玩家的最高分</b>"
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
-#: components/HighscoresTab.qml:49 sudoku-app.qml:175
+#: ../components/HighscoresTab.qml:57 ../sudoku-app.qml:175
 #, qt-format
 msgid "Best scores for %1 %2"
 msgstr "%2%1 的最高分"
 
-#: components/AddProfileDialog.qml:13
-msgid "Add new profile"
-msgstr "加入新的個人檔案"
-
-#: components/AddProfileDialog.qml:31
-msgid "Lastname"
-msgstr "姓氏"
-
-#: components/AddProfileDialog.qml:49
-msgid "Firstname"
-msgstr "名字"
-
-#: components/AddProfileDialog.qml:66 components/ManageProfileDialog.qml:68
-#: sudoku-app.qml:339
-msgid "OK"
-msgstr "確定"
-
-#: components/AddProfileDialog.qml:82 components/AddProfileDialog.qml:87
-#: components/ManageProfileDialog.qml:94
-msgid "Warning"
-msgstr "警告"
-
-#: components/AddProfileDialog.qml:82
-msgid "User already exist."
-msgstr "已有該使用者。"
-
-#: components/AddProfileDialog.qml:87 components/ManageProfileDialog.qml:94
-msgid "Lastname and firstname must not be empty."
-msgstr "姓氏與名字不能留空。"
-
-#: components/AddProfileDialog.qml:98 components/ManageProfileDialog.qml:126
-#: sudoku-app.qml:491 sudoku-app.qml:941 sudoku-app.qml:991
-#: components/SudokuBlocksGrid.qml:482
-msgid "Cancel"
-msgstr "取消"
-
-#: components/AboutTab.qml:101
-msgid "Author(s): "
-msgstr "作者： "
-
-#: components/AboutTab.qml:111
-msgid "Contact: "
-msgstr "聯絡人： "
-
-#: components/AboutTab.qml:137
-msgid "Version: "
-msgstr "版本： "
-
-#: components/ManageProfileDialog.qml:13
+#: ../components/ManageProfileDialog.qml:13
 msgid "Edit profile"
 msgstr "編輯個人檔案"
 
-#: components/ManageProfileDialog.qml:107
+#: ../components/ManageProfileDialog.qml:108
 msgid "Delete"
 msgstr "刪除"
 
-#: sudoku-app.qml:50 sudoku-app.qml:51 sudoku-app.qml:736
-msgid "New game"
-msgstr "新遊戲"
-
-#: sudoku-app.qml:58 sudoku-app.qml:59
-msgid "Reveal hint"
-msgstr "揭開提示"
-
-#: sudoku-app.qml:67 sudoku-app.qml:68
-msgid "Show settings"
-msgstr "顯示設定"
-
-#: sudoku-app.qml:75 sudoku-app.qml:76
-msgid "Change difficulty to Easy"
-msgstr "將難度調至容易"
-
-#: sudoku-app.qml:88 sudoku-app.qml:89
-msgid "Change difficulty to Moderate"
-msgstr "將難度調至適中"
-
-#: sudoku-app.qml:101 sudoku-app.qml:102
-msgid "Change difficulty to Hard"
-msgstr "將難度調至困難"
-
-#: sudoku-app.qml:114 sudoku-app.qml:115
-msgid "Change difficulty to Ultra Hard"
-msgstr "將難度調至超難"
-
-#: sudoku-app.qml:127 sudoku-app.qml:128
-msgid "Change theme to Simple"
-msgstr "更換主題為 Simple"
-
-#: sudoku-app.qml:137 sudoku-app.qml:138
-msgid "Change theme to UbuntuColors"
-msgstr "更換主題為 UbuntuColors"
-
-#: sudoku-app.qml:147 sudoku-app.qml:148
-msgid "Show scores for all users"
-msgstr "顯示所有使用者的分數"
-
-#: sudoku-app.qml:167 sudoku-app.qml:168
-msgid "Show scores for current user"
-msgstr "顯示目前使用者的分數"
-
-#: sudoku-app.qml:227
-msgid ""
-"You are a cheat... \n"
-"But we give you\n"
-msgstr ""
-"你這個老千…\n"
-"但我們給你\n"
-
-#: sudoku-app.qml:229
-msgid "points."
-msgstr "點。"
-
-#: sudoku-app.qml:326
-msgid "Sudoku games played today"
-msgstr "今天玩的數獨場數"
-
-#: sudoku-app.qml:327
-msgid "No Sudoku games played today"
-msgstr "今天還沒玩數獨遊戲"
-
-#: sudoku-app.qml:355
-msgid "New Game"
-msgstr "新遊戲"
-
-#: sudoku-app.qml:356
-msgid "Select difficulty level"
-msgstr "選擇難度"
-
-#: sudoku-app.qml:420 sudoku-app.qml:1038
-msgid "Easy"
-msgstr "容易"
-
-#: sudoku-app.qml:439 sudoku-app.qml:1038
-msgid "Moderate"
-msgstr "適中"
-
-#: sudoku-app.qml:456 sudoku-app.qml:1038
-msgid "Hard"
-msgstr "困難"
-
-#: sudoku-app.qml:473
-msgid ""
-"Ultra\n"
-"Hard"
-msgstr "超難"
-
-#: sudoku-app.qml:665
-msgid "Sudoku"
-msgstr "數獨"
-
-#: sudoku-app.qml:720
-msgid "You are a cheat..."
-msgstr "你這個老千..."
-
-#: sudoku-app.qml:720
-msgid "Congratulations!"
-msgstr "恭喜！"
-
-#: sudoku-app.qml:754
-msgid "Show hint"
-msgstr "顯示提示"
-
-#: sudoku-app.qml:817
-msgid "Not allowed"
-msgstr "不允許"
-
-#: sudoku-app.qml:837
-msgid "Start blocks"
-msgstr "開始區塊"
-
-#: sudoku-app.qml:858
-msgid "Hinted blocks"
-msgstr "有提示區塊"
-
-#: sudoku-app.qml:881
-msgid "Scores"
-msgstr "分數"
-
-#: sudoku-app.qml:890
-msgid "Settings"
-msgstr "設定"
-
-#: sudoku-app.qml:909 sudoku-app.qml:959
-msgid "Select profile"
-msgstr "選取個人檔案"
-
-#: sudoku-app.qml:1031
-msgid "<b>Sudoku settings</b>"
-msgstr "<b>數獨設定</b>"
-
-#: sudoku-app.qml:1037
-msgid "Default Difficulty"
-msgstr "預設難度"
-
-#: sudoku-app.qml:1038
-msgid "Ultra Hard"
-msgstr "超難"
-
-#: sudoku-app.qml:1038
-msgid "Always ask"
-msgstr "先詢問"
-
-#: sudoku-app.qml:1076
-msgid "Theme"
-msgstr "主題"
-
-#: sudoku-app.qml:1100
-msgid "Hints"
-msgstr "提示"
-
-#: sudoku-app.qml:1116
-msgid "Vibration Alerts"
-msgstr "振動警示"
-
-#: sudoku-app.qml:1131
-msgid "<b>Profiles settings</b>"
-msgstr "<b>個人檔案設定</b>"
-
-#: sudoku-app.qml:1139
-msgid "None"
-msgstr "無"
-
-#: sudoku-app.qml:1172
-msgid "Add profile"
-msgstr "加入個人檔案"
-
-#: sudoku-app.qml:1181
-msgid "Manage profiles"
-msgstr "管理個人檔案"
-
-#: sudoku-app.qml:1213
-msgid "About"
-msgstr "關於"
-
-#: components/SudokuBlocksGrid.qml:327
+#: ../components/SudokuBlocksGrid.qml:334
 msgid "Please pick a number"
 msgstr "請挑選數字"
 
-#: components/SudokuBlocksGrid.qml:388
+#: ../components/SudokuBlocksGrid.qml:395
 msgid "Clear"
 msgstr "清除"
 
-#: components/SudokuBlocksGrid.qml:455
+#: ../components/SudokuBlocksGrid.qml:465
 #, qt-format
 msgid ""
 "You are a cheat...\n"
@@ -286,7 +111,7 @@ msgstr[0] ""
 "但我們給你\n"
 "%1 點。"
 
-#: components/SudokuBlocksGrid.qml:462
+#: ../components/SudokuBlocksGrid.qml:472
 #, qt-format
 msgid ""
 "Congratulations!\n"
@@ -300,3 +125,200 @@ msgstr[0] ""
 "恭喜！\n"
 "我們給你\n"
 "%1 點。"
+
+#: ../js/localStorage.js:11 ../sudoku-app.qml:684
+#: com.ubuntu.sudoku_sudoku.desktop.in.in.h:1
+msgid "Sudoku"
+msgstr "數獨"
+
+#: ../js/localStorage.js:12
+msgid "User"
+msgstr "使用者"
+
+#: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:756
+msgid "New game"
+msgstr "新遊戲"
+
+#: ../sudoku-app.qml:58 ../sudoku-app.qml:59
+msgid "Reveal hint"
+msgstr "揭開提示"
+
+#: ../sudoku-app.qml:67 ../sudoku-app.qml:68
+msgid "Show settings"
+msgstr "顯示設定"
+
+#: ../sudoku-app.qml:75 ../sudoku-app.qml:76
+msgid "Change difficulty to Easy"
+msgstr "將難度調至容易"
+
+#: ../sudoku-app.qml:88 ../sudoku-app.qml:89
+msgid "Change difficulty to Moderate"
+msgstr "將難度調至適中"
+
+#: ../sudoku-app.qml:101 ../sudoku-app.qml:102
+msgid "Change difficulty to Hard"
+msgstr "將難度調至困難"
+
+#: ../sudoku-app.qml:114 ../sudoku-app.qml:115
+msgid "Change difficulty to Ultra Hard"
+msgstr "將難度調至超難"
+
+#: ../sudoku-app.qml:127 ../sudoku-app.qml:128
+msgid "Change theme to Simple"
+msgstr "更換主題為 Simple"
+
+#: ../sudoku-app.qml:137 ../sudoku-app.qml:138
+msgid "Change theme to UbuntuColors"
+msgstr "更換主題為 UbuntuColors"
+
+#: ../sudoku-app.qml:147 ../sudoku-app.qml:148
+msgid "Show scores for all users"
+msgstr "顯示所有使用者的分數"
+
+#: ../sudoku-app.qml:167 ../sudoku-app.qml:168
+msgid "Show scores for current user"
+msgstr "顯示目前使用者的分數"
+
+#: ../sudoku-app.qml:231
+msgid ""
+"You are a cheat... \n"
+"But we give you\n"
+msgstr ""
+"你這個老千…\n"
+"但我們給你\n"
+
+#: ../sudoku-app.qml:233
+msgid "point."
+msgid_plural "points."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../sudoku-app.qml:338
+msgid "Sudoku games played today"
+msgstr "今天玩的數獨場數"
+
+#: ../sudoku-app.qml:339
+msgid "No Sudoku games played today"
+msgstr "今天還沒玩數獨遊戲"
+
+#: ../sudoku-app.qml:368
+msgid "New Game"
+msgstr "新遊戲"
+
+#: ../sudoku-app.qml:369
+msgid "Select difficulty level"
+msgstr "選擇難度"
+
+#: ../sudoku-app.qml:433 ../sudoku-app.qml:1064
+msgid "Easy"
+msgstr "容易"
+
+#: ../sudoku-app.qml:452 ../sudoku-app.qml:1064
+msgid "Moderate"
+msgstr "適中"
+
+#: ../sudoku-app.qml:469 ../sudoku-app.qml:1064
+msgid "Hard"
+msgstr "困難"
+
+#: ../sudoku-app.qml:486
+msgid ""
+"Ultra\n"
+"Hard"
+msgstr "超難"
+
+#: ../sudoku-app.qml:740
+msgid "You are a cheat..."
+msgstr "你這個老千..."
+
+#: ../sudoku-app.qml:740
+msgid "Congratulations!"
+msgstr "恭喜！"
+
+#: ../sudoku-app.qml:775
+msgid "Show hint"
+msgstr "顯示提示"
+
+#: ../sudoku-app.qml:838
+msgid "Not allowed"
+msgstr "不允許"
+
+#: ../sudoku-app.qml:859
+msgid "Start blocks"
+msgstr "開始區塊"
+
+#: ../sudoku-app.qml:880
+msgid "Hinted blocks"
+msgstr "有提示區塊"
+
+#: ../sudoku-app.qml:904
+msgid "Scores"
+msgstr "分數"
+
+#: ../sudoku-app.qml:914
+msgid "Settings"
+msgstr "設定"
+
+#: ../sudoku-app.qml:936 ../sudoku-app.qml:984
+msgid "Select profile"
+msgstr "選取個人檔案"
+
+#: ../sudoku-app.qml:1057
+msgid "<b>Sudoku settings</b>"
+msgstr "<b>數獨設定</b>"
+
+#: ../sudoku-app.qml:1063
+msgid "Default Difficulty"
+msgstr "預設難度"
+
+#: ../sudoku-app.qml:1064
+msgid "Ultra Hard"
+msgstr "超難"
+
+#: ../sudoku-app.qml:1064
+msgid "Always ask"
+msgstr "先詢問"
+
+#: ../sudoku-app.qml:1106
+msgid "Theme"
+msgstr "主題"
+
+#: ../sudoku-app.qml:1130
+msgid "Hints"
+msgstr "提示"
+
+#: ../sudoku-app.qml:1146
+msgid "Vibration Alerts"
+msgstr "振動警示"
+
+#: ../sudoku-app.qml:1161
+msgid "<b>Profiles settings</b>"
+msgstr "<b>個人檔案設定</b>"
+
+#: ../sudoku-app.qml:1165
+msgid "Current profile"
+msgstr "目前的個人檔案"
+
+#: ../sudoku-app.qml:1169
+msgid "None"
+msgstr "無"
+
+#: ../sudoku-app.qml:1205
+msgid "Add profile"
+msgstr "加入個人檔案"
+
+#: ../sudoku-app.qml:1214
+msgid "Manage profiles"
+msgstr "管理個人檔案"
+
+#: ../sudoku-app.qml:1246
+msgid "About"
+msgstr "關於"
+
+#: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
+msgid "Sudoku Game for Ubuntu Touch."
+msgstr "Ubuntu Touch 的數獨遊戲。"
+
+#: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
+msgid "sudoku;game;touch;"
+msgstr "sudoku;game;touch;"

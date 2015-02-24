@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-10-26 13:51+0100\n"
+"POT-Creation-Date: 2015-02-23 08:42+0100\n"
 "PO-Revision-Date: 2014-11-25 07:04+0000\n"
-"Last-Translator: Gursharnjit_singh <ubuntuser13@gmail.com>\n"
+"Last-Translator: Gursharnjit_Singh <ubuntuser13@gmail.com>\n"
 "Language-Team: Punjabi <pa@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-11-26 06:51+0000\n"
-"X-Generator: Launchpad (build 17252)\n"
+"X-Launchpad-Export-Date: 2015-02-24 05:46+0000\n"
+"X-Generator: Launchpad (build 17355)\n"
 
 #: ../components/AboutTab.qml:102
 msgid "Author(s): "
@@ -63,8 +63,8 @@ msgstr "ਪਹਿਲਾਂ ਨਾਂ ਅਤੇ ਆਖਰੀ ਨਾਂ ਖਾਲ�
 
 #: ../components/AddProfileDialog.qml:85
 #: ../components/ManageProfileDialog.qml:127
-#: ../components/SudokuBlocksGrid.qml:493 ../sudoku-app.qml:504
-#: ../sudoku-app.qml:964 ../sudoku-app.qml:1016
+#: ../components/SudokuBlocksGrid.qml:492 ../sudoku-app.qml:504
+#: ../sudoku-app.qml:965 ../sudoku-app.qml:1017
 msgid "Cancel"
 msgstr "ਰੱਦ"
 
@@ -88,15 +88,15 @@ msgstr "ਪ੍ਰੋਫ਼ਾਈਲ ਸੋਧ"
 msgid "Delete"
 msgstr "ਹਟਾਓ"
 
-#: ../components/SudokuBlocksGrid.qml:335
+#: ../components/SudokuBlocksGrid.qml:334
 msgid "Please pick a number"
 msgstr "ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਅੰਕ ਚੁਣੋ"
 
-#: ../components/SudokuBlocksGrid.qml:396
+#: ../components/SudokuBlocksGrid.qml:395
 msgid "Clear"
 msgstr "ਸਾਫ਼ ਕਰੋ"
 
-#: ../components/SudokuBlocksGrid.qml:466
+#: ../components/SudokuBlocksGrid.qml:465
 #, qt-format
 msgid ""
 "You are a cheat...\n"
@@ -115,7 +115,7 @@ msgstr[1] ""
 "ਪਰ ਅਸੀਂ ਤੁਹਾਨੂੰ ਦਿੱਤੇ\n"
 "%1 ਅੰਕ।"
 
-#: ../components/SudokuBlocksGrid.qml:473
+#: ../components/SudokuBlocksGrid.qml:472
 #, qt-format
 msgid ""
 "Congratulations!\n"
@@ -196,8 +196,10 @@ msgstr ""
 "ਪਰ ਅਸੀਂ ਤੁਹਾਨੂੰ ਦਿੱਤੇ\n"
 
 #: ../sudoku-app.qml:233
-msgid "points."
-msgstr "ਅੰਕ।"
+msgid "point."
+msgid_plural "points."
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../sudoku-app.qml:338
 msgid "Sudoku games played today"
@@ -215,15 +217,15 @@ msgstr "ਨਵੀਂ ਖੇਡ"
 msgid "Select difficulty level"
 msgstr "ਮੁਸ਼ਕਲ ਦਾ ਮਿਆਰ ਚੁਣੋ"
 
-#: ../sudoku-app.qml:433 ../sudoku-app.qml:1063
+#: ../sudoku-app.qml:433 ../sudoku-app.qml:1064
 msgid "Easy"
 msgstr "ਸੌਖਾ"
 
-#: ../sudoku-app.qml:452 ../sudoku-app.qml:1063
+#: ../sudoku-app.qml:452 ../sudoku-app.qml:1064
 msgid "Moderate"
 msgstr "ਮੱਧਮ"
 
-#: ../sudoku-app.qml:469 ../sudoku-app.qml:1063
+#: ../sudoku-app.qml:469 ../sudoku-app.qml:1064
 msgid "Hard"
 msgstr "ਅੌਖਾ"
 
@@ -243,83 +245,83 @@ msgstr "ਤੁਸੀ ਇੱਕ ਠੱਗ ਹੋ..."
 msgid "Congratulations!"
 msgstr "ਵਧਾਈਆਂ!"
 
-#: ../sudoku-app.qml:774
+#: ../sudoku-app.qml:775
 msgid "Show hint"
 msgstr "ਸੰਕੇਤ ਵਿਖਾਓ"
 
-#: ../sudoku-app.qml:837
+#: ../sudoku-app.qml:838
 msgid "Not allowed"
 msgstr "ਆਗਿਆ ਨਹੀਂ"
 
-#: ../sudoku-app.qml:858
+#: ../sudoku-app.qml:859
 msgid "Start blocks"
 msgstr "ਖ਼ਾਨੇ ਸ਼ੁਰੂ ਕਰੋ"
 
-#: ../sudoku-app.qml:879
+#: ../sudoku-app.qml:880
 msgid "Hinted blocks"
 msgstr "ਸੰਕੇਤਕ ਖ਼ਾਨੇ"
 
-#: ../sudoku-app.qml:903
+#: ../sudoku-app.qml:904
 msgid "Scores"
 msgstr "ਅੰਕ"
 
-#: ../sudoku-app.qml:913
+#: ../sudoku-app.qml:914
 msgid "Settings"
 msgstr "ਸੈਟਿੰਗ"
 
-#: ../sudoku-app.qml:935 ../sudoku-app.qml:983
+#: ../sudoku-app.qml:936 ../sudoku-app.qml:984
 msgid "Select profile"
 msgstr "ਪ੍ਰੋਫ਼ਾਈਲ ਚੁਣੋ"
 
-#: ../sudoku-app.qml:1056
+#: ../sudoku-app.qml:1057
 msgid "<b>Sudoku settings</b>"
 msgstr "<b>ਸੂਡੋਕੂ ਸੈਟਿੰਗ</b>"
 
-#: ../sudoku-app.qml:1062
+#: ../sudoku-app.qml:1063
 msgid "Default Difficulty"
 msgstr "ਮੂਲ ਮੁਸ਼ਕਲ"
 
-#: ../sudoku-app.qml:1063
+#: ../sudoku-app.qml:1064
 msgid "Ultra Hard"
 msgstr "ਅਤਿ ਔਖਾ"
 
-#: ../sudoku-app.qml:1063
+#: ../sudoku-app.qml:1064
 msgid "Always ask"
 msgstr "ਹਮੇਸ਼ਾ ਪੁੱਛੋ"
 
-#: ../sudoku-app.qml:1105
+#: ../sudoku-app.qml:1106
 msgid "Theme"
 msgstr "ਥੀਮ"
 
-#: ../sudoku-app.qml:1129
+#: ../sudoku-app.qml:1130
 msgid "Hints"
 msgstr "ਸੰਕੇਤ"
 
-#: ../sudoku-app.qml:1145
+#: ../sudoku-app.qml:1146
 msgid "Vibration Alerts"
 msgstr "ਕੰਬਣ ਚੇਤਾਵਨੀਆਂ"
 
-#: ../sudoku-app.qml:1160
+#: ../sudoku-app.qml:1161
 msgid "<b>Profiles settings</b>"
 msgstr "<b>ਪ੍ਰੋਫ਼ਾਈਲ ਸੈਟਿੰਗ</b>"
 
-#: ../sudoku-app.qml:1164
+#: ../sudoku-app.qml:1165
 msgid "Current profile"
 msgstr "ਮੌਜੂਦਾ ਪ੍ਰੋਫ਼ਾਈਲ"
 
-#: ../sudoku-app.qml:1168
+#: ../sudoku-app.qml:1169
 msgid "None"
 msgstr "ਕੋਈ ਨਹੀਂ"
 
-#: ../sudoku-app.qml:1204
+#: ../sudoku-app.qml:1205
 msgid "Add profile"
 msgstr "ਪ੍ਰੋਫ਼ਾਈਲ ਜੋੜੋ"
 
-#: ../sudoku-app.qml:1213
+#: ../sudoku-app.qml:1214
 msgid "Manage profiles"
 msgstr "ਪ੍ਰੋਫ਼ਾਈਲਾਂ ਦੀ ਸਾਂਭ ਸੰਭਾਲ੍ਹ"
 
-#: ../sudoku-app.qml:1245
+#: ../sudoku-app.qml:1246
 msgid "About"
 msgstr "ਇਸ ਬਾਰੇ"
 

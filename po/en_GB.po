@@ -1,279 +1,102 @@
-# English (United Kingdom) translation for sudokutouchgame
-# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
-# This file is distributed under the same license as the sudokutouchgame package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+# English (United Kingdom) translation for sudoku-app
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# This file is distributed under the same license as the sudoku-app package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sudokutouchgame\n"
+"Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-07-11 16:20+0000\n"
-"Last-Translator: Alan Pope <alan@ubuntu.com>\n"
+"POT-Creation-Date: 2015-02-23 08:42+0100\n"
+"PO-Revision-Date: 2015-02-23 18:06+0000\n"
+"Last-Translator: Andi Chandler <Unknown>\n"
 "Language-Team: English (United Kingdom) <en_GB@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-11-09 06:51+0000\n"
-"X-Generator: Launchpad (build 17231)\n"
+"X-Launchpad-Export-Date: 2015-02-24 05:46+0000\n"
+"X-Generator: Launchpad (build 17355)\n"
 
-#: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
-#: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
+#: ../components/AboutTab.qml:102
+msgid "Author(s): "
+msgstr "Author(s): "
+
+#: ../components/AboutTab.qml:112
+msgid "Contact: "
+msgstr "Contact: "
+
+#: ../components/AboutTab.qml:138
+msgid "Version: "
+msgstr "Version: "
+
+#: ../components/AddProfileDialog.qml:13
+msgid "Add new profile"
+msgstr "Add new profile"
+
+#: ../components/AddProfileDialog.qml:30
+msgid "Firstname"
+msgstr "Firstname"
+
+#: ../components/AddProfileDialog.qml:42
+msgid "Lastname"
+msgstr "Lastname"
+
+#: ../components/AddProfileDialog.qml:53
+#: ../components/ManageProfileDialog.qml:69 ../sudoku-app.qml:351
+msgid "OK"
+msgstr "OK"
+
+#: ../components/AddProfileDialog.qml:69 ../components/AddProfileDialog.qml:74
+#: ../components/ManageProfileDialog.qml:95
+msgid "Warning"
+msgstr "Warning"
+
+#: ../components/AddProfileDialog.qml:69
+msgid "User already exist."
+msgstr "User already exist."
+
+#: ../components/AddProfileDialog.qml:74
+#: ../components/ManageProfileDialog.qml:95
+msgid "Lastname and firstname must not be empty."
+msgstr "Lastname and firstname must not be empty."
+
+#: ../components/AddProfileDialog.qml:85
+#: ../components/ManageProfileDialog.qml:127
+#: ../components/SudokuBlocksGrid.qml:492 ../sudoku-app.qml:504
+#: ../sudoku-app.qml:965 ../sudoku-app.qml:1017
+msgid "Cancel"
+msgstr "Cancel"
+
+#: ../components/HighscoresTab.qml:33 ../components/HighscoresTab.qml:81
+#: ../sudoku-app.qml:24 ../sudoku-app.qml:153 ../sudoku-app.qml:206
+#: ../sudoku-app.qml:242
 msgid "<b>Best scores for all players</b>"
 msgstr "<b>Best scores for all players</b>"
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
-#: components/HighscoresTab.qml:49 sudoku-app.qml:175
+#: ../components/HighscoresTab.qml:57 ../sudoku-app.qml:175
 #, qt-format
 msgid "Best scores for %1 %2"
 msgstr "Best scores for %1 %2"
 
-#: components/AddProfileDialog.qml:13
-msgid "Add new profile"
-msgstr "Add new profile"
-
-#: components/AddProfileDialog.qml:31
-msgid "Lastname"
-msgstr "Surname"
-
-#: components/AddProfileDialog.qml:49
-msgid "Firstname"
-msgstr "First name"
-
-#: components/AddProfileDialog.qml:66 components/ManageProfileDialog.qml:68
-#: sudoku-app.qml:339
-msgid "OK"
-msgstr "OK"
-
-#: components/AddProfileDialog.qml:82 components/AddProfileDialog.qml:87
-#: components/ManageProfileDialog.qml:94
-msgid "Warning"
-msgstr "Warning"
-
-#: components/AddProfileDialog.qml:82
-msgid "User already exist."
-msgstr "User already exists."
-
-#: components/AddProfileDialog.qml:87 components/ManageProfileDialog.qml:94
-msgid "Lastname and firstname must not be empty."
-msgstr "Surname and First name cannot be blank."
-
-#: components/AddProfileDialog.qml:98 components/ManageProfileDialog.qml:126
-#: sudoku-app.qml:491 sudoku-app.qml:941 sudoku-app.qml:991
-#: components/SudokuBlocksGrid.qml:482
-msgid "Cancel"
-msgstr "Cancel"
-
-#: components/AboutTab.qml:101
-msgid "Author(s): "
-msgstr "Author(s): "
-
-#: components/AboutTab.qml:111
-msgid "Contact: "
-msgstr "Contact: "
-
-#: components/AboutTab.qml:137
-msgid "Version: "
-msgstr "Version: "
-
-#: components/ManageProfileDialog.qml:13
+#: ../components/ManageProfileDialog.qml:13
 msgid "Edit profile"
 msgstr "Edit profile"
 
-#: components/ManageProfileDialog.qml:107
+#: ../components/ManageProfileDialog.qml:108
 msgid "Delete"
 msgstr "Delete"
 
-#: sudoku-app.qml:50 sudoku-app.qml:51 sudoku-app.qml:736
-msgid "New game"
-msgstr "New game"
-
-#: sudoku-app.qml:58 sudoku-app.qml:59
-msgid "Reveal hint"
-msgstr "Reveal hint"
-
-#: sudoku-app.qml:67 sudoku-app.qml:68
-msgid "Show settings"
-msgstr "Show settings"
-
-#: sudoku-app.qml:75 sudoku-app.qml:76
-msgid "Change difficulty to Easy"
-msgstr "Change difficulty to Easy"
-
-#: sudoku-app.qml:88 sudoku-app.qml:89
-msgid "Change difficulty to Moderate"
-msgstr "Change difficulty to Moderate"
-
-#: sudoku-app.qml:101 sudoku-app.qml:102
-msgid "Change difficulty to Hard"
-msgstr "Change difficulty to Hard"
-
-#: sudoku-app.qml:114 sudoku-app.qml:115
-msgid "Change difficulty to Ultra Hard"
-msgstr "Change difficulty to Ultra Hard"
-
-#: sudoku-app.qml:127 sudoku-app.qml:128
-msgid "Change theme to Simple"
-msgstr "Change theme to Simple"
-
-#: sudoku-app.qml:137 sudoku-app.qml:138
-msgid "Change theme to UbuntuColors"
-msgstr "Change theme to UbuntuColors"
-
-#: sudoku-app.qml:147 sudoku-app.qml:148
-msgid "Show scores for all users"
-msgstr "Show scores for all users"
-
-#: sudoku-app.qml:167 sudoku-app.qml:168
-msgid "Show scores for current user"
-msgstr "Show scores for current user"
-
-#: sudoku-app.qml:227
-msgid ""
-"You are a cheat... \n"
-"But we give you\n"
-msgstr ""
-"You are a cheat... \n"
-"But we give you\n"
-
-#: sudoku-app.qml:229
-msgid "points."
-msgstr "points."
-
-#: sudoku-app.qml:326
-msgid "Sudoku games played today"
-msgstr "Sudoku games played today"
-
-#: sudoku-app.qml:327
-msgid "No Sudoku games played today"
-msgstr "No Sudoku games played today"
-
-#: sudoku-app.qml:355
-msgid "New Game"
-msgstr "New Game"
-
-#: sudoku-app.qml:356
-msgid "Select difficulty level"
-msgstr "Select difficulty level"
-
-#: sudoku-app.qml:420 sudoku-app.qml:1038
-msgid "Easy"
-msgstr "Easy"
-
-#: sudoku-app.qml:439 sudoku-app.qml:1038
-msgid "Moderate"
-msgstr "Moderate"
-
-#: sudoku-app.qml:456 sudoku-app.qml:1038
-msgid "Hard"
-msgstr "Hard"
-
-#: sudoku-app.qml:473
-msgid ""
-"Ultra\n"
-"Hard"
-msgstr ""
-"Ultra\n"
-"Hard"
-
-#: sudoku-app.qml:665
-msgid "Sudoku"
-msgstr "Sudoku"
-
-#: sudoku-app.qml:720
-msgid "You are a cheat..."
-msgstr "You are a cheat..."
-
-#: sudoku-app.qml:720
-msgid "Congratulations!"
-msgstr "Congratulations!"
-
-#: sudoku-app.qml:754
-msgid "Show hint"
-msgstr "Show hint"
-
-#: sudoku-app.qml:817
-msgid "Not allowed"
-msgstr "Not allowed"
-
-#: sudoku-app.qml:837
-msgid "Start blocks"
-msgstr "Start blocks"
-
-#: sudoku-app.qml:858
-msgid "Hinted blocks"
-msgstr "Hinted blocks"
-
-#: sudoku-app.qml:881
-msgid "Scores"
-msgstr "Scores"
-
-#: sudoku-app.qml:890
-msgid "Settings"
-msgstr "Settings"
-
-#: sudoku-app.qml:909 sudoku-app.qml:959
-msgid "Select profile"
-msgstr "Select profile"
-
-#: sudoku-app.qml:1031
-msgid "<b>Sudoku settings</b>"
-msgstr "<b>Sudoku settings</b>"
-
-#: sudoku-app.qml:1037
-msgid "Default Difficulty"
-msgstr "Default Difficulty"
-
-#: sudoku-app.qml:1038
-msgid "Ultra Hard"
-msgstr "Ultra Hard"
-
-#: sudoku-app.qml:1038
-msgid "Always ask"
-msgstr "Always ask"
-
-#: sudoku-app.qml:1076
-msgid "Theme"
-msgstr "Theme"
-
-#: sudoku-app.qml:1100
-msgid "Hints"
-msgstr "Hints"
-
-#: sudoku-app.qml:1116
-msgid "Vibration Alerts"
-msgstr "Vibration Alerts"
-
-#: sudoku-app.qml:1131
-msgid "<b>Profiles settings</b>"
-msgstr "<b>Profiles settings</b>"
-
-#: sudoku-app.qml:1139
-msgid "None"
-msgstr "None"
-
-#: sudoku-app.qml:1172
-msgid "Add profile"
-msgstr "Add profile"
-
-#: sudoku-app.qml:1181
-msgid "Manage profiles"
-msgstr "Manage profiles"
-
-#: sudoku-app.qml:1213
-msgid "About"
-msgstr "About"
-
-#: components/SudokuBlocksGrid.qml:327
+#: ../components/SudokuBlocksGrid.qml:334
 msgid "Please pick a number"
 msgstr "Please pick a number"
 
-#: components/SudokuBlocksGrid.qml:388
+#: ../components/SudokuBlocksGrid.qml:395
 msgid "Clear"
 msgstr "Clear"
 
-#: components/SudokuBlocksGrid.qml:455
+#: ../components/SudokuBlocksGrid.qml:465
 #, qt-format
 msgid ""
 "You are a cheat...\n"
@@ -285,14 +108,14 @@ msgid_plural ""
 "%1 points."
 msgstr[0] ""
 "You are a cheat...\n"
-"But you get\n"
+"But we give you\n"
 "%1 point."
 msgstr[1] ""
 "You are a cheat...\n"
-"But you get\n"
+"But we give you\n"
 "%1 points."
 
-#: components/SudokuBlocksGrid.qml:462
+#: ../components/SudokuBlocksGrid.qml:472
 #, qt-format
 msgid ""
 "Congratulations!\n"
@@ -304,9 +127,208 @@ msgid_plural ""
 "%1 points."
 msgstr[0] ""
 "Congratulations!\n"
-"You get\n"
+"We give you\n"
 "%1 point."
 msgstr[1] ""
 "Congratulations!\n"
-"You get\n"
+"We give you\n"
 "%1 points."
+
+#: ../js/localStorage.js:11 ../sudoku-app.qml:684
+#: com.ubuntu.sudoku_sudoku.desktop.in.in.h:1
+msgid "Sudoku"
+msgstr "Sudoku"
+
+#: ../js/localStorage.js:12
+msgid "User"
+msgstr "User"
+
+#: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:756
+msgid "New game"
+msgstr "New game"
+
+#: ../sudoku-app.qml:58 ../sudoku-app.qml:59
+msgid "Reveal hint"
+msgstr "Reveal hint"
+
+#: ../sudoku-app.qml:67 ../sudoku-app.qml:68
+msgid "Show settings"
+msgstr "Show settings"
+
+#: ../sudoku-app.qml:75 ../sudoku-app.qml:76
+msgid "Change difficulty to Easy"
+msgstr "Change difficulty to Easy"
+
+#: ../sudoku-app.qml:88 ../sudoku-app.qml:89
+msgid "Change difficulty to Moderate"
+msgstr "Change difficulty to Moderate"
+
+#: ../sudoku-app.qml:101 ../sudoku-app.qml:102
+msgid "Change difficulty to Hard"
+msgstr "Change difficulty to Hard"
+
+#: ../sudoku-app.qml:114 ../sudoku-app.qml:115
+msgid "Change difficulty to Ultra Hard"
+msgstr "Change difficulty to Ultra Hard"
+
+#: ../sudoku-app.qml:127 ../sudoku-app.qml:128
+msgid "Change theme to Simple"
+msgstr "Change theme to Simple"
+
+#: ../sudoku-app.qml:137 ../sudoku-app.qml:138
+msgid "Change theme to UbuntuColors"
+msgstr "Change theme to UbuntuColours"
+
+#: ../sudoku-app.qml:147 ../sudoku-app.qml:148
+msgid "Show scores for all users"
+msgstr "Show scores for all users"
+
+#: ../sudoku-app.qml:167 ../sudoku-app.qml:168
+msgid "Show scores for current user"
+msgstr "Show scores for current user"
+
+#: ../sudoku-app.qml:231
+msgid ""
+"You are a cheat... \n"
+"But we give you\n"
+msgstr ""
+"You are a cheat... \n"
+"But we give you\n"
+
+#: ../sudoku-app.qml:233
+msgid "point."
+msgid_plural "points."
+msgstr[0] "point."
+msgstr[1] "points."
+
+#: ../sudoku-app.qml:338
+msgid "Sudoku games played today"
+msgstr "Sudoku games played today"
+
+#: ../sudoku-app.qml:339
+msgid "No Sudoku games played today"
+msgstr "No Sudoku games played today"
+
+#: ../sudoku-app.qml:368
+msgid "New Game"
+msgstr "New Game"
+
+#: ../sudoku-app.qml:369
+msgid "Select difficulty level"
+msgstr "Select difficulty level"
+
+#: ../sudoku-app.qml:433 ../sudoku-app.qml:1064
+msgid "Easy"
+msgstr "Easy"
+
+#: ../sudoku-app.qml:452 ../sudoku-app.qml:1064
+msgid "Moderate"
+msgstr "Moderate"
+
+#: ../sudoku-app.qml:469 ../sudoku-app.qml:1064
+msgid "Hard"
+msgstr "Hard"
+
+#: ../sudoku-app.qml:486
+msgid ""
+"Ultra\n"
+"Hard"
+msgstr ""
+"Ultra\n"
+"Hard"
+
+#: ../sudoku-app.qml:740
+msgid "You are a cheat..."
+msgstr "You are a cheat..."
+
+#: ../sudoku-app.qml:740
+msgid "Congratulations!"
+msgstr "Congratulations!"
+
+#: ../sudoku-app.qml:775
+msgid "Show hint"
+msgstr "Show hint"
+
+#: ../sudoku-app.qml:838
+msgid "Not allowed"
+msgstr "Not allowed"
+
+#: ../sudoku-app.qml:859
+msgid "Start blocks"
+msgstr "Start blocks"
+
+#: ../sudoku-app.qml:880
+msgid "Hinted blocks"
+msgstr "Hinted blocks"
+
+#: ../sudoku-app.qml:904
+msgid "Scores"
+msgstr "Scores"
+
+#: ../sudoku-app.qml:914
+msgid "Settings"
+msgstr "Settings"
+
+#: ../sudoku-app.qml:936 ../sudoku-app.qml:984
+msgid "Select profile"
+msgstr "Select profile"
+
+#: ../sudoku-app.qml:1057
+msgid "<b>Sudoku settings</b>"
+msgstr "<b>Sudoku settings</b>"
+
+#: ../sudoku-app.qml:1063
+msgid "Default Difficulty"
+msgstr "Default Difficulty"
+
+#: ../sudoku-app.qml:1064
+msgid "Ultra Hard"
+msgstr "Ultra Hard"
+
+#: ../sudoku-app.qml:1064
+msgid "Always ask"
+msgstr "Always ask"
+
+#: ../sudoku-app.qml:1106
+msgid "Theme"
+msgstr "Theme"
+
+#: ../sudoku-app.qml:1130
+msgid "Hints"
+msgstr "Hints"
+
+#: ../sudoku-app.qml:1146
+msgid "Vibration Alerts"
+msgstr "Vibration Alerts"
+
+#: ../sudoku-app.qml:1161
+msgid "<b>Profiles settings</b>"
+msgstr "<b>Profiles settings</b>"
+
+#: ../sudoku-app.qml:1165
+msgid "Current profile"
+msgstr "Current profile"
+
+#: ../sudoku-app.qml:1169
+msgid "None"
+msgstr "None"
+
+#: ../sudoku-app.qml:1205
+msgid "Add profile"
+msgstr "Add profile"
+
+#: ../sudoku-app.qml:1214
+msgid "Manage profiles"
+msgstr "Manage profiles"
+
+#: ../sudoku-app.qml:1246
+msgid "About"
+msgstr "About"
+
+#: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
+msgid "Sudoku Game for Ubuntu Touch."
+msgstr "Sudoku Game for Ubuntu Touch."
+
+#: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
+msgid "sudoku;game;touch;"
+msgstr "sudoku;game;touch;"
