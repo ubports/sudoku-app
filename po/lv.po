@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: sudokutouchgame\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-07-15 13:24+0000\n"
-"Last-Translator: Jānis Marks Gailis <jm-gailis@fai-vianet.fr>\n"
+"PO-Revision-Date: 2015-02-28 15:40+0000\n"
+"Last-Translator: Rūdolfs Mazurs <Unknown>\n"
 "Language-Team: Latvian <lv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2014-11-09 06:51+0000\n"
-"X-Generator: Launchpad (build 17231)\n"
+"X-Launchpad-Export-Date: 2015-03-01 05:29+0000\n"
+"X-Generator: Launchpad (build 17361)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
@@ -27,11 +27,11 @@ msgstr "<b>Labākie visu spēlētāju rezultāti</b>"
 #: components/HighscoresTab.qml:49 sudoku-app.qml:175
 #, qt-format
 msgid "Best scores for %1 %2"
-msgstr ""
+msgstr "Labākie %1 %2 rezultāti"
 
 #: components/AddProfileDialog.qml:13
 msgid "Add new profile"
-msgstr ""
+msgstr "Pievienot jaunu profilu"
 
 #: components/AddProfileDialog.qml:31
 msgid "Lastname"
@@ -67,7 +67,7 @@ msgstr "Atcelt"
 
 #: components/AboutTab.qml:101
 msgid "Author(s): "
-msgstr "Autor(s)(i): "
+msgstr "Autors(-i): "
 
 #: components/AboutTab.qml:111
 msgid "Contact: "
@@ -91,7 +91,7 @@ msgstr "Jauna spēle"
 
 #: sudoku-app.qml:58 sudoku-app.qml:59
 msgid "Reveal hint"
-msgstr ""
+msgstr "Atklāt norādījumu"
 
 #: sudoku-app.qml:67 sudoku-app.qml:68
 msgid "Show settings"
@@ -111,15 +111,15 @@ msgstr "Mainīt grūtību uz Grūti"
 
 #: sudoku-app.qml:114 sudoku-app.qml:115
 msgid "Change difficulty to Ultra Hard"
-msgstr "Mainīt grūtību uz Loti Grūti"
+msgstr "Mainīt grūtību uz Ļoti grūti"
 
 #: sudoku-app.qml:127 sudoku-app.qml:128
 msgid "Change theme to Simple"
-msgstr "Mainīt tēmu uz Vienkārši"
+msgstr "Mainīt motīvu uz Vienkāršs"
 
 #: sudoku-app.qml:137 sudoku-app.qml:138
 msgid "Change theme to UbuntuColors"
-msgstr "Mainīt tēmu uz UbuntuColors"
+msgstr "Mainīt motīvu uz UbuntuColors"
 
 #: sudoku-app.qml:147 sudoku-app.qml:148
 msgid "Show scores for all users"
@@ -127,13 +127,15 @@ msgstr "Radīt rezultātus visiem spēlētajiem"
 
 #: sudoku-app.qml:167 sudoku-app.qml:168
 msgid "Show scores for current user"
-msgstr ""
+msgstr "Rādīt rezultātu šim lietotājam"
 
 #: sudoku-app.qml:227
 msgid ""
 "You are a cheat... \n"
 "But we give you\n"
 msgstr ""
+"Jūs šmaucāties... \n"
+"Bet mēs jums dodam\n"
 
 #: sudoku-app.qml:229
 msgid "points."
@@ -141,11 +143,11 @@ msgstr "punktus."
 
 #: sudoku-app.qml:326
 msgid "Sudoku games played today"
-msgstr "Sudoku spēles šodien spēlētas"
+msgstr "Šodien spēlētas Sudoku spēles"
 
 #: sudoku-app.qml:327
 msgid "No Sudoku games played today"
-msgstr "Nav Sudoku spēlēts šodien"
+msgstr "Šodien Sudoku nav spēlēts"
 
 #: sudoku-app.qml:355
 msgid "New Game"
@@ -181,7 +183,7 @@ msgstr "Sudoku"
 
 #: sudoku-app.qml:720
 msgid "You are a cheat..."
-msgstr ""
+msgstr "Jūs šmaucāties..."
 
 #: sudoku-app.qml:720
 msgid "Congratulations!"
@@ -189,23 +191,23 @@ msgstr "Apsveicam!"
 
 #: sudoku-app.qml:754
 msgid "Show hint"
-msgstr ""
+msgstr "Rādīt norādījumu"
 
 #: sudoku-app.qml:817
 msgid "Not allowed"
-msgstr "Nav atlauts"
+msgstr "Nav atļauts"
 
 #: sudoku-app.qml:837
 msgid "Start blocks"
-msgstr ""
+msgstr "Sākuma bloki"
 
 #: sudoku-app.qml:858
 msgid "Hinted blocks"
-msgstr ""
+msgstr "Norādītie bloki"
 
 #: sudoku-app.qml:881
 msgid "Scores"
-msgstr "Punkti"
+msgstr "Rezultāti"
 
 #: sudoku-app.qml:890
 msgid "Settings"
@@ -213,7 +215,7 @@ msgstr "Iestatījumi"
 
 #: sudoku-app.qml:909 sudoku-app.qml:959
 msgid "Select profile"
-msgstr "Izvelieties profilu"
+msgstr "Izvēlieties profilu"
 
 #: sudoku-app.qml:1031
 msgid "<b>Sudoku settings</b>"
@@ -225,7 +227,7 @@ msgstr "Noklusējuma grūtība"
 
 #: sudoku-app.qml:1038
 msgid "Ultra Hard"
-msgstr "Loti Grūti"
+msgstr "Ļoti grūti"
 
 #: sudoku-app.qml:1038
 msgid "Always ask"
@@ -237,11 +239,11 @@ msgstr "Motīvs"
 
 #: sudoku-app.qml:1100
 msgid "Hints"
-msgstr "Padomi"
+msgstr "Norādījumi"
 
 #: sudoku-app.qml:1116
 msgid "Vibration Alerts"
-msgstr ""
+msgstr "Vibrācijas trauksme"
 
 #: sudoku-app.qml:1131
 msgid "<b>Profiles settings</b>"
@@ -249,7 +251,7 @@ msgstr "<b>Profilu iestatījumi</b>"
 
 #: sudoku-app.qml:1139
 msgid "None"
-msgstr "Neviens"
+msgstr "Nekas"
 
 #: sudoku-app.qml:1172
 msgid "Add profile"
@@ -265,11 +267,11 @@ msgstr "Par"
 
 #: components/SudokuBlocksGrid.qml:327
 msgid "Please pick a number"
-msgstr "Lūdzu izvēlēties ciparu"
+msgstr "Lūdzu, izvēlieties skaitli"
 
 #: components/SudokuBlocksGrid.qml:388
 msgid "Clear"
-msgstr "Notīrīt"
+msgstr "Attīrīt"
 
 #: components/SudokuBlocksGrid.qml:455
 #, qt-format
@@ -282,7 +284,17 @@ msgid_plural ""
 "But we give you\n"
 "%1 points."
 msgstr[0] ""
+"Jūs šmaucāties...\n"
+"Bet mēs jums dosim\n"
+"%1 punktu."
 msgstr[1] ""
+"Jūs šmaucāties...\n"
+"Bet mēs jums dosim\n"
+"%1 punktus."
+msgstr[2] ""
+"Jūs šmaucāties...\n"
+"Bet mēs jums dosim\n"
+"%1 punktu."
 
 #: components/SudokuBlocksGrid.qml:462
 #, qt-format
@@ -295,4 +307,14 @@ msgid_plural ""
 "We give you\n"
 "%1 points."
 msgstr[0] ""
+"Apsveicam!\n"
+"Mēs jums dodam\n"
+"%1 punktu."
 msgstr[1] ""
+"Apsveicam!\n"
+"Mēs jums dodam\n"
+"%1 punktus."
+msgstr[2] ""
+"Apsveicam!\n"
+"Mēs jums dodam\n"
+"%1 punktu."
