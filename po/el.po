@@ -8,26 +8,26 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2014-08-06 12:22+0000\n"
+"PO-Revision-Date: 2015-03-03 17:08+0000\n"
 "Last-Translator: George Christofis <geochr22@gmail.com>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-11-09 06:51+0000\n"
-"X-Generator: Launchpad (build 17231)\n"
+"X-Launchpad-Export-Date: 2015-03-04 05:51+0000\n"
+"X-Generator: Launchpad (build 17361)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
 msgid "<b>Best scores for all players</b>"
-msgstr ""
+msgstr "<b> Οι καλύτερες βαθμολογίες όλων των παικτών</b>"
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
 #: components/HighscoresTab.qml:49 sudoku-app.qml:175
 #, qt-format
 msgid "Best scores for %1 %2"
-msgstr ""
+msgstr "Οι καλύτερες βαθμολογίες του %1 %2"
 
 #: components/AddProfileDialog.qml:13
 msgid "Add new profile"
@@ -67,15 +67,15 @@ msgstr "Ακύρωση"
 
 #: components/AboutTab.qml:101
 msgid "Author(s): "
-msgstr ""
+msgstr "Συντάκτης(ες): "
 
 #: components/AboutTab.qml:111
 msgid "Contact: "
-msgstr ""
+msgstr "Επαφή: "
 
 #: components/AboutTab.qml:137
 msgid "Version: "
-msgstr ""
+msgstr "Έκδοση: "
 
 #: components/ManageProfileDialog.qml:13
 msgid "Edit profile"
@@ -91,7 +91,7 @@ msgstr "Νέο παιχνίδι"
 
 #: sudoku-app.qml:58 sudoku-app.qml:59
 msgid "Reveal hint"
-msgstr ""
+msgstr "Αποκάλυψη στοιχείου"
 
 #: sudoku-app.qml:67 sudoku-app.qml:68
 msgid "Show settings"
@@ -99,27 +99,27 @@ msgstr "Εμφάνιση ρυθμίσεων"
 
 #: sudoku-app.qml:75 sudoku-app.qml:76
 msgid "Change difficulty to Easy"
-msgstr ""
+msgstr "Αλλαγή δυσκολίας σε εύκολο"
 
 #: sudoku-app.qml:88 sudoku-app.qml:89
 msgid "Change difficulty to Moderate"
-msgstr ""
+msgstr "Αλλαγή δυσκολίας σε μέτριο"
 
 #: sudoku-app.qml:101 sudoku-app.qml:102
 msgid "Change difficulty to Hard"
-msgstr ""
+msgstr "Αλλαγή δυσκολίας σε δύσκολο"
 
 #: sudoku-app.qml:114 sudoku-app.qml:115
 msgid "Change difficulty to Ultra Hard"
-msgstr ""
+msgstr "Αλλαγή δυσκολίας σε πολύ δύσκολο"
 
 #: sudoku-app.qml:127 sudoku-app.qml:128
 msgid "Change theme to Simple"
-msgstr ""
+msgstr "Αλλαγή θέματος σε απλό"
 
 #: sudoku-app.qml:137 sudoku-app.qml:138
 msgid "Change theme to UbuntuColors"
-msgstr ""
+msgstr "Αλλαγή θέματος σε UbuntuColors"
 
 #: sudoku-app.qml:147 sudoku-app.qml:148
 msgid "Show scores for all users"
@@ -137,7 +137,7 @@ msgstr ""
 
 #: sudoku-app.qml:229
 msgid "points."
-msgstr ""
+msgstr "πόντοι."
 
 #: sudoku-app.qml:326
 msgid "Sudoku games played today"
@@ -189,11 +189,11 @@ msgstr "Συγχαρητήρια!"
 
 #: sudoku-app.qml:754
 msgid "Show hint"
-msgstr ""
+msgstr "Εμφάνιση στοιχείου"
 
 #: sudoku-app.qml:817
 msgid "Not allowed"
-msgstr ""
+msgstr "Δεν επιτρέπεται"
 
 #: sudoku-app.qml:837
 msgid "Start blocks"
@@ -225,7 +225,7 @@ msgstr "Προεπιλεγμένη δυσκολία"
 
 #: sudoku-app.qml:1038
 msgid "Ultra Hard"
-msgstr ""
+msgstr "Πολύ δύσκολο"
 
 #: sudoku-app.qml:1038
 msgid "Always ask"
@@ -233,7 +233,7 @@ msgstr "Πάντα ερώτηση"
 
 #: sudoku-app.qml:1076
 msgid "Theme"
-msgstr ""
+msgstr "Θέμα"
 
 #: sudoku-app.qml:1100
 msgid "Hints"
@@ -261,15 +261,15 @@ msgstr "Διαχείριση προφίλ"
 
 #: sudoku-app.qml:1213
 msgid "About"
-msgstr ""
+msgstr "Σχετικά"
 
 #: components/SudokuBlocksGrid.qml:327
 msgid "Please pick a number"
-msgstr ""
+msgstr "Παρακαλώ διαλέξτε έναν αριθμό"
 
 #: components/SudokuBlocksGrid.qml:388
 msgid "Clear"
-msgstr ""
+msgstr "Καθαρισμός"
 
 #: components/SudokuBlocksGrid.qml:455
 #, qt-format
