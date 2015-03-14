@@ -8,82 +8,82 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2013-06-21 07:59+0000\n"
-"Last-Translator: Emin Mastizada <emin25@ovi.com>\n"
+"PO-Revision-Date: 2015-03-13 13:12+0000\n"
+"Last-Translator: Turan Mahmudov <turan.mahmudov@gmail.com>\n"
 "Language-Team: Azerbaijani <az@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-11-09 06:51+0000\n"
-"X-Generator: Launchpad (build 17231)\n"
+"X-Launchpad-Export-Date: 2015-03-14 05:30+0000\n"
+"X-Generator: Launchpad (build 17389)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
 #: sudoku-app.qml:24 sudoku-app.qml:153 sudoku-app.qml:206 sudoku-app.qml:237
 msgid "<b>Best scores for all players</b>"
-msgstr ""
+msgstr "<b>Bütün oyunçular üçün ən yaxşı ballar</b>"
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
 #: components/HighscoresTab.qml:49 sudoku-app.qml:175
 #, qt-format
 msgid "Best scores for %1 %2"
-msgstr ""
+msgstr "%1 %2 üçün ən yaxşı bal"
 
 #: components/AddProfileDialog.qml:13
 msgid "Add new profile"
-msgstr ""
+msgstr "Yeni profil əlavə et"
 
 #: components/AddProfileDialog.qml:31
 msgid "Lastname"
-msgstr ""
+msgstr "Soyad"
 
 #: components/AddProfileDialog.qml:49
 msgid "Firstname"
-msgstr ""
+msgstr "Ad"
 
 #: components/AddProfileDialog.qml:66 components/ManageProfileDialog.qml:68
 #: sudoku-app.qml:339
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: components/AddProfileDialog.qml:82 components/AddProfileDialog.qml:87
 #: components/ManageProfileDialog.qml:94
 msgid "Warning"
-msgstr ""
+msgstr "Xəbərdarlıq"
 
 #: components/AddProfileDialog.qml:82
 msgid "User already exist."
-msgstr ""
+msgstr "İstifadəçi artıq var."
 
 #: components/AddProfileDialog.qml:87 components/ManageProfileDialog.qml:94
 msgid "Lastname and firstname must not be empty."
-msgstr ""
+msgstr "Soyad və ad boş olmamalıdır."
 
 #: components/AddProfileDialog.qml:98 components/ManageProfileDialog.qml:126
 #: sudoku-app.qml:491 sudoku-app.qml:941 sudoku-app.qml:991
 #: components/SudokuBlocksGrid.qml:482
 msgid "Cancel"
-msgstr ""
+msgstr "İmtina"
 
 #: components/AboutTab.qml:101
 msgid "Author(s): "
-msgstr ""
+msgstr "Yazar(lar): "
 
 #: components/AboutTab.qml:111
 msgid "Contact: "
-msgstr ""
+msgstr "Əlaqə: "
 
 #: components/AboutTab.qml:137
 msgid "Version: "
-msgstr ""
+msgstr "Versiya: "
 
 #: components/ManageProfileDialog.qml:13
 msgid "Edit profile"
-msgstr ""
+msgstr "Profili redaktə et"
 
 #: components/ManageProfileDialog.qml:107
 msgid "Delete"
-msgstr ""
+msgstr "Sil"
 
 #: sudoku-app.qml:50 sudoku-app.qml:51 sudoku-app.qml:736
 msgid "New game"
@@ -91,69 +91,71 @@ msgstr "Yeni oyun"
 
 #: sudoku-app.qml:58 sudoku-app.qml:59
 msgid "Reveal hint"
-msgstr ""
+msgstr "İpucu ver"
 
 #: sudoku-app.qml:67 sudoku-app.qml:68
 msgid "Show settings"
-msgstr ""
+msgstr "Tənzimləmələri göstər"
 
 #: sudoku-app.qml:75 sudoku-app.qml:76
 msgid "Change difficulty to Easy"
-msgstr ""
+msgstr "Çətinliyi Asana dəyişdir"
 
 #: sudoku-app.qml:88 sudoku-app.qml:89
 msgid "Change difficulty to Moderate"
-msgstr ""
+msgstr "Çətinliyi Mülayimə dəyişdir"
 
 #: sudoku-app.qml:101 sudoku-app.qml:102
 msgid "Change difficulty to Hard"
-msgstr ""
+msgstr "Çətinliyi Çətinə dəyişdir"
 
 #: sudoku-app.qml:114 sudoku-app.qml:115
 msgid "Change difficulty to Ultra Hard"
-msgstr ""
+msgstr "Çətinliyi Ən Çətinə dəyişdir"
 
 #: sudoku-app.qml:127 sudoku-app.qml:128
 msgid "Change theme to Simple"
-msgstr ""
+msgstr "Mövzunu Sadəyə dəyişdir"
 
 #: sudoku-app.qml:137 sudoku-app.qml:138
 msgid "Change theme to UbuntuColors"
-msgstr ""
+msgstr "Mövzunu UbuntuColors -a dəyişdir"
 
 #: sudoku-app.qml:147 sudoku-app.qml:148
 msgid "Show scores for all users"
-msgstr ""
+msgstr "Bütün istifadəçilər üçün balları göstər"
 
 #: sudoku-app.qml:167 sudoku-app.qml:168
 msgid "Show scores for current user"
-msgstr ""
+msgstr "Hazırkı istifadəçi üçün balları göstər"
 
 #: sudoku-app.qml:227
 msgid ""
 "You are a cheat... \n"
 "But we give you\n"
 msgstr ""
+"Siz hiyləgərsiniz... \n"
+"Amma sizə veririk\n"
 
 #: sudoku-app.qml:229
 msgid "points."
-msgstr ""
+msgstr "ballar."
 
 #: sudoku-app.qml:326
 msgid "Sudoku games played today"
-msgstr ""
+msgstr "Sudoku oyunu bugün oynanılıb"
 
 #: sudoku-app.qml:327
 msgid "No Sudoku games played today"
-msgstr ""
+msgstr "Sudoku oyunu bugün oynanılmayıb"
 
 #: sudoku-app.qml:355
 msgid "New Game"
-msgstr ""
+msgstr "Yeni Oyun"
 
 #: sudoku-app.qml:356
 msgid "Select difficulty level"
-msgstr ""
+msgstr "Çətinlik səviyyəsini seçin"
 
 #: sudoku-app.qml:420 sudoku-app.qml:1038
 msgid "Easy"
@@ -161,7 +163,7 @@ msgstr "Asan"
 
 #: sudoku-app.qml:439 sudoku-app.qml:1038
 msgid "Moderate"
-msgstr "Orta"
+msgstr "Mülayim"
 
 #: sudoku-app.qml:456 sudoku-app.qml:1038
 msgid "Hard"
@@ -172,6 +174,8 @@ msgid ""
 "Ultra\n"
 "Hard"
 msgstr ""
+"Ən\n"
+"Çətin"
 
 #: sudoku-app.qml:665
 msgid "Sudoku"
@@ -203,23 +207,23 @@ msgstr "İpucu alınmış bloklar"
 
 #: sudoku-app.qml:881
 msgid "Scores"
-msgstr ""
+msgstr "Ballar"
 
 #: sudoku-app.qml:890
 msgid "Settings"
-msgstr "Nizamlamalar"
+msgstr "Tənzimləmələr"
 
 #: sudoku-app.qml:909 sudoku-app.qml:959
 msgid "Select profile"
-msgstr ""
+msgstr "Profili seç"
 
 #: sudoku-app.qml:1031
 msgid "<b>Sudoku settings</b>"
-msgstr ""
+msgstr "<b>Sudoku tənzimləmələri</b>"
 
 #: sudoku-app.qml:1037
 msgid "Default Difficulty"
-msgstr ""
+msgstr "Varsayılan Çətinlik"
 
 #: sudoku-app.qml:1038
 msgid "Ultra Hard"
@@ -227,7 +231,7 @@ msgstr "Ən Çətin"
 
 #: sudoku-app.qml:1038
 msgid "Always ask"
-msgstr ""
+msgstr "Həmişə soruş"
 
 #: sudoku-app.qml:1076
 msgid "Theme"
@@ -235,27 +239,27 @@ msgstr "Mövzu"
 
 #: sudoku-app.qml:1100
 msgid "Hints"
-msgstr ""
+msgstr "İpucları"
 
 #: sudoku-app.qml:1116
 msgid "Vibration Alerts"
-msgstr ""
+msgstr "Vibrasiya Xəbərdarlıqları"
 
 #: sudoku-app.qml:1131
 msgid "<b>Profiles settings</b>"
-msgstr ""
+msgstr "<b>Profil tənzimləmələri</b>"
 
 #: sudoku-app.qml:1139
 msgid "None"
-msgstr ""
+msgstr "Heç biri"
 
 #: sudoku-app.qml:1172
 msgid "Add profile"
-msgstr ""
+msgstr "Profil əlavə et"
 
 #: sudoku-app.qml:1181
 msgid "Manage profiles"
-msgstr ""
+msgstr "Profilləri idarə et"
 
 #: sudoku-app.qml:1213
 msgid "About"
@@ -263,11 +267,11 @@ msgstr "Haqqında"
 
 #: components/SudokuBlocksGrid.qml:327
 msgid "Please pick a number"
-msgstr ""
+msgstr "Lütfən nömrə seçin"
 
 #: components/SudokuBlocksGrid.qml:388
 msgid "Clear"
-msgstr ""
+msgstr "Təmizlə"
 
 #: components/SudokuBlocksGrid.qml:455
 #, qt-format
@@ -280,7 +284,13 @@ msgid_plural ""
 "But we give you\n"
 "%1 points."
 msgstr[0] ""
+"Siz hiyləgərsiniz...\n"
+"Amma sizə veririk\n"
+"%1 bal."
 msgstr[1] ""
+"Siz hiyləgərsiniz...\n"
+"Amma sizə veririk\n"
+"%1 bal."
 
 #: components/SudokuBlocksGrid.qml:462
 #, qt-format
@@ -293,4 +303,10 @@ msgid_plural ""
 "We give you\n"
 "%1 points."
 msgstr[0] ""
+"Təbriklər!\n"
+"Sizə veririk\n"
+"%1 bal."
 msgstr[1] ""
+"Təbriklər!\n"
+"Sizə veririk\n"
+"%1 bal."
