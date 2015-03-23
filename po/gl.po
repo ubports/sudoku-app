@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-02-23 08:42+0100\n"
-"PO-Revision-Date: 2015-02-26 02:27+0000\n"
+"PO-Revision-Date: 2015-03-22 15:05+0000\n"
 "Last-Translator: Marcos Lans <Unknown>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-02-27 05:52+0000\n"
-"X-Generator: Launchpad (build 17361)\n"
+"X-Launchpad-Export-Date: 2015-03-23 05:29+0000\n"
+"X-Generator: Launchpad (build 17405)\n"
 
 #: ../components/AboutTab.qml:102
 msgid "Author(s): "
@@ -149,7 +149,7 @@ msgstr "Nova partida"
 
 #: ../sudoku-app.qml:58 ../sudoku-app.qml:59
 msgid "Reveal hint"
-msgstr "Mostrar suxestión"
+msgstr "Mostrar pista"
 
 #: ../sudoku-app.qml:67 ../sudoku-app.qml:68
 msgid "Show settings"
@@ -161,7 +161,7 @@ msgstr "Cambiar a Fácil"
 
 #: ../sudoku-app.qml:88 ../sudoku-app.qml:89
 msgid "Change difficulty to Moderate"
-msgstr "Cambiar a Moderado"
+msgstr "Cambiar a Moderada"
 
 #: ../sudoku-app.qml:101 ../sudoku-app.qml:102
 msgid "Change difficulty to Hard"
@@ -223,7 +223,7 @@ msgstr "Fácil"
 
 #: ../sudoku-app.qml:452 ../sudoku-app.qml:1064
 msgid "Moderate"
-msgstr "Moderado"
+msgstr "Moderada"
 
 #: ../sudoku-app.qml:469 ../sudoku-app.qml:1064
 msgid "Hard"
@@ -247,7 +247,7 @@ msgstr "Parabéns!"
 
 #: ../sudoku-app.qml:775
 msgid "Show hint"
-msgstr "Mostrar suxestión"
+msgstr "Mostrar pista"
 
 #: ../sudoku-app.qml:838
 msgid "Not allowed"
@@ -255,7 +255,7 @@ msgstr "Non permitido"
 
 #: ../sudoku-app.qml:859
 msgid "Start blocks"
-msgstr "Iniciar bloques"
+msgstr "Bloques de inicio"
 
 #: ../sudoku-app.qml:880
 msgid "Hinted blocks"
@@ -295,7 +295,7 @@ msgstr "Tema"
 
 #: ../sudoku-app.qml:1130
 msgid "Hints"
-msgstr "Suxestións"
+msgstr "Pistas"
 
 #: ../sudoku-app.qml:1146
 msgid "Vibration Alerts"
