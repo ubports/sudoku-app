@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-12 19:27+0800\n"
-"PO-Revision-Date: 2015-04-10 23:09+0000\n"
+"PO-Revision-Date: 2015-04-11 19:09+0000\n"
 "Last-Translator: Marcos Lans <Unknown>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-04-11 05:48+0000\n"
+"X-Launchpad-Export-Date: 2015-04-12 05:59+0000\n"
 "X-Generator: Launchpad (build 17423)\n"
 
 #: components/HighscoresTab.qml:25 components/HighscoresTab.qml:73
@@ -87,7 +87,7 @@ msgstr "Eliminar"
 
 #: sudoku-app.qml:50 sudoku-app.qml:51 sudoku-app.qml:736
 msgid "New game"
-msgstr "Nova partida"
+msgstr "Novo xogo"
 
 #: sudoku-app.qml:58 sudoku-app.qml:59
 msgid "Reveal hint"
@@ -103,7 +103,7 @@ msgstr "Cambiar a Fácil"
 
 #: sudoku-app.qml:88 sudoku-app.qml:89
 msgid "Change difficulty to Moderate"
-msgstr "Cambiar a Moderado"
+msgstr "Cambiar a Moderada"
 
 #: sudoku-app.qml:101 sudoku-app.qml:102
 msgid "Change difficulty to Hard"
@@ -151,7 +151,7 @@ msgstr "Non hai Sudokus xogados hoxe"
 
 #: sudoku-app.qml:355
 msgid "New Game"
-msgstr "Nova partida"
+msgstr "Novo xogo"
 
 #: sudoku-app.qml:356
 msgid "Select difficulty level"
@@ -163,7 +163,7 @@ msgstr "Fácil"
 
 #: sudoku-app.qml:439 sudoku-app.qml:1038
 msgid "Moderate"
-msgstr "Moderado"
+msgstr "Moderada"
 
 #: sudoku-app.qml:456 sudoku-app.qml:1038
 msgid "Hard"
