@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-02-23 08:42+0100\n"
-"PO-Revision-Date: 2014-12-01 08:49+0000\n"
+"PO-Revision-Date: 2015-06-18 23:25+0000\n"
 "Last-Translator: Danial Behzadi <dani.behzi@gmail.com>\n"
 "Language-Team: Persian <fa@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-02-24 05:46+0000\n"
-"X-Generator: Launchpad (build 17355)\n"
+"X-Launchpad-Export-Date: 2015-06-19 04:58+0000\n"
+"X-Generator: Launchpad (build 17570)\n"
 
 #: ../components/AboutTab.qml:102
 msgid "Author(s): "
@@ -190,8 +190,7 @@ msgstr ""
 #: ../sudoku-app.qml:233
 msgid "point."
 msgid_plural "points."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "امتیاز."
 
 #: ../sudoku-app.qml:338
 msgid "Sudoku games played today"
