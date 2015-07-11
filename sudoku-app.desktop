@@ -10,3 +10,4 @@ X-Ubuntu-Touch=true
 X-Ubuntu-StageHint=SideStage
 X-Ubuntu-Gettext-Domain=com.ubuntu.sudoku
 X-Ubuntu-Default-Department-ID=games
+X-Ubuntu-Supported-Orientations=portrait
