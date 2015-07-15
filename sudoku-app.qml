@@ -154,12 +154,13 @@ MainView {
                 for(var i = 0; i < allScores.length; i++) {
                     var rowItem = allScores[i];
                     //print("ROW ",rowItem)
-                    var firstName = Settings.getUserFirstName(rowItem[0]);
-                    var lastName = Settings.getUserLastName(rowItem[0]);
+                    var firstName = Settings.getUserFirstName(rowItem[1]);
+                    var lastName = Settings.getUserLastName(rowItem[1]);
                     //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
-                    highscoresModel.append({'firstname': firstName,
+                    highscoresModel.append({ 'id': rowItem[0],
+                                               'firstname': firstName,
                                                'lastname':  lastName,
-                                               'score': rowItem[1] });
+                                               'score': rowItem[2] });
                 }
             }
         },
@@ -207,15 +208,16 @@ MainView {
         for(var i = 0; i < allScores.length; i++) {
             var rowItem = allScores[i];
             //print("ROW ",rowItem)
-            var firstName = Settings.getUserFirstName(rowItem[0]);
-            var lastName = Settings.getUserLastName(rowItem[0]);
+            var firstName = Settings.getUserFirstName(rowItem[1]);
+            var lastName = Settings.getUserLastName(rowItem[1]);
             //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
             /*highscoresModel.append({'firstname': firstName,
                                        'lastname':  lastName,
                                        'score': rowItem[1] });*/
-            hsPage.appendModel({'firstname': firstName,
-                                   'lastname':  lastName,
-                                   'score': rowItem[1] })
+            hsPage.appendModel({ 'id': rowItem[0],
+                              'firstname': firstName,
+                              'lastname':  lastName,
+                              'score': rowItem[2] });
 
         }
     }
@@ -243,15 +245,16 @@ MainView {
                 for(var i = 0; i < allScores.length; i++) {
                     var rowItem = allScores[i];
                     //(print("ROW ",rowItem)
-                    var firstName = Settings.getUserFirstName(rowItem[0]);
-                    var lastName = Settings.getUserLastName(rowItem[0]);
+                    var firstName = Settings.getUserFirstName(rowItem[1]);
+                    var lastName = Settings.getUserLastName(rowItem[1]);
                     //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
                     /*highscoresModel.append({'firstname': firstName,
                                                'lastname':  lastName,
                                                'score': rowItem[1] });*/
-                    hsPage.appendModel({'firstname': firstName,
-                                           'lastname':  lastName,
-                                           'score': rowItem[1] })
+                    hsPage.appendModel({ 'id': rowItem[0],
+                                      'firstname': firstName,
+                                      'lastname':  lastName,
+                                      'score': rowItem[2] });
                 }
 
                 winTimer.restart();
@@ -649,15 +652,16 @@ MainView {
             var rowItem = allScores[i];
             //res.push[dbItem.first_name, dbItem.last_name, dbItem.score])
             //print("ROW ",rowItem[0])
-            var firstName = Settings.getUserFirstName(rowItem[0])
-            var lastName = Settings.getUserLastName(rowItem[0])
+            var firstName = Settings.getUserFirstName(rowItem[1])
+            var lastName = Settings.getUserLastName(rowItem[1])
             //print(firstName, lastName)
             /*highscoresModel.append({'firstname': firstName,
                                        'lastname':  lastName,
                                        'score': rowItem[1] });*/
-            hsPage.appendModel({'firstname': firstName,
+            hsPage.appendModel({ 'id': rowItem[0],
+                                   'firstname': firstName,
                                    'lastname':  lastName,
-                                   'score': rowItem[1] })
+                                   'score': rowItem[2] })
         }
 
         if(Settings.getSetting("currentUserId")=="Unknown")
@@ -748,45 +752,33 @@ MainView {
 
             page: Page {
 
-                tools: ToolbarItems {
-                    opened: true
-                    ToolbarButton {
-                        action: Action {
-                            objectName: "newgamebutton"
-                            text: i18n.tr("New game");
-                            iconSource: Qt.resolvedUrl("icons/new_game_ubuntu.svg")
-                            onTriggered: {
-                                if(gameFinishedRectangle.visible) gameFinishedRectangle.visible = false;
-                                //print("new block distance:", blockDistance);
-                                //createNewGame()
-                                if (settingsTab.difficultyIndex == 4)
-                                    PopupUtils.open(newGameComponent)
-                                else {
-                                    createNewGame()
-                                }
-                            }
-                        }
-                    }
-                    ToolbarButton {
-                        action: Action {
-                            objectName: "hintbutton"
-                            id: revealHintAction
-                            iconSource: Qt.resolvedUrl("icons/hint.svg")
-                            text: i18n.tr("Show hint");
-                            enabled: disableHints.checked;
-                            onTriggered: {
-                                revealHint()
-                            }
-                        }
-                    }
-                    /*
+                head.actions: [
                     Action {
-                        iconSource: Qt.resolvedUrl("icons/close.svg")
-                        text: i18n.tr("Close");
-                        onTriggered: Qt.quit()
+                        objectName: "newgamebutton"
+                        text: i18n.tr("New game");
+                        iconSource: Qt.resolvedUrl("icons/new_game_ubuntu.svg")
+                        onTriggered: {
+                            if(gameFinishedRectangle.visible) gameFinishedRectangle.visible = false;
+                            //print("new block distance:", blockDistance);
+                            //createNewGame()
+                            if (settingsTab.difficultyIndex == 4)
+                            PopupUtils.open(newGameComponent)
+                            else {
+                                createNewGame()
+                            }
+                        }
+                    },
+                    Action {
+                        objectName: "hintbutton"
+                        id: revealHintAction
+                        iconSource: Qt.resolvedUrl("icons/hint.svg")
+                        text: i18n.tr("Show hint");
+                        enabled: disableHints.checked;
+                        onTriggered: {
+                            revealHint()
+                        }
                     }
-                    */
-                }
+                ]
 
                 //Column {
                 //    id: mainColumn;

@@ -529,7 +529,7 @@ Column {
                     id: blocks
                     delegate: BigBlock {
                         id: block
-                        color: index % 2 == 0 ? UbuntuColors.warmGrey : Qt.lighter(UbuntuColors.warmGrey, 1.15)
+                        color: index % 2 == 0 ? UbuntuColors.warmGrey : Qt.lighter(UbuntuColors.warmGrey, 1.2)
                         PropertyAnimation {
                             target: block;
                             property: "scale";
