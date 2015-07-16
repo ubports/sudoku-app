@@ -511,10 +511,8 @@ Column {
 
 
 
-
             SudokuButtonsGrid {
                 id:buttonsGrid;
-
             }
 
             Rectangle {
@@ -539,8 +537,8 @@ Column {
 
             Grid {
                 id: bigBlocksGrid
-                rowSpacing: 1.2*blockDistance
-                columnSpacing: blockDistance
+                rowSpacing: units.dp(2)
+                columnSpacing: units.dp(2)
                 columns: 3
                 z: -1
                 x: units.gu(1) - units.dp(4)
@@ -564,9 +562,6 @@ Column {
                     }
                 }
             }
-
-
-
         }
     }
 }

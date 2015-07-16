@@ -123,6 +123,42 @@ function deleteScoreWithId(id)
     return res;
 }
 
+function deleteAllScores()
+{
+    var db = getDatabase();
+    var res="";
+    db.transaction(function(tx) {
+        var rs = tx.executeSql('DELETE FROM scores;');
+        //console.log(id, rs.rowsAffected)
+        if (rs.rowsAffected > 0) {
+            res = "OK";
+        } else {
+            res = "Error";
+        }
+    }
+    );
+    // The function returns “OK” if it was successful, or “Error” if it wasn't
+    return res;
+}
+
+function deleteScoresWithProfileId(profile_id)
+{
+    var db = getDatabase();
+    var res="";
+    db.transaction(function(tx) {
+        var rs = tx.executeSql('DELETE FROM scores WHERE profile_id=?;', profile_id);
+        //console.log(id, rs.rowsAffected)
+        if (rs.rowsAffected > 0) {
+            res = "OK";
+        } else {
+            res = "Error";
+        }
+    }
+    );
+    // The function returns “OK” if it was successful, or “Error” if it wasn't
+    return res;
+}
+
 function getAllScores()
 {
     var db = getDatabase();

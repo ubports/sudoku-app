@@ -54,7 +54,8 @@ Repeater {
         buttonText: "0";
         //width: units.gu(5);
         //height: units.gu(5);
-        size: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/10: units.gu(50)/10;
+        size: mainView.width/mainView.height < mainView.resizeFactor ?
+                  mainView.width/10: units.gu(50)/10;
         //color: defaultColor;
         //border.width: 0
         //border.color: defaultBorderColor
@@ -129,6 +130,7 @@ Repeater {
         buttonColor: defaultColor;
         textColor: defaultTextColor
     }
+
     Component.onCompleted: {
         switch(difficultySelector.selectedIndex) {
         case 0:

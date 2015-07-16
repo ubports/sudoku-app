@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-16 11:49+0200\n"
+"POT-Creation-Date: 2015-07-16 16:58+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -89,14 +89,14 @@ msgstr ""
 msgid "Hinted blocks"
 msgstr ""
 
-#: ../components/HighscoresTab.qml:47 ../components/HighscoresTab.qml:94
+#: ../components/HighscoresTab.qml:66 ../components/HighscoresTab.qml:113
 #: ../sudoku-app.qml:24 ../sudoku-app.qml:153 ../sudoku-app.qml:207
 #: ../sudoku-app.qml:244
 msgid "<b>Best scores for all players</b>"
 msgstr ""
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
-#: ../components/HighscoresTab.qml:70 ../sudoku-app.qml:176
+#: ../components/HighscoresTab.qml:89 ../sudoku-app.qml:176
 #, qt-format
 msgid "Best scores for %1 %2"
 msgstr ""

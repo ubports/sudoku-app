@@ -20,6 +20,17 @@ Page {
     {
         highscoresModel.clear()
     }
+    function clearModelProfileId(id)
+    {
+        var firstName = Settings.getUserFirstName(currentUserId);
+        var lastName = Settings.getUserLastName(currentUserId);
+        for (var i = 0; i < highscoresModel.count; i++)
+        {
+            if (highscoresModel.get(i).firstname === firstName &&
+                highscoresModel.get(i).lastname === lastName )
+                highscoresModel.remove(i);
+        }
+    }
 
     BottomEdge {
         z:2
@@ -28,10 +39,18 @@ Page {
             RadialAction {
                 iconName: "contact"
                 iconColor: UbuntuColors.red
+                onTriggered: {
+                    Settings.deleteScoresWithProfileId(currentUserId)
+                    highscoresModel.clear();
+                }
             },
             RadialAction {
                 iconName: "contact-group"
                 iconColor: UbuntuColors.red
+                onTriggered: {
+                    Settings.deleteAllScores();
+                    highscoresModel.clear();
+                }
             }
         ]
     }
