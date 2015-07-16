@@ -21,6 +21,21 @@ Page {
         highscoresModel.clear()
     }
 
+    BottomEdge {
+        z:2
+        hintIconName: "delete"
+        actions: [
+            RadialAction {
+                iconName: "contact"
+                iconColor: UbuntuColors.red
+            },
+            RadialAction {
+                iconName: "contact-group"
+                iconColor: UbuntuColors.red
+            }
+        ]
+    }
+
     head.actions:  [
         Action {
             objectName: "allusersbutton"

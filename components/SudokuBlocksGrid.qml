@@ -517,8 +517,29 @@ Column {
 
             }
 
+            Rectangle {
+                id: backRectangle
+                color: UbuntuColors.coolGrey
+                //anchors.fill: parent
+                z:-2
+                width: bigBlocksGrid.width
+                height: bigBlocksGrid.height
+                x: bigBlocksGrid.x
+                y: bigBlocksGrid.y
+                PropertyAnimation {
+                    target: backRectangle;
+                    property: "scale";
+                    from: 0.0;
+                    to: 1.0;
+                    duration: UbuntuAnimation.SlowDuration;
+                    running: true;
+                    loops: 1;
+                }
+            }
+
             Grid {
-                rowSpacing: blockDistance
+                id: bigBlocksGrid
+                rowSpacing: 1.2*blockDistance
                 columnSpacing: blockDistance
                 columns: 3
                 z: -1
@@ -529,13 +550,14 @@ Column {
                     id: blocks
                     delegate: BigBlock {
                         id: block
-                        color: index % 2 == 0 ? UbuntuColors.warmGrey : Qt.lighter(UbuntuColors.warmGrey, 1.2)
+                        color: index % 2 == 0 ? "#dcdcd5" : "#ecece5"
                         PropertyAnimation {
+                            id: blocksAnimation
                             target: block;
                             property: "scale";
                             from: 0.0;
                             to: 1.0;
-                            duration: UbuntuAnimation.SlowDuration;
+                            duration: UbuntuAnimation.FastDuration;
                             running: true;
                             loops: 1;
                         }

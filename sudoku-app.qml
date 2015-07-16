@@ -752,6 +752,11 @@ MainView {
 
             page: Page {
 
+                BottomEdgeSlide {
+                    z:2
+                    hintIconName: "help-contents"
+                }
+
                 head.actions: [
                     Action {
                         objectName: "newgamebutton"
@@ -800,87 +805,6 @@ MainView {
 
                     y: !mainView.wideAspect() ? units.gu(1) : mainView.height*0.05
 
-                }
-
-                Flow {
-                    id: informationRow;
-                    //y: 7*mainView.pageHeight/10;
-                    //width: mainView.pageWidth - units.dp(8);
-                    //anchors.horizontalCenter: parent.horizontalCenter
-                    x: !mainView.wideAspect() ? 0.5*(mainView.width - width) :
-                                                0.25*(mainView.width-9*sudokuBlocksGrid.blockSize-
-                                                      22*sudokuBlocksGrid.blockDistance)+9*sudokuBlocksGrid.blockSize + 35*sudokuBlocksGrid.blockDistance + units.gu(2)
-                    anchors.top: parent.top
-                    anchors.topMargin: !mainView.wideAspect() ?
-                                           9*sudokuBlocksGrid.blockSize + 35*sudokuBlocksGrid.blockDistance :
-                                           mainView.height*0.15
-
-                    //columns: !wideAspect ? 3 : 1
-                    flow: !mainView.wideAspect() ? Flow.LeftToRight : Flow.TopToBottom
-                    spacing: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/6 : units.gu(50)/6
-                    UbuntuShape {
-                        id: redFlag
-                        color: sudokuBlocksGrid.defaultNotAllowedColor
-                        width: mainView.width/mainView.height < mainView.resizeFactor ? 2*mainView.width/10: 2*units.gu(50)/10
-                        height: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/10: units.gu(50)/10
-                        //border.color: defaultBorderColor
-                        //radius: "medium"
-                        Label {
-                            id: redFlagText
-                            text: i18n.tr("Not allowed")
-                            fontSize: "x-small"
-                            color: settingsTab.themeIndex != 1 ? "white" : "black"
-                            width:units.gu(5);
-                            wrapMode: TextEdit.WordWrap;
-                            horizontalAlignment: Text.AlignHCenter
-                            anchors.centerIn: parent
-                            //                                    anchors.left: redFlag.right;
-                            //                                    anchors.leftMargin: units.dp(2);
-                            //                                    anchors.verticalCenter: redFlag.verticalCenter;
-                        }
-                    }
-                    UbuntuShape {
-                        id: blueFlag
-                        color: settingsTab.themeIndex === 1 ? "white" : sudokuBlocksGrid.defaultStartingColor
-                        //border.color: defaultBorderColor
-                        width: mainView.width/mainView.height < mainView.resizeFactor ? 2*mainView.width/10: 2*units.gu(50)/10
-                        height: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/10: units.gu(50)/10
-                        //radius: "medium";
-                        Label {
-                            id: blueFlagText
-                            text: i18n.tr("Start blocks")
-                            fontSize: "x-small"
-                            color: settingsTab.themeIndex != 1 ? "white" : "black"
-                            width:units.gu(5);
-                            wrapMode: TextEdit.WordWrap;
-                            horizontalAlignment: Text.AlignHCenter
-                            anchors.centerIn: parent
-                            //                                    anchors.left: blueFlag.right;
-                            //                                    anchors.leftMargin: units.dp(2);
-                            //                                    anchors.verticalCenter: blueFlag.verticalCenter;
-                        }
-                    }
-
-                    UbuntuShape {
-                        id: orangeFlag
-                        color: sudokuBlocksGrid.defaultHintColor
-                        //border.color: defaultBorderColor
-                        width: mainView.width/mainView.height < mainView.resizeFactor ? 2*mainView.width/10: 2*units.gu(50)/10
-                        height: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/10: units.gu(50)/10
-                        //radius: "medium";
-                        Label {
-                            text: i18n.tr("Hinted blocks")
-                            fontSize: "x-small"
-                            color: settingsTab.themeIndex != 1 ? "white" : "black"
-                            width:units.gu(5);
-                            wrapMode: TextEdit.WordWrap;
-                            horizontalAlignment: Text.AlignHCenter
-                            anchors.centerIn: parent
-                            //                                    anchors.left: orangeFlag.right;
-                            //                                    anchors.leftMargin: units.dp(2);
-                            //                                    anchors.verticalCenter: orangeFlag.verticalCenter;
-                        }
-                    }
                 }
 
                 //}
