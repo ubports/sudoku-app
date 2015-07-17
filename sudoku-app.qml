@@ -977,6 +977,8 @@ MainView {
                             objectName: "difficultySelector"
                             id: difficultySelector
                             text: i18n.tr("Default Difficulty")
+                            width: parent.width - units.gu(4)
+                            anchors.horizontalCenter: parent.horizontalCenter
                             model: [i18n.tr("Easy"), i18n.tr("Moderate"), i18n.tr("Hard"), i18n.tr("Ultra Hard"), i18n.tr("Always ask")]
                             onSelectedIndexChanged: {
                                 //print(difficultySelector.selectedIndex)
@@ -1021,6 +1023,8 @@ MainView {
                             id: themeSelector
                             text: i18n.tr("Theme")
                             model: ["UbuntuColours", "Simple"]
+                            width: parent.width - units.gu(4)
+                            anchors.horizontalCenter: parent.horizontalCenter
                             onSelectedIndexChanged: {
                                 var newColorScheme = null;
                                 if (selectedIndex == 0)
@@ -1073,6 +1077,8 @@ MainView {
                                 }
                             }
                         }
+                        ListItem.Divider {}
+
                         ListItem.Header {
                             text: i18n.tr("<b>Profiles settings</b>")
                         }

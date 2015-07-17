@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-16 16:58+0200\n"
+"POT-Creation-Date: 2015-07-17 13:47+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -224,15 +224,15 @@ msgstr ""
 msgid "Select difficulty level"
 msgstr ""
 
-#: ../sudoku-app.qml:436 ../sudoku-app.qml:980
+#: ../sudoku-app.qml:436 ../sudoku-app.qml:982
 msgid "Easy"
 msgstr ""
 
-#: ../sudoku-app.qml:455 ../sudoku-app.qml:980
+#: ../sudoku-app.qml:455 ../sudoku-app.qml:982
 msgid "Moderate"
 msgstr ""
 
-#: ../sudoku-app.qml:472 ../sudoku-app.qml:980
+#: ../sudoku-app.qml:472 ../sudoku-app.qml:982
 msgid "Hard"
 msgstr ""
 
@@ -274,47 +274,47 @@ msgstr ""
 msgid "Default Difficulty"
 msgstr ""
 
-#: ../sudoku-app.qml:980
+#: ../sudoku-app.qml:982
 msgid "Ultra Hard"
 msgstr ""
 
-#: ../sudoku-app.qml:980
+#: ../sudoku-app.qml:982
 msgid "Always ask"
 msgstr ""
 
-#: ../sudoku-app.qml:1022
+#: ../sudoku-app.qml:1024
 msgid "Theme"
 msgstr ""
 
-#: ../sudoku-app.qml:1046
+#: ../sudoku-app.qml:1050
 msgid "Hints"
 msgstr ""
 
-#: ../sudoku-app.qml:1062
+#: ../sudoku-app.qml:1066
 msgid "Vibration Alerts"
 msgstr ""
 
-#: ../sudoku-app.qml:1077
+#: ../sudoku-app.qml:1083
 msgid "<b>Profiles settings</b>"
 msgstr ""
 
-#: ../sudoku-app.qml:1081
+#: ../sudoku-app.qml:1087
 msgid "Current profile"
 msgstr ""
 
-#: ../sudoku-app.qml:1085
+#: ../sudoku-app.qml:1091
 msgid "None"
 msgstr ""
 
-#: ../sudoku-app.qml:1121
+#: ../sudoku-app.qml:1127
 msgid "Add profile"
 msgstr ""
 
-#: ../sudoku-app.qml:1130
+#: ../sudoku-app.qml:1136
 msgid "Manage profiles"
 msgstr ""
 
-#: ../sudoku-app.qml:1162
+#: ../sudoku-app.qml:1168
 msgid "About"
 msgstr ""
 

@@ -38,15 +38,15 @@ Page {
         actions: [
             RadialAction {
                 iconName: "contact"
-                iconColor: UbuntuColors.red
+                iconColor: UbuntuColors.orange
                 onTriggered: {
                     Settings.deleteScoresWithProfileId(currentUserId)
-                    highscoresModel.clear();
+                    highscoresModel.clearModelProfileId(currentUserId);
                 }
             },
             RadialAction {
                 iconName: "contact-group"
-                iconColor: UbuntuColors.red
+                iconColor: UbuntuColors.orange
                 onTriggered: {
                     Settings.deleteAllScores();
                     highscoresModel.clear();
