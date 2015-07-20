@@ -105,6 +105,60 @@ function insertNewScore(profile_id, score)
     return res;
 }
 
+function deleteScoreWithId(id)
+{
+    var db = getDatabase();
+    var res="";
+    db.transaction(function(tx) {
+        var rs = tx.executeSql('DELETE FROM scores WHERE id=?;', [id]);
+        //console.log(id, rs.rowsAffected)
+        if (rs.rowsAffected > 0) {
+            res = "OK";
+        } else {
+            res = "Error";
+        }
+    }
+    );
+    // The function returns “OK” if it was successful, or “Error” if it wasn't
+    return res;
+}
+
+function deleteAllScores()
+{
+    var db = getDatabase();
+    var res="";
+    db.transaction(function(tx) {
+        var rs = tx.executeSql('DELETE FROM scores;');
+        //console.log(id, rs.rowsAffected)
+        if (rs.rowsAffected > 0) {
+            res = "OK";
+        } else {
+            res = "Error";
+        }
+    }
+    );
+    // The function returns “OK” if it was successful, or “Error” if it wasn't
+    return res;
+}
+
+function deleteScoresWithProfileId(profile_id)
+{
+    var db = getDatabase();
+    var res="";
+    db.transaction(function(tx) {
+        var rs = tx.executeSql('DELETE FROM scores WHERE profile_id=?;', profile_id);
+        //console.log(id, rs.rowsAffected)
+        if (rs.rowsAffected > 0) {
+            res = "OK";
+        } else {
+            res = "Error";
+        }
+    }
+    );
+    // The function returns “OK” if it was successful, or “Error” if it wasn't
+    return res;
+}
+
 function getAllScores()
 {
     var db = getDatabase();
@@ -112,10 +166,10 @@ function getAllScores()
 
     //print("GETTING ALL SCORES")
     db.transaction( function(tx) {
-        var rs = tx.executeSql("SELECT profile_id, score FROM scores order by score desc limit 10;");
+        var rs = tx.executeSql("SELECT id, profile_id, score FROM scores order by score desc limit 10;");
         for(var i = 0; i < rs.rows.length; i++) {
             var dbItem = rs.rows.item(i);
-            res.push([dbItem.profile_id, dbItem.score])
+            res.push([dbItem.id, dbItem.profile_id, dbItem.score])
         }
     });
     //print(res);

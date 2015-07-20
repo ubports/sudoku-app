@@ -154,12 +154,13 @@ MainView {
                 for(var i = 0; i < allScores.length; i++) {
                     var rowItem = allScores[i];
                     //print("ROW ",rowItem)
-                    var firstName = Settings.getUserFirstName(rowItem[0]);
-                    var lastName = Settings.getUserLastName(rowItem[0]);
+                    var firstName = Settings.getUserFirstName(rowItem[1]);
+                    var lastName = Settings.getUserLastName(rowItem[1]);
                     //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
-                    highscoresModel.append({'firstname': firstName,
+                    highscoresModel.append({ 'id': rowItem[0],
+                                               'firstname': firstName,
                                                'lastname':  lastName,
-                                               'score': rowItem[1] });
+                                               'score': rowItem[2] });
                 }
             }
         },
@@ -207,15 +208,16 @@ MainView {
         for(var i = 0; i < allScores.length; i++) {
             var rowItem = allScores[i];
             //print("ROW ",rowItem)
-            var firstName = Settings.getUserFirstName(rowItem[0]);
-            var lastName = Settings.getUserLastName(rowItem[0]);
+            var firstName = Settings.getUserFirstName(rowItem[1]);
+            var lastName = Settings.getUserLastName(rowItem[1]);
             //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
             /*highscoresModel.append({'firstname': firstName,
                                        'lastname':  lastName,
                                        'score': rowItem[1] });*/
-            hsPage.appendModel({'firstname': firstName,
-                                   'lastname':  lastName,
-                                   'score': rowItem[1] })
+            hsPage.appendModel({ 'id': rowItem[0],
+                              'firstname': firstName,
+                              'lastname':  lastName,
+                              'score': rowItem[2] });
 
         }
     }
@@ -243,15 +245,16 @@ MainView {
                 for(var i = 0; i < allScores.length; i++) {
                     var rowItem = allScores[i];
                     //(print("ROW ",rowItem)
-                    var firstName = Settings.getUserFirstName(rowItem[0]);
-                    var lastName = Settings.getUserLastName(rowItem[0]);
+                    var firstName = Settings.getUserFirstName(rowItem[1]);
+                    var lastName = Settings.getUserLastName(rowItem[1]);
                     //res.push([dbItem.first_name, dbItem.last_name, dbItem.score])
                     /*highscoresModel.append({'firstname': firstName,
                                                'lastname':  lastName,
                                                'score': rowItem[1] });*/
-                    hsPage.appendModel({'firstname': firstName,
-                                           'lastname':  lastName,
-                                           'score': rowItem[1] })
+                    hsPage.appendModel({ 'id': rowItem[0],
+                                      'firstname': firstName,
+                                      'lastname':  lastName,
+                                      'score': rowItem[2] });
                 }
 
                 winTimer.restart();
@@ -649,15 +652,16 @@ MainView {
             var rowItem = allScores[i];
             //res.push[dbItem.first_name, dbItem.last_name, dbItem.score])
             //print("ROW ",rowItem[0])
-            var firstName = Settings.getUserFirstName(rowItem[0])
-            var lastName = Settings.getUserLastName(rowItem[0])
+            var firstName = Settings.getUserFirstName(rowItem[1])
+            var lastName = Settings.getUserLastName(rowItem[1])
             //print(firstName, lastName)
             /*highscoresModel.append({'firstname': firstName,
                                        'lastname':  lastName,
                                        'score': rowItem[1] });*/
-            hsPage.appendModel({'firstname': firstName,
+            hsPage.appendModel({ 'id': rowItem[0],
+                                   'firstname': firstName,
                                    'lastname':  lastName,
-                                   'score': rowItem[1] })
+                                   'score': rowItem[2] })
         }
 
         if(Settings.getSetting("currentUserId")=="Unknown")
@@ -748,45 +752,38 @@ MainView {
 
             page: Page {
 
-                tools: ToolbarItems {
-                    opened: true
-                    ToolbarButton {
-                        action: Action {
-                            objectName: "newgamebutton"
-                            text: i18n.tr("New game");
-                            iconSource: Qt.resolvedUrl("icons/new_game_ubuntu.svg")
-                            onTriggered: {
-                                if(gameFinishedRectangle.visible) gameFinishedRectangle.visible = false;
-                                //print("new block distance:", blockDistance);
-                                //createNewGame()
-                                if (settingsTab.difficultyIndex == 4)
-                                    PopupUtils.open(newGameComponent)
-                                else {
-                                    createNewGame()
-                                }
-                            }
-                        }
-                    }
-                    ToolbarButton {
-                        action: Action {
-                            objectName: "hintbutton"
-                            id: revealHintAction
-                            iconSource: Qt.resolvedUrl("icons/hint.svg")
-                            text: i18n.tr("Show hint");
-                            enabled: disableHints.checked;
-                            onTriggered: {
-                                revealHint()
-                            }
-                        }
-                    }
-                    /*
-                    Action {
-                        iconSource: Qt.resolvedUrl("icons/close.svg")
-                        text: i18n.tr("Close");
-                        onTriggered: Qt.quit()
-                    }
-                    */
+                BottomEdgeSlide {
+                    z:2
+                    hintIconName: "help-contents"
                 }
+
+                head.actions: [
+                    Action {
+                        objectName: "newgamebutton"
+                        text: i18n.tr("New game");
+                        iconSource: Qt.resolvedUrl("icons/new_game_ubuntu.svg")
+                        onTriggered: {
+                            if(gameFinishedRectangle.visible) gameFinishedRectangle.visible = false;
+                            //print("new block distance:", blockDistance);
+                            //createNewGame()
+                            if (settingsTab.difficultyIndex == 4)
+                            PopupUtils.open(newGameComponent)
+                            else {
+                                createNewGame()
+                            }
+                        }
+                    },
+                    Action {
+                        objectName: "hintbutton"
+                        id: revealHintAction
+                        iconSource: Qt.resolvedUrl("icons/hint.svg")
+                        text: i18n.tr("Show hint");
+                        enabled: disableHints.checked;
+                        onTriggered: {
+                            revealHint()
+                        }
+                    }
+                ]
 
                 //Column {
                 //    id: mainColumn;
@@ -808,87 +805,6 @@ MainView {
 
                     y: !mainView.wideAspect() ? units.gu(1) : mainView.height*0.05
 
-                }
-
-                Flow {
-                    id: informationRow;
-                    //y: 7*mainView.pageHeight/10;
-                    //width: mainView.pageWidth - units.dp(8);
-                    //anchors.horizontalCenter: parent.horizontalCenter
-                    x: !mainView.wideAspect() ? 0.5*(mainView.width - width) :
-                                                0.25*(mainView.width-9*sudokuBlocksGrid.blockSize-
-                                                      22*sudokuBlocksGrid.blockDistance)+9*sudokuBlocksGrid.blockSize + 35*sudokuBlocksGrid.blockDistance + units.gu(2)
-                    anchors.top: parent.top
-                    anchors.topMargin: !mainView.wideAspect() ?
-                                           9*sudokuBlocksGrid.blockSize + 35*sudokuBlocksGrid.blockDistance :
-                                           mainView.height*0.15
-
-                    //columns: !wideAspect ? 3 : 1
-                    flow: !mainView.wideAspect() ? Flow.LeftToRight : Flow.TopToBottom
-                    spacing: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/6 : units.gu(50)/6
-                    UbuntuShape {
-                        id: redFlag
-                        color: sudokuBlocksGrid.defaultNotAllowedColor
-                        width: mainView.width/mainView.height < mainView.resizeFactor ? 2*mainView.width/10: 2*units.gu(50)/10
-                        height: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/10: units.gu(50)/10
-                        //border.color: defaultBorderColor
-                        //radius: "medium"
-                        Label {
-                            id: redFlagText
-                            text: i18n.tr("Not allowed")
-                            fontSize: "x-small"
-                            color: settingsTab.themeIndex != 1 ? "white" : "black"
-                            width:units.gu(5);
-                            wrapMode: TextEdit.WordWrap;
-                            horizontalAlignment: Text.AlignHCenter
-                            anchors.centerIn: parent
-                            //                                    anchors.left: redFlag.right;
-                            //                                    anchors.leftMargin: units.dp(2);
-                            //                                    anchors.verticalCenter: redFlag.verticalCenter;
-                        }
-                    }
-                    UbuntuShape {
-                        id: blueFlag
-                        color: settingsTab.themeIndex === 1 ? "white" : sudokuBlocksGrid.defaultStartingColor
-                        //border.color: defaultBorderColor
-                        width: mainView.width/mainView.height < mainView.resizeFactor ? 2*mainView.width/10: 2*units.gu(50)/10
-                        height: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/10: units.gu(50)/10
-                        //radius: "medium";
-                        Label {
-                            id: blueFlagText
-                            text: i18n.tr("Start blocks")
-                            fontSize: "x-small"
-                            color: settingsTab.themeIndex != 1 ? "white" : "black"
-                            width:units.gu(5);
-                            wrapMode: TextEdit.WordWrap;
-                            horizontalAlignment: Text.AlignHCenter
-                            anchors.centerIn: parent
-                            //                                    anchors.left: blueFlag.right;
-                            //                                    anchors.leftMargin: units.dp(2);
-                            //                                    anchors.verticalCenter: blueFlag.verticalCenter;
-                        }
-                    }
-
-                    UbuntuShape {
-                        id: orangeFlag
-                        color: sudokuBlocksGrid.defaultHintColor
-                        //border.color: defaultBorderColor
-                        width: mainView.width/mainView.height < mainView.resizeFactor ? 2*mainView.width/10: 2*units.gu(50)/10
-                        height: mainView.width/mainView.height < mainView.resizeFactor ? mainView.width/10: units.gu(50)/10
-                        //radius: "medium";
-                        Label {
-                            text: i18n.tr("Hinted blocks")
-                            fontSize: "x-small"
-                            color: settingsTab.themeIndex != 1 ? "white" : "black"
-                            width:units.gu(5);
-                            wrapMode: TextEdit.WordWrap;
-                            horizontalAlignment: Text.AlignHCenter
-                            anchors.centerIn: parent
-                            //                                    anchors.left: orangeFlag.right;
-                            //                                    anchors.leftMargin: units.dp(2);
-                            //                                    anchors.verticalCenter: orangeFlag.verticalCenter;
-                        }
-                    }
                 }
 
                 //}
@@ -1061,6 +977,8 @@ MainView {
                             objectName: "difficultySelector"
                             id: difficultySelector
                             text: i18n.tr("Default Difficulty")
+                            width: parent.width - units.gu(4)
+                            anchors.horizontalCenter: parent.horizontalCenter
                             model: [i18n.tr("Easy"), i18n.tr("Moderate"), i18n.tr("Hard"), i18n.tr("Ultra Hard"), i18n.tr("Always ask")]
                             onSelectedIndexChanged: {
                                 //print(difficultySelector.selectedIndex)
@@ -1105,6 +1023,8 @@ MainView {
                             id: themeSelector
                             text: i18n.tr("Theme")
                             model: ["UbuntuColours", "Simple"]
+                            width: parent.width - units.gu(4)
+                            anchors.horizontalCenter: parent.horizontalCenter
                             onSelectedIndexChanged: {
                                 var newColorScheme = null;
                                 if (selectedIndex == 0)
@@ -1157,6 +1077,8 @@ MainView {
                                 }
                             }
                         }
+                        ListItem.Divider {}
+
                         ListItem.Header {
                             text: i18n.tr("<b>Profiles settings</b>")
                         }

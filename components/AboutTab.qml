@@ -76,17 +76,18 @@ Tab {
                 //anchors.horizontalCenter: parent.horizontalCenter;
                 width: parent.width
                 y: units.gu(6);
-                UbuntuShape {
+                Rectangle {
                     Layouts.item: "icon"
                     property real maxWidth: units.gu(45)
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: Math.min(parent.width, maxWidth)/2
                     height: Math.min(parent.width, maxWidth)/2
-                    image: Image {
+                    Image {
                         objectName: "aboutImage"
                         //height: width
                         source: "../icons/about.png"
                         smooth: true
+                        anchors.fill: parent
                         fillMode: Image.PreserveAspectFit
 
                     }
