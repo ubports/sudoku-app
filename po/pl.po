@@ -1,23 +1,23 @@
 # Polish translation for sudoku-app
-# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the sudoku-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-17 13:47+0200\n"
-"PO-Revision-Date: 2015-08-28 14:47+0000\n"
-"Last-Translator: Bartosz Kosiorek <Unknown>\n"
+"PO-Revision-Date: 2015-05-03 05:16+0000\n"
+"Last-Translator: GTriderXC <gtriderxc@yahoo.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-08-29 05:38+0000\n"
-"X-Generator: Launchpad (build 17690)\n"
+"X-Launchpad-Export-Date: 2016-02-10 05:40+0000\n"
+"X-Generator: Launchpad (build 17923)\n"
 
 #: ../components/AboutTab.qml:103
 msgid "Author(s): "
@@ -51,7 +51,7 @@ msgstr "OK"
 #: ../components/AddProfileDialog.qml:69 ../components/AddProfileDialog.qml:74
 #: ../components/ManageProfileDialog.qml:95
 msgid "Warning"
-msgstr "Uwaga"
+msgstr "Uwaga!"
 
 #: ../components/AddProfileDialog.qml:69
 msgid "User already exist."
@@ -60,7 +60,7 @@ msgstr "Użytkownik już istnieje."
 #: ../components/AddProfileDialog.qml:74
 #: ../components/ManageProfileDialog.qml:95
 msgid "Lastname and firstname must not be empty."
-msgstr "Imię i nazwisko nie mogą być puste."
+msgstr "Pola Imię i nazwisko nie mogą być puste."
 
 #: ../components/AddProfileDialog.qml:85
 #: ../components/ManageProfileDialog.qml:127
@@ -71,12 +71,12 @@ msgstr "Anuluj"
 
 #: ../components/BottomEdge.qml:58
 msgid "Delete scores"
-msgstr "Usuń wyniki"
+msgstr ""
 
 #: ../components/BottomEdgeSlide.qml:96 ../components/BottomEdgeSlide.qml:126
 #: ../components/BottomEdgeSlide.qml:155
 msgid "4"
-msgstr "4"
+msgstr ""
 
 #: ../components/BottomEdgeSlide.qml:110
 msgid "Not allowed"
@@ -129,15 +129,15 @@ msgid_plural ""
 "But we give you\n"
 "%1 points."
 msgstr[0] ""
-"Oszukujesz ...\n"
+"Oszukujesz ;-)...\n"
 "ale dostaniesz\n"
 "%1 punkt."
 msgstr[1] ""
-"Oszukujesz ...\n"
+"Oszukujesz ;-)...\n"
 "ale dostaniesz\n"
 "%1 punkty."
 msgstr[2] ""
-"Oszukujesz ...\n"
+"Oszukujesz ;-)...\n"
 "ale dostaniesz\n"
 "%1 punktów."
 
@@ -171,7 +171,7 @@ msgstr "Sudoku"
 
 #: ../js/localStorage.js:12
 msgid "User"
-msgstr "Użytkownik"
+msgstr ""
 
 #: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:763
 msgid "New game"
@@ -179,7 +179,7 @@ msgstr "Nowa gra"
 
 #: ../sudoku-app.qml:58 ../sudoku-app.qml:59
 msgid "Reveal hint"
-msgstr "Pokaż podpowiedź"
+msgstr "Pokaz podpowiedź"
 
 #: ../sudoku-app.qml:67 ../sudoku-app.qml:68
 msgid "Show settings"
@@ -222,15 +222,14 @@ msgid ""
 "You are a cheat... \n"
 "But we give you\n"
 msgstr ""
-"Oszukujesz... \n"
+"Oszukujesz:-)... \n"
 "Ale damy tobie\n"
 
 #: ../sudoku-app.qml:235
 msgid "point."
 msgid_plural "points."
-msgstr[0] "punkt."
-msgstr[1] "punkty."
-msgstr[2] "punktów"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../sudoku-app.qml:341
 msgid "Sudoku games played today"
@@ -310,7 +309,7 @@ msgstr "Zawsze pytaj"
 
 #: ../sudoku-app.qml:1024
 msgid "Theme"
-msgstr "Motyw"
+msgstr "Styl"
 
 #: ../sudoku-app.qml:1050
 msgid "Hints"
@@ -326,7 +325,7 @@ msgstr "<b>Ustawienia profilu</b>"
 
 #: ../sudoku-app.qml:1087
 msgid "Current profile"
-msgstr "Bieżący profil"
+msgstr ""
 
 #: ../sudoku-app.qml:1091
 msgid "None"
@@ -346,8 +345,8 @@ msgstr "O programie"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
 msgid "Sudoku Game for Ubuntu Touch."
-msgstr "Sudoku dla Ubuntu Touch"
+msgstr ""
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
-msgstr "sudoku;gra;łamigłówka;touch;"
+msgstr ""

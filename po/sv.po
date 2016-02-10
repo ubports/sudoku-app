@@ -1,72 +1,73 @@
 # Swedish translation for sudoku-app
-# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# Copyright © 2013-2014 Rosetta Contributors and Canonical Ltd 2013-2014
 # This file is distributed under the same license as the sudoku-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# Josef Andersson <josef.andersson@fripost.org>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-17 13:47+0200\n"
-"PO-Revision-Date: 2015-09-16 08:11+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Swedish <sv@li.org>\n"
+"PO-Revision-Date: 2014-07-24 13:56+0000\n"
+"Last-Translator: Josef Andersson <Unknown>\n"
+"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-09-17 05:44+0000\n"
-"X-Generator: Launchpad (build 17737)\n"
+"X-Launchpad-Export-Date: 2016-02-10 05:40+0000\n"
+"X-Generator: Launchpad (build 17923)\n"
+"Language: sv\n"
 
 #: ../components/AboutTab.qml:103
 msgid "Author(s): "
-msgstr ""
+msgstr "Upphovsmän: "
 
 #: ../components/AboutTab.qml:113
 msgid "Contact: "
-msgstr ""
+msgstr "Kontakt: "
 
 #: ../components/AboutTab.qml:139
 msgid "Version: "
-msgstr ""
+msgstr "Version: "
 
 #: ../components/AddProfileDialog.qml:13
 msgid "Add new profile"
-msgstr ""
+msgstr "Lägg till ny profil"
 
 #: ../components/AddProfileDialog.qml:30
 msgid "Firstname"
-msgstr ""
+msgstr "Förnamn"
 
 #: ../components/AddProfileDialog.qml:42
 msgid "Lastname"
-msgstr ""
+msgstr "Efternamn"
 
 #: ../components/AddProfileDialog.qml:53
 #: ../components/ManageProfileDialog.qml:69 ../sudoku-app.qml:354
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: ../components/AddProfileDialog.qml:69 ../components/AddProfileDialog.qml:74
 #: ../components/ManageProfileDialog.qml:95
 msgid "Warning"
-msgstr ""
+msgstr "Varning"
 
 #: ../components/AddProfileDialog.qml:69
 msgid "User already exist."
-msgstr ""
+msgstr "Användaren finns redan."
 
 #: ../components/AddProfileDialog.qml:74
 #: ../components/ManageProfileDialog.qml:95
 msgid "Lastname and firstname must not be empty."
-msgstr ""
+msgstr "Förnamn och efternamn får inte vara tomma."
 
 #: ../components/AddProfileDialog.qml:85
 #: ../components/ManageProfileDialog.qml:127
 #: ../components/SudokuBlocksGrid.qml:492 ../sudoku-app.qml:507
 #: ../sudoku-app.qml:881 ../sudoku-app.qml:933
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: ../components/BottomEdge.qml:58
 msgid "Delete scores"
@@ -79,43 +80,43 @@ msgstr ""
 
 #: ../components/BottomEdgeSlide.qml:110
 msgid "Not allowed"
-msgstr ""
+msgstr "Ej tillåten"
 
 #: ../components/BottomEdgeSlide.qml:140
 msgid "Start blocks"
-msgstr ""
+msgstr "Startrutor"
 
 #: ../components/BottomEdgeSlide.qml:169
 msgid "Hinted blocks"
-msgstr ""
+msgstr "Tipsrutor"
 
 #: ../components/HighscoresTab.qml:66 ../components/HighscoresTab.qml:113
 #: ../sudoku-app.qml:24 ../sudoku-app.qml:153 ../sudoku-app.qml:207
 #: ../sudoku-app.qml:244
 msgid "<b>Best scores for all players</b>"
-msgstr ""
+msgstr "<b>Bästa poäng för alla spelare</b>"
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
 #: ../components/HighscoresTab.qml:89 ../sudoku-app.qml:176
 #, qt-format
 msgid "Best scores for %1 %2"
-msgstr ""
+msgstr "Bästa poäng för %1 %2"
 
 #: ../components/ManageProfileDialog.qml:13
 msgid "Edit profile"
-msgstr ""
+msgstr "Redigera profil"
 
 #: ../components/ManageProfileDialog.qml:108
 msgid "Delete"
-msgstr ""
+msgstr "Ta bort"
 
 #: ../components/SudokuBlocksGrid.qml:334
 msgid "Please pick a number"
-msgstr ""
+msgstr "Välj ett nummer"
 
 #: ../components/SudokuBlocksGrid.qml:395
 msgid "Clear"
-msgstr ""
+msgstr "Rensa"
 
 #: ../components/SudokuBlocksGrid.qml:465
 #, qt-format
@@ -128,7 +129,13 @@ msgid_plural ""
 "But we give you\n"
 "%1 points."
 msgstr[0] ""
+"Du fuskar…\n"
+"Men vi ger dig\n"
+"%1 poäng."
 msgstr[1] ""
+"Du fuskar…\n"
+"Men vi ger dig\n"
+"%1 poäng."
 
 #: ../components/SudokuBlocksGrid.qml:472
 #, qt-format
@@ -141,12 +148,18 @@ msgid_plural ""
 "We give you\n"
 "%1 points."
 msgstr[0] ""
+"Grattis!\n"
+"Vi ger dig\n"
+"%1 poäng."
 msgstr[1] ""
+"Grattis!\n"
+"Vi ger dig\n"
+"%1 poäng."
 
 #: ../js/localStorage.js:11 ../sudoku-app.qml:688
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:1
 msgid "Sudoku"
-msgstr ""
+msgstr "Sudoku"
 
 #: ../js/localStorage.js:12
 msgid "User"
@@ -154,53 +167,55 @@ msgstr ""
 
 #: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:763
 msgid "New game"
-msgstr ""
+msgstr "Ny omgång"
 
 #: ../sudoku-app.qml:58 ../sudoku-app.qml:59
 msgid "Reveal hint"
-msgstr ""
+msgstr "Visa tips"
 
 #: ../sudoku-app.qml:67 ../sudoku-app.qml:68
 msgid "Show settings"
-msgstr ""
+msgstr "Visa inställningar"
 
 #: ../sudoku-app.qml:75 ../sudoku-app.qml:76
 msgid "Change difficulty to Easy"
-msgstr ""
+msgstr "Ändra svårighetsgrad till Lätt"
 
 #: ../sudoku-app.qml:88 ../sudoku-app.qml:89
 msgid "Change difficulty to Moderate"
-msgstr ""
+msgstr "Ändra svårighetsgrad till Mellan"
 
 #: ../sudoku-app.qml:101 ../sudoku-app.qml:102
 msgid "Change difficulty to Hard"
-msgstr ""
+msgstr "Ändra svårighetsgrad till Svår"
 
 #: ../sudoku-app.qml:114 ../sudoku-app.qml:115
 msgid "Change difficulty to Ultra Hard"
-msgstr ""
+msgstr "Ändra svårighetsgrad till Jättesvår"
 
 #: ../sudoku-app.qml:127 ../sudoku-app.qml:128
 msgid "Change theme to Simple"
-msgstr ""
+msgstr "Ändra tema till Enkelt"
 
 #: ../sudoku-app.qml:137 ../sudoku-app.qml:138
 msgid "Change theme to UbuntuColors"
-msgstr ""
+msgstr "Ändra tema till UbuntuColors"
 
 #: ../sudoku-app.qml:147 ../sudoku-app.qml:148
 msgid "Show scores for all users"
-msgstr ""
+msgstr "Visa poäng för alla användare"
 
 #: ../sudoku-app.qml:168 ../sudoku-app.qml:169
 msgid "Show scores for current user"
-msgstr ""
+msgstr "Visa poäng för aktuell användare"
 
 #: ../sudoku-app.qml:233
 msgid ""
 "You are a cheat... \n"
 "But we give you\n"
 msgstr ""
+"Du fuskar… \n"
+"Men vi ger dig\n"
 
 #: ../sudoku-app.qml:235
 msgid "point."
@@ -210,93 +225,95 @@ msgstr[1] ""
 
 #: ../sudoku-app.qml:341
 msgid "Sudoku games played today"
-msgstr ""
+msgstr "Sudoku-spel spelade idag"
 
 #: ../sudoku-app.qml:342
 msgid "No Sudoku games played today"
-msgstr ""
+msgstr "Inga Sudoku-spel spelade idag"
 
 #: ../sudoku-app.qml:371
 msgid "New Game"
-msgstr ""
+msgstr "Nytt spel"
 
 #: ../sudoku-app.qml:372
 msgid "Select difficulty level"
-msgstr ""
+msgstr "Välj svårighetsgrad"
 
 #: ../sudoku-app.qml:436 ../sudoku-app.qml:982
 msgid "Easy"
-msgstr ""
+msgstr "Lätt"
 
 #: ../sudoku-app.qml:455 ../sudoku-app.qml:982
 msgid "Moderate"
-msgstr ""
+msgstr "Måttlig"
 
 #: ../sudoku-app.qml:472 ../sudoku-app.qml:982
 msgid "Hard"
-msgstr ""
+msgstr "Svår"
 
 #: ../sudoku-app.qml:489
 msgid ""
 "Ultra\n"
 "Hard"
 msgstr ""
+"Jätte\n"
+"svår"
 
 #: ../sudoku-app.qml:744
 msgid "You are a cheat..."
-msgstr ""
+msgstr "Fuska inte…"
 
 #: ../sudoku-app.qml:744
 msgid "Congratulations!"
-msgstr ""
+msgstr "Gratulerar!"
 
 #: ../sudoku-app.qml:780
 msgid "Show hint"
-msgstr ""
+msgstr "Visa tips"
 
 #: ../sudoku-app.qml:820
 msgid "Scores"
-msgstr ""
+msgstr "Poäng"
 
 #: ../sudoku-app.qml:830
 msgid "Settings"
-msgstr ""
+msgstr "Inställningar"
 
 #: ../sudoku-app.qml:852 ../sudoku-app.qml:900
 msgid "Select profile"
-msgstr ""
+msgstr "Välj profil"
 
 #: ../sudoku-app.qml:973
 msgid "<b>Sudoku settings</b>"
-msgstr ""
+msgstr "<b>Sudoku-inställningar</b>"
 
 #: ../sudoku-app.qml:979
 msgid "Default Difficulty"
-msgstr ""
+msgstr "Förvald svårighetsgrad"
 
 #: ../sudoku-app.qml:982
 msgid "Ultra Hard"
-msgstr ""
+msgstr "Supersvår"
 
 #: ../sudoku-app.qml:982
 msgid "Always ask"
-msgstr ""
+msgstr "Fråga alltid"
 
 #: ../sudoku-app.qml:1024
 msgid "Theme"
-msgstr ""
+msgstr "Tema"
 
 #: ../sudoku-app.qml:1050
 msgid "Hints"
-msgstr ""
+msgstr "Tips"
 
 #: ../sudoku-app.qml:1066
 msgid "Vibration Alerts"
-msgstr ""
+msgstr "Vibrationsvarningar"
 
 #: ../sudoku-app.qml:1083
 msgid "<b>Profiles settings</b>"
-msgstr ""
+msgstr "<b>Profilinställningar</b>"
 
 #: ../sudoku-app.qml:1087
 msgid "Current profile"
@@ -304,19 +321,19 @@ msgstr ""
 
 #: ../sudoku-app.qml:1091
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 #: ../sudoku-app.qml:1127
 msgid "Add profile"
-msgstr ""
+msgstr "Lägg till profil"
 
 #: ../sudoku-app.qml:1136
 msgid "Manage profiles"
-msgstr ""
+msgstr "Hantera profiler"
 
 #: ../sudoku-app.qml:1168
 msgid "About"
-msgstr ""
+msgstr "Om"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
 msgid "Sudoku Game for Ubuntu Touch."

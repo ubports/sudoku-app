@@ -1,22 +1,22 @@
 # Persian translation for sudoku-app
-# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the sudoku-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-17 13:47+0200\n"
-"PO-Revision-Date: 2015-12-04 17:44+0000\n"
+"PO-Revision-Date: 2014-12-01 08:02+0000\n"
 "Last-Translator: Danial Behzadi <dani.behzi@gmail.com>\n"
 "Language-Team: Persian <fa@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-12-05 05:39+0000\n"
-"X-Generator: Launchpad (build 17862)\n"
+"X-Launchpad-Export-Date: 2016-02-10 05:40+0000\n"
+"X-Generator: Launchpad (build 17923)\n"
 
 #: ../components/AboutTab.qml:103
 msgid "Author(s): "
@@ -50,7 +50,7 @@ msgstr "قبول"
 #: ../components/AddProfileDialog.qml:69 ../components/AddProfileDialog.qml:74
 #: ../components/ManageProfileDialog.qml:95
 msgid "Warning"
-msgstr "اخطار"
+msgstr "هشدار"
 
 #: ../components/AddProfileDialog.qml:69
 msgid "User already exist."
@@ -70,12 +70,12 @@ msgstr "لغو"
 
 #: ../components/BottomEdge.qml:58
 msgid "Delete scores"
-msgstr "پاک کردن امتیازها"
+msgstr ""
 
 #: ../components/BottomEdgeSlide.qml:96 ../components/BottomEdgeSlide.qml:126
 #: ../components/BottomEdgeSlide.qml:155
 msgid "4"
-msgstr "۴"
+msgstr ""
 
 #: ../components/BottomEdgeSlide.qml:110
 msgid "Not allowed"
@@ -115,7 +115,7 @@ msgstr "لطفا عددی را بردارید"
 
 #: ../components/SudokuBlocksGrid.qml:395
 msgid "Clear"
-msgstr "پاک‌سازی"
+msgstr "پاک‌کردن"
 
 #: ../components/SudokuBlocksGrid.qml:465
 #, qt-format
@@ -154,11 +154,11 @@ msgstr "سودوکو"
 
 #: ../js/localStorage.js:12
 msgid "User"
-msgstr "کاربر"
+msgstr ""
 
 #: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:763
 msgid "New game"
-msgstr "بازی جدید"
+msgstr "بازی تازه"
 
 #: ../sudoku-app.qml:58 ../sudoku-app.qml:59
 msgid "Reveal hint"
@@ -211,7 +211,8 @@ msgstr ""
 #: ../sudoku-app.qml:235
 msgid "point."
 msgid_plural "points."
-msgstr[0] "امتیاز."
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../sudoku-app.qml:341
 msgid "Sudoku games played today"
@@ -231,11 +232,11 @@ msgstr "انتخاب سطح دشواری"
 
 #: ../sudoku-app.qml:436 ../sudoku-app.qml:982
 msgid "Easy"
-msgstr "ساده"
+msgstr "آسان"
 
 #: ../sudoku-app.qml:455 ../sudoku-app.qml:982
 msgid "Moderate"
-msgstr "متوسّط"
+msgstr "معمولی"
 
 #: ../sudoku-app.qml:472 ../sudoku-app.qml:982
 msgid "Hard"
@@ -259,7 +260,7 @@ msgstr "آفرین!"
 
 #: ../sudoku-app.qml:780
 msgid "Show hint"
-msgstr "نشان دادن راهنمایی"
+msgstr "راهنمایی را نشان بده"
 
 #: ../sudoku-app.qml:820
 msgid "Scores"
@@ -283,7 +284,7 @@ msgstr "دشواری پیش‌فرض"
 
 #: ../sudoku-app.qml:982
 msgid "Ultra Hard"
-msgstr "فوق سخت"
+msgstr "بسیار سخت"
 
 #: ../sudoku-app.qml:982
 msgid "Always ask"
@@ -291,7 +292,7 @@ msgstr "همیشه بپرس"
 
 #: ../sudoku-app.qml:1024
 msgid "Theme"
-msgstr "قالب"
+msgstr "سبک"
 
 #: ../sudoku-app.qml:1050
 msgid "Hints"
@@ -307,11 +308,11 @@ msgstr "<b>تنظیمات نمایه‌ها</b>"
 
 #: ../sudoku-app.qml:1087
 msgid "Current profile"
-msgstr "نمایه‌ی جاری"
+msgstr ""
 
 #: ../sudoku-app.qml:1091
 msgid "None"
-msgstr "هیچ‌کدام"
+msgstr "هيچ‌کدام"
 
 #: ../sudoku-app.qml:1127
 msgid "Add profile"
@@ -327,8 +328,8 @@ msgstr "درباره"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
 msgid "Sudoku Game for Ubuntu Touch."
-msgstr "بازی سودوکو برای اوبونتو تاچ"
+msgstr ""
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
-msgstr "sudoku;game;touch;"
+msgstr ""

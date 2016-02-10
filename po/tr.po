@@ -1,22 +1,22 @@
-# Turkish translation for sudoku-app
-# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
-# This file is distributed under the same license as the sudoku-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# Turkish translation for sudokutouchgame
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the sudokutouchgame package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sudoku-app\n"
+"Project-Id-Version: sudokutouchgame\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-17 13:47+0200\n"
-"PO-Revision-Date: 2015-11-20 20:04+0000\n"
-"Last-Translator: Mutlu Can YILMAZ <mtlcnylmz@gmail.com>\n"
+"PO-Revision-Date: 2014-07-21 20:20+0000\n"
+"Last-Translator: Volkan Gezer <Unknown>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-11-21 05:31+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2016-02-10 05:40+0000\n"
+"X-Generator: Launchpad (build 17923)\n"
 
 #: ../components/AboutTab.qml:103
 msgid "Author(s): "
@@ -36,7 +36,7 @@ msgstr "Yeni profil ekle"
 
 #: ../components/AddProfileDialog.qml:30
 msgid "Firstname"
-msgstr "İsim"
+msgstr "Ad"
 
 #: ../components/AddProfileDialog.qml:42
 msgid "Lastname"
@@ -50,7 +50,7 @@ msgstr "Tamam"
 #: ../components/AddProfileDialog.qml:69 ../components/AddProfileDialog.qml:74
 #: ../components/ManageProfileDialog.qml:95
 msgid "Warning"
-msgstr "Uyarı"
+msgstr "Dikkat"
 
 #: ../components/AddProfileDialog.qml:69
 msgid "User already exist."
@@ -59,18 +59,18 @@ msgstr "Kullanıcı zaten mevcut."
 #: ../components/AddProfileDialog.qml:74
 #: ../components/ManageProfileDialog.qml:95
 msgid "Lastname and firstname must not be empty."
-msgstr "Soyad ve Ad boş olmamalı."
+msgstr "Soyad ve Ad boş kalamaz."
 
 #: ../components/AddProfileDialog.qml:85
 #: ../components/ManageProfileDialog.qml:127
 #: ../components/SudokuBlocksGrid.qml:492 ../sudoku-app.qml:507
 #: ../sudoku-app.qml:881 ../sudoku-app.qml:933
 msgid "Cancel"
-msgstr "İptal"
+msgstr "Vazgeç"
 
 #: ../components/BottomEdge.qml:58
 msgid "Delete scores"
-msgstr "Puanları sil"
+msgstr ""
 
 #: ../components/BottomEdgeSlide.qml:96 ../components/BottomEdgeSlide.qml:126
 #: ../components/BottomEdgeSlide.qml:155
@@ -93,7 +93,7 @@ msgstr "İpucu alınmış bloklar"
 #: ../sudoku-app.qml:24 ../sudoku-app.qml:153 ../sudoku-app.qml:207
 #: ../sudoku-app.qml:244
 msgid "<b>Best scores for all players</b>"
-msgstr "<b>Tüm kullanıcıların en yüksek puanları</b>"
+msgstr "<b>Tüm kullanıcıların en yüksek skorları</b>"
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
 #: ../components/HighscoresTab.qml:89 ../sudoku-app.qml:176
@@ -162,7 +162,7 @@ msgstr "Sudoku"
 
 #: ../js/localStorage.js:12
 msgid "User"
-msgstr "Kullanıcı"
+msgstr ""
 
 #: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:763
 msgid "New game"
@@ -202,11 +202,11 @@ msgstr "Temayı Ubuntu Renkleri olarak değiştir"
 
 #: ../sudoku-app.qml:147 ../sudoku-app.qml:148
 msgid "Show scores for all users"
-msgstr "Tüm kullanıcılara ait puanları göster"
+msgstr "Tüm kullanıcılara ait skorları göster"
 
 #: ../sudoku-app.qml:168 ../sudoku-app.qml:169
 msgid "Show scores for current user"
-msgstr "Geçerli kullanıcı için puanları göster"
+msgstr "Bu kullanıcı için skorları göster"
 
 #: ../sudoku-app.qml:233
 msgid ""
@@ -219,16 +219,16 @@ msgstr ""
 #: ../sudoku-app.qml:235
 msgid "point."
 msgid_plural "points."
-msgstr[0] "puan."
-msgstr[1] "puanlar."
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../sudoku-app.qml:341
 msgid "Sudoku games played today"
-msgstr "Bugün oynanan Sudoku oyunları"
+msgstr "Bugün oynanan sudoku oyunları"
 
 #: ../sudoku-app.qml:342
 msgid "No Sudoku games played today"
-msgstr "Bugün Sudoku oynanmadı"
+msgstr "Bugün sudoku oynanmadı"
 
 #: ../sudoku-app.qml:371
 msgid "New Game"
@@ -272,7 +272,7 @@ msgstr "İpucu göster"
 
 #: ../sudoku-app.qml:820
 msgid "Scores"
-msgstr "Puanlar"
+msgstr "Skorlar"
 
 #: ../sudoku-app.qml:830
 msgid "Settings"
@@ -316,7 +316,7 @@ msgstr "<b>Profil ayarları</b>"
 
 #: ../sudoku-app.qml:1087
 msgid "Current profile"
-msgstr "Geçerli profil"
+msgstr ""
 
 #: ../sudoku-app.qml:1091
 msgid "None"
@@ -336,8 +336,8 @@ msgstr "Hakkında"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
 msgid "Sudoku Game for Ubuntu Touch."
-msgstr "Ubuntu Touch için Sudoku Oyunu"
+msgstr ""
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
-msgstr "sudoku;oyun;touch;"
+msgstr ""

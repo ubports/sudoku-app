@@ -1,22 +1,22 @@
-# Hungarian translation for sudoku-app
-# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
-# This file is distributed under the same license as the sudoku-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+# Hungarian translation for sudokutouchgame
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the sudokutouchgame package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sudoku-app\n"
+"Project-Id-Version: sudokutouchgame\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-17 13:47+0200\n"
-"PO-Revision-Date: 2016-01-30 22:26+0000\n"
+"PO-Revision-Date: 2015-02-13 09:38+0000\n"
 "Last-Translator: Richard Somlói <ricsipontaz@gmail.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-01-31 05:59+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-10 05:39+0000\n"
+"X-Generator: Launchpad (build 17923)\n"
 
 #: ../components/AboutTab.qml:103
 msgid "Author(s): "
@@ -66,16 +66,16 @@ msgstr "A vezeték- és keresztnév nem lehet üres."
 #: ../components/SudokuBlocksGrid.qml:492 ../sudoku-app.qml:507
 #: ../sudoku-app.qml:881 ../sudoku-app.qml:933
 msgid "Cancel"
-msgstr "Mégse"
+msgstr "Mégsem"
 
 #: ../components/BottomEdge.qml:58
 msgid "Delete scores"
-msgstr "Eredmények törlése"
+msgstr ""
 
 #: ../components/BottomEdgeSlide.qml:96 ../components/BottomEdgeSlide.qml:126
 #: ../components/BottomEdgeSlide.qml:155
 msgid "4"
-msgstr "4"
+msgstr ""
 
 #: ../components/BottomEdgeSlide.qml:110
 msgid "Not allowed"
@@ -162,7 +162,7 @@ msgstr "Sudoku"
 
 #: ../js/localStorage.js:12
 msgid "User"
-msgstr "Felhasználó"
+msgstr ""
 
 #: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:763
 msgid "New game"
@@ -219,8 +219,8 @@ msgstr ""
 #: ../sudoku-app.qml:235
 msgid "point."
 msgid_plural "points."
-msgstr[0] "pont."
-msgstr[1] "pont."
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../sudoku-app.qml:341
 msgid "Sudoku games played today"
@@ -244,7 +244,7 @@ msgstr "Könnyű"
 
 #: ../sudoku-app.qml:455 ../sudoku-app.qml:982
 msgid "Moderate"
-msgstr "Mérsékelt"
+msgstr "Közepes"
 
 #: ../sudoku-app.qml:472 ../sudoku-app.qml:982
 msgid "Hard"
@@ -316,7 +316,7 @@ msgstr "<b>Profilbeállítások</b>"
 
 #: ../sudoku-app.qml:1087
 msgid "Current profile"
-msgstr "Jelenlegi profil"
+msgstr ""
 
 #: ../sudoku-app.qml:1091
 msgid "None"
@@ -336,8 +336,8 @@ msgstr "Névjegy"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
 msgid "Sudoku Game for Ubuntu Touch."
-msgstr "Sudoku játék Ubuntu Touch telefonhoz."
+msgstr ""
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
-msgstr "sudoku;játék;touch;"
+msgstr ""

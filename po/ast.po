@@ -1,22 +1,22 @@
 # Asturian translation for sudoku-app
-# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the sudoku-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-17 13:47+0200\n"
-"PO-Revision-Date: 2015-11-02 14:43+0000\n"
+"PO-Revision-Date: 2015-06-12 10:20+0000\n"
 "Last-Translator: enolp <enolp@softastur.org>\n"
 "Language-Team: Asturian <ast@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-11-03 05:31+0000\n"
-"X-Generator: Launchpad (build 17838)\n"
+"X-Launchpad-Export-Date: 2016-02-10 05:39+0000\n"
+"X-Generator: Launchpad (build 17923)\n"
 
 #: ../components/AboutTab.qml:103
 msgid "Author(s): "
@@ -40,7 +40,7 @@ msgstr "Nome"
 
 #: ../components/AddProfileDialog.qml:42
 msgid "Lastname"
-msgstr "Apellíu"
+msgstr "Apellíos"
 
 #: ../components/AddProfileDialog.qml:53
 #: ../components/ManageProfileDialog.qml:69 ../sudoku-app.qml:354
@@ -70,12 +70,12 @@ msgstr "Encaboxar"
 
 #: ../components/BottomEdge.qml:58
 msgid "Delete scores"
-msgstr "Desaniciar puntuaciones"
+msgstr ""
 
 #: ../components/BottomEdgeSlide.qml:96 ../components/BottomEdgeSlide.qml:126
 #: ../components/BottomEdgeSlide.qml:155
 msgid "4"
-msgstr "4"
+msgstr ""
 
 #: ../components/BottomEdgeSlide.qml:110
 msgid "Not allowed"
@@ -162,7 +162,7 @@ msgstr "Sudoku"
 
 #: ../js/localStorage.js:12
 msgid "User"
-msgstr "Usuariu"
+msgstr ""
 
 #: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:763
 msgid "New game"
@@ -219,8 +219,8 @@ msgstr ""
 #: ../sudoku-app.qml:235
 msgid "point."
 msgid_plural "points."
-msgstr[0] "puntu."
-msgstr[1] "puntos."
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../sudoku-app.qml:341
 msgid "Sudoku games played today"
@@ -240,7 +240,7 @@ msgstr "Esbilla'l nivel de dificultá"
 
 #: ../sudoku-app.qml:436 ../sudoku-app.qml:982
 msgid "Easy"
-msgstr "Fácil"
+msgstr "Cenciella"
 
 #: ../sudoku-app.qml:455 ../sudoku-app.qml:982
 msgid "Moderate"
@@ -302,7 +302,7 @@ msgstr "Tema"
 
 #: ../sudoku-app.qml:1050
 msgid "Hints"
-msgstr "Pistes"
+msgstr "Suxerencies"
 
 #: ../sudoku-app.qml:1066
 msgid "Vibration Alerts"
@@ -314,11 +314,11 @@ msgstr "<b>Axustes de perfil</b>"
 
 #: ../sudoku-app.qml:1087
 msgid "Current profile"
-msgstr "Perfil actual"
+msgstr ""
 
 #: ../sudoku-app.qml:1091
 msgid "None"
-msgstr "Dengún"
+msgstr "Nenguna"
 
 #: ../sudoku-app.qml:1127
 msgid "Add profile"
@@ -334,8 +334,8 @@ msgstr "Tocante a"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
 msgid "Sudoku Game for Ubuntu Touch."
-msgstr "Xuegu de Sudoku pa Ubuntu Touch."
+msgstr ""
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
-msgstr "sudoku;xuegu;touch;táctil;táutil"
+msgstr ""

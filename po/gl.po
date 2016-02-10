@@ -1,22 +1,22 @@
 # Galician translation for sudoku-app
-# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the sudoku-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-17 13:47+0200\n"
-"PO-Revision-Date: 2015-07-21 19:16+0000\n"
+"PO-Revision-Date: 2015-04-11 19:09+0000\n"
 "Last-Translator: Marcos Lans <Unknown>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-07-22 05:35+0000\n"
-"X-Generator: Launchpad (build 17628)\n"
+"X-Launchpad-Export-Date: 2016-02-10 05:39+0000\n"
+"X-Generator: Launchpad (build 17923)\n"
 
 #: ../components/AboutTab.qml:103
 msgid "Author(s): "
@@ -24,7 +24,7 @@ msgstr "Autor(es): "
 
 #: ../components/AboutTab.qml:113
 msgid "Contact: "
-msgstr "Contact: "
+msgstr "Contacto: "
 
 #: ../components/AboutTab.qml:139
 msgid "Version: "
@@ -59,7 +59,7 @@ msgstr "O usuario xa existe."
 #: ../components/AddProfileDialog.qml:74
 #: ../components/ManageProfileDialog.qml:95
 msgid "Lastname and firstname must not be empty."
-msgstr "O apelido e o nome non poden quedar baleiros."
+msgstr "O apelido e o nome non poden estar baleiros."
 
 #: ../components/AddProfileDialog.qml:85
 #: ../components/ManageProfileDialog.qml:127
@@ -70,12 +70,12 @@ msgstr "Cancelar"
 
 #: ../components/BottomEdge.qml:58
 msgid "Delete scores"
-msgstr "Borrar puntuacións"
+msgstr ""
 
 #: ../components/BottomEdgeSlide.qml:96 ../components/BottomEdgeSlide.qml:126
 #: ../components/BottomEdgeSlide.qml:155
 msgid "4"
-msgstr "4"
+msgstr ""
 
 #: ../components/BottomEdgeSlide.qml:110
 msgid "Not allowed"
@@ -115,7 +115,7 @@ msgstr "Seleccione un número"
 
 #: ../components/SudokuBlocksGrid.qml:395
 msgid "Clear"
-msgstr "Borrar"
+msgstr "Limpar"
 
 #: ../components/SudokuBlocksGrid.qml:465
 #, qt-format
@@ -162,7 +162,7 @@ msgstr "Sudoku"
 
 #: ../js/localStorage.js:12
 msgid "User"
-msgstr "Usuario"
+msgstr ""
 
 #: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:763
 msgid "New game"
@@ -202,7 +202,7 @@ msgstr "Cambiar tema a UbuntuColors"
 
 #: ../sudoku-app.qml:147 ../sudoku-app.qml:148
 msgid "Show scores for all users"
-msgstr "Mostrar as puntuacións dos usuarios"
+msgstr "Mostrar puntuacións dos usuarios"
 
 #: ../sudoku-app.qml:168 ../sudoku-app.qml:169
 msgid "Show scores for current user"
@@ -219,8 +219,8 @@ msgstr ""
 #: ../sudoku-app.qml:235
 msgid "point."
 msgid_plural "points."
-msgstr[0] "punto."
-msgstr[1] "puntos."
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../sudoku-app.qml:341
 msgid "Sudoku games played today"
@@ -316,7 +316,7 @@ msgstr "<b>Axustes dos perfís</b>"
 
 #: ../sudoku-app.qml:1087
 msgid "Current profile"
-msgstr "Perfil actual"
+msgstr ""
 
 #: ../sudoku-app.qml:1091
 msgid "None"
@@ -324,7 +324,7 @@ msgstr "Ningún"
 
 #: ../sudoku-app.qml:1127
 msgid "Add profile"
-msgstr "Engadir un perfil"
+msgstr "Engadir perfil"
 
 #: ../sudoku-app.qml:1136
 msgid "Manage profiles"
@@ -336,8 +336,8 @@ msgstr "Sobre"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
 msgid "Sudoku Game for Ubuntu Touch."
-msgstr "Xogo de Sudoku para Ubuntu Touch."
+msgstr ""
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
-msgstr "sudoku;xogo;touch;"
+msgstr ""

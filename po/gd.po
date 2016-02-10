@@ -1,23 +1,24 @@
 # Gaelic; Scottish translation for sudoku-app
-# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the sudoku-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+# GunChleoc <fios@foramnagaidhlig.net>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-17 13:47+0200\n"
-"PO-Revision-Date: 2016-01-26 22:53+0000\n"
-"Last-Translator: Akerbeltz <fios@akerbeltz.org>\n"
-"Language-Team: Gaelic; Scottish <gd@li.org>\n"
+"PO-Revision-Date: 2014-07-16 14:47+0000\n"
+"Last-Translator: GunChleoc <Unknown>\n"
+"Language-Team: Fòram na Gàidhlig http://www.foramnagaidhlig.net\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
 "(n > 2 && n < 20) ? 2 : 3;\n"
-"X-Launchpad-Export-Date: 2016-01-27 05:30+0000\n"
-"X-Generator: Launchpad (build 17902)\n"
+"X-Launchpad-Export-Date: 2016-02-10 05:39+0000\n"
+"X-Generator: Launchpad (build 17923)\n"
+"Language: gd\n"
 
 #: ../components/AboutTab.qml:103
 msgid "Author(s): "
@@ -71,12 +72,12 @@ msgstr "Sguir dheth"
 
 #: ../components/BottomEdge.qml:58
 msgid "Delete scores"
-msgstr "Sguab às na sgòran"
+msgstr ""
 
 #: ../components/BottomEdgeSlide.qml:96 ../components/BottomEdgeSlide.qml:126
 #: ../components/BottomEdgeSlide.qml:155
 msgid "4"
-msgstr "4"
+msgstr ""
 
 #: ../components/BottomEdgeSlide.qml:110
 msgid "Not allowed"
@@ -179,7 +180,7 @@ msgstr "Sūdoku"
 
 #: ../js/localStorage.js:12
 msgid "User"
-msgstr "Cleachdaiche"
+msgstr ""
 
 #: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:763
 msgid "New game"
@@ -236,10 +237,8 @@ msgstr ""
 #: ../sudoku-app.qml:235
 msgid "point."
 msgid_plural "points."
-msgstr[0] "phuing"
-msgstr[1] "phuing"
-msgstr[2] "puingean"
-msgstr[3] "puing"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../sudoku-app.qml:341
 msgid "Sudoku games played today"
@@ -335,11 +334,11 @@ msgstr "<b>Roghainnean nam pròifilean</b>"
 
 #: ../sudoku-app.qml:1087
 msgid "Current profile"
-msgstr "A' phròifil làithreach"
+msgstr ""
 
 #: ../sudoku-app.qml:1091
 msgid "None"
-msgstr "Gun phròifil"
+msgstr "Chan eil gin"
 
 #: ../sudoku-app.qml:1127
 msgid "Add profile"
@@ -355,8 +354,8 @@ msgstr "Mu dhèidhinn"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
 msgid "Sudoku Game for Ubuntu Touch."
-msgstr "Geama Sūdoku airson Ubuntu Touch."
+msgstr ""
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
-msgstr "sudoku;game;touch;geama;"
+msgstr ""

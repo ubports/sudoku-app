@@ -1,22 +1,22 @@
 # Uyghur translation for sudoku-app
-# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the sudoku-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+# Gheyret Kenji <gheyret@gmail.com>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-17 13:47+0200\n"
-"PO-Revision-Date: 2015-11-05 12:41+0000\n"
-"Last-Translator: Eltikin <eltikinuyghur@hotmail.com>\n"
-"Language-Team: Uyghur <ug@li.org>\n"
+"PO-Revision-Date: 2014-09-27 23:51+0000\n"
+"Last-Translator: Gheyret T.Kenji <Unknown>\n"
+"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-11-06 05:36+0000\n"
-"X-Generator: Launchpad (build 17838)\n"
+"X-Launchpad-Export-Date: 2016-02-10 05:40+0000\n"
+"X-Generator: Launchpad (build 17923)\n"
 
 #: ../components/AboutTab.qml:103
 msgid "Author(s): "
@@ -70,12 +70,12 @@ msgstr "ئەمەلدىن قالدۇر"
 
 #: ../components/BottomEdge.qml:58
 msgid "Delete scores"
-msgstr "نۇمۇرنى ئۈچۈر"
+msgstr ""
 
 #: ../components/BottomEdgeSlide.qml:96 ../components/BottomEdgeSlide.qml:126
 #: ../components/BottomEdgeSlide.qml:155
 msgid "4"
-msgstr "4"
+msgstr ""
 
 #: ../components/BottomEdgeSlide.qml:110
 msgid "Not allowed"
@@ -154,7 +154,7 @@ msgstr "سۇدوكۇ"
 
 #: ../js/localStorage.js:12
 msgid "User"
-msgstr "ئىشلەتكۈچى"
+msgstr ""
 
 #: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:763
 msgid "New game"
@@ -211,7 +211,8 @@ msgstr ""
 #: ../sudoku-app.qml:235
 msgid "point."
 msgid_plural "points."
-msgstr[0] "نوقتا."
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../sudoku-app.qml:341
 msgid "Sudoku games played today"
@@ -307,7 +308,7 @@ msgstr "<b>سەپلەكلەر تەڭشەكلىرى</b>"
 
 #: ../sudoku-app.qml:1087
 msgid "Current profile"
-msgstr "نۆۋەتتىكى سەپلەك"
+msgstr ""
 
 #: ../sudoku-app.qml:1091
 msgid "None"
@@ -327,8 +328,8 @@ msgstr "ھەققىدە"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
 msgid "Sudoku Game for Ubuntu Touch."
-msgstr "ئۇبۇنتۇ چەكمە(Ubuntu Touch) ئۈچۈن سۇدوكۇ ئويۇنى."
+msgstr ""
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
-msgstr "سۇدوكۇ;ئويۇن;چەكمە;"
+msgstr ""

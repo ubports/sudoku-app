@@ -1,23 +1,23 @@
-# Bosnian translation for sudoku-app
-# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
-# This file is distributed under the same license as the sudoku-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+# Bosnian translation for sudokutouchgame
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the sudokutouchgame package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sudoku-app\n"
+"Project-Id-Version: sudokutouchgame\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-17 13:47+0200\n"
-"PO-Revision-Date: 2015-07-21 09:48+0000\n"
-"Last-Translator: Dinko Osmankovic <Unknown>\n"
+"PO-Revision-Date: 2015-07-02 21:37+0000\n"
+"Last-Translator: Kenan Gutić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-07-22 05:35+0000\n"
-"X-Generator: Launchpad (build 17628)\n"
+"X-Launchpad-Export-Date: 2016-02-10 05:39+0000\n"
+"X-Generator: Launchpad (build 17923)\n"
 
 #: ../components/AboutTab.qml:103
 msgid "Author(s): "
@@ -46,7 +46,7 @@ msgstr "Prezime"
 #: ../components/AddProfileDialog.qml:53
 #: ../components/ManageProfileDialog.qml:69 ../sudoku-app.qml:354
 msgid "OK"
-msgstr "OK"
+msgstr "Uredu"
 
 #: ../components/AddProfileDialog.qml:69 ../components/AddProfileDialog.qml:74
 #: ../components/ManageProfileDialog.qml:95
@@ -55,7 +55,7 @@ msgstr "Upozorenje"
 
 #: ../components/AddProfileDialog.qml:69
 msgid "User already exist."
-msgstr "Igrač već postoji."
+msgstr "Korisnik već postoji."
 
 #: ../components/AddProfileDialog.qml:74
 #: ../components/ManageProfileDialog.qml:95
@@ -71,16 +71,16 @@ msgstr "Odustani"
 
 #: ../components/BottomEdge.qml:58
 msgid "Delete scores"
-msgstr "Obriši rezultate"
+msgstr ""
 
 #: ../components/BottomEdgeSlide.qml:96 ../components/BottomEdgeSlide.qml:126
 #: ../components/BottomEdgeSlide.qml:155
 msgid "4"
-msgstr "4"
+msgstr ""
 
 #: ../components/BottomEdgeSlide.qml:110
 msgid "Not allowed"
-msgstr "Nije dozvoljeno"
+msgstr "Nedozvoljena polja"
 
 #: ../components/BottomEdgeSlide.qml:140
 msgid "Start blocks"
@@ -104,7 +104,7 @@ msgstr "Najbolji rezultati za %1 %2"
 
 #: ../components/ManageProfileDialog.qml:13
 msgid "Edit profile"
-msgstr "Izmijeni profil"
+msgstr "Uredi profil"
 
 #: ../components/ManageProfileDialog.qml:108
 msgid "Delete"
@@ -112,11 +112,11 @@ msgstr "Obriši"
 
 #: ../components/SudokuBlocksGrid.qml:334
 msgid "Please pick a number"
-msgstr "Molimo da odaberete broj"
+msgstr "Molim odaberite broj"
 
 #: ../components/SudokuBlocksGrid.qml:395
 msgid "Clear"
-msgstr "Očistiti"
+msgstr "Očisti"
 
 #: ../components/SudokuBlocksGrid.qml:465
 #, qt-format
@@ -131,11 +131,11 @@ msgid_plural ""
 msgstr[0] ""
 "Vi ste varalica...\n"
 "Ali vam dajemo\n"
-"%1 poena."
+"%1 poen."
 msgstr[1] ""
 "Vi ste varalica...\n"
 "Ali vam dajemo\n"
-"%1 poen."
+"%1 poena."
 msgstr[2] ""
 "Vi ste varalica...\n"
 "Ali vam dajemo\n"
@@ -154,11 +154,11 @@ msgid_plural ""
 msgstr[0] ""
 "Čestitamo!\n"
 "Dobili ste\n"
-"%1 poena."
+"%1 poen."
 msgstr[1] ""
 "Čestitamo!\n"
 "Dobili ste\n"
-"%1 poen."
+"%1 poena."
 msgstr[2] ""
 "Čestitamo!\n"
 "Dobili ste\n"
@@ -171,7 +171,7 @@ msgstr "Sudoku"
 
 #: ../js/localStorage.js:12
 msgid "User"
-msgstr "Igrač"
+msgstr ""
 
 #: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:763
 msgid "New game"
@@ -183,7 +183,7 @@ msgstr "Iskoristi savjet"
 
 #: ../sudoku-app.qml:67 ../sudoku-app.qml:68
 msgid "Show settings"
-msgstr "Prikaži podešavanja"
+msgstr "Pokaži postavke"
 
 #: ../sudoku-app.qml:75 ../sudoku-app.qml:76
 msgid "Change difficulty to Easy"
@@ -228,9 +228,8 @@ msgstr ""
 #: ../sudoku-app.qml:235
 msgid "point."
 msgid_plural "points."
-msgstr[0] "poen."
-msgstr[1] "poena."
-msgstr[2] "poeni."
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../sudoku-app.qml:341
 msgid "Sudoku games played today"
@@ -238,7 +237,7 @@ msgstr "Sudoku igara odigranih danas"
 
 #: ../sudoku-app.qml:342
 msgid "No Sudoku games played today"
-msgstr "Nije igrana Sudoku igra danas"
+msgstr "Danas nije igran Sudoku"
 
 #: ../sudoku-app.qml:371
 msgid "New Game"
@@ -250,7 +249,7 @@ msgstr "Odaberite nivo težine"
 
 #: ../sudoku-app.qml:436 ../sudoku-app.qml:982
 msgid "Easy"
-msgstr "Lagano"
+msgstr "Lako"
 
 #: ../sudoku-app.qml:455 ../sudoku-app.qml:982
 msgid "Moderate"
@@ -270,7 +269,7 @@ msgstr ""
 
 #: ../sudoku-app.qml:744
 msgid "You are a cheat..."
-msgstr "Vi ste varalica..."
+msgstr "Prevarantu..."
 
 #: ../sudoku-app.qml:744
 msgid "Congratulations!"
@@ -286,7 +285,7 @@ msgstr "Rezultati"
 
 #: ../sudoku-app.qml:830
 msgid "Settings"
-msgstr "Podešavanja"
+msgstr "Postavke"
 
 #: ../sudoku-app.qml:852 ../sudoku-app.qml:900
 msgid "Select profile"
@@ -306,7 +305,7 @@ msgstr "Ultra teško"
 
 #: ../sudoku-app.qml:982
 msgid "Always ask"
-msgstr "Uvijek pitati"
+msgstr "Uvijek pitaj"
 
 #: ../sudoku-app.qml:1024
 msgid "Theme"
@@ -326,11 +325,11 @@ msgstr "<b>Podešavanja profila</b>"
 
 #: ../sudoku-app.qml:1087
 msgid "Current profile"
-msgstr "Trenutni profil"
+msgstr ""
 
 #: ../sudoku-app.qml:1091
 msgid "None"
-msgstr "Nijedan"
+msgstr "Nijedno"
 
 #: ../sudoku-app.qml:1127
 msgid "Add profile"
@@ -338,16 +337,16 @@ msgstr "Dodaj profil"
 
 #: ../sudoku-app.qml:1136
 msgid "Manage profiles"
-msgstr "Upravljanje profilima"
+msgstr "Upravljaj profilima"
 
 #: ../sudoku-app.qml:1168
 msgid "About"
-msgstr "O programu"
+msgstr "O Sudoku"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
 msgid "Sudoku Game for Ubuntu Touch."
-msgstr "Sudoku igra za Ubuntu Touch"
+msgstr ""
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
-msgstr "sudoku;igra;touch"
+msgstr ""

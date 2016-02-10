@@ -1,22 +1,22 @@
-# Latvian translation for sudoku-app
-# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
-# This file is distributed under the same license as the sudoku-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# Latvian translation for sudokutouchgame
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the sudokutouchgame package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sudoku-app\n"
+"Project-Id-Version: sudokutouchgame\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-17 13:47+0200\n"
-"PO-Revision-Date: 2015-11-21 19:20+0000\n"
+"PO-Revision-Date: 2015-02-28 15:40+0000\n"
 "Last-Translator: Rūdolfs Mazurs <Unknown>\n"
 "Language-Team: Latvian <lv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-11-22 05:27+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2016-02-10 05:40+0000\n"
+"X-Generator: Launchpad (build 17923)\n"
 
 #: ../components/AboutTab.qml:103
 msgid "Author(s): "
@@ -70,12 +70,12 @@ msgstr "Atcelt"
 
 #: ../components/BottomEdge.qml:58
 msgid "Delete scores"
-msgstr "Dzēst rezultātus"
+msgstr ""
 
 #: ../components/BottomEdgeSlide.qml:96 ../components/BottomEdgeSlide.qml:126
 #: ../components/BottomEdgeSlide.qml:155
 msgid "4"
-msgstr "4"
+msgstr ""
 
 #: ../components/BottomEdgeSlide.qml:110
 msgid "Not allowed"
@@ -170,7 +170,7 @@ msgstr "Sudoku"
 
 #: ../js/localStorage.js:12
 msgid "User"
-msgstr "Lietotājs"
+msgstr ""
 
 #: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:763
 msgid "New game"
@@ -227,9 +227,8 @@ msgstr ""
 #: ../sudoku-app.qml:235
 msgid "point."
 msgid_plural "points."
-msgstr[0] "punktu."
-msgstr[1] "punktus."
-msgstr[2] "punktu."
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../sudoku-app.qml:341
 msgid "Sudoku games played today"
@@ -325,7 +324,7 @@ msgstr "<b>Profilu iestatījumi</b>"
 
 #: ../sudoku-app.qml:1087
 msgid "Current profile"
-msgstr "Aktuālais profils"
+msgstr ""
 
 #: ../sudoku-app.qml:1091
 msgid "None"
@@ -337,7 +336,7 @@ msgstr "Pievienot profilu"
 
 #: ../sudoku-app.qml:1136
 msgid "Manage profiles"
-msgstr "Pārvaldīt profilus"
+msgstr "Rediģēt profilus"
 
 #: ../sudoku-app.qml:1168
 msgid "About"
@@ -345,8 +344,8 @@ msgstr "Par"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
 msgid "Sudoku Game for Ubuntu Touch."
-msgstr "Sudoku spēle Ubuntu Touch videi."
+msgstr ""
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
-msgstr "sudoku;spēle;touch;"
+msgstr ""
