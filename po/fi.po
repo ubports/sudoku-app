@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: sudokutouchgame\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-17 13:47+0200\n"
-"PO-Revision-Date: 2014-12-14 20:08+0000\n"
+"PO-Revision-Date: 2016-02-10 07:55+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-02-10 05:39+0000\n"
+"X-Launchpad-Export-Date: 2016-02-11 06:13+0000\n"
 "X-Generator: Launchpad (build 17923)\n"
 
 #: ../components/AboutTab.qml:103
@@ -70,12 +70,12 @@ msgstr "Peru"
 
 #: ../components/BottomEdge.qml:58
 msgid "Delete scores"
-msgstr ""
+msgstr "Poista pisteet"
 
 #: ../components/BottomEdgeSlide.qml:96 ../components/BottomEdgeSlide.qml:126
 #: ../components/BottomEdgeSlide.qml:155
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #: ../components/BottomEdgeSlide.qml:110
 msgid "Not allowed"
@@ -162,7 +162,7 @@ msgstr "Sudoku"
 
 #: ../js/localStorage.js:12
 msgid "User"
-msgstr ""
+msgstr "Käyttäjä"
 
 #: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:763
 msgid "New game"
@@ -219,8 +219,8 @@ msgstr ""
 #: ../sudoku-app.qml:235
 msgid "point."
 msgid_plural "points."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "piste."
+msgstr[1] "pistettä."
 
 #: ../sudoku-app.qml:341
 msgid "Sudoku games played today"
@@ -316,7 +316,7 @@ msgstr "<b>Profiiliasetukset</b>"
 
 #: ../sudoku-app.qml:1087
 msgid "Current profile"
-msgstr ""
+msgstr "Nykyinen profiili"
 
 #: ../sudoku-app.qml:1091
 msgid "None"
@@ -336,8 +336,8 @@ msgstr "Tietoja"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
 msgid "Sudoku Game for Ubuntu Touch."
-msgstr ""
+msgstr "Sudoku-peli Ubuntu Touchille."
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
-msgstr ""
+msgstr "sudoku;game;touch;peli;"
