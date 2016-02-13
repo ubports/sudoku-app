@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-17 13:47+0200\n"
-"PO-Revision-Date: 2014-07-16 14:47+0000\n"
+"PO-Revision-Date: 2016-02-12 12:18+0000\n"
 "Last-Translator: GunChleoc <Unknown>\n"
 "Language-Team: Fòram na Gàidhlig http://www.foramnagaidhlig.net\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
 "(n > 2 && n < 20) ? 2 : 3;\n"
-"X-Launchpad-Export-Date: 2016-02-10 05:39+0000\n"
-"X-Generator: Launchpad (build 17923)\n"
+"X-Launchpad-Export-Date: 2016-02-13 05:34+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "Language: gd\n"
 
 #: ../components/AboutTab.qml:103
@@ -72,12 +72,12 @@ msgstr "Sguir dheth"
 
 #: ../components/BottomEdge.qml:58
 msgid "Delete scores"
-msgstr ""
+msgstr "Sguab às na sgòraichean"
 
 #: ../components/BottomEdgeSlide.qml:96 ../components/BottomEdgeSlide.qml:126
 #: ../components/BottomEdgeSlide.qml:155
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #: ../components/BottomEdgeSlide.qml:110
 msgid "Not allowed"
@@ -180,7 +180,7 @@ msgstr "Sūdoku"
 
 #: ../js/localStorage.js:12
 msgid "User"
-msgstr ""
+msgstr "Cleachdaiche"
 
 #: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:763
 msgid "New game"
@@ -237,8 +237,10 @@ msgstr ""
 #: ../sudoku-app.qml:235
 msgid "point."
 msgid_plural "points."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "phuing."
+msgstr[1] "phuing."
+msgstr[2] "puingean."
+msgstr[3] "puing."
 
 #: ../sudoku-app.qml:341
 msgid "Sudoku games played today"
@@ -334,7 +336,7 @@ msgstr "<b>Roghainnean nam pròifilean</b>"
 
 #: ../sudoku-app.qml:1087
 msgid "Current profile"
-msgstr ""
+msgstr "A' phròifil làithreach"
 
 #: ../sudoku-app.qml:1091
 msgid "None"
@@ -354,8 +356,8 @@ msgstr "Mu dhèidhinn"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
 msgid "Sudoku Game for Ubuntu Touch."
-msgstr ""
+msgstr "Geama Sudoku airson Ubuntu Touch."
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
-msgstr ""
+msgstr "sudoku;game;touch;geama;"
