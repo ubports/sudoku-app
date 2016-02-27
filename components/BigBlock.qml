@@ -1,5 +1,5 @@
 import QtQuick 2.3
-import Ubuntu.Components 1.1
+import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.0
 import "../js/SudokuCU.js" as SudokuCU
 import QtFeedback 5.0
