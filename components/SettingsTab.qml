@@ -4,7 +4,6 @@ import QtQuick.LocalStorage 2.0
 import Ubuntu.Components.Popups 1.3
 import Ubuntu.Layouts 1.0
 import "../js/localStorage.js" as Settings
-import Ubuntu.Unity.Action 1.1 as UnityActions
 import UserMetrics 0.1
 
 Tab {

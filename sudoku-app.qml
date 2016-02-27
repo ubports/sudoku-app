@@ -6,7 +6,6 @@ import Ubuntu.Components.Popups 1.3
 import Ubuntu.Layouts 1.0
 import "js/localStorage.js" as Settings
 import "components"
-import Ubuntu.Unity.Action 1.1 as UnityActions
 import UserMetrics 0.1
 
 MainView {
@@ -713,16 +712,11 @@ MainView {
                 id: gameFinishedRectangle;
                 color: "black";
                 opacity: 0.8
-                //border.color: sudokuBlocksGrid.defaultBorderColor;
                 width: mainView.width
                 radius: "medium"
                 height: mainView.height*1.3
                 z: 100;
                 visible: false;
-                //x: mainView.width / 2 - width/2;
-                //y: mainView.weight / 2 - height/2;
-                //anchors.verticalCenter: mainView.verticalCenter;
-                //anchors.horizontalCenter: mainView.verticalCenter;
                 anchors.centerIn: parent;
                 //y: units.gu(5);
                 Label {
@@ -771,19 +765,9 @@ MainView {
                     }
                 ]
 
-                //Column {
-                //    id: mainColumn;
-                //width: mainView.width;
-                //height: mainView.height;
-                //anchors.left: parent.left;
-                //anchors.leftMargin: units.dp(3)
-                //anchors.fill: parent
-                //spacing: units.gu(5)
-
                 SudokuBlocksGrid {
                     id: sudokuBlocksGrid;
                     objectName: "blockgrid"
-                    //x: units.dp(3)
                     x: !mainView.wideAspect() ? 0.5*(mainView.width-9*sudokuBlocksGrid.blockSize-
                                                      22*sudokuBlocksGrid.blockDistance) :
                                                 0.25*(mainView.width-9*sudokuBlocksGrid.blockSize-
@@ -792,28 +776,21 @@ MainView {
                     y: !mainView.wideAspect() ? units.gu(1) : mainView.height*0.05
 
                 }
-
-                //}
             }
-
         }
 
         // Highscores Tab
-
         Tab {
             id: highscoresTab
             objectName: "highscoresTab"
             title: i18n.tr("Scores")
-            page: HighscoresTab{ id: hsPage }
+            page: HighscoresTab { id: hsPage }
         }
-
-
 
         // settingsTab
         SettingsTab {
             id: settingsTab
         }
-
 
         AboutTab {
             id: aboutTab
