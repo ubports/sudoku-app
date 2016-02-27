@@ -1,6 +1,6 @@
-import QtQuick 2.3
+import QtQuick 2.4
 import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.0
+import Ubuntu.Components.Popups 1.3
 
 Repeater {
 
@@ -132,7 +132,7 @@ Repeater {
     }
 
     Component.onCompleted: {
-        switch(difficultySelector.selectedIndex) {
+        switch(settingsTab.difficultyIndex) {
         case 0:
             var randomnumber = Math.floor(Math.random()*9);
             randomnumber += 31;
