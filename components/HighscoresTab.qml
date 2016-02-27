@@ -95,11 +95,7 @@ Page {
                 }
             }
         }
-
-        //locked: true
-        //opened: true
     ]
-
 
     ListModel {
         id: highscoresModel

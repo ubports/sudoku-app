@@ -14,7 +14,7 @@ UbuntuShape {
     height: size;
     width: size;
     radius: "medium"
-    color: buttonColor
+    backgroundColor: buttonColor
     //border.color: Qt.darker(buttonColor,1.5)
 
     Text {

@@ -562,7 +562,7 @@ MainView {
 
             UbuntuShape {
                 id: gameFinishedRectangle;
-                color: "black";
+                backgroundColor: "black";
                 opacity: 0.8
                 width: mainView.width
                 radius: "medium"
