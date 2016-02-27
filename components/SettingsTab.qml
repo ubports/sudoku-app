@@ -21,13 +21,7 @@ Tab {
         id: settingsPage
         objectName: "settingsPage"
         
-        anchors {
-            left: parent.left
-            right: parent.right
-            top: parent.top
-        }
-        height: mainView.height
-        
+        anchors.fill: parent
         
         Component {
             id: profileSelector
@@ -136,12 +130,13 @@ Tab {
             objectName: "settingsContainer"
 
             anchors.fill: parent
+            contentHeight: mainColumnSettings.height
             flickableDirection: Flickable.VerticalFlick
 
             Column {
                 id: mainColumnSettings;
-                //anchors.fill: parent
-                height: parent.height
+
+                height: childrenRect.height
                 width: parent.width
                 spacing: units.gu(1)
 
@@ -311,19 +306,29 @@ Tab {
                     id:manageProfileDialog
                 }
 
-                SingleValueListItem {
+                ListItem {
                     id: addSingleValue
                     objectName: "Add profile"
-                    title.text: i18n.tr("Add profile")
+                    height: addSingleValueLayout.height + divider.height
+                    ListItemLayout {
+                        id: addSingleValueLayout
+                        title.text: i18n.tr("Add profile")
+                        ProgressionSlot {}
+                    }
                     onClicked: {
                         PopupUtils.open(addProfileDialog, addSingleValue);
                     }
                 }
 
-                SingleValueListItem {
+                ListItem {
                     id: manageProfileSingleValue
                     objectName: "Manage profiles"
-                    title.text: i18n.tr("Manage profiles")
+                    height: manageProfileSingleValueLayout.height + divider.height
+                    ListItemLayout {
+                        id: manageProfileSingleValueLayout
+                        title.text: i18n.tr("Manage profiles")
+                        ProgressionSlot {}
+                    }
                     onClicked: {
                         var allProfiles = new Array();
                         allProfiles = Settings.getAllProfiles()
@@ -346,6 +351,4 @@ Tab {
             align: Qt.AlignTrailing
         }
     }
-    
-    
 }

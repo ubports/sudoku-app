@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-27 21:47+0530\n"
+"POT-Creation-Date: 2016-02-27 22:19+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: ../components/AboutTab.qml:102
+#: ../components/AboutTab.qml:100
 msgid "Author(s): "
 msgstr ""
 
-#: ../components/AboutTab.qml:112
+#: ../components/AboutTab.qml:110
 msgid "Contact: "
 msgstr ""
 
-#: ../components/AboutTab.qml:138
+#: ../components/AboutTab.qml:136
 msgid "Version: "
 msgstr ""
 
@@ -62,8 +62,8 @@ msgid "Lastname and firstname must not be empty."
 msgstr ""
 
 #: ../components/AddProfileDialog.qml:85
-#: ../components/ManageProfileDialog.qml:127 ../components/SettingsTab.qml:66
-#: ../components/SettingsTab.qml:116 ../components/SudokuBlocksGrid.qml:492
+#: ../components/ManageProfileDialog.qml:127 ../components/SettingsTab.qml:60
+#: ../components/SettingsTab.qml:110 ../components/SudokuBlocksGrid.qml:492
 #: ../sudoku-app.qml:344
 msgid "Cancel"
 msgstr ""
@@ -89,7 +89,7 @@ msgstr ""
 msgid "Hinted blocks"
 msgstr ""
 
-#: ../components/HighscoresTab.qml:63 ../components/HighscoresTab.qml:110
+#: ../components/HighscoresTab.qml:63 ../components/HighscoresTab.qml:106
 #: ../sudoku-app.qml:22 ../sudoku-app.qml:50 ../sudoku-app.qml:83
 msgid "<b>Best scores for all players</b>"
 msgstr ""
@@ -112,67 +112,67 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: ../components/SettingsTab.qml:36 ../components/SettingsTab.qml:85
+#: ../components/SettingsTab.qml:30 ../components/SettingsTab.qml:79
 msgid "Select profile"
 msgstr ""
 
-#: ../components/SettingsTab.qml:152
+#: ../components/SettingsTab.qml:147
 msgid "Sudoku settings"
 msgstr ""
 
-#: ../components/SettingsTab.qml:160
+#: ../components/SettingsTab.qml:155
 msgid "Default Difficulty"
 msgstr ""
 
-#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:273
+#: ../components/SettingsTab.qml:158 ../sudoku-app.qml:273
 msgid "Easy"
 msgstr ""
 
-#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:292
+#: ../components/SettingsTab.qml:158 ../sudoku-app.qml:292
 msgid "Moderate"
 msgstr ""
 
-#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:309
+#: ../components/SettingsTab.qml:158 ../sudoku-app.qml:309
 msgid "Hard"
 msgstr ""
 
-#: ../components/SettingsTab.qml:163
+#: ../components/SettingsTab.qml:158
 msgid "Ultra Hard"
 msgstr ""
 
-#: ../components/SettingsTab.qml:163
+#: ../components/SettingsTab.qml:158
 msgid "Always ask"
 msgstr ""
 
-#: ../components/SettingsTab.qml:206
+#: ../components/SettingsTab.qml:201
 msgid "Theme"
 msgstr ""
 
-#: ../components/SettingsTab.qml:236
+#: ../components/SettingsTab.qml:231
 msgid "Hints"
 msgstr ""
 
-#: ../components/SettingsTab.qml:256
+#: ../components/SettingsTab.qml:251
 msgid "Vibration Alerts"
 msgstr ""
 
-#: ../components/SettingsTab.qml:274
+#: ../components/SettingsTab.qml:269
 msgid "Profiles settings"
 msgstr ""
 
-#: ../components/SettingsTab.qml:282
+#: ../components/SettingsTab.qml:277
 msgid "Current profile"
 msgstr ""
 
-#: ../components/SettingsTab.qml:285
+#: ../components/SettingsTab.qml:280
 msgid "None"
 msgstr ""
 
-#: ../components/SettingsTab.qml:317
+#: ../components/SettingsTab.qml:315
 msgid "Add profile"
 msgstr ""
 
-#: ../components/SettingsTab.qml:326
+#: ../components/SettingsTab.qml:329
 msgid "Manage profiles"
 msgstr ""
 
@@ -265,15 +265,15 @@ msgstr ""
 msgid "New game"
 msgstr ""
 
-#: ../sudoku-app.qml:612
+#: ../sudoku-app.qml:611
 msgid "Show hint"
 msgstr ""
 
-#: ../sudoku-app.qml:638
+#: ../sudoku-app.qml:637
 msgid "Scores"
 msgstr ""
 
-#: ../sudoku-app.qml:650
+#: ../sudoku-app.qml:649
 msgid "About"
 msgstr ""
 
