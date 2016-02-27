@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-27 21:45+0530\n"
+"POT-Creation-Date: 2016-02-27 21:47+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,7 +43,7 @@ msgid "Lastname"
 msgstr ""
 
 #: ../components/AddProfileDialog.qml:53
-#: ../components/ManageProfileDialog.qml:69 ../sudoku-app.qml:339
+#: ../components/ManageProfileDialog.qml:69 ../sudoku-app.qml:193
 msgid "OK"
 msgstr ""
 
@@ -64,7 +64,7 @@ msgstr ""
 #: ../components/AddProfileDialog.qml:85
 #: ../components/ManageProfileDialog.qml:127 ../components/SettingsTab.qml:66
 #: ../components/SettingsTab.qml:116 ../components/SudokuBlocksGrid.qml:492
-#: ../sudoku-app.qml:492
+#: ../sudoku-app.qml:344
 msgid "Cancel"
 msgstr ""
 
@@ -90,7 +90,7 @@ msgid "Hinted blocks"
 msgstr ""
 
 #: ../components/HighscoresTab.qml:63 ../components/HighscoresTab.qml:110
-#: ../sudoku-app.qml:22 ../sudoku-app.qml:192 ../sudoku-app.qml:229
+#: ../sudoku-app.qml:22 ../sudoku-app.qml:50 ../sudoku-app.qml:83
 msgid "<b>Best scores for all players</b>"
 msgstr ""
 
@@ -124,15 +124,15 @@ msgstr ""
 msgid "Default Difficulty"
 msgstr ""
 
-#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:421
+#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:273
 msgid "Easy"
 msgstr ""
 
-#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:440
+#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:292
 msgid "Moderate"
 msgstr ""
 
-#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:457
+#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:309
 msgid "Hard"
 msgstr ""
 
@@ -210,7 +210,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../js/localStorage.js:11 ../sudoku-app.qml:673
+#: ../js/localStorage.js:11 ../sudoku-app.qml:525
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:1
 msgid "Sudoku"
 msgstr ""
@@ -219,61 +219,61 @@ msgstr ""
 msgid "User"
 msgstr ""
 
-#: ../sudoku-app.qml:218
+#: ../sudoku-app.qml:76
 msgid ""
 "You are a cheat... \n"
 "But we give you\n"
 msgstr ""
 
-#: ../sudoku-app.qml:220
+#: ../sudoku-app.qml:78
 msgid "point."
 msgid_plural "points."
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../sudoku-app.qml:326
+#: ../sudoku-app.qml:180
 msgid "Sudoku games played today"
 msgstr ""
 
-#: ../sudoku-app.qml:327
+#: ../sudoku-app.qml:181
 msgid "No Sudoku games played today"
 msgstr ""
 
-#: ../sudoku-app.qml:356
+#: ../sudoku-app.qml:210
 msgid "New Game"
 msgstr ""
 
-#: ../sudoku-app.qml:357
+#: ../sudoku-app.qml:211
 msgid "Select difficulty level"
 msgstr ""
 
-#: ../sudoku-app.qml:474
+#: ../sudoku-app.qml:326
 msgid ""
 "Ultra\n"
 "Hard"
 msgstr ""
 
-#: ../sudoku-app.qml:724
+#: ../sudoku-app.qml:576
 msgid "You are a cheat..."
 msgstr ""
 
-#: ../sudoku-app.qml:724
+#: ../sudoku-app.qml:576
 msgid "Congratulations!"
 msgstr ""
 
-#: ../sudoku-app.qml:743
+#: ../sudoku-app.qml:595
 msgid "New game"
 msgstr ""
 
-#: ../sudoku-app.qml:760
+#: ../sudoku-app.qml:612
 msgid "Show hint"
 msgstr ""
 
-#: ../sudoku-app.qml:786
+#: ../sudoku-app.qml:638
 msgid "Scores"
 msgstr ""
 
-#: ../sudoku-app.qml:798
+#: ../sudoku-app.qml:650
 msgid "About"
 msgstr ""
 

@@ -77,10 +77,6 @@ MainView {
                         + sudokuBlocksGrid.calculateScore()
                         + " " + i18n.tr("point.","points.",1)
 
-                //                print (sudokuBlocksGrid.numberOfActions)
-                //                print (sudokuBlocksGrid.numberOfHints)
-                //                print (sudokuBlocksGrid.gameSeconds)
-                //                print (sudokuBlocksGrid.gameDifficulty)
                 var allScores = Settings.getAllScores()
                 //highscoresModel.clear();
                 hsPage.clearModel()
@@ -261,8 +257,6 @@ MainView {
                     break;
                 }
             }
-
-
 
             Column {
                 spacing: units.gu(5)
@@ -602,7 +596,6 @@ MainView {
                         iconSource: Qt.resolvedUrl("icons/new_game_ubuntu.svg")
                         onTriggered: {
                             if(gameFinishedRectangle.visible) gameFinishedRectangle.visible = false;
-                            //print("new block distance:", blockDistance);
                             //createNewGame()
                             if (settingsTab.difficultyIndex == 4)
                             PopupUtils.open(newGameComponent)
