@@ -6,7 +6,6 @@ import Ubuntu.Components.Popups 1.3
 import Ubuntu.Layouts 1.0
 import "../js/localStorage.js" as Settings
 import "../components"
-//import Ubuntu.HUD 1.0 as HUD
 import UserMetrics 0.1
 
 Tab {
