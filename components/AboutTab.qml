@@ -7,8 +7,20 @@ import "../js/localStorage.js" as Settings
 import "../components"
 
 Tab {
+    id: aboutTab
     objectName: "aboutTab"
+
     page: Page {
+        id: aboutPage
+
+        header: PageHeader {
+            title: i18n.tr("About")
+            leadingActionBar {
+                numberOfSlots: 0
+                actions: tabsList.actions
+            }
+        }
+
         Layouts {
             id: aboutTabLayout
             width: mainView.width
@@ -62,8 +74,6 @@ Tab {
                         }
                     }
                 }
-
-
             ]
 
             Column {
@@ -86,7 +96,6 @@ Tab {
                         smooth: true
                         anchors.fill: parent
                         fillMode: Image.PreserveAspectFit
-
                     }
                 }
 
@@ -116,7 +125,6 @@ Tab {
                         font.bold: true;
                         text: "dinko.metalac@gmail.com"
                     }
-
                 }
 
                 Row {
@@ -155,7 +163,6 @@ Tab {
                     }
                 }
             }
-
         }
     }
 }

@@ -1,12 +1,11 @@
 import QtQuick 2.4
+import UserMetrics 0.1
+import Ubuntu.Layouts 1.0
 import Ubuntu.Components 1.3
-import Ubuntu.Components.ListItems 1.0 as ListItem
 import QtQuick.LocalStorage 2.0
 import Ubuntu.Components.Popups 1.3
-import Ubuntu.Layouts 1.0
 import "js/localStorage.js" as Settings
 import "components"
-import UserMetrics 0.1
 
 MainView {
     id: mainView
@@ -57,7 +56,7 @@ MainView {
             /*highscoresModel.append({'firstname': firstName,
                                        'lastname':  lastName,
                                        'score': rowItem[1] });*/
-            hsPage.appendModel({ 'id': rowItem[0],
+            highscoresTab.appendModel({ 'id': rowItem[0],
                               'firstname': firstName,
                               'lastname':  lastName,
                               'score': rowItem[2] });
@@ -90,7 +89,7 @@ MainView {
                     /*highscoresModel.append({'firstname': firstName,
                                                'lastname':  lastName,
                                                'score': rowItem[1] });*/
-                    hsPage.appendModel({ 'id': rowItem[0],
+                    highscoresTab.appendModel({ 'id': rowItem[0],
                                       'firstname': firstName,
                                       'lastname':  lastName,
                                       'score': rowItem[2] });
@@ -495,7 +494,7 @@ MainView {
             /*highscoresModel.append({'firstname': firstName,
                                        'lastname':  lastName,
                                        'score': rowItem[1] });*/
-            hsPage.appendModel({ 'id': rowItem[0],
+            highscoresTab.appendModel({ 'id': rowItem[0],
                                    'firstname': firstName,
                                    'lastname':  lastName,
                                    'score': rowItem[2] })
@@ -517,12 +516,14 @@ MainView {
         id: tabs
         anchors.fill: parent
 
+        TabsList {
+            id: tabsList
+        }
+
         // First tab begins here
         Tab {
             id: mainTab;
             objectName: "MainTab"
-
-            title: i18n.tr("Sudoku")
 
             Timer {
                 id: winTimer;
@@ -583,38 +584,48 @@ MainView {
             }
 
             page: Page {
+                id: mainPage
+
+                header: PageHeader {
+                    title: i18n.tr("Sudoku")
+
+                    leadingActionBar {
+                        numberOfSlots: 0
+                        actions: tabsList.actions
+                    }
+
+                    trailingActionBar.actions: [
+                        Action {
+                            objectName: "newgamebutton"
+                            text: i18n.tr("New game");
+                            iconSource: Qt.resolvedUrl("icons/new_game_ubuntu.svg")
+                            onTriggered: {
+                                if(gameFinishedRectangle.visible) gameFinishedRectangle.visible = false;
+                                //createNewGame()
+                                if (settingsTab.difficultyIndex == 4)
+                                PopupUtils.open(newGameComponent)
+                                else {
+                                    createNewGame()
+                                }
+                            }
+                        },
+                        Action {
+                            objectName: "hintbutton"
+                            id: revealHintAction
+                            iconSource: Qt.resolvedUrl("icons/hint.svg")
+                            text: i18n.tr("Show hint");
+                            enabled: settingsTab.disableHintsChecked
+                            onTriggered: {
+                                revealHint()
+                            }
+                        }
+                    ]
+                }
 
                 BottomEdgeSlide {
                     z:2
                     hintIconName: "help-contents"
                 }
-
-                head.actions: [
-                    Action {
-                        objectName: "newgamebutton"
-                        text: i18n.tr("New game");
-                        iconSource: Qt.resolvedUrl("icons/new_game_ubuntu.svg")
-                        onTriggered: {
-                            if(gameFinishedRectangle.visible) gameFinishedRectangle.visible = false;
-                            //createNewGame()
-                            if (settingsTab.difficultyIndex == 4)
-                            PopupUtils.open(newGameComponent)
-                            else {
-                                createNewGame()
-                            }
-                        }
-                    },
-                    Action {
-                        objectName: "hintbutton"
-                        id: revealHintAction
-                        iconSource: Qt.resolvedUrl("icons/hint.svg")
-                        text: i18n.tr("Show hint");
-                        enabled: settingsTab.disableHintsChecked
-                        onTriggered: {
-                            revealHint()
-                        }
-                    }
-                ]
 
                 SudokuBlocksGrid {
                     id: sudokuBlocksGrid;
@@ -624,29 +635,27 @@ MainView {
                                                 0.25*(mainView.width-9*sudokuBlocksGrid.blockSize-
                                                       22*sudokuBlocksGrid.blockDistance)
 
-                    y: !mainView.wideAspect() ? units.gu(1) : mainView.height*0.05
+                    y: !mainView.wideAspect() ? mainPage.header.height : mainView.height*0.05
 
                 }
             }
         }
 
         // Highscores Tab
-        Tab {
+        HighscoresTab {
             id: highscoresTab
             objectName: "highscoresTab"
-            title: i18n.tr("Scores")
-            page: HighscoresTab { id: hsPage }
         }
 
         // settingsTab
         SettingsTab {
             id: settingsTab
+            objectName: "settingsTab"
         }
 
         AboutTab {
             id: aboutTab
             objectName: "aboutTab"
-            title: i18n.tr("About")
         }
     }
 }

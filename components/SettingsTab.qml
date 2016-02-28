@@ -8,8 +8,6 @@ import "../js/localStorage.js" as Settings
 Tab {
     id: settingsTab;
     objectName: "settingsTab"
-
-    title: i18n.tr("Settings")
     
     property alias disableHintsChecked: disableHints.checked;
     property alias disableVibrationsChecked: disableVibrations.checked;
@@ -21,6 +19,15 @@ Tab {
         objectName: "settingsPage"
         
         anchors.fill: parent
+
+        header: PageHeader {
+            flickable: flickableSettings
+            title: i18n.tr("Settings")
+            leadingActionBar {
+                numberOfSlots: 0
+                actions: tabsList.actions
+            }
+        }
         
         Component {
             id: profileSelector
@@ -128,9 +135,15 @@ Tab {
             id: flickableSettings
             objectName: "settingsContainer"
 
+//            anchors {
+//                top: settingsPage.header.bottom
+//                left: parent.left
+//                right: parent.right
+//                bottom: parent.bottom
+//            }
+
             anchors.fill: parent
             contentHeight: mainColumnSettings.height
-            flickableDirection: Flickable.VerticalFlick
 
             Column {
                 id: mainColumnSettings;
