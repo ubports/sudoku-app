@@ -1,5 +1,5 @@
-import QtQuick 2.3
-import Ubuntu.Components 1.1
+import QtQuick 2.4
+import Ubuntu.Components 1.3
 
 UbuntuShape {
     id: button
@@ -14,7 +14,7 @@ UbuntuShape {
     height: size;
     width: size;
     radius: "medium"
-    color: buttonColor
+    backgroundColor: buttonColor
     //border.color: Qt.darker(buttonColor,1.5)
 
     Text {

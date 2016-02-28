@@ -1,7 +1,7 @@
 {
     "architecture": "all",
     "description": "Sudoku game for Ubuntu devices.",
-    "framework": "ubuntu-sdk-15.04",
+    "framework": "ubuntu-sdk-15.04.3-qml",
     "hooks": {
         "sudoku": {
             "apparmor": "sudoku.apparmor",
@@ -12,7 +12,7 @@
     "maintainer": "Ubuntu Core Apps Developers <ubuntu-touch-coreapps@lists.launchpad.net>",
     "name": "@PROJECT_NAME@",
     "title": "Sudoku",
-    "version": "1.1.@BZR_REVNO@",
+    "version": "1.6.@BZR_REVNO@",
     "x-source": {
         "vcs-bzr": "@BZR_SOURCE@",
         "vcs-bzr-revno": "@BZR_REVNO@"
