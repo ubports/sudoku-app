@@ -1,3 +1,12 @@
+sudoku-app (1.6) UNRELEASED; urgency=medium
+
+  * Migrated to Ubuntu.Components 1.3
+  * Updated framework to 15.04.3-qml
+  * Updated to QtQuick 2.4
+  * Removed unused comments, deprecated imports and unused actions
+
+ -- Nekhelesh <krnekhelesh@nik90-laptop>  Sun, 28 Feb 2016 18:34:26 +0100
+
 sudoku-app (1.1) raring; urgency=medium
 
   * Add -qt5 command line option (LP: #1288885) 
