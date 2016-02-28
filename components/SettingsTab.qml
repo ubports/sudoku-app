@@ -135,13 +135,6 @@ Tab {
             id: flickableSettings
             objectName: "settingsContainer"
 
-//            anchors {
-//                top: settingsPage.header.bottom
-//                left: parent.left
-//                right: parent.right
-//                bottom: parent.bottom
-//            }
-
             anchors.fill: parent
             contentHeight: mainColumnSettings.height
 

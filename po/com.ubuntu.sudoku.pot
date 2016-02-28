@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-28 22:34+0530\n"
+"POT-Creation-Date: 2016-02-28 22:39+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,7 +68,7 @@ msgstr ""
 
 #: ../components/AddProfileDialog.qml:85
 #: ../components/ManageProfileDialog.qml:127 ../components/SettingsTab.qml:66
-#: ../components/SettingsTab.qml:116 ../components/SudokuBlocksGrid.qml:492
+#: ../components/SettingsTab.qml:116 ../components/SudokuBlocksGrid.qml:488
 #: ../sudoku-app.qml:343
 msgid "Cancel"
 msgstr ""
@@ -121,75 +121,75 @@ msgstr ""
 msgid "Select profile"
 msgstr ""
 
-#: ../components/SettingsTab.qml:159
+#: ../components/SettingsTab.qml:152
 msgid "Sudoku settings"
 msgstr ""
 
-#: ../components/SettingsTab.qml:167
+#: ../components/SettingsTab.qml:160
 msgid "Default Difficulty"
 msgstr ""
 
-#: ../components/SettingsTab.qml:170 ../sudoku-app.qml:272
+#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:272
 msgid "Easy"
 msgstr ""
 
-#: ../components/SettingsTab.qml:170 ../sudoku-app.qml:291
+#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:291
 msgid "Moderate"
 msgstr ""
 
-#: ../components/SettingsTab.qml:170 ../sudoku-app.qml:308
+#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:308
 msgid "Hard"
 msgstr ""
 
-#: ../components/SettingsTab.qml:170
+#: ../components/SettingsTab.qml:163
 msgid "Ultra Hard"
 msgstr ""
 
-#: ../components/SettingsTab.qml:170
+#: ../components/SettingsTab.qml:163
 msgid "Always ask"
 msgstr ""
 
-#: ../components/SettingsTab.qml:213
+#: ../components/SettingsTab.qml:206
 msgid "Theme"
 msgstr ""
 
-#: ../components/SettingsTab.qml:243
+#: ../components/SettingsTab.qml:236
 msgid "Hints"
 msgstr ""
 
-#: ../components/SettingsTab.qml:263
+#: ../components/SettingsTab.qml:256
 msgid "Vibration Alerts"
 msgstr ""
 
-#: ../components/SettingsTab.qml:281
+#: ../components/SettingsTab.qml:274
 msgid "Profiles settings"
 msgstr ""
 
-#: ../components/SettingsTab.qml:289
+#: ../components/SettingsTab.qml:282
 msgid "Current profile"
 msgstr ""
 
-#: ../components/SettingsTab.qml:292
+#: ../components/SettingsTab.qml:285
 msgid "None"
 msgstr ""
 
-#: ../components/SettingsTab.qml:327
+#: ../components/SettingsTab.qml:320
 msgid "Add profile"
 msgstr ""
 
-#: ../components/SettingsTab.qml:341
+#: ../components/SettingsTab.qml:334
 msgid "Manage profiles"
 msgstr ""
 
-#: ../components/SudokuBlocksGrid.qml:334
+#: ../components/SudokuBlocksGrid.qml:330
 msgid "Please pick a number"
 msgstr ""
 
-#: ../components/SudokuBlocksGrid.qml:395
+#: ../components/SudokuBlocksGrid.qml:391
 msgid "Clear"
 msgstr ""
 
-#: ../components/SudokuBlocksGrid.qml:465
+#: ../components/SudokuBlocksGrid.qml:461
 #, qt-format
 msgid ""
 "You are a cheat...\n"
@@ -202,7 +202,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../components/SudokuBlocksGrid.qml:472
+#: ../components/SudokuBlocksGrid.qml:468
 #, qt-format
 msgid ""
 "Congratulations!\n"

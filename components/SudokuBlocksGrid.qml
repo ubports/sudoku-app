@@ -120,13 +120,9 @@ Column {
         colorScheme.dialogButtonColor2 = temp.dialogButtonColor2;
         colorScheme.dialogButtonTextColor = temp.dialogButtonTextColor;
 
-        colorScheme.headerColor = temp.headerColor;
         colorScheme.backgroundColor = temp.backgroundColor;
-        colorScheme.footerColor = temp.footerColor;
 
-        mainView.headerColor = colorScheme.headerColor;
         mainView.backgroundColor = colorScheme.backgroundColor;
-        mainView.footerColor = colorScheme.footerColor;
 
         for (var i = 0; i < 9; i++) {
             for (var j = 0; j < 9; j++) {
