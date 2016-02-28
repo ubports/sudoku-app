@@ -134,6 +134,7 @@ Tab {
 
             anchors {
                 top: highScoresPage.header.bottom
+                topMargin: units.gu(2)
                 left: parent.left
                 right: parent.right
                 bottom: parent.bottom
@@ -146,18 +147,17 @@ Tab {
                 objectName: "highscoreslabel"
                 text: highscoresHeaderText
                 height: units.gu(5)
+                anchors.left: parent.left
+                anchors.leftMargin: units.gu(2)
             }
 
             delegate: ListItem {
-                Label {
-                    anchors.left: parent.left
-                    anchors.leftMargin: units.gu(1)
-                    text: (index+1) + ".   " + firstname + " " + lastname
-                }
-                Label {
-                    anchors.right: parent.right
-                    anchors.rightMargin: units.gu(1)
-                    text: score
+                ListItemLayout {
+                    title.text: "%1. %2 %3".arg(index+1).arg(firstname).arg(lastname)
+                    Label {
+                        SlotsLayout.position: SlotsLayout.Last
+                        text: score
+                    }
                 }
 
                 leadingActions: ListItemActions {
@@ -165,7 +165,6 @@ Tab {
                         Action {
                             iconName: "delete"
                             onTriggered: {
-                                //print(index, id, firstname);
                                 Settings.deleteScoreWithId(id);
                                 highscoresModel.remove(index,1);
                             }
