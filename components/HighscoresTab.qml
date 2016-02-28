@@ -9,6 +9,26 @@ import "../components"
 Tab {
     id: highScoresTab
 
+    function appendModel(item)
+    {
+        highscoresModel.append(item)
+    }
+    function clearModel()
+    {
+        highscoresModel.clear()
+    }
+    function clearModelProfileId(id)
+    {
+        var firstName = Settings.getUserFirstName(currentUserId);
+        var lastName = Settings.getUserLastName(currentUserId);
+        for (var i = 0; i < highscoresModel.count; i++)
+        {
+            if (highscoresModel.get(i).firstname === firstName &&
+                    highscoresModel.get(i).lastname === lastName )
+                highscoresModel.remove(i);
+        }
+    }
+
     Page {
         id: highScoresPage
 
@@ -63,26 +83,6 @@ Tab {
                     }
                 }
             ]
-        }
-
-        function appendModel(item)
-        {
-            highscoresModel.append(item)
-        }
-        function clearModel()
-        {
-            highscoresModel.clear()
-        }
-        function clearModelProfileId(id)
-        {
-            var firstName = Settings.getUserFirstName(currentUserId);
-            var lastName = Settings.getUserLastName(currentUserId);
-            for (var i = 0; i < highscoresModel.count; i++)
-            {
-                if (highscoresModel.get(i).firstname === firstName &&
-                        highscoresModel.get(i).lastname === lastName )
-                    highscoresModel.remove(i);
-            }
         }
 
         BottomEdge {

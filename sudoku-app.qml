@@ -78,7 +78,7 @@ MainView {
 
                 var allScores = Settings.getAllScores()
                 //highscoresModel.clear();
-                hsPage.clearModel()
+                highscoresTab.clearModel()
                 highscoresHeaderText = i18n.tr("<b>Best scores for all players</b>");
                 for(var i = 0; i < allScores.length; i++) {
                     var rowItem = allScores[i];
