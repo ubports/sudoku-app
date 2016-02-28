@@ -5,7 +5,6 @@ import Ubuntu.Components.Popups 1.3
 import Ubuntu.Layouts 1.0
 import "../js/localStorage.js" as Settings
 import "../components"
-import UserMetrics 0.1
 
 Tab {
     objectName: "aboutTab"
@@ -28,14 +27,15 @@ Tab {
 
                         }
                         spacing: units.gu(5)
+
                         ItemLayout {
                             item: "icon"
                             id: iconTabletItem
                             property real maxWidth: units.gu(80)
                             width: Math.min(parent.width, maxWidth)/2
                             height: Math.min(parent.width, maxWidth)/2
-
                         }
+
                         Column {
                             //height: iconTabletItem.height
                             spacing: 1
@@ -68,11 +68,11 @@ Tab {
 
             Column {
                 id: aboutColumn;
+
                 spacing: units.gu(3)
-                //anchors.fill: parent
-                //anchors.horizontalCenter: parent.horizontalCenter;
                 width: parent.width
                 y: units.gu(6);
+
                 Rectangle {
                     Layouts.item: "icon"
                     property real maxWidth: units.gu(45)
@@ -89,12 +89,14 @@ Tab {
 
                     }
                 }
+
                 Grid {
                     anchors.horizontalCenter: parent.horizontalCenter
                     columns: 2
                     rowSpacing: units.gu(2)
                     columnSpacing: mainView.width/10
                     Layouts.item: "info"
+
                     Label {
                         objectName: "authorLabel"
                         text: i18n.tr("Author(s): ")
@@ -128,6 +130,7 @@ Tab {
                         onLinkActivated: Qt.openUrlExternally(link)
                     }
                 }
+
                 Row {
                     anchors.horizontalCenter: parent.horizontalCenter;
                     Layouts.item: "version"
@@ -138,18 +141,17 @@ Tab {
                     Label {
                         objectName: "version"
                         font.bold: true;
-                        text: "1.5"
+                        text: "1.6"
                     }
                 }
+
                 Row {
                     Layouts.item: "year"
                     anchors.horizontalCenter: parent.horizontalCenter;
                     Label {
                         objectName: "yearLabel"
                         font.bold: true;
-                        text: "2013"
-
-
+                        text: "2016"
                     }
                 }
             }
