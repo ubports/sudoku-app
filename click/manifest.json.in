@@ -1,7 +1,7 @@
 {
     "architecture": "all",
     "description": "Sudoku game for Ubuntu devices.",
-    "framework": "ubuntu-sdk-15.04",
+    "framework": "ubuntu-sdk-15.04.3",
     "hooks": {
         "sudoku": {
             "apparmor": "sudoku.apparmor",
