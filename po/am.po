@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-07-17 13:47+0200\n"
+"POT-Creation-Date: 2016-02-28 22:53+0530\n"
 "PO-Revision-Date: 2016-02-09 14:05+0000\n"
 "Last-Translator: samson <Unknown>\n"
 "Language-Team: Amharic <am@li.org>\n"
@@ -15,18 +15,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2016-02-10 05:39+0000\n"
-"X-Generator: Launchpad (build 17923)\n"
+"X-Launchpad-Export-Date: 2016-02-29 05:55+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 
-#: ../components/AboutTab.qml:103
+#: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
+#: ../components/TabsList.qml:30
+msgid "About"
+msgstr "ስለ"
+
+#: ../components/AboutTab.qml:111
 msgid "Author(s): "
 msgstr "ደራሲ(ዎች): "
 
-#: ../components/AboutTab.qml:113
+#: ../components/AboutTab.qml:121
 msgid "Contact: "
 msgstr "ግንኙነት: "
 
-#: ../components/AboutTab.qml:139
+#: ../components/AboutTab.qml:147
 msgid "Version: "
 msgstr "እትም: "
 
@@ -43,7 +48,7 @@ msgid "Lastname"
 msgstr "የ አባት ስም"
 
 #: ../components/AddProfileDialog.qml:53
-#: ../components/ManageProfileDialog.qml:69 ../sudoku-app.qml:354
+#: ../components/ManageProfileDialog.qml:69 ../sudoku-app.qml:192
 msgid "OK"
 msgstr "እሺ"
 
@@ -62,9 +67,9 @@ msgid "Lastname and firstname must not be empty."
 msgstr "የ መጀመሪያ ስም እና የ አባት ስም ባዶ መሆን የለበትም"
 
 #: ../components/AddProfileDialog.qml:85
-#: ../components/ManageProfileDialog.qml:127
-#: ../components/SudokuBlocksGrid.qml:492 ../sudoku-app.qml:507
-#: ../sudoku-app.qml:881 ../sudoku-app.qml:933
+#: ../components/ManageProfileDialog.qml:127 ../components/SettingsTab.qml:66
+#: ../components/SettingsTab.qml:116 ../components/SudokuBlocksGrid.qml:488
+#: ../sudoku-app.qml:343
 msgid "Cancel"
 msgstr "መሰረዣ"
 
@@ -89,14 +94,13 @@ msgstr "ክፍሎች ማስጀመሪያ"
 msgid "Hinted blocks"
 msgstr "የ ክፍሎች ፍንጭ"
 
-#: ../components/HighscoresTab.qml:66 ../components/HighscoresTab.qml:113
-#: ../sudoku-app.qml:24 ../sudoku-app.qml:153 ../sudoku-app.qml:207
-#: ../sudoku-app.qml:244
+#: ../components/HighscoresTab.qml:50 ../components/HighscoresTab.qml:117
+#: ../sudoku-app.qml:21 ../sudoku-app.qml:49 ../sudoku-app.qml:82
 msgid "<b>Best scores for all players</b>"
 msgstr "<b>የ ሁሉም ተጫዋጮች ጥሩ ውጤት</b>"
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
-#: ../components/HighscoresTab.qml:89 ../sudoku-app.qml:176
+#: ../components/HighscoresTab.qml:73
 #, qt-format
 msgid "Best scores for %1 %2"
 msgstr "ጥሩ ውጤት ለ %1 %2"
@@ -109,15 +113,83 @@ msgstr "ገጽታ ማረሚያ"
 msgid "Delete"
 msgstr "ማጥፊያ"
 
-#: ../components/SudokuBlocksGrid.qml:334
+#: ../components/SettingsTab.qml:25 ../components/TabsList.qml:23
+msgid "Settings"
+msgstr "ማሰናጃ"
+
+#: ../components/SettingsTab.qml:36 ../components/SettingsTab.qml:85
+msgid "Select profile"
+msgstr "ገጽታ መምረጫ"
+
+#: ../components/SettingsTab.qml:152
+msgid "Sudoku settings"
+msgstr ""
+
+#: ../components/SettingsTab.qml:160
+msgid "Default Difficulty"
+msgstr "ነባር አስቸጋሪ"
+
+#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:272
+msgid "Easy"
+msgstr "ቀላል"
+
+#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:291
+msgid "Moderate"
+msgstr "መካከለኛ"
+
+#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:308
+msgid "Hard"
+msgstr "አስቸጋሪ"
+
+#: ../components/SettingsTab.qml:163
+msgid "Ultra Hard"
+msgstr "በጣም አስቸጋሪ"
+
+#: ../components/SettingsTab.qml:163
+msgid "Always ask"
+msgstr "ሁል ጊዜ ጠይቅ"
+
+#: ../components/SettingsTab.qml:206
+msgid "Theme"
+msgstr "ገጽታ"
+
+#: ../components/SettingsTab.qml:236
+msgid "Hints"
+msgstr "ፍንጭ"
+
+#: ../components/SettingsTab.qml:256
+msgid "Vibration Alerts"
+msgstr "በ ማንቀጥቀጥ ማስጠንቀቂያ"
+
+#: ../components/SettingsTab.qml:274
+msgid "Profiles settings"
+msgstr ""
+
+#: ../components/SettingsTab.qml:282
+msgid "Current profile"
+msgstr "የ አሁኑ ገጽታ"
+
+#: ../components/SettingsTab.qml:285
+msgid "None"
+msgstr "ምንም"
+
+#: ../components/SettingsTab.qml:320
+msgid "Add profile"
+msgstr "ገጽታ መጨመሪያ"
+
+#: ../components/SettingsTab.qml:334
+msgid "Manage profiles"
+msgstr "ገጽታ አስተዳዳሪ"
+
+#: ../components/SudokuBlocksGrid.qml:330
 msgid "Please pick a number"
 msgstr "እባክዎን ቁጥር ይምረጡ"
 
-#: ../components/SudokuBlocksGrid.qml:395
+#: ../components/SudokuBlocksGrid.qml:391
 msgid "Clear"
 msgstr "ማጽጃ"
 
-#: ../components/SudokuBlocksGrid.qml:465
+#: ../components/SudokuBlocksGrid.qml:461
 #, qt-format
 msgid ""
 "You are a cheat...\n"
@@ -136,7 +208,7 @@ msgstr[1] ""
 "ለ አሁኑ ሰጥተንዎታል\n"
 "%1 ነጥቦች"
 
-#: ../components/SudokuBlocksGrid.qml:472
+#: ../components/SudokuBlocksGrid.qml:468
 #, qt-format
 msgid ""
 "Congratulations!\n"
@@ -155,60 +227,20 @@ msgstr[1] ""
 "እንሰጥዎታለን\n"
 "%1 ነጥቦች"
 
-#: ../js/localStorage.js:11 ../sudoku-app.qml:688
+#: ../components/TabsList.qml:9 ../js/localStorage.js:11 ../sudoku-app.qml:590
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:1
 msgid "Sudoku"
 msgstr "ሱዱኩ"
+
+#: ../components/TabsList.qml:16
+msgid "Scores"
+msgstr "ውጤቶች"
 
 #: ../js/localStorage.js:12
 msgid "User"
 msgstr "ተጠቃሚ"
 
-#: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:763
-msgid "New game"
-msgstr "አዲስ ጨዋታ"
-
-#: ../sudoku-app.qml:58 ../sudoku-app.qml:59
-msgid "Reveal hint"
-msgstr "ፍንጭ መስጫ"
-
-#: ../sudoku-app.qml:67 ../sudoku-app.qml:68
-msgid "Show settings"
-msgstr "ማሰናጃዎች ማሳያ"
-
-#: ../sudoku-app.qml:75 ../sudoku-app.qml:76
-msgid "Change difficulty to Easy"
-msgstr "ከ ከባድ ወደ ቀላል መቀየሪያ"
-
-#: ../sudoku-app.qml:88 ../sudoku-app.qml:89
-msgid "Change difficulty to Moderate"
-msgstr "ከ ከባድ ወደ መካከለኛ መቀየሪያ"
-
-#: ../sudoku-app.qml:101 ../sudoku-app.qml:102
-msgid "Change difficulty to Hard"
-msgstr "አስቸጋሪነቱን ወደ ከባድ መቀየሪያ"
-
-#: ../sudoku-app.qml:114 ../sudoku-app.qml:115
-msgid "Change difficulty to Ultra Hard"
-msgstr "አስቸጋሪነቱን ወደ በጣም ከባድ መቀየሪያ"
-
-#: ../sudoku-app.qml:127 ../sudoku-app.qml:128
-msgid "Change theme to Simple"
-msgstr "ገጽታውን ወደ ቀላል መቀየሪያ"
-
-#: ../sudoku-app.qml:137 ../sudoku-app.qml:138
-msgid "Change theme to UbuntuColors"
-msgstr "ገጽታውን ወደ ኡቡንቱ ቀለም መቀየሪያ"
-
-#: ../sudoku-app.qml:147 ../sudoku-app.qml:148
-msgid "Show scores for all users"
-msgstr "የ ሁሉንም ተጫዋቾች ጥሩ ውጤት ማሳያ"
-
-#: ../sudoku-app.qml:168 ../sudoku-app.qml:169
-msgid "Show scores for current user"
-msgstr "ለ አሁኑ ተጫዋች ውጤት ማሳያ"
-
-#: ../sudoku-app.qml:233
+#: ../sudoku-app.qml:75
 msgid ""
 "You are a cheat... \n"
 "But we give you\n"
@@ -216,41 +248,29 @@ msgstr ""
 "አታለዋል... \n"
 "ለ አሁኑ ሰጥተንዎታል\n"
 
-#: ../sudoku-app.qml:235
+#: ../sudoku-app.qml:77
 msgid "point."
 msgid_plural "points."
 msgstr[0] "ነጥብ"
 msgstr[1] "ነጥቦች"
 
-#: ../sudoku-app.qml:341
+#: ../sudoku-app.qml:179
 msgid "Sudoku games played today"
 msgstr "ዛሬ የተጫወቱት ሱዱኩ"
 
-#: ../sudoku-app.qml:342
+#: ../sudoku-app.qml:180
 msgid "No Sudoku games played today"
 msgstr "ዛሬ ሱዱኩ አልተጫወቱም"
 
-#: ../sudoku-app.qml:371
+#: ../sudoku-app.qml:209
 msgid "New Game"
 msgstr "አዲስ ጨዋታ"
 
-#: ../sudoku-app.qml:372
+#: ../sudoku-app.qml:210
 msgid "Select difficulty level"
 msgstr "የ አስቸጋሪነት ደረጃውን ይምረጡ"
 
-#: ../sudoku-app.qml:436 ../sudoku-app.qml:982
-msgid "Easy"
-msgstr "ቀላል"
-
-#: ../sudoku-app.qml:455 ../sudoku-app.qml:982
-msgid "Moderate"
-msgstr "መካከለኛ"
-
-#: ../sudoku-app.qml:472 ../sudoku-app.qml:982
-msgid "Hard"
-msgstr "አስቸጋሪ"
-
-#: ../sudoku-app.qml:489
+#: ../sudoku-app.qml:325
 msgid ""
 "Ultra\n"
 "Hard"
@@ -258,81 +278,21 @@ msgstr ""
 "በጣም\n"
 "አስቸጋሪ"
 
-#: ../sudoku-app.qml:744
+#: ../sudoku-app.qml:577
 msgid "You are a cheat..."
 msgstr "አታለዋል..."
 
-#: ../sudoku-app.qml:744
+#: ../sudoku-app.qml:577
 msgid "Congratulations!"
 msgstr "እንኳን ደስ ያሎት!"
 
-#: ../sudoku-app.qml:780
+#: ../sudoku-app.qml:600
+msgid "New game"
+msgstr "አዲስ ጨዋታ"
+
+#: ../sudoku-app.qml:616
 msgid "Show hint"
 msgstr "ፍንጭ ማሳያ"
-
-#: ../sudoku-app.qml:820
-msgid "Scores"
-msgstr "ውጤቶች"
-
-#: ../sudoku-app.qml:830
-msgid "Settings"
-msgstr "ማሰናጃ"
-
-#: ../sudoku-app.qml:852 ../sudoku-app.qml:900
-msgid "Select profile"
-msgstr "ገጽታ መምረጫ"
-
-#: ../sudoku-app.qml:973
-msgid "<b>Sudoku settings</b>"
-msgstr "<b>ሱዱኩ ማሰናጃዎች</b>"
-
-#: ../sudoku-app.qml:979
-msgid "Default Difficulty"
-msgstr "ነባር አስቸጋሪ"
-
-#: ../sudoku-app.qml:982
-msgid "Ultra Hard"
-msgstr "በጣም አስቸጋሪ"
-
-#: ../sudoku-app.qml:982
-msgid "Always ask"
-msgstr "ሁል ጊዜ ጠይቅ"
-
-#: ../sudoku-app.qml:1024
-msgid "Theme"
-msgstr "ገጽታ"
-
-#: ../sudoku-app.qml:1050
-msgid "Hints"
-msgstr "ፍንጭ"
-
-#: ../sudoku-app.qml:1066
-msgid "Vibration Alerts"
-msgstr "በ ማንቀጥቀጥ ማስጠንቀቂያ"
-
-#: ../sudoku-app.qml:1083
-msgid "<b>Profiles settings</b>"
-msgstr "<b>ገጽታዎች ማሰናጃ</b>"
-
-#: ../sudoku-app.qml:1087
-msgid "Current profile"
-msgstr "የ አሁኑ ገጽታ"
-
-#: ../sudoku-app.qml:1091
-msgid "None"
-msgstr "ምንም"
-
-#: ../sudoku-app.qml:1127
-msgid "Add profile"
-msgstr "ገጽታ መጨመሪያ"
-
-#: ../sudoku-app.qml:1136
-msgid "Manage profiles"
-msgstr "ገጽታ አስተዳዳሪ"
-
-#: ../sudoku-app.qml:1168
-msgid "About"
-msgstr "ስለ"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
 msgid "Sudoku Game for Ubuntu Touch."
@@ -341,3 +301,39 @@ msgstr "ሱዱኩ ጨዋታ ለ ኡቡንቱ ተች"
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr "ሱዱኩ: ጨዋታ: ተች:"
+
+#~ msgid "Change difficulty to Easy"
+#~ msgstr "ከ ከባድ ወደ ቀላል መቀየሪያ"
+
+#~ msgid "Change difficulty to Moderate"
+#~ msgstr "ከ ከባድ ወደ መካከለኛ መቀየሪያ"
+
+#~ msgid "Show settings"
+#~ msgstr "ማሰናጃዎች ማሳያ"
+
+#~ msgid "<b>Profiles settings</b>"
+#~ msgstr "<b>ገጽታዎች ማሰናጃ</b>"
+
+#~ msgid "Show scores for all users"
+#~ msgstr "የ ሁሉንም ተጫዋቾች ጥሩ ውጤት ማሳያ"
+
+#~ msgid "Reveal hint"
+#~ msgstr "ፍንጭ መስጫ"
+
+#~ msgid "Show scores for current user"
+#~ msgstr "ለ አሁኑ ተጫዋች ውጤት ማሳያ"
+
+#~ msgid "Change difficulty to Hard"
+#~ msgstr "አስቸጋሪነቱን ወደ ከባድ መቀየሪያ"
+
+#~ msgid "Change theme to UbuntuColors"
+#~ msgstr "ገጽታውን ወደ ኡቡንቱ ቀለም መቀየሪያ"
+
+#~ msgid "Change difficulty to Ultra Hard"
+#~ msgstr "አስቸጋሪነቱን ወደ በጣም ከባድ መቀየሪያ"
+
+#~ msgid "Change theme to Simple"
+#~ msgstr "ገጽታውን ወደ ቀላል መቀየሪያ"
+
+#~ msgid "<b>Sudoku settings</b>"
+#~ msgstr "<b>ሱዱኩ ማሰናጃዎች</b>"

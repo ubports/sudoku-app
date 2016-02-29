@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-07-17 13:47+0200\n"
+"POT-Creation-Date: 2016-02-28 22:53+0530\n"
 "PO-Revision-Date: 2014-09-27 23:51+0000\n"
 "Last-Translator: Gheyret T.Kenji <Unknown>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -15,18 +15,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-02-10 05:40+0000\n"
-"X-Generator: Launchpad (build 17923)\n"
+"X-Launchpad-Export-Date: 2016-02-29 05:56+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 
-#: ../components/AboutTab.qml:103
+#: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
+#: ../components/TabsList.qml:30
+msgid "About"
+msgstr "ھەققىدە"
+
+#: ../components/AboutTab.qml:111
 msgid "Author(s): "
 msgstr "ئاپتور(لار): "
 
-#: ../components/AboutTab.qml:113
+#: ../components/AboutTab.qml:121
 msgid "Contact: "
 msgstr "ئالاقەداش: "
 
-#: ../components/AboutTab.qml:139
+#: ../components/AboutTab.qml:147
 msgid "Version: "
 msgstr "نەشرى: "
 
@@ -43,7 +48,7 @@ msgid "Lastname"
 msgstr "تەگ ئاتى"
 
 #: ../components/AddProfileDialog.qml:53
-#: ../components/ManageProfileDialog.qml:69 ../sudoku-app.qml:354
+#: ../components/ManageProfileDialog.qml:69 ../sudoku-app.qml:192
 msgid "OK"
 msgstr "تامام"
 
@@ -62,9 +67,9 @@ msgid "Lastname and firstname must not be empty."
 msgstr "ئاتى ۋە  تەگ ئاتى بوش بولسا بولمايدۇ."
 
 #: ../components/AddProfileDialog.qml:85
-#: ../components/ManageProfileDialog.qml:127
-#: ../components/SudokuBlocksGrid.qml:492 ../sudoku-app.qml:507
-#: ../sudoku-app.qml:881 ../sudoku-app.qml:933
+#: ../components/ManageProfileDialog.qml:127 ../components/SettingsTab.qml:66
+#: ../components/SettingsTab.qml:116 ../components/SudokuBlocksGrid.qml:488
+#: ../sudoku-app.qml:343
 msgid "Cancel"
 msgstr "ئەمەلدىن قالدۇر"
 
@@ -89,14 +94,13 @@ msgstr "دەسلەپكى بۆلەك"
 msgid "Hinted blocks"
 msgstr "كۆرسىتىپ قويۇلغان بۆلەكلەر"
 
-#: ../components/HighscoresTab.qml:66 ../components/HighscoresTab.qml:113
-#: ../sudoku-app.qml:24 ../sudoku-app.qml:153 ../sudoku-app.qml:207
-#: ../sudoku-app.qml:244
+#: ../components/HighscoresTab.qml:50 ../components/HighscoresTab.qml:117
+#: ../sudoku-app.qml:21 ../sudoku-app.qml:49 ../sudoku-app.qml:82
 msgid "<b>Best scores for all players</b>"
 msgstr "<b>بارلىق ئىشلەتكۈچىلەرنىڭ ئەڭ يۇقىرى ئېرىشكەن نومۇرى</b>"
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
-#: ../components/HighscoresTab.qml:89 ../sudoku-app.qml:176
+#: ../components/HighscoresTab.qml:73
 #, qt-format
 msgid "Best scores for %1 %2"
 msgstr "ئىشلەتكۈچى %1 %2 ئېرىشكەن ئەڭ يۇقىرى نومۇر"
@@ -109,15 +113,83 @@ msgstr "سەپلەك تەھرىرلە"
 msgid "Delete"
 msgstr "ئۆچۈر"
 
-#: ../components/SudokuBlocksGrid.qml:334
+#: ../components/SettingsTab.qml:25 ../components/TabsList.qml:23
+msgid "Settings"
+msgstr "تەڭشەكلەر"
+
+#: ../components/SettingsTab.qml:36 ../components/SettingsTab.qml:85
+msgid "Select profile"
+msgstr "سەپلەك تاللا"
+
+#: ../components/SettingsTab.qml:152
+msgid "Sudoku settings"
+msgstr ""
+
+#: ../components/SettingsTab.qml:160
+msgid "Default Difficulty"
+msgstr "كۆڭۈلدىكى قىيىنلىق"
+
+#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:272
+msgid "Easy"
+msgstr "ئاددىي"
+
+#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:291
+msgid "Moderate"
+msgstr "ئوتتۇراھال"
+
+#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:308
+msgid "Hard"
+msgstr "قىيىن"
+
+#: ../components/SettingsTab.qml:163
+msgid "Ultra Hard"
+msgstr "بەك قىيىن"
+
+#: ../components/SettingsTab.qml:163
+msgid "Always ask"
+msgstr "ئىزچىل سورا"
+
+#: ../components/SettingsTab.qml:206
+msgid "Theme"
+msgstr "ئۆرنەك"
+
+#: ../components/SettingsTab.qml:236
+msgid "Hints"
+msgstr "ئەسكەرتىش"
+
+#: ../components/SettingsTab.qml:256
+msgid "Vibration Alerts"
+msgstr "تىترىتىپ ئاگاھلاندۇرۇش"
+
+#: ../components/SettingsTab.qml:274
+msgid "Profiles settings"
+msgstr ""
+
+#: ../components/SettingsTab.qml:282
+msgid "Current profile"
+msgstr ""
+
+#: ../components/SettingsTab.qml:285
+msgid "None"
+msgstr "يوق"
+
+#: ../components/SettingsTab.qml:320
+msgid "Add profile"
+msgstr "سەپلەك قوش"
+
+#: ../components/SettingsTab.qml:334
+msgid "Manage profiles"
+msgstr "سەپلەكلەرنى باشقۇر"
+
+#: ../components/SudokuBlocksGrid.qml:330
 msgid "Please pick a number"
 msgstr "نومۇردىن بىرنى تاللاڭ"
 
-#: ../components/SudokuBlocksGrid.qml:395
+#: ../components/SudokuBlocksGrid.qml:391
 msgid "Clear"
 msgstr "تازىلا"
 
-#: ../components/SudokuBlocksGrid.qml:465
+#: ../components/SudokuBlocksGrid.qml:461
 #, qt-format
 msgid ""
 "You are a cheat...\n"
@@ -132,7 +204,7 @@ msgstr[0] ""
 "شۇنداقتىمۇ %1 نومۇر\n"
 "بېرىمىز."
 
-#: ../components/SudokuBlocksGrid.qml:472
+#: ../components/SudokuBlocksGrid.qml:468
 #, qt-format
 msgid ""
 "Congratulations!\n"
@@ -147,60 +219,20 @@ msgstr[0] ""
 "بىز سىزگە %1 نومۇر\n"
 "بېرىمىز."
 
-#: ../js/localStorage.js:11 ../sudoku-app.qml:688
+#: ../components/TabsList.qml:9 ../js/localStorage.js:11 ../sudoku-app.qml:590
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:1
 msgid "Sudoku"
 msgstr "سۇدوكۇ"
+
+#: ../components/TabsList.qml:16
+msgid "Scores"
+msgstr "ئېرىشكەن نومۇرلار"
 
 #: ../js/localStorage.js:12
 msgid "User"
 msgstr ""
 
-#: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:763
-msgid "New game"
-msgstr "يېڭى ئويۇن"
-
-#: ../sudoku-app.qml:58 ../sudoku-app.qml:59
-msgid "Reveal hint"
-msgstr "ئەسكەرتىش كۆرسەت"
-
-#: ../sudoku-app.qml:67 ../sudoku-app.qml:68
-msgid "Show settings"
-msgstr "تەڭشەك كۆرسەت"
-
-#: ../sudoku-app.qml:75 ../sudoku-app.qml:76
-msgid "Change difficulty to Easy"
-msgstr "قىيىنلىقىنى ئوڭايغا ئۆزگەرت"
-
-#: ../sudoku-app.qml:88 ../sudoku-app.qml:89
-msgid "Change difficulty to Moderate"
-msgstr "قىيىنلىقىنى ئوتتۇراھالغا ئۆزگەرت"
-
-#: ../sudoku-app.qml:101 ../sudoku-app.qml:102
-msgid "Change difficulty to Hard"
-msgstr "قىيىنلىقىنى قىيىنغا ئۆزگەرت"
-
-#: ../sudoku-app.qml:114 ../sudoku-app.qml:115
-msgid "Change difficulty to Ultra Hard"
-msgstr "قىيىنلىقىنى بەك قىيىنغا ئۆزگەرت"
-
-#: ../sudoku-app.qml:127 ../sudoku-app.qml:128
-msgid "Change theme to Simple"
-msgstr "ئۆرنەكنى ئاددىيغا ئۆزگەرت"
-
-#: ../sudoku-app.qml:137 ../sudoku-app.qml:138
-msgid "Change theme to UbuntuColors"
-msgstr "ئۆرنەكنى UbuntuColors غا ئۆزگەرت"
-
-#: ../sudoku-app.qml:147 ../sudoku-app.qml:148
-msgid "Show scores for all users"
-msgstr "بارلىق ئىشلەتكۈچىلەرنىڭ ئېرىشكەن نومۇرنى كۆرسەت"
-
-#: ../sudoku-app.qml:168 ../sudoku-app.qml:169
-msgid "Show scores for current user"
-msgstr "نۆۋەتتىكى ئىشلەتكۈچىنىڭ ئېرىشكەن نومۇرنى كۆرسەت"
-
-#: ../sudoku-app.qml:233
+#: ../sudoku-app.qml:75
 msgid ""
 "You are a cheat... \n"
 "But we give you\n"
@@ -208,41 +240,29 @@ msgstr ""
 "سىز ھىيلە ئىشلەتتىڭىز... \n"
 "شۇنداقتىمۇ بىز بېرىمىز\n"
 
-#: ../sudoku-app.qml:235
+#: ../sudoku-app.qml:77
 msgid "point."
 msgid_plural "points."
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../sudoku-app.qml:341
+#: ../sudoku-app.qml:179
 msgid "Sudoku games played today"
 msgstr "بۈگۈن سۇدوكۇ ئويۇنى ئوينالدى"
 
-#: ../sudoku-app.qml:342
+#: ../sudoku-app.qml:180
 msgid "No Sudoku games played today"
 msgstr "بۈگۈن سۇدوكۇ ئويۇنى ئوينالمىدى"
 
-#: ../sudoku-app.qml:371
+#: ../sudoku-app.qml:209
 msgid "New Game"
 msgstr "يېڭى ئويۇن"
 
-#: ../sudoku-app.qml:372
+#: ../sudoku-app.qml:210
 msgid "Select difficulty level"
 msgstr "قىيىنلىق دەرىجىسىنى"
 
-#: ../sudoku-app.qml:436 ../sudoku-app.qml:982
-msgid "Easy"
-msgstr "ئاددىي"
-
-#: ../sudoku-app.qml:455 ../sudoku-app.qml:982
-msgid "Moderate"
-msgstr "ئوتتۇراھال"
-
-#: ../sudoku-app.qml:472 ../sudoku-app.qml:982
-msgid "Hard"
-msgstr "قىيىن"
-
-#: ../sudoku-app.qml:489
+#: ../sudoku-app.qml:325
 msgid ""
 "Ultra\n"
 "Hard"
@@ -250,81 +270,21 @@ msgstr ""
 "بەك\n"
 "قىيىن"
 
-#: ../sudoku-app.qml:744
+#: ../sudoku-app.qml:577
 msgid "You are a cheat..."
 msgstr "سىز ھىيلە ئىشلەتتىڭىز..."
 
-#: ../sudoku-app.qml:744
+#: ../sudoku-app.qml:577
 msgid "Congratulations!"
 msgstr "مۇبارەك بولسۇن!"
 
-#: ../sudoku-app.qml:780
+#: ../sudoku-app.qml:600
+msgid "New game"
+msgstr "يېڭى ئويۇن"
+
+#: ../sudoku-app.qml:616
 msgid "Show hint"
 msgstr "ئەسكەرتىش كۆرسەت"
-
-#: ../sudoku-app.qml:820
-msgid "Scores"
-msgstr "ئېرىشكەن نومۇرلار"
-
-#: ../sudoku-app.qml:830
-msgid "Settings"
-msgstr "تەڭشەكلەر"
-
-#: ../sudoku-app.qml:852 ../sudoku-app.qml:900
-msgid "Select profile"
-msgstr "سەپلەك تاللا"
-
-#: ../sudoku-app.qml:973
-msgid "<b>Sudoku settings</b>"
-msgstr "<b>سۇدوكۇ تەڭشەكلىرى</b>"
-
-#: ../sudoku-app.qml:979
-msgid "Default Difficulty"
-msgstr "كۆڭۈلدىكى قىيىنلىق"
-
-#: ../sudoku-app.qml:982
-msgid "Ultra Hard"
-msgstr "بەك قىيىن"
-
-#: ../sudoku-app.qml:982
-msgid "Always ask"
-msgstr "ئىزچىل سورا"
-
-#: ../sudoku-app.qml:1024
-msgid "Theme"
-msgstr "ئۆرنەك"
-
-#: ../sudoku-app.qml:1050
-msgid "Hints"
-msgstr "ئەسكەرتىش"
-
-#: ../sudoku-app.qml:1066
-msgid "Vibration Alerts"
-msgstr "تىترىتىپ ئاگاھلاندۇرۇش"
-
-#: ../sudoku-app.qml:1083
-msgid "<b>Profiles settings</b>"
-msgstr "<b>سەپلەكلەر تەڭشەكلىرى</b>"
-
-#: ../sudoku-app.qml:1087
-msgid "Current profile"
-msgstr ""
-
-#: ../sudoku-app.qml:1091
-msgid "None"
-msgstr "يوق"
-
-#: ../sudoku-app.qml:1127
-msgid "Add profile"
-msgstr "سەپلەك قوش"
-
-#: ../sudoku-app.qml:1136
-msgid "Manage profiles"
-msgstr "سەپلەكلەرنى باشقۇر"
-
-#: ../sudoku-app.qml:1168
-msgid "About"
-msgstr "ھەققىدە"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
 msgid "Sudoku Game for Ubuntu Touch."
@@ -333,3 +293,39 @@ msgstr ""
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr ""
+
+#~ msgid "Show settings"
+#~ msgstr "تەڭشەك كۆرسەت"
+
+#~ msgid "Change difficulty to Easy"
+#~ msgstr "قىيىنلىقىنى ئوڭايغا ئۆزگەرت"
+
+#~ msgid "Change difficulty to Moderate"
+#~ msgstr "قىيىنلىقىنى ئوتتۇراھالغا ئۆزگەرت"
+
+#~ msgid "Change difficulty to Hard"
+#~ msgstr "قىيىنلىقىنى قىيىنغا ئۆزگەرت"
+
+#~ msgid "Change difficulty to Ultra Hard"
+#~ msgstr "قىيىنلىقىنى بەك قىيىنغا ئۆزگەرت"
+
+#~ msgid "Change theme to Simple"
+#~ msgstr "ئۆرنەكنى ئاددىيغا ئۆزگەرت"
+
+#~ msgid "Change theme to UbuntuColors"
+#~ msgstr "ئۆرنەكنى UbuntuColors غا ئۆزگەرت"
+
+#~ msgid "Show scores for all users"
+#~ msgstr "بارلىق ئىشلەتكۈچىلەرنىڭ ئېرىشكەن نومۇرنى كۆرسەت"
+
+#~ msgid "Show scores for current user"
+#~ msgstr "نۆۋەتتىكى ئىشلەتكۈچىنىڭ ئېرىشكەن نومۇرنى كۆرسەت"
+
+#~ msgid "<b>Sudoku settings</b>"
+#~ msgstr "<b>سۇدوكۇ تەڭشەكلىرى</b>"
+
+#~ msgid "<b>Profiles settings</b>"
+#~ msgstr "<b>سەپلەكلەر تەڭشەكلىرى</b>"
+
+#~ msgid "Reveal hint"
+#~ msgstr "ئەسكەرتىش كۆرسەت"

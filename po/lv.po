@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudokutouchgame\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-07-17 13:47+0200\n"
+"POT-Creation-Date: 2016-02-28 22:53+0530\n"
 "PO-Revision-Date: 2015-02-28 15:40+0000\n"
 "Last-Translator: Rūdolfs Mazurs <Unknown>\n"
 "Language-Team: Latvian <lv@li.org>\n"
@@ -15,18 +15,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-02-10 05:40+0000\n"
-"X-Generator: Launchpad (build 17923)\n"
+"X-Launchpad-Export-Date: 2016-02-29 05:56+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 
-#: ../components/AboutTab.qml:103
+#: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
+#: ../components/TabsList.qml:30
+msgid "About"
+msgstr "Par"
+
+#: ../components/AboutTab.qml:111
 msgid "Author(s): "
 msgstr "Autors(-i): "
 
-#: ../components/AboutTab.qml:113
+#: ../components/AboutTab.qml:121
 msgid "Contact: "
 msgstr "Kontakts: "
 
-#: ../components/AboutTab.qml:139
+#: ../components/AboutTab.qml:147
 msgid "Version: "
 msgstr "Versija: "
 
@@ -43,7 +48,7 @@ msgid "Lastname"
 msgstr "Uzvārds"
 
 #: ../components/AddProfileDialog.qml:53
-#: ../components/ManageProfileDialog.qml:69 ../sudoku-app.qml:354
+#: ../components/ManageProfileDialog.qml:69 ../sudoku-app.qml:192
 msgid "OK"
 msgstr "Labi"
 
@@ -62,9 +67,9 @@ msgid "Lastname and firstname must not be empty."
 msgstr "Vārds un uzvārda lauki nedrīkst būt tukši."
 
 #: ../components/AddProfileDialog.qml:85
-#: ../components/ManageProfileDialog.qml:127
-#: ../components/SudokuBlocksGrid.qml:492 ../sudoku-app.qml:507
-#: ../sudoku-app.qml:881 ../sudoku-app.qml:933
+#: ../components/ManageProfileDialog.qml:127 ../components/SettingsTab.qml:66
+#: ../components/SettingsTab.qml:116 ../components/SudokuBlocksGrid.qml:488
+#: ../sudoku-app.qml:343
 msgid "Cancel"
 msgstr "Atcelt"
 
@@ -89,14 +94,13 @@ msgstr "Sākuma bloki"
 msgid "Hinted blocks"
 msgstr "Norādītie bloki"
 
-#: ../components/HighscoresTab.qml:66 ../components/HighscoresTab.qml:113
-#: ../sudoku-app.qml:24 ../sudoku-app.qml:153 ../sudoku-app.qml:207
-#: ../sudoku-app.qml:244
+#: ../components/HighscoresTab.qml:50 ../components/HighscoresTab.qml:117
+#: ../sudoku-app.qml:21 ../sudoku-app.qml:49 ../sudoku-app.qml:82
 msgid "<b>Best scores for all players</b>"
 msgstr "<b>Labākie visu spēlētāju rezultāti</b>"
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
-#: ../components/HighscoresTab.qml:89 ../sudoku-app.qml:176
+#: ../components/HighscoresTab.qml:73
 #, qt-format
 msgid "Best scores for %1 %2"
 msgstr "Labākie %1 %2 rezultāti"
@@ -109,15 +113,83 @@ msgstr "Rediģēt profilu"
 msgid "Delete"
 msgstr "Dzēst"
 
-#: ../components/SudokuBlocksGrid.qml:334
+#: ../components/SettingsTab.qml:25 ../components/TabsList.qml:23
+msgid "Settings"
+msgstr "Iestatījumi"
+
+#: ../components/SettingsTab.qml:36 ../components/SettingsTab.qml:85
+msgid "Select profile"
+msgstr "Izvēlieties profilu"
+
+#: ../components/SettingsTab.qml:152
+msgid "Sudoku settings"
+msgstr ""
+
+#: ../components/SettingsTab.qml:160
+msgid "Default Difficulty"
+msgstr "Noklusējuma grūtība"
+
+#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:272
+msgid "Easy"
+msgstr "Viegli"
+
+#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:291
+msgid "Moderate"
+msgstr "Vidēji"
+
+#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:308
+msgid "Hard"
+msgstr "Grūti"
+
+#: ../components/SettingsTab.qml:163
+msgid "Ultra Hard"
+msgstr "Ļoti grūti"
+
+#: ../components/SettingsTab.qml:163
+msgid "Always ask"
+msgstr "Vienmēr vaicāt"
+
+#: ../components/SettingsTab.qml:206
+msgid "Theme"
+msgstr "Motīvs"
+
+#: ../components/SettingsTab.qml:236
+msgid "Hints"
+msgstr "Norādījumi"
+
+#: ../components/SettingsTab.qml:256
+msgid "Vibration Alerts"
+msgstr "Vibrācijas trauksme"
+
+#: ../components/SettingsTab.qml:274
+msgid "Profiles settings"
+msgstr ""
+
+#: ../components/SettingsTab.qml:282
+msgid "Current profile"
+msgstr ""
+
+#: ../components/SettingsTab.qml:285
+msgid "None"
+msgstr "Nekas"
+
+#: ../components/SettingsTab.qml:320
+msgid "Add profile"
+msgstr "Pievienot profilu"
+
+#: ../components/SettingsTab.qml:334
+msgid "Manage profiles"
+msgstr "Rediģēt profilus"
+
+#: ../components/SudokuBlocksGrid.qml:330
 msgid "Please pick a number"
 msgstr "Lūdzu, izvēlieties skaitli"
 
-#: ../components/SudokuBlocksGrid.qml:395
+#: ../components/SudokuBlocksGrid.qml:391
 msgid "Clear"
 msgstr "Attīrīt"
 
-#: ../components/SudokuBlocksGrid.qml:465
+#: ../components/SudokuBlocksGrid.qml:461
 #, qt-format
 msgid ""
 "You are a cheat...\n"
@@ -140,7 +212,7 @@ msgstr[2] ""
 "Bet mēs jums dosim\n"
 "%1 punktu."
 
-#: ../components/SudokuBlocksGrid.qml:472
+#: ../components/SudokuBlocksGrid.qml:468
 #, qt-format
 msgid ""
 "Congratulations!\n"
@@ -163,60 +235,20 @@ msgstr[2] ""
 "Mēs jums dodam\n"
 "%1 punktu."
 
-#: ../js/localStorage.js:11 ../sudoku-app.qml:688
+#: ../components/TabsList.qml:9 ../js/localStorage.js:11 ../sudoku-app.qml:590
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:1
 msgid "Sudoku"
 msgstr "Sudoku"
+
+#: ../components/TabsList.qml:16
+msgid "Scores"
+msgstr "Rezultāti"
 
 #: ../js/localStorage.js:12
 msgid "User"
 msgstr ""
 
-#: ../sudoku-app.qml:50 ../sudoku-app.qml:51 ../sudoku-app.qml:763
-msgid "New game"
-msgstr "Jauna spēle"
-
-#: ../sudoku-app.qml:58 ../sudoku-app.qml:59
-msgid "Reveal hint"
-msgstr "Atklāt norādījumu"
-
-#: ../sudoku-app.qml:67 ../sudoku-app.qml:68
-msgid "Show settings"
-msgstr "Radīt iestatījumus"
-
-#: ../sudoku-app.qml:75 ../sudoku-app.qml:76
-msgid "Change difficulty to Easy"
-msgstr "Mainīt grūtību uz Viegli"
-
-#: ../sudoku-app.qml:88 ../sudoku-app.qml:89
-msgid "Change difficulty to Moderate"
-msgstr "Mainīt grūtību uz Vidēji"
-
-#: ../sudoku-app.qml:101 ../sudoku-app.qml:102
-msgid "Change difficulty to Hard"
-msgstr "Mainīt grūtību uz Grūti"
-
-#: ../sudoku-app.qml:114 ../sudoku-app.qml:115
-msgid "Change difficulty to Ultra Hard"
-msgstr "Mainīt grūtību uz Ļoti grūti"
-
-#: ../sudoku-app.qml:127 ../sudoku-app.qml:128
-msgid "Change theme to Simple"
-msgstr "Mainīt motīvu uz Vienkāršs"
-
-#: ../sudoku-app.qml:137 ../sudoku-app.qml:138
-msgid "Change theme to UbuntuColors"
-msgstr "Mainīt motīvu uz UbuntuColors"
-
-#: ../sudoku-app.qml:147 ../sudoku-app.qml:148
-msgid "Show scores for all users"
-msgstr "Radīt rezultātus visiem spēlētajiem"
-
-#: ../sudoku-app.qml:168 ../sudoku-app.qml:169
-msgid "Show scores for current user"
-msgstr "Rādīt rezultātu šim lietotājam"
-
-#: ../sudoku-app.qml:233
+#: ../sudoku-app.qml:75
 msgid ""
 "You are a cheat... \n"
 "But we give you\n"
@@ -224,41 +256,29 @@ msgstr ""
 "Jūs šmaucāties... \n"
 "Bet mēs jums dodam\n"
 
-#: ../sudoku-app.qml:235
+#: ../sudoku-app.qml:77
 msgid "point."
 msgid_plural "points."
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../sudoku-app.qml:341
+#: ../sudoku-app.qml:179
 msgid "Sudoku games played today"
 msgstr "Šodien spēlētas Sudoku spēles"
 
-#: ../sudoku-app.qml:342
+#: ../sudoku-app.qml:180
 msgid "No Sudoku games played today"
 msgstr "Šodien Sudoku nav spēlēts"
 
-#: ../sudoku-app.qml:371
+#: ../sudoku-app.qml:209
 msgid "New Game"
 msgstr "Jauna spēle"
 
-#: ../sudoku-app.qml:372
+#: ../sudoku-app.qml:210
 msgid "Select difficulty level"
 msgstr "Izvēlaties grūtības pakāpi"
 
-#: ../sudoku-app.qml:436 ../sudoku-app.qml:982
-msgid "Easy"
-msgstr "Viegli"
-
-#: ../sudoku-app.qml:455 ../sudoku-app.qml:982
-msgid "Moderate"
-msgstr "Vidēji"
-
-#: ../sudoku-app.qml:472 ../sudoku-app.qml:982
-msgid "Hard"
-msgstr "Grūti"
-
-#: ../sudoku-app.qml:489
+#: ../sudoku-app.qml:325
 msgid ""
 "Ultra\n"
 "Hard"
@@ -266,81 +286,21 @@ msgstr ""
 "Ļoti\n"
 "Grūti"
 
-#: ../sudoku-app.qml:744
+#: ../sudoku-app.qml:577
 msgid "You are a cheat..."
 msgstr "Jūs šmaucāties..."
 
-#: ../sudoku-app.qml:744
+#: ../sudoku-app.qml:577
 msgid "Congratulations!"
 msgstr "Apsveicam!"
 
-#: ../sudoku-app.qml:780
+#: ../sudoku-app.qml:600
+msgid "New game"
+msgstr "Jauna spēle"
+
+#: ../sudoku-app.qml:616
 msgid "Show hint"
 msgstr "Rādīt norādījumu"
-
-#: ../sudoku-app.qml:820
-msgid "Scores"
-msgstr "Rezultāti"
-
-#: ../sudoku-app.qml:830
-msgid "Settings"
-msgstr "Iestatījumi"
-
-#: ../sudoku-app.qml:852 ../sudoku-app.qml:900
-msgid "Select profile"
-msgstr "Izvēlieties profilu"
-
-#: ../sudoku-app.qml:973
-msgid "<b>Sudoku settings</b>"
-msgstr "<b>Sudoku iestatījumi</b>"
-
-#: ../sudoku-app.qml:979
-msgid "Default Difficulty"
-msgstr "Noklusējuma grūtība"
-
-#: ../sudoku-app.qml:982
-msgid "Ultra Hard"
-msgstr "Ļoti grūti"
-
-#: ../sudoku-app.qml:982
-msgid "Always ask"
-msgstr "Vienmēr vaicāt"
-
-#: ../sudoku-app.qml:1024
-msgid "Theme"
-msgstr "Motīvs"
-
-#: ../sudoku-app.qml:1050
-msgid "Hints"
-msgstr "Norādījumi"
-
-#: ../sudoku-app.qml:1066
-msgid "Vibration Alerts"
-msgstr "Vibrācijas trauksme"
-
-#: ../sudoku-app.qml:1083
-msgid "<b>Profiles settings</b>"
-msgstr "<b>Profilu iestatījumi</b>"
-
-#: ../sudoku-app.qml:1087
-msgid "Current profile"
-msgstr ""
-
-#: ../sudoku-app.qml:1091
-msgid "None"
-msgstr "Nekas"
-
-#: ../sudoku-app.qml:1127
-msgid "Add profile"
-msgstr "Pievienot profilu"
-
-#: ../sudoku-app.qml:1136
-msgid "Manage profiles"
-msgstr "Rediģēt profilus"
-
-#: ../sudoku-app.qml:1168
-msgid "About"
-msgstr "Par"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
 msgid "Sudoku Game for Ubuntu Touch."
@@ -349,3 +309,39 @@ msgstr ""
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr ""
+
+#~ msgid "Change difficulty to Moderate"
+#~ msgstr "Mainīt grūtību uz Vidēji"
+
+#~ msgid "Change difficulty to Hard"
+#~ msgstr "Mainīt grūtību uz Grūti"
+
+#~ msgid "Show settings"
+#~ msgstr "Radīt iestatījumus"
+
+#~ msgid "Change difficulty to Easy"
+#~ msgstr "Mainīt grūtību uz Viegli"
+
+#~ msgid "Show scores for all users"
+#~ msgstr "Radīt rezultātus visiem spēlētajiem"
+
+#~ msgid "<b>Profiles settings</b>"
+#~ msgstr "<b>Profilu iestatījumi</b>"
+
+#~ msgid "<b>Sudoku settings</b>"
+#~ msgstr "<b>Sudoku iestatījumi</b>"
+
+#~ msgid "Reveal hint"
+#~ msgstr "Atklāt norādījumu"
+
+#~ msgid "Change theme to UbuntuColors"
+#~ msgstr "Mainīt motīvu uz UbuntuColors"
+
+#~ msgid "Show scores for current user"
+#~ msgstr "Rādīt rezultātu šim lietotājam"
+
+#~ msgid "Change difficulty to Ultra Hard"
+#~ msgstr "Mainīt grūtību uz Ļoti grūti"
+
+#~ msgid "Change theme to Simple"
+#~ msgstr "Mainīt motīvu uz Vienkāršs"
