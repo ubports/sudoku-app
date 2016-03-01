@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:55+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
@@ -310,39 +310,3 @@ msgstr ""
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr ""
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "Promijeni težinu na Laganu"
-
-#~ msgid "Reveal hint"
-#~ msgstr "Iskoristi savjet"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "Promijeni težinu na Srednju"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "Promijeni težinu na Tešku"
-
-#~ msgid "Show settings"
-#~ msgstr "Pokaži postavke"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "Prikaži rezultate svih igrača"
-
-#~ msgid "Show scores for current user"
-#~ msgstr "Prikaži rezultate trenutnog igrača"
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "Promijeni temu na UbuntuColors"
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "Promijeni težinu na Ultra tešku"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "Promijeni temu na Jednostavnu"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>Podešavanja profila</b>"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>Sudoku podešavanja</b>"

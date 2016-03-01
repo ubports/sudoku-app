@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:56+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
@@ -301,39 +301,3 @@ msgstr "Sudoku-spill for Ubuntu Touch."
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr "sudoku;spill;trykk;"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "Vis poengsum for alle brukere"
-
-#~ msgid "Reveal hint"
-#~ msgstr "Vis hint"
-
-#~ msgid "Show settings"
-#~ msgstr "Vis innstillinger"
-
-#~ msgid "Show scores for current user"
-#~ msgstr "Vis poengsum for gjeldende bruker"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>Profilinnstillinger</b>"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>Sudoku-innstillinger</b>"
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "Endre vanskelighetsgrad til lett"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "Endre vanskelighetsgrad til middels"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "Endre vanskelighetsgrad til vanskelig"
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "Endre tema til ubuntu-farger"
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "Endre vanskelighetsgrad til kjempevanskelig"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "Endre tema til enkelt"

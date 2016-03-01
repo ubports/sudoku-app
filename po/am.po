@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:55+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
@@ -301,39 +301,3 @@ msgstr "ሱዱኩ ጨዋታ ለ ኡቡንቱ ተች"
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr "ሱዱኩ: ጨዋታ: ተች:"
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "ከ ከባድ ወደ ቀላል መቀየሪያ"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "ከ ከባድ ወደ መካከለኛ መቀየሪያ"
-
-#~ msgid "Show settings"
-#~ msgstr "ማሰናጃዎች ማሳያ"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>ገጽታዎች ማሰናጃ</b>"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "የ ሁሉንም ተጫዋቾች ጥሩ ውጤት ማሳያ"
-
-#~ msgid "Reveal hint"
-#~ msgstr "ፍንጭ መስጫ"
-
-#~ msgid "Show scores for current user"
-#~ msgstr "ለ አሁኑ ተጫዋች ውጤት ማሳያ"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "አስቸጋሪነቱን ወደ ከባድ መቀየሪያ"
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "ገጽታውን ወደ ኡቡንቱ ቀለም መቀየሪያ"
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "አስቸጋሪነቱን ወደ በጣም ከባድ መቀየሪያ"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "ገጽታውን ወደ ቀላል መቀየሪያ"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>ሱዱኩ ማሰናጃዎች</b>"

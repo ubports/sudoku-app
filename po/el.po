@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:56+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
@@ -301,39 +301,3 @@ msgstr ""
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr ""
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "Αλλαγή δυσκολίας σε εύκολο"
-
-#~ msgid "Reveal hint"
-#~ msgstr "Αποκάλυψη στοιχείου"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "Αλλαγή δυσκολίας σε μέτριο"
-
-#~ msgid "Show settings"
-#~ msgstr "Εμφάνιση ρυθμίσεων"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "Εμφάνιση βαθμολογιών για όλους τους χρήστες"
-
-#~ msgid "Show scores for current user"
-#~ msgstr "Εμφάνιση βαθμολογιών για τον τρέχων χρήστες"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "Αλλαγή δυσκολίας σε δύσκολο"
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "Αλλαγή θέματος σε UbuntuColors"
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "Αλλαγή δυσκολίας σε πολύ δύσκολο"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>Ρυθμίσεις προφίλ</b>"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>Ρυθμίσεις Sudoku</b>"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "Αλλαγή θέματος σε απλό"

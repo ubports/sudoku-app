@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:56+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
@@ -291,39 +291,3 @@ msgstr ""
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr ""
-
-#~ msgid "Reveal hint"
-#~ msgstr "揭開提示"
-
-#~ msgid "Show settings"
-#~ msgstr "顯示設定"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "更換主題為 Simple"
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "更換主題為 UbuntuColors"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "顯示所有使用者的分數"
-
-#~ msgid "Show scores for current user"
-#~ msgstr "顯示目前使用者的分數"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>數獨設定</b>"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>個人檔案設定</b>"
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "將難度調至容易"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "將難度調至適中"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "將難度調至困難"
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "將難度調至超難"

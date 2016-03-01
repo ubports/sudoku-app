@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:56+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
@@ -292,39 +292,3 @@ msgstr ""
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr ""
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "難易度をかんたんに変更"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "難易度をハードに変更"
-
-#~ msgid "Reveal hint"
-#~ msgstr "ヒントを表示"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "難易度をほどほどに変更"
-
-#~ msgid "Show settings"
-#~ msgstr "設定を表示"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "全ユーザーのスコアを表示"
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "難易度を超ハードに変更"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "テーマをシンプルに変更"
-
-#~ msgid "Show scores for current user"
-#~ msgstr "今のユーザーのスコアを表示"
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "テーマをUbuntuColorsに変更"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>Sudoku設定</b>"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>プロファイル設定</b>"

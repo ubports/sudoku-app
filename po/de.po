@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:56+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
@@ -301,39 +301,3 @@ msgstr ""
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr ""
-
-#~ msgid "Show settings"
-#~ msgstr "Einstellungen anzeigen"
-
-#~ msgid "Reveal hint"
-#~ msgstr "Zeige Tipp"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "Schwierigkeitsstufe »mittel« setzen"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "Schwierigkeitsstufe »hart« setzen"
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "Schwierigkeitsstufe »einfach« setzen"
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "Schwierigkeitsstufe »sehr hart« setzen"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>Sudoku-Einstellungen</b>"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "Punktzahl aller Benutzer anzeigen"
-
-#~ msgid "Show scores for current user"
-#~ msgstr "Punktzahl des aktuellen Benutzers anzeigen"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>Benutzereinstellungen</b>"
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "Ändere das Thema zu »Ubuntu-Farben«"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "Ändere das Thema zu »Einfach«"

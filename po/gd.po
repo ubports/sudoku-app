@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
 "(n > 2 && n < 20) ? 2 : 3;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:56+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "Language: gd\n"
 
@@ -321,39 +321,3 @@ msgstr "Geama Sudoku airson Ubuntu Touch."
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr "sudoku;game;touch;geama;"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "Seall na sgòran aig a h-uile cleachdaiche"
-
-#~ msgid "Reveal hint"
-#~ msgstr "Nochd oidheam"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "Dèan geama meadhanach furasta dheth"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "Dèan geama doirbh dheth"
-
-#~ msgid "Show settings"
-#~ msgstr "Seall na roghainnean"
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "Dèan geama furasta dheth"
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "Cleachd an t-ùrlar UbuntuColors"
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "Dèan geama air leth doirbh dheth"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "Cleachd an t-ùrlar simplidh"
-
-#~ msgid "Show scores for current user"
-#~ msgstr "Seall na sgòran aig a' chleachdaiche làithreach"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>Roghainnean nam pròifilean</b>"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>Roghainnean Sūdoku</b>"

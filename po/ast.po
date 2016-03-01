@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:55+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
@@ -299,39 +299,3 @@ msgstr "Xuegu del sudoku pa Ubuntu Touch."
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr "sudoku;xuegu;touch;"
-
-#~ msgid "Show settings"
-#~ msgstr "Amosar axustes"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>Axustes de perfil</b>"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>Axustes Sudoku</b>"
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "Camudar dificultá a Fácil"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "Camudar dificultá a Moderada"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "Camudar dificultá a Difícil"
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "Camudar el tema a los colores d'Ubuntu"
-
-#~ msgid "Reveal hint"
-#~ msgstr "Amosar pista"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "Amosar les puntuaciones pa tolos usuarios"
-
-#~ msgid "Show scores for current user"
-#~ msgstr "Amosar les putuaciones pal usuariu actual"
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "Camudar dificultá a Abegosa"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "Camudar el tema a Simple"

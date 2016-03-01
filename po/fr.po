@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:56+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
@@ -301,39 +301,3 @@ msgstr "Jeu de Sudoku pour Ubuntu Touch."
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr "sudoku;jeu;touch;tactile;"
-
-#~ msgid "Reveal hint"
-#~ msgstr "Donner un indice"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "Changer la difficulté vers Moyen"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "Changer la difficulté vers Difficile"
-
-#~ msgid "Show settings"
-#~ msgstr "Afficher les paramètres"
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "Changer la difficulté vers Facile"
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "Changer la difficulté vers Très Difficile"
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "Utiliser le thème UbuntuColors"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "Utiliser le thème Simple"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>Paramètres des profils</b>"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "Afficher les scores de tous les utilisateurs"
-
-#~ msgid "Show scores for current user"
-#~ msgstr "Afficher les scores de l'utilisateur actuel"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>Paramètres du sudoku</b>"

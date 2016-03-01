@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:56+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
@@ -290,39 +290,3 @@ msgstr ""
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr ""
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "난이도를 쉬움으로 변경"
-
-#~ msgid "Reveal hint"
-#~ msgstr "힌트 보여주기"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "난이도를 중간으로 변경"
-
-#~ msgid "Show settings"
-#~ msgstr "설정 보여주기"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "모든 사용자의 점수 보기"
-
-#~ msgid "Show scores for current user"
-#~ msgstr "현 사용자의 점수 보기"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "난이도를 어려움으로 변경"
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "우분투 칼라 테마로 변경"
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "난이도를 매우 어려움으로 변경"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "간단한 테마로 변경"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>스도쿠 설정</b>"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>사용자 설정</b>"

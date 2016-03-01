@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:56+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
@@ -311,39 +311,3 @@ msgstr "Гра у судкоу для Ubuntu Touch."
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr "sudoku;game;touch;судоку;гра;сенсорний;тач;"
-
-#~ msgid "Reveal hint"
-#~ msgstr "Показати підказку"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "Показати результати усіх гравців"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "Змінити складність на середню"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "Змінити складність на складну"
-
-#~ msgid "Show settings"
-#~ msgstr "Показати параметри"
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "Змінити складність на просту"
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "Змінити тему на «Кольори Ubuntu»"
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "Змінити складність на дуже складну"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "Змінити тему на «Просту»"
-
-#~ msgid "Show scores for current user"
-#~ msgstr "Показати результати поточного користувача"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>Параметри профілів</b>"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>Параметри судоку</b>"

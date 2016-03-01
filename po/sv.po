@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:56+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "Language: sv\n"
 
@@ -302,39 +302,3 @@ msgstr "Sudokuspel för Ubuntu Touch"
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr "sudoku;spel;touch"
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "Ändra svårighetsgrad till Lätt"
-
-#~ msgid "Reveal hint"
-#~ msgstr "Visa tips"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "Ändra svårighetsgrad till Mellan"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "Ändra svårighetsgrad till Svår"
-
-#~ msgid "Show settings"
-#~ msgstr "Visa inställningar"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "Visa poäng för alla användare"
-
-#~ msgid "Show scores for current user"
-#~ msgstr "Visa poäng för aktuell användare"
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "Ändra tema till UbuntuColors"
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "Ändra svårighetsgrad till Jättesvår"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "Ändra tema till Enkelt"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>Profilinställningar</b>"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>Sudoku-inställningar</b>"

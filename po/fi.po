@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:56+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
@@ -301,39 +301,3 @@ msgstr "Sudoku-peli Ubuntu Touchille."
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr "sudoku;game;touch;peli;"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "Näytä kaikkien käyttäjien pisteet"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "Vaiha vaikeustasoksi keskinkertainen"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "Vaihda vaikeustasoksi vaikea"
-
-#~ msgid "Show settings"
-#~ msgstr "Näytä asetukset"
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "Vaihda vaikeustasoksi helppo"
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "Vaihda teemaksi \"Ubuntu-värit\""
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "Vaihda vaikeustasoksi erittäin vaikea"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "Vaihda teemaksi \"yksinkertainen\""
-
-#~ msgid "Show scores for current user"
-#~ msgstr "Näytä nykyisen käyttäjän pisteet"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>Profiiliasetukset</b>"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>Sudoku-asetukset</b>"
-
-#~ msgid "Reveal hint"
-#~ msgstr "Paljasta vihje"

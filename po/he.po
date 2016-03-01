@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:56+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
@@ -301,39 +301,3 @@ msgstr ""
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr ""
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "החלפת ערכת העיצוב לצבעי אובונטו"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "הצגת הניקוד לכל המשתמשים"
-
-#~ msgid "Reveal hint"
-#~ msgstr "לחשוף רמז"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "החלפת הקושי לבינוני"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "החלפת הקושי לקשה"
-
-#~ msgid "Show settings"
-#~ msgstr "הצגת ההגדרות"
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "החלפת הקושי לקל"
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "החלפת הקושי לקשה מאוד"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "החלפת ערכת העיצוב לפשוטה"
-
-#~ msgid "Show scores for current user"
-#~ msgstr "הצגת הניקוד למשתמש הנוכחי"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>הגדרות פרופיל</b>"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>הגדרות סודוקו</b>"

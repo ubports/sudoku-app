@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:56+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
@@ -301,39 +301,3 @@ msgstr ""
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr ""
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "ਮੁਸ਼ਕਲ ਨੂੰ ਸੌਖਾ ਵਿੱਚ ਬਦਲੋ"
-
-#~ msgid "Show settings"
-#~ msgstr "ਸੈਟਿੰਗ ਵਿਖਾਓ"
-
-#~ msgid "Reveal hint"
-#~ msgstr "ਸੰਕੇਤ ਪ੍ਰਗਟ ਕਰੋ"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "ਮੁਸ਼ਕਲ ਨੂੰ ਮੱਧਮ ਵਿੱਚ ਬਦਲੋ"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "ਸਾਰੇ ਉਪਭੋਗੀਆਂ ਲਈ ਅੰਕ ਵਿਖਾਓ"
-
-#~ msgid "Show scores for current user"
-#~ msgstr "ਮੌਜੂਦਾ ਉਪਭੋਗੀ ਲਈ ਅੰਕ ਵਿਖਾਓ"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "ਮੁਸ਼ਕਲ ਨੂੰ ਔਖੇ ਵਿੱਚ ਬਦਲੋ"
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "ਥੀਮ ਨੂੰ ਉਬੰਤੂ ਰੰਗਾਂ ਵਿੱਚ ਬਦਲੋ"
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "ਮੁਸ਼ਕਲ ਨੂੰ ਅਤਿ ਔਖੇ ਵਿੱਚ ਬਦਲੋ"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "ਥੀਮ ਨੂੰ ਸਧਾਰਨ ਵਿੱਚ ਬਦਲੋ"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>ਸੂਡੋਕੂ ਸੈਟਿੰਗ</b>"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>ਪ੍ਰੋਫ਼ਾਈਲ ਸੈਟਿੰਗ</b>"

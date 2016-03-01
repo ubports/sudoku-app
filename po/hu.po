@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:56+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
@@ -301,39 +301,3 @@ msgstr "Sudoku Ubuntu Touch-hoz"
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr "sudoku;játék;touch;"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "Nehézség módosítása közepesre"
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "Nehézség módosítása könnyűre"
-
-#~ msgid "Reveal hint"
-#~ msgstr "Tipp felfedése"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "Nehézség módosítása nehézre"
-
-#~ msgid "Show settings"
-#~ msgstr "Beállítások"
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "Nehézség módosítása nagyon nehézre"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>Profilbeállítások</b>"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>Sudoku beállítások</b>"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "Összes felhasználó eredményei"
-
-#~ msgid "Show scores for current user"
-#~ msgstr "Jelenlegi felhasználó eredményei"
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "Az UbuntuColors téma beállítása"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "Az Egyszerű téma beállítása"

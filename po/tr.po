@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:56+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
@@ -301,39 +301,3 @@ msgstr ""
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr ""
-
-#~ msgid "Reveal hint"
-#~ msgstr "İpuçlarını göster"
-
-#~ msgid "Show settings"
-#~ msgstr "Ayarları göster"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "Tüm kullanıcılara ait skorları göster"
-
-#~ msgid "Show scores for current user"
-#~ msgstr "Bu kullanıcı için skorları göster"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>Sudoku ayarları</b>"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>Profil ayarları</b>"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "Zorluğu Zor yap"
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "Zorluğu Kolay yap"
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "Temayı Ubuntu Renkleri olarak değiştir"
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "Zorluğu Çok Zor yap"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "Temayı Basit olarak değiştir"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "Zorluğu Orta yap"

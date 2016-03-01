@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:56+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
@@ -301,39 +301,3 @@ msgstr ""
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr ""
-
-#~ msgid "Show settings"
-#~ msgstr "Instellingen tonen"
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "Moeilijkheidsgraad naar Gemakkelijk"
-
-#~ msgid "Reveal hint"
-#~ msgstr "Een hint geven"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "Moeilijkheidsgraad naar Gemiddeld"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "Scores van alle gebruikers tonen"
-
-#~ msgid "Show scores for current user"
-#~ msgstr "Score van huidige gebruiker tonen"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "Moeilijkheidsgraad naar Moeilijk"
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "Thema: UbuntuColors"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "Thema: simpel"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>Sudoku-instellingen</b>"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>Profielinstellingen</b>"
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "Moeilijkheidsgraad naar Extra moeilijk"

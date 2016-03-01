@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:56+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
@@ -292,39 +292,3 @@ msgstr "بازی سودوکو برای اوبونتو"
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr "sudoku;game;touch;سودوکو;بازی"
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "تغییر دشواری به آسان"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "تغییر دشواری به سخت"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "تغییر دشواری به معمولی"
-
-#~ msgid "Show settings"
-#~ msgstr "نمایش تنظیمات"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "تغییر قالب به ساده"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>تنظیمات سودوکو</b>"
-
-#~ msgid "Reveal hint"
-#~ msgstr "آشکار کردن کمک"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "نمایش امتیازها برای تمام کاربران"
-
-#~ msgid "Show scores for current user"
-#~ msgstr "نمایش امتیازها برای کاربر جاری"
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "تغییر قالب به رنگ‌های اوبونتو"
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "تغییر دشواری به فوق سخت"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>تنظیمات نمایه‌ها</b>"

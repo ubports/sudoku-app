@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:56+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
@@ -301,39 +301,3 @@ msgstr ""
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr ""
-
-#~ msgid "Reveal hint"
-#~ msgstr "Mostra una pista"
-
-#~ msgid "Show settings"
-#~ msgstr "Mostra els paràmetres"
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "Canvia la dificultat a fàcil"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "Canvia la dificultat a moderada"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "Canvia la dificultat a difícil"
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "Canvia la dificultat a súper difícil"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "Canvia el tema a Simple"
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "Canvia el tema a Colors de l'Ubuntu"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "Mostra les puntuacions de tots els usuaris"
-
-#~ msgid "Show scores for current user"
-#~ msgstr "Mostra les puntuacions de l'usuari actual"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>Paràmetres del Sudoku</b>"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>Paràmetres dels perfils</b>"

@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:56+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
@@ -293,39 +293,3 @@ msgstr ""
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr ""
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "ប្ដូរ​ពី​លំបាក​ទៅ​ងាយស្រួល"
-
-#~ msgid "Show settings"
-#~ msgstr "បង្ហាញ​ការកំណត់"
-
-#~ msgid "Reveal hint"
-#~ msgstr "បង្ហាញ​តម្រុយ"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "ប្ដុរ​ពី​លំបាក​ទៅ​មធ្យម"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "ប្ដូរ​ពី​លំបាក​ទៅ​លំបាក​ខ្លាំង"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "បង្ហាញ​ពិន្ទុ​សម្រាប់​អ្នកប្រើ​ទាំងអស់"
-
-#~ msgid "Show scores for current user"
-#~ msgstr "បង្ហាញ​ពិន្ទុ​សម្រាប់​អ្នកប្រើ​បច្ចុប្បន្ន"
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "ប្ដូរ​រូបរាង​ទៅ UbuntuColors"
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "ប្ដូរ​ពី​លំបាក​ទៅ​លំបាក​បំផុត"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "ប្ដូរ​រូបរាង​ទៅ​ធម្មតា"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>ការ​កំណត់​ប្រវត្តិរូប</b>"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>ការ​កំណត់ Sudoku</b>"

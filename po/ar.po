@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n % 100 >= "
 "3 && n % 100 <= 10 ? 3 : n % 100 >= 11 && n % 100 <= 99 ? 4 : 5;\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:55+0000\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
@@ -288,39 +288,3 @@ msgstr ""
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
 msgstr ""
-
-#~ msgid "Reveal hint"
-#~ msgstr "إظهار تلميح"
-
-#~ msgid "Change difficulty to Moderate"
-#~ msgstr "تغيير الصعوبة إلى متوسط"
-
-#~ msgid "Show settings"
-#~ msgstr "عرض الإعدادات"
-
-#~ msgid "Change difficulty to Easy"
-#~ msgstr "تغيير الصعوبة إلى سهل"
-
-#~ msgid "Change theme to UbuntuColors"
-#~ msgstr "تغيير السِمة إلى ألوان أوبونتو"
-
-#~ msgid "Change difficulty to Ultra Hard"
-#~ msgstr "تغيير الصعوبة إلى صعب جدًا"
-
-#~ msgid "Change theme to Simple"
-#~ msgstr "تغيير السِمة إلى بسيط"
-
-#~ msgid "Change difficulty to Hard"
-#~ msgstr "تغيير الصعوبة إلى صعب"
-
-#~ msgid "<b>Sudoku settings</b>"
-#~ msgstr "<b>إعدادات سودوكو</b>"
-
-#~ msgid "Show scores for current user"
-#~ msgstr "عرض النتائج لللاعب الحالي"
-
-#~ msgid "Show scores for all users"
-#~ msgstr "عرض النتائج لجميع اللاعبين"
-
-#~ msgid "<b>Profiles settings</b>"
-#~ msgstr "<b>إعدادات الملفات الشخصية</b>"
