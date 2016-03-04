@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-02-28 22:53+0530\n"
-"PO-Revision-Date: 2016-02-12 12:18+0000\n"
+"PO-Revision-Date: 2016-03-03 13:07+0000\n"
 "Last-Translator: GunChleoc <Unknown>\n"
 "Language-Team: Fòram na Gàidhlig http://www.foramnagaidhlig.net\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
 "(n > 2 && n < 20) ? 2 : 3;\n"
-"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
-"X-Generator: Launchpad (build 17925)\n"
+"X-Launchpad-Export-Date: 2016-03-04 06:07+0000\n"
+"X-Generator: Launchpad (build 17936)\n"
 "Language: gd\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
@@ -125,7 +125,7 @@ msgstr "Tagh pròifil"
 
 #: ../components/SettingsTab.qml:152
 msgid "Sudoku settings"
-msgstr ""
+msgstr "Roghainnean Sudoku"
 
 #: ../components/SettingsTab.qml:160
 msgid "Default Difficulty"
@@ -165,7 +165,7 @@ msgstr "Caismeachdan crith"
 
 #: ../components/SettingsTab.qml:274
 msgid "Profiles settings"
-msgstr ""
+msgstr "Roghainnean nam pròifil"
 
 #: ../components/SettingsTab.qml:282
 msgid "Current profile"
