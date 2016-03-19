@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-02-28 22:53+0530\n"
-"PO-Revision-Date: 2015-05-03 05:16+0000\n"
-"Last-Translator: GTriderXC <gtriderxc@yahoo.com>\n"
+"PO-Revision-Date: 2016-03-18 18:57+0000\n"
+"Last-Translator: Krzysztof Tataradziński <Unknown>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
-"X-Generator: Launchpad (build 17925)\n"
+"X-Launchpad-Export-Date: 2016-03-19 05:55+0000\n"
+"X-Generator: Launchpad (build 17947)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
 #: ../components/TabsList.qml:30
@@ -76,12 +76,12 @@ msgstr "Anuluj"
 
 #: ../components/BottomEdge.qml:58
 msgid "Delete scores"
-msgstr ""
+msgstr "Usuń wyniki"
 
 #: ../components/BottomEdgeSlide.qml:96 ../components/BottomEdgeSlide.qml:126
 #: ../components/BottomEdgeSlide.qml:155
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #: ../components/BottomEdgeSlide.qml:110
 msgid "Not allowed"
@@ -124,7 +124,7 @@ msgstr "Wybierz profil"
 
 #: ../components/SettingsTab.qml:152
 msgid "Sudoku settings"
-msgstr ""
+msgstr "Ustawienia Sudoku"
 
 #: ../components/SettingsTab.qml:160
 msgid "Default Difficulty"
@@ -164,11 +164,11 @@ msgstr "Wibracje"
 
 #: ../components/SettingsTab.qml:274
 msgid "Profiles settings"
-msgstr ""
+msgstr "Ustawienia profili"
 
 #: ../components/SettingsTab.qml:282
 msgid "Current profile"
-msgstr ""
+msgstr "Bieżący profil"
 
 #: ../components/SettingsTab.qml:285
 msgid "None"
@@ -247,7 +247,7 @@ msgstr "Wyniki"
 
 #: ../js/localStorage.js:12
 msgid "User"
-msgstr ""
+msgstr "Użytkownik"
 
 #: ../sudoku-app.qml:75
 msgid ""
@@ -260,8 +260,9 @@ msgstr ""
 #: ../sudoku-app.qml:77
 msgid "point."
 msgid_plural "points."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "punkt"
+msgstr[1] "punkty"
+msgstr[2] "punktów"
 
 #: ../sudoku-app.qml:179
 msgid "Sudoku games played today"
@@ -305,8 +306,8 @@ msgstr "Pokaż wskazówkę"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
 msgid "Sudoku Game for Ubuntu Touch."
-msgstr ""
+msgstr "Gra Sudoku na Ubuntu Touch."
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
-msgstr ""
+msgstr "sudoku;gra;dotyk;"
