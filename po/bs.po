@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sudokutouchgame\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-02-28 22:53+0530\n"
-"PO-Revision-Date: 2015-07-02 21:37+0000\n"
+"PO-Revision-Date: 2016-03-20 13:57+0000\n"
 "Last-Translator: Kenan Gutić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
-"X-Generator: Launchpad (build 17925)\n"
+"X-Launchpad-Export-Date: 2016-03-21 05:59+0000\n"
+"X-Generator: Launchpad (build 17947)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
 #: ../components/TabsList.qml:30
@@ -76,12 +76,12 @@ msgstr "Odustani"
 
 #: ../components/BottomEdge.qml:58
 msgid "Delete scores"
-msgstr ""
+msgstr "Obriši rezultate"
 
 #: ../components/BottomEdgeSlide.qml:96 ../components/BottomEdgeSlide.qml:126
 #: ../components/BottomEdgeSlide.qml:155
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #: ../components/BottomEdgeSlide.qml:110
 msgid "Not allowed"
@@ -124,7 +124,7 @@ msgstr "Odaberite profil"
 
 #: ../components/SettingsTab.qml:152
 msgid "Sudoku settings"
-msgstr ""
+msgstr "Sudoku podešavanja"
 
 #: ../components/SettingsTab.qml:160
 msgid "Default Difficulty"
@@ -164,11 +164,11 @@ msgstr "Upozorenja vibracijama"
 
 #: ../components/SettingsTab.qml:274
 msgid "Profiles settings"
-msgstr ""
+msgstr "Podešavanja profila"
 
 #: ../components/SettingsTab.qml:282
 msgid "Current profile"
-msgstr ""
+msgstr "Trenutni profil"
 
 #: ../components/SettingsTab.qml:285
 msgid "None"
@@ -247,7 +247,7 @@ msgstr "Rezultati"
 
 #: ../js/localStorage.js:12
 msgid "User"
-msgstr ""
+msgstr "Korisnik"
 
 #: ../sudoku-app.qml:75
 msgid ""
@@ -260,8 +260,9 @@ msgstr ""
 #: ../sudoku-app.qml:77
 msgid "point."
 msgid_plural "points."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "poen"
+msgstr[1] "poeni"
+msgstr[2] "poeni"
 
 #: ../sudoku-app.qml:179
 msgid "Sudoku games played today"
@@ -305,8 +306,8 @@ msgstr "Prikaži savjet"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
 msgid "Sudoku Game for Ubuntu Touch."
-msgstr ""
+msgstr "Sudoku igra za Ubuntu Touch."
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
-msgstr ""
+msgstr "sudoku;igra;touch;"
