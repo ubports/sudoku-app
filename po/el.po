@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-02-28 22:53+0530\n"
-"PO-Revision-Date: 2015-03-05 22:06+0000\n"
-"Last-Translator: tzem <athmakrigiannis@gmail.com>\n"
+"PO-Revision-Date: 2016-04-25 16:46+0000\n"
+"Last-Translator: Aggelos Arnaoutis <angelosarn@hotmail.com>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
-"X-Generator: Launchpad (build 17925)\n"
+"X-Launchpad-Export-Date: 2016-04-26 06:01+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
 #: ../components/TabsList.qml:30
@@ -75,12 +75,12 @@ msgstr "Ακύρωση"
 
 #: ../components/BottomEdge.qml:58
 msgid "Delete scores"
-msgstr ""
+msgstr "Διαγραφή αποτελεσμάτων"
 
 #: ../components/BottomEdgeSlide.qml:96 ../components/BottomEdgeSlide.qml:126
 #: ../components/BottomEdgeSlide.qml:155
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #: ../components/BottomEdgeSlide.qml:110
 msgid "Not allowed"
@@ -123,7 +123,7 @@ msgstr "Επιλογή προφίλ"
 
 #: ../components/SettingsTab.qml:152
 msgid "Sudoku settings"
-msgstr ""
+msgstr "Ρυθμίσεις sudoku"
 
 #: ../components/SettingsTab.qml:160
 msgid "Default Difficulty"
@@ -163,11 +163,11 @@ msgstr "Ειδοποίηση με δόνηση"
 
 #: ../components/SettingsTab.qml:274
 msgid "Profiles settings"
-msgstr ""
+msgstr "Ρυθμίσεις προφίλ"
 
 #: ../components/SettingsTab.qml:282
 msgid "Current profile"
-msgstr ""
+msgstr "Τρέχον προφίλ"
 
 #: ../components/SettingsTab.qml:285
 msgid "None"
@@ -238,7 +238,7 @@ msgstr "Βαθμολογίες"
 
 #: ../js/localStorage.js:12
 msgid "User"
-msgstr ""
+msgstr "Χρήστης"
 
 #: ../sudoku-app.qml:75
 msgid ""
@@ -251,8 +251,8 @@ msgstr ""
 #: ../sudoku-app.qml:77
 msgid "point."
 msgid_plural "points."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "πόντος."
+msgstr[1] "πόντοι."
 
 #: ../sudoku-app.qml:179
 msgid "Sudoku games played today"
@@ -296,8 +296,8 @@ msgstr "Εμφάνιση στοιχείου"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
 msgid "Sudoku Game for Ubuntu Touch."
-msgstr ""
+msgstr "Παιχνίδι sudoku για το Ubuntu Touch."
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
-msgstr ""
+msgstr "σουντόκου;παιχνίδι;αφή;"
