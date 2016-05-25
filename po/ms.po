@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-02-28 22:53+0530\n"
-"PO-Revision-Date: 2013-12-14 04:42+0000\n"
+"PO-Revision-Date: 2016-05-24 15:28+0000\n"
 "Last-Translator: abuyop <Unknown>\n"
 "Language-Team: Malay <ms@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-03-01 05:47+0000\n"
-"X-Generator: Launchpad (build 17925)\n"
+"X-Launchpad-Export-Date: 2016-05-25 06:06+0000\n"
+"X-Generator: Launchpad (build 18053)\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
 #: ../components/TabsList.qml:30
@@ -25,62 +25,62 @@ msgstr "Perihal"
 
 #: ../components/AboutTab.qml:111
 msgid "Author(s): "
-msgstr ""
+msgstr "Pengarang: "
 
 #: ../components/AboutTab.qml:121
 msgid "Contact: "
-msgstr ""
+msgstr "Kenalan: "
 
 #: ../components/AboutTab.qml:147
 msgid "Version: "
-msgstr ""
+msgstr "Versi: "
 
 #: ../components/AddProfileDialog.qml:13
 msgid "Add new profile"
-msgstr ""
+msgstr "Tambah profil baharu"
 
 #: ../components/AddProfileDialog.qml:30
 msgid "Firstname"
-msgstr ""
+msgstr "Nama pertama"
 
 #: ../components/AddProfileDialog.qml:42
 msgid "Lastname"
-msgstr ""
+msgstr "Nama akhir"
 
 #: ../components/AddProfileDialog.qml:53
 #: ../components/ManageProfileDialog.qml:69 ../sudoku-app.qml:192
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: ../components/AddProfileDialog.qml:69 ../components/AddProfileDialog.qml:74
 #: ../components/ManageProfileDialog.qml:95
 msgid "Warning"
-msgstr ""
+msgstr "Amaran"
 
 #: ../components/AddProfileDialog.qml:69
 msgid "User already exist."
-msgstr ""
+msgstr "Pengguna sudah wujud."
 
 #: ../components/AddProfileDialog.qml:74
 #: ../components/ManageProfileDialog.qml:95
 msgid "Lastname and firstname must not be empty."
-msgstr ""
+msgstr "Nama akhir dan pertama tidak boleh kosong."
 
 #: ../components/AddProfileDialog.qml:85
 #: ../components/ManageProfileDialog.qml:127 ../components/SettingsTab.qml:66
 #: ../components/SettingsTab.qml:116 ../components/SudokuBlocksGrid.qml:488
 #: ../sudoku-app.qml:343
 msgid "Cancel"
-msgstr ""
+msgstr "Batal"
 
 #: ../components/BottomEdge.qml:58
 msgid "Delete scores"
-msgstr ""
+msgstr "Padam skor"
 
 #: ../components/BottomEdgeSlide.qml:96 ../components/BottomEdgeSlide.qml:126
 #: ../components/BottomEdgeSlide.qml:155
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #: ../components/BottomEdgeSlide.qml:110
 msgid "Not allowed"
@@ -97,21 +97,21 @@ msgstr "Blok berpembayang"
 #: ../components/HighscoresTab.qml:50 ../components/HighscoresTab.qml:117
 #: ../sudoku-app.qml:21 ../sudoku-app.qml:49 ../sudoku-app.qml:82
 msgid "<b>Best scores for all players</b>"
-msgstr ""
+msgstr "<b>Skor terbaik bagi semua pemain</b>"
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
 #: ../components/HighscoresTab.qml:73
 #, qt-format
 msgid "Best scores for %1 %2"
-msgstr ""
+msgstr "Skor terbaik bagi %1 %2"
 
 #: ../components/ManageProfileDialog.qml:13
 msgid "Edit profile"
-msgstr ""
+msgstr "Sunting profil"
 
 #: ../components/ManageProfileDialog.qml:108
 msgid "Delete"
-msgstr ""
+msgstr "Padam"
 
 #: ../components/SettingsTab.qml:25 ../components/TabsList.qml:23
 msgid "Settings"
@@ -119,15 +119,15 @@ msgstr "Tetapan"
 
 #: ../components/SettingsTab.qml:36 ../components/SettingsTab.qml:85
 msgid "Select profile"
-msgstr ""
+msgstr "Pilih profil"
 
 #: ../components/SettingsTab.qml:152
 msgid "Sudoku settings"
-msgstr ""
+msgstr "Tetapan Sudoku"
 
 #: ../components/SettingsTab.qml:160
 msgid "Default Difficulty"
-msgstr ""
+msgstr "Kesukaran Lalai"
 
 #: ../components/SettingsTab.qml:163 ../sudoku-app.qml:272
 msgid "Easy"
@@ -147,7 +147,7 @@ msgstr "Sangat Sukar"
 
 #: ../components/SettingsTab.qml:163
 msgid "Always ask"
-msgstr ""
+msgstr "Sentiasa tanya"
 
 #: ../components/SettingsTab.qml:206
 msgid "Theme"
@@ -155,39 +155,39 @@ msgstr "Tema"
 
 #: ../components/SettingsTab.qml:236
 msgid "Hints"
-msgstr ""
+msgstr "Pembayang"
 
 #: ../components/SettingsTab.qml:256
 msgid "Vibration Alerts"
-msgstr ""
+msgstr "Amaran Getaran"
 
 #: ../components/SettingsTab.qml:274
 msgid "Profiles settings"
-msgstr ""
+msgstr "Tetapan profil"
 
 #: ../components/SettingsTab.qml:282
 msgid "Current profile"
-msgstr ""
+msgstr "Profil semasa"
 
 #: ../components/SettingsTab.qml:285
 msgid "None"
-msgstr ""
+msgstr "Tiada"
 
 #: ../components/SettingsTab.qml:320
 msgid "Add profile"
-msgstr ""
+msgstr "Tambah profil"
 
 #: ../components/SettingsTab.qml:334
 msgid "Manage profiles"
-msgstr ""
+msgstr "Urus profil"
 
 #: ../components/SudokuBlocksGrid.qml:330
 msgid "Please pick a number"
-msgstr ""
+msgstr "Sila pilih satu nombor"
 
 #: ../components/SudokuBlocksGrid.qml:391
 msgid "Clear"
-msgstr ""
+msgstr "Kosongkan"
 
 #: ../components/SudokuBlocksGrid.qml:461
 #, qt-format
@@ -222,11 +222,11 @@ msgstr "Sudoku"
 
 #: ../components/TabsList.qml:16
 msgid "Scores"
-msgstr ""
+msgstr "Skor"
 
 #: ../js/localStorage.js:12
 msgid "User"
-msgstr ""
+msgstr "Pengguna"
 
 #: ../sudoku-app.qml:75
 msgid ""
@@ -237,30 +237,32 @@ msgstr ""
 #: ../sudoku-app.qml:77
 msgid "point."
 msgid_plural "points."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "mata."
+msgstr[1] "mata"
 
 #: ../sudoku-app.qml:179
 msgid "Sudoku games played today"
-msgstr ""
+msgstr "Permainan Sudoku dimainkan hari ini"
 
 #: ../sudoku-app.qml:180
 msgid "No Sudoku games played today"
-msgstr ""
+msgstr "Tiada permainan Sudoku dimainkan hari ini"
 
 #: ../sudoku-app.qml:209
 msgid "New Game"
-msgstr ""
+msgstr "Permainan Baharu"
 
 #: ../sudoku-app.qml:210
 msgid "Select difficulty level"
-msgstr ""
+msgstr "Pilih aras kesukaran"
 
 #: ../sudoku-app.qml:325
 msgid ""
 "Ultra\n"
 "Hard"
 msgstr ""
+"Sukar\n"
+"Gila"
 
 #: ../sudoku-app.qml:577
 msgid "You are a cheat..."
@@ -280,8 +282,8 @@ msgstr "Tunjuk pembayang"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
 msgid "Sudoku Game for Ubuntu Touch."
-msgstr ""
+msgstr "Permainan Sudoku untuk Ubuntu Touch"
 
 #: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
 msgid "sudoku;game;touch;"
-msgstr ""
+msgstr "sudoku;permainan;touch;"
