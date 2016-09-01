@@ -1,0 +1,287 @@
+# French (Canada) translation for sudoku-app
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
+# This file is distributed under the same license as the sudoku-app package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sudoku-app\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-02-28 22:53+0530\n"
+"PO-Revision-Date: 2016-08-31 18:55+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French (Canada) <fr_CA@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Launchpad-Export-Date: 2016-09-01 06:31+0000\n"
+"X-Generator: Launchpad (build 18179)\n"
+
+#: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
+#: ../components/TabsList.qml:30
+msgid "About"
+msgstr ""
+
+#: ../components/AboutTab.qml:111
+msgid "Author(s): "
+msgstr ""
+
+#: ../components/AboutTab.qml:121
+msgid "Contact: "
+msgstr ""
+
+#: ../components/AboutTab.qml:147
+msgid "Version: "
+msgstr ""
+
+#: ../components/AddProfileDialog.qml:13
+msgid "Add new profile"
+msgstr ""
+
+#: ../components/AddProfileDialog.qml:30
+msgid "Firstname"
+msgstr ""
+
+#: ../components/AddProfileDialog.qml:42
+msgid "Lastname"
+msgstr ""
+
+#: ../components/AddProfileDialog.qml:53
+#: ../components/ManageProfileDialog.qml:69 ../sudoku-app.qml:192
+msgid "OK"
+msgstr ""
+
+#: ../components/AddProfileDialog.qml:69 ../components/AddProfileDialog.qml:74
+#: ../components/ManageProfileDialog.qml:95
+msgid "Warning"
+msgstr ""
+
+#: ../components/AddProfileDialog.qml:69
+msgid "User already exist."
+msgstr ""
+
+#: ../components/AddProfileDialog.qml:74
+#: ../components/ManageProfileDialog.qml:95
+msgid "Lastname and firstname must not be empty."
+msgstr ""
+
+#: ../components/AddProfileDialog.qml:85
+#: ../components/ManageProfileDialog.qml:127 ../components/SettingsTab.qml:66
+#: ../components/SettingsTab.qml:116 ../components/SudokuBlocksGrid.qml:488
+#: ../sudoku-app.qml:343
+msgid "Cancel"
+msgstr ""
+
+#: ../components/BottomEdge.qml:58
+msgid "Delete scores"
+msgstr ""
+
+#: ../components/BottomEdgeSlide.qml:96 ../components/BottomEdgeSlide.qml:126
+#: ../components/BottomEdgeSlide.qml:155
+msgid "4"
+msgstr ""
+
+#: ../components/BottomEdgeSlide.qml:110
+msgid "Not allowed"
+msgstr ""
+
+#: ../components/BottomEdgeSlide.qml:140
+msgid "Start blocks"
+msgstr ""
+
+#: ../components/BottomEdgeSlide.qml:169
+msgid "Hinted blocks"
+msgstr ""
+
+#: ../components/HighscoresTab.qml:50 ../components/HighscoresTab.qml:117
+#: ../sudoku-app.qml:21 ../sudoku-app.qml:49 ../sudoku-app.qml:82
+msgid "<b>Best scores for all players</b>"
+msgstr ""
+
+#. TRANSLATORS: %1 is user's first name and %2 is last name
+#: ../components/HighscoresTab.qml:73
+#, qt-format
+msgid "Best scores for %1 %2"
+msgstr ""
+
+#: ../components/ManageProfileDialog.qml:13
+msgid "Edit profile"
+msgstr ""
+
+#: ../components/ManageProfileDialog.qml:108
+msgid "Delete"
+msgstr ""
+
+#: ../components/SettingsTab.qml:25 ../components/TabsList.qml:23
+msgid "Settings"
+msgstr ""
+
+#: ../components/SettingsTab.qml:36 ../components/SettingsTab.qml:85
+msgid "Select profile"
+msgstr ""
+
+#: ../components/SettingsTab.qml:152
+msgid "Sudoku settings"
+msgstr ""
+
+#: ../components/SettingsTab.qml:160
+msgid "Default Difficulty"
+msgstr ""
+
+#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:272
+msgid "Easy"
+msgstr ""
+
+#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:291
+msgid "Moderate"
+msgstr ""
+
+#: ../components/SettingsTab.qml:163 ../sudoku-app.qml:308
+msgid "Hard"
+msgstr ""
+
+#: ../components/SettingsTab.qml:163
+msgid "Ultra Hard"
+msgstr ""
+
+#: ../components/SettingsTab.qml:163
+msgid "Always ask"
+msgstr ""
+
+#: ../components/SettingsTab.qml:206
+msgid "Theme"
+msgstr ""
+
+#: ../components/SettingsTab.qml:236
+msgid "Hints"
+msgstr ""
+
+#: ../components/SettingsTab.qml:256
+msgid "Vibration Alerts"
+msgstr ""
+
+#: ../components/SettingsTab.qml:274
+msgid "Profiles settings"
+msgstr ""
+
+#: ../components/SettingsTab.qml:282
+msgid "Current profile"
+msgstr ""
+
+#: ../components/SettingsTab.qml:285
+msgid "None"
+msgstr ""
+
+#: ../components/SettingsTab.qml:320
+msgid "Add profile"
+msgstr ""
+
+#: ../components/SettingsTab.qml:334
+msgid "Manage profiles"
+msgstr ""
+
+#: ../components/SudokuBlocksGrid.qml:330
+msgid "Please pick a number"
+msgstr ""
+
+#: ../components/SudokuBlocksGrid.qml:391
+msgid "Clear"
+msgstr ""
+
+#: ../components/SudokuBlocksGrid.qml:461
+#, qt-format
+msgid ""
+"You are a cheat...\n"
+"But we give you\n"
+"%1 point."
+msgid_plural ""
+"You are a cheat...\n"
+"But we give you\n"
+"%1 points."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../components/SudokuBlocksGrid.qml:468
+#, qt-format
+msgid ""
+"Congratulations!\n"
+"We give you\n"
+"%1 point."
+msgid_plural ""
+"Congratulations!\n"
+"We give you\n"
+"%1 points."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../components/TabsList.qml:9 ../js/localStorage.js:11 ../sudoku-app.qml:590
+#: com.ubuntu.sudoku_sudoku.desktop.in.in.h:1
+msgid "Sudoku"
+msgstr ""
+
+#: ../components/TabsList.qml:16
+msgid "Scores"
+msgstr ""
+
+#: ../js/localStorage.js:12
+msgid "User"
+msgstr ""
+
+#: ../sudoku-app.qml:75
+msgid ""
+"You are a cheat... \n"
+"But we give you\n"
+msgstr ""
+
+#: ../sudoku-app.qml:77
+msgid "point."
+msgid_plural "points."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../sudoku-app.qml:179
+msgid "Sudoku games played today"
+msgstr ""
+
+#: ../sudoku-app.qml:180
+msgid "No Sudoku games played today"
+msgstr ""
+
+#: ../sudoku-app.qml:209
+msgid "New Game"
+msgstr ""
+
+#: ../sudoku-app.qml:210
+msgid "Select difficulty level"
+msgstr ""
+
+#: ../sudoku-app.qml:325
+msgid ""
+"Ultra\n"
+"Hard"
+msgstr ""
+
+#: ../sudoku-app.qml:577
+msgid "You are a cheat..."
+msgstr ""
+
+#: ../sudoku-app.qml:577
+msgid "Congratulations!"
+msgstr ""
+
+#: ../sudoku-app.qml:600
+msgid "New game"
+msgstr ""
+
+#: ../sudoku-app.qml:616
+msgid "Show hint"
+msgstr ""
+
+#: com.ubuntu.sudoku_sudoku.desktop.in.in.h:2
+msgid "Sudoku Game for Ubuntu Touch."
+msgstr ""
+
+#: com.ubuntu.sudoku_sudoku.desktop.in.in.h:3
+msgid "sudoku;game;touch;"
+msgstr ""
