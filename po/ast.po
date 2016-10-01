@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: sudoku-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-02-28 22:53+0530\n"
-"PO-Revision-Date: 2016-04-23 11:49+0000\n"
-"Last-Translator: Mikel González <mikelglez@softastur.org>\n"
+"PO-Revision-Date: 2016-09-30 16:39+0000\n"
+"Last-Translator: Xuacu Saturio <Unknown>\n"
 "Language-Team: Asturian <ast@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-04-24 06:04+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-10-01 06:14+0000\n"
+"X-Generator: Launchpad (build 18204)\n"
+"Language: ast\n"
 
 #: ../components/AboutTab.qml:17 ../components/HighscoresTab.qml:36
 #: ../components/TabsList.qml:30
@@ -59,7 +60,7 @@ msgstr "Avisu"
 
 #: ../components/AddProfileDialog.qml:69
 msgid "User already exist."
-msgstr "Yá esiste'l usuariu."
+msgstr "L'usuariu ya esiste."
 
 #: ../components/AddProfileDialog.qml:74
 #: ../components/ManageProfileDialog.qml:95
@@ -97,13 +98,13 @@ msgstr "Bloques suxeríos"
 #: ../components/HighscoresTab.qml:50 ../components/HighscoresTab.qml:117
 #: ../sudoku-app.qml:21 ../sudoku-app.qml:49 ../sudoku-app.qml:82
 msgid "<b>Best scores for all players</b>"
-msgstr "<b>Meyor resultáu de tolos xugadores</b>"
+msgstr "<b>Meyores resultaos de tolos xugadores</b>"
 
 #. TRANSLATORS: %1 is user's first name and %2 is last name
 #: ../components/HighscoresTab.qml:73
 #, qt-format
 msgid "Best scores for %1 %2"
-msgstr "Meyor resultáu pa %1 %2"
+msgstr "Meyores resultaos de %1 %2"
 
 #: ../components/ManageProfileDialog.qml:13
 msgid "Edit profile"
@@ -115,7 +116,7 @@ msgstr "Desaniciar"
 
 #: ../components/SettingsTab.qml:25 ../components/TabsList.qml:23
 msgid "Settings"
-msgstr "Axustes"
+msgstr "Preferencies"
 
 #: ../components/SettingsTab.qml:36 ../components/SettingsTab.qml:85
 msgid "Select profile"
@@ -123,7 +124,7 @@ msgstr "Esbillar perfil"
 
 #: ../components/SettingsTab.qml:152
 msgid "Sudoku settings"
-msgstr "Prefrerencies de Sudoku"
+msgstr "Preferencies de Sudoku"
 
 #: ../components/SettingsTab.qml:160
 msgid "Default Difficulty"
@@ -171,7 +172,7 @@ msgstr "Perfil actual"
 
 #: ../components/SettingsTab.qml:285
 msgid "None"
-msgstr "Nenguna"
+msgstr "Nengún"
 
 #: ../components/SettingsTab.qml:320
 msgid "Add profile"
@@ -179,11 +180,11 @@ msgstr "Amestar perfil"
 
 #: ../components/SettingsTab.qml:334
 msgid "Manage profiles"
-msgstr "Xestión de perfiles"
+msgstr "Xestionar perfiles"
 
 #: ../components/SudokuBlocksGrid.qml:330
 msgid "Please pick a number"
-msgstr "Por favor, escueyi un númberu"
+msgstr "Escueye un númberu"
 
 #: ../components/SudokuBlocksGrid.qml:391
 msgid "Clear"
@@ -268,7 +269,7 @@ msgstr "Partida nueva"
 
 #: ../sudoku-app.qml:210
 msgid "Select difficulty level"
-msgstr "Esbilla'l nivel de dificultá"
+msgstr "Escueye'l nivel de dificultá"
 
 #: ../sudoku-app.qml:325
 msgid ""
