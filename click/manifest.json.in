@@ -9,7 +9,7 @@
         }
     },
     "icon": "@ICON@",
-    "maintainer": "Ubuntu Core Apps Developers <ubuntu-touch-coreapps@lists.launchpad.net>",
+    "maintainer": "UBports <dev@ubports.com>",
     "name": "@PROJECT_NAME@",
     "title": "Sudoku",
     "version": "1.6.@BZR_REVNO@",

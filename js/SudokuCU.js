@@ -311,4 +311,4 @@ CU.sudoku.Grid.prototype = {
         return this;
     }
 
-};
+}

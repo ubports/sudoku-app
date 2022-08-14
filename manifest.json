@@ -9,10 +9,10 @@
         }
     },
     "icon": "SudokuGameIcon.png",
-    "maintainer": "Ubuntu Core Apps Developers <ubuntu-touch-coreapps@lists.launchpad.net>",
+    "maintainer": "UBports <dev@ubports.com>",
     "name": "com.ubuntu.sudoku",
     "title": "Sudoku",
-    "version": "1.1",
+    "version": "1.6",
     "x-test": {
         "autopilot": "sudoku_app"
     }

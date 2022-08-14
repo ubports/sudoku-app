@@ -73,11 +73,6 @@ Component {
                         } else{
                             mainView.showAlert(i18n.tr("Warning"), i18n.tr("Lastname and firstname must not be empty."), okButton)
                         }
-
-
-
-
-
                     }
                 }
 
@@ -93,12 +88,7 @@ Component {
                     }
                 }
             }
-
-
-
         }
-
-
     }
 }
 
