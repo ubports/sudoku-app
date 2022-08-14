@@ -134,7 +134,7 @@ Tab {
                     Label {
                         objectName: "urlLabel"
                         font.bold: true;
-                        text: "<a href=\"https://launchpad.net/sudoku-app\">https://launchpad.net/sudoku-app</a>"
+                        text: "<a href=\"https://github.com/ubports/sudoku-app\">https://github.com/ubports/sudoku-app</a>"
                         onLinkActivated: Qt.openUrlExternally(link)
                     }
                 }
